@@ -1,0 +1,218 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{7.7 Séries doubles}
+
+En anticipant un peu sur le chapitre concernant les séries de fonctions,
+nous ferons appel au lemme suivant pour la démonstration du théorème
+fondamental sur les séries doubles.
+
+Lemme~7.7.1 (Weierstrass~: théorème de convergence dominée pour les
+séries) Soit (xn,q)(n,q)\in\mathbb{N}~\times\mathbb{N}~ une famille de nombres
+réels ou complexes indexée qar \mathbb{N}~ \times \mathbb{N}~. On fait les hypothèses suivantes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  il existe une séries à termes réels positifs
+  \\sum  \alpha~n~
+  convergente telle que \forall~~q \in
+  \mathbb{N}~,\textbar{}xn,q\textbar{}\leq \alpha~n
+\item
+  pour chaque n \in \mathbb{N}~,
+  limq\rightarrow~+\infty~xn,q~ existe (on
+  appelle yn cette limite)
+\end{itemize}
+
+Alors, pour chaque q \in \mathbb{N}~, la série
+\\sum ~
+nxn,q est absolument convergente ainsi que la série
+\\sum ~
+nyn, la suite \left
+(\\sum ~
+n=0^+\infty~xn,q\right )q\in\mathbb{N}~
+admet une limite quand q tend vers + \infty~ et on a
+
+limq\rightarrow~+\infty~~\\sum
+n=0^+\infty~x n,q = \\sum
+n=0^+\infty~y n
+
+autrement dit
+
+limq\rightarrow~+\infty~~\\sum
+n=0^+\infty~x n,q = \\sum
+n=0^+\infty~lim q\rightarrow~+\infty~xn,q
+
+(interversion de la limite et du signe somme)
+
+Démonstration L'inégalité \textbar{}xn,q\textbar{}\leq
+\alpha~n, celle qui s'en déduit par passage à la limite
+\textbar{}yn\textbar{}\leq \alpha~n et la convergence de la
+série \\sum ~
+\alpha~n montrent les convergences absolues des séries
+\\sum ~
+nxn,q et
+\\sum ~
+nyn. Prenons donc \epsilon \textgreater{} 0 et choisissons M
+tel que \\sum ~
+n=M+1^+\infty~\alpha~n \textless{} \epsilon\over
+4. On a alors
+
+\begin{align*} \left
+\textbar{}\sum n=0^+\infty~y~
+n -\sum n=0^+\infty~x~
+n,q\right \textbar{}& \leq& \\sum
+n=0^+\infty~\textbar{}y n -
+xn,q\textbar{}\leq\\sum
+n=0^M\textbar{}y n - xn,q\textbar{}
++ \\sum
+n=M+1^+\infty~(\textbar{}y n\textbar{} +
+\textbar{}xn,q\textbar{})\%& \\
+& \leq& \\sum
+n=0^M\textbar{}y n - xn,q\textbar{}
++ 2\sum n=M+1^+\infty~\alpha~ n~
+\leq\sum n=0^M\textbar{}y~
+n - xn,q\textbar{} + \epsilon\over 2
+\%&\\ \end{align*}
+
+Maintenant, on a
+limq\rightarrow~+\infty~~\\\sum
+ n=0^M\textbar{}yn -
+xn,q\textbar{} = 0 (chacun des termes de cette somme admet 0
+pour limite), et donc il existe N \in \mathbb{N}~ tel que q ≥ N
+\rigtharrow~\\sum ~
+n=0^M\textbar{}yn - xn,q\textbar{}
+\textless{} \epsilon\over 2. On a donc
+
+q ≥ N \rigtharrow~\left \textbar{}\\sum
+n=0^+\infty~y n -\\sum
+n=0^+\infty~x n,q\right \textbar{}\leq
+\epsilon\over 2 + \epsilon\over 2 = \epsilon
+
+ce qui montre que la suite \left
+(\\sum ~
+n=0^+\infty~xn,q\right )q\in\mathbb{N}~
+admet la limite \\sum ~
+n=0^+\infty~yn quand q tend vers + \infty~.
+
+Remarque~7.7.1 Le lecteur qui a dé\\\\jmathmathmathmathà des connaissances sur les séries de
+fonctions, remarquera qu'il s'agit là tout simplement du théorème
+d'interversion des limites dans le cas de convergence normale (donc
+uniforme) d'une série de fonctions.
+
+Nous pouvons maintenant démontrer le théorème d'interversion des signes
+somme dans les séries doubles.
+
+Théorème~7.7.2 Soit u = (un,p)(n,p)\in\mathbb{N}~\times\mathbb{N}~ une famille
+de nombres réels ou complexes indexée par \mathbb{N}~ \times \mathbb{N}~. On suppose que
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  pour tout entier n la série
+  \\sum ~
+  pun,p est absolument convergente
+\item
+  la série \\sum ~
+  n \\sum ~
+  p=0^+\infty~\textbar{}un,p\textbar{} est
+  convergente
+\end{itemize}
+
+Alors les séries \\\sum
+ n\left
+(\\sum ~
+p=0^+\infty~un,p\right ) et
+\\sum ~
+p\left
+(\\sum ~
+n=0^+\infty~un,p\right ) sont
+convergentes et on a
+
+\sum n=0^+\infty~~\left
+(\sum p=0^+\infty~u~
+n,p\right ) = \\sum
+p=0^+\infty~\left (\\sum
+n=0^+\infty~u n,p\right )
+
+Démonstration Nous allons appliquer le lemme précédent en posant
+xn,q =\ \\sum
+ p=0^qun,p et \alpha~n
+= \\sum ~
+p=0^+\infty~\textbar{}un,p\textbar{} et bien entendu
+yn = \\sum ~
+p=0^+\infty~un,p =\
+limq\rightarrow~+\infty~xn,q. Les hypothèses du lemme étant
+évidemment vérifiées, on sait que
+\\sum ~
+n=0^+\infty~xn,q admet la limite
+\\sum ~
+n=0^+\infty~yn quand q tend vers + \infty~. Mais, puisque
+l'on a l'égalité
+\textbar{}un,p\textbar{}\leq\\\sum
+ p=0^+\infty~\textbar{}un,p\textbar{}, la série
+\\sum ~
+nun,p est absolument convergente pour tout p \in \mathbb{N}~ et
+donc, par linéarité de la somme,
+
+\sum n=0^+\infty~x n,q~ =
+\\sum
+n=0^+\infty~\\sum
+p=0^qu n,p = \\sum
+p=0^q \\sum
+n=0^+\infty~u n,p
+
+L'existence de
+limq\rightarrow~+\infty~~\\\sum
+ n=0^+\infty~xn,q montre donc que la série
+\\sum ~
+p \\sum ~
+n=0^+\infty~un,p est convergente et a pour somme
+\\sum ~
+n=0^+\infty~yn =\
+\sum ~
+n=0^+\infty~\\\sum
+ p=0^+\infty~un,p autrement dit que
+
+\sum n=0^+\infty~~\left
+(\sum p=0^+\infty~u~
+n,p\right ) = \\sum
+p=0^+\infty~\left (\\sum
+n=0^+\infty~u n,p\right )
+
+Remarque~7.7.2 En appliquant le théorème à la suite u' =
+(\textbar{}un,p\textbar{})(n,p)\in\mathbb{N}~\times\mathbb{N}~, on constate que
+la série \\sum ~
+p\left
+(\\sum ~
+n=0^+\infty~\textbar{}un,p\textbar{}\right
+) est convergente, ce qui implique la convergence absolue de la série
+\\sum ~
+p \\sum ~
+n=0^+\infty~un,p.
+
+Remarque~7.7.3 On pourra retenir le théorème précédent sous la forme
+suivante
+
+\sum n=0^+\infty~~\left
+(\sum p=0^+\infty~\textbar{}u~
+n,p\textbar{}\right ) \textless{}
++\infty~\rigtharrow~\\sum
+n=0^+\infty~\left (\\sum
+p=0^+\infty~u n,p\right ) =
+\sum p=0^+\infty~~\left
+(\sum n=0^+\infty~u~
+n,p\right )
+
+{[}
+{[}
+{[}
+{[}

@@ -1,0 +1,312 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{9.9 Intégrale des fonctions réelles positives}
+
+\paragraph{9.9.1 Critère de convergence des fonctions réelles positives}
+
+Remarque~9.9.1 Dans toute la suite, sauf précision contraire on
+supposera que -\infty~ \textless{} a \textless{} b \leq +\infty~ si on considère
+l'intervalle {[}a,b{[} et que -\infty~\leq a \textless{} b \textless{} +\infty~ si on
+considère l'intervalle {]}a,b{]}.
+
+Théorème~9.9.1 Soit f : {[}a,b{[}\rightarrow~ \mathbb{R}~ réglée positive. Alors
+\int  a^b~f(t) dt converge si et
+seulement si~les intégrales partielles \int ~
+a^xf(t) dt sont ma\\\\jmathmathmathmathorées~:
+
+\existsM ≥ 0, \\forall~~x \in
+{[}a,b{[}, \int  a^x~f(t) dt \leq M
+
+Démonstration Si a \leq x \textless{} x' \textless{} b, on a
+\int  a^x'~f(t) dt
+-\int  a^x~f(t) dt
+=\int  x^x'~f(t) dt ≥ 0, dont
+l'application x\mapsto~\\int
+ a^xf(t) dt est croissante. En conséquence, elle admet
+une limite au point b si et seulement si~elle est ma\\\\jmathmathmathmathorée.
+
+Remarque~9.9.2 Dans le cas d'une fonction réglée f :{]}a,b{]} \rightarrow~ \mathbb{R}~
+positive, l'application
+x\mapsto~\int ~
+x^bf(t) dt est cette fois-ci décroissante~; donc elle
+admet une limite (à droite) au point a si et seulement si~elle est
+ma\\\\jmathmathmathmathorée. Dans tous les cas d'intégrales impropres à gauche ou à droite
+d'une fonction réelle positive, la convergence est équivalente à la
+ma\\\\jmathmathmathmathoration des intégrales partielles~; dans ce cas, si l'intégrale
+diverge, les intégrales partielles tendent vers + \infty~.
+
+Théorème~9.9.2 Soit f,g : {[}a,b{[}\rightarrow~ \mathbb{R}~ réglées telles que
+\forall~~t \in {[}a,b{[}, 0 \leq f(t) \leq g(t). Alors (i) si
+l'intégrale \int  a^b~g(t) dt
+converge, l'intégrale \int ~
+a^bf(t) dt converge. (ii) si l'intégrale
+\int  a^b~f(t) dt diverge,
+l'intégrale \int  a^b~g(t) dt
+diverge.
+
+Démonstration Pour (i), il suffit de remarquer que
+\int  a^x~f(t) dt
+\leq\int  a^x~g(t) dt, donc que tout
+ma\\\\jmathmathmathmathorant des intégrales partielles de g ma\\\\jmathmathmathmathore également les intégrales
+partielles de f. Quant à (ii), ce n'est que la contraposée de (i).
+
+Remarque~9.9.3 On a dé\\\\jmathmathmathmathà vu que la convergence ou la divergence de
+l'intégrale était une propriété locale en b. Pour appliquer le résultat
+précédent, il suffit donc de supposer que sur un voisinage de b on a 0 \leq
+f(t) \leq Kg(t), autrement dit que f(t) = O(g(t)) au voisinage de b.
+
+\paragraph{9.9.2 Règles de comparaison}
+
+Théorème~9.9.3 Soit f,g : {[}a,b{[}\rightarrow~ \mathbb{R}~ réglées positives. On suppose
+qu'au voisinage de b on a f = 0(g) (resp. f = o(g)). Alors (i) si
+\int  a^b~g(t) dt converge,
+\int  a^b~f(t) dt converge
+également et \int  x^b~f(t) dt =
+0(\int  x^b~g(t) dt) (resp.
+\int  x^b~f(t) dt =
+o(\int  x^b~g(t) dt)) (ii) si
+\int  a^b~f(t) dt converge,
+\int  a^b~g(t) dt converge
+également et \int  a^x~f(t) dt =
+0(\int  a^x~g(t) dt) (resp.
+\int  a^x~f(t) dt =
+o(\int  a^x~g(t) dt))
+
+Démonstration Les convergences et divergences découlent immédiatement de
+la remarque qui suit le théorème ci-dessus et du fait que f = o(g) \rigtharrow~ f =
+O(g). En ce qui concerne la comparaison des restes ou des intégrales
+partielles, la démonstration est tout à fait similaire à celle du
+théorème analogue sur les séries. Nous allons les faire dans le cas f =
+o(g), la démonstration étant analogue pour f = O(g) en changeant \epsilon en K
+ou en 2K.
+
+(i) Supposons f = o(g) et \int ~
+a^bg(t) dt convergente. Soit \epsilon \textgreater{} 0. Il
+existe c \in {[}a,b{[} tel que t ≥ c \rigtharrow~ 0 \leq f(t) \leq \epsilong(t). Alors pour x ≥ c,
+on a (en intégrant l'inégalité de c à b), 0 \leq\\int
+ x^bf(t) dt \leq \epsilon\int ~
+x^bg(t) dt et donc \int ~
+x^bf(t) dt = o(\int ~
+x^bg(t) dt).
+
+(ii) Supposons f = o(g) et \int ~
+a^bf(t) dt divergente. Soit \epsilon \textgreater{} 0. Il existe
+c \in {[}a,b{[} tel que t ≥ c \rigtharrow~ 0 \leq f(t) \leq \epsilon \over 2
+g(t). Alors pour x ≥ c, on a (en intégrant l'inégalité de c à x),
+\int  c^x~f(t) dt \leq \epsilon
+\over 2 \int ~
+c^xg(t) dt, soit encore à l'aide de la relation de
+Chasles
+
+0 \leq\int  a^x~f(t) dt \leq \epsilon
+\over 2 \int ~
+a^xg(t) dt + \left
+(\int  a^c~f(t) dt - \epsilon
+\over 2 \int ~
+a^cg(t) dt\right )
+
+Mais comme on sait que l'intégrale \int ~
+a^bg(t) dt diverge et que g ≥ 0, on a
+limx\rightarrow~b\\int ~
+a^xg(t) dt = +\infty~. Donc il existe c' \in {[}a,b{[} tel que x
+≥ c' \rigtharrow~ \epsilon \over 2 \int ~
+a^xg(t) dt \textgreater{}\int ~
+a^cf(t) dt - \epsilon \over 2
+\int  a^c~g(t) dt. Alors, pour x
+≥ max~(c,c'), on a
+
+0 \leq\int  a^x~f(t) dt \leq \epsilon
+\over 2 \int ~
+a^xg(t) dt + \epsilon \over 2
+\int  a^x~g(t) dt =
+\epsilon\int  a^x~g(t) dt
+
+et donc \int  a^x~f(t) dt =
+o(\int  a^x~g(t) dt).
+
+Remarque~9.9.4 Il suffit pour appliquer le théorème précédent que la
+condition de positivité de f et g soit vérifiée dans un voisinage de b.
+
+Théorème~9.9.4 Soit f,g : {[}a,b{[}\rightarrow~ \mathbb{R}~ réglées. On suppose que g est
+positive et que au voisinage de b, on a f ∼ g. Alors les deux intégrales
+\int  a^b~f(t) dt et
+\int  a^b~g(t) dt sont de même
+nature. Plus précisément (i) Si \int ~
+a^bg(t) dt converge, alors \int ~
+a^bf(t) dt converge également et
+\int  x^b~f(t) dt
+∼\int  x^b~g(t) dt (ii) Si
+\int  a^b~g(t) dt diverge, alors
+\int  a^b~f(t) dt diverge
+également et \int  a^x~f(t) dt
+∼\int  a^x~g(t) dt.
+
+Démonstration Puisque f(t) ∼ g(t), il existe c \in {[}a,b{[} tel que x
+\textgreater{} c \rigtharrow~ 1 \over 2 g(t) \leq f(t) \leq 3
+\over 2 g(t) ce qui montre que f est positive au
+voisinage de b et que l'on a à la fois f = O(g) et g = O(f). Le théorème
+précédent assure alors que \int ~
+a^bg(t) dt converge si et seulement
+si~\int  a^b~f(t) dt converge.
+Pla\ccons nous dans le cas de convergence. On a
+\textbar{}f - g\textbar{} = o(g), on en déduit que l'intégrale
+\int  a^b~\textbar{}f(t) -
+g(t)\textbar{} dt converge et que \int ~
+x^b\textbar{}f(t) - g(t)\textbar{} dt =
+o(\int  x^b~g(t) dt). Mais bien
+évidemment \left \textbar{}\int ~
+x^bf(t) dt -\int ~
+x^bg(t) dt\right
+\textbar{}\leq\int ~
+x^b\textbar{}f(t) - g(t)\textbar{} dt. On a donc
+\int  x^b~f(t) dt
+-\int  x^b~g(t) dt =
+o(\int  x^b~g(t) dt) et donc
+\int  x^b~f(t) dt
+∼\int  x^b~g(t) dt. Dans le cas
+de divergence, deux cas se présentent. Si l'intégrale
+\int  a^b~\textbar{}f(t) -
+g(t)\textbar{} dt diverge, le théorème précédent assure que
+\int  a^x~\textbar{}f(t) -
+g(t)\textbar{} dt = o(\int ~
+a^xg(t) dt)~; si par contre elle converge,
+\int  a^x~\textbar{}f(t) -
+g(t)\textbar{} dt admet une limite finie en b alors que
+\int  a^x~g(t) dt tend vers + \infty~
+et on a donc encore \int ~
+a^x\textbar{}f(t) - g(t)\textbar{} dt =
+o(\int  a^x~g(t) dt). L'inégalité
+\left \textbar{}\int ~
+a^xf(t) dt -\int ~
+a^xg(t) dt\right
+\textbar{}\leq\int ~
+a^x\textbar{}f(t) - g(t)\textbar{} dt donne alors
+\int  a^x~f(t) dt
+-\int  a^x~g(t) dt =
+o(\int  a^x~g(t) dt) et donc
+\int  a^x~f(t) dt
+∼\int  a^x~g(t) dt.
+
+\paragraph{9.9.3 Exemples fondamentaux}
+
+L'idée générale est d'obtenir une famille de fonctions étalon.
+
+Proposition~9.9.5 L'intégrale \int ~
+1^+\infty~ dt \over t^\alpha~ converge
+si et seulement si~\alpha~ \textgreater{} 1.
+
+Démonstration \int  1^x~ dt
+\over t^\alpha~ = \left
+\ \cases  1 \over
+\alpha~-1 (1 - x^1-\alpha~)&si \alpha~\neq~1
+\cr log~ x &si \alpha~ = 1
+\cr  \right . qui admet une limite finie
+en + \infty~ si et seulement si~\alpha~ \textgreater{} 1.
+
+Exemple~9.9.1 Intégrales de Bertrand \int ~
+e^+\infty~ dt \over
+t^\alpha~(log t)^\beta~~ . Si \alpha~
+\textgreater{} 1, soit \gamma tel que 1 \textless{} \alpha~ \textless{} \gamma. On a
+alors  1 \over
+t^\alpha~(log t)^\beta~~ = o( 1
+\over t^\gamma ) et donc l'intégrale converge. Si
+\alpha~ \textless{} 1, soit \gamma tel que \alpha~ \textless{} \gamma \textless{} 1~; on a
+alors  1 \over t^\gamma = o( 1
+\over t^\alpha~(log~
+t)^\beta~ ) et comme \int ~
+e^+\infty~ dt \over t^\gamma diverge,
+l'intégrale diverge. Si \alpha~ = 1, on a par le changement de variables u
+= log~ t,
+
+\int  e^x~ dt
+\over t(log t)^\beta~~
+=\int ~
+1^log x~ du
+\over u^\beta~ = \left
+\ \cases  1 \over
+\alpha~-1 (1 - (log x)^1-\alpha~~)&si
+\alpha~\neq~1 \cr
+log \log~ x &si \alpha~ = 1
+ \right .
+
+qui admet une limite en + \infty~ si et seulement si~\beta~ \textgreater{} 1. En
+définitive l'intégrale de Bertrand \int ~
+e^+\infty~ dt \over
+t^\alpha~(log t)^\beta~~ converge
+si et seulement si~\alpha~ \textgreater{} 1 ou (\alpha~ = 1 et \beta~ \textgreater{} 1).
+
+Proposition~9.9.6 Soit -\infty~ \textless{} a \textless{} b \textless{} +\infty~.
+L'intégrale \int  a^b~ dt
+\over \textbar{}b-t\textbar{}^\alpha~ converge si
+et seulement si~\alpha~ \textless{} 1.
+
+Démonstration On a
+
+\int  a^b~ dt
+\over (b - t)^\alpha~ = \left
+\ \cases  1 \over
+1-\alpha~ ((b - a)^1-\alpha~ - (b - x)^1-\alpha~)&si
+\alpha~\neq~1 \cr
+log (b - a) -\ log~ (b
+- x)&si \alpha~ = 1  \right .
+
+qui admet une limite au point b si et seulement si~\alpha~ \textless{} 1.
+
+Exemple~9.9.2 Intégrales de Bertrand \int ~
+0^1\diagupet^\alpha~\textbar{}log~
+t\textbar{}^\beta~ dt. Si \alpha~ \textgreater{} -1, soit \gamma tel que \alpha~
+\textgreater{} \gamma \textgreater{} -1. On a alors en 0,
+t^\alpha~\textbar{}log~
+t\textbar{}^\beta~ = o(t^\gamma) (car 
+t^\alpha~\textbar{} log~
+t\textbar{}^\beta~ \over t^\gamma =
+t^\alpha~-\gamma\textbar{}log~
+t\textbar{}^\beta~ tend vers 0 quand t tend vers 0) et comme
+\int  0^1\diagupet^\gamma~ dt
+converge, l'intégrale converge. Si \alpha~ \textless{} -1, soit \gamma tel que \alpha~
+\textless{} \gamma \textless{} -1. Alors t^\gamma =
+o(t^\alpha~\textbar{}log~
+t\textbar{}^\beta~) et comme \int ~
+0^1\diagupet^\gamma dt diverge, l'intégrale diverge. Si \alpha~
+= -1, le changement de variables u = -log~ t
+conduit à
+
+\int  x^1\diagupe~
+\textbar{}log t\textbar{}^\beta~~
+\over t dt =\int ~
+1^- log xu^\beta~~ du
+
+qui admet une limite quand x tend vers 0 si et seulement si~\beta~
+\textless{} -1. En définitive, l'intégrale de Bertrand
+\int ~
+0^1\diagupet^\alpha~\textbar{}log~
+t\textbar{}^\beta~ dt converge si et seulement si~\alpha~ \textgreater{}
+-1 ou (\alpha~ = -1 et \beta~ \textless{} -1).
+
+Remarque~9.9.5 Ce dernier exemple aurait pu également être traité à
+partir des intégrales de Bertrand en + \infty~ à l'aide du changement de
+variables u = 1 \over t qui est de classe
+\mathcal{C}^1 et un homéomorphisme de {]}0,1\diagupe{]} sur {[}e,+\infty~{[} et
+donc qui conserve la nature des intégrales. Ceci montre que l'intégrale
+\int ~
+0^1\diagupet^\alpha~\textbar{}log~
+t\textbar{}^\beta~ dt est de même nature que l'intégrale
+\int  e^+\infty~~
+(log u)^\beta~~ \over
+u^\alpha~  du \over u^2 qui
+converge si et seulement si~2 + \alpha~ \textgreater{} 1 ou 2 + \alpha~ = 1 et \beta~
+\textless{} -1.
+
+{[}
+{[}
+{[}
+{[}

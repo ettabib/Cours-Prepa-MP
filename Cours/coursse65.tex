@@ -1,0 +1,1163 @@
+%% \textbf{Warning: 
+%% requires JavaScript to process the mathematics on this page.\\ If your
+%% browser supports JavaScript, be sure it is enabled.}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% {[}
+%% {[}
+%% {[}{]}
+%% {[}
+%
+%% \subsubsection{11.3 Développements en séries entières}
+%
+%% \paragraph{11.3.1 Problème local, problème global}
+%
+%% Définition~11.3.1 (globale). Soit U un voisinage de 0 dans K et f : U \rightarrow~
+%% E (espace vectoriel normé complet). Soit r \textgreater{} 0 tel que
+%% D(0,r) = \z \in
+%% K∣\textbar{}z\textbar{} \textless{}
+%% r\ \subset~ U. On dit que f est développable en série entière
+%% sur le disque D(0,r) s'il existe une série entière
+%% \\sum ~
+%% anz^n de rayon de convergence R ≥ r tel que
+%% \forall~~z \in D(0,r), f(z) =\
+%% \sum  anz^n~.
+%
+%% Définition~11.3.2 (locale). Soit U un voisinage de 0 dans K et f : U \rightarrow~ E
+%% (espace vectoriel normé complet). On dit que f est développable en série
+%% entière au voisinage de 0 s'il existe r \textgreater{} 0 tel que D(0,r)
+%% = \z \in
+%% K∣\textbar{}z\textbar{} \textless{}
+%% r\ \subset~ U et f est développable en série entière dans
+%% D(0,r).
+%
+%% Remarque~11.3.1 Dans le premier cas, on impose donc le disque dans
+%% lequel f doit être développable en série entière, alors que dans le
+%% second cas on laisse tout latitude à r de prendre des valeurs aussi
+%% petites que nécessaires.
+%
+%% Remarque~11.3.2 Il est facile de construire des fonctions non
+%% développables en séries entières au voisinage de 0. Par exemple toute
+%% fonction admettant 0 comme zéro non isolé ne peut être développable en
+%% série entière au voisinage de 0. Par exemple f(x) =
+%% e^-1\diagupx^2  sin~  1
+%% \over x si x\neq~0, f(0) = 0~;
+%% cette fonction, bien que C^\infty~ sur \mathbb{R}~, ne peut être développable
+%% en série entière au voisinage de 0.
+%
+%% \paragraph{11.3.2 Méthodes de développement}
+%
+%% On peut utiliser tout d'abord les résultats sur les opérations
+%% algébriques ou analytiques concernant les séries entières. On obtiendra
+%% de manière évidente les résultats suivants
+%
+%% Théorème~11.3.1 (i) si f et g : U \rightarrow~ E sont développables en séries
+%% entières~sur D(0,r) \subset~ U (resp. au voisinage de 0), alors \alpha~f + \beta~g est
+%% développable en série entière~sur D(0,r) (resp. au voisinage de 0). (ii)
+%% si f et g : U \rightarrow~ K sont développables en séries entières~sur D(0,r) \subset~ U
+%% (resp. au voisinage de 0), alors fg est développable en série
+%% entière~sur D(0,r) (resp. au voisinage de 0). (iii) si f : U \rightarrow~ K est
+%% développable en série entière~au voisinage de 0 et si
+%% f(0)\neq~0, alors  1 \over f
+%% est développable en série entière~au voisinage de 0. (iv) si U \subset~ \mathbb{R}~, f :
+%% U \rightarrow~ E est dérivable et si f' est développable en série entière~sur
+%% D(0,r) \subset~ U (resp. au voisinage de 0), alors f est développable en série
+%% entière~sur D(0,r) (resp. au voisinage de 0). (v) si U \subset~ \mathbb{R}~, f : U \rightarrow~ E
+%% est développable en série entière~sur D(0,r) \subset~ U (resp. au voisinage de
+%% 0), alors f est C^\infty~ sur {]} - r,r{[} (resp. au voisinage de
+%% 0)et f^(p) est développable en série entière~sur D(0,r)
+%% (resp. au voisinage de 0).
+%
+%% Dans un cadre général, on pourra utiliser le résultat suivant
+%
+%% Théorème~11.3.2 (Mac Laurin). Soit U un voisinage de 0, f : U \rightarrow~ E de
+%% classe C^\infty~ et r \textgreater{} 0 tel que {]} - r,r{[}\subset~ U.
+%% Alors f est développable en série entière dans {]} - r,r{[} si et
+%% seulement si
+%
+%% \forall~~t \in{]} - r,r{[},
+%% limn\rightarrow~+\infty~~\left (f(t)
+%% -\sum k=0^n~
+%% f^(k)(0) \over k!
+%% t^k\right ) = 0
+%
+%% Démonstration On sait en effet que f est développable en série entière
+%% dans {]} - r,r{[} si et seulement si
+%
+%% \forall~~t \in{]} - r,r{[}, f(t) =
+%% \sum k=0^+\infty~ f^(k)~(0)
+%% \over k! t^k
+%
+%% ce qui est la même chose que l'assertion ci dessus.
+%
+%% Méthode~: pour démontrer que f est développable en série entière dans
+%% {]} - r,r{[}, on peut donc chercher à estimer (par exemple par
+%% utilisation de la formule de Taylor-Lagrange ou de la formule de Taylor
+%% avec reste intégral) l'expression Rn(t) = f(t)
+%% -\\sum ~
+%% k=0^n f^(k)(0) \over k!
+%% t^k et à montrer qu'elle admet la limite 0 quand n tend vers
+%% + \infty~.
+%
+%% Exemple~11.3.1 Soit f :{]} - r,r{[}\rightarrow~ E une fonction de classe
+%% C^\infty~ telle que \forall~~n \in \mathbb{N}~,
+%% \forall~~t \in{]} - r,r{[},
+%% \\textbar{}f^(n)(t)\\textbar{}
+%% \leq M. On peut alors écrire la formule de Taylor avec reste intégral, et
+%% on obtient, pour t \in{]} - r,r{[}, Rn(t)
+%% =\int  0^t (t-u)^n~
+%% \over n! f^(n+1)(u) du soit encore
+%% \\textbar{}Rn(t)\\textbar{} \leq
+%% M\int  0^t (t-u)^n~
+%% \over n! du = M t^n+1 \over
+%% (n+1)! qui tend vers 0 quand n tend vers + \infty~ (la série converge
+%% d'après la règle de d'Alembert). On en déduit que la fonction f est
+%% développable en série entière dans {]} - r,r{[}. C'est ainsi que quelle
+%% que soit la méthode utilisée pour définir une fonction exponentielle,
+%% qui vérifiera (exp~ )'
+%% = exp~ , on aura (pour un r quelconque)
+%% \forall~n \in \mathbb{N}~, \\forall~~t \in{]} -
+%% r,r{[}, \textbar{}f^(n)(t)\textbar{}\leq e^r, donc
+%% \forall~~t \in{]} - r,r{[},
+%% exp~ (t) =\
+%% \sum  n=0^+\infty~ t^n~
+%% \over n! et donc \forall~~t \in \mathbb{R}~,
+%% exp~ (t) =\
+%% \sum  n=0^+\infty~ t^n~
+%% \over n! . Une étude similaire pourrait être faite pour
+%% les fonctions trigonométriques (cosinus et sinus). En fait, dans le
+%% paragraphe suivant, nous allons définir directement ces fonctions comme
+%% sommes de séries entières.
+%
+%% Enfin, une dernière technique utilise le théorème de Cauchy-Lipschitz
+%% sur l'unicité des solutions d'équations différentielles à conditions
+%% initiales données. Soit f : U \rightarrow~ K une fonction de classe C^\infty~
+%% vérifiant une équation différentielle y^(n) =
+%% G(t,y,y',\\ldots,y^(n-1)~).
+%% Supposons également que nous connaissions une série entière
+%% \\sum ~
+%% ant^n de rayon de convergence R \textgreater{} 0
+%% telle que sa somme S vérifie la même équation différentielle avec de
+%% plus S(0) =
+%% f(0),\\ldots,S^(n-1)~(0)
+%% = f^(n-1)(0). Si l'équation différentielle relève de l'un des
+%% deux théorèmes de Cauchy Lipschitz, et si en particulier elle est
+%% linéaire à coefficients continus, on aura \forall~~t
+%% \in{]} - R,R{[}\bigcapU, f(t) = S(t) =\
+%% \sum ~
+%% k=0^+\infty~akt^k. La démarche est alors
+%% la suivante
+%
+%% \begin{itemize}
+%% \item
+%%   (i) trouver une équation différentielle vérifiée par f
+%% \item
+%%   (ii) trouver une série entière
+%%   \\sum ~
+%%   ant^n vérifiant formellement l'équation
+%%   différentielle en question avec
+%
+%%   a0 =
+%%   f(0),\\ldots,an-1~
+%%   = (n - 1)!f^(n-1)(0)
+%% \item
+%%   (iii) montrer que cette série entière a un rayon de convergence R non
+%%   nul
+%% \item
+%%   (iv) utiliser un théorème de Cauchy Lipschitz pour garantir que
+%%   \forall~~t \in{]} - R,R{[}\bigcapU, f(t) = S(t)
+%%   = \\sum ~
+%%   k=0^+\infty~akt^k
+%% \end{itemize}
+%
+%% Exemple~11.3.2 Soit m \in \mathbb{R}~ et f : \mathbb{R}~ \rightarrow~ \mathbb{R}~ définie par f(x) = (x +
+%% \sqrt1 + x^2)^m. On a
+%
+%% \begin{align*} f'(x)& =& m\left (1
+%% + x\over \sqrt1 +
+%% x^2\right )(x + \sqrt1
+%% + x^2)^m-1\%& \\ &
+%% =& m f(x)\over \sqrt1 +
+%% x^2 \%& \\
+%% \end{align*}
+%
+%% d'où
+%
+%% \begin{align*} f'`(x)& =& -
+%% 2mx\over  (1 + x^2)^3\diagup2f(x) +
+%% m\over \sqrt1 +
+%% x^2f'(x)\%& \\ & =& -
+%% x\over 1 + x^2f'(x) +
+%% m^2\over 1 + x^2f(x) \%&
+%% \\ \end{align*}
+%
+%% en rempla\ccant simultanément m
+%% f(x)\over \sqrt1+x^2
+%% par f'(x) et f'(x) par m f(x)\over
+%% \sqrt1+x^2 . Donc f vérifie l'équation
+%% différentielle
+%
+%% (1 + x^2)y'`+ xy' - m^2y = 0
+%
+%% avec les conditions initiales f(0) = 1, f'(0) = m.
+%
+%% Cherchons inversement une fonction S développable en série entière sur
+%% {]} - R,R{[} vérifiant cette équation différentielle. On a alors S(t)
+%% = \\sum ~
+%% n=0^+\infty~ant^n, tS'(t)
+%% = \\sum ~
+%% n=0^+\infty~nant^n, t^2S''(t)
+%% = \\sum ~
+%% n=0^+\infty~n(n - 1)ant^n et S''(t)
+%% = \\sum ~
+%% n=0^+\infty~(n + 1)(n + 2)an+2t^n
+%% (vérifications faciles laissées au lecteur, en remarquant que
+%% nan = 0 pour n = 0 et n(n - 1)an = 0 pour n = 0 et n
+%% = 1). On a donc
+%
+%% \begin{align*} (1 + t^2)S'`(t) + tS'(t) -
+%% m^2S(t)&& \%& \\ & =&
+%% \sum n=0^+\infty~~\left
+%% ((n + 1)(n + 2)a n+2 + n(n - 1)an + nan -
+%% m^2a n\right )t^n\%&
+%% \\ & =& \\sum
+%% n=0^+\infty~\left ((n + 1)(n + 2)a
+%% n+2 + (n^2 - m^2)a
+%% n\right )t^n \%&
+%% \\ \end{align*}
+%
+%% L'unicité du développement en série entière de la fonction nulle montre
+%% que S est solution de l'équation différentielle si et seulement si~
+%
+%% \forall~n \in \mathbb{N}~, (n + 1)(n + 2)an+2~ +
+%% (n^2 - m^2)a n
+%
+%% On veut de plus que a0 = 1 et a1 = m. Ces trois
+%% relations définissent parfaitement les deux suites
+%% (a2n)n\in\mathbb{N}~ et (a2n+1)n\in\mathbb{N}~ (l'une
+%% des deux, celle correspondant à la parité de m, étant nulle à partir du
+%% rang \textbar{}m\textbar{} + 2 si m \in ℤ). Des deux séries entières
+%% \\sum ~
+%% a2nt^2n et
+%% \\sum ~
+%% a2n+1t^2n+1, l'une des deux est de rayon de
+%% convergence 1, l'autre de rayon de convergence soit 1 soit + \infty~. Donc la
+%% série entière \\sum ~
+%% ant^n est de rayon de convergence 1
+%% = inf~(1,+\infty~).
+%
+%% Sur {]} - 1,1{[}, on peut donc définir S(t) =\
+%% \sum ~
+%% n=0^+\infty~ant^n. Cette fonction vérifie
+%% la même équation différentielle que f avec les mêmes conditions
+%% initiales. Le théorème de Cauchy-Lipschitz pour les équations
+%% différentielles linéaire à coefficients continus garantit que f et S
+%% coïncident sur l'intersection de leurs intervalles de définition,
+%% c'est-à-dire sur {]} - 1,1{[}. Donc f est développable en série entière
+%% sur {]} - 1,1{[}.
+%
+%% \paragraph{11.3.3 Fonction exponentielle. Fonctions trigonométriques}
+%
+%% La règle de d'Alembert montre que la série entière
+%% \\sum  n≥0~
+%% z^n \over n! a un rayon de convergence
+%% infini. Ceci \\\\jmathmathmathmathustifie l'introduction de la définition suivante
+%
+%% Définition~11.3.3 Pour z \in \mathbb{C}, on pose exp~ (z)
+%% = \\sum ~
+%% n=0^+\infty~ z^n \over n! .
+%
+%% Proposition~11.3.3 (i) z\mapsto~exp(z) est un
+%% morphisme de groupes de (\mathbb{C},+) dans (\mathbb{C}^∗,.), autrement dit
+%% exp (0) = 1, \exp~
+%% (z1 + z2) = exp~
+%% z1 exp z2~,
+%% exp (z)\mathrel\neq~~0 et
+%% (exp (z))^-1~
+%% = exp (-z). (ii) \\forall~~z
+%% \in \mathbb{C}, exp (\overlinez~) =
+%% \overlineexp z~ (iii) pour
+%% tout z \in \mathbb{C}, l'application
+%% t\mapsto~exp~ (tz) est
+%% C^\infty~ de \mathbb{R}~ dans \mathbb{C} et  d^n \over
+%% dt^n (exp~ (tz)) =
+%% z^n exp~ (tz).
+%
+%% Démonstration (i) Soit z1,z2 \in \mathbb{C}. On pose
+%% an = z1^n \over n! et
+%% bn = z2^n \over n! . Ces
+%% séries sont absolument convergentes. On peut donc faire le produit de
+%% Cauchy de ces deux séries et on a alors cn
+%% = \\sum ~
+%% k=0^n 1 \over k!(n-k)!
+%% z1^kz 2^n-k = 1 \over
+%% n! (z1 + z2)^n d'après la formule du
+%% binôme. On a donc
+%
+%% \sum n=0^+\infty~ (z1~ +
+%% z2)^n \over n! =
+%% \left (\\sum
+%% n=0^+\infty~ z1^n \over
+%% n! \right )\left
+%% (\sum n=0^+\infty~~
+%% z2^n \over n! \right )
+%
+%% (ii) Il suffit de faire tendre N vers + \infty~ dans la formule évidente
+%% \\sum ~
+%% n=0^N \overlinez^n
+%% \over n! =
+%% \overline\\\sum
+%%  n=0^N z^n \over n! 
+%
+%% (iii) On a exp~ (tz)
+%% = \\sum ~
+%% n=0^+\infty~ z^n \over n!
+%% t^n qui est une série entière en t de rayon de convergence
+%% infini. On en déduit que sa somme est de classe C^\infty~ sur \mathbb{R}~ et
+%% que
+%
+%% \begin{align*} d^n \over
+%% dt^n (exp~ (tz))& =&
+%% \sum k=n^+\infty~ z^k~
+%% \over k! k(k - 1)\ldots~(k -
+%% n + 1)t^k-n\%& \\ & =&
+%% \sum k=n^+\infty~ z^k~
+%% \over (k - n)! t^k-n = z^n exp
+%% (tz) \%& \\
+%% \end{align*}
+%
+%% après le changement de k - n en k.
+%
+%% Définition~11.3.4 On pose e = exp~ 1~; on a
+%% bien entendu, \forall~~n \in ℤ,
+%% exp (n) = e^n~. On en déduit
+%% facilement que \forall~~r \in ℚ,
+%% exp (r) = e^r~, ce qui \\\\jmathmathmathmathustifie
+%% ensuite la notation exp (z) = e^z~
+%% pour z \in \mathbb{C}.
+%
+%% Définition~11.3.5 Pour z \in \mathbb{C}, on pose cos~ z
+%% = e^iz+e^-iz \over 2 ,
+%% sin z = e^iz-e^-iz~
+%% \over 2i ,
+%% \mathrmch~ z =
+%% e^z+e^-z \over 2 ,
+%% \mathrmsh~ z =
+%% e^z-e^-z \over 2 .
+%
+%% Remarque~11.3.3 Il est clair que les fonctions
+%% cos~ et
+%% \mathrmch~ sont paires et
+%% que les fonctions sin~ et
+%% \mathrmsh~ sont impaires.
+%
+%% Proposition~11.3.4 (i) \forall~~z \in \mathbb{C},
+%% \mathrmch~ iz
+%% = cos~ z,
+%% \mathrmsh~ iz =
+%% isin z, \cos~
+%% ^2z + sin ^2~z = 1,
+%% \mathrmch ^2~z
+%% -\mathrmsh ^2~z =
+%% 1 (ii) \forall~~a,b \in \mathbb{C}
+%
+%% \begin{align*} cos~ (a +
+%% b)& =& cos a\cos~ b
+%% - sin a\sin~ b\%&
+%% \\ sin~ (a + b)&
+%% =& sin a\cos~ b
+%% + cos a\sin~ b\%&
+%% \\
+%% \mathrmch~ (a + b)& =&
+%% \mathrmch~
+%% a\mathrmch~ b
+%% + \mathrmsh~
+%% a\mathrmsh~ b \%&
+%% \\
+%% \mathrmsh~ (a + b)& =&
+%% \mathrmsh~
+%% a\mathrmch~ b
+%% + \mathrmch~
+%% a\mathrmsh~ b \%&
+%% \\ \end{align*}
+%
+%% Démonstration Par le calcul à partir de la définition.
+%
+%% Remarque~11.3.4 On déduit de ces formules de manière évidente toutes les
+%% formules usuelles de la trigonométrie circulaire ou hyperbolique dont
+%% nous ne citerons que celles qu'il est absolument indispensable de
+%% connaître par coeur~:
+%
+%% \forall~~a,b \in \mathbb{C}
+%
+%% \begin{align*}
+%%  cos~ (a +b)& =& cos a\cos~ b
+%% - sin a\sin~ b \%&
+%% \\ cos~ (a - b)&
+%% =& cos a\cos~ b
+%% + sin a\sin~ b \%&
+%% \\ sin~ (a + b)&
+%% =& sin a\cos~ b
+%% + cos a\sin~ b \%&
+%% \\ sin~ (a - b)&
+%% =& sin a\cos~ b
+%% - cos a\sin~ b \%&
+%% \\ cos~ (2a)&
+%% =& cos ^2~a
+%% - sin ^2~a =
+%% 2cos ^2~a - 1 = 1 -
+%% 2sin ^2~a\%&
+%% \\ sin~ (2a)&
+%% =& 2sin a\cos~ a \%&
+%% \\ cos~
+%% ^2a& =& 1 + cos~ 2a
+%% \over 2 ,\quad
+%% sin ^2~a = 1
+%% - cos 2a \over 2~ \%&
+%% \\ cos~ p
+%% + cos q& =& 2\cos~
+%%  p - q \over 2 cos~  p + q
+%% \over 2 \%& \\
+%% cos p -\ cos~ q& =&
+%% -2sin  p - q \over 2~
+%% sin  p + q \over 2~ \%&
+%% \\ sin~ p
+%% + sin q& =& 2\cos~
+%%  p - q \over 2 sin~  p + q
+%% \over 2 \%& \\
+%% sin p -\ sin~ q& =&
+%% 2sin  p - q \over 2~
+%% cos  p + q \over 2~ \%&
+%% \\ \end{align*}
+%
+%% \forall~~a,b \in \mathbb{C}
+%
+%% \begin{align*}
+%% \mathrmch~ (a + b)& =&
+%% \mathrmch~
+%% a\mathrmch~ b
+%% + \mathrmsh~
+%% a\mathrmsh~ b \%&
+%% \\
+%% \mathrmch~ (a - b)& =&
+%% \mathrmch~
+%% a\mathrmch~ b
+%% -\mathrmsh~
+%% a\mathrmsh~ b \%&
+%% \\
+%% \mathrmsh~ (a + b)& =&
+%% \mathrmsh~
+%% a\mathrmch~ b
+%% + \mathrmch~
+%% a\mathrmsh~ b \%&
+%% \\
+%% \mathrmsh~ (a - b)& =&
+%% \mathrmsh~
+%% a\mathrmch~ b
+%% -\mathrmch~
+%% a\mathrmsh~ b \%&
+%% \\
+%% \mathrmch~ (2a)& =&
+%% \mathrmch ^2~a
+%% + \mathrmsh ^2~a
+%% = 2\mathrmch ^2~a
+%% - 1 = 1 + 2\mathrmsh~
+%% ^2a\%& \\
+%% \mathrmsh~ (2a)& =&
+%% 2\mathrmsh~
+%% a\mathrmch~ a \%&
+%% \\ \end{align*}
+%
+%% Etude sur \mathbb{R}~ des fonctions exponentielle et logarithme
+%
+%% Théorème~11.3.5 L'application
+%% t\mapsto~e^t est un C^\infty~
+%% difféomorphisme de \mathbb{R}~ sur {]}0,+\infty~{[}. Le difféomorphisme réciproque est
+%% appelé le logarithme (naturel ou népérien). Pour t \textgreater{} 0 et \alpha~
+%% \in \mathbb{R}~, on pose t^\alpha~ = e^\alpha~ log~
+%% t (la notation est cohérente pour \alpha~ \in ℚ).On a alors (entre autres
+%% propriétés)
+%
+%% \begin{itemize}
+%% \item
+%%   (i) \forall~t1,t2~ \in{]}0,+\infty~{[},
+%%   log (t1t2~)
+%%   = log t1~ +\
+%%   log t2
+%% \item
+%%   (ii)  d \over dt (log~ t)
+%%   = 1 \over t
+%% \item
+%%   (iii) On a également
+%
+%%   \begin{align*} \forall~~\alpha~
+%%   \textgreater{} 0, &
+%%   limt\rightarrow~+\infty~t^-\alpha~e^t~
+%%   = +\infty~,\quad
+%%   limt\rightarrow~+\infty~t^-\alpha~~\
+%%   log t = 0& \%& \\ &
+%%   limt\rightarrow~+\infty~t^\alpha~e^-t~
+%%   = 0,\quad
+%%   limt\rightarrow~0t^\alpha~~\
+%%   log t = 0 & \%& \\
+%%   \end{align*}
+%% \end{itemize}
+%
+%% Démonstration On a clairement exp~ t
+%% \textgreater{} 0 pour t ≥ 0~; pour t \leq 0, on a
+%% exp t = (\exp~
+%% \textbar{}t\textbar{})^-1 \textgreater{} 0~; on en déduit que
+%%  d \over dt (exp~ t)
+%% = exp~ t \textgreater{} 0 pour tout t \in \mathbb{R}~ donc
+%% t\mapsto~exp~ t est un
+%% C^\infty~ difféomorphisme croissant de \mathbb{R}~ sur son image. Mais, pour
+%% t ≥ 0, on a exp~ t =\
+%% \sum  n=0^+\infty~ t^n~
+%% \over n! ≥ 1 + t donc
+%% limt\rightarrow~+\infty~\exp~
+%% t = +\infty~. Comme pour t \textless{} 0, exp~ t =
+%% (exp \textbar{}t\textbar{})^-1~
+%% \textgreater{} 0, on a
+%% limt\rightarrow~-\infty~\exp~
+%% t = 0. Donc exp~ (\mathbb{R}~) ={]}0,+\infty~{[}. La cohérence
+%% de la définition de t^\alpha~ =
+%% e^\alpha~ log t~ est laissée aux soins du
+%% lecteur ainsi que les propriétés évidentes de l'application
+%% t\mapsto~t^\alpha~.
+%
+%% (i) Comme exp~ est un isomorphisme de (\mathbb{R}~,+) sur
+%% (\mathbb{R}~^∗⋅,.), log~ est également un
+%% isomorphisme de groupes de (\mathbb{R}~^∗⋅,.) sur (\mathbb{R}~,+)
+%
+%% (ii) Le théorème sur la dérivation des fonctions réciproques montre que
+%%  d \over dt (log~ t) = 1
+%% \over exp~
+%% '(log t)~ = 1 \over
+%% exp \ log t~ = 1
+%% \over t .
+%
+%% (iii) pour t \textgreater{} 0, on a exp~ t
+%% = \\sum ~
+%% n=0^+\infty~ t^n \over n! ≥
+%% t^N \over N! . Soit \alpha~ \textgreater{} 0, on a
+%% alors pour N \textgreater{} \alpha~, t^-\alpha~\
+%% exp t \textgreater{} t^N-\alpha~ \over N! , ce
+%% qui montre que
+%% limt\rightarrow~+\infty~t^-\alpha~e^t~
+%% = +\infty~. En passant à l'inverse, on trouve
+%% limt\rightarrow~\infty~t^\alpha~e^-t~
+%% = 0. Comme
+%% limx\rightarrow~+\infty~\log~
+%% x = +\infty~, le théorème de composition des limites donne
+%% limx\rightarrow~+\infty~(\log~
+%% x)^-1\diagup\alpha~x = 0, soit encore
+%% limx\rightarrow~+\infty~x^-\alpha~~\
+%% log x = 0~; en changeant x en 1\diagupx, on obtient alors
+%% limx\rightarrow~0x^\alpha~~\
+%% log x = 0.
+%
+%% Etude sur \mathbb{R}~ des fonctions cosinus et sinus
+%
+%% On a pour t \in \mathbb{R}~, \overlinee^it
+%% = exp (\overlineit~) =
+%% e^-it. On a donc cos~ t
+%% =\
+%% \mathrmRe(e^it) et
+%% sin~ t =\
+%% \mathrmIm(e^it). On en déduit que
+%% cos~ t =\
+%% \sum  n=0^+\infty~(-1)^n~
+%% t^2n \over (2n)! et
+%% sin~ t =\
+%% \sum  n=0^+\infty~(-1)^n~
+%% t^2n+1 \over (2n+1)! . Ces formules (ou
+%% celles de définition) montrent immédiatement que
+%% cos ' = -\sin~ et
+%% sin ' =\ cos~ . On a,
+%% pour t \in{]}0,2{]},  sin~ t
+%% \over t =\
+%% \sum  n=0^+\infty~(-1)^n~
+%% t^2n \over (2n+1)! qui est la somme d'une
+%% série alternée à partir de n = 1 car
+%
+%%   t^2n+2 \over (2n+3)!
+%% \over  t^2n \over (2n+1)!
+%%  = t^2 \over (2n + 1)(2n + 3)
+%% \textless{} 1
+%
+%% pour t \in{]}0,2{]} et n ≥ 1. On en déduit (théorème sur l'encadrement des
+%% sommes d'une série alternée) que \forall~~t
+%% \in{]}0,2{]}, sin t \over t~ ≥
+%% 1 - t^2 \over 6 \textgreater{} 0, donc
+%% sin~ t \textgreater{} 0. Comme
+%% cos ' = -\sin~ , la
+%% fonction cosinus est strictement décroissante sur {[}0,2{]}. On a
+%% cos~ 0 = 1 \textgreater{} 0 et
+%% cos~ 2 =\
+%% \sum  n=0^+\infty~(-1)^n~
+%% 2^2n \over (2n)! qui est la somme d'une
+%% série alternée à partir de n = 1 car
+%
+%%   2^2n+2 \over (2n+2)!
+%% \over  2^2n \over (2n)! 
+%% = 4 \over (2n + 1)(2n + 2) \textless{} 1
+%
+%% pour n ≥ 1. On en déduit (théorème sur l'encadrement des sommes d'une
+%% série alternée) que
+%
+%% cos 2 \leq 1 - 4 \over 2!~ +
+%% 16 \over 4! \textless{} 0
+%
+%% Le théorème des valeurs intermédiaires assure alors que la fonction
+%% cosinus s'annule une et une seule fois sur {]}0,2{[} en un point \alpha~. On
+%% posera \pi~ = 2\alpha~. On a donc cos~  \pi~
+%% \over 2 = 0 et cos~ t
+%% \textgreater{} 0 pour t \in {[}0, \pi~ \over 2 {[}. Comme
+%% sin ' =\ cos~ ,
+%% sin~ est strictement croissante sur {[}0, \pi~
+%% \over 2 {]}, comme sin~ 0 = 0
+%% et cos ^2~ \pi~ \over
+%% 2 + sin ^2~ \pi~
+%% \over 2 = 1, on a donc sin~ 
+%% \pi~ \over 2 = 1. Les formules d'addition donnent alors
+%% cos (x + \pi~ \over 2~ ) =
+%% -sin x, \sin~ (x + \pi~
+%% \over 2 ) = cos~ x et on a
+%% donc les variations suivantes
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% t
+%
+%% 0
+%
+%%  \pi~ \over 2
+%
+%% \pi~
+%
+%%  3\pi~ \over 2
+%
+%% 2\pi~
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%%  cos~ t
+%
+%% 1
+%
+%% \searrow
+%
+%% 0
+%
+%% \searrow
+%
+%% - 1
+%
+%% \nearrow
+%
+%% 0
+%
+%% \nearrow
+%
+%% 1
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% sin~ t
+%
+%% 0
+%
+%% \nearrow
+%
+%% 1
+%
+%% \searrow
+%
+%% 0
+%
+%% \searrow
+%
+%% - 1
+%
+%% \nearrow
+%
+%% 0
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% \begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%% On a cos~ (x + 2\pi~) =\
+%% cos x et sin~ (x + 2\pi~)
+%% = sin~ x (de nouveau par les formules
+%% d'addition). L'ensemble des périodes des fonctions
+%% cos et \sin~ (qui est
+%% évidemment le même puisque chacune est au signe près la dérivée de
+%% l'autre) est un sous-groupe fermé de \mathbb{R}~ donc de la forme aℤ avec donc a
+%% = 2\pi~ \over k , où k \in ℤ~; le tableau de variation
+%% montre clairement que k ne peut pas être strictement supérieur à 1~;
+%% donc les deux fonctions sont périodiques de plus petite période 2\pi~.
+%
+%% \paragraph{11.3.4 Nombres complexes de module 1}
+%
+%% Avec l'aimable autorisation de Hervé Pépin.
+%
+%% Théorème~11.3.6 L'application \phi :
+%% t\mapsto~e^it est un morphisme sur\\\\jmathmathmathmathectif
+%% de groupes de (\mathbb{R}~,+) sur (U,.) (où U désigne l'ensemble des nombres
+%% complexes de module 1) dont le noyau est 2\pi~ℤ. Par factorisation
+%% canonique, il définit un isomorphisme \overline\phi du
+%% groupe quotient (\mathbb{R}~\diagup2\pi~ℤ) sur le groupe (U,.).
+%
+%% Démonstration Il est clair que \phi(t1 + t2) =
+%% \phi(t1)\phi(t2), donc \phi est un morphisme de groupes. Soit
+%% z = a + ib un nombre complexe de module 1. On a a \in {[}-1,1{]}, donc il
+%% existe t \in \mathbb{R}~ tel que cos~ t = a. Mais alors
+%% sin t = 1 - a^2 = b^2~ et
+%% donc b vaut soit sin~ t soit
+%% sin~ (-t). Dans les deux cas on a trouvé un x \in
+%% \mathbb{R}~ tel que z = e^ix ce qui montre que \phi est sur\\\\jmathmathmathmathectif. On a
+%% alors x \in\mathrmKer~\phi
+%% \Leftrightarrow \phi(x) = 1 \mathrel\Leftrightarrow
+%% cos x = 1 \mathrel\Leftrightarrow~ x \in 2\pi~ℤ
+%% ce qui assure que
+%% \mathrmKer~\phi = 2\pi~ℤ.
+%
+%% Définition~11.3.6 Soit \zeta \in \mathbb{C}, z\neq~0. On pose
+%% alors Arg~ z =
+%% \overline\phi^-1( z \over
+%% \textbar{}z\textbar{} ) \in \mathbb{R}~\diagup2\pi~ℤ (argument du nombre complexe z).
+%
+%% Remarque~11.3.5 Si Arg~ z = \theta + 2\pi~ℤ, on a par
+%% définition z = \textbar{}z\textbar{}e^i\theta. On a bien entendu,
+%% Arg(z1z2~)
+%% = Arg z1~ +\
+%% Arg z2. On peut prendre un représentant
+%% arg z dans \mathbb{R}~ de \Arg~
+%% z (par exemple classiquement dans {]} - \pi~,\pi~{]}), mais alors en général
+%% arg(z1z2)\neq~\arg~
+%% z1 + arg z2~.
+%
+%% Définition~11.3.7 Soit X un espace métrique et f : X \rightarrow~ U une application
+%% continue. On dit que f est relevable s'il existe \phi : X \rightarrow~ \mathbb{R}~ continue
+%% telle que f = e^i\phi.
+%
+%% Proposition~11.3.7 Soit X un espace métrique et f : X \rightarrow~ U une
+%% application continue non sur\\\\jmathmathmathmathective. Alors f est relevable.
+%
+%% Démonstration Soit \alpha~ \in \mathbb{R}~ tel que
+%% e^i\alpha~∉f(X). L'application \omega :{]}\alpha~,\alpha~
+%% + 2\pi~{[}\rightarrow~ U \diagdown\e^i\alpha~\,
+%% t\mapsto~e^it est un homéomorphisme. Donc
+%% \phi = \omega^-1 \cdot f convient.
+%
+%% Corollaire~11.3.8 Soit X un espace métrique et f,g : X \rightarrow~ U telles que
+%% \forall~~x \in X, \textbar{}f(x) - g(x)\textbar{}
+%% \textless{} 2. Alors  f \over g est relevable.
+%
+%% Démonstration On a \forall~~x \in X, f(x)
+%% \over g(x) \neq~ - 1 et donc 
+%% f \over g n'est pas sur\\\\jmathmathmathmathective.
+%
+%% Nous allons maintenant introduire un concept important en topologie,
+%% l'homotopie.
+%
+%% Définition~11.3.8 Soit X et E deux espaces métriques, f,g : X \rightarrow~ E. On
+%% dit que f et g sont homotopes s'il existe F : X \times {[}0,1{]} \rightarrow~ E continue
+%% telle que \forall~~x \in X, f(x) = F(x,0) et g(x) =
+%% F(x,1).
+%
+%% Théorème~11.3.9 Soit X un espace métrique compact et f,g : X \rightarrow~ U
+%% homotopes. Alors  f \over g est relevable et donc (f
+%% relevable) \Leftrightarrow (g relevable).
+%
+%% Démonstration Soit F comme ci dessus. Alors F est continue sur X \times
+%% {[}0,1{]} compact, donc uniformément continue. Soit donc \eta
+%% \textgreater{} 0 tel que \textbar{}t - t'\textbar{} \textless{} \eta
+%% \rigtharrow~\forall~~x \in X,\textbar{}F(x,t) - F(x,t')\textbar{}
+%% \textless{} 2 et soit t0 =
+%% 1,\\ldots,tn~
+%% = 1 une subdivision de {[}0,1{]} de pas plus petit que \eta. Alors, si
+%% fi(x) = F(x,ti), on a \forall~~x \in
+%% X, \textbar{}fi+1(x) - fi(x)\textbar{} \textless{} 2
+%% donc  fi \over fi+1 est
+%% relevable. Mais alors  f \over g = f0
+%% \over fn =\
+%% ∏  i=0^n-1 fi~
+%% \over fi+1 est relevable.
+%
+%% Corollaire~11.3.10 Soit f : {[}a,b{]} \rightarrow~ U une application continue.
+%% Alors f est relevable.
+%
+%% Démonstration f est évidemment homotope à l'application constante
+%% x\mapsto~f(a) qui est relevable (car non sur\\\\jmathmathmathmathective)
+%% par F(x,t) = f(a + t(x - a)).
+%
+%% Corollaire~11.3.11 Soit I un intervalle de \mathbb{R}~ et f : I \rightarrow~ U continue.
+%% Alors f est relevable.
+%
+%% \paragraph{11.3.5 Fonctions classiques}
+%
+%% Fonctions d'une variable complexe
+%
+%% Lemme~11.3.12 La fonction z\mapsto~ 1
+%% \over 1-z est développable en série entière dans le
+%% disque D(0,1) (R = 1).
+%
+%% Démonstration On a  1 \over 1-z = 1 + z +
+%% ⋯ + z^n + z^n+1
+%% \over 1-z ce dernier terme tendant vers 0 quand n tend
+%% vers + \infty~ si \textbar{}z\textbar{} \textless{} 1. On en déduit que pour
+%% \textbar{}z\textbar{} \textless{} 1,  1 \over 1-z
+%% = \\sum ~
+%% n=0^+\infty~z^n avec un rayon de convergence
+%% évidemment égal à 1 par la règle de d'Alembert.
+%
+%% Proposition~11.3.13 Pour \textbar{}z\textbar{} \textless{} 1, on a  1
+%% \over (1-z)^k+1 =\
+%% \sum ~
+%% n=0^+\infty~Cn+k^kz^n avec un rayon
+%% de convergence égal à 1.
+%
+%% Démonstration Soit z\neq~0~; le lemme précédent
+%% montre que pour t \in{]} - 1 \over
+%% \textbar{}z\textbar{} , 1 \over
+%% \textbar{}z\textbar{} {[}, on a  1 \over 1-tz
+%% = \\sum ~
+%% n=0^+\infty~z^nt^n. Dérivons k fois par
+%% rapport à t cette série entière en t. On obtient donc
+%
+%%  z^kk! \over (1 - tz)^k+1 =
+%% \sum n=k^+\infty~z^n~ n!
+%% \over (n - k)! t^n-k =
+%% \sum n=0^+\infty~z^n+k~ (n +
+%% k)! \over n! t^n
+%
+%% après le changement de n en n + k. Si \textbar{}z\textbar{} \textless{}
+%% 1, en divisant les deux membres par z^kk! et en faisant t = 1
+%% \in{]} - 1 \over \textbar{}z\textbar{} , 1
+%% \over \textbar{}z\textbar{} {[}, on obtient la formule
+%% désirée. Il est clair que le rayon de convergence de la série obtenue
+%% est 1 (règle de d'Alembert).
+%
+%% Corollaire~11.3.14 Soit R(z) = P(z) \over Q(z) une
+%% fraction rationnelle à coefficients complexes n'admettant pas 0 pour
+%% pôle et soit \rho =\
+%% min\\textbar{}\alpha~\textbar{}∣\alpha~\text
+%% pôle de R\. Alors R est développable en série entière
+%% dans le disque D(0,\rho).
+%
+%% Démonstration Par décomposition en éléments simples sur le corps des
+%% nombres complexes, il suffit de montrer que si \alpha~ est un pôle de R(z), un
+%% élément simple de la forme  1 \over
+%% (z-\alpha~)^k est développable en série entière dans le disque
+%% D(0,\rho). Mais
+%
+%%  1 \over (z - \alpha~)^k = (-1)^k
+%% \over \alpha~^k  1 \over (1 -
+%% z \over \alpha~ )^k = (-1)^k
+%% \over \alpha~^k  \\sum
+%% n=0^+\infty~C n+k-1^k-1 z^n
+%% \over \alpha~^n
+%
+%% avec un rayon de convergence égal à \textbar{}\alpha~\textbar{}≥ \rho.
+%
+%% Remarque~11.3.6 On montre facilement que le rayon de convergence est
+%% exactement égal à \rho, puisque la somme de la série entière ne peut
+%% admettre un prolongement continu en un pôle de la fraction rationnelle.
+%
+%% Fonctions d'une variable réelle
+%
+%% Lemme~11.3.15 Soit \alpha~ \in \mathbb{R}~. La fonction t\mapsto~(1
+%% + t)^\alpha~ est développable en série entière dans {]} - 1,1{[} si
+%% \alpha~∉\mathbb{N}~, dans \mathbb{R}~ si \alpha~ \in \mathbb{N}~.
+%
+%% Démonstration Le résultat est évident si \alpha~ \in \mathbb{N}~ puisqu'alors la fonction
+%% est polynomiale. Nous supposerons donc \alpha~∉\mathbb{N}~.
+%% Considérons la série entière 1 +\
+%% \sum  n≥1~
+%% \alpha~(\alpha~-1)\\ldots~(\alpha~-n+1)
+%% \over n! t^n. On a 
+%% \alpha~(\alpha~-1)\\ldots~(\alpha~-n+1)
+%% \over n! \neq~0 et
+%
+%% lim~ 
+%% \alpha~(\alpha~-1)\\ldots~(\alpha~-n)
+%% \over (n+1)! \over 
+%% \alpha~(\alpha~-1)\\ldots~(\alpha~-n+1)
+%% \over n!  = lim~ \alpha~ - n
+%% \over n + 1 = -1
+%
+%% Donc son rayon de convergence est 1. Posons donc, pour t \in{]} - 1,1{[},
+%% S(t) = 1 + \\sum ~
+%% n=1^+\infty~
+%% \alpha~(\alpha~-1)\\ldots~(\alpha~-n+1)
+%% \over n! t^n. On a
+%
+%% \begin{align*} S'(t)& =&
+%% \sum n=1^+\infty~~ \alpha~(\alpha~ -
+%% 1)\ldots~(\alpha~ - n + 1) \over (n
+%% - 1)! t^n-1\%& \\ & =&
+%% \sum n=0^+\infty~~ \alpha~(\alpha~ -
+%% 1)\ldots(\alpha~ - n) \over n!~
+%% t^n \%& \\
+%% \end{align*}
+%
+%% après un changement d'indice. On en déduit que
+%
+%% \begin{align*} (1 + t)S'(t) = S'(t) + tS'(t)&&
+%% \%& \\ & =& \alpha~ +
+%% \sum n=1^+\infty~~\left
+%% ( \alpha~(\alpha~ - 1)\ldots~(\alpha~ - n)
+%% \over n! + \alpha~(\alpha~ -
+%% 1)\ldots~(\alpha~ - n + 1) \over (n
+%% - 1)! \right )t^n\%&
+%% \\ \end{align*}
+%
+%% en utilisant d'abord la seconde expression de S'(t) puis la première.
+%% Mais
+%
+%% \begin{align*} \alpha~(\alpha~ -
+%% 1)\\ldots~(\alpha~ - n)
+%% \over n! + \alpha~(\alpha~ -
+%% 1)\\ldots~(\alpha~ - n +
+%% 1) \over (n - 1)! && \%&
+%% \\ & =& \alpha~(\alpha~ -
+%% 1)\\ldots~(\alpha~ - n +
+%% 1) \over (n - 1)! \left ( \alpha~ - n
+%% \over n + 1\right )\%&
+%% \\ & =& \alpha~(\alpha~ -
+%% 1)\\ldots~(\alpha~ - n +
+%% 1) \over (n - 1)!  \alpha~ \over n \%&
+%% \\ \end{align*}
+%
+%% On en déduit que
+%
+%% (1 + t)S'(t) = \alpha~ + \alpha~\\sum
+%% n=1^+\infty~ \alpha~(\alpha~ - 1)\ldots~(\alpha~ -
+%% n + 1) \over n! t^n = \alpha~S(t)
+%
+%% Alors
+%
+%%  d \over dt \left ( S(t)
+%% \over (1 + t)^\alpha~ \right ) =
+%% (1 + t)S'(t) - \alpha~S(t) \over (1 + t)^\alpha~+1 = 0
+%
+%% donc la fonction est constante sur {]} - 1,1{[}. Comme elle vaut 1 au
+%% point 0, elle est constamment égale à 1 et donc
+%% \forall~t \in{]} - 1,1{[}, (1 + t)^\alpha~~ = S(t)
+%% = 1 + \\sum ~
+%% n=1^+\infty~
+%% \alpha~(\alpha~-1)\\ldots~(\alpha~-n+1)
+%% \over n! t^n.
+%
+%% On obtient ainsi facilement des développements en série entière de (1
+%% + t)^-1, (1 + t^2)^-1, (1 -
+%% t^2)^-1, (1 - t^2)^-1\diagup2, (1
+%% + t^2)^-1\diagup2, puis par intégration des développements
+%% de log~ (1 + t),
+%% \mathrmarctg~ t,
+%% arg~
+%% \mathrmth~ t,
+%% arcsin t et \arg~
+%% \mathrmsh~ t. En
+%% récapitulant, on obtient la table suivante de développements en série
+%% entière
+%
+\begin{align*}
+%
+%% cos~ t& =&
+%% \sum n=0^+\infty~(-1)^n~
+%% t^2n \over (2n)! ,\quad R =
+%% +\infty~ \%& \\ sin~
+%% t& =& \\sum
+%% n=0^+\infty~(-1)^n t^2n+1
+%% \over (2n + 1)! ,\quad R = +\infty~ \%&
+%% \\
+		e^t & =  \sum_{n=0}^{+\infty} \frac{t^n}{n!} ,\quad R = +\infty \\ 
+%%ch t & =&\sum_{n=0}^{+\infty} \frac{t^{2n}}{(2n)!} ,\quad R = +\infty~  \\
+%
+%% \mathrmsh~ t& =&
+%% \sum n=0^+\infty~ t^2n+1~
+%% \over (2n + 1)! ,\quad R = +\infty~ \%&\\
+%
+(1 + t)^ {\alpha} & =  1 + \sum ^{+\infty}_{n=1} \frac{\alpha (\alpha - 1)\ldots (\alpha - n + 1)}{n!}t^n,\quad R = 1\ ou\ +\infty  \\ 
+%	\frac{1}{1 + t} & = \sum_{n=0}^{+\infty}~(-1)^n t^n,\quad R = 1  \\
+%\\
+	\frac{1}{1 - t} & =  \sum_{n=0}^{+\infty} t^n, \quad R = 1 \\   
+% \\
+		log(1 + t)& =  \sum_{n=1}^{+\infty} \frac{(-1)^{n-1}}{n} t^n ,\quad R = 1 \\
+		%\\
+		log(1 - t) & =  -\sum_{n=1}^{+\infty} \frac{t^n}{ n} ,\quad R = 1 \\
+%
+
+% \mathrm{arctg}t& = & \sum n=0^+\infty~(-1)^n t^2n+1 \over 2n + 1 ,\quad R= 1 \\
+%% \mathrmth~ t& =&
+%% \sum n=0^+\infty~ t^2n+1~
+%% \over 2n + 1 ,\quad R = 1 \%&
+%% \\ arcsin~ t&
+%% =& t + \sum n=1^+\infty~~
+%% 1.3\ldots~(2n - 1) \over
+%% 2.4\ldots(2n)  t^2n+1~
+%% \over 2n + 1 ,\quad R = 1 \%&
+%% \\ arg~
+%% \mathrmsh~ t& =& t +
+%% \sum n=1^+\infty~(-1)^n~
+%% 1.3\ldots~(2n - 1) \over
+%% 2.4\ldots(2n)  t^2n+1~
+%% \over 2n + 1 ,\quad R = 1 \%&
+ \end{align*}
+%
+%% \paragraph{11.3.6 Méthodes de sommation}
+%
+%% Le problème est ici, étant donné une série entière
+%% \\sum ~
+%% ant^n, de reconnaître une fonction exprimable avec
+%% des fonctions classiques dont c'est le développement en série entière.
+%% Bien entendu, on utilise toutes les méthodes inverses des méthodes ci
+%% dessus (combinaisons linéaires, produits, changement de variable,
+%% dérivation, intégration, équations différentielles). Nous décrirons ici
+%% seulement deux cas classiques qui se traitent avec des méthodes
+%% spécifiques.
+%
+%% Séries entières \\sum ~
+%% P(n)t^n, où P est un polynôme Le rayon de convergence est
+%% évidemment égal à 1. On a vu que
+%
+%%  1 \over (1 - t)^k+1 =
+%% \sum n=0^+\infty~C~
+%% n+k^kt^n = \\sum
+%% n=0^+\infty~ (n + k)(n + k -
+%% 1)\ldots(n + 1) \over k!~
+%% t^n
+%
+%% Posons donc P0(X) = 1 et
+%
+%% Pk(X) = (X + k)(X + k -
+%% 1)\\ldots~(X + 1)
+%% \over k!
+%
+%% pour k ≥ 1 et soit d = deg~ P. La famille
+%% (P0,P1,\\ldots,Pd~)
+%% est une base de \mathbb{R}~d{[}X{]} (espace vectoriel des polynômes de
+%% degré inférieur ou égal à d) car elle est échelonnée en degré. On peut
+%% donc écrire P(X) = \lambda~0P0(X) +
+%% \lambda~1P1(X) +
+%% \\ldots~ +
+%% \lambda~dPd(X) et alors, pour t \in{]} - 1,1{[},
+%
+%% \sum n=0^+\infty~P(n)t^n~
+%% = \lambda~0 \over 1 - t + \lambda~1
+%% \over (1 - t)^2 +
+%% \ldots + \lambda~d~ \over
+%% (1 - t)^d+1
+%
+%% Remarque~11.3.7 Cette méthode s'étend à des séries entières du type
+%% \\sum ~  P(n)
+%% \over n+k t^n où k est un entier. Il suffit
+%% en effet de multiplier par t^k et de dériver pour tomber sur
+%% une série du type précédent. On peut ensuite, par décomposition en
+%% éléments simples sommer les séries du type
+%% \\sum ~  P(n)
+%% \over
+%% (n+k1)\\ldots(n+km)~
+%% t^n où
+%% k1,\\ldots,km~
+%% sont des entiers distincts.
+%
+%% Séries entières \\sum ~
+%% P(n) t^n \over n! , où P est un polynôme
+%% Le rayon de convergence est évidemment égal à + \infty~. On remarque ici que
+%% \\sum ~
+%% n=0^+\infty~n(n -
+%% 1)\\ldots~(n - k +
+%% 1) t^n \over n!
+%% = \\sum ~
+%% n=k^+\infty~ t^n \over (n-k)! =
+%% t^ke^t. Posons donc P0(X) = 1 et
+%% Pk(X) = X(X -
+%% 1)\\ldots~(X - k +
+%% 1) pour k ≥ 1 et soit d = deg~ P. La famille
+%% (P0,P1,\\ldots,Pd~)
+%% est une base de \mathbb{R}~d{[}X{]} (espace vectoriel des polynômes de
+%% degré inférieur ou égal à d) car elle est échelonnée en degré. On peut
+%% donc écrire P(X) = \lambda~0P0(X) +
+%% \lambda~1P1(X) +
+%% \\ldots~ +
+%% \lambda~dPd(X) et alors, pour t \in \mathbb{R}~, on a
+%
+%% \sum n=0^+\infty~P(n) t^n~
+%% \over n! = (\lambda~0 + \lambda~1t +
+%% \ldots~ +
+%% \lambda~dt^d)e^t

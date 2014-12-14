@@ -1,0 +1,308 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{16.6 Analyse numérique des équations différentielles}
+
+\paragraph{16.6.1 Méthode d'Euler}
+
+Soit f : J \times E \rightarrow~ E de classe \mathcal{C}^1 , soit to dans J ,
+yo dans E et \phi : J0 \rightarrow~ E la solution maximale
+vérifiant la condition \phi(to) = yo. J0 est
+un intervalle contenu dans J et contenant to, et dire que la
+solution est maximale, c'est dire que \phi ne peut se prolonger en une
+solution de l'équation différentielle sur un intervalle strictement plus
+grand que J0. Notre but est de trouver une approximation de la
+fonction \phi .
+
+Pour cela soit h un nombre réel suffisamment petit et t dans
+J0 tel que t + h appartienne encore à J0. Alors \phi(t
++ h) est peu différent de \phi(t) + h\phi'(t). Mais \phi'(t) = f(t,\phi(t)). Donc
+\phi(t + h) est peu différent de \phi(t) + hf(t,\phi(t)) = y + f(t,y) si y =
+\phi(t). Ceci nous amène à définir pour un nombre réel h donné
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) une suite (ti)i\inℤ par ti =
+  to + ih
+\item
+  (ii) une suite (yi)i\inℤ par yi+1 =
+  yi + hf(ti,yi) pour i ≥ 0,
+  yi-1 = yi - hf(ti,yi) pour i \leq
+  0
+\item
+  (iii) une fonction \phih prenant aux points ti la
+  valeur yi et affine sur chacun des intervalles
+  {[}ti,ti+1{]}
+\end{itemize}
+
+Nous espérons bien entendu que la fonction \phih ainsi définie
+sera une approximation de \phi pour h petit. Nous allons montrer que c'est
+effectivement le cas, tout au moins sur un segment {[}a,b{]} contenu
+dans J0 et dans le cas simple où E = \mathbb{R}~ (bien que le résultat
+reste valable si E est un espace vectoriel normé).
+
+Remarquons tout d'abord que puisque f est de classe \mathcal{C}^1 et
+que \phi'(t) = f(t,\phi(t)) , \phi' est dérivable et
+
+\begin{align*} \phi'`(t)& =& \partial~f
+\over \partial~t (t,\phi(t)) + \phi'(t) \partial~f \over
+\partial~y (t,\phi(t)) \%& \\ & =& \partial~f
+\over \partial~t (t,\phi(t)) + f(t,\phi(t)) \partial~f \over
+\partial~y (t,\phi(t))\%& \\
+\end{align*}
+
+Soit \alpha~ \textgreater{} 0 et soit K = \(t,y) \in {[}a,b{]}
+\times E∣\phi(t) - \alpha~ \leq y \leq \phi(t) +
+\alpha~\.
+
+K est un compact qui contient le graphe de \phi. La fonction
+(t,y)\mapsto~ \partial~f \over \partial~t (t,y) +
+f(t,y) \partial~f \over \partial~y (t,y) est continue sur ce compact,
+donc bornée. Soit
+
+M = sup(t,y)\inK~\textbar{} \partial~f
+\over \partial~t (t,y) + f(t,y) \partial~f \over \partial~y
+(t,y)\textbar{}
+
+Alors on a pour tout t dans {[}a,b{]} \textbar{}\phi''(t)\textbar{}\leq M. La
+formule de Taylor-Lagrange nous donne alors \phi(t + h) = \phi(t) + h\phi'(t) +
+h^2 \over 2 \phi''(\xi~), d'où
+
+\left \textbar{} \phi(t + h) - \phi(t) \over
+h - f(t,\phi(t))\right \textbar{}\leq M
+\textbar{}h\textbar{} \over 2
+
+D'autre part la fonction (t,y)\mapsto~ \partial~f
+\over \partial~y (t,y) est continue sur K donc bornée. Soit A
+= sup(t,y)\inK~\textbar{} \partial~f
+\over \partial~y (t,y)\textbar{}. Alors on a si (t,y) \in K et
+(t,y') \in K, f(t,y) - f(t,y') = (y - y') \partial~f \over \partial~y
+(t,z) pour un certain z appartenant à {[}y,y'{]}, donc \textbar{}f(t,y)
+- f(t,y')\textbar{}\leq A\textbar{}y - y'\textbar{} .
+
+Définissons alors une suite (ti)i\in\mathbb{N}~ par ti
+= to + ih, une suite (yi)i\in\mathbb{N}~ par
+yi+1 = yi + hf(ti,yi). Nous
+allons mesurer l'erreur ei = \textbar{}yi -
+\phi(ti)\textbar{}. Comme nous ne sommes malheureusement pas sûrs
+que les couples (ti,yi) appartiennent à K nous
+allons définir une fonction g : {[}a,b{]} \times \mathbb{R}~ \rightarrow~ \mathbb{R}~ par
+
+g(x,y) = \left \ \cases
+f(t,y) &si \phi(t) - \alpha~ \leq y \leq \phi(t) + \alpha~ \cr f(t,\phi(t) - \alpha~)&si
+y \textless{} \phi(t) - \alpha~ \cr f(t,\phi(t) + \alpha~)&si y
+\textgreater{} \phi(t) + \alpha~))  \right .
+
+et une suite (zi)i\in\mathbb{N}~ par zi+1 =
+zi + hg(ti,zi). Il est clair que
+zi = yi tant que (ti,yi)
+appartient à K. Posons \epsiloni = \textbar{}zi -
+\phi(ti)\textbar{}. La fonction g est continue sur {[}a,b{]} \times \mathbb{R}~
+et vérifie \textbar{}g(t,y) - g(t,y')\textbar{}\leq A\textbar{}y -
+y'\textbar{} pour tout t \in {[}a,b{]} et tous y,y' \in \mathbb{R}~ d'après (2). On a
+alors
+
+\begin{align*} \epsiloni+1& =&
+\textbar{}zi+1 - \phi(ti+1)\textbar{} =
+\textbar{}zi + hg(ti,zi) - \phi(ti
++ h)\textbar{}\%& \\ & \leq&
+\textbar{}zi - \phi(ti)\textbar{} +
+\textbar{}h\textbar{}\textbar{}g(ti,zi) -
+g(ti,\phi(ti))\textbar{} \%&
+\\ & & +\textbar{}\phi(ti) +
+hg(ti,\phi(ti)) - \phi(ti + h)\textbar{} \%&
+\\ & \leq& \textbar{}zi -
+\phi(ti)\textbar{} + A\textbar{}h\textbar{}\textbar{}zi
+- \phi(ti)\textbar{} \%& \\ & &
++\textbar{}h\textbar{}\left \textbar{} \phi(ti +
+h) - \phi(ti) \over h -
+f(ti,\phi(ti))\right \textbar{} \%&
+\\ \end{align*}
+
+car g(t,\phi(t)) = f(t,\phi(t)). On obtient donc en utilisant (1)
+\epsiloni+1 \leq (1 + A\textbar{}h\textbar{})\epsiloni + M
+\textbar{}h\textbar{}^2 \over 2 . Comme
+\epsilono = eo = 0, on a donc par récurrence
+
+\begin{align*} \epsiloni& \leq& M
+\textbar{}h\textbar{}^2 \over 2 (1 + (1 +
+A\textbar{}h\textbar{}) + \ldots + (1 +
+A\textbar{}h\textbar{})^i-1)\%&
+\\ & =& M
+\textbar{}h\textbar{}^2 \over 2  (1 +
+A\textbar{}h\textbar{})^i - 1 \over
+\textbar{}h\textbar{}A \%& \\
+\end{align*}
+
+soit, puisque 1 + x \leq e^x,
+
+\begin{align*} \epsiloni& \leq M&
+\textbar{}h\textbar{} \over 2 
+e^Ai\textbar{}h\textbar{}- 1 \over A
+\leq\textbar{}h\textbar{} M \over 2A
+(e^A\textbar{}t-ti\textbar{}- 1)\%&
+\\ & \leq & \textbar{}h\textbar{} M
+\over 2A (e^A(b-a) - 1) \%&
+\\ \end{align*}
+
+On voit donc que pour h assez petit, on a pour tout i tel que
+ti appartienne à {[}a,b{]}, \epsiloni \leq \alpha~, donc
+zi = yi, et donc \epsiloni = ei, avec
+une erreur ei \leq\textbar{}h\textbar{} M \over
+2A (e^A(b-a) - 1).
+
+Soit maintenant x \in{]}ti,ti+1{[}. Considérons la
+fonction affine g qui vérifie g(ti) = \phi(ti) et
+g(ti+1) = \phi(ti+1). Soit h(t) = \phi(t) - g(t) - \mu
+(t-ti)(t-ti+1) \over 2 où \mu est
+choisi de telle sorte que h(x) = 0. Deux applications du théorème de
+Rolle à la fonction h qui s'annule en ti, x et ti+1
+montrent qu'il existe \xi~ tel que h''(\xi~) = 0. Or h'`(\xi~) = \phi''(\xi~) - \mu
+puisque g'' = 0. On a donc en écrivant que h(x) = 0,
+
+\phi(x) - g(x) = \phi''(\xi~) (x - ti)(x - ti+1)
+\over 2
+
+soit
+
+\textbar{}\phi(x) - g(x)\textbar{}\leq M (ti+1 -
+ti)^2 \over 8 = M h^2
+\over 8
+
+puisque l'on a vu que pour tout t dans {[}a,b{]},
+\textbar{}\phi''(t)\textbar{}\leq M. Or g et \phih sont affines sur
+{[}ti,ti+1{]} et donc
+
+\begin{align*} \textbar{}g(x) -
+\phih(x)\textbar{}& \leq&
+max(\textbar{}g(ti~) -
+\phih(ti)\textbar{},\textbar{}g(ti+1) -
+\phih(ti+1)\textbar{})\%&
+\\ & =&
+max(ei,ei+1~)
+\leq\textbar{}h\textbar{} M \over 2A
+(e^A(b-a) - 1) \%& \\
+\end{align*}
+
+On en déduit donc que
+
+\forall~~x \in {[}a,b{]}, \textbar{}\phi(x) -
+\phih(x)\textbar{}\leq\textbar{}h\textbar{} M \over
+2A (e^A(b-a) - 1) + M h^2 \over
+8
+
+(en fait on n'a vu cette ma\\\\jmathmathmathmathoration que sur {[}to,b{]}, mais
+il suffit de changer h en - h pour avoir le même résultat sur
+{[}a,to{]}, c'est pour cela que volontairement nous avons
+laissé les valeurs absolues partout). Les fonctions \phih
+convergent donc uniformément vers \phi sur {[}a,b{]} quand h tend vers 0,
+avec une ma\\\\jmathmathmathmathoration du type
+
+\forall~~x \in {[}a,b{]},\textbar{}\phi(x) -
+\phih(x)\textbar{}\leq B\textbar{}h\textbar{}
+
+Dans la pratique il faut faire attention aux accumulations d'erreurs
+d'arrondis. L'erreur sur le calcul de yn est de l'ordre de n\epsilon,
+où \epsilon est la précision de calcul de l'ordinateur. On en déduit que
+l'erreur sur le calcul de \phih(x) est de l'ordre de grandeur de
+ b-a \over h \epsilon. Soit une erreur totale du type Bh +
+b-a \over h \epsilon. Une étude simple de cette fonction
+montre que l'erreur totale est minimale pour des fonctions usuelles
+quand h est de l'ordre de \sqrt\epsilon. On préférera
+prendre une valeur de h un peu trop grande, plutôt que trop petite. Il
+faut se méfier également du temps de calcul qui croit rapidement si l'on
+prend des valeurs de h trop petites.
+
+\paragraph{16.6.2 Méthode de Runge et Kutta}
+
+La méthode est inspirée de la même idée que celle de la méthode d'Euler,
+mais on améliore l'approximation faite. Dans la méthode d'Euler nous
+prenions pour approximation de \phi(t + h) l'expression \phi(t) + h\phi'(t) =
+\phi(t) + hf(t,\phi(t)). Ici on prendra comme approximation de \phi(t + h)
+l'expression \phi(t) + hk(t,h) où k(t,h) est défini en posant
+
+\begin{align*} k1(t,h)& =& f(t,\phi(t)),
+\%& \\ k2(t,h)& =& f(t + h
+\over 2 ,\phi(t) + h \over 2
+k1(t,h)),\%& \\
+k3(t,h)& =& f(t + h \over 2 ,\phi(t) + h
+\over 2 k2(t,h)),\%&
+\\ k4(t,h)& =& f(t + h,\phi(t) +
+hk3(t,h)) \%& \\
+\end{align*}
+
+et enfin
+
+k(t,h) = 1 \over 6 (k1(t,h) +
+2k2(t,h) + 2k3(t,h) + k4(t,h)).
+
+On définit donc notre suite yi par la relation de récurrence
+yi+1 = yi + hk(i) où l'on a posé
+
+\begin{align*} k1(i)& =&
+f(ti,yi), \%& \\
+k2(i)& =& f(ti + h \over 2
+,yi + h \over 2 k1(i)), \%&
+\\ k3(i)& =& f(ti
++ h \over 2 ,yi + h \over
+2 k2(i)), \%& \\
+k4(i)& =& f(ti + h,yi +
+hk3(i)), \%& \\ k(i)& =& 1
+\over 6 (k1(i) + 2k2(i) +
+2k3(i) + k4(i))\%& \\
+\end{align*}
+
+pour i ≥ 0 , pour i \textless{} 0 on change h en - h.
+
+On montre alors par un calcul pénible (à base de formule de Taylor) que
+
+\left \textbar{} \phi(t+h)-\phi(t) \over h -
+k(t,h)\right \textbar{}\leq M
+\textbar{}h\textbar{}^4 \over 2 et la même
+démonstration que dans la méthode d'Euler montre qu'il existe une
+constante C telle que
+
+\forall~~x \in {[}a,b{]}, \textbar{}\phi(x) -
+\phih(x)\textbar{}\leq C\textbar{}h\textbar{}^4 +
+D\textbar{}h\textbar{}^2
+
+Le terme en h^2 provient en fait de l'interpolation linéaire.
+Aux points ti l'erreur est en fait en
+C\textbar{}h\textbar{}^4. On obtient ainsi une convergence
+beaucoup plus rapide que dans la méthode d'Euler. L'étude de
+l'accumulation des erreurs montre que le meilleur h possible (pour les
+points ti) est de l'ordre de
+\root5\of\epsilon où \epsilon est la précision
+de l'ordinateur. On pourra par exemple prendre un h de l'ordre de
+10^-2 ou 10^-3.
+
+\paragraph{16.6.3 Equations différentielles d'ordre supérieur}
+
+Il suffit de rappeler qu'une équation différentielle d'ordre p du type
+y^(p) = f(t,y,y',\ldots,y^(p-1)) se ramène à un
+système différentiel
+
+\left \\array
+y1' & = y2 \cr
+&\\ldots~\cr
+y p-1'& = yp \cr yp' & =
+f(t,y1,y2,\ldots,yp) 
+\right .
+
+en posant y1 = y,y2 = y',\ldots,yp =
+y^(p-1). On appliquera donc l'une des deux méthodes
+précédentes à ce système.
+
+{[}
+{[}
+{[}
+{[}

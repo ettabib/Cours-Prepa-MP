@@ -1,0 +1,49 @@
+%% LyX 2.0.7.1 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[french]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{amstext}
+\usepackage{babel}
+\makeatletter
+\addto\extrasfrench{%
+   \providecommand{\og}{\leavevmode\flqq~}%
+   \providecommand{\fg}{\ifdim\lastskip>\z@\unskip\fi~\frqq}%
+}
+
+\makeatother
+\begin{document}
+
+\subsubsection{Formes quadratiques en dimension finie}
+
+Soit E un K-espace vectoriel de dimension finie, $\Phi\in Q(E)$ de
+forme polaire $\phi$.
+
+
+\paragraph{Theoreme }
+
+Soit $\mathcal{E}$ une base de E. Alors $Mat(\phi,\mathcal{E})$
+est l\textquoteright{}unique matrice $\Omega\in M_{K}(n)$ qui est
+symétrique et qui vérifie :
+
+\begin{eqnarray*}
+\forall x\in E, & \Phi(x)= & ^{t}X\Omega X\\
+\end{eqnarray*}
+
+
+
+\paragraph{Remarque}
+
+On prendra garde à la condition de symétrie de $\Omega$. Il est en
+effet clair que l\textquoteright{}on peut remplacer, dans la condition
+$\Phi(x)=^{t}X\Omega X$, la matrice $\Omega$ par une matrice $\Omega'=\Omega+A$
+où $A$ est antisymétrique, puisque dans ce cas $^{t}XAX=0$. On aura
+alors $\Phi(x)=^{t}X\Omega X$ bien que $\Omega'$ ne soit pas la
+matrice de $\Phi$ dans la base $\mathcal{E}$.
+
+\begin{eqnarray*}
+\text{\ensuremath{\phi}}(x,x) & = & \sum_{i}\omega_{i}x_{i}^{2}+2\sum_{i<j}\omega_{ij}x_{i}x_{j}=^{t}X\Omega X\\
+\text{\ensuremath{\phi}}(x,y) & = & \sum_{i}\omega_{i}x_{i}y_{i}+\sum_{i<j}\omega_{ij}(x_{i}y_{j}+y_{i}x_{j})
+\end{eqnarray*}
+
+\end{document}

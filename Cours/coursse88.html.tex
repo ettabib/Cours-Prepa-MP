@@ -1,0 +1,685 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{16.3 Equations différentielles linéaires d'ordre 1}
+
+\paragraph{16.3.1 Généralités}
+
+Soit E un espace vectoriel normé de dimension finie, I un intervalle de
+\mathbb{R}~, \ell : I \rightarrow~ L(E) continue et g : I \rightarrow~ E continue. On considère l'équation
+différentielle linéaire d'ordre 1 vectorielle y' = \ell(t).y + g(t)~; une
+solution est un couple (J,\phi) constitué d'un intervalle J de \mathbb{R}~ inclus
+dans I et d'une application \phi : J \rightarrow~ E de classe \mathcal{C}^1 telle que
+\forall~~t \in J, \phi'(t) = \ell(t).\phi(t) + g(t), où l'on note
+\ell(t).x à la place de \left (\ell(t)\right
+)(x) pour alléger l'écriture. A une telle équation différentielle
+linéaire nous associerons l'équation différentielle homogène y' = \ell(t).y
+
+Théorème~16.3.1 L'ensemble SH(J) des solutions de l'équation
+homogène y' = \ell(t).y définies sur un intervalle J est un K espace
+vectoriel. On obtient la solution générale sur J de l'équation linéaire
+y' = \ell(t).y + g(t) en a\\\\jmathmathmathmathoutant à une solution particulière de cette
+équation la solution générale de l'équation homogène.
+
+Démonstration La fonction nulle est bien évidemment solution de
+l'équation homogène et si \phi1 et \phi2 sont deux
+solutions définies sur J, il est clair que \alpha~\phi1 + \beta~\phi2
+est encore une solution définie sur J~; donc SH est bien un K
+espace vectoriel. Si maintenant \phi0 est une solution sur J de
+l'équation linéaire et si \phi est une fonction de classe \mathcal{C}^1 de
+J dans E, alors \phi est solution de l'équation linéaire si et seulement
+si~\phi'(t) = \ell(t).\phi(t) + g(t) = \ell(t).\phi(t) + \phi0'(t) -
+\ell(t).\phi0(t), soit encore (\phi - \phi0)'(t) = \ell(t).(\phi(t) -
+\phi0(t)), c'est-à-dire \phi - \phi0 \in SH ce qui
+montre le résultat.
+
+On peut également voir ce problème sous forme matricielle. Pour cela
+donnons nous \mathcal{E} une base de E, soit A(t) la matrice de \ell(t) dans la base
+\mathcal{E}, avec A(t) = (ai,\\\\jmathmathmathmath(t))1\leqi,\\\\jmathmathmathmath\leqn~; soit B(t) le
+vecteur colonne des coordonnées de g(t) dans la base \mathcal{E} et Y (t) le
+vecteur colonne des coordonnées de la fonction inconnue y(t) dans la
+base \mathcal{E}. L'équation différentielle linéaire d'ordre 1 vectorielle s'écrit
+encore sous la forme Y ' = A(t)Y + B(t), ou encore sous forme d'un
+système différentiel linéaire
+
+\left
+\\matrix\,y1'
+= a1,1(t)y1 +
+\\ldots~ +
+a1,n(t)yn + b1(t) \cr
+\\ldots\\\ldots\\\ldots~
+\cr yn' = an,1(t)y1 +
+\\ldots~ +
+an,n(t)yn + bn(t)\right .
+
+les ai,\\\\jmathmathmathmath et les bi étant des fonctions continues de
+I dans le corps de base K. Une solution de ce système est alors la
+donnée d'un intervalle J de \mathbb{R}~ inclus dans I et de n fonctions
+\phi\\\\jmathmathmathmath : J \rightarrow~ K de classe \mathcal{C}^1 vérifiant
+
+\forall~~t \in J,\quad
+\left
+\\matrix\,\phi1'(t)
+= a1,1(t)\phi1(t) +
+\\ldots~ +
+a1,n(t)\phin(t) + b1(t) \cr
+\\ldots\\\ldots\\\ldots~
+\cr \phin'(t) = an,1(t)\phi1(t) +
+\\ldots~ +
+an,n(t)\phin(t) +
+bn(t)\right .
+
+Bien entendu le système homogène associé est alors le système Y ' =
+A(t)Y ou encore
+
+\left
+\\matrix\,y1'
+= a1,1(t)y1 +
+\\ldots~ +
+a1,n(t)yn \cr
+\\ldots\\\ldots\\\ldots~
+\cr yn' = an,1(t)y1 +
+\\ldots~ +
+an,n(t)yn\right .
+
+\paragraph{16.3.2 Equation différentielle linéaire scalaire d'ordre 1}
+
+Dans ce paragraphe, nous allons obtenir dans ce cas particulier, une
+preuve élémentaire du théorème de Cauchy-Lipschitz.
+
+Ici, on a n = 1 et donc l'équation différentielle linéaire s'écrit y' =
+a(t)y + b(t), où a et b sont deux fonctions continues de I dans le corps
+de base K (égal à \mathbb{R}~ ou \mathbb{C}). L'équation homogène associée est alors
+l'équation y' = a(t)y. C'est cette équation que nous allons d'abord
+résoudre. Soit J un intervalle inclus dans I et soit A une primitive de
+a sur I. Soit \phi : J \rightarrow~ K de classe \mathcal{C}^1. On a alors
+
+\begin{align*} \forall~~t \in J,
+\phi'(t) - a(t)\phi(t) = 0&& \%& \\ &
+\Leftrightarrow & \forall~~t \in J, (\phi'(t)
+- a(t)\phi(t))e^-A(t) = 0 \%& \\
+& \Leftrightarrow & \forall~~t \in J,
+\left (\phie^-A\right )'(t) = 0
+\Leftrightarrow \phie^-A\text est
+constante\%& \\
+\end{align*}
+
+On en déduit que les solution définies sur J sont les fonctions de la
+forme t\mapsto~\lambda~e^A(t). Les solutions
+maximales sont donc définies sur I et ce sont les solutions
+(I,t\mapsto~\lambda~e^A(t)). On constate
+qu'elles forment un K espace vectoriel de dimension 1. La solution
+maximale vérifiant y(t0) = y0 est bien entendu
+(I,t\mapsto~y0e^\\int
+ t0^ta(u) du )~; elle est visiblement
+unique. On obtient donc
+
+Théorème~16.3.2 Soit a : I \rightarrow~ K une application continue. Toute solution
+maximale de l'équation homogène y' = a(t)y est définie sur I. L'ensemble
+de ces solutions maximales est un K-espace vectoriel de dimension 1
+engendré par la fonction e^A où A est une primitive de a sur
+I. Pour t0 \in I et y0 \in K, il existe une unique
+solution maximale vérifiant la condition initiale y(t0) =
+y0 à savoir
+(I,t\mapsto~y0e^\\int
+ t0^ta(u) du ).
+
+Pour résoudre l'équation linéaire, faisons le changement de fonction
+inconnue z = ye^-A soit encore y = ze^A. On a
+alors y' = z'e^A + aze^A = z'e^A + ay
+si bien que
+
+y' = a(t)y + b(t) \Leftrightarrow z'e^A(t) =
+b(t) \Leftrightarrow z' = b(t)e^-A(t)
+
+ce qui conduit à un simple calcul de primitive de la fonction
+be^-A pour déterminer la fonction inconnue z et donc la
+fonction inconnue y.
+
+Remarquons que la solution générale de l'équation homogène était écrite
+sous la forme \phi(t) = \lambda~e^A(t) où \lambda~ est une constante, et qu'à
+un changement de notation près (celui de z en \lambda~), la résolution de
+l'équation linéaire se fait en posant \phi(t) = \lambda~(t)e^A(t),
+autrement dit en rempla\ccant la constante \lambda~ par une
+fonction inconnue \lambda~. Cette méthode porte le nom de méthode de variation
+de la constante. On déduit immédiatement de l'étude précédente le
+théorème suivant
+
+Théorème~16.3.3 Soit a,b : I \rightarrow~ K deux applications continues. Toute
+solution maximale de l'équation linéaire y' = a(t)y + b(t) est définie
+sur I. L'ensemble de ces solutions maximales est une droite affine ayant
+pour direction la droite vectorielle des solutions de l'équation
+homogène associée. Pour t0 \in I et y0 \in K, il existe
+une unique solution maximale vérifiant la condition initiale
+y(t0) = y0
+
+Démonstration La méthode de variation de la constante montre que toute
+solution maximale est définie sur I. La structure de droite affine
+résulte immédiatement du théorème de structure de l'ensemble des
+solutions d'une équation différentielle linéaire. Si \phi0 est
+une solution particulière, toute solution est du type \phi(t) =
+\phi0(t) + \lambda~e^A(t) et la condition \phi(t0) =
+y0 fournit immédiatement \lambda~ =
+e^-A(t0)(y0 -
+\phi0(t0)).
+
+Remarque~16.3.1 La condition de continuité des applications a et b est
+essentielle pour la validité du résultat. Si a et b ne sont pas
+continues, les solutions maximales ne sont plus nécessairement définies
+sur I, et, pour un problème à condition initiale y(t0) =
+y0, soit l'existence soit l'unicité de la solution maximale
+peut être prise en défaut. En particulier, les équations différentielles
+linéaires se présentent souvent sous forme non normale \alpha~(t)y' + \beta~(t)y =
+\gamma(t) et la mise sous forme normale exige la division par \alpha~(t). Si la
+fonction \alpha~ peut s'annuler, les fonctions a(t) = - \beta~(t)
+\over \alpha~(t) et b(t) = \gamma(t) \over \alpha~(t)
+ne sont pas nécessairement continues. Dans ce cas, on utilisera la
+théorie précédente sur des intervalles maximaux sur lesquels la fonction
+\alpha~ ne s'annule pas, en essayant ensuite éventuellement de recoller les
+solutions ainsi obtenues pour obtenir des solutions maximales.
+
+Exemple~16.3.1 Considérons l'équation différentielle ty' - 2y = 1.
+L'équation homogène associée s'écrit ty' - 2y = 0 soit encore sur {]}
+-\infty~,0{[} ou {]}0,+\infty~{[}, y' = 2 \over t y qui admet
+évidemment pour solution y(t) = \lambda~t^2. On voit alors que
+toutes les fonctions \phi\lambda~,\mu : \mathbb{R}~ \rightarrow~ \mathbb{R}~ définies par
+\phi\lambda~,\mu(t) = \left \
+\cases \lambda~t^2&si t \textgreater{} 0
+\cr 0 &si t = 0 \cr \mut^2&si t
+\textless{} 0  \right . sont de classe \mathcal{C}^1
+et solutions de l'équation homogène. En remarquant que
+t\mapsto~ - 1 \over 2 est
+solution particulière de l'équation linéaire, on obtient les solutions
+maximales de l'équation linéaire sous la forme
+
+ \phi\lambda~,\mu(t) = \left \
+\cases \lambda~t^2 - 1 \over 2
+&si t \textgreater{} 0 \cr - 1 \over
+2 &si t = 0 \cr \mut^2 - 1
+\over 2 &si t \textless{} 0  \right .
+
+et elles forment un espace affine de dimension 2.
+
+Il n'existe aucune solution vérifiant la condition y(0) = y0
+pour y0\neq~ - 1 \over
+2 par contre, il existe une infinité de solutions maximales vérifiant
+y(0) = - 1 \over 2 .
+
+\paragraph{16.3.3 Théorie de Cauchy-Lipschitz pour les équations
+linéaires}
+
+Lemme~16.3.4 Soit E un espace vectoriel normé de dimension finie, I un
+intervalle de \mathbb{R}~, \ell : I \rightarrow~ L(E) continue et g : I \rightarrow~ E continue. Alors
+l'équation différentielle linéaire y' = \ell(t).y + g(t) satisfait à la
+condition d'unicité au problème de Cauchy-Lipschitz.
+
+Démonstration Soit (I1,\phi1) et
+(I2,\phi2) deux solutions de l'équation différentielle
+linéaire vérifiant \phi1(t0) =
+\phi2(t0) = y0. Alors, si t \in I1 \bigcap
+I2, on a à la fois \phi1(t) = y0
++\int ~
+t0^t(\ell(u).\phi1(u) + g(u)) du et
+\phi2(t) = y0 +\int ~
+t0^t(\ell(u).\phi2(u) + g(u)) du, d'où, si
+\phi = \phi1 - \phi2, \phi(t) =\int ~
+t0^t\ell(u).\phi(u) du. Pour t ≥ t0, on a
+donc
+
+\begin{align*}
+\\textbar{}\phi(t)\\textbar{}& \leq&
+\int ~
+t0^t\\textbar{}\ell(u).\phi(u)\\textbar{}
+du\%& \\ & \leq&
+\int ~
+t0^t\\textbar{}\ell(u)\\textbar{}\\textbar{}\phi(u)\\textbar{}
+du \%& \\
+\end{align*}
+
+et le lemme de Gronwall (dans le cas où la constante c est nulle)
+implique que \phi est nulle sur I1 \bigcap I2 \bigcap
+{[}t0,+\infty~{[}. Une démonstration similaire montre que \phi est
+nulle sur I1 \bigcap I2\bigcap{]} -\infty~,t0{]}, et donc
+\phi1 et \phi2 coïncident sur I1 \bigcap I2.
+
+Lemme~16.3.5 Soit E un espace vectoriel normé de dimension finie, I un
+intervalle de \mathbb{R}~, \ell : I \rightarrow~ L(E) continue et g : I \rightarrow~ E continue. Alors
+l'équation différentielle linéaire y' = \ell(t).y + g(t) satisfait à la
+condition d'existence locale au problème de Cauchy-Lipschitz. De
+fa\ccon plus précise, pour tout t0 \in I,
+pour tout y0 \in E et pour tout segment J tel que t0 \in
+J \subset~ I, il existe une solution (J,\phi) de l'équation différentielle
+vérifiant \phi(t0) = y0.
+
+Démonstration Soit donc J un segment inclus dans I~; l'application \ell est
+continue sur le compact J, donc bornée et on peut poser L
+=\
+supt\inJ\\textbar{}\ell(t)\\textbar{}.
+On définit une suite (\phin) d'applications continues de J dans E
+par \phi0(t) = y0 et pour n ≥ 0, \phin+1(t) =
+y0 +\int ~
+t0^t\left (\ell(u).\phin(u)
++ g(u)\right ) du. En posant M
+=\
+supt\inJ\\textbar{}\ell(t).y0 +
+g(t)\\textbar{}, on montre par récurrence sur n que
+
+\forall~n \in \mathbb{N}~, \\forall~~t \in J,
+\\textbar{}\phin+1(t) -
+\phin(t)\\textbar{} \leq M \over L
+ L^n+1\textbar{}t - t0\textbar{}^n+1
+\over (n + 1)!
+
+C'est vrai pour n = 1 d'après la définition même de M~:
+
+\begin{align*}
+\\textbar{}\phi1(t) -
+\phi0(t)\\textbar{}& =&
+\\textbar{}\phi1(t) -
+y0\\textbar{} \%&
+\\ & =&
+\\textbar{}\int ~
+t0^t(\ell(u).y 0 + g(u))
+du\\textbar{} \leq M\textbar{}t - t0\textbar{}\%&
+\\ \end{align*}
+
+ce qui est bien la formule voulue. Si maintenant l'inégalité est
+vérifiée pour n - 1, on a alors pour t \in {[}t0,+\infty~{[}\bigcapJ
+
+\begin{align*}
+\\textbar{}\phin+1(t) -
+\phin(t)\\textbar{}& =&
+\\textbar{}\int ~
+t0^t\left (\ell(u).\phi n(u)
+- \ell(u).\phin-1(u))\right )
+du\\textbar{}\%& \\ & \leq&
+\int ~
+t0^t\\textbar{}\ell(u)\\textbar{}.\\textbar{}\phi
+n(u) - \phin-1(u)\\textbar{} du \%&
+\\ & \leq& \int ~
+t0^tL\\textbar{}\phi n(u)
+- \phin-1(u)\\textbar{} du \%&
+\\ & \leq& L\int ~
+t0^t M \over L 
+L^n\textbar{}u - t0\textbar{}^n
+\over n! du \%& \\ &
+=& M \over L  L^n+1\textbar{}t -
+t0\textbar{}^n+1 \over (n + 1)!
+\%& \\ \end{align*}
+
+Un calcul similaire conduit à la même inégalité pour t \in{]}
+-\infty~,t0{]} \bigcap J.
+
+Désignons par \eta la longueur du segment J. On a donc
+
+\forall~n \in \mathbb{N}~, \\forall~~t \in J,
+\\textbar{}\phin+1(t) -
+\phin(t)\\textbar{} \leq M \over L
+ L^n+1\eta^n+1 \over (n + 1)!
+
+Alors pour q \textgreater{} p, on a, \forall~~t \in J
+
+\begin{align*}
+\\textbar{}\phiq(t) -
+\phip(t)\\textbar{}& \leq&
+\\sum
+n=p^q-1\\textbar{}\phi n+1(t) -
+\phin(t)\\textbar{}\%&
+\\ & \leq& M \over L
+\sum n=p^q-1~
+L^n+1\eta^n+1 \over (n + 1)! \%&
+\\ & \leq& M \over L
+\sum n=p^+\infty~~
+L^n+1\eta^n+1 \over (n + 1)! \%&
+\\ \end{align*}
+
+Comme la série \\sum ~
+n L^n+1\eta^n+1 \over
+(n+1)! est une série convergente (exponentielle d'un nombre réel), son
+reste tend vers 0~; étant donné \epsilon \textgreater{} 0, il existe N \in \mathbb{N}~ tel
+que p ≥ N \rigtharrow~ M \over L \
+\sum  n=p^+\infty~~
+L^n+1\eta^n+1 \over (n+1)!
+\textless{} \epsilon. Alors
+
+q \textgreater{} p ≥ N \rigtharrow~\forall~~t \in J,
+\\textbar{}\phiq(t) -
+\phip(t)\\textbar{} \textless{} \epsilon
+
+La suite (\phin) vérifie donc le critère de Cauchy uniforme. En
+conséquence, elle converge uniformément vers une fonction \phi : J \rightarrow~ E qui
+est elle même continue.
+
+L'inégalité \\textbar{}(\ell(u).\phi(u) + g(u)) -
+(\ell(u).\phin(u) + g(u))\\textbar{} \leq
+L\\textbar{}\phi(u) -
+\phin(u)\\textbar{}, montre que la suite
+\left (\ell(u).\phin(u) + g(u)\right )
+converge uniformément vers \ell(u).\phi(u) + g(u)~; ceci nous permet de passer
+à la limite sous le signe d'intégration et d'obtenir
+
+\begin{align*} y0
++\int  t0^t~(\ell(u).\phi(u)
++ g(u)) du&& \%& \\ & =& y0
++ limn\rightarrow~+\infty~~\\int
+ t0^t(\ell(u).\phi n(u) + g(u)) du\%&
+\\ & =&
+limn\rightarrow~+\infty~\phin+1~(t) = \phi(t) \%&
+\\ \end{align*}
+
+Comme \phi est continue, ceci montre que \phi est la solution cherchée sur J
+de l'équation y' = \ell(t).y + g(t) vérifiant \phi(t0) =
+y0.
+
+Théorème~16.3.6 Soit E un espace vectoriel normé de dimension finie, I
+un intervalle de \mathbb{R}~, \ell : I \rightarrow~ L(E) continue et g : I \rightarrow~ E continue. Alors
+toute solution maximale de l'équation différentielle linéaire y' =
+\ell(t).y + g(t) est définie sur I. Pour tout t0 \in I et tout
+y0 \in E, il existe une et une seule solution (I,\phi) de
+l'équation différentielle linéaire y' = \ell(t).y + g(t) vérifiant
+\phi(t0) = y0~; pour toute solution (J,\psi) de l'équation
+différentielle vérifiant \psi(t0) = y0, on a~:
+
+\text\$J \subset~ I0\$ et \$\psi\$ est la restriction
+de \$\phi\$ à \$J\$.
+
+Démonstration Puisque l'équation différentielle linéaire vérifie les
+conditions d'unicité et d'existence locale au problème de
+Cauchy-Lipschitz, on sait qu'il existe une unique solution maximale pour
+une condition initiale donnée et que cette solution prolonge toutes les
+autres solutions vérifiant cette même condition initiale. Mais le lemme
+précédent, montre que l'intervalle de définition de cette solution doit
+contenir tout segment J contenant t0 et inclus dans I~; ce ne
+peut donc être que I lui même. Le théorème en résulte.
+
+\paragraph{16.3.4 Structure des solutions de l'équation homogène}
+
+Théorème~16.3.7 Soit E un espace vectoriel normé de dimension finie, I
+un intervalle de \mathbb{R}~, \ell : I \rightarrow~ L(E) continue. L'ensemble SH des
+solutions définies sur I de l'équation différentielle homogène y' =
+\ell(t).y est un espace vectoriel de dimension finie égale à
+dim~ E. Plus précisément, pour tout
+t0 \in I, l'application
+\phi\mapsto~\phi(t0) est un isomorphisme
+d'espaces vectoriels de SH sur E.
+
+Démonstration On sait dé\\\\jmathmathmathmathà que SH est un espace vectoriel.
+L'application SH \rightarrow~ E,
+\phi\mapsto~\phi(t0) est visiblement linéaire et
+le théorème de Cauchy Lipschitz assure que cette application est
+bi\\\\jmathmathmathmathective (puisque pour tout y0 \in E, il existe une unique
+solution définie sur I vérifiant \phi(t0) = y0).
+L'application en question est donc un isomorphisme d'espaces vectoriels
+et les deux espaces vectoriels ont donc même dimension.
+
+Corollaire~16.3.8 Soit E un espace vectoriel normé de dimension finie, I
+un intervalle de \mathbb{R}~, \ell : I \rightarrow~ L(E) continue. Soit
+(\phi1,\\ldots,\phik~)
+des solutions définies sur I de l'équation différentielle y' = \ell(t).y.
+Alors,
+
+\forall~t0~ \in I,
+\mathrmrg(\phi1,\\\ldots,\phik~)
+=\
+\mathrmrg(\phi1(t0),\\ldots,\phik(t0~))
+
+Démonstration En effet, un isomorphisme conserve le rang.
+
+Remarque~16.3.2 En particulier, pour k = 1, une solution non
+identiquement nulle de l'équation homogène y' = \ell(t).y ne peut pas
+s'annuler.
+
+\paragraph{16.3.5 Méthode de variation des constantes}
+
+Soit E un espace vectoriel normé de dimension finie n, I un intervalle
+de \mathbb{R}~, \ell : I \rightarrow~ L(E) continue et g : I \rightarrow~ E continue. Soit \mathcal{E} une base de E,
+A(t) la matrice de \ell(t) dans la base \mathcal{E}, avec A(t) =
+(ai,\\\\jmathmathmathmath(t))1\leqi,\\\\jmathmathmathmath\leqn~; soit B(t) le vecteur colonne des
+coordonnées de g(t) dans la base \mathcal{E} et Y (t) le vecteur colonne des
+coordonnées de la fonction inconnue y(t) dans la base \mathcal{E}. L'équation
+différentielle linéaire d'ordre 1 vectorielle s'écrit encore sous la
+forme Y ' = A(t)Y + B(t) et l'équation homogène associé s'écrit Y ' =
+A(t)Y .
+
+On sait que l'espace vectoriel SH des solutions de l'équation
+homogène est de dimension n. Supposons connue une base
+(\phi1,\\ldots,\phin~)
+et soit \Phi\\\\jmathmathmathmath(t) = \left
+(\matrix\,\phi1,\\\\jmathmathmathmath(t)
+\cr \⋮~
+\cr \phin,\\\\jmathmathmathmath(t)\right ) le vecteur
+colonne des coordonnées de \phi\\\\jmathmathmathmath(t) dans la base E. On a alors
+\Phi\\\\jmathmathmathmath'(t) = A(t)\Phi\\\\jmathmathmathmath(t) ce qui se traduit encore par
+
+\forall~i,\\\\jmathmathmathmath, \phii,\\\\jmathmathmathmath~'(t) =
+\sum k=1^na~
+i,k(t)\psik,\\\\jmathmathmathmath(t)
+
+ou encore, en introduisant la matrice carrée R(t) =
+(\psii,\\\\jmathmathmathmath(t))1\leqi,\\\\jmathmathmathmath\leqn, par R'(t) = A(t)R(t).
+
+Remarquons que cette matrice a pour vecteurs colonnes les vecteurs
+\Phi\\\\jmathmathmathmath(t)~; or on sait que \forall~~t \in J,
+\mathrmrg(\Phi1(t),\\\ldots,\Phin~(t))
+=\
+\mathrmrg(\Phi1,\\ldots,\Phin~)
+=\
+\mathrmrg(\phi1,\\ldots,\phin~)
+= n. On en déduit que cette matrice est inversible. Faisons alors le
+changement de fonction inconnue Z = R(t)^-1Y , autrement dit
+Y = R(t)Z. L'application t\mapsto~R(t) étant
+visiblement de classe \mathcal{C}^1, il en est de même de
+t\mapsto~R(t)^-1, ce qui rend valide ce
+changement de fonction inconnue. On a alors Y `= R'(t)Z + R(t)Z' =
+A(t)R(t)Z + R(t)Z' = A(t)Y + R(t)Z', si bien que
+
+\begin{align*} Y `= A(t)Y + B(t)&
+\Leftrightarrow & R(t)Z' = B(t) \%&
+\\ & \Leftrightarrow & Z' =
+R(t)^-1B(t)\%& \\
+\end{align*}
+
+et la résolution de l'équation linéaire se ramène à un simple calcul de
+primitive de la fonction vectorielle
+t\mapsto~R(t)^-1B(t) sur l'intervalle I.
+
+Voyons une autre interprétation de cette méthode. Puisque
+(\Phi1,\\ldots,\Phin~)
+est une base de l'espace des solutions du système homogène Y ' = A(t)Y ,
+toute solution s'écrit de manière unique sous la forme Y (t) =
+\lambda~1\Phi1(t) +
+\\ldots.\lambda~n\Phin~(t),
+où
+\lambda~1,\\ldots,\lambda~n~
+sont des constantes. Posons alors Z(t) = \left
+(\matrix\,\lambda~1(t)
+\cr
+\\ldots~
+\cr \lambda~n(t)\right ). Le
+changement de fonction inconnue Y = R(t)Z revient à poser
+yi(t) =\ \\sum
+ \\\\jmathmathmathmath=1^n\psii,\\\\jmathmathmathmath(t)\lambda~\\\\jmathmathmathmath(t), soit encore Y
+(t) = \\sum ~
+\\\\jmathmathmathmath=1^n\lambda~\\\\jmathmathmathmath(t)\Phi\\\\jmathmathmathmath(t) =
+\lambda~1(t)\Phi1(t) +
+\\ldots~ +
+\lambda~n(t)\Phin(t)~; ce changement de fonction inconnue
+consiste donc à substituer dans la solution générale de l'équation
+homogène, aux constantes
+\lambda~1,\\ldots,\lambda~n~
+des fonctions de classe \mathcal{C}^1
+\lambda~1(t),\\ldots,\lambda~n~(t),
+d'où le nom de méthode de variation des constantes. La résolution se
+fait alors en écrivant
+
+\begin{align*} Y `(t)& =&
+\lambda~1'(t)\Phi1(t) +
+\\ldots~ +
+\lambda~n'(t)\Phin(t) \%& \\ &
+& \quad + \lambda~1(t)\Phi1'(t) +
+\\ldots~ +
+\lambda~n(t)\Phin'(t) \%& \\ &
+=& \lambda~1'(t)\Phi1(t) +
+\\ldots~ +
+\lambda~n'(t)\Phin(t) \%& \\ &
+& \quad + \lambda~1(t)A(t)\Phi1(t) +
+\\ldots~ +
+\lambda~n(t)A(t)\Phin(t)\%& \\
+& =& \lambda~1'(t)\Phi1(t) +
+\\ldots~ +
+\lambda~n'(t)\Phin(t) \%& \\ &
+& \quad + A(t)\left
+(\lambda~1(t)\Phi1(t) +
+\\ldots~ +
+\lambda~n(t)\Phin(t)\right ) \%&
+\\ & =& \lambda~1'(t)\Phi1(t)
++ \\ldots~ +
+\lambda~n'(t)\Phin(t) + A(t)Y (t)\%&
+\\ \end{align*}
+
+si bien que
+
+\begin{align*} Y `(t) = A(t)Y (t) + B(t)
+\Leftrightarrow&& \%& \\
+& & \lambda~1'(t)\Phi1(t) +
+\\ldots~ +
+\lambda~n'(t)\Phin(t) = B(t)\%&
+\\ \end{align*}
+
+C'est un système de Cramer en les inconnues
+\lambda~1'(t),\\ldots,\lambda~n~'(t)
+, la matrice de ce système étant la matrice inversible R(t)~; la
+résolution de ce système permet alors de déterminer les fonctions
+\lambda~\\\\jmathmathmathmath'~; on détermine ensuite les fonctions \lambda~\\\\jmathmathmathmath par n
+calculs de primitives de fonctions à valeurs dans le corps de base K.
+
+\paragraph{16.3.6 Systèmes différentiels à coefficients constants}
+
+C'est le cas où l'application t\mapsto~\ell(t) est
+constante. On préférera dans ce cas l'interprétation matricielle en
+posant \forall~~t \in I, A(t) = A si bien que le système
+linéaire s'écrit sous la forme Y ' = AY + B(t), le système homogène
+associé étant le système Y ' = AY .
+
+Rappelons à ce propos un théorème démontré dans le chapitre sur les
+séries entières qui permet théoriquement de résoudre l'équation homogène
+
+Théorème~16.3.9 Soit Y 0 \in MK(n,1). L'unique
+solution du système homogène Y ' = AY vérifiant Y (0) = Y 0
+est l'application
+t\mapsto~exp~ (tA)Y
+0.
+
+Démonstration Cette application convient évidemment puisque  d
+\over dt (exp~ (tA)Y
+0) = Aexp (tA)Y 0~. Soit
+t\mapsto~Y (t) une autre solution et soit Z(t)
+= exp~ (-tA)Y (t). On a Z'(t) =
+-exp~ (-tA)AY (t) +\
+exp (-tA)Y `(t) = exp~ (-tA)(Y'(t) - AY (t))
+= 0. On en déduit que Z est constante égale à Z(0). Mais Z(0) = Y
+0. On a donc Z(t) = Y 0 soit encore Y (t)
+= exp (tA)Y 0~.
+
+Remarque~16.3.3 Le même changement de fonction inconnue Y
+= exp~ (tA)Z permet d'ailleurs de résoudre
+théoriquement l'équation linéaire Y ' = AY + B(t), puisque l'on a alors
+Y `= Aexp~ (tA)Z +\
+exp (tA)Z' = AY + exp~ (tA)Z' et donc
+
+\begin{align*} Y `= AY + B(t)&
+\Leftrightarrow & exp~ (tA)Z'(t)
+= B(t) \%& \\ &
+\Leftrightarrow & Z'(t) = exp~
+(-tA)B(t)\%& \\
+\end{align*}
+
+ce qui ramène le problème de la résolution de l'équation linéaire à
+celui d'un calcul de primitive de la fonction
+t\mapsto~exp~ (-tA)B(t).
+
+En fait la méthode précédente bute sur le problème non évident du calcul
+de l'exponentielle exp~ (tA), si bien que, dans
+la pratique, d'autres méthodes peuvent être préférées.
+
+En premier lieu, supposons que la matrice A est diagonalisable et soit
+(V
+1,\\ldots~,V
+n) une base de vecteurs propres de A associés aux valeurs
+propres
+\lambda~1,\\ldots,\lambda~n~.
+Posons \Phii :
+t\mapsto~e^\lambda~itV i. On
+a alors \Phii'(t) = \lambda~ie^\lambda~itV
+i = e^\lambda~itAV i = A\Phii(t)
+si bien que
+\Phi1,\\ldots,\Phin~
+sont solutions de l'équation homogène Y ' = AY . Mais, comme
+(\Phi1(0),\\ldots,\Phin~(0))
+= (V
+1,\\ldots~,V
+n) est une famille libre, la famille
+(\Phi1,\\ldots,\Phin~)
+est également une famille libre. Comme l'espace vectoriel des solutions
+de l'équation homogène est de dimension n, cette famille en est une base
+et donc la solution générale de l'équation homogène est de la forme
+
+Y (t) = \alpha~1e^\lambda~1tV  1 +
+\\ldots~ +
+\alpha~ne^\lambda~ntV  n
+
+On peut ensuite résoudre l'équation linéaire en faisant varier les
+constantes
+\alpha~1,\\ldots,\alpha~n~.
+
+Dans le cas général, soit P une matrice inversible et faisons le
+changement de fonction inconnue Y = PZ. On a alors
+
+\begin{align*} Y `= AY + B(t)&
+\Leftrightarrow & PZ' = APZ + B(t) \%&
+\\ & \Leftrightarrow & Z' =
+P^-1AP + P^-1B(t)\%&
+\\ \end{align*}
+
+Quitte à passer sur le corps des complexes, on peut par exemple
+s'arranger pour que la matrice P^-1AP soit triangulaire
+supérieure. En notant (\alpha~i,\\\\jmathmathmathmath) cette matrice et
+P^-1B(t) = \left
+(\matrix\,\beta~1(t)\\ldots\beta~n(t)~\right
+), ceci conduit à un système différentiel
+
+\left \\array
+z1' & = \alpha~1,1z1 +
+\alpha~1,2z2 + \quad \qquad
+\\ldots~\quad
+\qquad + \alpha~1,nzn +
+\beta~1(t)\cr
+\\ldots~
+\cr zn-1'& = \alpha~n-1,n-1zn-1
++ \alpha~n-1,nzn + \beta~n-1(t) \cr
+zn' & = \alpha~n,nzn + \beta~n(t) 
+\right .
+
+qui se résout en cascade à partir du bas en résolvant n équations
+différentielles linéaires scalaires d'ordre 1~: lorsque
+zn,\\ldots,zi+1~
+sont connues, zi est solution de l'équation différentielle
+linéaire scalaire d'ordre 1
+
+zi' = \alpha~i,izi + \\sum
+k=i+1^n\alpha~ i,kzk(t) + \beta~i(t)
+
+Ceci permet un calcul de Z et donc de Y .
+
+{[}
+{[}
+{[}
+{[}

@@ -1,0 +1,489 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{17.2 Barycentres}
+
+\paragraph{17.2.1 Notion de barycentres}
+
+Théorème~17.2.1 Soit E un espace affine, (ai)i\inI une
+famille finie de points de E et (\lambda~i)i\inI une famille
+de scalaires telle que
+\\sum ~
+i\inI\lambda~i\neq~0. Alors il existe un
+unique point g \in E vérifiant les conditions équivalentes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) \\sum ~
+  i\inI\lambda~i\overrightarrowgai
+  =\overrightarrow 0
+\item
+  (ii) \forall~~m \in E,
+  \\sum ~
+  i\inI\lambda~i\overrightarrowmai
+  = (\\sum ~
+  i\inI\lambda~i)\overrightarrowmg
+\item
+  (iii) il existe a \in E tel que \overrightarrowag =
+  1 \over
+  \\sum ~
+  i\inI\lambda~i \
+  \sum ~
+  i\inI\lambda~i\overrightarrowaai
+\end{itemize}
+
+On dit alors que g est le barycentre des points ai affectés
+des coefficients \lambda~i.
+
+Démonstration Il est clair que (ii) \rigtharrow~(i) (prendre m = g) et que (ii)
+\rigtharrow~(iii) (prendre m = a et diviser par
+\\sum ~
+i\inI\lambda~i). Si maintenant (i) est vérifié, on a, pour m \in
+E,
+
+\begin{align*} \\sum
+i\inI\lambda~i\overrightarrowmai&
+=& \\sum
+i\inI\lambda~i(\overrightarrowmg
++\overrightarrow gai) =
+(\\sum
+i\inI\lambda~i)\overrightarrowmg +
+\\sum
+i\inI\lambda~i\overrightarrowgai\%&
+\\ & =& (\\sum
+i\inI\lambda~i)\overrightarrowmg \%&
+\\ \end{align*}
+
+et donc (ii) est vérifiée. De la même fa\ccon, si
+(iii) est vérifiée, on a
+\\sum ~
+i\inI\lambda~i\overrightarrowaai =
+(\\sum ~
+i\inI\lambda~i)\overrightarrowag et donc,
+pour m \in E,
+
+\begin{align*} \\sum
+i\inI\lambda~i\overrightarrowmai&
+=& \\sum
+i\inI\lambda~i(\overrightarrowma
++\overrightarrow aai) =
+(\\sum
+i\inI\lambda~i)\overrightarrowma +
+\\sum
+i\inI\lambda~i\overrightarrowaai\%&
+\\ & =& (\\sum
+i\inI\lambda~i)\overrightarrowma +
+(\\sum
+i\inI\lambda~i)\overrightarrowag =
+(\\sum
+i\inI\lambda~i)\overrightarrowmg \%&
+\\ \end{align*}
+
+et donc (ii) est vérifiée, ce qui achève la démonstration.
+
+Remarque~17.2.1 Si \\\sum
+ i\inI\lambda~i = 0, on vérifie facilement que
+\\sum ~
+i\inI\lambda~i\overrightarrowmai
+est un vecteur \vecu indépendant de m~; c'est parfois
+ce vecteur qu'on appelle barycentre de la famille lorsque
+\\sum ~
+i\inI\lambda~i = 0. Il s'agit alors d'un vecteur et non plus
+d'un point.
+
+Définition~17.2.1 On appelle point massique de E tout couple (a,\lambda~) d'un
+point a \in E et d'un scalaire \lambda~ \in K.
+
+Remarque~17.2.2 On dira indifféremment que g est est le barycentre des
+points ai affectés des coefficients \lambda~i ou que g est
+le barycentre de la famille de points massiques \left
+((ai,\lambda~i)\right )i\inI.
+
+\paragraph{17.2.2 Associativité des barycentres}
+
+Théorème~17.2.2 Soit \left
+((ai,\lambda~i)\right )i\inI une
+famille de points massiques telle que
+\\sum ~
+i\inI\lambda~i\neq~0 et g son
+barycentre. Soit I = I1
+\cup\\ldots~ \cup
+Ik une partition de I telle que \forall~~\\\\jmathmathmathmath \in
+{[}1,k{]}, \mu\\\\jmathmathmathmath =\
+\sum ~
+i\inI\\\\jmathmathmathmath\lambda~i\neq~0. Soit
+g\\\\jmathmathmathmath le barycentre de la famille de points massiques
+\left ((ai,\lambda~i)\right
+)i\inI\\\\jmathmathmathmath. Alors g est le barycentre des points
+g1,\\ldots,gk~
+affectés des coefficients
+\mu1,\\ldots,\muk~.
+
+Démonstration On a
+
+\overrightarrow0 = \\sum
+i\inI\lambda~i\overrightarrowgai
+= \sum \\\\jmathmathmathmath=1^k~
+\\sum
+i\inI\\\\jmathmathmathmath\lambda~i\overrightarrowgai
+
+Mais d'après la définition de g\\\\jmathmathmathmath, on a
+\\sum ~
+i\inI\\\\jmathmathmathmath\lambda~i\overrightarrowgai
+= \left
+(\\sum ~
+i\inI\\\\jmathmathmathmath\lambda~i\right
+)\overrightarrowgg\\\\jmathmathmathmath =
+\mu\\\\jmathmathmathmath\overrightarrowgg\\\\jmathmathmathmath. On a donc
+\overrightarrow0 =\
+\sum ~
+\\\\jmathmathmathmath=1^k\mu\\\\jmathmathmathmath\overrightarrowgg\\\\jmathmathmathmath
+ce qui démontre que g est le barycentre des points
+g1,\\ldots,gk~
+affectés des coefficients
+\mu1,\\ldots,\muk~.
+
+Exemple~17.2.1 Si
+(a1,\\ldots,an~)
+est une famille de points de E et si la caractéristique p de K (le corps
+de base) ne divise pas n, on peut définir le barycentre des points
+a1,\\ldots,an~
+tous affectés du coefficient 1 (puisque
+n1K\neq~0)~; on appelle ce point
+l'isobarycentre des points
+a1,\\ldots,an~.
+Notons le g. Soit {[}1,n{]} = I1 \cup I2 une partition
+de {[}1,n{]} avec k = \textbar{}I1\textbar{} et n - k =
+\textbar{}I2\textbar{}. Supposons que p ne divise ni k ni n -
+k et soit m1 l'isobarycentre des ai,i \in
+I1, m2 l'isobarycentre des ai,i \in
+I2. Alors le théorème d'associativité des barycentres assure
+que g est aussi le barycentre de (m1,k) et (m2,n -
+k), et en particulier g appartient à la droite m1m2.
+Dans le cas où n = 3, on montre ainsi que sur un corps de
+caractéristique différente de 2 ou 3, les droites qui \\\\jmathmathmathmathoignent un sommet
+du triangle au milieu du coté opposé qui n'est autre que l'isobarycentre
+de ces deux points (ces droites sont les médianes du triangle)
+contiennent toutes l'isobarycentre des sommets du triangle (le centre de
+gravité du triangle), autrement dit ces trois médianes sont
+concourantes. De même, en dimension 3 et pour n = 4, les quatre droites
+\\\\jmathmathmathmathoignant un sommet au centre de gravité de la face opposée et les trois
+droites \\\\jmathmathmathmathoignant les milieux de deux arêtes opposées passent toutes par
+le centre de gravité du tétraèdre.
+
+\includegraphics{cours11x.png}
+
+\paragraph{17.2.3 Barycentres, sous-espaces affines, applications
+affines}
+
+Les deux théorèmes suivants montrent que le barycentrage est l'opération
+algébrique fondamentale dans les espaces affines.
+
+Théorème~17.2.3 Soit f : E \rightarrow~ F une application d'un espace affine dans
+un autre espace affine. Alors f est affine si et seulement si~elle
+conserve la notion de barycentre, c'est-à-dire si et seulement si~pour
+toute famille \left
+((ai,\lambda~i)\right )i\inI telle que
+\\sum ~
+i\inI\lambda~i\neq~0, de barycentre g,
+le point f(g) est le barycentre de la famille de points massiques
+\left
+((f(ai),\lambda~i)\right )i\inI.
+
+Démonstration Si f est affine, on a en effet
+
+\overrightarrow0 =\vec
+f(\\sum
+i\inI\lambda~i\overrightarrowgai)
+= \\sum
+i\inI\lambda~i\vecf(\overrightarrowgai)
+= \\sum
+i\inI\lambda~i\overrightarrowf(g)f(ai)
+
+ce qui montre que le point f(g) est le barycentre de la famille de
+points massiques \left
+((f(ai),\lambda~i)\right )i\inI.
+Inversement, supposons que f vérifie cette propriété et montrons que f
+est affine. Pour cela, soit a \in E et posons
+\vecf(\overrightarrow\xi~)
+=\overrightarrow f(a)f(a
++\overrightarrow \xi~). Il nous suffit donc de montrer
+que \vecf est linéaire.
+
+Pour cela soit tout d'abord \overrightarrow\xi~
+\in\overrightarrow E et \lambda~ \in K. Posons b = a
++\overrightarrow \xi~ et c = a +
+\lambda~\overrightarrow\xi~. On a donc
+\overrightarrowac -
+\lambda~\overrightarrowab =\overrightarrow
+0, soit encore (1 - \lambda~)\overrightarrowac +
+\lambda~\overrightarrowbc =\overrightarrow
+0 (en écrivant \overrightarrowab
+=\overrightarrow ac +\overrightarrow
+cb). Donc c est le barycentre de (a,1 - \lambda~) et (b,\lambda~). On en déduit que
+f(c) est le barycentre de (f(a),1 - \lambda~) et de (f(b),\lambda~), soit encore que
+(1 - \lambda~)\overrightarrowf(a)f(c) +
+\lambda~\overrightarrowf(b)f(c)
+=\overrightarrow 0, soit encore
+\overrightarrowf(a)f(c) -
+\lambda~\overrightarrowf(a)f(b)
+=\overrightarrow 0, ce qui se traduit par
+\vecf(\lambda~\overrightarrow\xi~) =
+\lambda~\vecf(\overrightarrow\xi~).
+
+Soit maintenant, \overrightarrow\xi~ et
+\overrightarrow\eta dans
+\overrightarrowE. Posons b = a
++\overrightarrow \xi~, c = a
++\overrightarrow \eta et d = a +
+(\overrightarrow\xi~ +\overrightarrow
+\eta). On a alors -\overrightarrow ad
++\overrightarrow ab +\overrightarrow
+ac =\overrightarrow 0 si bien que a est barycentre
+de (d,-1), (b,1) et (c,1). On en déduit que f(a) est barycentre de
+(f(d),-1), (f(b),1) et (f(c),1), si bien que
+
+-\overrightarrowf(a)f(d)
++\overrightarrow f(a)f(b)
++\overrightarrow f(a)f(c)
+=\overrightarrow 0
+
+ce qui se traduit par -\vec
+f(\overrightarrow\xi~
++\overrightarrow \eta) +\vec
+f(\overrightarrow\xi~) +\vec
+f(\overrightarrow\eta)
+=\overrightarrow 0. Donc \vecf est
+bien linéaire.
+
+Théorème~17.2.4 Soit F une partie non vide d'un espace affine E. Alors F
+est un sous-espace affine si et seulement si~il est stable par
+barycentrage, c'est-à-dire si et seulement si~pour toute famille
+\left ((ai,\lambda~i)\right
+)i\inI telle que ai \in F et
+\\sum ~
+i\inI\lambda~i\neq~0 de barycentre g, le
+point g est encore dans F.
+
+Démonstration Supposons que F est un sous-espace affine et soit a \in F.
+Alors \overrightarrowag = 1 \over
+\\sum ~
+i\inI\lambda~i \
+\sum ~
+i\inI\lambda~i\overrightarrowaai
+\in\overrightarrow F puisque chacun des
+\overrightarrowaai est dans l'espace
+vectoriel \overrightarrowF. Donc g \in F.
+
+Inversement, supposons que F est stable par barycentrage et soit a \in F,
+\overrightarrowF =
+\\overrightarrow\xi~
+\in\overrightarrow E∣a
++\overrightarrow \xi~ \in F\. Il suffit
+de montrer que \overrightarrowF est un sous-espace
+vectoriel de \overrightarrowE.
+
+Soit tout d'abord \overrightarrow\xi~
+\in\overrightarrow F et \lambda~ \in K. Posons b = a
++\overrightarrow \xi~ \in F et c = a +
+\lambda~\overrightarrow\xi~. On a donc
+\overrightarrowac -
+\lambda~\overrightarrowab =\overrightarrow
+0, soit encore (1 - \lambda~)\overrightarrowac +
+\lambda~\overrightarrowbc =\overrightarrow
+0 (en écrivant \overrightarrowab
+=\overrightarrow ac +\overrightarrow
+cb). Donc c est le barycentre de (a,1 - \lambda~) et (b,\lambda~). Donc c \in F, soit
+\lambda~\overrightarrow\xi~ \in\overrightarrow
+F.
+
+Soit maintenant, \overrightarrow\xi~ et
+\overrightarrow\eta dans
+\overrightarrowF. Posons b = a
++\overrightarrow \xi~ \in F, c = a
++\overrightarrow \eta \in F et d = a +
+(\overrightarrow\xi~ +\overrightarrow
+\eta). On a alors -\overrightarrow ad
++\overrightarrow ab +\overrightarrow
+ac =\overrightarrow 0, ou encore
+\overrightarrowad -\overrightarrow
+bd -\overrightarrow cd
+=\overrightarrow 0 (en utilisant la relation de
+Chasles). Donc d est le barycentre de (a,1), (b,-1) et (c,-1). On a donc
+d \in F, soit encore \overrightarrow\xi~
++\overrightarrow \eta \in\overrightarrow
+F, ce qui achève de montrer que \overrightarrowF
+est un sous-espace vectoriel de \overrightarrowE, et
+donc F un sous-espace affine de E.
+
+\paragraph{17.2.4 Barycentres et convexité}
+
+On supposera ici que le corps de base est \mathbb{R}~.
+
+Définition~17.2.2 Soit E un espace affine sur \mathbb{R}~, a et b deux points de
+E. On appelle segment {[}a,b{]} l'ensemble des barycentres des points a
+et b affectés des coefficients t et 1 - t pour t \in {[}0,1{]}.
+
+Remarque~17.2.3 Autrement dit {[}a,b{]} = \a +
+t\overrightarrowab∣t \in
+{[}0,1{]}\.
+
+Définition~17.2.3 Soit E un espace affine sur \mathbb{R}~ et A une partie de E. On
+dit que A est convexe si \forall~~a,b \in A, {[}a,b{]} \subset~
+A.
+
+Théorème~17.2.5 Une partie A de E est convexe si et seulement si tout
+barycentre à coefficients positifs d'une famille finie de points de A
+est encore dans A.
+
+Démonstration La condition est évidemment suffisante puisque tout point
+du segment {[}a,b{]} est barycentre à coefficients positifs de a et b.
+Montrons qu'elle est nécessaire en montrant par récurrence sur
+\textbar{}I\textbar{} que si \left
+((ai,\lambda~i)\right )i\inI est une
+famille finie de points massiques tels que \forall~~i,
+ai \in A et \lambda~i ≥ 0 avec
+\\sum ~
+i\inI\lambda~i\neq~0, alors le
+barycentre g de la famille est encore dans A. Si \textbar{}I\textbar{} =
+2, g est encore le barycentre de (a, \lambda~1 \over
+\lambda~1+\lambda~2 ) et de (a, \lambda~2
+\over \lambda~1+\lambda~2 ), soit encore de (a,t)
+et (b,1 - t) pour t = \lambda~1 \over
+\lambda~1+\lambda~2 \in {[}0,1{]}~; donc on a g \in {[}a,b{]} \subset~ A.
+Supposons maintenant le résultat démontré pour toute famille de cardinal
+n - 1 et soit \textbar{}I\textbar{} = n. Soit i0 \in I et
+supposons que \\sum ~
+i\inI\diagdown\i0\\lambda~i\neq~0~;
+soit g' le barycentre de la famille \left
+((ai,\lambda~i)\right
+)i\inI\diagdown\i0\~; d'après
+l'hypothèse de récurrence, g' \in A. Mais le théorème d'associativité des
+barycentres assure que g est le barycentre de
+(g',\\sum ~
+i\inI\diagdown\i0\\lambda~i)
+et de (ai0,\lambda~i0)~; donc, d'après
+le cas n = 2, g \in {[}g',ai0{]} \subset~ A. Si par contre
+\\sum ~
+i\inI\diagdown\i0\\lambda~i
+= 0, comme les \lambda~i sont positifs on a
+\forall~~i \in I
+\diagdown\i0\, \lambda~i = 0 et g
+n'est autre que ai0 \in A. Cela achève la
+démonstration.
+
+Remarque~17.2.4 Il est clair que toute intersection de parties convexes
+est encore convexe. On en déduit qu'étant donnée une partie A de E,
+l'intersection de tous les convexes contenant A est encore une partie
+convexe contenant A, et qu'elle est contenue dans toute partie convexe
+contenant A. Nous l'appellerons l'enveloppe convexe de A et la noterons
+\hatA.
+
+Théorème~17.2.6 L'enveloppe convexe \hatA de A est
+l'ensemble des barycentres à coefficients positifs de points de A.
+
+Démonstration Soit B l'ensemble des barycentres à coefficients positifs
+de points de A. Comme \hatA est convexe, elle doit
+contenir d'après le théorème précédent, tout barycentre à coefficients
+positifs de points de \hatA et en particulier de
+points de A, soit B \subset~\hat A. Mais B est convexe car
+tout barycentre à coefficients positifs de points de B qui sont eux
+mêmes des barycentres à coefficients positifs de points de A est,
+d'après le théorème d'associativité des barycentres, un barycentre à
+coefficients positifs de points de A, donc est dans B~; comme B contient
+évidemment A et que \hatA est contenue dans tout
+convexe contenant A, on a \hatA \subset~ B et en définitive
+B =\hat A.
+
+Le théorème suivant précise ce résultat en dimension finie
+
+Théorème~17.2.7 (Carathéodory). Soit E un \mathbb{R}~- espace affine de dimension
+n. Alors l'enveloppe convexe \hatA de A est
+l'ensemble des barycentres à coefficients positifs des familles de
+points de A de cardinal n + 1.
+
+Démonstration Soit \left
+((ai,\lambda~i)\right )1\leqi\leqp une
+famille de points massiques avec \forall~~i,
+ai \in A et \lambda~i ≥ 0. Si p \leq n + 1, il est évidemment
+tou\\\\jmathmathmathmathours possible de compléter la famille en une famille de cardinal n +
+1 avec des poids nuls. Si p \textgreater{} n + 1, nous allons montrer
+que le barycentre g de la famille est aussi le barycentre d'une famille
+\left ((ai,\mui)\right
+)1\leqi\leqp, i\neq~i0 avec les
+\mui ≥ 0. Pour cela remarquons que la famille
+(\overrightarrowapai)1\leqi\leqp-1
+est une famille de p - 1 \textgreater{} n vecteurs dans un espace de
+dimension n~; elle est donc liée. En conséquence, il existe
+\alpha~1,\\ldots,\alpha~p-1~
+non tous nuls tels que
+\\sum ~
+i=1^p-1\alpha~i\overrightarrowapai
+= 0~; en posant \alpha~p =
+-\\sum ~
+i=1^p-1\alpha~i et en écrivant
+\overrightarrowapai
+=\overrightarrow gai
+-\overrightarrow gap, on obtient
+\\sum ~
+i=1^p\alpha~i\overrightarrowgai
+=\overrightarrow 0 avec
+\\sum ~
+i\alpha~i = 0, et les \alpha~i non tous nuls~; en
+particulier l'un au moins des \alpha~i est strictement positif. Par
+définition, on a \\\sum
+
+i=1^p\lambda~i\overrightarrowgai
+=\overrightarrow 0. On en déduit que pour tout réel
+t, on a
+
+\sum i=1^p(\lambda~ i~ -
+t\alpha~i)\overrightarrowgai
+=\overrightarrow 0
+
+Prenons alors t = min~\
+\lambda~i \over \alpha~i
+∣\alpha~i \textgreater{}
+0\ et soit \mui = \lambda~i - t\alpha~i.
+On a t ≥ 0~; comme \lambda~i ≥ 0 deux cas sont possibles~:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  si \alpha~i \leq 0, alors - t\alpha~i ≥ 0 et donc \mui =
+  \lambda~i - t\alpha~i ≥ 0
+\item
+  si par contre \alpha~i \textgreater{} 0, alors t \leq \lambda~i
+  \over \alpha~i soit encore \mui =
+  \lambda~i - t\alpha~i ≥ 0.
+\end{itemize}
+
+On a donc \forall~i \in {[}1,p{]}, \mui~ ≥ 0 et
+\\sum ~
+i=1^p\mui\overrightarrowgai
+=\overrightarrow 0. Mais de plus t
+= min\ \lambda~i~
+\over \alpha~i
+∣\alpha~i \textgreater{}
+0\ = \lambda~i0 \over
+\alpha~i0 , ce qui nous donne \mui0 =
+0. Donc g est encore le barycentre de la famille \left
+((ai,\mui)\right )1\leqi\leqp,
+i\neq~i0 avec les \mui ≥ 0~;
+ce qui achève la démonstration~: tant que le cardinal de la famille est
+supérieur ou égal à n + 2 on peut retirer un point de la famille, donc
+on finit par aboutir à une famille de cardinal n + 1.
+
+{[}
+{[}
+{[}
+{[}

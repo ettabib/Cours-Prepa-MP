@@ -1,0 +1,383 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{19.3 Equations de surfaces}
+
+\paragraph{19.3.1 Surfaces cartésiennes et nappes paramétrées}
+
+Nous avons vu précédemment que, au voisinage d'un point régulier, une
+nappe paramétrée était équivalente à une nappe cartésienne, donc définie
+par une équation du type z = f(x,y) dans un repère convenablement
+choisi. Inversement toute nappe cartésienne est bien évidemment une
+nappe paramétrée par x = u,y = v,z = f(u,v).
+
+Pla\ccons nous maintenant du point de vue d'un
+sous-ensemble de \mathbb{R}~^3 défini par une équation du type f(x,y,z)
+= 0 où f est une fonction de classe C^k d'un ouvert U de
+\mathbb{R}~^3 dans \mathbb{R}~. Soit donc \Sigma = \(x,y,z) \in
+U∣f(x,y,z) = 0\. Supposons
+qu'en un point (a,b,c) de \Sigma on ait ( \partial~f \over \partial~x
+(a,b,c), \partial~f \over \partial~y (a,b,c), \partial~f
+\over \partial~z (a,b,c))\neq~(0,0,0).
+Quitte à permuter les noms des coordonnées, on peut supposer par exemple
+ \partial~f \over \partial~z (a,b,c)\neq~0. Le
+théorème des fonctions implicites nous garantit qu'il existe
+U0 ouvert contenant (a,b), V 0 ouvert contenant c et
+\phi : U0 \rightarrow~ V 0 de classe C^k telle que
+
+\forall~(x,y) \in U0~,
+\forall~z \in V 0~, f(x,y,z) = 0
+\Leftrightarrow z = \phi(x,y)
+
+Autrement dit \Sigma, au voisinage de (a,b,c) est l'image d'une nappe
+cartésienne. Inversement, il est clair que l'image d'une nappe
+cartésienne z = \phi(x,y) est définie par l'équation f(x,y,z) = 0 où
+f(x,y,z) = z - \phi(x,y) (avec d'ailleurs  \partial~f \over \partial~z =
+1). On dira que \Sigma est une surface cartésienne quand elle vérifie
+\forall~(a,b,c) \in \Sigma, ( \partial~f \over \partial~x~
+(a,b,c), \partial~f \over \partial~y (a,b,c), \partial~f
+\over \partial~z (a,b,c))\neq~(0,0,0)
+(la véritable dénomination étant en fait sous variété de dimension 2 de
+\mathbb{R}~^3).
+
+Ceci nous montre donc, qu'au moins localement les trois points de vue
+(nappe cartésienne, nappe paramétrée et surfaces cartésiennes) sont
+équivalents avec certaines hypothèses de régularité. On retiendra en
+particulier sous ces trois formes les expressions du plan tangent et du
+vecteur normal.
+
+Nappes paramétrées (u,v)\mapsto~F(u,v) =
+(\phi(u,v),\psi(u,v),\omega(u,v))
+
+Le plan tangent en (u0,v0) est le plan
+F(u0,v0) +\
+\mathrmVect( \partial~F \over \partial~u
+(u0,v0), \partial~F \over \partial~v
+(u0,v0)) d'équation
+
+\left
+\textbar{}\matrix\,x -
+\phi(u0,v0)& \partial~\phi \over \partial~u
+(u0,v0)& \partial~\phi \over \partial~v
+(u0,v0) \cr y -
+\psi(u0,v0)& \partial~\psi \over \partial~u
+(u0,v0)& \partial~\psi \over \partial~v
+(u0,v0) \cr z -
+\omega(u0,v0)& \partial~\omega \over \partial~u
+(u0,v0)& \partial~\omega \over \partial~v
+(u0,v0)\right \textbar{} = 0
+
+avec comme vecteur normal  \partial~F \over \partial~u
+(u0,v0) ∧ \partial~F \over \partial~v
+(u0,v0) = \left
+(\matrix\, \partial~\phi \over
+\partial~u (u0,v0) \cr  \partial~\psi
+\over \partial~u (u0,v0) \cr
+ \partial~\omega \over \partial~u
+(u0,v0)\right )
+∧\left (\matrix\, \partial~\phi
+\over \partial~v (u0,v0) \cr
+ \partial~\psi \over \partial~v (u0,v0)
+\cr  \partial~\omega \over \partial~v
+(u0,v0)\right )
+
+Nappes cartésiennes z = f(x,y)
+
+En utilisant le paramétrage
+(x,y)\mapsto~(x,y,f(x,y)) et les formules
+précédentes, on obtient les formules suivantes.
+
+Le plan tangent en (x0,y0) est le plan d'équation
+(en utilisant les notations de Monge p = \partial~f \over \partial~x
+(x0,y0), q = \partial~f \over \partial~y
+(x0,y0))
+
+\left
+\textbar{}\matrix\,x -
+x0&1&0 \cr y - y0&0&1
+\cr z -
+f(x0,y0)&p&q\right \textbar{} = 0
+
+avec comme vecteur normal \left
+(\matrix\,1 \cr 0
+\cr p\right ) ∧\left
+(\matrix\,0 \cr 1
+\cr q\right ) = \left
+(\matrix\,-p \cr -q
+\cr 1 \right )
+
+Surfaces cartésiennes f(x,y,z) = 0
+
+A l'aide du théorème des fonctions implicites, on a obtenu les résultats
+suivants.
+
+Le plan tangent en (x0,y0,z0) est le plan
+d'équation
+
+(x - x0) \partial~f \over \partial~x
+(x0,y0,z0) + (y - y0) \partial~f
+\over \partial~y (x0,y0,z0) + (z
+- z0) \partial~f \over \partial~z
+(x0,y0,z0) = 0
+
+avec le vecteur normal
+\overrightarrowgradf(x0,y0,z0~)
+= \left (\matrix\, \partial~f
+\over \partial~x (x0,y0,z0)
+\cr  \partial~f \over \partial~y
+(x0,y0,z0) \cr  \partial~f
+\over \partial~z
+(x0,y0,z0)\right )
+
+\paragraph{19.3.2 Cylindres}
+
+Définition~19.3.1 Soit E un espace affine euclidien de dimension 3 et
+\vecD une direction de droite. On dit qu'une partie \Sigma
+de E est un cylindre de direction \vecD si, pour tout
+m \in \Sigma, la droite m +\vec D est contenue dans \Sigma.
+
+Définition~19.3.2 Les droites m +\vec D contenues
+dans \Sigma sont appelées les génératrices du cylindre. Un sous-ensemble qui
+rencontre toutes les génératrices est appelé un sous-ensemble directeur
+du cylindre. Un sous-ensemble directeur plan est appelé une base du
+cylindre.
+
+On est parfois amené à rechercher un cylindre connaissant un
+sous-ensemble directeur \Gamma et la direction du cylindre
+\vecD = \mathbb{R}~\vecu. Nous supposerons
+choisi un repère de E ce qui nous permet de supposer que E =
+\mathbb{R}~^3. On posera donc \vecu = (\alpha~,\beta~,\gamma).
+
+Premier cas \Gamma est l'image d'un arc paramétré
+u\mapsto~(\phi(u),\psi(u),\omega(u)). On obtient immédiatement
+une paramétrisation du cylindre par x = \phi(u) + \alpha~v,y = \psi(u) + \beta~v,z = \omega(u)
++ \gammav.
+
+Deuxième cas \Gamma est donnée par deux équations f(x,y,z) = 0,g(x,y,z) = 0.
+On écrit alors que
+
+\begin{align*} m(x,y,z) \in \Sigma&
+\Leftrightarrow & \exists~t \in \mathbb{R}~, m +
+t\vecu \in \Gamma \%& \\ &
+\Leftrightarrow & \exists~t \in \mathbb{R}~,
+\left
+\\matrix\,f(x + t\alpha~,y +
+t\beta~,z + t\gamma) = 0 \cr g(x + t\alpha~,y + t\beta~,z + t\gamma) =
+0\right .\%& \\
+\end{align*}
+
+et on élimine t entre ces équations.
+
+Exemple~19.3.1 Cylindre de direction \vecu = (1,1,1)
+de sous-ensemble directeur la parabole y^2 = 2px,z = 0. On
+écrit
+
+\begin{align*} m(x,y,z) \in \Sigma&
+\Leftrightarrow & \exists~t \in \mathbb{R}~, m +
+t\vecu \in \Gamma \%& \\ &
+\Leftrightarrow & \exists~t \in \mathbb{R}~,
+\left
+\\matrix\,(y +
+t)^2 = 2p(x + t) \cr z + t =
+0\right .\%& \\ &
+\Leftrightarrow & (y - z)^2 = 2p(x - z) \%&
+\\ \end{align*}
+
+et nous avons obtenu une équation du cylindre.
+
+\paragraph{19.3.3 Cônes}
+
+Définition~19.3.3 Soit E un espace affine euclidien de dimension 3 et S
+un point de E. On dit qu'une partie \Sigma de E est un cône de sommet S si,
+pour tout m \in \Sigma \diagdown\S\, la droite Sm est
+contenue dans \Sigma.
+
+Définition~19.3.4 Les droites Sm contenues dans \Sigma sont appelées les
+génératrices du cône. Un sous-ensemble ne contenant pas le sommet qui
+rencontre toutes les génératrices est appelé un sous ensemble directeur
+du cône. Un sous-espace directeur plan est appelé une base du cône.
+
+On est parfois amené à rechercher un cône connaissant un sous-ensemble
+directeur \Gamma et le sommet S du cône. Nous supposerons choisi un repère de
+E ce qui nous permet de supposer que E = \mathbb{R}~^3. On posera donc
+S = (\alpha~,\beta~,\gamma).
+
+Premier cas \Gamma est l'image d'un arc paramétré
+u\mapsto~(\phi(u),\psi(u),\omega(u)). On obtient immédiatement
+une paramétrisation du cône par x = v\phi(u) + (1 - v)\alpha~,y = v\psi(u) + (1 -
+v)\beta~,z = v\omega(u) + (1 - v)\gamma.
+
+Deuxième cas \Gamma est donnée par deux équations f(x,y,z) = 0,g(x,y,z) = 0.
+On écrit alors que
+
+\begin{align*} m(x,y,z) \in \Sigma
+\diagdown\S& \Leftrightarrow &
+\exists~t \in \mathbb{R}~, S +
+t\overrightarrowSm \in \Gamma\%&
+\\ \end{align*}
+
+soit encore
+
+\exists~t \in \mathbb{R}~, \left
+\\matrix\,f(tx + (1 -
+t)\alpha~,ty + (1 - t)\beta~,tz + (1 - t)\gamma) = 0 \cr g(tx + (1 -
+t)\alpha~,ty + (1 - t)\beta~,tz + (1 - t)\gamma) = 0\right .
+
+et on élimine t entre ces équations.
+
+Exemple~19.3.2 Cône de sommet S = (0,0,1) de sous-ensemble directeur la
+parabole y^2 = 2px,z = 0. On écrit
+
+\begin{align*} m(x,y,z) \in \Sigma
+\diagdown\S& \Leftrightarrow &
+\exists~t \in \mathbb{R}~, S +
+t\overrightarrowSm \in \Gamma \Leftrightarrow
+\exists~t \in \mathbb{R}~, \left
+\\matrix\,(ty)^2
+= 2ptx \cr tz + (1 - t) = 0\right . \%&
+\\ & \Leftrightarrow &
+z\neq~1\text et
+\left ( y \over 1 - z
+\right )^2 = 2px \over 1 - z
+\Leftrightarrow
+z\neq~1\text et y^2
+= 2px(1 - z)\%& \\
+\end{align*}
+
+et nous avons obtenu une équation du cône (privé de son sommet).
+
+\paragraph{19.3.4 Surfaces de révolution}
+
+Définition~19.3.5 Soit E un espace affine euclidien de dimension 3 et D
+une droite de E. On dit qu'une partie \Sigma de E est une surface de
+révolution d'axe D si, pour tout m \in \Sigma, le cercle Cm d'axe D
+passant par m est contenu dans \Sigma.
+
+Remarque~19.3.1 Les cercles Cm contenus dans \Sigma sont appelés
+les parallèles de la surface de révolution. Un sous-ensemble qui
+rencontre tous les parallèles est appelé un sous-ensemble directeur de
+la surface de révolution. Un sous-ensemble directeur situé dans un plan
+contenant l'axe D est appelé un méridien.
+
+Remarque~19.3.2 Supposons que \Sigma soit défini par l'équation f(x,y,z) = 0
+et supposons les axes choisis de telle sorte que D soit l'axe 0z. Posons
+alors g(\rho,\theta,z) = f(\rhocos~
+\theta,\rhosin~ \theta,z) en coordonnées cylindriques. Si g
+ne dépend pas de \theta, on voit immédiatement que la surface est de
+révolution, admettant pour méridiens les sous-ensembles g(\rho,z) = 0 dans
+les plans \rhoOz. On retiendra en particulier que toute équation du type
+F(x^2 + y^2,z) = 0 définit une surface de
+révolution.
+
+On est parfois amené à rechercher une surface de révolution connaissant
+un sous-ensemble directeur \Gamma et l'axe de révolution. Nous supposerons
+choisi un repère de E ce qui nous permet de supposer que E =
+\mathbb{R}~^3. On posera alors D = (a,b,c) + \mathbb{R}~(\alpha~,\beta~,\gamma).
+
+Premier cas \Gamma est l'image d'un arc paramétré
+u\mapsto~(\phi(u),\psi(u),\omega(u)). On obtient immédiatement
+une paramétrisation de la surface de révolution par (x,y,z) =
+RD(v)(\phi(u),\psi(u),\omega(u)) où RD(\theta) désigne la rotation
+d'axe D et d'angle \theta. Si le repère est bien choisi, on peut supposer que
+D est l'axe 0z. Alors RD(\theta) est l'application
+(x,y,z)\mapsto~(xcos~ \theta -
+ysin \theta,x\sin~ \theta +
+ycos~ \theta,z) si bien que l'on a la
+paramétrisation de la nappe par
+
+x = \phi(u)cos~ v -
+\psi(u)sin~ v, y =
+\phi(u)sin v + \psi(u)\cos~
+v,z = \omega(u)
+
+Deuxième cas \Gamma est donné par deux équations f(x,y,z) = 0,g(x,y,z) = 0.
+Remarquons alors que Cm est l'intersection de la sphère de
+centre A passant par m avec le plan orthogonal à
+\vecu passant par m. Il admet donc pour équations (si
+m a pour coordonnées (x0,y0,z0))
+
+\left
+\\matrix\,(x -
+a)^2 + (y - b)^2 + (z - c)^2 =
+(x0 - a)^2 + (y0 - b)^2 +
+(z0 - c)^2 \cr \alpha~x + \beta~y + \gammaz =
+\alpha~x0 + \beta~y0 + \gammaz0\right .
+
+On écrit alors que
+
+\begin{align*}
+m(x0,y0,z0) \in \Sigma&
+\Leftrightarrow & Cm \bigcap
+\Gamma\neq~\varnothing~\%& \\
+\end{align*}
+
+soit encore \exists~x,y,z \in \mathbb{R}~,
+
+\begin{align*} \left
+\\matrix\,(x -
+a)^2 + (y - b)^2 + (z - c)^2 =
+(x0 - a)^2 + (y0 - b)^2 +
+(z0 - c)^2 \cr \alpha~x + \beta~y + \gammaz =
+\alpha~x0 + \beta~y0 + \gammaz0 \cr
+f(x,y,z) = 0 \cr g(x,y,z) = 0\right .&
+& \%& \\
+\end{align*}
+
+et on élimine x,y et z entre ces équations.
+
+Dans le cas où D est l'axe Oz, on remplacera avantageusement la sphère
+par un cylindre d'axe Oz et on obtiendra comme équation de Cm
+\left
+\\matrix\,x^2
++ y^2 = x0^2 + y0^2
+\cr z = z0\right . et donc
+
+\begin{align*}
+m(x0,y0,z0) \in \Sigma&
+\Leftrightarrow & Cm \bigcap
+\Gamma\neq~\varnothing~ \%& \\ &
+\Leftrightarrow & \exists~x,y,z \in \mathbb{R}~,
+\left
+\\matrix\,x^2
++ y^2 = x0^2 + y0^2
+\cr z = z0 \cr f(x,y,z) = 0
+\cr g(x,y,z) = 0\right .\%&
+\\ \end{align*}
+
+et on élimine x,y et z entre ces équations.
+
+Exemple~19.3.3 Surface de révolution engendrée par la rotation de la
+droite \Delta : x = 1, y = z autour de l'axe 0z. On a donc
+
+\begin{align*}
+m(x0,y0,z0) \in \Sigma&
+\Leftrightarrow & Cm \bigcap
+\Delta\neq~\varnothing~ \%& \\ &
+\Leftrightarrow & \exists~x,y,z \in \mathbb{R}~,
+\left
+\\matrix\,x^2
++ y^2 = x0^2 + y0^2
+\cr z = z0 \cr x = 1
+\cr y = z\right .\%&
+\\ & \Leftrightarrow &
+x0^2 + y 0^2 = 1 + z
+0^2 \%& \\
+\end{align*}
+
+si bien que la surface a pour équation cartésienne x^2 +
+y^2 - z^2 = 1, comme équation cylindrique
+\rho^2 - z^2 = 1 et que ses méridiennes sont des
+hyperboles équilatères. Il s'agit là d'un hyperboloïde (à une nappe).
+
+{[}
+{[}
+{[}
+{[}

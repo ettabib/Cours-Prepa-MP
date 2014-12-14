@@ -1,0 +1,691 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{9.4 Recherches de primitives}
+
+\paragraph{9.4.1 Position du problème}
+
+Soit f une fonction de \mathbb{R}~ vers \mathbb{R}~ ou \mathbb{C}. On cherche à déterminer des
+intervalles (maximaux) I sur lesquels f est continue et sur un tel
+intervalle, une primitive F de f. La notation F(t)
+=\int ~ f(t) dt + k, t \in I signifiera~: f est
+continue sur I et F est une primitive de f sur I
+
+Remarque~9.4.1 On prendra garde que dans cette notation, et
+contrairement à la notation différentielle des intégrales, la variable t
+n'est pas muette. C'est bien le même t qui figure dans F(t) et dans
+\int ~ f(t) dt
+
+\paragraph{9.4.2 Techniques usuelles}
+
+Si F est une primitive de f sur I et si G est une primitive de g sur I,
+alors \alpha~F + \beta~G est une primitive de \alpha~f + \beta~g sur I ce qu'on écrira
+
+\int ~ (\alpha~f(t) + \beta~g(t)) dt =
+\alpha~\int  f(t) dt + \beta~\\int ~
+g(t) dt, t \in I
+
+Sur le même modèle on écrira le théorème de changement de variables avec
+\phi : I \rightarrow~ J de classe \mathcal{C}^1
+
+\int ~ f(\phi(t))\phi'(t) dt =\\int
+ f(u) du, u = \phi(t), t \in I
+
+et le théorème d'intégrations par parties pour deux fonctions f et g de
+classe \mathcal{C}^1
+
+\int ~ f(t)g'(t) dt = f(t)g(t)
+-\int ~ f'(t)g(t) dt, t \in I
+
+théorèmes dont la démonstration est évidente.
+
+\paragraph{9.4.3 Primitives usuelles}
+
+On posera In ={]} - \pi~ \over 2 + n\pi~, \pi~
+\over 2 + n\pi~{[} et Jn ={]}n\pi~,(n + 1)\pi~{[} pour
+n \in \mathbb{N}~.
+
+\array \int ~
+cos t dt =\ sin~ t +
+k, t \in \mathbb{R}~; &\int  \sin~ t
+dt = -cos~ t + k, t \in \mathbb{R}~ \cr
+\int ~  dt \over
+cos ^2t~ =\
+\mathrmtg t + k, t \in In;
+&\int ~  dt \over
+sin ^2t~ =
+-\mathrmcotg~ t + k, t \in
+Jn \cr \int ~  dt
+\over cos t~
+= log~ \left
+\textbar{}\mathrmtg~ ( t
+\over 2 + \pi~ \over 4
+)\right \textbar{} + k, t \in
+In;&\int ~  dt \over
+sin t =\ log~
+\left
+\textbar{}\mathrmtg~  t
+\over 2 \right \textbar{}, t \in
+Jn \cr \int ~
+\mathrmtg~ t dt =
+-log~ \left
+\textbar{}cos~ t\right
+\textbar{} + k, t \in In; &\int ~
+\mathrmcotg~ t dt
+= log~ \left
+\textbar{}sin~ t\right
+\textbar{}, t \in Jn \cr
+\int ~
+\mathrmch~ t dt
+= \mathrmsh~ t + k, t \in \mathbb{R}~;
+&\int ~
+\mathrmsh~ t dt
+= \mathrmch~ t + k, t \in \mathbb{R}~
+\cr \int ~  dt
+\over
+\mathrmch ^2t~
+= \mathrmth~ t + k, t \in \mathbb{R}~;
+&\int ~  dt \over
+\mathrmsh ^2t~
+= -coth~ t + k, t \in{]}
+-\infty~,0{[}\text ou t \in{]}0,+\infty~{[} \cr
+\int ~  dt \over
+\mathrmch t~ =
+2\mathrmarctg~
+e^t + k, t \in \mathbb{R}~; &\int~  dt
+\over
+\mathrmsh t~
+= log~ \left
+\textbar{}\mathrmth~  t
+\over 2 \right \textbar{}, t \in{]}
+-\infty~,0{[}\text ou t \in{]}0,+\infty~{[} \cr
+\int ~
+\mathrmth~ t dt
+= log~
+\mathrmch~ t + k, t \in \mathbb{R}~;
+&\int  \coth~ t dt
+= log~ \left
+\textbar{}\mathrmsh~
+t\right \textbar{}, t \in{]} -\infty~,0{[}\text
+ou t \in{]}0,+\infty~{[} \cr \int ~
+t^\alpha~ dt = t^\alpha~+1 \over \alpha~+1 + k,
+(\alpha~\neq~ - 1) &\int ~  dt
+\over t = log~
+\textbar{}t\textbar{} + k, t \in{]} -\infty~,0{[}\text ou t
+\in{]}0,+\infty~{[} 
+
+\begin{align*} \int ~  dt
+\over t^2 + a^2 & =& 1
+\over a
+\mathrmarctg~  t
+\over a , t \in \mathbb{R}~ \%& \\
+\int   dt \over a^2~ -
+t^2 & =& 1 \over 2a
+log~ \left \textbar{} t + a
+\over t - a \right \textbar{} = 1
+\over a arg~
+\mathrmth~  t
+\over a ,t \in{]}
+-\textbar{}a\textbar{},\textbar{}a\textbar{}{[}\text
+pour la dernière expression  \%& \\
+\int ~  dt \over
+\sqrta^2  - t^2 & =&
+arcsin~  t \over
+\textbar{}a\textbar{} + k,t \in{]}
+-\textbar{}a\textbar{},\textbar{}a\textbar{}{[} \%&
+\\ \int ~  dt
+\over \sqrtt^2  +
+a^2 & =& arg~
+\mathrmsh~  t
+\over \textbar{}a\textbar{} + k
+= log (t + \sqrtt~^2
+ + a^2) + k', t \in \mathbb{R}~ \%& \\
+\int ~  dt \over
+\sqrtt^2  - a^2 & =&
+log~ \left \textbar{}t +
+\sqrtt^2  -
+a^2\right \textbar{} + k =
+\left \ \cases
+arg~
+\mathrmch~  t
+\over \textbar{}a\textbar{} + k&si t
+\in{]}\textbar{}a\textbar{},+\infty~{[} \cr
+-arg~
+\mathrmch~ 
+\textbar{}t\textbar{} \over \textbar{}a\textbar{} +
+k&si t \in{]} -\infty~,-\textbar{}a\textbar{}{[} \cr 
+\right .\%&\\
+\end{align*}
+
+\paragraph{9.4.4 Fractions rationnelles}
+
+On rappelle le résultat suivant
+
+Théorème~9.4.1 Soit R(X) = A(X) \over B(X) une
+fraction rationnelle à coefficients complexes, B(X) =
+b\∏ ~
+i=1^k(X - ai)^mi la
+décomposition du dénominateur en facteurs du premier degré. Alors R(X)
+s'écrit de manière unique sous la forme
+
+R(X) = E(X) + \\sum
+i=1^k\left ( \alpha~i,1
+\over X - ai +
+\ldots + \alpha~i,mi~
+\over (X - ai)^mi
+\right )
+
+Démonstration E(X) est évidemment le quotient de la division euclidienne
+de A(X) par B(X).
+
+On montre que si A(X),B1(X),B2(X) sont trois
+polynômes tels que B1(X) et B2(X) sont premiers
+entre eux, alors il existe des polynômes U(X) et V (X) tels que
+
+ A(X) \over B1(X)B2(X) = U(X)
+\over B1(X) + V (X) \over
+B2(X)
+
+en effet puisque B1 et B2 sont premiers entre eux,
+on a \mathbb{C}{[}X{]} = B1(X)\mathbb{C}{[}X{]} + B2(X)\mathbb{C}{[}X{]}, donc
+A(X) peut s'écrire sous la forme A(X) = U(X)B2(X) + V
+(X)B1(X) et en divisant par B1(X)B2(X) on
+obtient la décomposition souhaitée. De plus, si un couple (U,V )
+convient, il est clair que tout couple (U - B1Q,V +
+B2Q) convient. En rempla\ccant U par le
+reste de sa division euclidienne par B1, on peut donc supposer
+que deg~ U \textless{}\
+deg B1~; on voit alors immédiatement que si
+deg~ A \textless{}\
+deg B1B2, on a aussi deg~
+V \textless{} deg B2~ (l'ensemble des
+fractions rationnelles dont le degré du numérateur est strictement
+inférieur au degré du numérateur est une sous algèbre de \mathbb{C}(X)). Une
+récurrence évidente permet donc d'écrire
+
+ A(X) \over B(X) = E(X) + \\sum
+i=1^k Ai(X) \over (X -
+ai)^mi
+
+avec deg Ai~ \textless{}
+mi. On écrit alors la formule de Taylor pour le polynôme
+Ai au point ai, soit Ai(X) =
+\alpha~i,mi + \alpha~i,mi-1(X -
+ai) +
+\\ldots~ +
+\alpha~i,1(X - ai)^mi-1 (car
+deg Ai \leq mi~ - 1) d'où la
+décomposition souhaitée. L'unicité de la décomposition découle
+immédiatement du lemme suivant
+
+Lemme~9.4.2 Le polynôme \alpha~i,1X +
+\\ldots~ +
+\alpha~i,miX^mi est l'unique polynôme
+P(X) sans terme constant tel que  A(X) \over B(X) -
+P( 1 \over X-ai ) n'admette pas
+ai comme pôle.
+
+Démonstration Il est clair que ce polynôme convient. Si P1 et
+P2 sont deux tels polynômes, alors (P1 -
+P2)( 1 \over X-ai ) =
+\left ( A(X) \over B(X) -
+P2( 1 \over X-ai
+)\right ) -\left ( A(X)
+\over B(X) - P1( 1 \over
+X-ai )\right ) est la différence de deux
+fractions rationnelles qui n'admettent pas le pôle ai donc
+c'est une fraction rationnelle qui n'admet pas le pôle ai.
+Ceci n'est possible que si P1 - P2 est constant,
+mais comme P1 et P2 sont sans terme constant, on a
+P1 = P2.
+
+Méthode de calcul E(X) est le quotient de la division euclidienne de
+A(X) par B(X). En ce qui concerne les parties polaires  \alpha~i,1
+\over X-ai +
+\\ldots~ +
+\alpha~i,mi \over
+(X-ai)^mi on peut procéder de la
+manière suivante~:
+
+\begin{itemize}
+\item
+  si mi = 1 (pôle simple) on peut poser B(X) = (X -
+  ai)B1(X)~; en multipliant les deux membres de la
+  décomposition par X - ai et en substituant ai à X,
+  on obtient (en remarquant que B'(X) = B1(X) + (X -
+  ai)B1'(X))
+
+  \alpha~i,1 = A(ai) \over
+  B1(ai) = A(ai) \over
+  B'(ai)
+\item
+  si mi \textgreater{} 1, on écrit  A(X+ai)
+  \over B(X+ai) = P(X) \over
+  X^miQ(X) avec
+  Q(0)\neq~0. On effectue la division suivant les
+  puissances croissantes de P par Q à l'ordre mi, d'où P(X) =
+  S(X)Q(X) + X^miT(X) avec
+  deg S \leq mi~ - 1. On obtient alors
+   P(X) \over X^miQ(X) = S(X)
+  \over X^mi + T(X)
+  \over Q(X) = \alpha~i,1 \over
+  X + \\ldots~ +
+  \alpha~i,mi \over
+  X^mi + T(X) \over Q(X) et
+  donc
+
+   A(X) \over B(X) = \alpha~i,1
+  \over X - ai +
+  \\ldots~ +
+  \alpha~i,mi \over (X -
+  ai)^mi + T(X - ai)
+  \over Q(X - ai)
+
+  Comme  T(X-ai) \over Q(X-ai)
+  n'admet pas ai comme pôle, c'est que l'on a déterminé la
+  partie polaire relative au pôle ai.
+\end{itemize}
+
+Pour chercher une primitive d'une fraction rationnelle  A(X)
+\over B(X) dont on connaît la décomposition en éléments
+simples
+
+R(X) = E(X) + \\sum
+i=1^k\left ( \alpha~i,1
+\over X - ai +
+\ldots + \alpha~i,mi~
+\over (X - ai)^mi
+\right )
+
+il suffit donc de savoir chercher une primitive du polynôme E(X) (ce qui
+est élémentaire) et de chacun des éléments simples  1
+\over (X-ai)^k .
+
+Théorème~9.4.3 (i) Une primitive de t\mapsto~ 1
+\over (t-a)^k ,
+k\neq~1, est - 1 \over k-1 
+1 \over (t-a)^k-1 (ii) Une primitive de
+t\mapsto~ 1 \over t-a est
+log~ \textbar{}t - a\textbar{} si a \in \mathbb{R}~,
+log~ \textbar{}t - a\textbar{} +
+i\mathrmarctg~ ( t-\alpha~
+\over \beta~ ) si a = \alpha~ + i\beta~ \in \mathbb{C} \diagdown \mathbb{R}~.
+
+Démonstration Le premier point et le deuxième sont évidents~; si a = \alpha~ +
+i\beta~ \in \mathbb{C} \diagdown \mathbb{R}~, on écrit  1 \over t-a = 1
+\over t-\alpha~-i\beta~ = t-\alpha~ \over
+(t-\alpha~)^2+\beta~^2 + i \beta~ \over
+(t-\alpha~)^2+\beta~^2 dont une primitive est  1
+\over 2  log~ ((t -
+\alpha~)^2 + \beta~^2) +
+i\mathrmarctg~ ( t-\alpha~
+\over \beta~ ).
+
+\paragraph{9.4.5 Fractions rationnelles en sinus et cosinus}
+
+On cherche une primitive d'une fonction du type f :
+t\mapsto~R(cos~
+t,sin~ t) où R est une fraction rationnelle.
+
+Dans le cas où R est un polynôme, la linéarisation de f(t) en utilisant
+les formules de trigonométrie et en particulier
+cos t = e^it+e^-it~
+\over 2 , sin~ t =
+e^it-e^-it \over 2i permettra de
+calculer une primitive.
+
+Pour une fraction rationnelle, nous utiliserons à plusieurs reprises le
+lemme suivant
+
+Lemme~9.4.4 Soit R(X,Y ) une fraction rationnelle à deux variables.
+Alors il existe deux fractions rationnelles R1 et R2
+à deux variables telles que R(X,Y ) = R1(X^2,Y ) +
+XR2(X^2,Y )
+
+Démonstration On écrit, en séparant au dénominateur, les puissances
+paires de X des puissances impaires,
+
+\begin{align*} R(X,Y )& =& A(X,Y )
+\over B1(X^2,Y ) +
+XB2(X^2,Y ) \%& \\
+& =& A(X,Y )(B1(X^2,Y ) -
+XB2(X^2,Y )) \over
+B1(X^2,Y )^2 -
+X^2B2(X^2,Y )^2 \%&
+\\ & =& C(X,Y ) \over
+D(X^2,Y ) = C1(X^2,Y ) +
+XC2(X^2,Y ) \over D(X^2,Y
+) \%& \\ & =&
+R1(X^2,Y ) + XR 2(X^2,Y ) \%&
+\\ \end{align*}
+
+En appliquant ce lemme, nous constatons que nous pouvons écrire
+
+\begin{align*} f(t)& =&
+R1(cos~
+^2t,sin~ t) +\
+cos tR 2(cos~
+^2t,sin~ t) \%&
+\\ & =& R1(1
+- sin~
+^2t,sin~ t) +\
+cos t R 2(1 - sin~
+^2t,sin~ t)\%&
+\\ & =&
+f1(sin~ t) +\
+cos t f2(sin~ t) \%&
+\\ \end{align*}
+
+où f1 et f2 sont des fractions rationnelles à une
+variable. Si f1 = 0, on a alors
+
+\int  f(t) dt =\\int ~
+f2(sin~
+t)cos t dt =\\int ~
+f2(u) du
+
+avec u = sin~ t. On est donc ramené à la
+recherche d'une primitive de fraction rationnelle, ce que nous savons
+faire. Or on constate facilement que, puisque
+cos (\pi~ - t) = -\cos~ t
+et sin (\pi~ - t) =\ sin~
+t, on a f1 = 0 \Leftrightarrow
+\forall~~t \in \mathbb{R}~, f(\pi~ - t) = -f(t).
+
+De même on peut écrire f(t) = f3(cos~
+t) + sin~
+tf4(cos~ t) (en intervertissant le
+rôle du sinus et du cosinus, ou en changeant t en  \pi~
+\over 2 - t) et si f3 = 0, on a
+\int  f(t) dt =\\int ~
+f4(cos~
+t)sin t dt = -\\int ~
+f4(u) du avec u = cos~ t. Or comme ci
+dessus, f3 = 0 \Leftrightarrow
+\forall~~t \in \mathbb{R}~, f(-t) = -f(t).
+
+Mais on peut encore écrire f(t) = R(cos~
+t,sin t) = R(\cos~
+t,\mathrmtg~
+tcos t) = S(\cos~
+t,\mathrmtg~ t) et en
+appliquant de nouveau le lemme, f(t) =
+R3(cos~
+^2t,\mathrmtg~ t)
++ cos~
+tR4(cos~
+^2t,\mathrmtg~ t).
+Mais cos ^2~t = 1
+\over
+1+\mathrmtg~
+^2t ce qui permet d'écrire f(t) =
+f5(\mathrmtg~ t)
++ cos~
+tf6(\mathrmtg~ t).
+Alors, si f6 = 0, le changement de variables u
+= \mathrmtg~ t pour t \in{]}
+- \pi~ \over 2 + n\pi~, \pi~ \over 2 +
+n\pi~{[}, conduira à \int ~ f(t) dt
+=\int ~
+f5(\mathrmtg~ t)
+dt =\int   f4~(u) \over
+1+u^2 du, c'est-à-dire encore à une primitive de fraction
+rationnelle. Or f6 = 0 \Leftrightarrow
+\forall~~t \in \mathbb{R}~, f(t + \pi~) = f(t).
+
+Dans tous les autres cas, le changement de variable u
+= \mathrmtg~  t
+\over 2 , t \in{]}(2n - 1)\pi~,(2n + 1)\pi~{[} conduit à
+
+\int  R(\cos~
+t,sin t) dt =\\int ~ R(
+1 - u^2 \over 1 + u^2 , 2u
+\over 1 + u^2 ) 2du \over 1
++ u^2
+
+c'est-à-dire encore à une primitive de fraction rationnelle.
+
+On déduit de cette étude que
+
+Proposition~9.4.5 Soit f(t) une fraction rationnelle en
+sin t et \cos~ t
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) si \forall~~t \in \mathbb{R}~, f(\pi~ - t) = -f(t), le
+  changement de variable u = sin~ t conduit à
+  la recherche d'une primitive de fraction rationnelle
+\item
+  (ii) si \forall~~t \in \mathbb{R}~, f(-t) = -f(t), le changement
+  de variable u = cos~ t conduit à la recherche
+  d'une primitive de fraction rationnelle
+\item
+  (iii) si \forall~~t \in \mathbb{R}~, f(t + \pi~) = f(t), le
+  changement de variable u =\
+  \mathrmtg t, t \in{]} - \pi~ \over
+  2 + n\pi~, \pi~ \over 2 + n\pi~{[}, conduit à la recherche
+  d'une primitive de fraction rationnelle
+\item
+  (iv) dans tous les autres cas, le changement de variable u
+  = \mathrmtg~  t
+  \over 2 , t \in{]}(2n - 1)\pi~,(2n + 1)\pi~{[}, conduit à la
+  recherche d'une primitive de fraction rationnelle.
+\end{itemize}
+
+Remarque~9.4.2 Les règles (i),(ii) et (iii) doivent tou\\\\jmathmathmathmathours être
+utilisées de préférence à la règle (iv) car elles conduisent à une
+fraction rationnelle dont les degrés des numérateurs et dénominateurs
+sont plus petits que dans la règle (iv). Le lecteur prendra garde à ne
+pas appliquer les règles (iii) et (iv) en dehors de leurs intervalles de
+validité respectifs (t \in{]} - \pi~ \over 2 + n\pi~, \pi~
+\over 2 + n\pi~{[} ou t \in{]}(2n - 1)\pi~,(2n + 1)\pi~{[}) sous
+peine d'erreurs difficilement décelables.
+
+\paragraph{9.4.6 Fractions rationnelles en sinus et cosinus
+hyperboliques}
+
+On cherche une primitive d'une fonction du type f :
+t\mapsto~R(\mathrmch~
+t,\mathrmsh~ t) où R est une
+fraction rationnelle.
+
+Une première méthode est de rechercher le changement de variable que
+l'on ferait pour calculer une primitive de g(t) =
+R(cos t,\sin~ t)
+(c'est-à-dire en transformant toutes les fonctions hyperboliques en
+leurs analogues circulaires) et de faire le changement de variable
+analogue u = \mathrmsh~ t, u
+= \mathrmch~ t, u
+= \mathrmth~ t ou u
+= \mathrmth~  t
+\over 2 .
+
+Une deuxième méthode est de remarquer que f(t) est de la forme
+S(e^t) où S est une fraction rationnelle à une variable. Le
+changement de variable u = e^t conduit alors à
+\int  f(t) dt =\\int ~
+S(e^t) dt =\int ~  S(u)
+\over u du c'est-à-dire encore à une primitive de
+fraction rationnelle.
+
+\paragraph{9.4.7 Intégrales abéliennes}
+
+On cherche une primitive d'une fonction du type g :
+x\mapsto~R(x,f(x)) où R est une fraction rationnelle
+et f une fonction telle que la courbe d'équation y = f(x) puisse être
+paramétrée par x = \phi(t),y = \psi(t) où \phi et \psi sont des fractions
+rationnelles (où éventuellement des fonctions trigonométriques).
+
+On a alors \int ~ g(x) dx
+=\int  R(x,f(x)) dx =\\int ~
+R(\phi(t),\psi(t))\phi'(t) dt par le changement de variable x = \phi(t) ce qui
+conduit donc à une primitive de fractions rationnelles~; le paramètre t
+doit varier de telle sorte que y = f(x) \Leftrightarrow x =
+\phi(t), y = \psi(t)
+
+Le cas le plus important est le cas des intégrales abéliennes où f est
+une fonction algébrique~; autrement dit où la courbe y = f(x) est une
+partie d'une courbe algébrique \Gamma d'équation P(x,y) = 0 où P est un
+polynôme à deux variables. Une telle courbe, paramétrable par deux
+fractions rationnelles x = \phi(t),y = \psi(t) est appelée une courbe
+unicursale.
+
+Remarque~9.4.3 L'exemple le plus simple de courbe algébrique non
+unicursale est une courbe elliptique d'équation y^2 =
+x^3 + px + q~; c'est ainsi que le calcul des primitives du
+type \int  R(x,\sqrtx~^3
+ + px + q) dx ne relèvera pas en général de la théorie précédente.
+
+Nous allons étudier tout particulièrement deux exemples de fonctions
+algébriques f.
+
+Premier exemple~: f(x) = \rootn
+\ofax+b \over cx+d  avec ad -
+bc\neq~0. La courbe \Gamma est alors la courbe (cx +
+d)y^n - (ax + b) = 0. On peut la paramétrer en posant y = t
+auquel cas on obtient x = dt^n-b \over
+-ct^n+a ~; d'où dx = nt^n-1 ad-bc
+\over (ct^n-a)^2 . On obtient
+donc
+
+\int ~ R(x,\rootn
+\ofax + b \over cx + d ) dx
+=\int  R( dt^n~ - b
+\over -ct^n + a ,t)nt^n-1 ad -
+bc \over (ct^n - a)^2 dt
+
+en posant t = \rootn \ofax+b
+\over cx+d  ce qui conduit à la recherche d'une
+primitive de fraction rationnelle.
+
+Deuxième exemple~: f(x) = \sqrtax^2  + bx +
+c avec a\neq~0 (sinon on retombe sur l'exemple
+précédent avec n = 2, c = 0 et d = 1). La courbe \Gamma est alors la courbe
+d'équation y^2 = ax^2 + bx + c, il s'agit soit
+d'une ellipse (si a \textless{} 0) soit d'une hyperbole (si a
+\textgreater{} 0). Bien entendu on doit se limiter à la portion de cette
+conique située dans le demi plan supérieur~: y ≥ 0. Introduisons \Delta =
+b^2 - 4ac que l'on peut manifestement supposer non nul, car
+sinon ax^2 + bx + c est un carré parfait.
+
+Premier cas~: a \textless{} 0~; on peut se limiter cas où \Delta
+\textgreater{} 0 car sinon \forall~~x \in \mathbb{R}~,
+ax^2 + bx + c \textless{} 0 et la fonction n'est \\\\jmathmathmathmathamais
+définie. On écrit ax^2 + bx + c = a(x - \alpha~)(x - \beta~) = a((x -
+p)^2 - q^2) en introduisant d'une part les racines \alpha~
+et \beta~ du trinome, d'autre part sa forme canonique. La fonction f est
+définie sur {[}\alpha~,\beta~{]}.
+
+Une première manière de paramétrer \Gamma est d'écrire son équation sous la
+forme (x - p)^2 + y^2 \over
+\textbar{}a\textbar{} = q^2 ce qui conduit au paramétrage x
+- p = qcos~ t, y =
+q\sqrt\textbar{}a\textbar{}sin~
+t et donc à \int ~
+R(x,\sqrtax^2  + bx + c) dx
+=\int  R(p + q\cos~
+t,q\sqrt\textbar{}a\textbar{}sin~
+t)(-qsin~ t) dt, fraction rationnelle en
+sin et \cos~ ~; le
+paramètre t varie dans {[}0,\pi~{]} de telle manière que y ≥ 0.
+
+Une deuxième manière est de couper l'ellipse \Gamma par une droite variable
+passant par un point de l'ellipse, par exemple le point (\alpha~,0). On pose
+donc y = t(x - \alpha~). Ceci conduit à y^2 = t^2(x -
+\alpha~)^2 = a(x - \alpha~)(x - \beta~), soit t^2(x - \alpha~) = a(x - \beta~),
+soit x = \alpha~t^2-a\beta~ \over t^2-a ,
+puis y = t(x - \alpha~) = at(\beta~-\alpha~) \over t^2-a ~;
+on obtient ainsi un paramétrage unicursal de \Gamma et on aboutit à une
+recherche de primitive de fraction rationnelle~; le paramètre t varie de
+telle sorte que y ≥ 0, soit t ≥ 0.
+
+Deuxième cas~: a \textgreater{} 0, \Delta \textless{} 0. La fonction f(x) =
+\sqrtax^2  + bx + c est définie sur \mathbb{R}~. On
+écrit ax^2 + bx + c = a((x - p)^2 +
+q^2) en introduisant sa forme canonique.
+
+Une première manière de paramétrer \Gamma est d'écrire son équation sous la
+forme  y^2 \over a - (x - p)^2
+= q^2 ce qui conduit au paramétrage x - p =
+q\mathrmsh~ t, y =
+q\sqrta\mathrmch~
+t et donc à \int ~
+R(x,\sqrtax^2  + bx + c) dx
+=\int ~ R(p +
+q\mathrmsh~
+t,q\sqrta\mathrmch~
+t)(q\mathrmch~ t) dt,
+fraction rationnelle en
+\mathrmsh~ et
+\mathrmch~ ~; le paramètre t
+varie dans \mathbb{R}~.
+
+Une deuxième manière est de couper l'hyperbole \Gamma par une droite variable
+parallèle à l'une de ses asymptotes (de telles droites ne coupant \Gamma
+qu'en un seul point), par exemple y = \sqrtax + t. On
+a alors y^2 = (\sqrtax + t)^2 =
+ax^2 + bx + c soit 2tx\sqrta +
+t^2 = bx + c soit encore x = c-t^2
+\over 2t\sqrta-b puis y =
+\sqrtax + t =
+\\ldots~~; on
+aboutit à une recherche de primitive de fraction rationnelle~; le
+paramètre t varie de telle sorte que y ≥ 0.
+
+Troisième cas~: a \textgreater{} 0, \Delta \textgreater{} 0. On écrit
+ax^2 + bx + c = a(x - \alpha~)(x - \beta~) = a((x - p)^2 -
+q^2) en introduisant d'une part les racines \alpha~ et \beta~ du
+trinome, d'autre part sa forme dite canonique. La fonction f est définie
+sur {]} -\infty~,\alpha~{]} et sur {[}\beta~,+\infty~{[}.
+
+Une première manière de paramétrer \Gamma est d'écrire son équation sous la
+forme (x - p)^2 - y^2 \over a =
+q^2 ce qui conduit au paramétrage x - p =
+q\epsilon\mathrmch~ t, y =
+q\sqrta\mathrmsh~
+t, avec \epsilon = ±1 = sgn~(x - p), et donc à
+\int  R(x,\sqrtax^2 ~
++ bx + c) dx =\int ~ R(p +
+q\epsilon\mathrmch~
+t,q\sqrta\mathrmsh~
+t)(\epsilonq\mathrmsh~ t) dt,
+fraction rationnelle en
+\mathrmsh~ et
+\mathrmch~ ~; le paramètre t
+varie dans {[}0,+\infty~{[} de telle manière que y ≥ 0.
+
+Une deuxième manière est de couper l'hyperbole \Gamma par une droite variable
+passant par un point de l'hyperbole, par exemple le point (\alpha~,0). On pose
+donc y = t(x - \alpha~). Ceci conduit à y^2 = t^2(x -
+\alpha~)^2 = a(x - \alpha~)(x - \beta~), soit t^2(x - \alpha~) = a(x - \beta~),
+soit x = \alpha~t^2-a\beta~ \over t^2-a ,
+puis y = t(x - \alpha~) = at(\beta~-\alpha~) \over t^2-a ~;
+on obtient ainsi un paramétrage unicursal de \Gamma et on aboutit à une
+recherche de primitive de fraction rationnelle~; le paramètre t varie de
+telle sorte que y ≥ 0.
+
+Une troisième manière est de couper l'hyperbole \Gamma par une droite
+variable parallèle à l'une de ses asymptotes (de telles droites ne
+coupant \Gamma qu'en un seul point), par exemple y =
+\sqrtax + t. On a alors y^2 =
+(\sqrtax + t)^2 = ax^2 + bx + c
+soit 2tx\sqrta + t^2 = bx + c soit encore
+x = c-t^2 \over
+2t\sqrta-b puis y = \sqrtax + t
+= \\ldots~~; on
+aboutit à une recherche de primitive de fraction rationnelle~; le
+paramètre t varie de telle sorte que y ≥ 0.
+
+{[}
+{[}
+{[}
+{[}

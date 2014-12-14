@@ -1,0 +1,802 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{20.3 Calcul des intégrales doubles et triples}
+
+\paragraph{20.3.1 Théorème de Fubini sur une partie de \mathbb{R}~^2}
+
+Théorème~20.3.1 (de Fubini pour un pavé de \mathbb{R}~^2). Soit P =
+{[}a,b{]} \times {[}c,d{]} un pavé de \mathbb{R}~^2, E un espace vectoriel
+normé de dimension finie, f : P \rightarrow~ E une fonction bornée dont l'ensemble
+des points de discontinuité est négligeable vérifiant (i) pour chaque x
+\in {[}a,b{]}, l'application y\mapsto~f(x,y) est
+réglée de {[}c,d{]} dans E (ii) l'application \phi : {[}a,b{]} \rightarrow~ E,
+x\mapsto~\int ~
+c^df(x,y) dy est réglée. Alors
+
+\int  P~f =\\int
+ a^b\phi(x) dx =\int ~
+a^b\left (\int ~
+c^df(x,y) dy\right ) dx
+
+Démonstration Quitte à prendre une base de E, il suffit de montrer le
+résultat lorsque E = \mathbb{R}~. Soit n \in \mathbb{N}~, ai = a + i b-a
+\over n et c\\\\jmathmathmathmath = c + \\\\jmathmathmathmath d-c
+\over n . On définit ainsi une subdivision \sigman
+de P dont le pas tend vers 0 quand n tend vers + \infty~. Soit Pi,\\\\jmathmathmathmath
+= {[}ai-1,ai{]} \times {[}c\\\\jmathmathmathmath-1,c\\\\jmathmathmathmath{]}
+les pavés de cette subdivision. Posons alors, pour (i,\\\\jmathmathmathmath) \in
+{[}1,n{]}^2,
+
+\mui,\\\\jmathmathmathmath = 1 \over c\\\\jmathmathmathmath -
+c\\\\jmathmathmathmath-1 \int ~
+c\\\\jmathmathmathmath-1^c\\\\jmathmathmathmath f(ai,y) dy = n
+\over d - c \int ~
+c\\\\jmathmathmathmath-1^c\\\\jmathmathmathmath f(ai,y) dy
+
+et soit Sn =\
+\sum  i,\\\\jmathmathmathmath\in{[}1,n{]}~ (b-a)(d-c)
+\over n^2 \mui,\\\\jmathmathmathmath. Si l'on note
+Mi,\\\\jmathmathmathmath =\
+supx\inPi,\\\\jmathmathmathmathf(x) et mi,\\\\jmathmathmathmath
+= inf x\inPi,\\\\jmathmathmathmath~f(x), on a
+clairement
+
+\begin{align*} d(f,\sigman)& =&
+\sum i,\\\\jmathmathmathmath\in{[}1,n{]}~ (b - a)(d - c)
+\over n^2 mi,\\\\jmathmathmathmath \%&
+\\ & \leq& \\sum
+i,\\\\jmathmathmathmath\in{[}1,n{]} (b - a)(d - c) \over
+n^2 \mui,\\\\jmathmathmathmath \%& \\ &
+\leq& \sum i,\\\\jmathmathmathmath\in{[}1,n{]}~ (b - a)(d - c)
+\over n^2 Mi,\\\\jmathmathmathmath =
+D(f,\sigman)\%& \\
+\end{align*}
+
+où d(f,\sigman) et D(f,\sigman) désignent respectivement les
+sommes de Darboux inférieure et supérieure de f associées à la
+subdivision \sigman. Quand n tend vers + \infty~, ces sommes de Darboux
+admettent toutes deux pour limite \int ~
+Pf, donc limn\rightarrow~+\infty~Sn~
+=\int  P~f. Mais d'autre part,
+
+\begin{align*} Sn& =&
+\sum i=1^n~ b - a
+\over n \\sum
+\\\\jmathmathmathmath=1^n
+\\int  ~
+c\\\\jmathmathmathmath-1^c\\\\jmathmathmathmath f(ai,y) dy\%&
+\\ & =& \\sum
+i=1^n b - a \over n
+\\int  ~
+c^df(a i,y) dy \%&
+\\ & =& \\sum
+i=1^n b - a \over n \phi(ai)
+\%& \\ \end{align*}
+
+Il s'agit donc d'une somme de Riemann pour la fonction réglée \phi :
+{[}a,b{]} \rightarrow~ \mathbb{R}~ associée à la subdivision régulière
+(ai)0\leqi\leqn. On en déduit que
+limn\rightarrow~+\infty~Sn~
+=\int  a^b~\phi(x) dx, d'où
+l'égalité recherchée.
+
+Remarque~20.3.1 De même si on suppose que
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) pour chaque y \in {[}c,d{]}, l'application
+  x\mapsto~f(x,y) est réglée de {[}a,b{]} dans E
+\item
+  (ii) l'application \psi : {[}c,d{]} \rightarrow~ E,
+  y\mapsto~\int ~
+  a^bf(x,y) dx est réglée.
+\end{itemize}
+
+Alors
+
+\int  P~f =\\int
+ c^d\psi(y) dy =\int ~
+c^d\left (\int ~
+a^bf(x,y) dx\right ) dy
+
+Tout ceci nous amène tout naturellement à introduire la notation
+\int  \\int ~
+Pf(x,y) dx dy pour l'intégrale d'une fonction f sur un pavé P de
+\mathbb{R}~^2 puis à généraliser cette notation à toute partie
+quarrable de \mathbb{R}~^2.
+
+Corollaire~20.3.2 Soit P = {[}a,b{]} \times {[}c,d{]} un pavé de
+\mathbb{R}~^2, f : {[}a,b{]} \rightarrow~ K, g : {[}c,d{]} \rightarrow~ K réglées. Alors
+
+\int  \\int ~
+{[}a,b{]}\times{[}c,d{]}f(x)g(y) dx dy = \left
+(\int  a^b~f(x)
+dx\right )\left
+(\int  c^d~g(y)
+dy\right )
+
+Démonstration On a
+
+\int  c^d~f(x)g(y) dy =
+f(x)\int  c^d~g(y) dy = \lambda~f(x)
+
+avec \lambda~ =\int  c^d~g(y) dy. On en
+déduit que
+
+\begin{align*} \int ~
+\int  {[}a,b{]}\times{[}c,d{]}~f(x)g(y) dx
+dy& =& \int  a^b~\lambda~f(x) dx =
+\lambda~\int  a^b~f(x) dx\%&
+\\ & =& \left
+(\int  a^b~f(x)
+dx\right )\left
+(\int  c^d~g(y)
+dy\right ) \%& \\
+\end{align*}
+
+Théorème~20.3.3 (théorème de Fubini pour une partie de \mathbb{R}~^2).
+Soit \phi1 et \phi2 deux applications continues de
+{[}a,b{]} dans \mathbb{R}~ vérifiant \forall~~t \in {[}a,b{]},
+\phi1(t) \leq \phi2(t) et soit A = \(x,y) \in
+\mathbb{R}~^2∣x \in
+{[}a,b{]}\text et \phi1(x) \leq y \leq
+\phi2(x)\. Soit f : A \rightarrow~ E continue. Alors A est
+quarrable et
+
+\int  \\int ~
+Af(x,y) dx dy =\int ~
+a^b\left (\int ~
+\phi1(x)^\phi2(x)f(x,y)
+dy\right ) dx
+
+Démonstration A est quarrable car il est borné (\phi1 et
+\phi2 continues sur des compacts sont bornées) et sa frontière
+est formée de la réunion de quatre graphes de fonctions continues
+x\mapsto~\phi1(x),
+y\mapsto~b,
+x\mapsto~\phi2(x) et
+y\mapsto~a. Soit M =\
+sup\phi2(x) et m = inf~
+\phi1(x) si bien que A \subset~ {[}a,b{]} \times {[}m,M{]} et soit
+f^∗ le prolongement par 0 de f de A à P = {[}a,b{]} \times
+{[}m,M{]}. On sait dé\\\\jmathmathmathmathà que f^∗ est bornée et que
+\mathrmDisc~ (f) est
+négligeable (il est contenu dans la frontière de A). Pour x \in {[}a,b{]}
+fixé, l'application y\mapsto~f^∗(x,y) est
+continue par morceaux car f^∗(x,y) = \left
+\ \cases f(x,y)&si \phi1(x) \leq
+y \leq \phi2(x) \cr 0 &sinon 
+\right .. De plus \int ~
+m^Mf^∗(x,y) dy =\int ~
+\phi1(x)^\phi2(x)f(x,y) dy est une fonction
+continue de x comme on l'a vu dans le chapitre sur les intégrales de
+fonctions d'une variable. On peut donc appliquer le théorème précédent
+et on obtient
+
+\begin{align*} \int ~
+\int  A~f(x,y) dx dy& =&
+\int  \\int ~
+Pf^∗(x,y) dx dy \%& \\
+& =& \int ~
+a^b\left (\int ~
+m^Mf^∗(x,y) dy\right ) dx \%&
+\\ & =& \int ~
+a^b\left (\int ~
+\phi1(x)^\phi2(x)f(x,y)
+dy\right ) dx\%& \\
+\end{align*}
+
+\includegraphics{cours16x.png}
+
+Remarque~20.3.2 Ceci permet de ramener le calcul d'une intégrale double
+sur une partie de \mathbb{R}~^2 délimitée par deux graphes au calcul de
+deux intégrales de fonctions d'une variable. Pour un sous ensemble A
+plus général, on cherchera à écrire A = A1
+\cup\\ldots~ \cup
+Ak où chaque partie Ai est limitée par deux graphes
+de fonctions continues, soit de la forme \(x,y) \in
+\mathbb{R}~^2∣x \in
+{[}a,b{]}\text et \phi1(x) \leq y \leq
+\phi2(x)\ ou de la forme \(x,y)
+\in \mathbb{R}~^2∣y \in
+{[}c,d{]}\text et \psi1(y) \leq x \leq
+\psi2(y)\~; on écrira alors, à condition que les
+intersections deux à deux des Ai soient négligeables,
+\int  \\int ~
+Af(x,y) dx dy =\
+\sum ~
+i=1^k\int ~
+\int  Ai~f(x,y) dx dy puis on
+ramènera le calcul de chaque intégrale double au calcul de deux
+intégrales simples.
+
+Exemple~20.3.1 Soit K = \(x,y) \in
+\mathbb{R}~^2∣y ≥ 0, y \leq x,0 \leq x + 2y \leq
+2\ et on cherche à calculer I
+=\int  \\int ~
+Kx^2 dx dy (moment d'inertie par rapport à l'axe Oy).
+
+\includegraphics{cours17x.png}
+
+Le théorème de Fubini nous permet de calculer cette intégrale de deux
+manières différentes suivant que l'on commence à intégrer suivant x ou
+suivant y. Dans une première méthode on peut écrire
+
+\begin{align*} K& =& \(x,y) \in
+\mathbb{R}~^2∣x \in {[}0, 2
+\over 3 {]}\text et 0 \leq y \leq
+x\ \%& \\ & \cup&
+\(x,y) \in \mathbb{R}~^2∣x \in
+{[} 2 \over 3 ,2{]}\text et 0 \leq y
+\leq 1 - x \over 2 \\%&
+\\ \end{align*}
+
+d'où (en faisant sortir de l'intégrale par rapport à y le terme en
+x^2 qui ne dépend pas de y)
+
+\begin{align*} I& =& \\int
+ 0^2\diagup3x^2\left
+(\int ~
+0^xdy\right ) dx
++\int ~
+2\diagup3^2x^2\left
+(\int  0~^1- x
+\over 2 dy\right ) dx\%&
+\\ & =& \int ~
+0^2\diagup3x^3 dx +\int ~
+2\diagup3^2x^2\left (1 - x
+\over 2 \right ) dx = 52
+\over 81 \%& \\
+\end{align*}
+
+On peut aussi la calculer en considérant que
+
+K = \(x,y) \in
+\mathbb{R}~^2∣y \in {[}0, 2
+\over 3 {]}\text et y \leq x \leq 2 -
+2y\
+
+d'où
+
+I =\int ~
+0^2\diagup3\left (\int ~
+y^2-2yx^2 dx\right ) dy
+=\int  0^2\diagup3~\left
+( (2 - 2y)^3 \over 3 - y^3
+\over 3 \right ) dy = 52
+\over 81
+
+\paragraph{20.3.2 Théorème de Fubini sur une partie de \mathbb{R}~^3}
+
+On démontre d'une fa\ccon similaire le résultat
+suivant pour les intégrales sur une partie de \mathbb{R}~^3
+
+Théorème~20.3.4 (théorème de Fubini pour un pavé de \mathbb{R}~^3).
+Soit P = {[}a1,b1{]} \times
+{[}a2,b2{]} \times {[}a3,b3{]} un
+pavé de \mathbb{R}~^3, E un espace vectoriel normé de dimension finie,
+f : P \rightarrow~ E une fonction bornée dont l'ensemble des points de
+discontinuité est négligeable vérifiant
+
+\begin{itemize}
+\item
+  (i) pour chaque (x,y) \in {[}a1,b1{]} \times
+  {[}a2,b2{]}, l'application
+  z\mapsto~f(x,y,z) est réglée de {[}c,d{]} dans E
+\item
+  (ii) pour chaque x \in {[}a1,b1{]}, l'application
+  y\mapsto~\int ~
+  a3^b3f(x,y,z) dz est réglée de
+  {[}a2,b2{]} dans E
+\item
+  (iii) l'application
+  x\mapsto~\int ~
+  a2^b2\left
+  (\int ~
+  a3^b3f(x,y,z)
+  dz\right ) dy est réglée de
+  {[}a1,b1{]} dans E
+\item
+  Alors
+
+  \begin{align*} \int ~
+  \int  \\int ~
+  Pf(x,y,z) dx dy dz =& & \%&
+  \\ & & \int ~
+  a1^b1 \left
+  (\int  a2^b2~
+  \left (\int ~
+  a3^b3 f(x,y,z)
+  dz\right ) dy\right ) dx\%&
+  \\ \end{align*}
+\end{itemize}
+
+Bien entendu, dans la limite de validité (c'est-à-dire si l'on est
+certain que toutes les intégrales écrites ont bien un sens), on peut
+regrouper deux des intégrales simples en une intégrale double en
+utilisant le théorème de Fubini pour les intégrales doubles, et ainsi
+obtenir les formules (à permutation près sur les noms des variables)
+
+\begin{align*} \int ~
+\int  \\int ~
+Pf(x,y,z) dx dy dz&& \%& \\ &
+=& \int  \\int ~
+{[}a1,b1{]}\times{[}a2,b2{]}\left
+(\int  a3^b3~
+f(x,y,z) dz\right ) dx dy\%&
+\\ & =& \int ~
+a3^b3 \left
+(\int  \\int ~
+{[}a1,b1{]}\times{[}a2,b2{]}f(x,y,z)
+dx dy\right ) dz\%& \\
+\end{align*}
+
+La première méthode d'intégration porte en général le nom d'intégration
+par piles (on somme d'abord verticalement, puis ensuite
+horizontalement), la deuxième méthode portant le nom d'intégration par
+tranches (on somme d'abord horizontalement, puis ensuite verticalement).
+
+De la même manière que pour les intégrales doubles et par prolongement
+par 0 à un pavé, on montre alors les deux résultats suivants
+
+Théorème~20.3.5 (théorème de Fubini pour une partie de \mathbb{R}~^3,
+intégration par piles). Soit A un sous-ensemble quarrable de
+\mathbb{R}~^2, \phi1 et \phi2 deux applications continues
+de A dans \mathbb{R}~ vérifiant \forall~~(x,y) \in A,
+\phi1(x,y) \leq \phi2(x,y) et soit K =
+\(x,y,z) \in
+\mathbb{R}~^2∣(x,y) \in
+A\text et \phi1(x,y) \leq z \leq
+\phi2(x,y)\. Soit f : K \rightarrow~ E continue. Alors
+
+\int  \\int ~
+\int  K~f(x,y,z) dx dy dz
+=\int  \\int ~
+A\left (\int ~
+\phi1(x,y)^\phi2(x,y)f(x,y,z)
+dz\right ) dx dy
+
+Théorème~20.3.6 (théorème de Fubini pour une partie de \mathbb{R}~^3,
+intégration par tranches). Soit K une partie de \mathbb{R}~^3 compacte
+et quarrable. Soit f une application continue de K dans E. On suppose
+vérifiées les conditions suivantes (en posant m
+= inf (x,y,z)\inK~z et M
+= sup(x,y,z)\inK~z) (i) pour tout z \in
+{[}m,M{]}, Kz = \(x,y) \in
+\mathbb{R}~^2∣(x,y,z) \in K\
+(section de K par le plan horizontal de cote z) est un sous-ensemble
+quarrable de \mathbb{R}~^2 (ii) l'application
+z\mapsto~\int ~
+\int  Kz~f(x,y,z) dx dy est
+réglée sur {[}m,M{]}. Alors
+
+\int  \\int ~
+\int  K~f(x,y,z) dx dy dz
+=\int  m^M~\left
+(\int  \\int ~
+Kzf(x,y,z) dx dy\right ) dz
+
+Exemple~20.3.2 Supposons donnée une courbe dans un plan méridien donnée
+en coordonnées cylindriques par r = \phi(z) où \phi : {[}a,b{]} \rightarrow~ \mathbb{R}~ est
+continue positive. Considérons le volume K de révolution délimité par la
+rotation de la courbe autour de l'axe Oz. Les sous-ensembles
+Kz sont des disques de centre (0,0) de rayon \phi(z), donc de
+mesure \pi~\phi(z)^2. On en déduit que la mesure de K est donnée
+par
+
+\begin{align*} m(K)& =& \\int
+ \int  \\int  K~
+dx dy dz =\int ~
+a^b\left (\int ~
+\int  Kz~ dx
+dy\right ) dz =\int ~
+a^bm(K z) dz\%&
+\\ & =& \pi~\int ~
+a^b\phi(z)^2 dz \%&
+\\ \end{align*}
+
+Par exemple, pour une boule de rayon R, on peut prendre a = -R, b = R et
+\phi(z) = \sqrtR^2  - z^2, d'où la
+mesure de la boule
+
+m(K) = \pi~\int ~
+-R^R(R^2 - z^2) dz =
+\pi~\left {[}R^2z - z^3
+\over 3 \right {]}-R^R
+= 4 \over 3 \pi~R^3
+
+\paragraph{20.3.3 Théorème de changement de variables dans les
+intégrales multiples}
+
+On admettra le théorème suivant de démonstration difficile
+
+Théorème~20.3.7 (théorème de changement de variables). Soit K1
+et K2 deux parties compactes de \mathbb{R}~^n de frontières
+négligeables, \phi : K1 \rightarrow~ K2 continue, E un espace
+vectoriel normé de dimension finie. On suppose que \phi réalise un
+\mathcal{C}^1 difféomorphisme de l'intérieur de K1 sur
+l'intérieur de K2. Soit f : K2 \rightarrow~ E continue. Alors
+(si \\\\jmathmathmathmath\phi(x) désigne le \\\\jmathmathmathmathacobien de \phi au point x \in
+K1^o)
+
+\int  K2~f
+=\int  K1~f \cdot \phi
+\textbar{}\\\\jmathmathmathmath\phi\textbar{}
+
+En particulier on a les formules suivantes pour les intégrales doubles
+et triples
+
+\int  \\int ~
+K2f(x,y) dx dy =\int ~
+\int  K1~f(\phi(u,v))
+\textbar{}\\\\jmathmathmathmath\phi(u,v)\textbar{} du dv
+
+\begin{align*} \int ~
+\int  \\int ~
+K2f(x,y,z) dx dy dz&& \%&
+\\ & =& \int ~
+\int  \\int ~
+K1f(\phi(u,v,w)) \textbar{}\\\\jmathmathmathmath\phi(u,v,w)\textbar{}
+du dv dw\%& \\
+\end{align*}
+
+Remarque~20.3.3 Le lecteur comparera ce théorème de changement de
+variables avec le théorème de changement de variable pour les fonctions
+d'une variable. Le \\\\jmathmathmathmathacobien \\\\jmathmathmathmathoue ici le rôle du terme \phi'(u). On prendra
+garde qu'ici il est assorti d'une valeur absolue. Ceci est dû à
+l'absence de convention de Chasles à partir de la dimension 2. En
+dimension 1 et lorsque \phi est décroissante (donc \phi' \leq 0), les bornes se
+retrouvent en sens contraire de l'ordre naturel et un rétablissement de
+cet ordre transforme alors \phi' en - \phi' = \textbar{}\phi'\textbar{}.
+
+Corollaire~20.3.8 En supposant vérifiées les hypothèses ci dessus pour
+le changement de variable, on a les formules suivantes pour les passages
+en coordonnées polaires, cylindriques ou sphériques
+
+\begin{align*} \int ~
+\int  K2~f(x,y) dx dy& =&
+\int  \\int ~
+K1f(rcos~
+\theta,rsin~ \theta) \textbar{}r\textbar{} dr d\theta\%&
+\\ & & \%&
+\\ \end{align*}
+
+\begin{align*} \int ~
+\int  \\int ~
+K2f(x,y,z) dx dy dz&& \%&
+\\ & =& \int ~
+\int  \\int ~
+K1f(rcos~
+\theta,rsin~ \theta,z) \textbar{}r\textbar{} dr d\theta dz
+\%& \\ \int ~
+\int  \\int ~
+K2f(x,y,z) dx dy dz&& \%&
+\\ & =& \int ~
+\int  \\int ~
+K1f(rcos~
+\thetacos \phi,r\sin~
+\thetacos \phi,r\sin~ \phi)
+\textbar{}r^2 cos~ \phi\textbar{} dr d\theta
+d\phi\%& \\ \end{align*}
+
+Remarque~20.3.4 Le lecteur devra se persuader que le principal obstacle
+au calcul explicite d'une intégrale multiple provient du domaine
+d'intégration et non de la fonction à intégrer (penser par exemple
+qu'une aire ou un volume peuvent être difficiles à calculer alors que la
+fonction à intégrer est la constante 1). Ceci veut dire que lorsque l'on
+recherche un changement de variable, on doit accorder une priorité
+absolue à la simplification du domaine d'intégration, l'idéal étant de
+transformer ce domaine en un pavé.
+
+Exemple~20.3.3 Soit
+(v1,\\ldots,vn~)
+une famille libre de \mathbb{R}~^n et soit V le polytope construit sur
+cette base, c'est-à-dire V = \t1v1
++ \\ldots~ +
+tnvn∣\forall~~i
+\in {[}1,n{]}, ti \in {[}0,1{]}\ (en dimension 2,
+il s'agit d'un parallélogramme et en dimension 3 d'un parallélépipède).
+Alors l'application \phi : {[}0,1{]}^n \rightarrow~ V ,
+(t1,\\ldots,tn)\mapsto~t1v1~
++ \\ldots~ +
+tnvn vérifie évidemment les conditions du théorème
+de changement de variable. De plus son \\\\jmathmathmathmathacobien est égal au produit
+mixte des n vecteurs, soit
+{[}v1,\\ldots,vn~{]}.
+On en déduit que la mesure de V est donnée par
+
+\begin{align*} m(V )& =&
+\int  V ~1 =\\int
+
+{[}0,1{]}^n\textbar{}{[}v1,\\ldots,vn~{]}\textbar{}
+\%& \\ & =&
+\textbar{}{[}v1,\\ldots,vn{]}\textbar{}m({[}0,1{]}^n~)
+= \textbar{}{[}v
+1,\\ldots,vn~{]}\textbar{}\%&
+\\ \end{align*}
+
+\includegraphics{cours18x.png}
+
+Exemple~20.3.4 On considère deux paraboles d'axe Ox tangentes en O à
+l'axe Oy et deux paraboles d'axe Oy tangentes en O à l'axe Ox. On
+cherche à calculer l'aire du domaine K compris entre les paraboles
+(hachuré sur le dessin ci dessous)
+
+\includegraphics{cours19x.png}
+
+Les paraboles auront pour équations x^2 = 2p1y et
+x^2 = 2p2y pour les paraboles verticales,
+y^2 = 2q1x et y^2 = 2q2x pour
+les paraboles horizontales. Il n'est pas raisonnable de tenter un calcul
+par le théorème de Fubini. Nous allons donc faire un changement de
+variable en paramétrant un point de la zone hachuré~; pour cela nous
+considérerons que tout point de la zone hachurée est l'intersection
+d'une parabole x^2 = 2py et d'une parabole y^2 =
+2qx avec p \in {[}p1,p2{]} et q \in
+{[}q1,q2{]}, autrement dit nous considérerons
+l'application \phi : K \rightarrow~ {[}p1,p2{]} \times
+{[}q1,q2{]} définie par \phi(x,y) = ( x^2
+\over 2y , y^2 \over 2x
+). Il est visible que \phi est bi\\\\jmathmathmathmathective, ce que confirmerait un calcul
+simple. De plus
+
+\\\\jmathmathmathmath\phi(x,y) = \left
+\textbar{}\matrix\, x
+\over y &- x^2 \over
+2y^2 \cr - y^2
+\over 2x^2 & y \over x
+\right \textbar{} = 3 \over 4
+
+On en déduit par le théorème d'inversion locale que \phi est un
+\mathcal{C}^1 difféomorphisme de K^o sur
+{]}p1,p2{[}\times{]}q1,q2{[} et que
+\\\\jmathmathmathmath\phi^-1(p,q) = 1 \over
+\\\\jmathmathmathmath\phi(\phi^-1(p,q)) = 4 \over 3 . On
+a donc
+
+\begin{align*} m(K)& =& \\int
+ \int  K~1 dx dy \%&
+\\ & =& \int ~
+\int ~
+{[}p1,p2{]}\times{[}q1,q2{]}1
+\cdot \phi^-1(p,q)\left \textbar{}\\\\jmathmathmathmath
+\phi^-1(p,q)\right \textbar{} dp dq\%&
+\\ & =& 4 \over 3
+m({[}p1,p2{]} \times {[}q1,q2{]}) =
+4 \over 3 (p2 - p1)(q2 -
+q1) \%& \\
+\end{align*}
+
+\paragraph{20.3.4 Théorème de Green-Riemann}
+
+Soit \phi1 et \phi2 deux applications continues de
+{[}a,b{]} dans \mathbb{R}~ vérifiant \forall~~x \in {[}a,b{]},
+\phi1(x) \leq \phi2(x) et soit A = \(x,y) \in
+\mathbb{R}~^2∣x \in
+{[}a,b{]}\text et \phi1(x) \leq y \leq
+\phi2(x)\. On considère la frontière \partial~A de A en
+tant qu'arc paramétré orientée comme l'indique la figure ci dessous~: on
+parcourt la frontière en laissant A à sa main gauche. Cette frontière
+est la réunion de quatre arcs paramétrés, deux étant des graphes de
+fonctions x\mapsto~y = \phii(x) (l'un
+parcouru dans le sens direct, l'autre dans le sens indirect), deux étant
+des graphes de fonctions
+y\mapsto~\textconstante.
+
+\includegraphics{cours20x.png}
+
+Soit U un ouvert contenant A et P une fonction de classe \mathcal{C}^1
+sur U. On cherche à calculer l'intégrale I =\int ~
+\int  A \partial~P \over \partial~y~
+(x,y) dx dy. D'après le théorème de Fubini, on a
+
+\begin{align*} \int ~
+\int  A \partial~P \over \partial~y~
+(x,y) dx dy &=&\int ~
+a^b\left (\int ~
+\phi1(x)^\phi2(x) \partial~P \over
+\partial~y (x,y) dy\right ) dx&&\%&
+\\ & =& \int ~
+a^b\Big {[}P(x,y)\Big
+{]} y=\phi1(x)^y=\phi2(x) dx \%&
+\\ & =& \int ~
+a^bP(x,\phi 2(x)) dx -\\int
+ a^bP(x,\phi 1(x)) dx\%&
+\\ \end{align*}
+
+La première intégrale \int ~
+a^bP(x,\phi2(x)) dx n'est autre que l'intégrale
+curviligne de la forme différentielle P(x,y) dx le long du graphe y =
+\phi2(x), c'est-à-dire l'opposée de l'intégrale curviligne de la
+forme différentielle P(x,y) dx le long du quart supérieur de la
+frontière \partial~A (un changement d'orientation changeant l'intégrale
+curviligne en son opposée). La deuxième intégrale
+-\int  a^bP(x,\phi1~(x))
+dx n'est autre que l'opposée de l'intégrale curviligne de la forme
+différentielle P(x,y) dx le long du graphe y = \phi1(x),
+c'est-à-dire l'opposée de l'intégrale curviligne de la forme
+différentielle P(x,y) dx le long du quart inférieur de la frontière \partial~A .
+Mais d'autre part les intégrales curvilignes de la forme différentielle
+P(x,y) dx le long des quarts gauche et droite de la frontière sont
+nulles, car sur ces arcs, x est une constante et donc dx = 0. On en
+déduit donc que \int ~ \\int
+ A \partial~P \over \partial~y (x,y) dx dy =
+-\int  \partial~A~P(x,y) dx.
+
+Soit \psi1 et \psi2 deux applications continues de
+{[}c,d{]} dans \mathbb{R}~ vérifiant \forall~~y \in {[}c,d{]},
+\psi1(y) \leq \psi2(y) et soit A = \(x,y) \in
+\mathbb{R}~^2∣y \in
+{[}c,d{]}\text et \psi1(y) \leq x \leq
+\psi2(y)\. On considère la frontière \partial~A de A en
+tant qu'arc paramétré orientée comme l'indique la figure ci dessous~: on
+parcourt la frontière en laissant A à sa main gauche. Cette frontière
+est la réunion de quatre arcs paramétrés, deux étant des graphes de
+fonctions y\mapsto~x = \psii(y) (l'un
+parcouru dans le sens direct, l'autre dans le sens indirect), deux étant
+des graphes de fonctions
+x\mapsto~\textconstante.
+
+\includegraphics{cours21x.png}
+
+Soit U un ouvert contenant A et Q une fonction de classe \mathcal{C}^1
+sur U. La même méthode va nous fournir
+
+\begin{align*} \int ~
+\int  A \partial~Q \over \partial~y~
+(x,y) dx dy &=&\int ~
+c^d\left (\int ~
+\psi1(y)^\psi2(y) \partial~Q \over
+\partial~x (x,y) dx\right ) dy&&\%&
+\\ & =& \int ~
+c^d\Big{[} Q(x,y)\Big
+{]} x=\psi1(y)^x=\psi2(y) dx \%&
+\\ & =& \int ~
+c^dQ(\psi 2(y),y) dy -\\int
+ c^dQ(\psi 1(y),y) dy\%&
+\\ \end{align*}
+
+La première intégrale \int ~
+c^dQ(\psi2(y),y) dy est l'intégrale de la forme
+différentielle Q(x,y) dy le long du quart droit de la frontière \partial~A, la
+seconde -\int ~
+c^dQ(\psi1(y),y) dy est l'intégrale de la forme
+différentielle Q(x,y) dy le long du quart gauche de la frontière \partial~A (à
+cause du changement d'orientation). Mais d'autre part les intégrales
+curvilignes de la forme différentielle Q(x,y) dy le long des quarts
+supérieur et inférieur de la frontière sont nulles, car sur ces arcs, y
+est une constante et donc dy = 0. On en déduit donc que
+\int  \\int  A~
+\partial~Q \over \partial~x (x,y) dx dy =\int ~
+\partial~AQ(x,y) dy.
+
+Si A est à la fois des deux formes en question, on pourra additionner
+les deux résultats obtenus ce qui nous conduira à la formule
+
+\begin{align*} \int ~
+\partial~A(P(x,y) dx + Q(x,y) dy)&& \%&
+\\ & =& \int ~
+\int  A~\left ( \partial~Q
+\over \partial~x (x,y) - \partial~P \over \partial~y
+(x,y)\right ) dx dy\%& \\
+\end{align*}
+
+Définition~20.3.1 On dit qu'une partie A de \mathbb{R}~^2 est un
+compact élémentaire s'il existe a,b,c,d \in \mathbb{R}~, deux fonctions
+\phi1,\phi2 : {[}a,b{]} \rightarrow~ \mathbb{R}~ continues telles que
+\forall~x \in {[}a,b{]}, \phi1~(x) \leq
+\phi2(x) et deux fonctions \psi1 et \psi2 continues
+de {[}c,d{]} dans \mathbb{R}~ vérifiant \forall~~y \in {[}c,d{]},
+\psi1(y) \leq \psi2(y) telles que
+
+\begin{align*} A& =& \(x,y) \in
+\mathbb{R}~^2∣x \in
+{[}a,b{]}\text et \phi 1(x) \leq y \leq
+\phi2(x)\\%& \\
+& =& \(x,y) \in
+\mathbb{R}~^2∣y \in
+{[}c,d{]}\text et \psi 1(y) \leq x \leq
+\psi2(y)\\%& \\
+\end{align*}
+
+Définition~20.3.2 On dit qu'une partie A de \mathbb{R}~^2 est un
+compact simple s'il existe un pavé P de \mathbb{R}~^2 contenant A et
+une subdivision \sigma de P tels que pour tous les pavés Pi de la
+subdivision, Pi \bigcap A soit un compact élémentaire.
+
+On oriente la frontière d'un tel compact simple par la même règle que ci
+dessus~: on parcourt la frontière en laissant le compact à sa main
+gauche.
+
+Exemple~20.3.5 Une couronne est un compact simple comme le montre le
+dessin ci-dessous où on a exhibé une subdivision adaptée, ainsi que
+l'orientation de la frontière de chaque compact élémentaire~:
+
+\includegraphics{cours22x.png}
+
+Posons alors Ai = Pi \bigcap A. On peut alors écrire
+
+\begin{align*} \int ~
+\int  A~\left ( \partial~Q
+\over \partial~x (x,y) - \partial~P \over \partial~y
+(x,y)\right ) dx dy&& \%&
+\\ & =& \\sum
+i \\int  ~ 
+\\int  ~
+Ai\left ( \partial~Q \over
+\partial~x (x,y) - \partial~P \over \partial~y (x,y)\right )
+dx dy\%& \\ & =&
+\sum i~
+\\int  ~
+\partial~Ai(P(x,y) dx + Q(x,y) dy) \%&
+\\ \end{align*}
+
+Mais la réunion des frontières des Ai est constituée de deux
+types d'arcs paramétrés~: des arcs faisant partie de la frontière de A
+plus des segments horizontaux et verticaux provenant de la subdivision
+du pavé. Or (sans vouloir formaliser complètement ce raisonnement) ces
+segments sont parcourus deux fois pour un Ai et un
+A\\\\jmathmathmathmath ad\\\\jmathmathmathmathacents, une fois dans un sens et une fois dans l'autre
+(voir le dessin ci dessus), si bien que les intégrales curvilignes le
+long de ces segments horizontaux ou verticaux n'appartenant pas à la
+frontière de A s'annulent deux à deux. On obtient donc
+
+\int  \\int ~
+A\left ( \partial~Q \over \partial~x (x,y) -
+\partial~P \over \partial~y (x,y)\right ) dx dy
+=\int  \partial~A~(P(x,y) dx + Q(x,y) dy)
+
+Théorème~20.3.9 (Green-Riemann). Soit A un compact simple de
+\mathbb{R}~^2 de frontière orientée \partial~A, U un ouvert de \mathbb{R}~^2
+contenant A, P,Q : U \rightarrow~ \mathbb{R}~ de classe \mathcal{C}^1. Alors
+
+\int  \\int ~
+A\left ( \partial~Q \over \partial~x (x,y) -
+\partial~P \over \partial~y (x,y)\right ) dx dy
+=\int  \partial~A~(P(x,y) dx + Q(x,y) dy)
+
+Remarque~20.3.5 Le théorème de Green-Riemann permet (entre autres
+choses) de ramener le calcul d'une intégrale du type
+\int  \\int ~
+Af(x,y) dx dy à celui d'une intégrale curviligne
+\int  \partial~A~(P(x,y) dx + Q(x,y) dy)
+(c'est-à-dire d'une intégrale simple) à condition de connaître deux
+fonctions P et Q telles que f(x,y) = \partial~Q \over \partial~x
+(x,y) - \partial~P \over \partial~y (x,y).
+
+Corollaire~20.3.10 Soit A un compact simple de \mathbb{R}~^2 de
+frontière orientée \partial~A. Alors l'aire de A est donnée par
+
+m(A) =\int  \partial~A~x dy =
+-\int  \partial~A~y dx = 1
+\over 2 \int  \partial~A~(x dy
+- y dx)
+
+Démonstration Il suffit de prendre successivement P(x,y) = 0,Q(x,y) = x,
+P(x,y) = -y,Q(x,y) = 0 et enfin P(x,y) = - y \over 2
+,Q(x,y) = x \over 2 , couples pour lesquels  \partial~Q
+\over \partial~x (x,y) - \partial~P \over \partial~y (x,y) =
+1.
+
+Corollaire~20.3.11 Soit A un compact simple de \mathbb{R}~^2 de
+frontière orientée \partial~A. Alors l'aire de A est donnée en polaires par
+
+m(A) = 1 \over 2 \int ~
+\partial~A\rho^2 d\theta
+
+Démonstration En effet x dy - y dx = \rho^2 d\theta.
+
+{[}
+{[}
+{[}
+{[}

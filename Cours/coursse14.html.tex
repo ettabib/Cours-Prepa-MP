@@ -1,0 +1,325 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{2.8 Systèmes linéaires}
+
+\paragraph{2.8.1 Position du problème}
+
+Soit A = (ai,\\\\jmathmathmathmath)1\leqi\leqm,1\leq\\\\jmathmathmathmath\leqn \in MK(m,n) et
+b1,\\ldots,bm~
+\in K. On considère le système d'équations aux inconnues
+x1,\\ldots,xn~
+\in K
+
+(L)\quad \left
+\\matrix\,a1,1x1
++ \\ldots~ +
+a1,nxn = b1 \cr
+\\ldots~
+\cr am,1x1 +
+\\ldots~ +
+am,nxn = bm\right .
+
+On a diverses interprétations possibles d'un tel système (en notant
+\textCann la base canonique de
+K^n)~:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Interprétation matricielle~: AX = B si X = \left
+  (\matrix\,x1
+  \cr
+  \\ldots~
+  \cr xn\right ) et B =
+  \left
+  (\matrix\,b1
+  \cr
+  \\ldots~
+  \cr bm\right ).
+\item
+  Interprétation linéaire~: u(x) = b si u : K^n \rightarrow~
+  K^m est telle que
+  \mathrmMat~
+  (u,\textCann,\textCanm)
+  et si x et b admettent
+  (x1,\\ldots,xn~)
+  et
+  (b1,\\ldots,bm~)
+  comme coordonnées dans les bases canoniques
+  \textCann et
+  \textCanm.
+\item
+  Interprétation vectorielle~: b = x1c1 +
+  \\ldots~ +
+  xncn, si
+  c1,\\ldots,cn~
+  \in K^m sont les vecteurs colonnes de la matrice A
+\item
+  Interprétation duale~: f1(x) =
+  b1,\\ldots,fm~(x)
+  = bm si f\\\\jmathmathmathmath désigne la forme linéaire sur
+  K^n,
+  (x1,\\ldots,xn)\mapsto~a\\\\jmathmathmathmath,1x1~
+  + \\ldots~ +
+  a\\\\jmathmathmathmath,nxn.
+\end{itemize}
+
+Remarque~2.8.1 En remarquant que A est la matrice de u dans les bases
+canoniques, mais aussi la matrice des coordonnées de
+(c1,\\ldots,cn~)
+dans la base canonique de K^m et la transposée de la matrice
+de
+(f1,\\ldots,fm~)
+dans la base duale de la base canonique de K^n, on obtient
+
+Théorème~2.8.1 Avec les notations ci-dessus, on a
+\mathrmrg~A
+= \mathrmrg~u
+=\
+\mathrmrg(c1,\\ldots,cn~)
+=\
+\mathrmrg(f1,\\ldots,fm~).
+Cette valeur commune est appelée le rang du système.
+
+\paragraph{2.8.2 Systèmes de Cramer}
+
+Définition~2.8.1 On appelle système de Cramer un système d'équations
+linéaires vérifiant les conditions équivalentes (qui toutes impliquent
+que m = n)
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) A est une matrice inversible
+\item
+  (ii) u est un isomorphisme de K^n sur K^m
+\item
+  (iii)
+  (c1,\\ldots,cn~)
+  est une base de K^m
+\item
+  (iv)
+  (f1,\\ldots,fm~)
+  est une base de (K^n)^∗
+\end{itemize}
+
+Théorème~2.8.2 (Résolution d'un système de Cramer) Un système de Cramer
+admet une solution unique donnée par
+
+\begin{itemize}
+\item
+  (i) Interprétation matricielle~: X = A^-1B
+\item
+  (ii) Interprétation linéaire~: x = u^-1(b)
+\item
+  (iii) Interprétation vectorielle~:
+
+  x\\\\jmathmathmathmath =
+  \mathrm{det}~
+  (c1,\\ldots,c\\\\jmathmathmathmath-1,b,c\\\\jmathmathmathmath+1,\\\ldots,cn~)
+  \over
+  \mathrm{det}~
+  (c1,\\ldots,cn)~
+
+  (formules de Cramer)
+\item
+  (iv) Soit
+  (v1,\\ldots,vn~)
+  la base duale de
+  (f1,\\ldots,fn~),
+  alors x = b1v1 +
+  \\ldots~ +
+  bnvn.
+\end{itemize}
+
+Démonstration Tout est évident sauf le (iii). Mais on a b =
+x1c1 +
+\\ldots~ +
+xncn, soit
+
+\begin{align*}
+\mathrm{det}~
+(c1,\\ldots,c\\\\jmathmathmathmath-1,b,c\\\\jmathmathmathmath+1,\\\ldots,cn~)&&
+\%& \\ & =&
+\mathrm{det}~
+(c1,\\ldots,c\\\\jmathmathmathmath-1,x1c1~
++ \\ldots~ +
+xncn,c\\\\jmathmathmathmath+1,\\ldots,cn~)\%&
+\\ & =&
+x\\\\jmathmathmathmath \mathrm{det}~
+(c1,\\ldots,cn~)
+\%& \\ \end{align*}
+
+en développant suivant la \\\\jmathmathmathmath-ième colonne (tous les autres déterminants
+sont nuls car contenant deux fois la même colonne ci).
+
+\paragraph{2.8.3 Théorème de Rouché-Fontené}
+
+Définition~2.8.2 On associe au système (L) le système dit homogène
+
+(H)\quad \left
+\\matrix\,a1,1x1
++ \\ldots~ +
+a1,nxn = 0 \cr
+\\ldots~
+\cr am,1x1 +
+\\ldots~ +
+am,nxn = 0\right .
+
+On appelle SL l'ensemble des solutions du système linéaire,
+SH celui du système homogène.
+
+Proposition~2.8.3 SH est un sous-espace vectoriel de
+K^n de dimension égale à n
+-\mathrmrgL. SL~
+est soit vide, soit un sous-espace affine de direction SH~;
+dans ce cas on obtient la solution générale de (L) en a\\\\jmathmathmathmathoutant à une
+solution particulière, la solution générale de (H).
+
+Démonstration On a SH =\
+\mathrmKeru d'où le fait qu'il est un sous-espace
+vectoriel~; sa dimension est donnée par le théorème du rang. De plus, si
+v \in SL, on a x \in SL \Leftrightarrow
+u(x) = b = u(v) \Leftrightarrow u(x - v) = 0
+\Leftrightarrow x - v \in SH.
+
+Définition~2.8.3 Soit P = (ai,\\\\jmathmathmathmath)i\inI,\\\\jmathmathmathmath\inJ une
+sous-matrice principale de la matrice du système (L). On appelle
+déterminants caractéristiques du système associés à la sous-matrice
+principale P les m - r déterminants
+
+\Deltai0 =\
+\mathrm{det} \left
+(\matrix\,(ai,\\\\jmathmathmathmath)i\inI,\\\\jmathmathmathmath\inJ&(bi)i\inI
+\cr (ai0,\\\\jmathmathmathmath)\\\\jmathmathmathmath\inJ
+&bi0 \right )
+
+avec i0 \in {[}1,m{]} \diagdown I
+
+Théorème~2.8.4 (Rouché-Fontené). Soit P une sous-matrice principale de
+la matrice du système (L). Alors le système a des solutions si et
+seulement si les m - r déterminants caractéristiques associés à P sont
+nuls. Dans ce cas, l'ensemble des solutions de (L) est le même que
+l'ensemble des solutions du système L' obtenu en éliminant les équations
+non principales. On résout ce système (L'), en donnant des valeurs
+arbitraires aux inconnues non principales et en déterminant les valeurs
+correspondantes des inconnues principales par la résolution du système
+de Cramer (de matrice P) ainsi obtenu.
+
+Démonstration Etudions tout d'abord la compatibilité du système. On a
+
+\begin{align*}
+SL\neq~\varnothing~& \mathrel\Leftrightarrow
+& b
+\in\mathrmVect(c1,\\\ldots,cn~)
+\%& \\ & \Leftrightarrow &
+dim~
+\mathrmVect(c1,\\\ldots,cn~,b)
+= dim~
+\mathrmVect(c1,\\\ldots,cn~)\%&
+\\ & \Leftrightarrow &
+\mathrmrg~\left
+(\matrix\,A&B\right )
+= \mathrmrg~A \%&
+\\ \end{align*}
+
+Soit donc P = (ai,\\\\jmathmathmathmath)i\inI,\\\\jmathmathmathmath\inJ une sous-matrice
+principale de A (avec \textbar{}I\textbar{} = \textbar{}J\textbar{} =
+r). Le système a des solutions si et seulement si P est encore une
+sous-matrice principale de \left
+(\matrix\,A&B\right ),
+c'est-à-dire si et seulement si toutes les sous matrices bordantes de P
+dans \left
+(\matrix\,A&B\right )
+sont non inversibles~; mais ces matrices bordantes sont de deux types~:
+soit des matrices bordantes dans A qui sont forcément non inversibles,
+soit des matrices de la forme \left
+(\matrix\,(ai,\\\\jmathmathmathmath)i\inI,\\\\jmathmathmathmath\inJ&(bi)i\inI
+\cr (ai0,\\\\jmathmathmathmath)\\\\jmathmathmathmath\inJ
+&bi0 \right ), avec i0 \in
+{[}1,m{]} \diagdown I. On a noté \Deltai0 le déterminant d'une
+telle matrice~: les \Deltai0, i \in {[}1,m{]} \diagdown I sont les
+déterminants caractéristiques du système (il y en a m - r). Le système a
+des solutions si et seulement si ces déterminants caractéristiques sont
+tous nuls.
+
+Supposons la condition réalisée, soit (L') le système
+\left
+\\matrix\,ai,1x1
++ \\ldots~ +
+ai,nxn = bi\right
+.,\quad i \in I (système d'équations principales associées
+à P). On a clairement SL \subset~ SL'. Mais les deux
+systèmes ont même rang, si bien que dim~
+SL = dim SL'~. On a donc
+SL = SL'. Or le système L' se résout facilement en
+l'écrivant sous la forme
+
+\sum \\\\jmathmathmathmath\inJai,\\\\jmathmathmathmathx\\\\jmathmathmathmath~ =
+bi -\\sum
+\\\\jmathmathmathmath∉Jai,\\\\jmathmathmathmathx\\\\jmathmathmathmath,\quad
+i \in I
+
+On donne des valeurs arbitraires aux inconnues x\\\\jmathmathmathmath,
+\\\\jmathmathmathmath∉J (inconnues non principales associées à la
+matrice P)~; on obtient alors un système de Cramer de matrice P qui
+permet de déterminer les x\\\\jmathmathmathmath, \\\\jmathmathmathmath \in J (les inconnues principales
+associées à P).
+
+\paragraph{2.8.4 Méthode du pivot}
+
+Appliquons la méthode du pivot sur les lignes de la matrice A en
+effectuant les opérations correspondantes sur la matrice B. On obtient
+un nouveau système du type
+
+\left
+\\matrix\,\alpha~1,i1xi1
++ \alpha~1,i1+1xi1+1 +
+\quad \quad
+\\ldots~\quad
+\quad + \alpha~1,nxn = \beta~1
+\cr \alpha~2,i2xi2 +
+\alpha~2,i2+1xi2+1 +
+\quad
+\\ldots~\quad
++ \alpha~2,nxn = \beta~2 \cr
+\\ldots~
+\cr \alpha~r,irxir +
+\alpha~1,ir+1xir+1 +
+\\ldots~ +
+\alpha~r,nxn = \beta~r \cr 0 =
+\beta~r+1 \cr
+\\ldots~
+\cr 0 = \beta~m\right .
+
+avec i1 \textless{} i2 \textless{}
+\\ldots~ \textless{}
+ir, \alpha~k,ik\neq~0
+pour k \in {[}1,r{]}
+
+Un tel système se résout immédiatement~: il a des solutions si et
+seulement si \beta~r+1 =
+\\ldots~ =
+\beta~m = 0. Dans ce cas il est équivalent au système formé des r
+premières équations. Celui-ci se résout en donnant des valeurs
+arbitraires aux x\\\\jmathmathmathmath pour
+\\\\jmathmathmathmath∉\i1,\\ldots,ir\~
+et en calculant les xik par résolution d'un système
+triangulaire supérieur.
+
+Application~: recherche de l'inverse d'une matrice~: AX = Y
+\Leftrightarrow X = A^-1Y .
+
+{[}
+{[}
+{[}
+{[}

@@ -1,0 +1,541 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{15.4 Fonctions implicites et inversion locale}
+
+\paragraph{15.4.1 Position du problème des fonctions implicites}
+
+Soit E,F et G trois espaces vectoriels normés, W un ouvert de E \times F, f :
+W \rightarrow~ G. On considère la courbe \Gamma = \(x,y) \in
+W∣f(x,y) = 0\. On se pose la
+question de savoir si \Gamma est le graphe d'une fonction \phi d'un ouvert U de
+E dans F, autrement dit si f(x,y) = 0 \Leftrightarrow y =
+\phi(x).
+
+Cette question globale n'admet pas vraiment de réponse satisfaisante et
+nous allons la transformer en une question locale. Soit (a,b) \in \Gamma. On se
+pose la question de savoir si \Gamma, au voisinage de (a,b), est le graphe
+d'une fonction \phi d'un ouvert U de E dans F, autrement dit si il existe U
+ouvert contenant a et V ouvert contenant b tels que, pour (a,b) \in U \times V
+, f(x,y) = 0 \Leftrightarrow y = \phi(x). Cela revient à
+demander que \Gamma \bigcap (U \times V ) soit un graphe, autrement dit que
+
+\forall~x \in U, \\exists~!y \in V,
+f(x,y) = 0
+
+Nous cherchons en plus des propriétés de la fonction \phi (lorsqu'elle
+existe) à partir de propriétés de la fonction f.
+
+Supposons que E = \mathbb{R}~^n, F = \mathbb{R}~^p et G =
+\mathbb{R}~^q. On a f(x,y) =
+(f1(x,y),\\ldots,fq~(x,y))
+si bien que
+
+f(x,y) = 0 \Leftrightarrow \left
+\\matrix\,f1(x1,\\ldots,xn,y1,\\\ldots,yp~)
+= 0 \cr \cr
+fq(x1,\\ldots,xn,y1,\\\ldots,yp~)
+= 0\right .
+
+Pour
+(x1,\\ldots,xn~)
+fixé dans U \inV(a), ce système doit déterminer un unique
+(y1,\\ldots,yp~)
+dans V \inV(b). Ceci semble nécessiter qu'il y ait autant d'équations que
+d'inconnues, c'est-à-dire que p = q.
+
+Même, dans ce cas, l'exemple n = p = q = 1 et f(x,y) = x^2 +
+y^2 - 1 montre que la réponse est positive en (a,b) \in
+\mathbb{R}~^2 si b\neq~0, mais qu'elle est
+négative aux points (1,0) et (-1,0) de \Gamma, points où l'on a  \partial~f
+\over \partial~y (a,b) = 0.
+
+Le théorème des fonctions implicites va nous donner une condition
+suffisante pour que la réponse au problème local soit positive.
+
+\paragraph{15.4.2 Théorème des fonctions implicites}
+
+Théorème~15.4.1 Soit W un ouvert de \mathbb{R}~^n \times \mathbb{R}~^p et f
+: W \rightarrow~ \mathbb{R}~^p de classe \mathcal{C}^1. On pose x =
+(x1,\\ldots,xn~),
+y =
+(y1,\\ldots,yp~)
+et f =
+(f1,\\ldots,fp~).
+Soit (a,b) \in W tel que f(a,b) = 0 et Q = \left (
+\partial~fi \over \partial~y\\\\jmathmathmathmath
+(a,b)\right )1\leqi,\\\\jmathmathmathmath\leqp est inversible. Alors, il
+existe U \inV(a) et V \inV(b) (ouverts) tels que
+
+\forall~x \in U \\exists~!y \in V
+\text tel que f(x,y) = 0.
+
+Si l'on pose y = \phi(x), \phi est continue sur U et de classe \mathcal{C}^1
+sur un voisinage U0 de a.
+
+Démonstration Soit \psi : W \rightarrow~ \mathbb{R}~^p,
+(x,y)\mapsto~\psi(x,y) = \psix(y) = y -
+Q^-1(f(x,y)). On a de manière évidente
+
+f(x,y) = 0 \Leftrightarrow \psix(y) = y.
+
+On va essayer d'appliquer le théorème du point fixe à l'équation
+\psix(y) = y. Notons Q(x,y) = \left (
+\partial~fi \over \partial~y\\\\jmathmathmathmath
+(x,y)\right )1\leqi,\\\\jmathmathmathmath\leqp, de sorte que Q = Q(a,b).
+Puisque Q^-1 est une application linéaire, elle est sa propre
+différentielle en tout point et la matrice de d\psix(y) est donc
+la matrice
+
+J\psix(y) = Ip - Q^-1 \cdotQ(x,y)
+
+Donc d\psia(b) = 0 et l'application
+(x,y)\mapsto~d\psix(y) est continue. On en
+déduit qu'il existe r \textgreater{} 0 tel que
+
+\\textbar{}x - a\\textbar{} \leq
+r\text et \\textbar{}y -
+b\\textbar{} \leq r \rigtharrow~\\textbar{}
+d\psix(y)\\textbar{} \leq 1 \over
+2 .
+
+Soit x \in B'(a,r),y,y' \in B'(b,r). On a alors
+
+\\textbar{}\psix(y) -
+\psix(y')\\textbar{} \leq\\textbar{} y
+-
+y'\\textbar{}supz\in{[}y,y'{]}\\textbar{}d\psix~(z)\\textbar{}
+\leq 1 \over 2 \\textbar{}y -
+y'\\textbar{}
+
+d'après l'inégalité des accroissements finis. Puisque \psi est continue en
+(a,b), il existe U1 voisinage ouvert de a inclus dans B'(a,r)
+tel que x \in U1 \rigtharrow~\\textbar{} \psi(x,b) -
+\psi(a,b)\\textbar{} \leq r \over 2 , soit
+encore, puisque \psi(a,b) = b, x \in U1 \rigtharrow~\\textbar{}
+\psi(x,b) - b\\textbar{} \leq r \over 2 .
+Pour x \in U1 et y \in B'(b,r), on a donc
+
+\begin{align*}
+\\textbar{}\psix(y) -
+b\\textbar{}& \leq&
+\\textbar{}\psix(y) -
+\psix(b)\\textbar{} +\\textbar{}
+\psi(x,b) - \psi(a,b)\\textbar{}\%&
+\\ & \leq& 1 \over 2
+\\textbar{}y - b\\textbar{} + r
+\over 2 \leq r. \%& \\
+\end{align*}
+
+Donc, si x \in U1, \psix est une application de B'(b,r)
+dans B'(b,r) qui est  1 \over 2
+-\textcontractante~; mais B'(b,r) est un espace
+métrique complet (fermé dans un complet). Donc pour x \in U1, il
+existe un unique y \in V 1 = B'(b,r) tel que \psix(y) =
+y, c'est-à-dire f(x,y) = 0.
+
+Appelons \phi(x) cet unique y, on définit ainsi \phi : U1 \rightarrow~ V
+1 telle que \psix(\phi(x)) = \phi(x). Montrons que \phi est
+continue. Soit x et x0 dans U1. On a
+
+\begin{align*} \\textbar{}\phi(x) -
+\phi(x0)\\textbar{} =\\textbar{}
+\psix(\phi(x)) -
+\psix0(\phi(x0))\\textbar{}&&
+\%& \\ & & \%&
+\\ & \leq&
+\\textbar{}\psix(\phi(x)) -
+\psix(\phi(x0))\\textbar{}
++\\textbar{} \psi(x,\phi(x0)) -
+\psi(x0,\phi(x0))\\textbar{}\%&
+\\ & \leq& 1 \over 2
+\\textbar{}\phi(x) -
+\phi(x0)\\textbar{} +\\textbar{}
+\psi(x,\phi(x0)) -
+\psi(x0,\phi(x0)\\textbar{} \%&
+\\ \end{align*}
+
+soit encore
+
+\\textbar{}\phi(x) -
+\phi(x0)\\textbar{} \leq
+2\\textbar{}\psi(x,\phi(x0)) -
+\psi(x0,\phi(x0)\\textbar{}.
+
+Comme x\mapsto~\psi(x,\phi(x0)) est continue en
+x0, il en est de même de x\mapsto~\phi(x).
+
+Soit alors V = B(b,r) et U = U1 \bigcap \phi^-1(V ). V est
+ouvert, et il en est de même de U comme intersection de l'ouvert
+U1 et de l'image réciproque de l'ouvert V par l'application
+continue \phi. Pour x \in U, il existe un unique y \in B'(b,r) tel que f(x,y) =
+0, avec y = \phi(x). Mais comme x \in \phi^-1(V ), on a en fait y \in V
+et en définitive
+
+\forall~x \in U \\exists~!y \in V
+\text tel que f(x,y) = 0.
+
+Soit P = \left ( \partial~fi \over
+\partial~x\\\\jmathmathmathmath (a,b)\right )1\leqi\leqp,1\leq\\\\jmathmathmathmath\leqn et soit
+h \in \mathbb{R}~^n et k \in \mathbb{R}~^p. Les formules
+
+\begin{align*} f(a + h,b + k) =
+\sum i=1^n~ \partial~f
+\over \partial~xi (a,b)hi +
+\sum i=1^p~ \partial~f
+\over \partial~yi (a,b)ki +
+o(\\textbar{}(h,k)\\textbar{})& & \%&
+\\ \end{align*}
+
+se traduisent par
+
+f(a + h,b + k) = Ph + Qk +
+o(\\textbar{}h\\textbar{}
++\\textbar{} k\\textbar{}).
+
+Prenons k = \theta(h) = \phi(a + h) - \phi(a) = \phi(a + h) - b. On a alors
+
+\begin{align*} 0& =& f(a + h,\phi(a + h)) = f(a + h,b
++ \theta(h))\%& \\ & =& Ph + Q\theta(h) +
+(\\textbar{}h\\textbar{}
++\\textbar{} \theta(h)\\textbar{})\epsilon(h) \%&
+\\ \end{align*}
+
+soit encore
+
+\theta(h) = -Q^-1Ph +
+(\\textbar{}h\\textbar{}
++\\textbar{} \theta(h)\\textbar{})\eta(h)
+
+avec \eta(h) = -Q^-1(\epsilon(h)). Comme on a
+limh\rightarrow~0~\eta(h) = 0, soit \rho
+\textgreater{} 0 tel que h \textless{} \rho \rigtharrow~\textbar{}\eta(h)\textbar{}
+\textless{} 1 \over 2 . Alors pour h \textless{} \rho,
+on a
+
+\\textbar{}\theta(h)\\textbar{}
+\leq\\textbar{}
+Q^-1P\\textbar{}\\textbar{}h\\textbar{}
++ 1 \over 2
+(\\textbar{}h\\textbar{}
++\\textbar{} \theta(h)\\textbar{}),
+
+soit encore
+
+\\textbar{}\theta(h)\\textbar{} \leq
+(2\\textbar{}Q^-1P\\textbar{} +
+1)\\textbar{}h\\textbar{}.
+
+On a donc \\textbar{}\theta(h)\\textbar{} =
+O(\\textbar{}h\\textbar{}), soit encore
+(\\textbar{}h\\textbar{}
++\\textbar{} \theta(h)\\textbar{})\eta(h) =
+o(\\textbar{}h\\textbar{}), ce qui montre
+que
+
+\phi(a + h) - \phi(a) = \theta(h) = -Q^-1Ph +
+o(\\textbar{}h\\textbar{}).
+
+Donc \phi est différentiable au point a et sa différentielle est -
+Q^-1P. On montre de même que \phi est différentiable en tout
+point x assez voisin de a pour que la matrice Q(x,\phi(x)) reste inversible
+et que l'on a encore d\phi(x) = -Q(x,\phi(x))^-1P(x,\phi(x)), ce qui
+montre que \phi est de classe \mathcal{C}^1 sur un tel voisinage.
+
+\paragraph{15.4.3 Applications du théorème des fonctions implicites}
+
+Nous nous intéresserons tout particulièrement au cas p = 1~; dans ce cas
+Q = \left (\matrix\, \partial~f
+\over \partial~y (a,b)\right ) et la matrice
+est inversible si et seulement si  \partial~f \over \partial~y
+(a,b)\neq~0. On obtient donc la formulation
+suivante
+
+Théorème~15.4.2 Soit W un ouvert de \mathbb{R}~^n \times \mathbb{R}~ et f : W \rightarrow~ \mathbb{R}~ de
+classe \mathcal{C}^1,
+(x1,\\ldots,xn,y)\mapsto~f(x1,\\\ldots,xn~,y).
+Soit
+(a1,\\ldots,an~,b)
+\in W tel que
+f(a1,\\ldots,an~,b)
+= 0 et  \partial~f \over \partial~y
+(a1,\\ldots,an,b)\mathrel\neq~~0.
+Alors, il existe U
+\inV(a1,\\ldots,an~)
+et V \inV(b) (ouverts) tels que
+
+\forall~(x1,\\\ldots,xn~)
+\in U, \exists~!y \in V \text tel que
+f(x1,\\ldots,xn~,y)
+= 0.
+
+Si l'on pose y =
+\phi(x1,\\ldots,xn~),
+\phi est continue sur U et de classe \mathcal{C}^1 sur un voisinage
+U0 de a.
+
+Remarque~15.4.1 Le calcul des dérivées partielles de \phi se fait très
+facilement en utilisant les formes différentielles. Les variables
+x1,\\ldots,xn~
+et y étant liées par la relation
+f(x1,\\ldots,xn~,y)
+= 0, on obtient par différentiation
+
+\sum i=1^n~ \partial~f
+\over \partial~xi
+(x1,\ldots,xn,y)dxi~
++ \partial~f \over \partial~y
+(x1,\ldots,xn~,y)dy = 0
+
+soit encore
+
+dy = -\sum i=1^n~  \partial~f
+\over \partial~xi
+(x1,\ldots,xn~,y)
+\over  \partial~f \over \partial~y
+(x1,\ldots,xn,y)~
+dxi
+
+On en déduit que
+
+ \partial~\phi \over \partial~xi
+(x1,\\ldots,xn~)
+= \partial~y \over \partial~xi
+(x1,\\ldots,xn~)
+= -  \partial~f \over \partial~xi
+(x1,\\ldots,xn~,y)
+\over  \partial~f \over \partial~y
+(x1,\\ldots,xn,y)~
+
+si y =
+\phi(x1,\\ldots,xn~).
+
+Théorème~15.4.3 Soit W un ouvert de \mathbb{R}~^2 et f : W \rightarrow~ \mathbb{R}~ de
+classe \mathcal{C}^1. Soit \Gamma = \(x,y) \in
+W∣f(x,y) = 0\. On suppose
+que \forall~~(a,b) \in \Gamma, \left ( \partial~f
+\over \partial~x (a,b), \partial~f \over \partial~y
+(a,b)\right )\neq~(0,0). Alors, au
+voisinage de chacun de ses points, \Gamma est soit le graphe d'une
+application de classe \mathcal{C}^1 x\mapsto~y =
+\phi(x), soit le graphe d'une application de classe \mathcal{C}^1
+y\mapsto~x = \psi(y). La tangente à ce graphe au point
+(a,b) est la droite d'équation
+
+(x - a) \partial~f \over \partial~x (a,b) + (y - b) \partial~f
+\over \partial~y (a,b) = 0
+
+Démonstration Si par exemple  \partial~f \over \partial~y
+(a,b)\neq~0, le théorème précédent s'applique et
+permet de conclure, qu'au voisinage de (a,b), \Gamma est le graphe d'une
+application de classe \mathcal{C}^1, x\mapsto~y =
+\phi(x). La tangente à ce graphe est la droite d'équation y - b = \phi'(a)(x -
+a) avec \phi'(a) = -  \partial~f \over \partial~x (a,b)
+\over  \partial~f \over \partial~y (a,b) ce qui
+donne l'équation ci dessus. Si  \partial~f \over \partial~x
+(a,b)\neq~0, il suffit d'échanger les rôles \\\\jmathmathmathmathoués
+par x et y.
+
+Nous avons un théorème similaire pour les surfaces de \mathbb{R}~^3
+
+Théorème~15.4.4 Soit W un ouvert de \mathbb{R}~^3 et f : W \rightarrow~ \mathbb{R}~ de
+classe \mathcal{C}^1. Soit \Sigma = \(x,y,z) \in
+W∣f(x,y,z) = 0\. On suppose
+que \forall~~(a,b,c) \in \Gamma, \left ( \partial~f
+\over \partial~x (a,b,c), \partial~f \over \partial~y
+(a,b,c), \partial~f \over \partial~z (a,b,c)\right
+)\neq~(0,0,0). Alors, au voisinage de chacun de
+ses points, \Sigma est soit le graphe d'une application de classe
+\mathcal{C}^1, (x,y)\mapsto~z = \phi(x,y), soit le
+graphe d'une application de classe \mathcal{C}^1,
+(y,z)\mapsto~x = \psi(y,z), soit le graphe d'une
+application de classe \mathcal{C}^1, (x,z)\mapsto~y
+= \psi(x,z). Le plan tangent à ce graphe au point (a,b,c) est le plan
+d'équation
+
+(x - a) \partial~f \over \partial~x (a,b,c) + (y - b) \partial~f
+\over \partial~y (a,b,c) + (z - c) \partial~f \over
+\partial~z (a,b,c) = 0
+
+Démonstration La même que précédemment sauf pour ce qui concerne
+l'équation du plan tangent. Supposons que localement \Sigma est le graphe
+d'une application de classe \mathcal{C}^1
+(x,y)\mapsto~z = \phi(x,y). La surface est paramétrée
+par (x,y)\mapsto~(x,y,\phi(x,y)) et les deux vecteurs
+tangents dérivés partiels sont  \partial~ \over \partial~x
+(x,y,\phi(x,y)) = (1,0, \partial~\phi \over \partial~x (x,y)) et  \partial~
+\over \partial~y (x,y,\phi(x,y)) = (0,1, \partial~\phi \over
+\partial~x (x,y)). Le plan tangent est le plan parallèle à ces deux vecteurs
+(pour (x,y) = (a,b)) et contenant le point (a,b,c), c'est-à-dire le plan
+d'équation
+
+\left
+\textbar{}\matrix\,x - a&1 &0
+\cr y - b&0 &1 \cr z - c& \partial~\phi
+\over \partial~x (a,b)& \partial~\phi \over \partial~y
+(a,b)\right \textbar{} = 0
+
+Mais on a
+
+\begin{align*} \partial~\phi \over \partial~x (a,b)
+= -  \partial~f \over \partial~x (a,b,c) \over  \partial~f
+\over \partial~z (a,b,c) \text et  \partial~\phi
+\over \partial~y (a,b) = -  \partial~f \over \partial~y
+(a,b,c) \over  \partial~f \over \partial~z (a,b,c)
+& & \%& \\
+\end{align*}
+
+Il suffit de reporter et de développer le déterminant suivant la
+première colonne pour obtenir l'équation du plan tangent sous la forme
+souhaitée.
+
+\paragraph{15.4.4 Difféomorphismes et inversion locale}
+
+Définition~15.4.1 Soit E et F deux K-espaces vectoriels normés, U un
+ouvert de E et V un ouvert de F. On dit que f : U \rightarrow~ V est un
+difféomorphisme de classe \mathcal{C}^1 si (i) f est bi\\\\jmathmathmathmathective de U sur
+V (ii) f et f^-1 sont de classe \mathcal{C}^1.
+
+Remarque~15.4.2 Comme pour les fonctions d'une variable, le fait que f
+soit bi\\\\jmathmathmathmathective et de classe \mathcal{C}^1 n'implique évidemment pas que
+f^-1 soit de classe \mathcal{C}^1.
+
+Théorème~15.4.5 Soit E et F deux K-espaces vectoriels normés, U un
+ouvert de E, V un ouvert de F, f : U \rightarrow~ V un difféomorphisme de classe
+\mathcal{C}^1. Alors, pour tout x \in U, df(x) est un isomorphisme
+d'espace vectoriel de E sur F et on a
+
+\forall~y \in V, d(f^-1~)(y) =
+\left (df(f^-1(y))\right
+)^-1
+
+Démonstration Soit g = f^-1 : V \rightarrow~ U. On a g \cdot f =
+\mathrmIdU. Comme f est différentiable en x
+et g en f(x), on a \mathrmIdE =
+d(\mathrmIdU)(x) = d(g \cdot f)(x) = dg(f(x)) \cdot
+df(x). On montre de la même fa\ccon que
+\mathrmIdF =
+d(\mathrmIdV )(f(x)) = d(f \cdot g)(f(x)) =
+df(x) \cdot dg(f(x)). On en déduit que df(x) est un isomorphisme de E sur F
+d'isomorphisme réciproque dg(f(x)).
+
+Remarque~15.4.3 On vérifie facilement à partir de la formule ci dessus
+que si f est à la fois de classe C^k et un \mathcal{C}^1
+difféomorphisme, alors f^-1 est aussi de classe
+C^k. On dit alors que f est un
+C^k-difféomorphisme.
+
+Remarque~15.4.4 Si E et F sont de dimensions finies, l'existence d'un
+\mathcal{C}^1 difféomorphisme d'un ouvert de E sur un ouvert de F
+nécessite que E et F aient même dimension~; il ne peut y avoir de
+difféomorphisme d'un ouvert de \mathbb{R}~^n sur un ouvert de
+\mathbb{R}~^p pour n\neq~p. Si f : U \rightarrow~ V est un
+difféomorphisme d'un ouvert U de \mathbb{R}~^n sur un ouvert V de
+\mathbb{R}~^n, on peut calculer les dérivées partielles de
+f^-1 à l'aide des matrices \\\\jmathmathmathmathacobiennes grâce à la formule
+Jf^-1(y) = \left
+(Jf(f^-1(y))\right )^-1.
+
+Nous allons maintenant nous intéresser à une réciproque partielle (en
+fait locale) du théorème précédent.
+
+Théorème~15.4.6 (inversion locale). Soit U un ouvert de \mathbb{R}~^n
+et f : U \rightarrow~ \mathbb{R}~^n une application de classe \mathcal{C}^1. Soit
+a \in U tel que df(a) soit un isomorphisme d'espace vectoriel de
+\mathbb{R}~^n sur \mathbb{R}~^n (autrement dit la matrice
+Jf(a) est inversible). Alors il existe un ouvert U0
+contenant a et un ouvert V 0 contenant f(a) tel que f induise
+un difféomorphisme de classe \mathcal{C}^1 de U0 sur V
+0.
+
+Démonstration Considérons l'application g : \mathbb{R}~^n \times U \rightarrow~
+\mathbb{R}~^n, (y,x)\mapsto~f(x) - y. La matrice
+\left ( \partial~gi \over
+\partial~x\\\\jmathmathmathmath (f(a),a)\right )1\leqi,\\\\jmathmathmathmath\leqn n'est
+autre que la matrice Jf(a) qui est inversible. On peut donc
+appliquer le théorème des fonctions implicites. On en déduit qu'il
+existe V 1 ouvert contenant f(a) et un ouvert U1
+contenant a tel que \forall~y \in V 1~,
+\exists!x \in U1~, g(y,x) = 0, autrement dit
+
+\forall~y \in V 1~,
+\exists!x \in U1~, f(x) = y
+
+Si on pose x = g(y), on sait que quitte à restreindre V 1, on
+peut supposer que g est de classe \mathcal{C}^1. Par définition même,
+on a f(g(y)) = y pour y \in V 1. Par contre, il n'est pas vrai
+en général que, pour x \in U1, on ait g(f(x)) = x car il n'y a
+pas de raison que f(x) appartienne à V 1. Mais comme f est
+continue et V 1 ouvert, f^-1(V 1) est un
+ouvert contenant a et donc il en est de même de U1 \bigcap
+f^-1(V 1) = U0. Pour x \in U0, on
+a x \in U1 et f(x) \in V 1. Comme g(f(x)) est l'unique
+x' dans U1 tel que f(x') = f(x) et comme x convient bien
+évidemment, on a g(f(x)) = x pour x \in U0. Comme on a aussi
+f(g(y)) = y pour y \in V 1, f est bi\\\\jmathmathmathmathective de U0 sur
+V 1, et son inverse est g qui est encore de classe
+\mathcal{C}^1.
+
+Remarque~15.4.5 Le théorème précédent est uniquement local. A partir de
+la dimension 2, il n'existe pas de moyen local simple qui permette de
+garantir l'in\\\\jmathmathmathmathectivité globale de f, comme le montre l'exemple de f
+:{]}0,+\infty~{[}\times\mathbb{R}~ \rightarrow~ \mathbb{R}~^2
+\diagdown\(0,0)\,
+(\rho,\theta)\mapsto~(\rhocos~
+\theta,\rhosin~ \theta). La matrice \\\\jmathmathmathmathacobienne est
+Jf(\rho,\theta) = \left
+(\matrix\,cos~
+\theta&-\rhosin~ \theta \cr
+sin \theta&\rho\cos~ \theta
+\right ) qui est inversible (de déterminant
+\rho\neq~0)~; l'application f est localement
+in\\\\jmathmathmathmathective (et même localement un difféomorphisme), mais elle ne l'est
+pas globalement puisque f(\rho,\theta + 2\pi~) = f(\rho,\theta).
+
+Corollaire~15.4.7 Soit U un ouvert de \mathbb{R}~^n et f : U \rightarrow~
+\mathbb{R}~^n une application de classe \mathcal{C}^1. On suppose que
+(i) f est in\\\\jmathmathmathmathective (ii) \forall~~x \in U,
+Jf(x) est une matrice inversible. Alors f(U) = V est un ouvert
+de \mathbb{R}~^n et f est un \mathcal{C}^1 difféomorphisme de U sur V
+.
+
+Démonstration Soit g = f^-1 : V \rightarrow~ U. Soit y \in V , y = f(x).
+Comme Jf(x) est une matrice inversible, le théorème
+d'inversion locale assure l'existence d'un ouvert U0 contenant
+x et d'un ouvert V 0 contenant y = f(x) tel que f induise un
+\mathcal{C}^1 difféomorphisme de U0 sur V 0. Mais
+alors V 0 = f(U0) \subset~ V . Ceci nous garantit que V est
+un voisinage de y. Donc V est un voisinage de chacun de ses points, et
+donc il est ouvert. Mais d'autre part, le difféomorphisme réciproque de
+f∣U 0 :
+U0 \rightarrow~ V 0 ne peut être que
+g∣V 0. On en
+déduit que g est de classe \mathcal{C}^1 au point y. Donc g est de
+classe \mathcal{C}^1 sur V et f est un \mathcal{C}^1 difféomorphisme
+de U sur V .
+
+Remarque~15.4.6 Un difféomorphisme f d'un ouvert U de \mathbb{R}~^n sur
+un ouvert V de \mathbb{R}~^n,
+(\alpha~1,\\ldots,\alpha~n)\mapsto~(x1,\\\ldots,xn~)
+=
+(f1(\alpha~1,\\ldots,\alpha~n),\\\ldots,fn(\alpha~1,\\\ldots,\alpha~n~))
+est souvent appelé un système de coordonnées curvilignes sur V . Un tel
+système permet de repérer un point
+(x1,\\ldots,xn~)
+de V par ses coordonnées curvilignes
+(\alpha~1,\\ldots\alpha~n~).
+Les coordonnées polaires, cylindriques ou sphériques sont typiques de
+coordonnées curvilignes locales.
+
+{[}
+{[}
+{[}
+{[}

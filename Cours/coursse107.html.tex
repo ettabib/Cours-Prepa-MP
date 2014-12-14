@@ -1,0 +1,137 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{20.4 Introduction aux intégrales de surface}
+
+Définition~20.4.1 Soit \Sigma = (D,F) une nappe paramétrée de classe
+\mathcal{C}^1de \mathbb{R}~^3, où D est un compact de \mathbb{R}~^2
+de frontière négligeable. Soit f une fonction définie et continue sur
+l'image de \Sigma et à valeurs dans l'espace vectoriel normé E. On appelle
+intégrale de f le long de \Sigma et on note \int ~
+\int  \Sigma~f(m) d\sigma l'élément de E
+
+\int  \\int ~
+\Sigmaf(m) d\sigma =\int ~
+\int  D~f(F(u,v))
+\\textbar{} \partial~F \over \partial~u (u,v) ∧ \partial~F
+\over \partial~v (u,v)\\textbar{} du dv
+
+En particulier, on appelle aire de \Sigma le nombre réel positif
+
+m(\Sigma) =\int  \\int ~
+\Sigma d\sigma =\int ~ \\int
+ D\\textbar{} \partial~F \over \partial~u
+(u,v) ∧ \partial~F \over \partial~v (u,v)\\textbar{}
+du dv
+
+Le principal résultat sur ces intégrales de surface est l'invariance par
+changement de paramétrage admissible
+
+Théorème~20.4.1 Soit \Sigma1 = (D1,F1) et
+\Sigma2 = (D2,F2) deux nappes paramétrées de
+classe \mathcal{C}^1 équivalentes, où D1 et D2 sont
+des compacts de \mathbb{R}~^2 de frontières négligeables. Soit f une
+fonction définie sur l'image de \Sigma1 et \Sigma2, à valeurs
+dans l'espace vectoriel normé E. Alors
+
+\int  \\int ~
+\Sigma1f(m) d\sigma =\int ~
+\int  \Sigma2~f(m) d\sigma
+
+En particulier, l'aire de la nappe est invariante par changement de
+paramétrage.
+
+Démonstration Soit \theta : D1 \rightarrow~ D2 un difféomorphisme de
+l'intérieur de D1 sur l'intérieur de D2 vérifiant
+F1 = F2 \cdot \theta. Un calcul fait dans le chapitre sur les
+nappes paramétrées montre que (si on note
+(u,v)\mapsto~F1(u,v) et
+(\lambda~,\mu)\mapsto~F2(\lambda~,\mu))
+
+ \partial~F1 \over \partial~u (u,v) ∧ \partial~F1
+\over \partial~v (u,v) = \\\\jmathmathmathmath\theta(u,v) \partial~F2
+\over \partial~\lambda~ (\theta(u,v)) ∧ \partial~F2
+\over \partial~\mu (\theta(u,v))
+
+On en déduit que
+
+\begin{align*} \int ~
+\int  \Sigma1~f(m) d\sigma&& \%&
+\\ & =& \int ~
+\int  D1f(F1~(u,v))
+\\textbar{} \partial~F \over \partial~u (u,v) ∧ \partial~F
+\over \partial~v (u,v)\\textbar{} du dv \%&
+\\ & =& \int ~
+\int  D1f(F2~ \cdot
+\theta(u,v)) \\textbar{} \partial~F2 \over
+\partial~\lambda~ (\theta(u,v)) ∧ \partial~F2 \over \partial~\mu
+(\theta(u,v))\\textbar{} \textbar{}\\\\jmathmathmathmath\theta(u,v)\textbar{}
+du dv\%& \\ & =&
+\int  \\int ~
+D2f(F2(\lambda~,\mu)) \\textbar{}
+\partial~F2 \over \partial~\lambda~ (\lambda~,\mu) ∧ \partial~F2
+\over \partial~\mu (\lambda~,\mu)\\textbar{} d\lambda~ d\mu \%&
+\\ \end{align*}
+
+par le théorème de changement de variables dans les intégrales doubles.
+
+Remarque~20.4.1 Le lecteur attentif aura remarqué que nous avons modifié
+légèrement les définitions d'une nappe paramétrée et de l'équivalence de
+deux nappes paramétrées, de fa\ccon à ce que cela
+nous arrange. Nous réclamons toute son indulgence pour ces modifications
+de détail.
+
+Comme cas particulier, cherchons l'aire d'une nappe de révolution d'axe
+Oz. Soit \Gamma une méridienne de cette nappe, paramétrée en coordonnées
+cylindriques par r = \phi(t) et z = \psi(t), t \in {[}a,b{]}. Un paramétrage de
+la nappe est alors F(t,\theta) = O + \phi(t)\vecu(\theta) +
+\psi(t)\veck, (t,\theta) \in {[}a,b{]} \times {[}0,2\pi~{]} si bien que
+ \partial~F \over \partial~t (t,\theta) = \phi'(t)\vecu(\theta)
++ \psi'(t)\veck et  \partial~F \over \partial~\theta (t,\theta)
+= \phi(t)\vecu'(\theta). On a donc
+
+ \partial~F \over \partial~t (t,\theta) ∧ \partial~F \over \partial~\theta
+(t,\theta) = \phi(t)\left (\phi'(t)\veck -
+\psi(t)\vecu(\theta)\right )
+
+et donc
+
+\\textbar{} \partial~F \over \partial~t (t,\theta) ∧ \partial~F
+\over \partial~\theta (t,\theta)\\textbar{} =
+\textbar{}\phi(t)\textbar{}\sqrt\phi'(t)^2  +
+\psi'(t)^2
+
+On en déduit que
+
+\begin{align*} m(\Sigma)& =& \\int
+ \int ~
+{[}a,b{]}\times{[}0,2\pi~{]}\textbar{}\phi(t)\textbar{}\sqrt\phi'(t)^2
+ + \psi'(t)^2 dt d\theta\%& \\ &
+=& 2\pi~\int ~
+a^b\textbar{}\phi(t)\textbar{}\sqrt\phi'(t)^2
+ + \psi'(t)^2 dt \%& \\ &
+=& 2\pi~\int  \Gamma~\textbar{}r\textbar{} ds
+\%& \\ \end{align*}
+
+en notant r = \phi(t) et ds = \sqrt\phi'(t)^2  +
+\psi'(t)^2 dt la différentielle de l'abscisse curviligne sur
+\Gamma. On obtient donc
+
+Proposition~20.4.2 Soit \Sigma la nappe de révolution engendrée par la
+rotation de la méridienne \Gamma autour de la droite D. Soit ds la
+différentielle de l'abscisse curviligne de \Gamma et r la distance d'un point
+de \Gamma à la droite D. Alors l'aire de la nappe est égale à
+2\pi~\int  \Gamma~r ds.
+
+{[}
+{[}
+{[}
+{[}

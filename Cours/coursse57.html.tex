@@ -1,0 +1,361 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{9.8 Généralités sur les intégrales impropres}
+
+Remarque~9.8.1 Ce paragraphe et ceux qui suivent, qui correspondent aux
+anciens programmes de classes préparatoires, font double emploi avec les
+paragraphes sur les fonctions intégrables sur un intervalle. Ils ont été
+maintenus ici par souci de compatibilité avec certains enseignements
+universitaires.
+
+Définition~9.8.1 On dit qu'une fonction est réglée sur un intervalle I
+si elle est réglée sur tout segment inclus dans I.
+
+\paragraph{9.8.1 Notion d'intégrale impropre}
+
+Définition~9.8.2 Soit -\infty~ \textless{} a \textless{} b \leq +\infty~ et f :
+{[}a,b{[}\rightarrow~ E réglée. On dit que l'intégrale \\int
+ a^bf(t) dt converge si existe
+limx\rightarrow~b,x\textless{}b~\\int
+ a^xf(t) dt. Dans ce cas on pose
+\int  a^b~f(t) dt
+=\
+limx\rightarrow~b,x\textless{}b\int ~
+a^xf(t) dt. On a une notion similaire avec -\infty~\leq a
+\textless{} b \textless{} +\infty~ et f :{]}a,b{]} \rightarrow~ E réglée.
+
+Remarque~9.8.2 Si l'intégrale ne converge pas, elle est dite divergente.
+Si b \textless{} +\infty~ et si f est la restriction à {[}a,b{[} d'une
+fonction réglée sur {[}a,b{]}, alors l'application
+x\mapsto~\int ~
+a^xf(t) dt est continue au point b~; l'intégrale impropre
+est donc convergente et la valeur de l'intégrale impropre est donc la
+valeur de l'intégrale, si bien qu'il n'y a pas d'ambiguïté dans la
+notation \int  a^b~f(t) dt~; dans
+ce cas nous parlerons d'une intégrale faussement impropre. Un exemple
+typique est celui de \int  0^1~
+sin t \over t~ dt qui est a
+priori impropre en 0, mais qui est la restriction à {]}0,1{]} de la
+fonction continue f(t) = \left \
+\cases  sin~ t
+\over t &si t\neq~0
+\cr 1 &si t = 0 \cr 
+\right ..
+
+Proposition~9.8.1 Soit f : {[}a,b{[}\rightarrow~ E une fonction réglée et c \in
+{[}a,b{[}. Alors l'intégrale \int ~
+a^bf(t) dt converge si et seulement si~l'intégrale
+\int  c^b~f(t) dt converge.
+
+Démonstration On a \int  a^x~f(t)
+dt =\int  a^c~f(t) dt
++\int  c^x~f(t) dt ce qui montre
+que \int  a^x~f(t) dt a une
+limite en b si et seulement si~\int ~
+c^xf(t) dt en a une.
+
+Remarque~9.8.3 Cette propriété montre que si f : {[}a,b{[}\rightarrow~ E est une
+fonction réglée, la convergence de \int ~
+a^bf(t) dt ne dépend que de la restriction de f à un
+voisinage de b~; il s'agit donc d'une notion locale en b.
+
+\paragraph{9.8.2 Intégrales plusieurs fois impropres}
+
+Définition~9.8.3 Soit -\infty~\leq a \textless{} b \leq +\infty~ et f :{]}a,b{[}\rightarrow~ E
+réglée. On dit que l'intégrale \int ~
+a^bf(t) dt converge si on a les conditions équivalentes
+(i) il existe c \in{]}a,b{[} tel que les deux intégrales impropres
+\int  a^c~f(t) dt et
+\int  c^b~f(t) dt convergent (ii)
+pour tout c \in{]}a,b{[}, les deux intégrales impropres
+\int  a^c~f(t) dt et
+\int  c^b~f(t) dt convergent
+(iii) l'application
+(x,y)\mapsto~\int ~
+x^yf(t) dt admet une limite quand x tend vers a et y tend
+vers b indépendamment l'un de l'autre. On pose alors
+\int  a^b~f(t) dt
+=\int  a^c~f(t) dt
++\int  c^b~f(t) dt
+=\
+limx\rightarrow~a,y\rightarrow~b\int ~
+x^yf(t) dt.
+
+Démonstration Découle immédiatement de la relation de Chasles.
+
+Remarque~9.8.4 L'intégrale \int ~
+-\infty~^+\infty~t dt diverge alors que
+limx\rightarrow~+\infty~~\\int
+ -x^xt dt = 0. Il est donc impératif dans (iii)
+d'introduire deux variables x et y et de les faire varier
+indépendamment.
+
+Définition~9.8.4 Soit -\infty~\leq a0 \textless{} a1
+\textless{} \\ldots~
+\textless{} an \leq +\infty~ et f
+:{]}a0,an{[}\diagdown\a1,\\ldots,an-1\~
+\rightarrow~ E une fonction réglée. On dit que l'intégrale
+\int ~
+a0^anf(t) dt converge si chacune des
+intégrales \int ~
+ai-1^aif(t) dt converge. On pose
+alors \int  a^b~f(t) dt
+= \\sum ~
+i=1^n\int ~
+ai-1^aif(t) dt
+
+Avec ces définitions, toutes les questions concernant des intégrales
+plusieurs fois impropres se ramènent à des problèmes sur les intégrales
+une fois impropres.
+
+\paragraph{9.8.3 Opérations sur les intégrales impropres}
+
+Théorème~9.8.2 L'ensemble des fonctions réglées de {[}a,b{[} dans E
+telles que l'intégrale impropre \int ~
+a^bf(t) dt converge est un sous espace vectoriel ~de
+l'ensemble des fonctions réglées de {[}a,b{[} dans E. L'application
+f\mapsto~\int ~
+a^bf(t) dt est linéaire de cet espace vectoriel dans E.
+
+Démonstration Il suffit d'écrire \int ~
+a^x(\alpha~f(t) + \beta~g(t)) dt = \alpha~\int ~
+a^xf(t) dt + \beta~\int ~
+a^xg(t) dt et d'utiliser les théorèmes sur les limites.
+
+Théorème~9.8.3 Soit u : E \rightarrow~ F une application linéaire continue, f :
+{[}a,b{[}\rightarrow~ E réglée telle que \int ~
+a^bf(t) dt converge. Alors \int ~
+a^bu(f(t)) dt converge et \int ~
+a^bu(f(t)) dt = u(\int ~
+a^bf(t) dt).
+
+Démonstration Il suffit d'écrire \int ~
+a^xu(f(t)) dt = u(\int ~
+a^xf(t) dt) et d'utiliser la continuité de u.
+
+Corollaire~9.8.4 Soit E un espace vectoriel normé~de dimension finie,
+(e1,\\ldots,en~)
+une base de E, f : {[}a,b{[}\rightarrow~ E réglée. On écrit f(t) =
+f1(t)e1 +
+\\ldots~ +
+fn(t)en. Alors \int ~
+a^bf(t) dt converge si et seulement si~chacune des
+intégrales \int ~
+a^bfi(t) dt converge et alors
+
+\int  a^b~f(t) dt =
+(\int  a^bf 1~(t)
+dt)e1 +
+\\ldots~ +
+(\int  a^bf n~(t)
+dt)en
+
+Démonstration Soit u : K^n \rightarrow~ E,
+(x1,\\ldots,xn)\mapsto~x1e1~
++ \\ldots~ +
+xnen. L'application linéaire u est un isomorphisme
+d'espaces vectoriels et puisque les espaces sont de dimension finie, u
+et u^-1 sont continues. Il suffit alors d'appliquer le
+théorème précédent en remarquant que f = u \cdot
+(f1,\\ldots,fn~)
+et que
+(f1,\\ldots,fn~)
+= u^-1 \cdot f.
+
+Changement de variables Soit \phi : {[}a,b{[}\rightarrow~ {[}\alpha~,\beta~{[} de classe
+\mathcal{C}^1 telle que limu\rightarrow~b~\phi(u)
+= \beta~. Soit f : {[}\alpha~,\beta~{[}\rightarrow~ E continue. Pour x \in {[}a,b{[}, on peut alors
+écrire \int  a^x~f(\phi(u))\phi'(u) du
+=\int  \phi(a)^\phi(x)~f(t) dt. On en
+déduit par le théorème de composition des limites, que si l'intégrale
+\int  \alpha~^\beta~~f(t) dt converge, alors
+l'intégrale \int ~
+a^bf(\phi(u))\phi'(u) du converge et que dans ce cas
+
+\int  a^b~f(\phi(u))\phi'(u) du
+=\int  \phi(a)^\beta~~f(t) dt
+
+Inversement, si l'on suppose que \phi est un homéomorphisme de {[}a,b{[}
+sur {[}\alpha~,\beta~{[}, on a, pour y \in {[}\alpha~,\beta~{[}, \int ~
+\alpha~^yf(t) dt =\int ~
+\phi^-1(\alpha~)^\phi^-1(y) f(\phi(u))\phi'(u) du et
+alors la convergence de \int ~
+a^bf(\phi(u))\phi'(u) du implique celle de
+\int  \alpha~^\beta~~f(t) dt et l'égalité
+ci-dessus. On retiendra en particulier
+
+Théorème~9.8.5 Soit \phi : {[}a,b{[}\rightarrow~ {[}\alpha~,\beta~{[} un homéomorphisme. On
+suppose que \phi est de classe \mathcal{C}^1 et que
+limu\rightarrow~b~\phi(u) = \beta~. Soit f : {[}\alpha~,\beta~{[}\rightarrow~
+E continue. Alors les deux intégrales impropres
+\int  a^b~f(\phi(u))\phi'(u) du et
+\int  \alpha~^\beta~~f(t) dt sont de même
+nature (convergentes ou divergentes) et on a l'égalité
+
+\int  a^b~f(\phi(u))\phi'(u) du
+=\int  \phi(a)^\beta~~f(t) dt
+
+Intégration par parties Soit f,g : {[}a,b{[}\rightarrow~ \mathbb{C} de classe
+\mathcal{C}^1. Pour x \in {[}a,b{[}, on peut alors faire une intégration
+par parties et écrire
+
+\int  a^x~f(t)g'(t) dt =
+\left {[}f(t)g(t)\right {]}
+a^x -\int  a^x~f'(t)g(t)
+dt
+
+Si deux des trois termes qui dépendent de x admettent une limite en b,
+alors le troisième aussi et on a alors
+
+\int  a^b~f(t)g'(t) dt
+= lim x\rightarrow~b~(f(x)g(x)) - f(a)g(a)
+-\int  a^b~f'(t)g(t) dt
+
+que l'on écrit encore
+
+\int  a^b~f(t)g'(t) dt =
+\left {[}f(t)g(t)\right {]}
+a^b -\int  a^b~f'(t)g(t)
+dt
+
+Sinon, on conserve les intégrales partielles de a à x \\\\jmathmathmathmathusqu'à pouvoir
+lever les indéterminations éventuelles.
+
+Remarque~9.8.5 Le lecteur devra faire preuve d'une grande prudence~: une
+intégration par parties peut facilement faire passer d'une intégrale
+convergente à une intégrale divergente, en particulier avec des
+fonctions comme le logarithme.
+
+\paragraph{9.8.4 Intégrales et séries~: intégration par paquets}
+
+Théorème~9.8.6 Soit f : {[}a,b{[}\rightarrow~ E réglée, (bn) une suite
+strictement croissante de {[}a,b{[} de limite b. On pose pour n ≥ 1,
+xn =\int ~
+bn-1^bnf(t) dt. Alors
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) si l'intégrale \int ~
+  a^bf(t) dt converge, la série
+  \\sum ~
+  n≥1xn converge
+\item
+  (ii) la réciproque est exacte dans les deux cas suivants
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    (a) la suite (bn - bn-1) est bornée et
+    limt\rightarrow~b~f(t) = 0
+  \item
+    (b) E = \mathbb{R}~ et la fonction f est de signe constant sur chaque
+    intervalle {[}bn-1,bn{]}.
+  \end{itemize}
+\end{itemize}
+
+Démonstration (i) On a
+\\sum ~
+n=1^Nxn =\int ~
+b0^bNf(t) dt = F(bN) avec
+F(x) =\int  b0^x~f(t)
+dt. Puisque l'intégrale converge, la fonction F a une limite au point
+b~; le théorème de composition des limites assure alors l'existence de
+limN\rightarrow~+\infty~F(bN~), donc la
+convergence de la série~; on a d'ailleurs
+\\sum ~
+n=1^+\infty~xn =\int ~
+b0^bf(t) dt.
+
+(ii)(a) Soit x \textgreater{} b0 et soit p l'unique entier tel
+que bp-1 \leq x \textless{} bp. On a alors
+
+\sum n=1^px n~
+-\\int  ~
+b0^xf(t) dt =
+\\int  ~
+x^bp f(t) dt
+
+Soit alors \epsilon \textgreater{} 0, K \textgreater{} 0 tel que
+\forall~n \in \mathbb{N}~, bn - bn-1~ \leq K, c \in
+{[}a,b{[} tel que t \in {[}c,b{[}\rigtharrow~\\textbar{}
+f(t)\\textbar{} \textless{} \epsilon \over 2K
+. Pour x \textgreater{} c, on a alors
+\\textbar{}\\\sum
+ n=1^pxn -\int ~
+b0^xf(t) dt\\textbar{}
+\leq\int ~
+x^bp\\textbar{}f(t)\\textbar{}
+dt \leq K \epsilon \over 2K = \epsilon \over 2 .
+Soit S = \\sum ~
+n=1^+\infty~xn et N \in \mathbb{N}~ tel que n \rigtharrow~ N
+\rigtharrow~\\textbar{} S
+-\\sum ~
+k=1^nxk\\textbar{} \textless{}
+\epsilon \over 2 . Pour x ≥ xN, on a p ≥ N et donc
+pour x \textgreater{} max(c,bN~) on a
+
+\begin{align*} \\textbar{}S
+-\int  b0^x~f(t)
+dt\\textbar{}& \leq& \\textbar{}S
+-\sum k=1^px~
+k\\textbar{} +\\textbar{}
+\sum n=1^px n~
+-\\int  ~
+b0^xf(t) dt\\textbar{}\%&
+\\ & \textless{}& \epsilon
+\over 2 + \epsilon \over 2 = \epsilon \%&
+\\ \end{align*}
+
+ce qui montre la convergence de l'intégrale.
+
+(ii)(b) La démonstration est similaire. Mais on écrit, en utilisant le
+fait que f est de signe constant sur {[}bp-1,bp{]}
+
+\begin{align*} \textbar{}\\sum
+n=1^px n
+-\\int  ~
+b0^xf(t) dt\textbar{}& =&
+\textbar{}\int  x^bp~
+f(t) dt\textbar{} =\int ~
+x^bp \textbar{}f(t)\textbar{} dt \%&
+\\ & \leq& \int ~
+bp-1^bp \textbar{}f(t)\textbar{} dt =
+\textbar{}\int ~
+bp-1^bp f(t) dt\textbar{}\%&
+\\ & =& \textbar{}xp\textbar{}
+\%& \\ \end{align*}
+
+Puisque la série converge, limxn~ = 0
+et donc, il existe M tel que n ≥ M \rigtharrow~\textbar{}xn\textbar{}
+\textless{} \epsilon \over 2 . Soit N \in \mathbb{N}~ tel que n ≥ N
+\rigtharrow~\textbar{}S -\\sum ~
+k=1^nxk\textbar{} \textless{} \epsilon
+\over 2 . Pour x ≥\
+max(xN,xM), on a p ≥\
+max(N,M) et donc
+
+\textbar{}S -\int ~
+b0^xf(t) dt\textbar{}\leq\textbar{}S
+-\sum k=1^px~
+k\textbar{} + \textbar{}\\sum
+n=1^px n
+-\\int  ~
+b0^xf(t) dt\textbar{} \textless{} \epsilon
+\over 2 + \epsilon \over 2 = \epsilon
+
+ce qui montre la convergence de l'intégrale.
+
+{[}
+{[}
+{[}
+{[}

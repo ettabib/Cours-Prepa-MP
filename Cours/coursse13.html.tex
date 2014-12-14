@@ -1,0 +1,701 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{2.7 Déterminants}
+
+\paragraph{2.7.1 Formes p-linéaires}
+
+Définition~2.7.1 On appelle forme p-linéaire sur le Kespace vectoriel E
+toute application \phi : E^p \rightarrow~ K vérifiant
+\forall~(a1,\\\ldots,ap~)
+\in K^p, \forall~~i \in {[}1,p{]},
+xi\mapsto~\phi(a1,\\ldots,ai-1,xi,ai+1,\\\ldots,ap~)
+est linéaire de E dans K.
+
+Définition~2.7.2 Soit f une forme p-linéaire sur E. On dit qu'elle est
+
+\begin{itemize}
+\item
+  (i) alternée si
+  \forall~(x1\\\ldots,xp~)
+  \in E^p,
+
+  \left (\exists~(i,\\\\jmathmathmathmath) \in
+  {[}1,p{]}^2,i\neq~\\\\jmathmathmathmath\text
+  et x i = x\\\\jmathmathmathmath\right ) \rigtharrow~
+  f(x1,\\ldots,xp~)
+  = 0
+\item
+  (ii) antisymétrique si
+  \forall~(x1\\\ldots,xp~)
+  \in E^p,
+
+  \forall~\sigma \inSp~,
+  f(x\sigma(1),\\ldots,x\sigma(p)~)
+  =
+  \epsilon(\sigma)f(x1,\\ldots,xp~)
+\end{itemize}
+
+Proposition~2.7.1 Toute forme alternée est antisymétrique. Si
+carK\mathrel\neq~~2, toute forme
+antisymétrique est alternée.
+
+Démonstration On remarque que si f est alternée, on a
+
+\begin{align*} 0& =&
+f(\\ldots,xi~
++
+x\\\\jmathmathmathmath,\\ldots,xi~
++
+x\\\\jmathmathmathmath,\\ldots~)
+\%& \\ & =&
+f(\\ldots,xi,\\\ldots,x\\\\jmathmathmathmath,\\\ldots~)
++
+f(\\ldots,x\\\\jmathmathmathmath,\\\ldots,xi,\\\ldots~)\%&
+\\ \end{align*}
+
+On a donc
+f(x\sigma(1),\\ldots,x\sigma(p)~)
+=
+\epsilon(\sigma)f(x1,\\ldots,xp~)
+lorsque \sigma est la transposition \taui,\\\\jmathmathmathmath. Comme les transpositions
+engendrent Sp, f est antisymétrique. Inversement si f est
+antisymétrique et si xi = x\\\\jmathmathmathmath, soit \sigma la
+transposition \taui,\\\\jmathmathmathmath. On a alors
+
+\begin{align*}
+f(\\ldots,xi,\\\ldotsx\\\\jmathmathmathmath,\\\ldots~)&
+=&
+-f(\\ldots,x\\\\jmathmathmathmath,\\\ldotsxi,\\\ldots~)\%&
+\\ & =&
+-f(\\ldots,xi,\\\ldotsx\\\\jmathmathmathmath,\\\ldots~)\%&
+\\ \end{align*}
+
+soit
+f(\\ldots,xi,\\\ldotsx\\\\jmathmathmathmath,\\\ldots~)
+= 0 si carK\mathrel\neq~~2.
+
+Définition~2.7.3 On note Ap(E) l'espace vectoriel des formes
+p-linéaires alternées sur E.
+
+Théorème~2.7.2 Toute forme alternée est nulle sur une famille liée.
+
+Démonstration Il suffit d'écrire un terme comme combinaison linéaire des
+autres et de développer. Dans tous les termes obtenus figurent deux
+termes identiques et donc chaque terme est nul~: si xk
+= \\sum ~
+\\\\jmathmathmathmath\neq~k\alpha~\\\\jmathmathmathmathx\\\\jmathmathmathmath, on a
+
+[} \varphi (x1,\ldots
+,xk,\ldots
+,xp)=\sum\\\\jmathmathmathmath\ne
+k\alpha \\\\jmathmathmathmath\varphi
+(x1,\ldots,\overbracex\\\\jmathmathmathmath^\\\\jmathmathmathmath,\ldots
+,\overbracex\\\\jmathmathmathmath^k,\ldots ,xp)=0
+]}
+
+où l'on a indiqué au dessus de x\\\\jmathmathmathmath l'indice de sa position.
+
+\paragraph{2.7.2 Déterminant d'une famille de vecteurs}
+
+Définition~2.7.4 Soit E un K-espace vectoriel de dimension n, \mathcal{E} =
+(e1,\\ldots,en~)
+une base de E de base duale \mathcal{E}^∗ =
+(e1^∗,\\ldots,en^∗~),
+et
+(x1,\\ldots,xn~)
+une famille de vecteurs de E. On pose
+\mathrm{det}~
+\mathcal{E}(x1,\\ldots,xn~)
+= \\sum ~
+\sigma\inSn\epsilon(\sigma)\\∏
+ \\\\jmathmathmathmath=1^ne\\\\jmathmathmathmath^∗(x\sigma(\\\\jmathmathmathmath)).
+
+Théorème~2.7.3 \mathrm{det}~
+\mathcal{E}\in An(E). L'espace vectoriel An(E) est de
+dimension 1~: pour toute f \in An(E), on a f =
+\lambda~f \mathrm{det}~
+\mathcal{E} avec \lambda~f =
+f(e1,\\ldots,en~).
+L'application \mathrm{det}~
+\mathcal{E} est l'unique forme n-linéaire alternée vérifiant
+f(e1,\\ldots,en~)
+= 1.
+
+Démonstration \mathrm{det}~
+\mathcal{E} est clairement n-linéaire. Supposons que xi =
+x\\\\jmathmathmathmath et écrivons Sn = A \cup \taui,\\\\jmathmathmathmathA où A est
+l'ensemble des permutations de signature +1. On a donc, en tenant compte
+de \epsilon(\taui,\\\\jmathmathmathmath\sigma) = -\epsilon(\sigma)
+
+\begin{align*}
+\mathrm{det}~
+\mathcal{E}(x1,\\ldots,xn~)&
+=& \\sum
+\sigma\inA\epsilon(\sigma)\∏
+k=1^ne k^∗(x \sigma(k)) \%&
+\\ & -& \\sum
+\sigma\inA\epsilon(\sigma)\∏
+k=1^ne k^∗(x
+\taui,\\\\jmathmathmathmath\sigma(k))\%& \\
+\end{align*}
+
+Mais on a pour tout k \in {[}1,n{]}, x\taui,\\\\jmathmathmathmath\sigma(k) =
+x\sigma(k)~: c'est évident si
+\sigma(k)∉\i,\\\\jmathmathmathmath\
+car alors \taui,\\\\jmathmathmathmath\sigma(k) = \sigma(k), et si par exemple \sigma(k) = i, on a
+x\taui,\\\\jmathmathmathmath\sigma(k) = x\\\\jmathmathmathmath = xi =
+x\sigma(k). On en déduit que dans la différence précédente, les
+deux sommes sont égales, et donc
+\mathrm{det}~
+\mathcal{E}(x1,\\ldots,xn~)
+= 0. Ceci montre le caractère alterné de
+\mathrm{det} \mathcal{E}~.
+
+Soit maintenant f \in An(E). On pose x\\\\jmathmathmathmath
+= \\sum ~
+i=1^n\xi~i,\\\\jmathmathmathmathei. On a alors
+
+f(x1,\\ldots,xn~)
+= \\sum
+i1,\ldots,in\in\mathbb{N}~\xi~i1,1\\ldots\xi~in,nf(ei1,\\ldots,ein~)
+
+En fait dans cette somme on peut se limiter aux
+i1,\\ldots,in~
+distincts, car sinon
+f(ei1,\\ldots,ein~)
+= 0. Posant i1 =
+\sigma(1),\\ldots,in~
+= \sigma(n) où \sigma est une permutation de {[}1,n{]}, on obtient (compte tenu de
+f(ei1,\\ldots,ein~)
+=
+f(e\sigma(1),\\ldots,e\sigma(n)~)
+=
+\epsilon(\sigma)f(e1,\\ldots,en~))
+
+\begin{align*}
+f(x1,\\ldots,xn~)&
+=&
+f(e1,\\ldots,en~)\\sum
+\sigma\inSn\epsilon(\sigma)\xi~\sigma(1),1\ldots\xi~\sigma(n),n~\%&
+\\ & =&
+f(e1,\\ldots,en)f0(x1,\\\ldots,xn~)
+\%& \\ \end{align*}
+
+avec une définition évidente de f0.
+
+Ceci montre clairement que dim An~(E)
+\leq 1. Comme d'autre part,
+\mathrm{det} \mathcal{E}~ est
+non nul (car on vérifie immédiatement que
+\mathrm{det}~
+\mathcal{E}(e1,\\ldots,en~)
+= 1~: il y a un seul terme non nul dans la somme), c'est qu'il est bien
+de dimension 1. Le reste en résulte immédiatement (ainsi que le fait que
+f0 = \mathrm{det}~
+\mathcal{E}).
+
+Théorème~2.7.4 Soit \mathcal{E} =
+(e1,\\ldots,en~)
+une base de E et
+(x1,\\ldots,xn~)
+une famille de E. Alors c'est une base de E si et seulement si
+\mathrm{det}~
+\mathcal{E}(x1,\\ldots,xn)\mathrel\neq~~0.
+
+Démonstration En effet, si c'est une base X, on a
+\mathrm{det} \mathcal{E}~
+= \mathrm{det}~
+\mathcal{E}(x1,\\ldots,xn)\\mathrm{det}~
+X et comme
+\mathrm{det}~
+\mathcal{E}\neq~0, on a
+\mathrm{det}~
+\mathcal{E}(x1,\\ldots,xn)\mathrel\neq~~0~;
+si ce n'est pas une base, c'est que la famille est liée (son cardinal
+est n) et donc \mathrm{det}~
+\mathcal{E}(x1,\\ldots,xn~)
+= 0.
+
+\paragraph{2.7.3 Déterminant d'un endomorphisme}
+
+Théorème~2.7.5 Soit u \in L(E). Il existe un unique scalaire noté
+\mathrm{det}~ u vérifiant
+\forall~f \in An~(E),
+\forall~(x1,\\\ldots,xn~)
+\in E^n~;
+
+f(u(x1),\\ldots,u(xn~))
+= \mathrm{det}~ u
+f(x1,\\ldots,xn~)
+
+Démonstration Soit \phiu : An(E) \rightarrow~ An(E)
+définie par
+\phiu(f)(x1,\\ldots,xn~)
+=
+f(u(x1),\\ldots,u(xn~)).
+C'est un endomorphisme d'un espace vectoriel de dimension 1, donc une
+homothétie~; on note
+\mathrm{det}~ u son rapport.
+
+Proposition~2.7.6
+
+\begin{itemize}
+\item
+  (i) Soit \mathcal{E} =
+  (e1,\\ldots,en~)
+  une base de E, alors
+
+  \mathrm{det}~ u
+  = \mathrm{det}~
+  \mathcal{E}(u(e1),\\ldots,u(en~))
+\item
+  (ii) \mathrm{det}~
+  \mathrmId = 1,
+  \mathrm{det}~ \lambda~u =
+  \lambda~^n \mathrm{det}~
+  u, \mathrm{det}~
+  ^tu = \mathrm{det}~
+  u
+\item
+  (iii) \mathrm{det}~ v \cdot u
+  = \mathrm{det}~
+  v\mathrm{det}~ u
+\item
+  (iv) u est un automorphisme de E si et seulement si
+  \mathrm{det}~
+  u\neq~0.
+\end{itemize}
+
+Démonstration Tout est presque immédiat~; (iii) découle de
+\phiv\cdotu = \phiu \cdot \phiv et du fait que le rapport
+du produit de deux homothéties est le produit des rapports.
+
+\paragraph{2.7.4 Déterminant d'une matrice}
+
+Définition~2.7.5 Soit A \in Mk(n). On appelle déterminant de A
+le déterminant de la famille de ses vecteurs colonnes dans la base
+canonique. On a donc
+\mathrm{det}~ A
+= \\sum ~
+\sigma\inSn\epsilon(\sigma)\\∏
+ \\\\jmathmathmathmath=1^na\\\\jmathmathmathmath,\sigma(\\\\jmathmathmathmath).
+
+Proposition~2.7.7
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) Soit \mathcal{E} =
+  (e1,\\ldots,en~)
+  une base de E, u \in L(E), alors
+  \mathrm{det}~ u
+  = \mathrm{det}~
+  \mathrmMat~ (u,\mathcal{E})
+\item
+  (ii) \mathrm{det}~
+  In = 1,
+  \mathrm{det}~ \lambda~A =
+  \lambda~^n \mathrm{det}~
+  A, \mathrm{det}~
+  ^tA = \mathrm{det}~
+  A
+\item
+  (iii) \mathrm{det}~ AB
+  = \mathrm{det}~
+  A\mathrm{det}~ B
+\item
+  (iv) A est inversible si et seulement si
+  \mathrm{det}~
+  A\neq~0.
+\end{itemize}
+
+Démonstration On a
+\mathrm{det}~ u
+= \mathrm{det}~
+\mathcal{E}(u(e1),\\ldots,u(en~))
+ce qui n'est autre que
+\mathrm{det}~
+\mathrmMat~ (u,\mathcal{E}) puisque
+les vecteurs colonnes de cette matrice sont constitués des coordonnées
+des u(e\\\\jmathmathmathmath) dans la base \mathcal{E}, ce qui montre (i). La formule
+\mathrm{det} ^t~A
+= \mathrm{det}~ A résulte de
+la remarque que nous avons faite lors de la démonstration du fait que
+An(E) est de dimension 1~: f0
+= \mathrm{det} \mathcal{E}~,
+soit encore
+
+\\sum
+\sigma\inSn\epsilon(\sigma)\xi~\sigma(1),1\ldots\xi~\sigma(n),n~
+= \\sum
+\sigma\inSn\epsilon(\sigma)\xi~1,\sigma(1)\ldots\xi~n,\sigma(n)~
+
+Tout le reste s'obtient en traduisant les résultats similaires sur les
+endomorphismes.
+
+Proposition~2.7.8 Le déterminant d'une matrice dépend linéairement de
+chacun de ses vecteurs colonnes (resp lignes), le déterminant d'une
+matrice ne change pas si on a\\\\jmathmathmathmathoute à une colonne (resp. ligne) une
+combinaison linéaire des autres colonnes (resp. lignes). Si on effectue
+une permutation \sigma sur les colonnes (resp. lignes) d'une matrice, son
+déterminant est multiplié par \epsilon(\sigma). Application Calcul par la méthode du
+pivot.
+
+Démonstration Evident de par la définition du déterminant d'une matrice
+comme déterminant de la famille de ses vecteurs colonnes (ou de ses
+vecteurs lignes par transposition)
+
+Théorème~2.7.9 (calcul des déterminants par blocs).
+\mathrm{det}~
+\left ( \includegraphics{cours3x.png}
+\,\right ) = \
+\mathrm{det}
+A.\mathrm{det}~ C.
+
+Démonstration Notons M = (ai,\\\\jmathmathmathmath)1\leqi,\\\\jmathmathmathmath\leqn =
+\left
+(\matrix\,A&B\cr 0
+&C\right ), si bien que l'on a ai,\\\\jmathmathmathmath = 0 si i
+≥ p + 1 et \\\\jmathmathmathmath \leq p. On a alors
+\mathrm{det}~ M
+= \\sum ~
+\sigma\inSn\epsilon(\sigma)\\∏
+ k=1^nak,\sigma(k). Soit \sigma \inSn~; s'il
+existe k0 \in {[}p + 1,n{]} tel que \sigma(k0) \in {[}1,p{]},
+on a alors ak0,\sigma(k0) = 0 et donc
+\∏ ~
+k=1^nak,\sigma(k) = 0. Autrement dit, les seules
+permutations qui peuvent donner une contribution non nulle au
+déterminant sont les permutations \sigma \inSn telles que \sigma({[}p +
+1,n{]}) \subset~ {[}p + 1,n{]}, c'est-à-dire vérifiant \sigma({[}p + 1,n{]}) = {[}p
++ 1,n{]} et donc aussi \sigma({[}1,p{]}) = {[}1,p{]}. Une telle permutation \sigma
+est entièrement définie par ses restrictions \sigma1 à {[}1,p{]} et
+\sigma2 à {[}p + 1,n{]}, l'application
+\sigma\mapsto~(\sigma1,\sigma2) étant bi\\\\jmathmathmathmathective
+de l'ensemble de ces permutations sur Sp \timesSn-p.
+D'autre part, on voit immédiatement que toute décomposition de
+\sigma1 et \sigma2 en produit de transpositions, fournit une
+décomposition de \sigma en produit de transpositions, ce qui montre que \epsilon(\sigma)
+= \epsilon(\sigma1)\epsilon(\sigma2). On obtient donc~:
+
+\begin{align*}
+\mathrm{det}~ M& =&
+\sum  \sigma1\inSp~
+\atop \sigma2\inSn-p
+\epsilon(\sigma1)\epsilon(\sigma2)\∏
+k=1^pa k,\sigma1(k)
+∏ k=p+1^na~
+k,\sigma2(k) \%& \\ & =&
+\\sum
+\sigma1\inSp\epsilon(\sigma1)\∏
+k=1^pa k,\sigma1(k)
+\\sum
+\sigma2\inSn-p\epsilon(\sigma2)\∏
+k=p+1^na k,\sigma2(k)\%&
+\\ & =&
+\mathrm{det}~
+A.\mathrm{det}~ C \%&
+\\ \end{align*}
+
+Corollaire~2.7.10 Le déterminant d'une matrice triangulaire par blocs
+est égal au produit des déterminants des blocs diagonaux. Le déterminant
+d'une matrice triangulaire est égal au produit de ses éléments
+diagonaux.
+
+Démonstration Récurrence évidente.
+
+Définition~2.7.6 Soit A = (ai,\\\\jmathmathmathmath) \in MK(n). On notera
+Ak,l = (-1)^k+l\
+\mathrm{det}
+(ai,\\\\jmathmathmathmath)i\neq~k,\\\\jmathmathmathmath\mathrel\neq~l
+(cofacteur d'indice (k,l)). La matrice (Ai,\\\\jmathmathmathmath) \in
+MK(n) est appelée la comatrice de la matrice A.
+
+Théorème~2.7.11 (développement d'un déterminant). On a
+
+\forall~~i \in {[}1,n{]},\quad
+\mathrm{det}~ A =
+\sum k=1^na~
+i,kAi,k
+
+(développement suivant la i-ième ligne)
+
+\forall~~\\\\jmathmathmathmath \in {[}1,n{]},\quad
+\mathrm{det}~ A =
+\sum k=1^na~
+k,\\\\jmathmathmathmathAk,\\\\jmathmathmathmath
+
+(développement suivant la \\\\jmathmathmathmath-ième colonne)
+
+Démonstration Par exemple sur les colonnes~; soit
+(\epsilon1,\\ldots,\epsilonn~)
+la base canonique de K^n,
+(c1,\\ldotscn~)
+les vecteurs colonnes de la matrice A. On a c\\\\jmathmathmathmath
+= \\sum ~
+k=1^nak,\\\\jmathmathmathmath\epsilonk, d'où
+
+\begin{align*}
+\mathrm{det}~ A& =&
+\mathrm{det}~
+(c1,\\ldots,cn~)
+\%& \\ & =& \\sum
+k=1^na k,\\\\jmathmathmathmath \mathrm{det}
+(c1,\ldots,c\\\\jmathmathmathmath-1,\epsilonk,c\\\\jmathmathmathmath+1,\\ldots,cn~)\%&
+\\ & =& \\sum
+k=1^na k,\\\\jmathmathmathmath\Deltak,\\\\jmathmathmathmath \%&
+\\ \end{align*}
+
+Par combinaisons linéaires de colonnes (pour éliminer les termes de la
+k-ième ligne) puis par échange de lignes et de colonnes, on obtient
+
+\Deltak,l = (-1)^k+l\left
+\textbar{}\matrix\,1&0\\ldots~0
+\cr \matrix\,0
+\cr \⋮~
+\cr
+0&(ai,\\\\jmathmathmathmath)i\neq~k,\\\\jmathmathmathmath\mathrel\neq~l\right
+\textbar{} = (-1)^k+lA k,l
+
+Corollaire~2.7.12 A^t com~A =
+^t com~A A =
+(\mathrm{det} A)In~.
+Si A est inversible, A^-1 = 1 \over
+\mathrm{det} A~
+^t com~A.
+
+Démonstration En effet (A^t\
+comA)i,\\\\jmathmathmathmath =\ \\sum
+ k=1^nai,kA\\\\jmathmathmathmath,k. Mais ceci n'est
+autre que le développement suivant la \\\\jmathmathmathmath-ième ligne du déterminant de la
+matrice B obtenue à partir de A en rempla\ccant la
+\\\\jmathmathmathmath-ième ligne par la i-ième. Si i = \\\\jmathmathmathmath, c'est donc
+\mathrm{det}~ A. Si
+i\neq~\\\\jmathmathmathmath, la matrice B a deux lignes identiques,
+donc son déterminant est nul.
+
+\paragraph{2.7.5 Application des déterminants à la recherche du rang}
+
+Lemme~2.7.13 Soit A = (ai,\\\\jmathmathmathmath) \in MK(m,n) et soit B =
+(ai,\\\\jmathmathmathmath)i\inI,\\\\jmathmathmathmath\inJ une sous-matrice de A (avec I \subset~
+{[}1,m{]} et J \subset~ {[}1,n{]}. Alors
+\mathrmrg~B
+\leq\mathrmrg~A.
+
+Démonstration Soit C = (ai,\\\\jmathmathmathmath)i\in{[}1,m{]},\\\\jmathmathmathmath\inJ et soit
+c1,\\ldots,cn~
+les vecteurs colonnes de A. Alors on a
+\mathrmrg~C
+= \mathrmrg(c\\\\jmathmathmathmath~, \\\\jmathmathmathmath
+\in J)
+\leq\mathrmrg(c1,\\\ldots,cn~)
+= \mathrmrg~A. Mais soit
+d'autre part
+l1',\\ldots,lm~'
+les vecteurs lignes de la matrice C. On a
+\mathrmrg~B
+= \mathrmrg(li~',
+i \in I)
+\leq\mathrmrg(l1',\\\ldots,lm~')
+= \mathrmrg~C, d'où
+\mathrmrg~B
+\leq\mathrmrg~A.
+
+Soit alors r le rang de A. D'après le lemme précédent, toute
+sous-matrice inversible B de A a une taille (un ordre) plus petit que r.
+On a alors le théorème suivant
+
+Théorème~2.7.14 Soit A = (ai,\\\\jmathmathmathmath) \in MK(m,n) de rang r
+et soit B = (ai,\\\\jmathmathmathmath)i\inI,\\\\jmathmathmathmath\inJ une sous-matrice de A
+carrée inversible avec \textbar{}I\textbar{} = \textbar{}J\textbar{}
+\textless{} r. Alors il existe i0 \in {[}1,m{]} \diagdown I,\\\\jmathmathmathmath0
+\in {[}1,n{]} \diagdown J tels que la matrice B' =
+(ai,\\\\jmathmathmathmath)i\inI\cup\i0\,\\\\jmathmathmathmath\inJ\cup\\\\\jmathmathmathmath0\
+(matrice bordante de B dans A) soit encore inversible.
+
+Démonstration Soit C = (ai,\\\\jmathmathmathmath)i\in{[}1,m{]},\\\\jmathmathmathmath\inJ et soit
+c1,\\ldots,cn~
+les vecteurs colonnes de A. On a
+\mathrmrg~C
+\leq\textbar{}J\textbar{} (car C a \textbar{}J\textbar{} vecteurs colonnes)
+et \mathrmrg~C
+≥\mathrmrg~B =
+\textbar{}J\textbar{} (car B est une sous-matrice de C). Donc
+\mathrmrg~C =
+\textbar{}J\textbar{} \textless{} r. Ceci montre que la famille
+(c\\\\jmathmathmathmath)\\\\jmathmathmathmath\inJ est libre. D'autre part dans V
+=\
+\mathrmVect(c1,\\ldots,cn~),
+la famille
+(c1,\\ldots,cn~)
+est génératrice. Par le théorème de la base incomplète, il existe J' tel
+que J \subset~ J' \subset~ {[}1,n{]} avec (c\\\\jmathmathmathmath)\\\\jmathmathmathmath\inJ' base de V .
+Mais \textbar{}J'\textbar{} = dim~ V = r
+\textgreater{} \textbar{}J\textbar{} donc on peut prendre un
+\\\\jmathmathmathmath0 \in J' \diagdown J et la famille
+(c\\\\jmathmathmathmath)\\\\jmathmathmathmath\inJ\cup\\\\\jmathmathmathmath0\
+est encore libre. Soit D =
+(ai,\\\\jmathmathmathmath)i\in{[}1,m{]},\\\\jmathmathmathmath\inJ\cup\\\\\jmathmathmathmath0\.
+Le rang de D est donc \textbar{}I\textbar{} + 1. Soit
+l1',\\ldots,lm~'
+les vecteurs colonnes de la matrice D. La matrice
+(ai,\\\\jmathmathmathmath)i\inI,\\\\jmathmathmathmath\inJ\cup\\\\\jmathmathmathmath0\
+est de rang \textbar{}I\textbar{} (elle a \textbar{}I\textbar{} lignes
+et contient la matrice B de rang \textbar{}I\textbar{}), donc la famille
+(li')i\inI est de rang \textbar{}I\textbar{} alors que
+la famille (li')i\in{[}1,m{]} est de rang
+\textbar{}I\textbar{} + 1. Le même argument à base de théorème de la
+base incomplète montre que l'on peut trouver i0 \in {[}1,m{]} \diagdown
+I tel que la famille
+(li')i\inI\cup\i0\
+soit encore libre. La matrice B' =
+(ai,\\\\jmathmathmathmath)i\inI\cup\i0\,\\\\jmathmathmathmath\inJ\cup\\\\\jmathmathmathmath0\
+est donc inversible.
+
+Remarque~2.7.1 Le théorème précédent montre donc que toute sous-matrice
+inversible de taille strictement inférieure à r peut être complétée en
+une autre sous-matrice inversible. On en déduit
+
+Théorème~2.7.15 Soit A = (ai,\\\\jmathmathmathmath) \in MK(m,n) de rang r.
+Alors A contient des sous-matrices carrées inversibles de rang r
+(sous-matrices principales). Une sous-matrice carrée inversible est une
+sous-matrice principale si et seulement si toutes ses matrices bordantes
+sont non inversibles.
+
+Remarque~2.7.2 Ceci permet de rechercher théoriquement le rang d'une
+matrice à l'aide de déterminants, en augmentant au fur et à mesure la
+taille des sous-matrices inversibles.
+
+\paragraph{2.7.6 Formes p-linéaires alternées}
+
+Proposition~2.7.16 Soit E un K-espace vectoriel,
+f1,\\ldots,fp~
+\in E^∗. Alors f1
+∧\\ldots~ ∧
+fp : E^p \rightarrow~ K définie par
+(x1,\\ldots,xp)\mapsto~\\mathrm{det}~
+(fi(x\\\\jmathmathmathmath))1\leqi\leqp,1\leq\\\\jmathmathmathmath\leqp est une forme p-
+linéaire alternée sur E.
+
+Ceci va nous permettre d'exhiber une base de Ap(E) en
+utilisant les deux lemmes suivants. Pour cela soit E un K-espace
+vectoriel de dimension n et \mathcal{E} =
+(e1,\\ldots,en~)
+une base de E de base duale \mathcal{E}^∗ =
+(e1^∗,\\ldots,en^∗~).
+
+Lemme~2.7.17 Soit f,g \in Ap(E) telles que pour toute famille
+(i1,\\ldots,ip~)
+vérifiant 1 \leq i1 \textless{} i2 \textless{}
+\\ldots~ \textless{}
+ip \leq n, on ait
+f(ei1,\\ldots,eip~)
+=
+g(ei1,\\ldots,eip~).
+Alors f = g.
+
+Démonstration La relation
+f(ei1,\\ldots,eip~)
+=
+g(ei1,\\ldots,eip~)
+reste encore vraie si
+i1,\\ldots,ip~
+sont distincts mais non ordonnés (il suffit de les réordonner par une
+permutation \sigma, ce qui ne fait que multiplier les deux côtés par \epsilon(\sigma)).
+Elle est triviale si
+i1,\\ldots,ip~
+ne sont pas distincts car alors les deux membres valent 0. Mais alors,
+on a en posant x\\\\jmathmathmathmath =\
+\sum ~
+i=1^n\xi~i,\\\\jmathmathmathmathei
+
+f(x1,\\ldots,xp~)
+= \\sum
+i1,\ldots,ip\in\mathbb{N}~\xi~i1,1\\ldots\xi~ip,pf(ei1,\\ldots,eip~)
+
+et la même chose pour g. Donc f = g.
+
+Lemme~2.7.18 Soit 1 \leq i1 \textless{} i2 \textless{}
+\\ldots~ \textless{}
+ip \leq n et 1 \leq \\\\jmathmathmathmath1 \textless{} \\\\jmathmathmathmath2
+\textless{} \\ldots~
+\textless{} \\\\jmathmathmathmathp \leq n. Alors
+
+ei1^∗∧\\ldots~
+∧ e ip^∗(e
+\\\\jmathmathmathmath1,\\ldots,e\\\\jmathmathmathmathp~)
+=
+\deltai1,\\ldots,ip^\\\\jmathmathmathmath1,\\\ldots,\\\\jmathmathmathmathp~
+
+
+(symbole de Kronecker)
+
+Démonstration Il est clair que
+ei1^∗∧\\ldots~
+∧
+ei1^∗(ei1,\\ldots,eip~)
+= 1 (la matrice ''fi(x\\\\jmathmathmathmath)'' est l'identité).
+Supposons donc que i1 =
+\\\\jmathmathmathmath1,\\ldots,ik-1~
+= \\\\jmathmathmathmathk-1,ik\neq~\\\\jmathmathmathmathk.
+Si ik \textless{} \\\\jmathmathmathmathk, on a pour tout l \in
+{[}1,p{]},ik\neq~\\\\jmathmathmathmathl soit
+e\\\\jmathmathmathmathl^∗(eik) = 0. La
+matrice ''fi(x\\\\jmathmathmathmath)'' a donc sa k-ième ligne nulle et
+son déterminant est donc nul. Si \\\\jmathmathmathmathk \textless{} ik,
+de manière similaire, la k-ième colonne de la matrice est nulle. Dans
+les deux cas, on trouve donc 0 comme résultat.
+
+Théorème~2.7.19 La famille des
+(ei1^∗∧\\ldots~
+∧
+eip^∗)1\leqi1\textless{}i2\textless{}\\ldots\textless{}ip\leqn~
+est une base de Ap(E) (qui est donc de dimension
+Cn^p).
+
+Démonstration Montrons que la famille est génératrice. Soit f \in
+Ap(E) et
+
+g = \\sum ~
+1\leq\\\\jmathmathmathmath1\textless{}\\\\jmathmathmathmath2\textless{}\\ldots\textless{}\\\\jmathmathmathmathp\leqnf(e\\\\jmathmathmathmath1,\\\ldots,e\\\\jmathmathmathmathp)e\\\\jmathmathmathmath1^∗∧\\\ldots~
+∧ e\\\\jmathmathmathmathp^∗. Grâce au lemme 2, si 1 \leq
+i1 \textless{} i2 \textless{}
+\\ldots~ \textless{}
+ip \leq n, on a
+g(ei1,\\ldots,eip~)
+=
+f(ei1,\\ldots,eip~).
+D'après le lemme 1, on a f = g. Il reste à montrer que la famille est
+libre. Supposons que \\\sum
+
+1\leq\\\\jmathmathmathmath1\textless{}\\\\jmathmathmathmath2\textless{}\\ldots\textless{}\\\\jmathmathmathmathp\leqn\lambda~\\\\jmathmathmathmath1,\\\ldots,\\\\jmathmathmathmathpe\\\\jmathmathmathmath1^∗∧\\\ldots~
+∧ e\\\\jmathmathmathmathp^∗ = 0. Grâce au lemme 2, si 1 \leq
+i1 \textless{} i2 \textless{}
+\\ldots~ \textless{}
+ip \leq n on a
+
+\begin{align*} 0& =&
+0(ei1,\\ldots,eip~)
+\%& \\ & =& \\sum
+1\leq\\\\jmathmathmathmath1\textless{}\\\\jmathmathmathmath2\textless{}\ldots\textless{}\\\\jmathmathmathmathp\leqn\lambda~\\\\jmathmathmathmath1,\\ldots,\\\\jmathmathmathmathpe\\\\jmathmathmathmath1^∗∧\\ldots~
+∧ e \\\\jmathmathmathmathp^∗(e
+i1,\ldots,eip~)
+=
+\lambda~i1,\ldots,ip~\%&
+\\ \end{align*}
+
+ce qui montre que la famille est libre.
+
+{[}
+{[}
+{[}
+{[}

@@ -1,0 +1,231 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{4.7 Espaces complets}
+
+\paragraph{4.7.1 Suites de Cauchy}
+
+Définition~4.7.1 Soit (E,d) un espace métrique. Une suite (xn)
+de E est dite suite de Cauchy si elle vérifie
+
+\forall~~\epsilon \textgreater{} 0,
+\exists~N \in \mathbb{N}~,\quad p,q ≥ N \rigtharrow~
+d(xp,xq) \textless{} \epsilon
+
+Remarque~4.7.1 On peut sans nuire à la généralité remplacer par
+
+\forall~~\epsilon \textgreater{} 0,
+\exists~N \in \mathbb{N}~,\quad q \textgreater{} p
+≥ N \rigtharrow~ d(xp,xq) \textless{} \epsilon
+
+Remarque~4.7.2 Il s'agit là d'une notion métrique et non topologique. La
+suite (n) est une suite de Cauchy dans \mathbb{R}~ muni de la distance de
+\overline\mathbb{R}~, mais pas de Cauchy dans \mathbb{R}~ muni de la
+distance usuelle. Par contre, pour deux distances équivalentes, les
+suites de Cauchy sont les mêmes.
+
+Théorème~4.7.1
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) Toute suite convergente est une suite de Cauchy
+\item
+  (ii) Toute suite de Cauchy qui a une valeur d'adhérence est
+  convergente.
+\item
+  (iii) Toute suite de Cauchy est bornée.
+\item
+  (iv) L'image par une application uniformément continue d'une suite de
+  Cauchy est une suite de Cauchy.
+\end{itemize}
+
+Démonstration (i) Soit \ell = limxn~ et
+\epsilon \textgreater{} 0. Il existe N \in \mathbb{N}~ tel que n ≥ N \rigtharrow~ d(xn,\ell)
+\textless{} \epsilon\diagup2. Alors p,q ≥ N \rigtharrow~ d(xp,xq) \leq
+d(xp,\ell),+d(\ell,xq) \textless{} \epsilon. Donc (xn)
+est une suite de Cauchy.
+
+(ii) Soit \ell une valeur d'adhérence de la suite de Cauchy (xn)
+et \epsilon \textgreater{} 0. Il existe N \in \mathbb{N}~ tel que p,q ≥ N \rigtharrow~
+d(xp,xq) \textless{} \epsilon\diagup2. De plus il existe
+n0 ≥ N tel que d(xn0,\ell) \textless{} \epsilon\diagup2.
+Pour n ≥ N, on a d(xn,\ell) \leq
+d(xn,xn0) + d(xn0,\ell)
+\textless{} \epsilon\diagup2 + \epsilon\diagup2 = \epsilon. Donc \ell est limite de (xn).
+
+(iii) Il existe N \in \mathbb{N}~ tel que p,q ≥ N \rigtharrow~ d(xp,xq)
+\textless{} 1. Alors
+\xn∣n \in
+\mathbb{N}~\
+\subset~\x0,\\ldots,xN-1\~
+\cup B'(xN,1) qui est un ensemble borné.
+
+(iv) Soit \epsilon \textgreater{} 0. Il existe \eta \textgreater{} 0 tel que
+d(x,x') \textless{} \eta \rigtharrow~ d(f(x),f(x')) \textless{} \epsilon. Pour ce \eta, il
+existe N \in \mathbb{N}~ tel que p,q ≥ N \rigtharrow~ d(xp,xq) \textless{}
+\eta. Alors p,q ≥ N \rigtharrow~ d(f(xp),f(xq)) \textless{} \epsilon.
+
+Remarque~4.7.3 Une suite de Cauchy a donc soit aucune valeur d'adhérence
+(si elle diverge), soit une valeur d'adhérence si elle converge.
+
+L'image par une application continue d'une suite de Cauchy n'est pas en
+général une suite de Cauchy~: prendre f :{]}0,+\infty~{[}\rightarrow~{]}0,+\infty~{[},
+x\mapsto~1\diagupx et xn = 1\diagupn.
+
+\paragraph{4.7.2 Espaces complets}
+
+Définition~4.7.2 Un espace métrique (E,d) est dit complet si toute suite
+de Cauchy de E converge dans E
+
+Remarque~4.7.4 Il s'agit d'une notion métrique et non topologique~: bien
+que la topologie soit la même, \mathbb{R}~ est complet pour la distance usuelle,
+mais pas pour la distance de \overline\mathbb{R}~ (la suite (n)
+est une suite de Cauchy non convergente)
+
+Remarque~4.7.5 L'intérêt essentiel d'un espace complet est que dans un
+tel espace, on peut assurer la convergence d'une suite sans exhiber au
+préalable sa limite.
+
+Théorème~4.7.2 Soit (E,d) un espace métrique et F une partie de E. (i)
+Si (F,dF) est complet, alors F est fermé dans E (ii)
+Inversement, si E est complet et F fermé dans E alors (F,dF)
+est complet
+
+Démonstration (i) Soit x \in E qui est limite d'une suite (xn)
+de F. La suite (xn) est une suite de Cauchy~dans E, donc dans
+F, donc admet une limite \ell dans F. mais l'unicité de la limite dans E
+garantit que x = \ell \in F. Donc F est fermé dans E.
+
+(ii) Soit (xn) une suite de Cauchy~dans F~; c'est aussi une
+suite de Cauchy~dans E donc elle converge vers x \in E (car E est
+complet)~; mais comme F est fermé et x est limite d'une suite d'éléments
+de F, x appartient à F et il est évidemment limite dans F de la suite
+(xn).
+
+Proposition~4.7.3 Si (E1,d1) et
+(E2,d2) sont deux espaces métriques complets, alors
+l'espace métrique produit est complet.
+
+Démonstration Soit (zn) une suite de Cauchy dans E =
+E1 \times E2, zn = (xn,yn).
+On a d(zp,zq) =\
+max(d1(xp,xq),d2(yp,yq))
+et donc d1(xp,xq) \leq
+d(zp,zq). On en déduit que (xn) est une
+suite de Cauchy~de E1 et donc converge vers x \in E1.
+De même (yn) converge vers y dans E2 et alors
+(zn) converge vers (x,y) \in E.
+
+\paragraph{4.7.3 Propriétés des espaces complets}
+
+Théorème~4.7.4 (théorème des fermés emboîtés) Soit (E,d) un espace
+métrique complet et (Fn)n\in\mathbb{N}~ une suite de parties
+fermées non vides de E vérifiant
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) \forall~n, Fn+1 \subset~ Fn~
+\item
+  (ii) limn\rightarrow~+\infty~\delta(Fn~) = 0
+\end{itemize}
+
+Alors \⋂ ~
+n\in\mathbb{N}~Fn est un singleton (et en particulier non vide).
+
+Démonstration Choisissons xn \in Fn. Si q ≥ p, on a
+xp,xq \in Fp et donc
+d(xp,xq) \leq \delta(Fp) ce qui montre que la
+suite (xn) est une suite de Cauchy. Par conséquent elle
+converge dans E, soit a sa limite. On a a =\
+limn\rightarrow~+\infty~xn+p et \forall~~n,
+xn+p \in Fp. Comme Fp est fermé, a
+appartient à Fp et donc a
+\in\⋂ ~
+p\in\mathbb{N}~Fp. Maintenant, si a,b
+\in\⋂ ~
+p\in\mathbb{N}~Fp, on a d(a,b) \leq \delta(Fp) pour tout p et
+donc d(a,b) = 0, soit a = b.
+
+Remarque~4.7.6 La condition
+limn\rightarrow~+\infty~\delta(Fn~) = 0 est
+essentielle pour démontrer que l'intersection est non vide comme le
+montre l'exemple Fn = {[}n,+\infty~{[} dans \mathbb{R}~, où l'intersection est
+vide.
+
+Théorème~4.7.5 (Critère de Cauchy pour les fonctions) Soit E un espace
+métrique, (F,d) un espace métrique complet, A \subset~ E, a
+\in\overlineA, f une fonction de E vers F telle que A
+\subset~ Def~ (f). Alors f admet une limite en a
+suivant A si et seulement si~elle vérifie
+
+\forall~~\epsilon \textgreater{} 0,
+\exists~U \in V (a),\quad x,x' \in U \bigcap A \rigtharrow~
+d(f(x),f(x')) \textless{} \epsilon
+
+Démonstration La condition est nécessaire car si \ell
+= limx\rightarrow~a,x\inA~f(x) et \epsilon \textgreater{}
+0, il existe U \in V (a) tel que x \in U \bigcap A \rigtharrow~ d(f(x),\ell) \textless{} \epsilon\diagup2.
+Alors, pour x,x' \in U \bigcap A on a d(f(x),f(x')) \leq d(f(x),\ell) + d(\ell,f(x'))
+\textless{} \epsilon\diagup2 + \epsilon\diagup2 = \epsilon. Montrons maintenant qu'elle est suffisante.
+Pour cela, soit (an) une suite de A convergeant vers a et \epsilon
+\textgreater{} 0 et soit U \in V (a) tel que x,x' \in U \bigcap A \rigtharrow~ d(f(x),f(x'))
+\textless{} \epsilon~; il existe N \in \mathbb{N}~ tel que n ≥ N \rigtharrow~ an \in U. Pour n
+≥ N, on a an \in U \bigcap A et donc
+
+p,q ≥ N \rigtharrow~ ap,aq \in U \bigcap A \rigtharrow~
+d(f(ap),f(aq)) \textless{} \epsilon
+
+La suite (f(an)) est donc une suite de Cauchy de F, donc elle
+converge. On a donc montré que pour toute suite (an) de A de
+limite a, la suite (f(an)) converge~; on en déduit que f a une
+limite en a suivant A.
+
+Théorème~4.7.6 (théorème du point fixe). Soit (E,d) un espace métrique
+complet et f : E \rightarrow~ E une application contractante (lipschitzienne de
+rapport strictement inférieur à 1). Alors f a un unique point fixe qui
+est limite de toutes les suites (xn) définies par la
+récurrence~: x0 \in E et xn+1 = f(xn).
+
+Démonstration Ecrivons d(f(x),f(y)) \leq kd(x,y) avec k \textless{} 1. Pour
+l'unicité, supposons que f(x) = x et f(y) = y. On a d(x,y) \leq kd(x,y)
+avec k \textless{} 1 et d(x,y) ≥ 0. ce n'est possible que si d(x,y) = 0
+et donc x = y. En ce qui concerne l'existence, soit x0 \in E et
+la suite définie par la récurrence xn+1 = f(xn). Si
+n ≥ 1, on a d(xn+1,xn) =
+d(f(xn),f(xn-1)) \leq kd(xn,xn-1)
+d'où en définitive d(xn+1,xn) \leq
+k^nd(x0,x1). Mais alors, si q
+\textgreater{} p on a
+
+\begin{align*} d(xp,xq)& \leq&
+d(xp,xp+1) +
+\\ldots~ +
+d(xq-1,xq) \%& \\ &
+\leq& (k^p +
+\\ldots~ +
+k^q-1)d(x 0,x1) \leq k^p
+d(x0,x1) \over 1 - k \%&
+\\ \end{align*}
+
+Comme k \textless{} 1, on a
+limk^p~
+d(x0,x1) \over 1-k = 0, et donc la
+suite est une suite de Cauchy~; elle admet donc une limite x. On a x
+= limxn+1~ =\
+limf(xn) = f(limxn~) =
+f(x) car f est continue. Donc x est point fixe de f.
+
+{[}
+{[}
+{[}
+{[}

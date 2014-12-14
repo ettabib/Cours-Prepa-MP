@@ -1,0 +1,181 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{14.2 Séries trigonométriques}
+
+\paragraph{14.2.1 Rappels d'intégration}
+
+Lemme~14.2.1 Soit f : \mathbb{R}~ \rightarrow~ \mathbb{C} périodique de période T, continue par
+morceaux. Alors, pour tout a \in \mathbb{R}~, \int ~
+a^a+Tf(t) dt =\int ~
+0^Tf(t) dt
+
+Démonstration On écrit \int ~
+a^a+Tf(t) dt =\int ~
+a^0f(t) dt+\int ~
+0^Tf(t) dt+\int ~
+T^a+Tf(t) dt =\int ~
+a^0f(t) dt+\int ~
+0^Tf(t) dt+\int ~
+0^af(u+T) du = \int ~
+a^0f(t) dt +\int ~
+0^Tf(t) dt +\int ~
+0^af(u) du =\int ~
+0^Tf(t) dt en faisant le changement de variable u = t -
+T.
+
+Lemme~14.2.2 Pour tout n \in ℤ, \int ~
+0^2\pi~e^int dt = 2\pi~\deltan^0.
+
+\paragraph{14.2.2 Généralités}
+
+Définition~14.2.1 (forme réelle). Soit (an)n≥0 et
+(bn)n≥1 deux suites de nombres complexes. On appelle
+série trigonométrique associée la série de fonctions de \mathbb{R}~ dans \mathbb{C},
+
+a0 + \sum n≥1(an~
+\cos nx + bn \sin nx)
+
+Remarque~14.2.1 Soit n \in \mathbb{N}~^∗ et an et bn
+deux nombres complexes. On a alors an\
+cos nx + bn sin~ nx =
+cne^inx + c-ne^-inx avec
+cn = an-ibn \over 2 et
+c-n = an+ibn \over 2 .
+Inversement, si on se donne deux nombres complexes cn et
+c-n, on a cne^inx +
+c-ne^-inx = an\
+sin nx + bn cos~ nx avec
+an = cn + c-n et bn =
+i(cn - c-n). Ceci amène également à poser
+
+Définition~14.2.2 (forme complexe). Soit (cn)n\inℤ une
+suite de nombres complexes. On appelle série trigonométrique associée la
+série de fonctions de \mathbb{R}~ dans \mathbb{C},
+
+c0 + \\sum
+n≥1(cne^inx + c
+-ne^-inx)
+
+On passe donc de la forme réelle à la forme complexe ou vice versa par
+les formules
+
+\begin{align*} a0& =& c0 \%&
+\\ \forall~~n ≥
+1,\quad cn& =& an - ibn
+\over 2 ,\quad c-n =
+an + ibn \over 2 \%&
+\\ \forall~~n ≥
+1,\quad an& =& cn +
+c-n,\quad bn = i(cn -
+c-n)\%& \\
+\end{align*}
+
+\paragraph{14.2.3 Un cas de convergence normale}
+
+Théorème~14.2.3 On considère une série trigonométrique vérifiant les
+conditions équivalentes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) les deux séries \\\sum
+   \textbar{}an\textbar{} et
+  \\sum ~
+  \textbar{}bn\textbar{} sont convergentes.
+\item
+  (ii) les deux séries
+  \\sum ~
+  n≥0\textbar{}cn\textbar{} et
+  \\sum ~
+  n≥0\textbar{}c-n\textbar{} sont convergentes.
+\end{itemize}
+
+Alors la série trigonométrique converge normalement sur \mathbb{R}~, sa somme f
+est une fonction continue périodique de période 2\pi~ et on a
+
+\begin{align*} \forall~~n \in
+ℤ,\quad cn& =& 1 \over 2\pi~
+\int  0^2\pi~f(t)e^-int~
+dt \%& \\ \forall~~n ≥
+1,\quad an& =& 1 \over \pi~
+\int ~
+0^2\pi~f(t)cos~ nt
+dt,\quad b n = 1 \over \pi~
+\int ~
+0^2\pi~f(t)sin~ nt dt\%&
+\\ \end{align*}
+
+Démonstration Les relations
+\textbar{}an\textbar{}\leq\textbar{}cn\textbar{} +
+\textbar{}c-n\textbar{},
+\textbar{}bn\textbar{}\leq\textbar{}cn\textbar{} +
+\textbar{}c-n\textbar{}, \textbar{}cn\textbar{}\leq 1
+\over 2 (\textbar{}an\textbar{} +
+\textbar{}bn\textbar{}) et
+\textbar{}c-n\textbar{}\leq 1 \over 2
+(\textbar{}an\textbar{} + \textbar{}bn\textbar{})
+(que l'on déduit facilement des relations du paragraphe précédent)
+montrent clairement l'équivalence. Alors on a
+
+\forall~x \in \mathbb{R}~, \textbar{}cne^inx~
++ c -ne^-inx\textbar{}\leq\textbar{}c
+n\textbar{} + \textbar{}c-n\textbar{}
+
+qui est une série convergente indépendante de x. On a donc la
+convergence normale de la série et en particulier la continuité de sa
+somme. Cette somme est évidemment périodique de période 2\pi~ puisque
+toutes les applications
+x\mapsto~cne^inx +
+c-ne^-inx le sont. Soit p \in ℤ. On a aussi
+\forall~~x \in \mathbb{R}~,
+\textbar{}(cne^inx +
+c-ne^-inx)e^-ipx\textbar{}\leq\textbar{}cn\textbar{}
++ \textbar{}c-n\textbar{} ce qui montre que la série
+c0e^-ipx +\
+\sum  n≥1(cne^inx~
++ c-ne^-inx)e^-ipx converge normalement
+sur \mathbb{R}~, donc sur {[}0,2\pi~{]}. Ceci \\\\jmathmathmathmathustifie donc dans le calcul suivant
+l'interversion du signe d'intégrale et du signe somme
+
+\begin{align*} \int ~
+0^2\pi~f(t)e^-ipt dt&& \%&
+\\ & =& \int ~
+0^2\pi~\left (c 0e^-ipt
++ \sum n≥1(cne^int~
++ c -ne^-int)e^-ipt\right
+) dt \%& \\ & =&
+c0\int ~
+0^2\pi~e^-ipt dt \%&
+\\ & \text &
++\sum n=1^+\infty~~\left
+(c n \\int  ~
+0^2\pi~e^i(n-p)t dt + c -n
+\\int  ~
+0^2\pi~e^-i(n+p)t dt\right )\%&
+\\ & =& 2\pi~\left
+(c0\deltap^0 + \\sum
+n=1^+\infty~(c n\deltap^n + c
+-n\deltap^-n)\right ) = 2\pi~c p
+\%& \\ \end{align*}
+
+en distinguant les différents cas possibles p = 0, p ≥ 1 ou p \leq-1. Les
+relations sur les an et bn s'en déduisent facilement
+par les formules du premier paragraphe.
+
+Remarque~14.2.2 La même technique permet d'aboutir aux mêmes formules
+dès que la série trigonométrique converge uniformément sur un segment de
+longueur 2\pi~.
+
+{[}
+{[}
+{[}
+{[}

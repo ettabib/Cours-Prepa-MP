@@ -1,0 +1,335 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{2.5 Dualité~: approche générale}
+
+Cette section ne figure pas au programme des classes préparatoires. Elle
+reprend les définitions et les résultats de la section précédente en les
+généralisant.
+
+\paragraph{2.5.1 Notion de dual. Orthogonalité}
+
+Définition~2.5.1 Soit E un K-espace vectoriel . On appelle forme
+linéaire sur E toute application linéaire de E dans K. On appelle dual
+de E le K-espace vectoriel E^∗ = L(E,K).
+
+Remarque~2.5.1 On dispose d'une application bilinéaire de
+E^∗\times E dans K donnée par \langle
+f∣x\rangle = f(x) appelée la
+forme bilinéaire canonique. A cette forme bilinéaire est associée une
+notion d'orthogonalité. On notera donc
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) si A \subset~ E, A^\bot = \f \in
+  E^∗∣\forall~~x
+  \in A, f(x) = 0\
+\item
+  (ii) si B \subset~ E^∗, B^o = \x \in
+  E∣\forall~~f \in B, f(x) =
+  0\
+\end{itemize}
+
+Proposition~2.5.1 Les notations A,A1,A2 désignant
+des parties de E et B,B1,B2 désignant des parties de
+E^∗, on a
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) A^\bot et B^o sont des sous-espaces vectoriels
+  de E^∗ et E~; A^\bot =\
+  \mathrmVect(A)^\bot et B^o
+  =\
+  \mathrmVect(B)^o
+\item
+  (ii) A1 \subset~ A2 \rigtharrow~ A1^\bot⊃
+  A2^\bot et B1 \subset~ B2 \rigtharrow~
+  B1^o ⊃ B2^o
+\item
+  (iii) A \subset~ (A^\bot)^o et B \subset~
+  (B^o)^\bot
+\item
+  (iv) Soit A un sous-espace vectoriel de E, alors A^\bot =
+  \0\ \Leftrightarrow A =
+  E et A^\bot = E^∗\Leftrightarrow A =
+  \0\.
+\item
+  (v) Soit B un sous-espace vectoriel de E^∗, alors
+  B^o = E \Leftrightarrow B =
+  \0\.
+\end{itemize}
+
+Démonstration Les propriétés (i),(ii) et (iii) sont évidentes ainsi que
+les parties '' ⇐'' de (iv) et (v).
+
+Montrons donc que A\neq~E \rigtharrow~
+A^\bot\neq~\0\.
+Soit (ei)i\inI une base de A que l'on complète en
+(ei)i\inJ base de E. Soit i0 \in J \diagdown I et f
+l'application qui à x associe sa i0-ième coordonnée dans la
+base. On a f\neq~0 et f \in A^\bot.
+
+Montrons maintenant que
+A\neq~\0\ \rigtharrow~
+A^\bot\neq~E^∗. Pour cela soit
+x \in A \diagdown\0\. On complète x en une base
+(ei)i\inI de E avec x = ei0. Soit
+f l'application qui à x associe sa i0-ième coordonnée dans la
+base. On a f(x)\neq~0, donc
+f∉A^\bot.
+
+Montrons maintenant que
+B\neq~\0\ \rigtharrow~
+B^o\neq~E. Soit f \in B
+\diagdown\0\. On a
+f\neq~0, donc \exists~x \in E,
+f(x)\neq~0. Dans ce cas
+x∉B^o, ce qui achève la
+démonstration.
+
+On prendra garde qu'on peut avoir B^o =
+\0\ avec
+B\neq~E^∗ (prendre par exemple E =
+\mathbb{R}~{[}X{]} et B =\
+\mathrmVect(\epsilonx,x \in ℤ) où \epsilonx(P)
+= P(x)~; on a B^o = \0\
+alors que \epsilon1\diagup2∉B).
+
+\paragraph{2.5.2 Hyperplans}
+
+Définition~2.5.2 On appelle hyperplan de E tout sous-espace vectoriel H
+de E vérifiant les conditions équivalentes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) dim~ E\diagupH = 1
+\item
+  (ii) \exists~f \in
+  E^∗\diagdown\0\, H
+  = \mathrmKer~f
+\item
+  (iii) H admet une droite comme supplémentaire.
+\end{itemize}
+
+Démonstration (i) \rigtharrow~(ii)~: prendre \overlinee une base
+de E\diagupH et écrire \pi~(x) = f(x)\overlinee.
+
+(ii) \rigtharrow~ (iii)~: on prend a \in E tel que f(a)\neq~0.
+Tout élément x s'écrit de manière unique sous la forme x = (x - f(x)
+\over f(a) a) + f(x) \over f(a) a
+avec x - f(x) \over f(a) a
+\in\mathrmKer~f, soit E
+= \mathrmKer~f \oplus~ Ka.
+
+(iii) \rigtharrow~(i)~: tout supplémentaire de H est isomorphe à E\diagupH.
+
+Théorème~2.5.2 Soit H un hyperplan de E. Alors H^\bot est de
+dimension 1 (droite vectorielle)~: deux formes linéaires nulles sur H
+sont proportionnelles.
+
+Démonstration Si E = H \oplus~ Ka et H =\
+\mathrmKerf, soit g \in H^\bot. Alors g et 
+g(a) \over f(a) f coïncident sur H et sur Ka, donc sont
+égales.
+
+\paragraph{2.5.3 Bidual}
+
+Définition~2.5.3 On désigne par E^∗∗ le dual de
+E^∗.
+
+Remarque~2.5.2 Si E est de dimension finie, E^∗ aussi et
+dim E^∗~ =\
+dim E. On en déduit que E^∗∗ est aussi de dimension finie
+encore égale à dim~ E.
+
+Théorème~2.5.3 L'application u : E \rightarrow~ E^∗∗,
+x\mapsto~ux définie par ux(f) =
+f(x) est une application linéaire in\\\\jmathmathmathmathective. Si E est un espace
+vectoriel de dimension finie, c'est un isomorphisme d'espaces
+vectoriels.
+
+Démonstration En effet, cette application est visiblement linéaire et si
+x \in\mathrmKer~u, on a
+
+\forall~f \in E^∗, f(x) = u x~(f) =
+0(f) = 0
+
+et donc x \in (E^∗)^o =
+\0\~; elle est donc in\\\\jmathmathmathmathective. Si E
+est un espace vectoriel de dimension finie, on a une application
+linéaire in\\\\jmathmathmathmathective entre deux espaces de même dimension finie, elle est
+donc bi\\\\jmathmathmathmathective.
+
+\paragraph{2.5.4 Transposée}
+
+Définition~2.5.4 Soit u \in L(E,F). On note ^tu :
+F^∗\rightarrow~ E^∗ définie par ^tu(g) = g \cdot u
+(c'est une application linéaire).
+
+Remarque~2.5.3 Cela revient à poser, pour x \in E et g \in F^∗,
+\langle
+^tu(g)∣x\rangle
+E =\langle
+g∣u(x)\rangle F.
+
+Théorème~2.5.4 On a les propriétés suivantes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) u\mapsto~^tu est linéaire de L(E,F)
+  dans L(F^∗,E^∗).
+\item
+  (ii) u \in L(E,F),v \in L(F,G)~; alors ^t(v \cdot u) =
+  ^tu \cdot^tv
+\item
+  (iii) Si u est bi\\\\jmathmathmathmathective, ^tu aussi et
+  (^tu)^-1 = ^t(u^-1)
+\item
+  (iv)
+  \mathrmKer^t~u
+  =
+  (\mathrmImu)^\bot~
+\item
+  (v)
+  \mathrmIm^t~u =
+  (\mathrmKeru)^\bot~
+\end{itemize}
+
+Démonstration (i) et (ii) sont très faciles à partir de la définition.
+(iii) découle immédiatement de (ii) en écrivant que v \cdot u =
+\mathrmIdE et u \cdot v =
+\mathrmIdF.
+
+Pour (iv), on a g
+\in\mathrmKer^t~u
+\Leftrightarrow \forall~~x \in E,
+^tu(g)(x) = 0 \Leftrightarrow
+\forall~~x \in E, g(u(x)) = 0
+\Leftrightarrow g \in
+(\mathrmImu)^\bot~.
+
+Pour (v), on remarque d'abord que f
+\in\mathrmIm^t~u
+\rigtharrow~\existsg, f = g \cdot u \rigtharrow~\\forall~~x
+\in\mathrmKer~u, f(x) = 0 \rigtharrow~ f
+\in
+(\mathrmKeru)^\bot~,
+soit
+\mathrmIm^t~u \subset~
+(\mathrmKeru)^\bot~.
+Inversement, soit f \in
+(\mathrmKeru)^\bot~.
+On définit g1 forme linéaire sur
+\mathrmIm~u par
+g1(y) = f(x) si y = u(x)~; on vérifie en effet que f(x) est
+indépendant du choix de x tel que y = u(x) car f est nulle sur
+\mathrmKer~u. Soit alors V
+un supplémentaire de
+\mathrmIm~u dans F. On
+définit g : F \rightarrow~ K par g(y1 + y2) =
+g1(y1) si y1
+\in\mathrmImu et y2~
+\in V . On a bien f = g \cdot u = ^tu(g). Donc
+(\mathrmKeru)^\bot\subset~\\mathrmIm^t~u
+et donc l'égalité.
+
+\paragraph{2.5.5 Dualité en dimension finie}
+
+Proposition~2.5.5 Soit E un espace vectoriel de dimension finie, \mathcal{E} =
+(e1,\\ldots,en~)
+une base de E. La famille \mathcal{E}' =
+(e1^∗,\\ldots,en^∗~)
+de E^∗ définie par ei^∗(e\\\\jmathmathmathmath) =
+\deltai^\\\\jmathmathmathmath est une base de E^∗ appelée la base
+duale de la base \mathcal{E}
+
+Démonstration On vérifie en effet immédiatement qu'elle est libre et
+elle a le bon cardinal.
+
+Théorème~2.5.6 Soit E un espace vectoriel de dimension finie.
+L'application \mathcal{E}\rightarrow~\mathcal{E}' est une bi\\\\jmathmathmathmathection de l'ensemble des bases de E sur
+l'ensemble des bases de E^∗.
+
+Démonstration In\\\\jmathmathmathmathectivité~: si
+((e1,\\ldots,en~)
+et
+(e1',\\ldots,en~')
+sont deux bases qui ont même base duale, on a pour toute f \in
+E^∗, f(ei) = f(ei') et donc ei
+= ei'. Sur\\\\jmathmathmathmathectivité~: soit ℱ =
+(f1,\\ldots,fn~)
+une base de E^∗ et soit ℱ sa base duale (dans
+E^∗∗). Soit u l'isomorphisme de E sur E^∗∗, et \mathcal{E} =
+u^-1(ℱ'), base de E. On a alors fi(e\\\\jmathmathmathmath) =
+ue\\\\jmathmathmathmath(fi) =
+f\\\\jmathmathmathmath^∗(fi) = \deltai^\\\\jmathmathmathmath, donc ℱ est
+la base duale de la base \mathcal{E}.
+
+Corollaire~2.5.7 Soit E un espace vectoriel de dimension finie.
+
+\begin{itemize}
+\item
+  (i) Soit A un sous-espace vectoriel de E. On a
+
+  dim E =\ dim~ A
+  + dim A^\bot~\text
+  et (A^\bot)^o = A
+\item
+  (ii) Soit B un sous-espace vectoriel de E^∗. On a
+
+  dim E =\ dim~ B
+  + dim B^o~\text
+  et (B^o)^\bot = B
+\end{itemize}
+
+Démonstration Soit
+(e1,\\ldots,ep~)
+une base de A que l'on complète en
+(e1,\\ldots,en~)
+base de E. On vérifie immédiatement que A^\bot
+=\
+\mathrmVect(ep+1^∗,\\ldots,en^∗~)
+d'où le résultat sur la dimension. On montre de même le résultat sur la
+dimension de B^o. Les égalités découlent alors des inclusions
+et du fait que les espaces ont même dimension.
+
+Corollaire~2.5.8 Soit E un espace vectoriel de dimension finie,
+f1,\\ldots,fk~
+\in E^∗, V = \x \in
+E∣f1(x) =
+\\ldots~ =
+fk(x) = 0\. Alors
+dim V =\ dim~ E
+-\mathrmrg(f1,\\\ldots,fk~).
+
+Théorème~2.5.9 Soit E et F deux espaces vectoriels de dimensions finies,
+u \in L(E,F). Alors
+\mathrmrg~u
+= \mathrmrg^t~u.
+
+Démonstration
+\mathrmrg^t~u
+= dim~
+\mathrmIm^t~u
+= dim~
+(\mathrmKeru)^\bot~
+= dim E -\ dim~
+\mathrmKer~u
+= \mathrmrg~u.
+
+{[}
+{[}
+{[}
+{[}

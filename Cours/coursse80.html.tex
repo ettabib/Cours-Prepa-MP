@@ -1,0 +1,153 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{14.4 Fonctions périodiques de période T}
+
+Remarque~14.4.1 Remarquons que si f est périodique de période T, alors
+\tildef définie par \tildef(t) =
+f( T \over 2\pi~ t) est périodique de période 2\pi~ et l'on
+a f(x) =\tilde f( 2\pi~ \over T x).
+Ceci permet d'adapter tous les résultats précédents aux fonctions de
+période T.
+
+On pose
+
+\begin{align*} (f∣g)&
+=& 1 \over T \int ~
+0^T\overlinef(t)g(t) dt = 1
+\over T \int ~
+a^a+T\overlinef(t)g(t) dt\%&
+\\
+\\textbar{}f\\textbar{}2^2&
+=& (f∣f) = 1 \over T
+\int ~
+0^T\textbar{}f(t)\textbar{}^2 dt \%&
+\\ en(t)& =&
+e^2i\pi~nt\diagupT \%& \\
+\end{align*}
+
+Alors (en)n\inℤ est une famille orthonormée de C. On
+définit les coefficients de Fourier de f \inC par
+
+\begin{align*} \forall~~n \in
+ℤ,\quad cn(f)& =&
+(en∣f) = 1 \over
+T \int ~
+0^Tf(t)e^-2\pi~int\diagupT dt\%&
+\\ \forall~~n ≥
+0,\quad an(f)& =& 2 \over
+T \int ~
+0^Tf(t)cos~  2\pi~nt
+\over T dt \%& \\
+\forall~n ≥ 1,\quad bn~(f)&
+=& 2 \over T \int ~
+0^Tf(t)sin~  2\pi~nt
+\over T dt \%& \\
+\end{align*}
+
+la série de Fourier de f par
+
+\begin{align*} c0(f)& +&
+\\sum
+n≥1(cn(f)e^2\pi~inx\diagupT + c
+-n(f)e^-2\pi~inx\diagupT) \%& \\ &
+=& a0(f) \over 2 +
+\\sum
+n≥1(an(f)\cos  2\pi~nx
+\over T + bn(f)\sin 2\pi~nx
+\over T )\%& \\
+\end{align*}
+
+et on a les théorèmes
+
+Théorème~14.4.1 (Bessel). Soit f : \mathbb{R}~ \rightarrow~ \mathbb{C} continue par morceaux et
+périodique de période T. Alors la série
+\textbar{}c0(f)\textbar{}^2
++ \\sum ~
+n≥1(\textbar{}cn(f)\textbar{}^2 +
+\textbar{}c-n(f)\textbar{}^2) est convergente et on
+a
+
+\textbar{}c0(f)\textbar{}^2 +
+\sum n=1^+\infty~(\textbar{}c~
+n(f)\textbar{}^2 + \textbar{}c
+-n(f)\textbar{}^2) \leq\\textbar{}
+f\\textbar{} 2^2
+
+Théorème~14.4.2 (Dirichlet). Soit f : \mathbb{R}~ \rightarrow~ \mathbb{C} de classe \mathcal{C}^1 par
+morceaux et périodique de période T. Alors la série de Fourier de f
+converge sur \mathbb{R}~ et \forall~~x \in \mathbb{R}~,
+
+\begin{align*} f(x^+) +
+f(x^-) \over 2 && \%&
+\\ & =& c0(f) +
+\sum n=1^+\infty~(c~
+n(f)e^2\pi~inx\diagupT + c -n(f)e^-2\pi~inx\diagupT)
+\%& \\ & =& a0(f)
+\over 2 + \\sum
+n=1^+\infty~(a n(f)\cos  2\pi~nx
+\over T + bn(f)\sin  2\pi~nx
+\over T )\%& \\
+\end{align*}
+
+Théorème~14.4.3 (Dirichlet). Soit f : \mathbb{R}~ \rightarrow~ \mathbb{C} périodique de période Tde
+classe \mathcal{C}^1 par morceaux et continue. Alors la série
+\textbar{}c0(f)\textbar{} +\
+\sum ~
+n≥1(\textbar{}cn(f)\textbar{} +
+\textbar{}c-n(f)\textbar{}) converge, la série de Fourier de f
+converge normalement sur \mathbb{R}~ et on a \forall~~x \in \mathbb{R}~,
+
+\begin{align*} f(x)& =& c0(f) +
+\sum n=1^+\infty~(c~
+n(f)e^2\pi~inx\diagupT + c -n(f)e^-2\pi~inx\diagupT)
+\%& \\ & =& a0(f)
+\over 2 + \\sum
+n=1^+\infty~(a n(f)\cos  2\pi~nx
+\over T + bn(f)\sin  2\pi~nx
+\over T )\%& \\
+\end{align*}
+
+(autrement dit f est somme de sa série de Fourier).
+
+Théorème~14.4.4 Soit f : \mathbb{R}~ \rightarrow~ \mathbb{C} périodique de période T de classe
+C^k. Alors
+
+\forall~n \in ℤ, cn~(f) =
+\left ( 2\pi~in \over T
+\right )^kc n(f^(k))
+
+et, quand \textbar{}n\textbar{} tend vers + \infty~, cn(f) = o( 1
+\over n^k ).
+
+Théorème~14.4.5 (Parseval-Plancherel). Soit f : \mathbb{R}~ \rightarrow~ \mathbb{C} périodique de
+période T et continue par morceaux. Alors
+
+\begin{align*}
+\\textbar{}f\\textbar{}2^2&
+=& 1 \over T \int ~
+0^T\textbar{}f(t)\textbar{}^2 dt \%&
+\\ & =&
+\textbar{}c0(f)\textbar{}^2 +
+\sum n=1^+\infty~(\textbar{}c~
+n(f)\textbar{}^2 + \textbar{}c
+-n(f)\textbar{}^2) \%& \\ &
+=& \textbar{}a0(f)\textbar{}^2
+\over 4 + 1 \over 2
+\sum n=1^+\infty~(\textbar{}a~
+n(f)\textbar{}^2 + \textbar{}b
+n(f)\textbar{}^2)\%& \\
+\end{align*}
+
+{[}
+{[}
+{[}
+{[}

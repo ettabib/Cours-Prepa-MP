@@ -1,0 +1,976 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{16.4 Equation différentielle linéaire d'ordre n}
+
+\paragraph{16.4.1 Généralités}
+
+Soit E un K espace vectoriel normé de dimension finie et considérons
+\ell0,\\ldots,\elln-1~
+des applications continues de I intervalle de \mathbb{R}~ dans L(E). Soit g : I \rightarrow~
+E continue. On peut alors considérer l'équation différentielle linéaire
+d'ordre n
+
+y^(n) = \ell n-1(t).y^(n-1) +
+\\ldots + \ell~
+0(t).y + g(t)
+
+En introduisant la fonction inconnue Y =
+(y,y',\\ldots,y^(n-1)~),
+on sait que cette équation est équivalente par réduction à l'ordre 1, à
+l'équation Y ' = L(t).Y + G(t) où l'on a posé
+L(t).(y0,\\ldots,yn-1~)
+=
+(y1,\\ldots,yn-1,\elln-1(t).yn-1~
++ \\ldots~ +
+\ell0(t).y0) est clairement une application linéaire de
+E^n dans lui même et où G(t) =
+(0,\\ldots~,0,g(t))
+est une application continue de I dans E^n. Ceci va nous
+permettre d'appliquer toute la théorie des équations différentielles
+linéaires d'ordre 1 aux équations différentielles linéaires d'ordre n en
+tenant compte de ce que l'application
+\phi\mapsto~(\phi,\phi',\\ldots,\phi^(n-1)~)
+est une bi\\\\jmathmathmathmathection de l'ensemble des solutions de l'équation d'ordre n,
+y^(n) = \elln-1(t).y^(n-1) +
+\\ldots~ +
+\ell0(t).y + g(t) sur l'ensemble des solutions de l'équation
+linéaire d'ordre 1, Y ' = L(t).Y + G(t), cette bi\\\\jmathmathmathmathection étant
+visiblement linéaire dans le cas où cela a un sens, c'est-à-dire lorsque
+ces deux ensembles sont des espaces vectoriels, soit encore dans le cas
+d'équations homogènes g = 0 (ce qui équivaut à G = 0).
+
+Par la suite, nous nous intéresserons exclusivement au cas où E = K (le
+corps de base). Le lecteur n'aura aucun mal à formuler les résultats
+dans le cas d'un E quelconque, tout au moins lorsque cela aura un sens.
+L'équation différentielle d'ordre n s'écrit alors sous la forme
+
+y^(n) = a n-1(t)y^(n-1) +
+\\ldots + a~
+0(t)y + b(t)
+
+où les fonctions
+a0,\\ldots,an-1~,b
+sont des fonctions continues de I dans le corps de base K. L'application
+\phi\mapsto~(\phi,\phi',\\ldots,\phi^(n-1)~)
+est une bi\\\\jmathmathmathmathection de l'ensemble des solutions de l'équation d'ordre n
+sur l'ensemble des solutions de l'équation d'ordre 1, Y ' = A(t).Y +
+B(t) avec
+
+A(t) = \left (\matrix\,0
+&1&0&\\ldots~&0
+\cr \⋮~
+&\\ldots&\\\ldots&\\\ldots&\\⋮~
+\cr 0
+&\\ldots&\\\ldots~&0&1
+\cr
+a0(t)&\\ldots&\\\ldots&\\\ldots&an-1(t)~\right
+)
+
+et
+
+B(t) = \left (\matrix\,0
+\cr \⋮~
+& \cr 0 \cr b(t)\right )
+
+cette bi\\\\jmathmathmathmathection étant un isomorphisme de l'espace des solutions de
+l'équation homogène y^(n) =
+an-1(t)y^(n-1) +
+\\ldots~ +
+a0(t)y sur l'espace des solutions de l'équation homogène Y ' =
+A(t).Y .
+
+\paragraph{16.4.2 Théorie de Cauchy-Lipschitz}
+
+Le théorème suivant se déduit immédiatement du théorème correspondant
+pour l'équation Y ' = L(t).Y + B(t)
+
+Théorème~16.4.1 Soit I un intervalle de \mathbb{R}~,
+a0,\\ldots,an-1~,b
+: I \rightarrow~ K continues. Alors toute solution maximale de l'équation
+différentielle linéaire y^(n) =
+an-1(t)y^(n-1) +
+\\ldots~ +
+a0(t)y + b(t) est définie sur I. Pour tout t0 \in I et
+tout
+(y0,\\ldotsyn-1~)
+\in K^n, il existe une et une seule solution (I,\phi) de
+l'équation différentielle linéaire y^(n) =
+an-1(t)y^(n-1) +
+\\ldots~ +
+a0(t)y + b(t) vérifiant \phi(t0) =
+y0,\\ldots,\phi^(n-1)(t0~)
+= yn-1~; pour toute solution (J,\psi) de l'équation
+différentielle vérifiant \psi(t0) =
+y0,\\ldots,\psi^(n-1)(t0~)
+= yn-1, on a~:
+
+\text\$J \subset~ I\$ et \$\psi\$ est la restriction de \$\phi\$ à
+\$J\$.
+
+\paragraph{16.4.3 Structure des solutions de l'équation homogène.
+Wronskien}
+
+Le théorème suivant se déduit immédiatement du théorème correspondant
+pour l'équation Y ' = L(t).Y
+
+Théorème~16.4.2 Soit I un intervalle de \mathbb{R}~,
+a0,\\ldots,an-1~
+: I \rightarrow~ K continues. L'ensemble SH des solutions définies sur I
+de l'équation différentielle homogène y^(n) =
+an-1(t)y^(n-1) +
+\\ldots~ +
+a0(t)y est un espace vectoriel de dimension finie égale à n.
+Plus précisément, pour tout t0 \in I, l'application
+\epsilont0 :
+\phi\mapsto~(\phi(t0),\phi'(t0),\\ldots,\phi^(n-1)(t0~))
+est un isomorphisme d'espaces vectoriels de SH sur
+K^n.
+
+Corollaire~16.4.3 Pour toute famille
+(\phi1,\\ldots,\phik~)
+de solutions de l'équation homogène, on a
+
+\forall~~t \in I,
+\mathrmrg(\phi1,\\\ldots,\phik~)
+=\
+\mathrmrg(\epsilont(\phi1),\\ldots,\epsilont(\phik~))
+
+Dans le cas k = n ceci amène à la définition suivante
+
+Définition~16.4.1 Soit
+(\phi1,\\ldots,\phin~)
+des fonctions de classe C^n de I dans K. On appelle wronskien
+de la famille l'application
+W\phi1,\\ldots,\phin~
+: I \rightarrow~ K,
+
+t\mapsto~\mathrm{det}~
+(\epsilont(\phi1),\\ldots,\epsilont(\phin~))
+= \left
+\textbar{}\matrix\,\phi1(t)
+&\\ldots&\phin~(t)
+\cr \phi1'(t)
+&\\ldots&\phin~'(t)
+\cr
+\\ldots~
+&\\ldots&\\\ldots~
+\cr
+\phi1^(n-1)(t)&\\ldots&\phin^(n-1)(t)~\right
+\textbar{}
+
+Théorème~16.4.4 Soit I un intervalle de \mathbb{R}~,
+a0,\\ldots,an-1~
+: I \rightarrow~ K continues. Soit
+\phi1,\\ldots,\phin~
+des solutions de l'équation différentielle homogène y^(n) =
+an-1(t)y^(n-1) +
+\\ldots~ +
+a0(t)y et W leur wronskien. Alors les conditions suivantes
+sont équivalentes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i)
+  (\phi1,\\ldots,\phin~)
+  est une base de l'espace vectoriel SH des solutions de
+  l'équation homogène y^(n) =
+  an-1(t)y^(n-1) +
+  \\ldots~ +
+  a0(t)y
+\item
+  (ii) \exists~t \in I,
+  W(t)\neq~0
+\item
+  (iii) \forall~~t \in I,
+  W(t)\neq~0
+\end{itemize}
+
+Démonstration Puisque \epsilont est un isomorphisme de SH
+sur K^n,
+(\phi1,\\ldots,\phin~)
+est une base de SH si et seulement
+si~(\epsilont(\phi1),\\ldots,\epsilont(\phin~))
+est une base de K^n, c'est-à-dire si et seulement
+si~\mathrm{det}~
+(\epsilont(\phi1),\\ldots,\epsilont(\phin))\mathrel\neq~~0
+ce qui montre bien l'équivalence des trois assertions. La proposition
+suivante expliquera d'ailleurs complètement l'équivalence entre les
+assertions (ii) et (iii).
+
+Proposition~16.4.5 Soit I un intervalle de \mathbb{R}~,
+a0,\\ldots,an-1~
+: I \rightarrow~ K continues. Soit
+\phi1,\\ldots,\phin~
+des solutions de l'équation différentielle homogène y^(n) =
+an-1(t)y^(n-1) +
+\\ldots~ +
+a0(t)y et W leur wronskien. Alors pour tout y0,t \in I
+on a W(t) = W(t0)exp~
+\left (\int ~
+t0^tan-1(u) du\right
+).
+
+Démonstration On sait que pour dériver W(t) on doit faire la somme de
+tous les déterminants obtenus en dérivant la i-ème ligne et en laissant
+toutes les autres inchangées. Mais comme dans le wronskien, la i + 1-ème
+ligne est la dérivée de la i-ème, en dérivant la i-ème ligne et en
+laissant inchangée la i + 1-ième (si elle existe), le déterminant obtenu
+a deux lignes égales, donc il est nul. On en déduit que le seul
+déterminant non trivialement nul est celui obtenu en dérivant la n-ème
+ligne, soit encore
+
+W'(t) = \left
+\textbar{}\matrix\,\phi1(t)
+&\\ldots&\phin~(t)
+\cr \phi1'(t)
+&\\ldots&\phin~'(t)
+\cr
+\\ldots~
+&\\ldots&\\\ldots~
+\cr
+\phi1^(n-2)(t)&\\ldots&\phin^(n-2)~(t)
+\cr \phi1^(n)(t)
+&\\ldots&\phin^(n)~(t)
+\right \textbar{}
+
+En soustrayant à la dernière ligne a0(t) fois la première,
+a1(t) fois la
+seconde,\\ldots~,
+an-2(t) fois la dernière et tenant compte de ce que
+\phi\\\\jmathmathmathmath^(n)(t) - a0(t)\phi\\\\jmathmathmathmath(t) -
+a1(t)\phi\\\\jmathmathmathmath'(t)
+-\\ldots~ -
+an-2(t)\phi\\\\jmathmathmathmath^(n-2)(t) =
+an-1(t)\phi\\\\jmathmathmathmath^(n-1)(t), on obtient alors
+
+\begin{align*} W'(t)& = \left
+\textbar{}\matrix\,\phi1(t)
+&\\ldots&\phin~(t)
+\cr \phi1'(t)
+&\\ldots&\phin~'(t)
+\cr
+\\ldots~
+&\\ldots&\\\ldots~
+\cr \phi1^(n-2)(t)
+&\\ldots&\phin^(n-2)~(t)
+\cr
+an-1(t)\phi1^(n-1)(t)&\\ldots&an-1(t)\phin^(n-1)(t)~\right
+\textbar{} & \%& \\ & =
+an-1(t)\left
+\textbar{}\matrix\,\phi1(t)
+&\\ldots&\phin~(t)
+\cr \phi1'(t)
+&\\ldots&\phin~'(t)
+\cr
+\\ldots~
+&\\ldots&\\\ldots~
+\cr
+\phi1^(n-2)(t)&\\ldots&\phin^(n-2)~(t)
+\cr
+\phi1^(n-1)(t)&\\ldots&\phin^(n-1)(t)~\right
+\textbar{} = an-1(t)W(t)& \%&
+\\ \end{align*}
+
+en utilisant la linéarité du déterminant par rapport à sa dernière
+ligne. Donc W est solution de l'équation différentielle linéaire
+scalaire d'ordre 1, y' = an-1(t)y ce qui implique
+immédiatement la formule voulue.
+
+Remarque~16.4.1 Les fonctions \phi1 :
+t\mapsto~t et \phi2 :
+t\mapsto~sin~ t ont comme
+wronskien W(t) = \left
+\textbar{}\matrix\,t&sin~
+t\cr 1 &cos~
+t\right \textbar{} = tcos~ t
+- sin~ t. Ce wronskien n'est pas identiquement
+nul et pourtant il s'annule en 0. Ceci montre que ces deux fonctions ne
+peuvent pas être toutes deux solutions d'une même équation
+différentielle homogène d'ordre 2 à coefficients continus sur \mathbb{R}~.
+
+\paragraph{16.4.4 Méthode de variation des constantes}
+
+Supposons connue une base
+(\phi1,\\ldots,\phin~)
+de l'espace SH de l'équation différentielle homogène
+y^(n) = an-1(t)y^(n-1) +
+\\ldots~ +
+a0(t)y et posons \Phi\\\\jmathmathmathmath(t) = \left
+(\matrix\,\phi\\\\jmathmathmathmath(t)
+\cr \phi\\\\jmathmathmathmath'(t) \cr
+\\ldots~
+\cr \phi\\\\jmathmathmathmath^(n-1)(t)\right
+). Alors
+(\Phi1,\\ldots,\Phin~)
+est une base de l'espace des solutions du système homogène Y ' = A(t)Y
+où
+
+A(t) = \left (\matrix\,0
+&1&0&\\ldots~&0
+\cr \⋮~
+&\\ldots&\\\ldots&\\\ldots&\\⋮~
+\cr 0
+&\\ldots&\\\ldots~&0&1
+\cr
+a0(t)&\\ldots&\\\ldots&\\\ldots&an-1(t)~\right
+)
+
+Si b : I \rightarrow~ \mathbb{R}~ est une fonction continue, la résolution de l'équation
+linéaire y^(n) = an-1(t)y^(n-1) +
+\\ldots~ +
+a0(t)y + b(t) est équivalente à la résolution du système
+différentiel linéaire Y ' = A(t)Y + B(t) où B(t) = \left
+(\matrix\,0 \cr
+\⋮~ &
+\cr 0 \cr b(t)\right ).
+Comme nous connaissons une base de l'espace des solutions du système
+homogène, nous pouvons résoudre ce système linéaire en posant Y (t) =
+\lambda~1(t)\Phi1(t) +
+\\ldots~ +
+\lambda~n(t)\Phin(t) où
+\lambda~1,\\ldots,\lambda~n~
+sont des fonctions de classe \mathcal{C}^1 de I dans K. Comme Y (t) =
+\left (\matrix\,y(t)
+\cr y'(t) \cr
+\\ldots~
+\cr y^(n-1)(t)\right ) ceci
+revient à poser
+
+\begin{align*} y(t)& =&
+\lambda~1(t)\phi1(t) +
+\\ldots~ +
+\lambda~n(t)\phin(t) \%& \\
+y'(t)& =& \lambda~1(t)\phi1'(t) +
+\\ldots~ +
+\lambda~n(t)\phin'(t) \%& \\
+\\ldots~& & \%&
+\\ y^(n-1)(t)& =& \lambda~
+1(t)\phi1^(n-1)(t) +
+\\ldots + \lambda~~
+n(t)\phin^(n-1)(t)\%& \\
+\end{align*}
+
+autrement dit, d'après la règle de dérivation des produits, cela revient
+à imposer aux fonctions
+\lambda~1,\\ldots,\lambda~n~
+de vérifier les conditions
+
+\begin{align*} \lambda~1'(t)\phi1(t) +
+\\ldots~ +
+\lambda~n'(t)\phin(t)& =& 0\%&
+\\ \lambda~1'(t)\phi1'(t) +
+\\ldots~ +
+\lambda~n'(t)\phin'(t)& =& 0\%&
+\\ &
+\\ldots~& \%&
+\\
+\lambda~1'(t)\phi1^(n-2)(t) +
+\\ldots + \lambda~~
+n'(t)\phin^(n-2)(t)& =& 0\%&
+\\ \end{align*}
+
+Dans ces conditions, par dérivation de y^(n-1)(t) =
+\lambda~1(t)\phi1^(n-1)(t) +
+\\ldots~ +
+\lambda~n(t)\phin^(n-1)(t), on obtient
+
+\begin{align*} y^(n)(t)& =& \lambda~
+1(t)\phi1^(n)(t) +
+\\ldots + \lambda~~
+n(t)\phin^(n)(t) \%& \\
+& & \quad +
+\lambda~1'(t)\phi1^(n-1)(t) +
+\\ldots + \lambda~~
+n'(t)\phin^(n-1)(t) \%&
+\\ & =&
+\lambda~1(t)\\sum
+k=0^n-1a k(t)\phi1^(k)(t) +
+\ldots + \lambda~~
+n(t)\sum k=0^n-1a~
+k(t)\phin^(k)(t)\%& \\ &
+& \quad + \lambda~1'(t)\phi1^(n-1)(t) +
+\\ldots + \lambda~~
+n'(t)\phin^(n-1)(t) \%&
+\\ & =& \\sum
+k=0^n-1a k(t)\left
+(\lambda~1(t)\phi1^(k)(t) +
+\ldots + \lambda~~
+n(t)\phin^(k)(t)\right ) \%&
+\\ & & \quad +
+\lambda~1'(t)\phi1^(n-1)(t) +
+\\ldots + \lambda~~
+n'(t)\phin^(n-1)(t) \%&
+\\ & =& \\sum
+k=0^n-1a k(t)y^(k)(t) \%&
+\\ & & \quad +
+\lambda~1'(t)\phi1^(n-1)(t) +
+\\ldots + \lambda~~
+n'(t)\phin^(n-1)(t) \%&
+\\ \end{align*}
+
+si bien que
+
+\begin{align*} y^(n)(t) = a
+n-1(t)y^(n-1) +
+\\ldots + a~
+0(t)y + b(t) \Leftrightarrow&& \%&
+\\ & &
+\lambda~1'(t)\phi1^(n-1)(t) +
+\\ldots + \lambda~~
+n'(t)\phin^(n-1)(t) = b(t)\%&
+\\ \end{align*}
+
+En conclusion,
+\lambda~1'(t),\\ldots,\lambda~n~'(t)
+doivent être solutions du système d'équations linéaires
+
+\left \\array
+\lambda~1'(t)\phi1(t) +
+\\ldots~ +
+\lambda~n'(t)\phin(t) & = 0 \cr
+\lambda~1'(t)\phi1'(t) +
+\\ldots~ +
+\lambda~n'(t)\phin'(t) & = 0\cr
+\\ldots~
+\cr \lambda~1'(t)\phi1^(n-2)(t) +
+\\ldots~ +
+\lambda~n'(t)\phin^(n-2)(t)& = 0 \cr
+\lambda~1'(t)\phi1^(n-1)(t) +
+\\ldots~ +
+\lambda~n'(t)\phin^(n-1)(t)& = b(t) 
+\right .
+
+Or ce système est un système de Cramer (son déterminant est le wronskien
+de
+\phi1,\\ldots,\phin~
+qui par hypothèse ne s'annule pas)~; sa résolution conduit à la
+détermination de
+\lambda~1',\\ldots,\lambda~n~'
+et il reste à faire n calculs de primitives de fonctions à valeurs dans
+K pour terminer la résolution de l'équation linéaire.
+
+Méthode. Supposons connue une base
+(\phi1,\\ldots,\phin~)
+de l'espace SH de l'équation différentielle homogène
+y^(n) = an-1(t)y^(n-1) +
+\\ldots~ +
+a0(t)y. On résout l'équation linéaire y^(n) =
+an-1(t)y^(n-1) +
+\\ldots~ +
+a0(t)y + b(t) en posant y(t) = \lambda~1(t)\phi1(t)
++ \\ldots~ +
+\lambda~n(t)\phin(t), où
+\lambda~1,\\ldots,\lambda~n~
+sont des fonctions de classe \mathcal{C}^1 auxquelles on impose les
+conditions
+
+\begin{align*} \lambda~1'(t)\phi1(t) +
+\\ldots~ +
+\lambda~n'(t)\phin(t)& = 0& \%&
+\\ \lambda~1'(t)\phi1'(t) +
+\\ldots~ +
+\lambda~n'(t)\phin'(t)& = 0& \%&
+\\
+\\ldots~& & \%&
+\\
+\lambda~1'(t)\phi1^(n-2)(t) +
+\\ldots + \lambda~~
+n'(t)\phin^(n-2)(t)& = 0& \%&
+\\ \end{align*}
+
+Alors les fonctions
+\lambda~1',\\ldots,\lambda~n~'
+sont solution du système de Cramer
+
+\left \\array
+\lambda~1'(t)\phi1(t) +
+\\ldots~ +
+\lambda~n'(t)\phin(t) & = 0 \cr
+\lambda~1'(t)\phi1'(t) +
+\\ldots~ +
+\lambda~n'(t)\phin'(t) & = 0\cr
+\\ldots~
+\cr \lambda~1'(t)\phi1^(n-2)(t) +
+\\ldots~ +
+\lambda~n'(t)\phin^(n-2)(t)& = 0 \cr
+\lambda~1'(t)\phi1^(n-1)(t) +
+\\ldots~ +
+\lambda~n'(t)\phin^(n-1)(t)& = b(t) 
+\right .
+
+On résout ce système, puis n calculs de primitives permettent de
+déterminer les fonctions
+\lambda~1,\\ldots,\lambda~n~.
+
+\paragraph{16.4.5 Méthode d'abaissement du degré}
+
+Cette méthode ne présente réellement d'intérêt que pour une équation
+linéaire d'ordre 2, y'`= a(t)y' + b(t)y + c(t). Supposons connue une
+solution \phi de l'équation homogène qui ne s'annule pas sur I et faisons
+le changement de fonction inconnue z(t) = y(t) \over
+\phi(t) autrement dit y(t) = z(t)\phi(t). On a alors y'(t) = z'(t)\phi(t) +
+z(t)\phi'(t) et y'`(t) = z'`(t)\phi(t) + 2z'(t)\phi'(t) + z(t)\phi''(t), si bien que
+
+\begin{align*} y'`(t) - a(t)y'(t) - c(t)y(t)&&
+\%& \\ & =& z'`(t)\phi(t) + (2\phi'(t) -
+\phi(t))z'(t) \%& \\ & &
+\quad + (\phi'`(t) - a(t)\phi'(t) - b(t)\phi(t))z(t)\%&
+\\ & =& z'`(t)\phi(t) + (2\phi'(t) -
+\phi(t))z'(t) \%& \\
+\end{align*}
+
+compte tenu de ce que \phi'`(t) - a(t)\phi'(t) - b(t)\phi(t) = 0. On en déduit
+que
+
+\begin{align*} y'`(t) = a(t)y'(t) + b(t)y(t) + c(t)
+\Leftrightarrow&& \%& \\
+& & z'`(t)\phi(t) + (2\phi'(t) - \phi(t))z'(t) = c(t)\%&
+\\ \end{align*}
+
+qui est une équation différentielle d'ordre 1 en la fonction inconnue
+z'(t), que l'on sait donc résoudre à l'aide de deux calculs de
+primitives.
+
+Remarque~16.4.2 Cette méthode n'est à utiliser qu'en dernier recours,
+c'est-à-dire lorsqu'on ne dispose que d'une seule solution de l'équation
+homogène, et on doit tou\\\\jmathmathmathmathours lui préférer (lorsque c'est possible) la
+méthode de variation des constantes. En effet la méthode d'abaissement
+du degré demande que soit réalisée une condition contraignante (une
+solution ne s'annulant pas) et conduit à deux calculs de primitives pour
+obtenir z'(t) et un troisième calcul de primitive pour obtenir z(t). De
+plus ces trois calculs s'enchaînent (toute erreur dans l'un des calculs
+oblige à recommencer l'ensemble des calculs). Par contre, la méthode de
+variation des constantes n'impose aucune condition restrictive aux
+solutions de l'équation homogène et ne nécessite que deux calculs de
+primitives, qui plus est indépendants l'un de l'autre.
+
+\paragraph{16.4.6 Equation homogène à coefficients constants}
+
+Nous étudierons dans ce paragraphe l'équation y^(n) +
+an-1y^(n-1) +
+\\ldots~ +
+a0y = 0 où
+a0,\\ldots,an-1~
+sont des éléments donnés du corps de base K (égal à \mathbb{R}~ ou \mathbb{C}). En cas de
+besoin et pour unifier les notations, nous poserons an = 1.
+
+Définition~16.4.2 Le polynôme \chi(X) = X^n +
+an-1X^n-1 +
+\\ldots~ +
+a0 \in K{[}X{]} est appelé le polynôme caractéristique de
+l'équation homogène y^(n) + an-1y^(n-1)
++ \\ldots~ +
+a0y = 0.
+
+Remarque~16.4.3 t\mapsto~e^\lambda~t est
+solution de y^(n) + an-1y^(n-1) +
+\\ldots~ +
+a0y = 0 si et seulement si~\chi(\lambda~) = 0.
+
+Lemme~16.4.6 Soit P(X) \in K{[}X{]} et \lambda~ \in K. Soit f :
+t\mapsto~P(t)e^\lambda~t de \mathbb{R}~ dans K. Alors
+
+\forall~t \in \mathbb{R}~, f^(n)(t) + a~
+n-1f^(n-1)(t) +
+\\ldots + a~
+0f(t) = e^\lambda~t \\sum
+p=0^n 1 \over p!
+\chi^(p)(\lambda~)P^(p)(t)
+
+Démonstration La formule de Leibnitz nous donne f^(k)(t)
+= \\sum ~
+p=0^kCk^pP^(p)(t)\lambda~^k-pe^\lambda~t
+si bien que
+
+\begin{align*} f^(n)(t) + a
+n-1f^(n-1)(t) +
+\\ldots + a~
+0f(t) = \sum k=0^na~
+kf^(k)(t)&&\%& \\ & =&
+e^\lambda~t \\sum
+k=0^na k \\sum
+p=0^k k! \over p!(k - p)!
+P^(p)(t)\lambda~^k-p \%&
+\\ & =& e^\lambda~t
+\sum 0\leqp\leqk\leqnak~ k!
+\over p!(k - p)! P^(p)(t)\lambda~^k-p
+\%& \\ & =& e^\lambda~t
+\sum p=0^n~ 1
+\over p! P^(p)(t)\\sum
+k=p^na k k! \over (k - p)!
+\lambda~^k-p\%& \\ & =&
+e^\lambda~t \sum p=0^n~ 1
+\over p! \chi^(p)(\lambda~)P^(p)(t) \%&
+\\ \end{align*}
+
+Supposons donc que \lambda~ est une racine de \chi de multiplicité m et que
+deg~ P \leq m - 1. On a alors
+\forall~p \leq m - 1, \chi^(p)~(\lambda~) = 0 et
+\forall~p ≥ m, P^(p)~(t) = 0, si bien que
+\forall~~p \in {[}0,n{]},
+\chi^(p)(\lambda~)P^(p)(t) = 0. On en déduit donc que f :
+t\mapsto~e^\lambda~tP(t) est solution de
+l'équation différentielle y^(n) +
+an-1y^(n-1) +
+\\ldots~ +
+a0y = 0.
+
+Lemme~16.4.7 Soit
+\lambda~1,\\ldots,\lambda~k~
+des éléments distincts de K et
+m1,\\ldots,mk~
+des entiers naturels. Alors la famille des applications
+t\mapsto~t^\\\\jmathmathmathmathe^\lambda~it
+avec 1 \leq i \leq k et 0 \leq \\\\jmathmathmathmath \leq mi - 1 est libre.
+
+Démonstration Supposons que cette famille est liée. Notons n =
+m1 + ⋯ + mk,
+f1,\\ldots,fn~
+ces fonctions. Il existe donc
+\alpha~1,\\ldots,\alpha~n~
+\in K, non tous nuls, tels que \forall~~t \in \mathbb{R}~,
+\alpha~1f1(t) +
+\\ldots~ +
+\alpha~nfn(t) = 0. Fixons t0 \in \mathbb{R}~. Par dérivation
+de l'identité précédente au point t0, on a donc
+\forall~~k \in \mathbb{N}~,
+a1f1^(k)(t0) +
+\\ldots~ +
+\alpha~nfn^(k)(t0) = 0 et en particulier
+la matrice wronskienne \left
+(\matrix\,f1(t0)
+&\\ldots&fn(t0~)
+\cr f1'(t0)
+&\\ldots&fn'(t0~)
+\cr
+\\ldots~
+&\\ldots&\\\ldots~
+\cr
+f1^(n-1)(t0)&\\ldots&fn^(n-1)(t0)~\right
+) n'est pas inversible puisque ses vecteurs colonnes forment une famille
+liée. On en déduit que ses vecteurs lignes forment une famille liée, et
+que donc il existe
+\beta~0,\\ldots,\beta~n-1~
+non tous nuls (mais dépendant de t0) tels que
+
+\forall~~\\\\jmathmathmathmath \in {[}1,n{]},
+\beta~0f\\\\jmathmathmathmath(t0) +
+\beta~1f\\\\jmathmathmathmath'(t0) +
+\\ldots~ +
+\beta~n-1f\\\\jmathmathmathmath^(n-1)(t 0) = 0
+
+Posons alors \chi(X) = \beta~n-1X^n-1 +
+⋯ + \beta~0. Le lemme précédent (où l'on
+remplace n par n - 1) nous montre que si f(t) = e^\lambda~tP(t),
+alors
+
+\beta~0f(t0) + \beta~1f'(t0) +
+\\ldots~ +
+\beta~n-1f^(n-1)(t 0) =
+e^\lambda~t0  \\sum
+p=0^n-1 1 \over p!
+\chi^(p)(\lambda~)P^(p)(t 0)
+
+En particulier, pour P(X) = X^\\\\jmathmathmathmath et \lambda~ = \lambda~i, on
+obtient
+
+\begin{align*} \beta~0f(t0) +
+\beta~1f'(t0) +
+\\ldots~ +
+\beta~n-1f^(n-1)(t 0)& & \%&
+\\ = e^\lambda~it0
+ \sum p=0^\\\\jmathmathmathmath~ 1
+\over p! \chi^(p)(\lambda~ i) \\\\jmathmathmathmath!
+\over (\\\\jmathmathmathmath - p)! t0^\\\\jmathmathmathmath-p& & \%&
+\\ \end{align*}
+
+car les dérivées suivantes de X^\\\\jmathmathmathmath sont nulles. On en déduit
+que
+
+\forall~\\\\jmathmathmathmath \leq mi~ - 1,
+\sum p=0^\\\\jmathmathmathmath~ 1
+\over p! \chi^(p)(\lambda~ i) \\\\jmathmathmathmath!
+\over (\\\\jmathmathmathmath - p)! t0^\\\\jmathmathmathmath-p = 0
+
+autrement dit (compte tenu de  \\\\jmathmathmathmath! \over p!(p-\\\\jmathmathmathmath)! =
+C\\\\jmathmathmathmath^p)
+
+\left \\array
+C0^0\chi(\lambda~i) & = 0 \cr
+C1^0\chi(\lambda~i)t0 +
+C1^1\chi'(\lambda~i) & = 0 \cr
+C2^0\chi(\lambda~i)t0^2 +
+C2^1\chi'(\lambda~i)t +
+C2^2\chi''(\lambda~i) = 0\cr
+&\\ldots~
+\cr
+Cmi-1^0\chi(\lambda~)t0^mi-1
++ \\ldots~ +
+Cm
+i-1^mi-2\chi^(mi-2)(\lambda~)t +
+C
+mi-1^mi-1\chi^(mi-1)(\lambda~
+i)& = 0  \right .
+
+ce qui implique évidemment que \chi(\lambda~i) =
+\\ldots~ =
+\chi^(mi-1)(\lambda~i) = 0. Donc \lambda~i est
+racine de \chi de multiplicité au moins égale à mi. Mais alors la
+somme des multiplicités des racines du polynôme non nul \chi(X) est au
+moins égale à m1 +
+\\ldots~ +
+mk = n alors qu'il est de degré au plus n - 1. C'est absurde,
+ce qui montre que la famille est libre.
+
+Revenons à notre équation différentielle homogène y^(n) +
+an-1y^(n-1) +
+\\ldots~ +
+a0y = 0 et supposons que son polynôme caractéristique \chi(X) est
+scindé sur K (ce qui est automatique si K = \mathbb{C}). Soit
+\lambda~1,\\ldots,\lambda~k~
+ses racines distinctes de multiplicités respectives
+m1,\\ldots,mk~,
+si bien que m1 +
+\\ldots~ +
+mk = n. Alors les n fonctions
+t\mapsto~t^\\\\jmathmathmathmathe^\lambda~it
+avec 1 \leq i \leq k et 0 \leq \\\\jmathmathmathmath \leq mi - 1 sont solutions de l'équation
+différentielle homogène et forment une famille libre. Comme l'espace des
+solutions de l'équation homogène est de dimension n, ces fonctions
+forment une base de l'espace des solutions. Autrement dit les solutions
+de l'équation homogène sont exactement les fonctions qui s'écrivent sous
+la forme
+
+t\mapsto~\\sum
+i=1^k \\sum
+\\\\jmathmathmathmath=0^mi-1\alpha~
+i,\\\\jmathmathmathmatht^\\\\jmathmathmathmathe^\lambda~it =
+\sum i=1^kP~
+i(t)e^\lambda~it
+
+avec Pi(X) =\
+\sum ~
+i=0^mi-1\alpha~i,\\\\jmathmathmathmathX^\\\\jmathmathmathmath \in K{[}X{]}
+et deg Pi \leq mi~ - 1. On a
+donc démontré le résultat suivant
+
+Théorème~16.4.8 Soit
+a0,\\ldots,an-1~
+\in K et l'équation différentielle homogène y^(n) +
+an-1y^(n-1) +
+\\ldots~ +
+a0y = 0. On suppose que le polynôme caractéristique \chi(X) =
+X^n + an-1X^n-1 +
+\\ldots~ +
+a0 est scindé sur K (ce qui est automatique si K = \mathbb{C}). Soit
+\lambda~1,\\ldots,\lambda~k~
+ses racines distinctes de multiplicités respectives
+m1,\\ldots,mk~.
+Alors les solutions de l'équation homogène sont exactement les fonctions
+
+t\mapsto~\\sum
+i=1^kP
+i(t)e^\lambda~it\quad
+\text avec \$P i(X) \in K{[}X{]}\$ et \$deg
+Pi \leq mi - 1\$.
+
+\paragraph{16.4.7 Equation linéaire à coefficients constants}
+
+Il s'agit ici de résoudre une équation différentielle linéaire à
+coefficients constants y^(n) +
+an-1y^(n-1) +
+\\ldots~ +
+a0y = b(t) où b est une application continue de I dans K. Dans
+le cas général, puisque nous savons résoudre l'équation homogène, la
+méthode de variation des constantes permet d'aboutir au résultat au prix
+du calcul de n primitives. Mais d'autre part, il suffit évidemment de
+déterminer une solution particulière de l'équation différentielle
+linéaire pour en avoir la solution générale en a\\\\jmathmathmathmathoutant à cette solution
+particulière la solution générale de l'équation homogène.
+
+Examinons le cas particulier où b(t) = Q(t)e^\mut avec Q(X) \in
+K{[}X{]} et \mu \in K. Nous allons rechercher une solution particulière du
+type f(t) = P(t)e^\mut. On sait alors que
+
+f^(n)(t) + a n-1f^(n-1)(t) +
+\\ldots + a~
+0f(t) = e^\lambda~t \\sum
+p=0^n 1 \over p!
+\chi^(p)(\lambda~)P^(p)(t)
+
+Autrement dit, f sera solution de l'équation linéaire si et seulement
+si~\\sum ~
+p=0^n 1 \over p!
+\chi^(p)(\lambda~)P^(p)(X) = Q(X). Soit m la multiplicité de
+\mu comme racine de \chi (nous poserons m = 0 si \mu n'est pas racine de \chi). On
+a alors \chi(\mu) =
+\\ldots~ =
+\chi^(m-1)(\mu) = 0 et
+\chi^(m)(\mu)\neq~0. On a donc à résoudre
+l'équation
+
+\sum p=m^n~ 1
+\over p! \chi^(p)(\mu)P^(p)(X) = Q(X)
+
+Cela se fera par identification si nous connaissons un ma\\\\jmathmathmathmathorant du degré
+de P. Mais pour cela il suffit d'appliquer le lemme suivant, où l'on
+désigne par Kp{[}X{]} l'espace des polynômes de degré
+inférieur ou égal à p,
+
+Lemme~16.4.9 Soit d \in \mathbb{N}~, l'application \theta :
+P\mapsto~\\\sum
+ p=m^n 1 \over p!
+\chi^(p)(\mu)P^(p)(X) est une application linéaire
+sur\\\\jmathmathmathmathective de Kd+m{[}X{]} dans Kd{[}X{]}.
+
+Démonstration Si deg~ P \leq d + m, alors pour p ≥
+m, on a deg P^(p)~(X) \leq d ce qui
+montre que \theta(P) =\ \\sum
+ p=m^n 1 \over p!
+\chi^(p)(\mu)P^(p)(X) \in K d{[}X{]}. Cette
+application est visiblement linéaire. Cherchons le rang de cette
+application linéaire et pour cela déterminons sa matrice. Si \\\\jmathmathmathmath \leq d + m,
+on a
+
+\theta(X^\\\\jmathmathmathmath) = \sum p=m^\\\\jmathmathmathmath~
+1 \over p! \chi^(p)(\mu) \\\\jmathmathmathmath!
+\over (\\\\jmathmathmathmath - p)! X^\\\\jmathmathmathmath-p =
+\sum p=m^\\\\jmathmathmathmathC~
+\\\\jmathmathmathmath^p\chi^(p)(\mu)X^\\\\jmathmathmathmath-p
+
+si bien que la matrice de \theta dans les bases canoniques
+(1,X,\\ldots,X^d+m~)
+et
+(1,X,\\ldots,X^d~)
+est la matrice
+
+\left ( \includegraphics{cours9x.png}
+\,\right )
+
+Or la matrice formée par les d + 1 dernières colonnes est visiblement
+inversible, ce qui montre que le rang de \theta est égal à d + 1
+= dim Kd~{[}X{]} et donc que \theta est
+sur\\\\jmathmathmathmathective. On a donc la proposition suivante
+
+Proposition~16.4.10 Soit
+a0,\\ldots,an-1~
+\in K, Q \in K{[}X{]} et \mu \in K. L'équation différentielle linéaire
+y^(n) + an-1y^(n-1) +
+\\ldots~ +
+a0y = Q(t)e^\mut admet au moins une solution de la
+forme P(t)e^\mut où P \in K{[}X{]} et
+deg P \leq\ deg~ Q + m, m
+désignant la multiplicité de \mu comme racine du polynôme caractéristique
+de l'équation homogène.
+
+Remarque~16.4.4 Le fait qu'il faille a\\\\jmathmathmathmathouter au degré de Q la
+multiplicité m de \mu comme racine de \chi s'appelle le phénomène de
+résonance. Il implique que même si Q est constante, il peut exister des
+solutions du type P(t)e^\mut avec deg~
+P ≥ 1 qui peuvent être non bornées et entraîner des catastrophes dans le
+système contrôlé par l'équation différentielle.
+
+Remarque~16.4.5 La méthode précédente par identification permet
+également de résoudre des équations du type y^(n) +
+an-1y^(n-1) +
+\\ldots~ +
+a0y = \\sum ~
+i=1^qQi(t)e^\muit en
+remarquant que si fi est une particulière de l'équation
+y^(n) + an-1y^(n-1) +
+\\ldots~ +
+a0y = Qi(t)e^\muit, alors
+f1 + ⋯ + fq est solution
+de y^(n) + an-1y^(n-1) +
+\\ldots~ +
+a0y = \\sum ~
+i=1^qQi(t)e^\muit (ce que
+l'on appelle le principe de superposition des solutions). Elle
+s'applique en particulier à des équations du type y^(n) +
+an-1y^(n-1) +
+\\ldots~ +
+a0y = Q(t)cos~ (\omegat) ou
+y^(n) + an-1y^(n-1) +
+\\ldots~ +
+a0y = Q(t)sin~ (\omegat) pour lesquelles
+il suffit de passer en exponentielle complexe~: poser
+cos (\omegat) = 1 \over 2~
+(e^i\omegat + e^-i\omegat) et sin~
+(\omegat) = 1 \over 2i (e^i\omegat -
+e^-i\omegat).
+
+\paragraph{16.4.8 Equations d'Euler}
+
+Considérons une équation différentielle homogène du type
+t^ny^(n) +
+an-1t^n-1y^(n-1) +
+\\ldots~ +
+a1ty' + a0y = 0 que nous étudierons sur {]}0,+\infty~{[}
+(il suffit de changer t en - t pour faire une étude similaire sur {]}
+-\infty~,0{[}). Faisons le changement de variable t = e^u, soit
+encore u = log~ t. Nous poserons donc y(t) =
+z(u) soit encore y(t) = z(log~ t). Une
+récurrence facile montre que
+
+\forall~k \in \mathbb{N}~, y^(k)~(t) = 1
+\over t^k  \\sum
+p=0^k\lambda~ k,pz^(p)(log t)
+
+C'est clair pour k = 0 et si c'est vrai pour k, on a
+
+\begin{align*} y^(k+1)(t)& =& - k
+\over t^k+1  \\sum
+p=0^k\lambda~ k,pz^(p)(log t) + 1
+\over t^k  \\sum
+p=0^k\lambda~ k,p 1 \over t
+z^(p+1)(log t) \%& \\ & =&
+- k \over t^k+1 
+\sum p=0^k\lambda~~
+k,pz^(p)(log t) + 1 \over
+t^k+1  \\sum
+p=0^k\lambda~ k,pz^(p+1)(log t)\%&
+\\ & =& 1 \over
+t^k+1  \\sum
+p=0^k+1\lambda~ k+1,pz^(p)(log t) \%&
+\\ \end{align*}
+
+avec \lambda~k+1,p = -k\lambda~k,p + \lambda~k,p-1 si 1 \leq p \leq
+k, \lambda~k+1,0 = -k\lambda~k,0 et \lambda~k+1,k+1 =
+\lambda~k,k.
+
+On a donc t^ky^(k)(t) =\
+\sum ~
+p=0^k\lambda~k,pz^(p)(u) si bien que
+l'équation devient une équation homogène d'ordre n à coefficients
+constants en la fonction z(u). Ses solutions sont du type z(u)
+= \\sum ~
+i=1^ke^\lambda~iuPi(u) si bien
+que les solutions de l'équation d'Euler sont de la forme
+
+y(t) = \\sum
+i=1^kt^\lambda~i Pi(log t)
+
+On retiendra
+
+Proposition~16.4.11 Dans une équation d'Euler
+t^ny^(n) +
+an-1t^n-1y^(n-1) +
+\\ldots~ +
+a1ty' + a0y = 0, le changement de variable t =
+e^u conduit à une équation différentielle homogène d'ordre n
+à coefficients constants.
+
+{[}
+{[}
+{[}
+{[}

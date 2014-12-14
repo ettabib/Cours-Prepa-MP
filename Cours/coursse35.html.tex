@@ -1,0 +1,422 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}{]}
+{[}
+
+\subsubsection{7.1 Convergence des suites}
+
+\paragraph{7.1.1 Monotonie (suites à termes réels)}
+
+Théorème~7.1.1 Soit (xn) une suite croissante de nombres
+réels. Alors la suite est convergente si et seulement si~elle est
+ma\\\\jmathmathmathmathorée. Dans ce cas on a limxn~
+= supxn~.
+
+Démonstration On sait dé\\\\jmathmathmathmathà que toute suite convergente est bornée, donc
+ma\\\\jmathmathmathmathorée. Inversement, si la suite est ma\\\\jmathmathmathmathorée, soit l
+= supxn~ et \epsilon \textgreater{} 0. Par
+définition de la borne supérieure, il existe n0 tel que l - \epsilon
+\textless{} xn0 \leq l. Pour n ≥ n0, on a l -
+\epsilon \textless{} xn0 \leq xn \leq l ce qui montre
+que la suite converge vers l.
+
+Remarque~7.1.1 On a un résultat analogue avec les suites décroissantes
+et minorées.
+
+Corollaire~7.1.2 Soit (an) et (bn) deux suites de
+nombres réels vérifiant
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) (an) est croissante et (bn) décroissante
+\item
+  (ii) \forall~n \in \mathbb{N}~, an \leq bn~
+\item
+  (iii) lim(bn - an~) = 0
+\end{itemize}
+
+Alors les suites (an) et (bn) convergent et ont la
+même limite \ell qui vérifie
+
+\forall~n \in \mathbb{N}~, an \leq \ell \leq bn~
+
+On dit que deux telles suites sont ad\\\\jmathmathmathmathacentes.
+
+Démonstration On remarque que \forall~~p,q,
+ap \leq bq~; en effet si p \leq q on a ap \leq
+aq \leq bq et si p \textgreater{} q, on a ap
+\leq bp \leq aq. La suite (an) est croissante
+ma\\\\jmathmathmathmathorée par b0, donc converge. De même la suite (bn)
+converge et la propriété (iii) implique qu'elles ont la même limite.
+
+Exemple~7.1.1 Posons un = 1 + 1 \over 2 +
+\\ldots~ + 1
+\over n - log~ n. On a
+un+1 - un = 1 \over n+1
+- log (n + 1) -\ log~
+n = 1 \over n+1 -\int ~
+n^n+1 dt \over t
+=\int  n^n+1~( 1
+\over n+1 - 1 \over t ) dt \leq 0.
+Posons vn = 1 + 1 \over 2 +
+\\ldots~ + 1
+\over n-1 - log~ n. On a de
+même vn+1 - vn =\int ~
+n^n+1( 1 \over n - 1
+\over t ) dt ≥ 0. On a donc (un)
+décroissante, (vn) croissante, vn \leq un,
+lim(vn - un~) = 0. Donc les
+suites convergent. Soit \gamma leur limite commune (la constante d'Euler). On
+a donc 1 + 1 \over 2 +
+\\ldots~ + 1
+\over n = log~ n + \gamma +
+\epsilonn avec lim\epsilonn~ = 0.
+
+\paragraph{7.1.2 Critère de Cauchy}
+
+Dans un espace métrique complet, une suite converge si et seulement
+si~elle vérifie le critère de Cauchy. Cela peut servir aussi bien comme
+critère de convergence (exemple des suites xn+1 =
+f(xn) où f est contractante) que comme critère de divergence.
+
+Exemple~7.1.2 Posons xn = 1 + 1 \over 2 +
+\\ldots~ + 1
+\over n . On a x2n - xn = 1
+\over n+1 +
+\\ldots~ + 1
+\over 2n ≥ n \times 1 \over 2n = 1
+\over 2 . La suite ne vérifie donc pas le critère de
+Cauchy (bien que lim(xn+1~ -
+xn) = 0), donc elle ne converge pas.
+
+\paragraph{7.1.3 Valeurs d'adhérences, limites inférieures et
+supérieures}
+
+Proposition~7.1.3 Soit E un espace métrique et (xn) une suite
+de E. L'ensemble de ses valeurs d'adhérences est fermé dans E.
+
+Démonstration On a vu dans le chapitre sur les compacts que l'ensemble X
+des valeurs d'adhérences de la suite (xn) est
+\⋂ ~
+N\in\mathbb{N}~\overlineXN avec XN =
+\xn∣n ≥
+N\. Comme intersection de fermés, c'est un fermé. On
+peut aussi le redémontrer directement. Soit x
+\in\overlineX et V \in V (x). Soit U ouvert tel que x \in U
+\subset~ V . On a U \bigcap X\neq~\varnothing~. Soit y \in U \bigcap X. Comme U
+est ouvert, U est un voisinage de la valeur d'adhérence y et donc
+\n \in \mathbb{N}~∣xn \in
+U\ est infini~; il en est de même a fortiori de
+\n \in \mathbb{N}~∣xn \in V
+\, donc x est encore valeur d'adhérence de la suite.
+
+Théorème~7.1.4 Soit E un espace métrique compact et (xn) une
+suite de E.
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) La suite a au moins une valeur d'adhérence
+\item
+  (ii) La suite converge si et seulement si~elle a une unique valeur
+  d'adhérence.
+\end{itemize}
+
+Démonstration L'affirmation (i) n'est autre que la définition d'un
+compact.
+
+(ii) La condition est évidemment nécessaire. Supposons la remplie et
+soit \ell cette unique valeur d'adhérence. Supposons que \ell n'est pas limite
+de la suite. Ceci signifie qu'il existe U ouvert contenant \ell tel que
+\forall~N \in \mathbb{N}~, \\exists~n ≥ N tel
+que xn∉U. On construit ainsi
+facilement une sous suite (x\phi(n)) telle que
+\forall~n, x\phi(n)~ \in E \diagdown U (prendre \phi(n) le
+plus petit entier supérieur à N = \phi(n - 1) + 1 vérifiant la condition).
+Comme E \diagdown U est fermé dans un compact, c'est un compact et la suite
+(x\phi(n)) doit avoir une valeur d'adhérence \ell' \in E \diagdown U. Mais
+alors la suite (xn) a deux valeurs d'adhérences
+\ell\neq~\ell'. C'est absurde.
+
+Soit donc (xn) une suite de \overline\mathbb{R}~.
+Soit X l'ensemble de ses valeurs d'adhérences. C'est un fermé non vide
+de \overline\mathbb{R}~, donc il contient sa borne supérieure
+et sa borne inférieure.
+
+Définition~7.1.1 Soit (xn) une suite de
+\overline\mathbb{R}~. Soit X l'ensemble de ses valeurs
+d'adhérences. On pose limsupxn~
+= maxX et \liminf~
+xn = min~X. La suite converge (dans
+\overline\mathbb{R}~) si et seulement
+si~limsupxn~
+= liminf xn~.
+
+Théorème~7.1.5 Soit (xn) une suite de
+\overline\mathbb{R}~ et \ell \in\overline\mathbb{R}~. On a
+équivalence de
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) \ell = limsupxn~
+\item
+  (ii) \ell est valeur d'adhérence de la suite et
+  \forall~~c \textgreater{} \ell, \n \in
+  \mathbb{N}~∣xn ≥ c\ est
+  fini.
+\item
+  (iii) \ell =\
+  limp\rightarrow~+\infty~(supn≥pxn~)
+\end{itemize}
+
+Démonstration (i) \rigtharrow~(ii) Soit \ell =\
+limsupxn. Alors \ell est valeur d'adhérence de la suite. Si
+\n \in \mathbb{N}~∣xn ≥
+c\ est infini, on peut construire une sous suite dans
+{[}c,+\infty~{]} qui est compact~; cette suite doit admettre une valeur
+d'adhérence \ell' \in {[}c,+\infty~{]}. On a donc \ell' \in X avec \ell'
+\textgreater{} sup~X. C'est absurde.
+
+(ii) \rigtharrow~(iii) Remarquons que la suite yp
+= supn≥pxn~ est
+décroissante, donc convergente dans \overline\mathbb{R}~. Soit
+\ell' sa limite. Soit c \textgreater{} \ell. Il existe N \in \mathbb{N}~ tel que n ≥ N \rigtharrow~
+xn \textless{} c. Donc pour n ≥ N, on a yn \leq c et
+donc \ell' \leq c. Comme c est quelconque ( \textgreater{} \ell), on a \ell' \leq \ell.
+Mais d'autre part on sait que \ell est valeur d'adhérence de la suite
+(xn) d'où \ell = limx\phi(n)~
+\leq limy\phi(n)~ = \ell'. Donc \ell = \ell'.
+
+(iii) \rigtharrow~(i) Posons tou\\\\jmathmathmathmathours yp =\
+supn≥pxn. Si \ell' est une valeur d'adhérence de la
+suite (xn), on a \ell' =\
+limx\phi(n) \leq limy\phi(n)~ = \ell,
+donc limsupxn~ \leq \ell. Mais d'autre
+part, soit U un ouvert contenant \ell, on peut trouver un N tel que p ≥ N \rigtharrow~
+yp \in U. Pour un tel p, comme U \in V (yp), on peut
+trouver un n ≥ p tel que xn \in U. Ceci montre que \ell est valeur
+d'adhérence de la suite (xn) soit \ell \leq\
+limsupxn et donc l'égalité.
+
+Proposition~7.1.6
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) limsup(un + vn~)
+  \leq limsupun~
+  + limsupvn~ (avec égalité si l'une
+  des suites est convergente)
+\item
+  (ii) si (un) et (vn) sont deux suites positives,
+  limsup(unvn~)
+  \leq limsupun~\
+  limsupvn (avec égalité si l'une des suites est
+  convergente)
+\item
+  (iii) si \lambda~ \textgreater{} 0,
+  limsup(\lambda~xn~) =
+  \lambda~limsupxn~
+\item
+  (iv) si f est continue,
+  f(limsupxn~)
+  \leq limsupf(xn~) (avec égalité si f
+  est croissante)
+\end{itemize}
+
+Démonstration (i) On pose \ell =\
+limsupun, v = limsupvn~.
+Soit \epsilon \textgreater{} 0. Il existe N \in \mathbb{N}~ tel que n ≥ N \rigtharrow~ un
+\textless{} \ell + \epsilon. De même, il existe N' tel que n ≥ N' \rigtharrow~ vn
+\textless{} \ell' + \epsilon. Alors n ≥ max~(N,N') \rigtharrow~
+un + vn \textless{} \ell + \ell' + 2\epsilon, ce qui montre que
+limsup(un + vn~) \leq \ell + \ell'.
+Si la suite un converge, on a par exemple \ell'
+= limv\phi(n)~, d'où \ell + \ell'
+= lim(u\phi(n) + v\phi(n)~) est
+encore valeur d'adhérence de la suite (un + vn)~;
+donc limsup(un + vn~) = \ell +
+\ell'. La démonstration de (ii) est tout à fait similaire.
+
+(iii) est tout à fait élémentaire.
+
+(iv) soit \ell = limsupxn~. On a \ell
+= limx\phi(n)~, donc f(\ell)
+= limf(x\phi(n)~) est valeur d'adhérence
+de la suite (f(xn)). On en déduit que f(\ell)
+\leq limsupf(xn~). Supposons maintenant
+f croissante et supposons que f(\ell) \textless{}\
+limsupf(xn) = \ell'. Soit \alpha~ tel que f(\ell) \textless{} \alpha~
+\textless{} \ell'. Le réel \ell' est valeur d'adhérence de la suite
+f(xn), donc on peut trouver N tel que f(xN)
+\textgreater{} \alpha~(\textgreater{} f(\ell)). Le théorème des valeurs
+intermédiaires assure qu'il existe a tel que \alpha~ = f(a). Comme f est
+croissante, on a a \textgreater{} \ell. On a \ell =\
+limf(x\phi(n)) donc il existe N' tel que n ≥ N' \rigtharrow~
+f(x\phi(n)) \textgreater{} \alpha~ = f(a). Mais alors n ≥ N' \rigtharrow~
+x\phi(n) \textgreater{} a \textgreater{} \ell. Ceci contredit le
+fait qu'il n'y a qu'un nombre fini de n tels que xn
+\textgreater{} a. On a donc f(\ell) = \ell'.
+
+Remarque~7.1.2 L'exemple un = (-1)^n, vn
+= -un montre que l'on n'a pas généralement d'égalité dans (i).
+En ce qui concerne (iii), si \lambda~ \textless{} 0 on a évidemment
+limsup(\lambda~xn~) =
+\lambda~liminf xn~. De même pour (iv), si f
+est décroissante, on a f(limsupxn~)
+= liminf f(xn~), ce qui montre qu'en
+général on n'a pas d'égalité dans (iv).
+
+Les résultats concernant la limite inférieure sont tout à fait
+similaires, les inégalités changeant de sens
+
+Exemple~7.1.3 Soit f :{]}0,+\infty~{[}\rightarrow~{]}0,+\infty~{[} continue croissante~; on
+suppose que l'équation f(x) = x \over 2 a une unique
+solution \ell, que x \textless{} \ell \rigtharrow~ f(x) \textgreater{} x
+\over 2 et x \textgreater{} \ell \rigtharrow~ f(x) \textless{} x
+\over 2 ~; on considère la suite (xn) définie
+par xn+1 = f(xn) + f(xn-1). On vérifie
+facilement que si a =\
+min(\ell,x0,x1), b =\
+max(\ell,x0,x1), alors \forall~~n \in
+\mathbb{N}~, xn \in {[}a,b{]}. Posons M =\
+limsupxn et m = liminf~
+xn. On a alors M =\
+limsup(f(xn-1) + f(xn-2))
+\leq limsupf(xn-1~)
++ limsupf(xn-2~) = 2f(M). On en
+déduit que M \leq \ell. On montre de même que m ≥ \ell d'où m = M = \ell et la suite
+converge.
+
+\paragraph{7.1.4 Récurrences d'ordre 1}
+
+Soit D une partie de \mathbb{R}~ et f : D \rightarrow~ \mathbb{R}~ une fonction continue. On considère
+x0 \in D et la suite (xn) définie par récurrence par
+xn+1 = f(xn). On note D' =
+\x0 \in
+D∣(xn)n\in\mathbb{N}~\text
+est définie \ (on montre facilement que D'
+= \⋃ ~
+A\subset~D,f(A)\subset~AA). On remarque immédiatement que D contient tous les
+points fixes de f.
+
+Proposition~7.1.7 Si la suite (xn) converge vers un point \ell \in
+D, alors f(\ell) = \ell.
+
+Démonstration On a alors \ell = limxn+1~
+= limf(xn~) =
+f(limxn~) = f(\ell) par continuité de f
+au point \ell.
+
+Proposition~7.1.8 Soit \ell \in D^o tel que f(\ell) = \ell et supposons
+f dérivable au point \ell.
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) Si \textbar{}f'(\ell)\textbar{} \textless{} 1 (point fixe attractif),
+  il existe un \eta \textgreater{} 0 tel que
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    (a) f({]}\ell - \eta,\ell + \eta{[}) \subset~{]}\ell - \eta,\ell + \eta{[}\subset~ D'
+  \item
+    (b) \left (\existsn0~ \in
+    \mathbb{N}~, xn0 \in{]}\ell - \eta,\ell + \eta{[}\right )
+    \rigtharrow~ limxn~ = \ell
+  \end{itemize}
+\item
+  (ii) Si \textbar{}f'(\ell)\textbar{} \textgreater{} 1 (point fixe
+  répulsif) et si limxn~ = \ell, alors
+  la suite est stationnaire en \ell.
+\end{itemize}
+
+Démonstration (i) Soit k tel que \textbar{}f'(\ell)\textbar{} \textless{} k
+\textless{} 1. Comme
+
+limx\rightarrow~\ell,x\neq~\ell~\left
+\textbar{} f(x) - f(\ell) \over x - \ell
+\right \textbar{} =\
+limx\rightarrow~\ell,x\neq~\ell\left
+\textbar{} f(x) - \ell \over x - \ell \right
+\textbar{} = \textbar{}f'(\ell)\textbar{} \textless{} k
+
+il existe \eta \textgreater{} 0 tel que \textbar{}x - \ell\textbar{}
+\textless{} \eta \rigtharrow~\textbar{}f(x) - \ell\textbar{}\leq k\textbar{}x - \ell\textbar{}.
+On a alors évidemment f({]}\ell - \eta,\ell + \eta{[}) \subset~{]}\ell - \eta,\ell + \eta{[}\subset~ D'. Soit
+n0 tel que xn0 \in{]}\ell - \eta,\ell + \eta{[}. Alors
+pour tout n ≥ n0 on a xn \in{]}\ell - \eta,\ell + \eta{[} et
+\textbar{}xn+1 - \ell\textbar{}\leq k\textbar{}xn -
+\ell\textbar{}. On a alors \textbar{}xn - \ell\textbar{}\leq
+k^n-n0\textbar{}xn 0 -
+\ell\textbar{} ce qui montre que limxn~
+= \ell.
+
+(ii) Une méthode similaire montre que si \textbar{}f'(\ell)\textbar{}
+\textgreater{} k \textgreater{} 1, alors il existe \eta \textgreater{} 0
+tel que \textbar{}x - \ell\textbar{} \textless{} \eta \rigtharrow~\textbar{}f(x) -
+\ell\textbar{}≥ k\textbar{}x - \ell\textbar{}. Si
+limxn = \ell, il existe n0~
+tel que n ≥ n0 \rigtharrow~\textbar{}xn - \ell\textbar{}
+\textless{} \eta. On a alors \textbar{}xn+1 - \ell\textbar{}≥
+k\textbar{}xn - \ell\textbar{}, soit encore
+\textbar{}xn - \ell\textbar{}≥
+k^n-n0\textbar{}xn 0 -
+\ell\textbar{} avec k \textgreater{} 1. Ce n'est compatible avec le fait
+que xn - \ell tend vers 0 que si xn0 - \ell = 0,
+et la suite est alors stationnaire.
+
+Les deux propositions précédentes permettent de conclure dans un certain
+nombre de cas. Une étude plus fine relève en général de propriétés de
+monotonie de la fonction f.
+
+Proposition~7.1.9 Soit I un intervalle stable par f sur lequel f est
+monotone. On suppose qu'il existe n0 \in \mathbb{N}~ tel que
+xn0 \in I. Alors \forall~~n ≥
+n0, xn \in I et de plus
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) si f est croissante sur I, la suite
+  (xn)n≥n0 est monotone (le sens étant
+  déterminé par le signe de xn0+1 -
+  xn0 = f(xn0) -
+  xn0)
+\item
+  (ii) si f est décroissante sur I, les deux sous suites (x2n)
+  et (x2n+1) sont monotones et de sens contraire à partir de
+  l'indice n0.
+\end{itemize}
+
+Démonstration Supposons f croissante et par exemple
+f(xn0) = xn0+1 \leq
+xn0, alors xn \leq xn-1 \rigtharrow~
+f(xn) \leq f(xn-1) \rigtharrow~ xn+1 \leq xn ce
+qui montre par récurrence que \forall~~n ≥
+n0, xn+1 \leq xn et la suite est décroissante
+à partir de n0. De même, si f(xn0) =
+xn0+1 ≥ xn0, la suite est
+croissante à partir de n0. Supposons maintenant f décroissante
+sur I et f(I) \subset~ I. Alors f \cdot f est croissante sur I et donc les deux
+sous suites (x2n) et (x2n+1) sont monotones, car
+elles vérifient la relation yn+1 = f \cdot f(yn). De
+plus elles sont de sens contraire car x2n+3 - x2n+1
+= f(x2n+2) - f(x2n) et f est décroissante.
+
+Remarque~7.1.3 Supposons que l'on est dans la situation de la
+proposition avec f croissante~; soit \ell \in I tel que f(\ell) = \ell. On constate
+immédiatement que le signe de \ell - xn = f(\ell) -
+f(xn-1) est constant, si bien que \ell fournit soit un ma\\\\jmathmathmathmathorant,
+soit un minorant de la suite.
+
+{[}
+{[}

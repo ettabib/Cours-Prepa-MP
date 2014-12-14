@@ -1,0 +1,675 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{3.3 A propos de Jordan}
+
+\paragraph{3.3.1 Décomposition de Jordan}
+
+Soit E un K-espace vectoriel de dimension finie et u \in L(E) dont le
+polynôme caractéristique est scindé sur K,
+E1,\\ldots,Ek~
+les sous-espaces caractéristiques de u associés aux valeurs propres
+\lambda~1,\\ldots,\lambda~k~.
+Soit ui la restriction de u à Ei et ni =
+ui -
+\lambda~i\mathrmIdEi. Avec les
+notations précédentes, on a ni^ri = 0, donc
+ni est nilpotent. Soit d : E \rightarrow~ E définie par d(x1 +
+\\ldots~ +
+xk) = \lambda~1x1 +
+\\ldots~ +
+\lambda~kxk et n : E \rightarrow~ E défini par n(x1 +
+\\ldots~ +
+xk) = \\sum ~
+ini(xi). L'endomorphisme d est
+diagonalisable (ses sous-espaces propres sont les Ei), n est
+nilpotent (n^max(ri)~ = 0)
+et on a u = d + n. De plus, si di =
+\lambda~i\mathrmIdEi désigne
+la restriction de d à Ei, on a di \cdot ni =
+ni \cdot di et on en déduit donc que d \cdot n = d \cdot n.
+
+Théorème~3.3.1 (décomposition de Jordan). Soit E un K-espace vectoriel
+de dimension finie et u \in L(E) dont le polynôme caractéristique est
+scindé sur K. Alors u s'écrit de manière unique sous la forme u = d + n
+avec d diagonalisable, n nilpotent et d \cdot n = n \cdot d.
+
+Démonstration L'existence de la décomposition vient d'être démontrée.
+Soit u = d' + n' une autre décomposition vérifiant les conditions
+imposées. Alors d' et n' commutent à u, donc à tous les P(u) et donc
+laissent stables leurs noyaux. En particulier ils laissent stables les
+sous-espaces caractéristiques de u. Soit di' et ni'
+les restrictions de d' et n' à Ei. ni' est bien
+entendu nilpotent. De plus, puisque d' est diagonalisable, il existe P
+scindé à racines simples tel que P(d') = 0 et on a encore
+P(di') = 0 ce qui montre que di' est diagonalisable.
+On a di + ni = di' + ni' soit
+encore \lambda~i\mathrmId + ni =
+di' + ni' ou encore
+\lambda~i\mathrmIdEi -
+di' = ni' - ni. Comme ni'
+commute à
+\lambda~i\mathrmIdEi,di'
+et ni', il commute à ni et donc ni -
+ni' est encore nilpotent. De plus
+\lambda~i\mathrmId - di' est clairement
+diagonalisable. Un endomorphisme à la fois diagonalisable et nilpotent
+est nul puisqu'il doit avoir une matrice nulle dans une certaine base,
+donc di = di' et ni = ni'.
+Alors, d et d' coïncident sur des espaces dont la somme est E, donc ils
+sont égaux. Ceci implique alors que n = n'. D'où l'unicité de la
+décomposition.
+
+\paragraph{3.3.2 Applications}
+
+Puissances d'un endomorphisme
+
+Soit E un K-espace vectoriel de dimension finie et u \in L(E) dont le
+polynôme caractéristique est scindé sur K,
+E1,\\ldots,Ek~
+les sous-espaces caractéristiques de u associés aux valeurs propres
+\lambda~1,\\ldots,\lambda~k~.
+Soit ui la restriction de u à Ei et ni =
+ui -
+\lambda~i\mathrmIdEi.
+L'endomorphisme ni est nilpotent d'indice de nilpotence
+ri. On a ui =
+\lambda~i\mathrmIdEi +
+ni et donc si q \in \mathbb{N}~
+
+ui^q = \\sum
+p=0^qC q^p\lambda~
+i^q-pn i^p = \\sum
+p=0^min(q,ri-1)C
+q^p\lambda~ i^q-pn i^p
+
+Supposons désormais que \lambda~i\neq~0. On
+obtient
+
+\begin{align*} ui^q& =& \lambda~
+i^q \\sum
+p=0^min(q,ri-1) q(q -
+1)\ldots~(q - p + 1) \over
+p! \lambda~i^-pn i^p\%&
+\\ & =& \lambda~i^q
+\sum p=0^ri-1~ q(q -
+1)\ldots~(q - p + 1) \over
+p! \lambda~i^-pn i^p \%&
+\\ \end{align*}
+
+(puisque 
+q(q-1)\\ldots~(q-p+1)
+\over p! = 0 si p \textgreater{} q). Posons alors, pour
+t \in K
+
+\sum p=0^ri-1~ t(t -
+1)\ldots~(t - p + 1) \over
+p! \lambda~i^-pn i^p =
+\sum p=0^ri-1w~
+i,pt^p
+
+avec wi,p \in L(Ei)~; c'est une fonction polynomiale
+en t à valeurs dans L(Ei) de degré inférieur ou égal à
+ri - 1. On obtient
+
+\forall~~q \in \mathbb{N}~,\quad
+ui^q = \lambda~ i^q
+\sum p=0^ri-1w~
+i,pq^p
+
+Supposons maintenant que u est inversible, si bien que
+\forall~~i \in {[}1,k{]},
+\lambda~i\neq~0. Soit \pi~i(x) la
+pro\\\\jmathmathmathmathection sur Ei parallèlement à
+\\oplus~ ~
+\\\\jmathmathmathmath\neq~iE\\\\jmathmathmathmath. On a
+\\sum ~
+i\pi~i = \mathrmIdE si bien
+que u = u \cdot (\\sum ~
+i\pi~i) =\
+\sum  iui \cdot \pi~i~.
+
+Lemme~3.3.2 \forall~q \in \mathbb{N}~, u^q~
+= \\sum ~
+ui^q \cdot \pi~i.
+
+Démonstration Evident par récurrence sur q en remarquant que les
+Ei sont stables par u et les ui.
+
+On en déduit donc que \forall~~q \in
+\mathbb{N}~,\quad u^q =\
+\sum ~
+i=1^k\lambda~i^q\
+\sum ~
+p=0^ri-1q^pwi,p \cdot
+\pi~i, d'où le théorème (en remarquant que ri \leq
+mi)
+
+Théorème~3.3.3 Soit u \in L(E) inversible dont le polynôme caractéristique
+est scindé sur K,
+\lambda~1,\\ldots,\lambda~k~
+ses valeurs propres de multiplicités respectives
+m1,\\ldots,mk~.
+Alors il existe une famille
+(vi,p)1\leqi\leqk,0\leqp\leqmi-1 d'endomorphismes de E
+tels que
+
+\forall~q \in \mathbb{N}~,\quad u^q~ =
+\sum i=1^k\lambda~ i^q~
+\\sum
+p=0^mi-1q^pv i,p
+
+Remarque~3.3.1 Bien entendu, on a un résultat similaire pour les
+matrices inversibles
+
+Théorème~3.3.4 Soit A \in MK(n) inversible dont le polynôme
+caractéristique est scindé sur K,
+\lambda~1,\\ldots,\lambda~k~
+ses valeurs propres de multiplicités respectives
+m1,\\ldots,mk~.
+Alors il existe une famille
+(Bi,p)1\leqi\leqk,0\leqp\leqmi-1 de matrices carrées
+d'ordre n telles que
+
+\forall~q \in \mathbb{N}~,\quad A^q~ =
+\sum i=1^k\lambda~ i^q~
+\\sum
+p=0^mi-1q^pB i,p
+
+Suites à récurrence linéaire
+
+Remarque~3.3.2 Soit p \in \mathbb{N}~,
+a0,\\ldots,ap-1~
+une famille d'éléments de K et
+
+V = \(un)n\in\mathbb{N}~ \in
+K^\mathbb{N}~∣\forall~~n \in
+\mathbb{N}~, u n+p = ap-1un+p-1 +
+\\ldots~ +
+a0un\
+
+V est un sous-espace vectoriel de K^\mathbb{N}~. Il est clair que la
+donnée de
+u0,\\ldots,up-1~
+détermine parfaitement un élément de V et on a donc
+
+Théorème~3.3.5 L'application V \rightarrow~ K^p,
+(un)n\in\mathbb{N}~\mapsto~(u0,\\ldots,up-1~)
+est un isomorphisme d'espaces vectoriels. On a en particulier
+dim~ V = p.
+
+Remarque~3.3.3 Il est clair que l'on peut se limiter à étudier le cas où
+a0\neq~0 sinon notre récurrence
+linéaire d'ordre p se réduit à une récurrence linéaire d'ordre k \leq p
+valable pour n ≥ n0.
+
+Soit (un)n\in\mathbb{N}~ \in V et considérons la suite (V
+n) définie par V n = \left
+(\matrix\,un
+\cr un+1 \cr
+\⋮~ \cr
+un+p-1\right ) \in K^p. On a
+clairement V n+1 = AV n avec
+
+A = \left (\matrix\,0 &1
+&0&\\ldots~&0
+\cr &⋱
+&⋱&
+&\⋮~
+\cr &
+&⋱&\mathrel⋱&\⋮~
+\cr 0
+&\\ldots~
+&\\ldots~&0&1
+\cr
+a0&a1&\\ldots&\\\ldots&ap-1~\right
+) \in MK(p)
+
+et donc V n = A^nV 0. On a
+\mathrm{det}~ A =
+(-1)^n-1a0\neq~0 et donc la
+matrice est inversible. On peut donc appliquer le résultat précédent.
+Soit \chi le polynôme caractéristique de la matrice A (encore appelé
+polynôme caractéristique de la récurrence linéaire). Un calcul simple
+donne
+
+Lemme~3.3.6 On a \chi(X) = X^p - ap-1X^p-1
+-\\ldots~ -
+a0. Pour \lambda~ \in K^∗, on a
+
+\chi(\lambda~) = 0 \Leftrightarrow (\lambda~^n) n\in\mathbb{N}~ \in V
+
+Soit
+\lambda~1,\\ldots,\lambda~k~
+les racines de \chi de multiplicités respectives
+m1,\\ldots,mk~.
+On sait qu'il existe une famille
+(Bi,q)1\leqi\leqk,0\leqq\leqmi-1 de matrices carrées
+d'ordre p telles que
+
+\forall~n \in \mathbb{N}~,\quad A^n~ =
+\sum i=1^k\lambda~ i^n~
+\\sum
+q=0^mi-1n^qB i,q
+
+On a donc en particulier A^nV 0
+= \\sum ~
+i=1^k\lambda~i^n\
+\sum ~
+q=0^mi-1n^qBi,qV
+0 et en prenant la première coordonnée,
+
+un = \\sum
+i=1^k\lambda~ i^n \\sum
+q=0^mi-1\alpha~ i,qn^q
+
+Soit alors W le sous-espace de K^\mathbb{N}~ engendré par les suites
+(\lambda~i^nn^q)1\leqi\leqk,0\leqq\leqmi-1.
+On a dim~ W
+\leq\\sum  mi~ = p
+et V \subset~ W avec dim~ V = p. On en déduit que V =
+W et que la famille
+(\lambda~i^nn^q)1\leqi\leqk,0\leqq\leqmi-1
+est une base de V . On a donc le théorème suivant
+
+Théorème~3.3.7 Soit p \in \mathbb{N}~,
+a0,\\ldots,ap-1~
+une famille d'éléments de K avec
+a0\neq~0, et V l'espace des suites
+vérifiant la récurrence linéaire \forall~~n \in \mathbb{N}~,
+un+p = ap-1un+p-1 +
+\\ldots~ +
+a0un\. Soit \chi(X) = X^p -
+ap-1X^p-1
+-\\ldots~ -
+a0 le polynôme caractéristique de la récurrence linéaire
+(obtenu en recherchant des solutions particulières de la forme
+un = \lambda~^n),
+\lambda~1,\\ldots,\lambda~k~
+les racines de \chi de multiplicités respectives
+m1,\\ldots,mk~.
+Alors la famille
+(\lambda~i^nn^q)1\leqi\leqk,0\leqq\leqmi-1
+est une base de V . Les solutions de la récurrence linéaire sont
+exactement les suites qui s'écrivent sous la forme
+
+un = \\sum
+i=1^k\lambda~ i^nP
+i(n),\quad Pi \in K{[}X{]}, deg Pi \leq
+mi - 1
+
+Retour aux puissances d'un endomorphisme
+
+Soit u \in L(E) et soit P(X) = X^p -
+ap-1X^p-1
+-\\ldots~ -
+a0 un polynôme qui annule u (par exemple le polynôme
+caractéristique). On a immédiatement
+
+Lemme~3.3.8 (u^n)0\leqn\leqp-1 est une famille
+génératrice de
+\mathrmVect(u^n~,n
+\in \mathbb{N}~).
+
+On peut donc chercher à exprimer u^n sous la forme
+u^n = \alpha~n^(p-1)u^p-1 +
+\\ldots~ +
+\alpha~n^(0)\mathrmId.
+
+Théorème~3.3.9 Soit
+(\alpha~n^(p-1))n\in\mathbb{N}~,\\ldots,(\alpha~n^0)n\in\mathbb{N}~~
+les suites solutions de la récurrence linéaire \alpha~n+p =
+ap-1\alpha~n+p-1 +
+\\ldots~ +
+a0\alpha~n vérifiant
+
+\forall~~i \in {[}0,p - 1{]},
+\forall~~\\\\jmathmathmathmath \in {[}0,p - 1{]},\quad
+\alpha~i^(\\\\jmathmathmathmath) = \delta i^\\\\jmathmathmathmath
+
+Alors
+
+\forall~n \in \mathbb{N}~,\quad u^n~ =
+\alpha~ n^(p-1)u^p-1 +
+\\ldots + \alpha~~
+n^(0)\mathrmId
+
+Démonstration Par récurrence sur n. C'est manifestement vérifié si n \leq p
+- 1. De plus, si n ≥ p la relation u^p =
+ap-1u^p-1 +
+\\ldots~ +
+a0\mathrmId donne u^n =
+ap-1u^n-1 +
+\\ldots~ +
+a0u^n-p soit par l'hypothèse de récurrence
+
+\begin{align*} u^n& =&
+\sum i=1^pa~
+p-iu^n-i = \\sum
+i=1^pa p-i \\sum
+\\\\jmathmathmathmath=0^p-1\alpha~ n-i^(\\\\jmathmathmathmath)u^\\\\jmathmathmathmath \%&
+\\ & =& \\sum
+\\\\jmathmathmathmath=0^p-1(\\sum
+i=1^pa
+p-i\alpha~n-i^(\\\\jmathmathmathmath))u^\\\\jmathmathmathmath =
+\sum \\\\jmathmathmathmath=0^p-1\alpha~~
+n^(\\\\jmathmathmathmath)u^\\\\jmathmathmathmath\%& \\
+\end{align*}
+
+d'après la relation vérifiée par les (\alpha~n^(\\\\jmathmathmathmath)). Ceci
+achève la démonstration.
+
+\paragraph{3.3.3 Réduction des endomorphismes nilpotents}
+
+Définition~3.3.1 Soit E un K-espace vectoriel et u \in L(E). On dit que u
+est nilpotent d'indice de nilpotence r si u^r = 0 et
+u^r-1\neq~0.
+
+Remarque~3.3.4 Remarquons que la seule valeur propre d'un endomorphisme
+nilpotent est 0, car si u(x) = \lambda~x, on a 0 = u^r(x) =
+\lambda~^rx.
+
+Proposition~3.3.10 Soit E un K-espace vectoriel de dimension n et u \in
+L(E). Alors u est nilpotent si et seulement si \chiu(X) =
+X^n.
+
+Démonstration ( \rigtharrow~) Supposons que u est nilpotent. Comme u est annulé par
+le polynôme scindé X^r (si u^r = 0), u est
+trigonalisable. Mais u admet comme seule valeur propre 0. On en déduit
+que \chiu(X) = X^n. Pour la réciproque, on peut par
+exemple utiliser le théorème de Cayley Hamilton, ou trigonaliser u.
+
+Remarque~3.3.5 On en déduit que l'indice de nilpotence r est inférieur
+ou égal à n. On a bien entendu \muu(X) = X^r.
+
+Définition~3.3.2 Soit p ≥ 1. On appelle matrice élémentaire de Jordan
+d'ordre p la matrice
+
+Jp = \left
+(\matrix\,0&1&0&\\ldots~&0
+\cr
+\⋮&⋱&\mathrel⋱&\mathrel⋱&\\⋮~
+\cr
+\⋮~&
+&⋱&\mathrel⋱&\⋮~
+\cr
+0&\\ldots&\\\ldots~&0&1
+\cr
+0&\\ldots&\\\ldots&\\\ldots&0~\right
+)
+
+Soit E un K-espace vectoriel de dimension n et u \in L(E) nilpotent
+d'indice de nilpotence r. Supposons par exemple que r = n. On a donc
+u^n-1\neq~0 avec u^n = 0.
+Soit a \in E tel que u^n-1(a)\neq~0 et
+posons ei = u^n-i(a) pour 1 \leq i \leq n. Montrons que
+(e1,\\ldots,en~)
+est une base de E. Il suffit de montrer que c'est une famille libre.
+Pour cela supposons que \lambda~1e1 +
+\\ldots~ +
+\lambda~nen = 0, soit encore
+
+\lambda~1u^n-1(a) +
+\\ldots + \lambda~~
+n-1u(a) + \lambda~na = 0
+
+Appliquons aux deux membres u^n-1 en tenant compte de
+u^n(a) =
+\\ldots~ =
+u^2n-2(a) = 0~; on obtient \lambda~nu^n-1(a) =
+0 soit \lambda~n = 0. Supposons montré que \lambda~n =
+\lambda~n-1 =
+\\ldots~ =
+\lambda~n-k+1 = 0 si bien que l'on a
+
+\lambda~1u^n-1(a) +
+\\ldots + \lambda~~
+n-k-1u^k+1(a) + \lambda~ n-ku^k(a) = 0
+
+Appliquons aux deux membres u^n-k-1 en tenant compte de
+u^n(a) =
+\\ldots~ =
+u^2n-k-2(a) = 0~; on obtient
+\lambda~n-ku^n-1(a) = 0 soit \lambda~n-k = 0. Par
+récurrence, on a bien \forall~i, \lambda~i~ = 0.
+Donc
+(e1,\\ldots,en~)
+est une base de E. Dans cette base, la matrice de u est clairement
+Jn~: on a u(ei) = ei-1 si i ≥ 2 et
+u(e1) = 0. Ce cas particulier est à la base du résultat
+suivant
+
+Théorème~3.3.11 Soit E un K-espace vectoriel de dimension n et u \in L(E)
+nilpotent. Alors il existe une base \mathcal{E} de E telle que la matrice de u
+dans la base \mathcal{E} soit un tableau diagonal de matrices élémentaires de
+Jordan
+
+\mathrmMat~ (u,\mathcal{E})
+=\
+\mathrmdiag(Jp1,\\ldots,Jpk~)
+
+Démonstration Elle va faire l'ob\\\\jmathmathmathmathet des deux sections suivantes
+
+\paragraph{3.3.4 Première démonstration}
+
+Par récurrence sur n = dim~ E. Le résultat est
+évident pour n = 1. Supposons le vrai pour tous les endomorphismes
+nilpotents d'espaces de dimensions inférieures ou égales à n - 1. Soit r
+l'indice de nilpotence de u. Si r = n, on a dé\\\\jmathmathmathmathà vu que le résultat
+était vrai (avec une seule matrice élémentaire de Jordan). On peut donc
+supposer que r \textless{} n. Puisque
+u^r-1\neq~0, soit a \in E tel que
+u^r-1(a)\neq~0. Comme précédemment la
+famille \mathcal{E}1 =
+(u^r-1(a),\\ldots~,u(a),a)
+est libre et il est clair que le sous-espace F =\
+\mathrmVect(u^r-1(a),\\ldots~,u(a),a)
+est stable par u (chaque vecteur est décalé d'un cran vers la gauche,
+sauf le premier qui est annulé par u). On a
+\mathrmMat~
+(u\textbar{}F,\mathcal{E}1) = Jr.
+
+Puisque u^r-1(a)\neq~0 on peut trouver
+une forme linéaire f telle que
+f(u^r-1(a))\neq~0. Soit
+
+\begin{align*} G& =& \⋂
+k=0^r-1 \mathrmKerf \cdot u^k
+\%& \\ & =& \x \in
+E∣f(x) = f(u(x)) =
+\\ldots~ =
+f(u^r-1(x) = 0\\%&
+\\ \end{align*}
+
+Lemme~3.3.12 G est un supplémentaire de F stable par u.
+
+Démonstration La stabilité par u est claire, car si x \in G on a
+
+\begin{align*} f(u(x)) = 0,f(u(u(x))) =
+0,f(u^r-2(u(x)) = f(u^r-1(x) = 0,& & \%&
+\\ f(u^r-1(u(x))) =
+f(u^r(x)) = f(0) = 0& & \%&
+\\ \end{align*}
+
+Montrons que F \bigcap G = \0\. Pour cela
+soit x = \lambda~1u^r-1(a) +
+\\ldots~ +
+\lambda~r-1u(a) + \lambda~ra \in F et supposons que x appartienne à
+G. On a 0 = f(u^r-1(x)) = \lambda~1f(u^2r-2(a))
++ \\ldots~ +
+\lambda~r-1f(u^r(a)) + \lambda~rf(u^r-1(a))
+et tenant compte de u^r(a) =
+\\ldots~ =
+u^2r-2(a) = 0 on obtient \lambda~rf(u^r-1(a)) =
+0 soit \lambda~r = 0. Comme précédemment une récurrence descendante
+montre que \lambda~r = \lambda~r-1 =
+\\ldots~ =
+\lambda~1 = 0 soit x = 0. Donc F et G sont en somme directe. Mais G =
+\bigcapk=0^r-1\
+\mathrmKerf \cdot u^k, et donc
+
+dim~ G = n
+-\mathrmrg~(f \cdot
+u^k, 0 \leq k \leq r - 1) ≥ n - r = dim~ E
+- dim~ F
+
+On a donc E = F \oplus~ G.
+
+(Fin de la démonstration) On peut maintenant terminer la démonstration
+du théorème. En appliquant notre hypothèse de récurrence à
+l'endomorphisme nilpotent u\textbar{}G de G, on peut trouver
+une base de G telle que
+\mathrmMat~
+(u\textbar{}G,\mathcal{E}2) =\
+\mathrmdiag(Jp2,\\ldots,Jpk~).
+Alors \mathcal{E} = \mathcal{E}1 \cup\mathcal{E}2 est une base de E dans laquelle
+\mathrmMat~ (u,\mathcal{E})
+=\
+\mathrmdiag(Jr,Jp2,\\ldots,Jpk~),
+ce qui achève la démonstration.
+
+\paragraph{3.3.5 Deuxième démonstration}
+
+Posons V i =\
+\mathrmKeru^i.
+
+Lemme~3.3.13 On a \0\ = V 0
+\subset~ V 1
+\subset~\\ldots~ \subset~ V
+r = E avec une suite strictement croissante.
+
+Démonstration Les inclusions sont claires. Supposons que V i =
+V i+1 pour i \leq r - 1. Soit x \in E. On a 0 = u^r(x) =
+u^i+1(u^r-i-1(x)) donc u^r-i-1(x) \in V
+i+1 = V i et donc u^r-1(x) =
+u^i(u^r-i-1(x)) = 0. On aurait donc
+u^r-1 = 0 ce qui est exclu.
+
+Soit W1 un supplémentaire de V r-1 dans E = V
+r.
+
+Lemme~3.3.14 On peut construire une suite de sous-espaces
+W2,\\ldots,Wr~
+de E vérifiant
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) \forall~~k \in {[}1,r{]},\quad V
+  r-k+1 = V r-k \oplus~ Wk
+\item
+  (ii) \forall~~k \in {[}2,r{]},\quad
+  u(Wk-1) \subset~ Wk
+\item
+  (iii) \forall~~k \in {[}1,r -
+  1{]},\quad u\textbar{}Wk est
+  in\\\\jmathmathmathmathective
+\item
+  On a alors E = W1 \oplus~⋯ \oplus~
+  Wr.
+\end{itemize}
+
+Démonstration On va construire Wk par récurrence sur k. Pour
+ce qui concerne k = 1, il suffit de montrer que
+u\textbar{}W1 est in\\\\jmathmathmathmathective. Mais si x \in
+W1 \diagdown\0\, on a
+x∉V r-1, donc
+u^r-1(x)\neq~0 et donc
+u(x)\neq~0. Supposons donc
+W1,\\ldots,Wk-1~
+construits. Soit x \in Wk-1
+\diagdown\0\. On a
+x∉V r-k+1, donc
+u^r-k+1(x)\neq~0, soit
+u^r-k(u(x))\neq~0 et donc
+u(x)∉V r-k. On a ainsi
+u(Wk-1) \bigcap V r-k =
+\0\. Mais d'autre part x \in
+Wk-1 \subset~ V r-k+2 et donc u(x) \in V r-k+1. On
+a donc u(Wk-1) \subset~ V r-k+1, V r-k \subset~ V
+r-k+1 avec u(Wk-1) \bigcap V r-k =
+\0\. On peut donc trouver un
+supplémentaire Wk de V r-k dans V r-k+1
+tel que u(Wk-1) \subset~ Wk. Alors, si x \in Wk
+\diagdown\0\, x∉V
+r-k, soit u^r-k(x)\neq~0 et
+donc si k \textless{} r, u(x)\neq~0. Ceci montre
+bien que u\textbar{}Wk est in\\\\jmathmathmathmathective. On a donc bien
+construit notre suite Wk. Il est clair par récurrence que V
+k = Wr-k+1
+\oplus~\\ldots~ \oplus~
+Wr et donc E = V r = W1
+\oplus~⋯ \oplus~ Wr.
+
+Soit alors maintenant (ei,1)1\leqi\leqs1 une
+base de W1. Comme u\textbar{}W1 est
+in\\\\jmathmathmathmathective, (ei,2 =
+u(ei,1))1\leqi\leqs1 est une base de
+u(W1) que l'on peut compléter en une base
+(ei,2)1\leqi\leqm2 de W2. Une
+récurrence immédiate nous permet de construire des bases
+(ei,k)1\leqi\leqmk des Wk telles que
+pour k \leq r - 1, et 1 \leq i \leq mk, u(ei,k) =
+ei,k+1. On a ei,r \in Wr \subset~ V 1
+= \mathrmKer~u, donc
+u(ei,r) = 0. On obtient ainsi une base (ei,\\\\jmathmathmathmath) de E.
+Si on ordonne cette base en posant que (i,\\\\jmathmathmathmath) \textless{} (i',\\\\jmathmathmathmath')
+\Leftrightarrow \\\\jmathmathmathmath \textgreater{} \\\\jmathmathmathmath'\text
+ou (\\\\jmathmathmathmath = \\\\jmathmathmathmath'\text et i \textless{} i'), la matrice de
+u est un tableau diagonal de matrices de Jordan.
+
+\paragraph{3.3.6 Réduction de Jordan}
+
+Soit E un K-espace vectoriel de dimension finie et u \in L(E) dont le
+polynôme caractéristique est scindé sur K,
+E1,\\ldots,Ek~
+les sous-espaces caractéristiques de u associés aux valeurs propres
+\lambda~1,\\ldots,\lambda~k~.
+Soit ui la restriction de u à Ei et ni =
+ui -
+\lambda~i\mathrmIdEi. Avec les
+notations précédentes, on a ni^ri = 0, donc
+ni est nilpotent. On peut donc trouver une base \mathcal{E}i
+de Ei dans laquelle la matrice de ni est
+\mathrmdiag(Jp1,\\\ldots,Jpk~)
+et alors la matrice de ui dans cette base est
+\mathrmdiag(Jp1(\lambda~i),\\\ldots,Jpk(\lambda~i~))
+avec
+
+Jp(\lambda~) = \left
+(\matrix\,\lambda~&1&0&\\ldots~&0
+\cr
+0&\lambda~&1&\\ldots~&0
+\cr
+\⋮~&
+&⋱&\mathrel⋱&\⋮~
+\cr
+0&\\ldots&\\\ldots~&\lambda~&1
+\cr
+0&\\ldots&\\\ldots&0&\lambda~~\right
+) = \lambda~Ip + Jp \in MK(p)
+
+En réunissant ces bases on obtient
+
+Théorème~3.3.15 Soit E un K-espace vectoriel de dimension finie et u \in
+L(E) dont le polynôme caractéristique est scindé sur K. Alors il existe
+une base \mathcal{E} de E, des scalaires
+\mu1,\\ldots,\mul~
+(non nécessairement distincts) et des entiers
+n1,\\ldots,nl~
+tels que \mathrmMat~ (u,\mathcal{E})
+=\
+\mathrmdiag(Jn1(\mu1),\\ldots,Jnl(\mul~)).
+
+{[}
+{[}
+{[}
+{[}

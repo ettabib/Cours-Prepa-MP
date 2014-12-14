@@ -1,0 +1,661 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}{]}
+{[}
+
+\subsubsection{3.1 Valeurs propres. Vecteurs propres}
+
+\paragraph{3.1.1 Sous-espaces stables}
+
+Définition~3.1.1 Soit E un K-espace vectoriel , u \in L(E). On dit qu'un
+sous-espace F de E est stable si u(F) \subset~ F.
+
+Remarque~3.1.1 Dans ce cas on peut considérer l'application (évidemment
+linéaire) v : F \rightarrow~ F, x\mapsto~u(x). C'est un
+endomorphisme de F appelé l'endomorphisme induit par u.
+
+Proposition~3.1.1 Soit E un K-espace vectoriel de dimension finie, F un
+sous-espace de E,
+(e1,\\ldots,ep~)
+une base de F complétée en une base \mathcal{E} =
+(e1,\\ldots,en~)
+de E. Soit u \in L(E). Alors F est stable par u si et seulement si la
+matrice de u dans la base \mathcal{E} est de la forme \left (
+\includegraphics{cours4x.png} \,\right ).
+
+Démonstration En effet F est stable par u si et seulement si
+\forall~\\\\jmathmathmathmath \in {[}1,p{]}, u(e\\\\jmathmathmathmath~)
+\in\mathrmVect(e1,\\\ldots,ep~),
+ce que traduit exactement la forme de la matrice.
+
+Remarque~3.1.2 Dans ce cas la matrice A n'est autre que la matrice dans
+la base
+(e1,\\ldots,ep~)
+de l'endomorphisme v de F induit par u.
+
+Proposition~3.1.2 Soit E un K-espace vectoriel de dimension finie,
+E1,\\ldots,Ep~
+une famille de sous-espaces vectoriels de E tels que E = E1
+\oplus~⋯ \oplus~ Ep, soit \mathcal{E} une base de E
+adaptée à cette décomposition en somme directe. Alors chacun des
+Ei est stable par u si et seulement si la matrice de u dans la
+base \mathcal{E} est de la forme
+
+\left
+(\matrix\,A1& &0
+\cr &⋱& \cr 0
+& &Ap\right )
+
+Démonstration La même~; la forme de la matrice traduit exactement que
+
+\forall~i \in {[}1,p{]}, u(\mathcal{E}i~)
+\subset~\mathrmVect(\mathcal{E}i~)
+= Ei
+
+où l'on désigne par \mathcal{E}i la base de Ei extraite de \mathcal{E}.
+
+Définition~3.1.2 Soit E un K-espace vectoriel de dimension finie n~; on
+appelle drapeau de E une suite \0\ =
+E0 \subset~ E1 \subset~⋯ \subset~ En
+= E de sous-espaces de E tels que dim~
+Ei = i.
+
+Proposition~3.1.3 Soit E un K-espace vectoriel de dimension finie n,
+\0\ = E0 \subset~ E1
+\subset~⋯ \subset~ En = E un drapeau de E et \mathcal{E} =
+(e1,\\ldots,en~)
+une base de E adaptée à ce drapeau (c'est-à-dire que pour tout i \in
+{[}1,n{]},
+(e1,\\ldots,ei~)
+est une base de Ei). Soit u \in L(E). Alors on a équivalence
+de~:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \forall~i \in {[}1,n{]}, u(Ei~) \subset~
+  Ei
+\item
+  la matrice de u dans la base \mathcal{E} est triangulaire supérieure.
+\end{itemize}
+
+Démonstration En effet, on a évidemment au vu des inclusions
+Ei-1 \subset~ Ei
+
+\begin{align*} \forall~~i \in
+{[}1,n{]}, u(Ei) \subset~ Ei&& \%&
+\\ & \Leftrightarrow &
+\forall~i \in {[}1,p{]}, u(ei) \in Ei~
+=\
+\mathrmVect(e1,\\ldots,ei~)\%&
+\\ \end{align*}
+
+ce que traduit exactement la forme de la matrice.
+
+\paragraph{3.1.2 Valeurs propres, vecteurs propres}
+
+Définition~3.1.3 Soit E un K-espace vectoriel et u \in L(E). On dit que \lambda~
+\in K est valeur propre de u s'il existe x \in E,
+x\neq~0 tel que u(x) = \lambda~x. On dit alors que x est
+un vecteur propre de u associé à la valeur propre \lambda~. L'ensemble des
+valeurs propres de u est appelé le spectre de u et noté
+\mathrm{Sp}~(u).
+
+Remarque~3.1.3 On a u(x) = \lambda~x \Leftrightarrow (u -
+\lambda~\mathrmIdE)(x) = 0. On en déduit que \lambda~ est
+valeur propre de u si et seulement si u -
+\lambda~\mathrmIdE est non in\\\\jmathmathmathmathectif. Ceci amène
+aussi à la définition suivante
+
+Définition~3.1.4 Soit \lambda~
+\in\mathrm{Sp}~(u). On appelle
+sous-espace propre associé à \lambda~ le sous espace vectoriel Eu(\lambda~)
+= \mathrmKer~(u -
+\lambda~\mathrmIdE) (composé des vecteurs propres
+associés à \lambda~ et du vecteur nul).
+
+Remarque~3.1.4 On remarque bien entendu qu'un vecteur propre est associé
+à une seule valeur propre (soit Eu(\lambda~) \bigcap Eu(\mu) =
+\0\). En fait ce résultat peut être
+précisé à l'aide du théorème essentiel suivant
+
+Théorème~3.1.4 Soit E un K-espace vectoriel et u \in L(E). Soit
+\lambda~1,\\ldots,\lambda~k~
+des valeurs propres distinctes de u. Alors les sous-espaces
+Eu(\lambda~i) sont en somme directe.
+
+Démonstration On va démontrer par récurrence sur n que x1 +
+\\ldots~ +
+xn = 0 \rigtharrow~\forall~i, xi~ = 0 si
+xi \in Eu(\lambda~i). C'est vrai pour n = 1. On
+suppose le résultat vrai pour n - 1 et soit x1 +
+\\ldots~ +
+xn = 0. Appliquant u on obtient
+
+\begin{align*} 0& =& u(x1) +
+\\ldots~ +
+u(xn) = \lambda~1x1 +
+\\ldots~ +
+\lambda~nxn\%& \\ & =&
+\lambda~1x1 +
+\\ldots~ +
+\lambda~nxn - \lambda~n(x1 +
+\\ldots~ +
+xn) \%& \\ & =& (\lambda~1
+- \lambda~n)x1 +
+\\ldots~ +
+(\lambda~n-1 - \lambda~n)xn-1 \%&
+\\ \end{align*}
+
+L'hypothèse de récurrence implique que \forall~~i \in
+{[}1,n - 1{]}, (\lambda~i - \lambda~n)xi = 0 soit
+xi = 0 (car
+\lambda~i\neq~\lambda~n). La relation de
+départ donne en plus xn = 0.
+
+On en déduit immédiatement
+
+Corollaire~3.1.5 Soit (xi)i\inI une famille de
+vecteurs propres de u associés à des valeurs propres \lambda~i deux à
+deux distinctes. Alors la famille est libre.
+
+Exemple~3.1.1 La famille d'applications C^\infty~, f\lambda~ : \mathbb{R}~
+\rightarrow~ \mathbb{C}, t\mapsto~e^\lambda~t est composée de
+vecteurs propres de l'opérateur de dérivation (dans l'espace vectoriel
+des fonctions C^\infty~ de \mathbb{R}~ dans \mathbb{C})~: Df\lambda~ =
+\lambda~f\lambda~. On en déduit qu'elle est libre.
+
+Enfin le résultat suivant est souvent fort utile
+
+Proposition~3.1.6 Soit u et v deux endomorphismes de E tels que u \cdot v =
+v \cdot u. Alors tout sous-espace propre de u est stable par v.
+
+Démonstration Si u(x) = \lambda~x, alors u(v(x)) = v(u(x)) = \lambda~v(x), donc v(x) \in
+Eu(\lambda~).
+
+\paragraph{3.1.3 Polynôme caractéristique}
+
+Remarque~3.1.5 Soit E un K-espace vectoriel de dimension finie et u \in
+L(E). On a vu que \lambda~ est valeur propre de u si et seulement si
+\lambda~\mathrmIdE - u est non in\\\\jmathmathmathmathectif, ce qui en
+dimension finie signifie que
+\mathrm{det}~
+(\lambda~\mathrmIdE - u) = 0. On va donc
+introduire un polynôme \chiu(X) tel que
+\forall~\lambda~ \in K,\chiu~(\lambda~)
+= \mathrm{det}~
+(\lambda~\mathrmIdE - u).
+
+Définition~3.1.5 Soit M \in MK(n). On appelle polynôme
+caractéristique de la matrice M le déterminant \chiM(X) de la
+matrice XIn - M \in MK{[}X{]}(n).
+
+Proposition~3.1.7
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) si M et M' sont deux matrices semblables, alors \chiM' =
+  \chiM
+\item
+  (ii) \chi^tM = \chiM
+\item
+  (iii) \chiM(X) = X^n
+  -\mathrm{tr}(M)X^n-1~
+  + \\ldots~ +
+  (-1)^n\
+  \mathrm{det} M
+\end{itemize}
+
+Démonstration
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) Si M' = P^-1MP, alors XIn - M' =
+  XIn - P^-1MP = P^-1(XIn -
+  M)P et donc \mathrm{det}~
+  (XIn - M) =\
+  \mathrm{det} (XIn - M').
+\item
+  (ii) découle de la même fa\ccon de
+  ^t(XIn - M) = XIn -^tM
+\item
+  (iii) Le coefficient du terme constant est \chiM(0)
+  = \mathrm{det}~ (-M) =
+  (-1)^n\
+  \mathrm{det} M. Pour les coefficients de plus haut
+  degré, on écrit \chiM(X) =\
+  \sum ~
+  \sigma\inSn\epsilon(\sigma)\\∏
+   i=1^n(\deltai^\sigma(i)X -
+  ai,\sigma(i)). Or le degré de
+  \∏ ~
+  i=1^n(\deltai^\sigma(i)X - ai,\sigma(i))
+  est le nombre de points fixes de \sigma, c'est-à-dire soit n pour \sigma =
+  \mathrmId, soit inférieur ou égal à n - 2. Donc
+  \chiM(X) =\ \∏
+   i=1^n(X - ai,i) + R(X) avec
+  deg~ R \leq n - 2. Le résultat en découle
+  immédiatement.
+\end{itemize}
+
+Remarque~3.1.6 La partie (i) nous montre que si u \in L(E) et si \mathcal{E} est une
+base de E, le polynôme caractéristique de la matrice
+\mathrmMat~ (u,\mathcal{E}) est
+indépendant du choix de \mathcal{E}.
+
+Définition~3.1.6 Soit u \in L(E) où dim~ E
+\textless{} +\infty~. On appelle polynôme caractéristique de u le polynôme
+caractéristique de sa matrice dans n'importe quelle base de E.
+
+Proposition~3.1.8
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) \chiu(X) = X^n
+  -\mathrm{tr}(u)X^n-1~
+  + \\ldots~ +
+  (-1)^n\
+  \mathrm{det} u
+\item
+  (ii) \chi^tu = \chiu
+\item
+  (iii) \lambda~ \in\mathrm{Sp}~(u)
+  \Leftrightarrow \chiu(\lambda~) = 0
+\end{itemize}
+
+Définition~3.1.7 Soit \lambda~ une valeur propre de u. On appelle multiplicité
+de \lambda~ le nombre mu(\lambda~) égal à la multiplicité de \lambda~ comme racine
+de \chiu.
+
+Lemme~3.1.9 Soit u \in L(E) et F un sous-espace vectoriel de E stable par
+u. Soit u' : F \rightarrow~ F défini par u'(x) = u(x) pour x \in F. Alors
+\chiu'(X) divise \chiu(X).
+
+Démonstration Soit ℱ =
+(e1,\\ldots,ep~)
+une base de F que l'on complète en \mathcal{E} =
+(e1,\\ldots,en~)
+base de E. Alors M =\
+\mathrmMat (u,\mathcal{E}) = \left
+(\matrix\,A&B\cr 0
+&C\right ) où A =\
+\mathrmMat (u',ℱ). On a alors par un calcul de
+déterminants par blocs \chiM(X) = \chiA(X)\chiC(X)
+ce qui montre que \chiu'(X) = \chiA(X) divise
+\chiu(X) = \chiM(X).
+
+Théorème~3.1.10 Soit u \in L(E), \lambda~
+\in\mathrm{Sp}~(u),
+mu(\lambda~) la multiplicité de la valeur propre \lambda~ et Eu(\lambda~)
+le sous-espace propre associé à \lambda~. Alors 1 \leq\
+dim Eu(\lambda~) \leq mu(\lambda~).
+
+Démonstration Eu(\lambda~) est stable par u et la restriction u' de u
+à Eu(\lambda~) est l'homothétie de rapport \lambda~ dont le polynôme
+caractéristique est \chiu'(X) = (X -
+\lambda~)^dim Eu(\lambda~)~. Le lemme
+précédent implique donc que dim~
+Eu(\lambda~) \leq mu(\lambda~). De plus
+Eu(\lambda~)\neq~\0\,
+donc 1 \leq dim Eu~(\lambda~).
+
+Remarque~3.1.7 On a donc mu(\lambda~) = 1 \rigtharrow~\
+dim Eu(\lambda~) = 1.
+
+\paragraph{3.1.4 Endomorphismes diagonalisables}
+
+Définition~3.1.8 Soit E un K-espace vectoriel de dimension finie et u \in
+L(E). On dit que u est diagonalisable s'il vérifie les conditions
+équivalentes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) il existe une base \mathcal{E} de E telle que
+  \mathrmMat~ (u,\mathcal{E}) soit
+  diagonale
+\item
+  (ii) il existe une base \mathcal{E} de E formée de vecteurs propres de u
+\item
+  (iii) E est somme (directe) des sous-espaces propres de u
+\end{itemize}
+
+Démonstration (i) et (ii) sont évidemment équivalents. Réunissant des
+bases des sous-espaces propres de u, on a bien évidemment (iii) \rigtharrow~(ii).
+Supposons maintenant que (i) est vrai. Quitte à permuter la base, on
+peut supposer que
+\mathrmMat~ (u,\mathcal{E})
+=\
+\mathrmdiag(\lambda~1,\\ldots,\lambda~1,\lambda~2,\\\ldots,\lambda~2,\\\ldots,\\\ldots,\lambda~k,\\\ldots,\lambda~k~)
+avec
+\lambda~1,\\ldots,\lambda~k~
+deux à deux distincts, \lambda~i figurant mi fois. On a
+alors dim Eu(\lambda~i~) ≥
+mi (on a mi vecteurs de base dans cet espace), soit
+
+dim~ \\oplus~
+\lambda~\in\mathrm{Sp}(u)Eu(\lambda~) =
+\sum i=1^k dim E~
+u(\lambda~i) ≥\\sum
+i=1^km i = dim E
+
+et donc E = \\oplus~ ~
+\lambda~\in\mathrm{Sp}(u)Eu~(\lambda~).
+Donc (i) \rigtharrow~(iii).
+
+Théorème~3.1.11 Soit E un K-espace vectoriel de dimension finie et u \in
+L(E). Alors les conditions suivantes sont équivalentes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) u est diagonalisable
+\item
+  (ii) \chiu(X) est scindé sur K et pour toute valeur propre \lambda~ de
+  u la dimension du sous-espace propre associé est égale à la
+  multiplicité de la valeur propre.
+\end{itemize}
+
+Démonstration Supposons u diagonalisable et soit \mathcal{E} une base de E telle
+que \mathrmMat~ (u,\mathcal{E}) = D
+=\
+\mathrmdiag(\lambda~1,\\ldots,\lambda~1,\lambda~2,\\\ldots,\lambda~2,\\\ldots,\\\ldots,\lambda~k,\\\ldots,\lambda~k~)
+avec
+\lambda~1,\\ldots,\lambda~k~
+deux à deux distincts, \lambda~i figurant mi fois. Alors
+\chiu(X) = \chiD(X) =\
+∏  i=1^k~(X -
+\lambda~i)^mi ce qui montre dé\\\\jmathmathmathmathà que \chiu
+est scindé et que les valeurs propres de u sont exactement
+\lambda~1,\\ldots,\lambda~k~.
+De plus dim Eu(\lambda~i~) ≥
+mi = mu(\lambda~i) puisque
+Eu(\lambda~i) contient une famille libre de cardinal
+mi. On a donc dim~
+Eu(\lambda~i) = mu(\lambda~i), soit (i) \rigtharrow~(ii).
+Inversement supposons (ii) vérifié. On a alors
+
+\begin{align*} dim~
+\oplus~ i=1^kE~
+u(\lambda~i)& =& \\sum
+i=1^km u(\lambda~i) = deg
+\chiu(X)\%& \\ & =&
+dim~ E \%& \\
+\end{align*}
+
+puisque le polynôme est scindé. Soit E =\
+\oplus~ ~
+i=1^kEu(\lambda~i).
+
+Corollaire~3.1.12 Soit E un K-espace vectoriel de dimension finie et u \in
+L(E) tel que \chiu soit scindé à racines simples. Alors u est
+diagonalisable.
+
+Remarque~3.1.8 Pratique de la diagonalisation
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) calculer le polynôme caractéristique et en chercher les racines
+  avec leurs multiplicités
+\item
+  (ii) pour chaque racine déterminer le sous-espace propre
+  correspondant, défini par l'équation (u -
+  \lambda~\mathrmId)(x) = 0~; comparer dimension du
+  sous-espace propre et multiplicité de la valeur propre
+\item
+  (iii) déterminer une base de chaque sous-espace propre et les réunir
+  en une base de E.
+\end{itemize}
+
+\paragraph{3.1.5 Matrices diagonalisables}
+
+Définition~3.1.9 Soit M \in MK(n). On définit de manière
+évidente les valeurs propres et vecteurs propres de M~: MX = \lambda~X avec
+X\neq~0.
+
+Définition~3.1.10 Soit M \in MK(n). On dit que M est
+diagonalisable si elle vérifie les conditions équivalentes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) M est la matrice d'un endomorphisme diagonalisable dans une
+  certaine base
+\item
+  (ii) M est semblable à une matrice diagonale
+\item
+  (iii) il existe une base de K^n ∼ MK(n,1) formée
+  de vecteurs propres de M
+\item
+  (iii) K^n ∼ MK(n,1) est somme directe des
+  sous-espaces propres de M
+\end{itemize}
+
+Démonstration Tout ceci est élémentaire.
+
+On a immédiatement
+
+Théorème~3.1.13 Soit M \in MK(n). Alors les conditions suivantes
+sont équivalentes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) M est diagonalisable
+\item
+  (ii) \chiM(X) est scindé sur K et pour toute valeur propre \lambda~ de
+  M la dimension du sous-espace propre associé est égale à la
+  multiplicité de la valeur propre.
+\end{itemize}
+
+Corollaire~3.1.14 Soit M \in MK(n) telle que \chiM soit
+scindé à racines simples. Alors M est diagonalisable.
+
+Remarque~3.1.9 Pratique de la diagonalisation
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) calculer le polynôme caractéristique et en chercher les racines
+\item
+  (ii) pour chaque racine déterminer le sous-espace propre
+  correspondant, défini par l'équation (M - \lambda~In)X = 0~; ceci
+  conduit à un système homogène de rang rM(\lambda~)~; on a
+  dim EM(\lambda~) = n - rM~(\lambda~)~;
+  comparer dimension du sous-espace propre et multiplicité de la valeur
+  propre
+\item
+  (iii) déterminer une base de chaque sous-espace propre~; soit P la
+  matrice qui admet ces vecteurs propres comme vecteurs colonnes~; alors
+  P^-1MP est diagonale.
+\end{itemize}
+
+\paragraph{3.1.6 Endomorphismes et matrices trigonalisables}
+
+Définition~3.1.11 Soit E un K-espace vectoriel de dimension finie. On
+dit que u est trigonalisable s'il vérifie les conditions équivalentes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) il existe une base \mathcal{E} de E telle que
+  \mathrmMat~ (u,\mathcal{E}) soit
+  triangulaire (supérieure)
+\item
+  (ii) il existe une base \mathcal{E} de E telle que \forall~~i,
+  u(ei)
+  \in\mathrmVect(e1,\\\ldots,ei~)
+\item
+  (iii) il existe une suite \0\ =
+  F0 \subset~ F1 \subset~⋯ \subset~
+  Fn = E de sous-espaces de E tels que
+  dim Fi = i et u(Fi~) \subset~
+  Fi.
+\end{itemize}
+
+Démonstration
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) et (ii) sont trivialement équivalents
+\item
+  (i) \rigtharrow~(iii)~: prendre Fi =\
+  \mathrmVect(e1,\\ldots,ei~)
+\item
+  (iii) \rigtharrow~(i)~: construire par applications successives du théorème de la
+  base incomplète une base
+  (e1,\\ldots,en~)
+  telle que Fi =\
+  \mathrmVect(e1,\\ldots,ei~).
+\end{itemize}
+
+Théorème~3.1.15 Soit E un K-espace vectoriel de dimension finie et u \in
+L(E). Alors les conditions suivantes sont équivalentes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) u est trigonalisable
+\item
+  (ii) \chiu(X) est scindé sur K (ce qui est automatiquement
+  vérifié si K est algébriquement clos)
+\end{itemize}
+
+Démonstration
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) \rigtharrow~(ii)~: si M =\
+  \mathrmMat (u,\mathcal{E}) = \left
+  (\matrix\,a1,1&\\ldots~
+  &\\ldots&\\\ldots~
+  \cr 0
+  &a2,2&\\ldots&\\\ldots~
+  \cr &
+  &⋱&\\ldots~
+  \cr 0
+  &\\ldots~
+  &0&an,n\right ), on a \chiu(X) =
+  \chiM(X) =\ \∏
+   i=1^n(X - ai,i). Donc \chiu est
+  scindé.
+\item
+  (ii) \rigtharrow~ (i). Par récurrence sur n~; il n'y a rien à démontrer si n = 1.
+  Supposons \chiu scindé, et soit \lambda~ une racine de \chiu.
+  Soit e1 un vecteur propre associé à \lambda~, que l'on complète en
+  (e1,\\ldots,en~)
+  base de E. Soit F =\
+  \mathrmVect(e2,\\ldots,en~),
+  p la pro\\\\jmathmathmathmathection sur F parallèlement à Ke1 et v : F \rightarrow~ F
+  défini par v(x) = p(u(x)) si x \in F. Alors M =\
+  \mathrmMat (u,\mathcal{E}) = \left
+  (\matrix\,\lambda~&∗∗∗ \cr
+  \matrix\,0 \cr
+  \⋮~
+  \cr 0&A \right ) avec A
+  = \mathrmMat~
+  (v,(e2,\\ldots,en~)).
+  On en déduit que \chiu(X) = (X - \lambda~)\chiv(X). Donc
+  \chiv est aussi scindé. Par hypothèse de récurrence, il existe
+  une base
+  (\epsilon2,\\ldots,\epsilonn~)
+  de F telle que \mathrmMat~
+  (v,(\epsilon2,\\ldots,\epsilonn~))
+  soit triangulaire supérieure et alors
+  \mathrmMat~
+  (u,(e1,\epsilon2,\\ldots,\epsilonn~))
+  = \left (\matrix\,\lambda~&∗
+  \cr \matrix\,0
+  \cr
+  \⋮~
+  \cr
+  0&\mathrmMat~
+  (v,(\epsilon2,\\ldots,\epsilonn))~\right
+  ) est triangulaire supérieure.
+\end{itemize}
+
+Remarque~3.1.10 Comme pour la diagonalisation, ces notions passent
+immédiatement aux matrices
+
+Définition~3.1.12 Soit M \in MK(n). On dit que M est
+trigonalisable si elle vérifie les conditions équivalentes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) M est la matrice d'un endomorphisme trigonalisable dans une
+  certaine base
+\item
+  (ii) M est semblable à une matrice triangulaire (supérieure).
+\end{itemize}
+
+Théorème~3.1.16 Soit M \in MK(n). Alors les conditions suivantes
+sont équivalentes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) M est trigonalisable
+\item
+  (ii) \chiM(X) est scindé sur K (ce qui est automatiquement
+  vérifié si K est algébriquement clos)
+\end{itemize}
+
+Corollaire~3.1.17 L'ensemble des matrices diagonalisables est dense dans
+M\mathbb{C}(n).
+
+Démonstration Soit M \in M\mathbb{C}(n) et P inversible telle que
+
+P^-1MP = T = \left
+(\matrix\,a1,1&\\ldots~
+&\\ldots&\\\ldots~
+\cr 0
+&a2,2&\\ldots&\\\ldots~
+\cr &
+&⋱&\\ldots~
+\cr 0
+&\\ldots~
+&0&an,n\right )
+
+et posons pour p \in \mathbb{N}~,
+
+Tp = \left
+(\matrix\,a1,1 + 1
+\over p
+&\\ldots~
+&\\ldots&\\\ldots~
+\cr 0 &a2,2 + 1 \over
+p^2
+&\\ldots&\\\ldots~
+\cr &
+&⋱&\\ldots~
+\cr 0
+&\\ldots~
+&0&an,n + 1 \over p^n
+\right )
+
+Il n'y a qu'un nombre fini de p pour lesquels on peut avoir
+ai,i + 1 \over p^i =
+a\\\\jmathmathmathmath,\\\\jmathmathmathmath + 1 \over p^\\\\jmathmathmathmath (il s'agit en
+effet d'une équation polynomiale en  1 \over p ). On
+en déduit que pour tous les p sauf en nombre fini, Tp a un
+polynôme caractéristique scindé à racines simples, donc est
+diagonalisable. Il en est donc de même de Mp =
+PTpP^-1. Or
+limp\rightarrow~+\infty~Mp~ =
+PTP^-1 = M. Donc M est limite d'une suite de matrices
+diagonalisables.
+
+{[}
+{[}

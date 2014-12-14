@@ -1,0 +1,854 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}{]}
+{[}
+
+\subsubsection{10.1 Suites de fonctions}
+
+\paragraph{10.1.1 Convergence simple, convergence uniforme}
+
+Définition~10.1.1 Soit X un ensemble, E un espace métrique,
+(fn)n\in\mathbb{N}~ une suite d'applications de X dans E. On dit
+que la suite converge simplement si pour tout x \in X, la suite
+(fn(x))n\in\mathbb{N}~ converge dans E. Dans ce cas, on pose
+f(x) = limfn~(x) et on dit que f : X
+\rightarrow~ E est limite simple de la suite (fn).
+
+Remarque~10.1.1 La traduction en métrique de f est limite simple de la
+suite (fn) est
+
+\forall~x \in X, \\forall~~\epsilon
+\textgreater{} 0, \exists~N(\epsilon,x),\quad
+n ≥ N(\epsilon,x) \rigtharrow~ d(f(x),fn(x)) \textless{} \epsilon
+
+où l'entier N dépend à la fois de \epsilon et de x \in X.
+
+Exemple~10.1.1 Soit fn : {[}0,1{]} \rightarrow~ \mathbb{R}~,
+x\mapsto~x^n. La suite fn
+converge simplement vers f : {[}0,1{]} \rightarrow~ \mathbb{R}~ définie par f(x) =
+\left \ \cases 1&si x
+= 1 \cr 0&si x\neq~1 
+\right .. Pour un \epsilon \textless{} 1 donné, le meilleur
+N(\epsilon,x) que l'on puisse prendre est 0 si x = 1 ou x = 0, et E(
+log~ \epsilon \over
+log x~ ) si 0 \textless{} x \textless{} 1. On
+constate que supx\in{[}0,1{]}~N(\epsilon,x) =
++\infty~. Il n'est donc pas question de prendre le même N pour tous les x.
+
+Définition~10.1.2 Soit X un ensemble, E un espace métrique,
+(fn)n\in\mathbb{N}~ une suite d'applications de X dans E. On dit
+que la suite converge uniformément s'il existe f : X \rightarrow~ E vérifiant les
+conditions équivalentes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) \forall~~\epsilon \textgreater{} 0,
+  \exists~N(\epsilon),\quad n ≥ N(\epsilon)
+  \rigtharrow~\forall~x \in X, d(f(x),fn~(x)) \textless{}
+  \epsilon
+\item
+  (ii) limn\rightarrow~+\infty~\mun~ = 0 où
+  l'on a posé \mun =\
+  supx\inXd(fn(x),f(x)) \in \mathbb{R}~ \cup\ +
+  \infty~\.
+\end{itemize}
+
+Démonstration L'équivalence est claire puisque \mun \textless{}
+\epsilon \rigtharrow~ (\forall~x \in X, d(fn~(x),f(x))
+\textless{} \epsilon) et qu'inversement (\forall~~x \in X,
+d(fn(x),f(x)) \textless{} \epsilon) \rigtharrow~ \mun \leq \epsilon.
+
+Remarque~10.1.2 Il est clair que si la suite (fn) converge
+uniformément vers f, elle converge simplement vers f. On en déduit que
+la fonction f est unique.
+
+\paragraph{10.1.2 Plan d'étude d'une suite de fonctions}
+
+Soit X un ensemble, E un espace métrique, (fn)n\in\mathbb{N}~
+une suite d'applications de X dans E.
+
+On commence par étudier la convergence simple de la suite de fonctions.
+Pour chaque x \in X on étudie la suite (fn(x)) d'éléments de E.
+Dans le cas où cette suite est convergente pour chaque x \in X, on définit
+f : X \rightarrow~ E par f(x) = limfn~(x)~;
+l'application f est limite simple de la suite (fn).
+
+On étudie ensuite la convergence uniforme de la suite (fn)
+vers f. Pour montrer une convergence uniforme, on peut soit chercher une
+suite (\alpha~n) de limite 0 indépendante de x telle que
+\forall~x \in X, d(fn~(x),f(x)) \leq
+\alpha~n, soit étudier directement la suite (\mun) où
+\mun =\
+supx\inXd(fn(x),f(x)) \in \mathbb{R}~ \cup\ +
+\infty~\. Pour montrer une non convergence uniforme, on peut
+soit utiliser un des théorèmes suivants qui garantissent qu'un certain
+nombre de propriétés des fonctions fn sont conservées par
+limite uniforme, soit utiliser la proposition suivante
+
+Proposition~10.1.1 Soit X un ensemble, E un espace métrique,
+(fn)n\in\mathbb{N}~ une suite d'applications de X dans E. Alors
+la suite (fn) converge uniformément vers f si et seulement
+si~pour toute suite (xn) de X, on a
+limd(f(xn),fn(xn~))
+= 0.
+
+Démonstration La condition est évidemment nécessaire puisque 0 \leq
+d(f(xn),fn(xn)) \leq \mun.
+Inversement, si la suite ne converge pas uniformément vers f, on a, en
+niant la propriété (i)
+
+\exists~\epsilon \textgreater{} 0,
+\forall~N \in \mathbb{N}~, \\exists~n ≥ N,
+\existsxn~ \in X,\quad
+d(f(xn),fn(xn)) ≥ \epsilon
+
+Ceci définit xn pour une infinité de n. Pour les autres, on
+choisit un xn arbitraire. On a pour une infinité de n,
+d(f(xn),fn(xn)) ≥ \epsilon et donc la suite
+d(f(xn),fn(xn)) ne tend pas vers 0.
+
+Exemple~10.1.2 Soit fn : {[}0,1{]} \rightarrow~ \mathbb{R}~,
+x\mapsto~x^n. La suite fn
+converge simplement vers f : {[}0,1{]} \rightarrow~ \mathbb{R}~ définie par f(x) =
+\left \ \cases 1&si x
+= 1 \cr 0&si x\neq~1 
+\right .. Prenons xn = 1 - 1
+\over n . On a fn(xn) -
+f(xn) = (1 - 1 \over n )^n de
+limite  1 \over e et non 0. Donc la suite ne converge
+pas uniformément.
+
+Remarque~10.1.3 Lorsque la convergence n'est pas uniforme sur X tout
+entier, on peut rechercher des parties de X sur lesquelles cette
+convergence est uniforme.
+
+Exemple~10.1.3 Soit fn : {[}0, \pi~\over 2 {]}
+\rightarrow~ \mathbb{R}~ définie par fn(t) =
+n^\alpha~ sin~
+^ntcos~ t. Il est clair que
+\forall~t \in {[}0, \pi~\over 2~ {]},
+limfn~(t) = 0~: si t \in {[}0,
+\pi~\over 2 {[} on a 0 \leq sin~ t
+\textless{} 1 et si t = \pi~\diagup2, on a cos~ t = 0.
+La suite converge simplement vers la fonction nulle. On a \mun
+= sup~t\in{[}0,\pi~\over
+2 {]}\textbar{}f(t) - fn(t)\textbar{}
+= sup~t\in{[}0,\pi~\over
+2 {]}fn(t). Mais fn'(t) =
+n^\alpha~ sin ^n-1~t(n - (n +
+1)sin ^2~t) et on a donc le tableau
+de variation, en posant tn = arcsin~
+\sqrt n\over n+1
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+t
+
+0
+
+tn
+
+\pi~\over 2
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+fn(t)
+
+0
+
+\nearrow
+
+\mun
+
+\searrow
+
+0
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+On a donc
+
+\mun = fn(tn) =
+n^\alpha~\left ( n\over n +
+1\right )^n\diagup2 1\over
+\sqrtn + 1 ∼ n^\alpha~\over
+\sqrte\sqrtn
+
+La suite converge uniformément si et seulement si~\alpha~ \textless{}
+1\over 2. Par contre, soit a \textless{}
+\pi~\over 2 et soit N tel que
+arcsin~ \sqrt
+N\over N+1 \textgreater{} a. Alors dès que n ≥ N,
+la fonction fn est croissante sur {[}0,a{]} et donc
+supt\leqafn~(t) =
+fn(a) qui tend vers 0 quand n tend vers + \infty~. On en déduit que
+la suite fn converge uniformément vers la fonction nulle sur
+tout intervalle {[}0,a{]} (mais pas sur leur réunion {[}0,
+\pi~\over 2 {[}).
+
+A titre d'introduction à ce qui suit, calculons
+\int  0~^\pi~\over
+2 fn(t) dt~; on a par un simple changement de variables u
+= sin t, \\int ~
+0^\pi~\over 2 fn(t) dt =
+n^\alpha~\int ~
+0^1u^n du =
+n^\alpha~\over n+1. On voit donc que bien que
+\forall~t \in {[}0, \pi~\over 2~ {]},
+limn\rightarrow~+\infty~fn~(t) = 0, la suite
+\int  0~^\pi~\over
+2 fn(t) dt ne converge vers 0 que si \alpha~ \textless{} 1. Si \alpha~
+= 1, elle converge vers 1, et si \alpha~ \textgreater{} 1, elle converge vers
++ \infty~. Autrement dit, si \alpha~ ≥ 1, on a
+limn\rightarrow~+\infty~~\\int
+ 0^1fn(t)
+dt\neq~\int ~
+0^1\
+limn\rightarrow~+\infty~fn(t) dt. On voit qu'une convergence simple
+ne permet pas d'intervertir le symbole limite et le symbole d'intégrale.
+
+\paragraph{10.1.3 Critère de Cauchy uniforme}
+
+Définition~10.1.3 Soit X un ensemble, E un espace métrique. On dit
+qu'une suite (fn)n\in\mathbb{N}~ d'applications de X dans E
+vérifie le critère de Cauchy uniforme si on a
+
+\forall~~\epsilon \textgreater{} 0,
+\existsN \in \mathbb{N}~, p,q ≥ N \rigtharrow~\\forall~~x
+\in X, d(fp(x),fq(x)) \textless{} \epsilon
+
+Remarque~10.1.4 Il est clair que si la suite (fn) vérifie le
+critère de Cauchy uniforme, pour chaque x \in X, la suite
+(fn(x)) d'éléments de E est une suite de Cauchy.
+
+Théorème~10.1.2 Soit X un ensemble, E un espace métrique complet. Alors
+une suite (fn)n\in\mathbb{N}~ d'applications de X dans E est
+uniformément convergente si et seulement si~elle vérifie le critère de
+Cauchy uniforme.
+
+Démonstration Le sens direct se démontre de la manière habituelle et
+n'utilise pas la complétude de E~: si (fn) converge
+uniformément vers f, soit \epsilon \textgreater{} 0 et N \in \mathbb{N}~ tel que n ≥ N
+\rigtharrow~\forall~x \in X, d(f(x),fn~(x)) \textless{}
+\epsilon \over 2 . Alors, si p,q ≥ N, on a
+\forall~x \in X, d(fp(x),fq~(x)) \leq
+d(fp(x),f(x)) + d(f(x),fq(x)) \textless{} \epsilon
+\over 2 + \epsilon \over 2 = \epsilon.
+
+Pour la réciproque, supposons que E est complet et que la suite
+(fn) vérifie le critère de Cauchy uniforme. D'après la
+remarque précédente, pour chaque x \in X, la suite (fn(x))
+d'éléments de E est une suite de Cauchy, donc elle converge. On pose
+f(x) = limfn~(x). Montrons que la
+suite converge uniformément vers f. Soit \epsilon \textgreater{} 0, et soit N \in
+\mathbb{N}~ tel que p,q ≥ N \rigtharrow~\forall~~x \in X,
+d(fp(x),fq(x)) \textless{} \epsilon \over
+2 . Fixons p ≥ N et faisons tendre q vers + \infty~. On obtient, en tenant
+compte de limfq~(x) = f(x) et de la
+continuité de la fonction distance, \forall~~x \in X,
+d(fp(x),f(x)) \leq \epsilon \over 2 \textless{} \epsilon, ce
+qui montre la convergence uniforme vers f.
+
+\paragraph{10.1.4 Fonctions bornées, norme de la convergence uniforme}
+
+Soit X un ensemble, E un espace vectoriel normé. On notera ℬ(X,E)
+l'ensemble des applications bornées de X dans E. Pour f \inℬ(X,E), on
+posera \\textbar{}f\\textbar{}\infty~
+=\
+supt\inX\\textbar{}f(t)\\textbar{}
+\in \mathbb{R}~.
+
+Proposition~10.1.3 L'application
+f\mapsto~\\textbar{}f\\textbar{}\infty~
+est une norme sur l'espace vectoriel ℬ(X,E). Soit (fn) une
+suite de ℬ(X,E). Alors la suite (fn) converge uniformément si
+et seulement si~elle converge dans (ℬ(X,E),\\textbar{}
+\\textbar{}\infty~), avec la même limite.
+
+Démonstration La vérification des propriétés des normes est élémentaire.
+Si la suite (fn) converge dans
+(ℬ(X,E),\\textbar{} \\textbar{}\infty~), soit f
+sa limite. On a alors \mun =\
+supx\inX\\textbar{}f(x) -
+fn(x)\\textbar{} =\\textbar{} f
+- fn\\textbar{}\infty~. On en déduit que la suite
+converge uniformément vers f. Inversement, si la suite converge
+uniformément vers f : X \rightarrow~ E, il existe N \in \mathbb{N}~ tel que n ≥ N \rigtharrow~
+\mun =\
+supx\inX\\textbar{}f(x) -
+fn(x)\\textbar{} \textless{} 1. La fonction f -
+fN est donc bornée~; comme fN est bornée, la
+fonction f est également bornée. On a alors \\textbar{}f
+- fn\\textbar{}\infty~ = \mun, ce qui montre
+que la suite (fn) converge vers f dans
+(ℬ(X,E),\\textbar{} \\textbar{}\infty~).
+
+Remarque~10.1.5 On voit en particulier qu'une suite de fonctions bornées
+qui converge uniformément a une limite qui est également une fonction
+bornée.
+
+Remarque~10.1.6 Soit (fn) une suite de ℬ(X,E). Alors la suite
+(fn) vérifie le critère de Cauchy uniforme si et seulement
+si~c'est une suite de Cauchy de (ℬ(X,E),\\textbar{}
+\\textbar{}\infty~) (immédiat). On en déduit, d'après un
+théorème précédent, que si E est complet,
+(ℬ(X,E),\\textbar{} \\textbar{}\infty~) est lui
+aussi complet.
+
+\paragraph{10.1.5 Opérations sur les fonctions}
+
+Bien entendu, les théorèmes de continuité des opérations algébriques
+s'appliquent immédiatement aux suites simplement convergentes puisque si
+f(x) = limfn~(x) et g(x)
+= limgn~(x), on a (\alpha~f + \beta~g)(x)
+= lim(\alpha~fn + \beta~gn~)(x) et
+f(x)g(x) = limfn(x)gn~(x).
+
+La convergence uniforme est stable par combinaisons linéaires comme le
+montre le théorème suivant.
+
+Théorème~10.1.4 Soit X un ensemble, E un espace vectoriel normé. Soit
+(fn) et (gn) deux suites d'applications de X dans E
+qui convergent uniformément. Soit \alpha~ et \beta~ des scalaires. Alors la suite
+(\alpha~fn + \beta~gn)n\in\mathbb{N}~ converge uniformément.
+
+Démonstration Soit f = limfn~ et g
+= limgn~. Soit \epsilon \textgreater{} 0, et
+N \in \mathbb{N}~ tel que
+
+n ≥ N \rigtharrow~\forall~~x \in X, \\textbar{}f(x)
+- fn(x)\\textbar{} \leq \epsilon \over
+2(1 + \textbar{}\alpha~\textbar{})
+
+et
+
+\\textbar{}g(x) -
+gn(x)\\textbar{} \leq \epsilon \over 2(1
++ \textbar{}\beta~\textbar{})
+
+Alors pour n ≥ N, on a \forall~~x \in X,
+\\textbar{}(\alpha~f + \beta~g)(x) - (\alpha~fn +
+\beta~gn)(x)\\textbar{} \leq\textbar{}\alpha~\textbar{} \epsilon
+\over 2(1+\textbar{}\alpha~\textbar{}) +
+\textbar{}\beta~\textbar{} \epsilon \over
+2(1+\textbar{}\beta~\textbar{}) \textless{} \epsilon.
+
+Par contre, la convergence uniforme n'est pas stable par produit comme
+le montre l'exemple suivant~:
+
+Exemple~10.1.4 Soit fn : \mathbb{R}~ \rightarrow~ \mathbb{R}~ définie par fn(x) =
+1 \over n . La suite (fn) converge
+uniformément vers la fonction nulle. Soit g : \mathbb{R}~ \rightarrow~ \mathbb{R}~ définie par g(x) =
+x. Alors la suite (fng) converge simplement vers 0, mais pas
+uniformément puisque
+supx\in\mathbb{R}~\textbar{}fn~(x)g(x)\textbar{}
+= supx\in\mathbb{R}~~\left
+\textbar{} x \over n \right \textbar{}
+= +\infty~. A fortiori, la convergence uniforme d'une suite (fn) et
+d'une suite (gn) n'implique pas la convergence uniforme de la
+suite (fngn) (prendre gn = g). Cependant,
+on a le résultat suivant
+
+Théorème~10.1.5 Soit X un ensemble. Soit (fn) et
+(gn) deux suites d'applications bornées de X dans K qui
+convergent uniformément. Alors la suite (fngn)
+converge uniformément.
+
+Démonstration Soit f = limfn~ et g
+= limgn~. On sait dé\\\\jmathmathmathmathà que f et g
+sont bornées. On écrit alors
+
+\begin{align*} f(x)g(x) -
+fn(x)gn(x)& =& (fn(x) -
+f(x))(gn(x) - g(x)) \%& \\ &
+\text & +f(x)(gn(x) - g(x)) +
+g(x)(fn(x) - f(x))\%& \\
+\end{align*}
+
+ce qui nous donne
+
+\begin{align*} \textbar{}f(x)g(x) -
+fn(x)gn(x)\textbar{}& \leq& \textbar{}fn(x)
+- f(x)\textbar{}\textbar{}gn(x) - g(x)\textbar{} \%&
+\\ & &
++\textbar{}f(x)\textbar{}\textbar{}gn(x) - g(x)\textbar{} +
+\textbar{}g(x)\textbar{}\textbar{}fn(x) - f(x)\textbar{}\%&
+\\ \end{align*}
+
+puis \\textbar{}fg -
+fngn\\textbar{}\infty~
+\leq\\textbar{} fn -
+f\\textbar{}\infty~\\textbar{}gn -
+g\\textbar{}\infty~ +\\textbar{}
+f\\textbar{}\infty~\\textbar{}f -
+fn\\textbar{}\infty~ +\\textbar{}
+g\\textbar{}\infty~\\textbar{}g -
+gn\\textbar{}\infty~. On obtient donc
+lim~\\textbar{}fg -
+fngn\\textbar{}\infty~ = 0 et donc
+(fngn) converge uniformément vers fg.
+
+\paragraph{10.1.6 Propriétés de la convergence uniforme}
+
+Exemple~10.1.5 Soit fn : {[}0,1{]} \rightarrow~ \mathbb{R}~,
+x\mapsto~x^n. La suite fn
+converge simplement vers f : {[}0,1{]} \rightarrow~ \mathbb{R}~ définie par f(x) =
+\left \ \cases 1&si x
+= 1 \cr 0&si x\neq~1 
+\right .. Chacune des fonctions fn est continue
+au point 1, alors que f ne l'est pas. De nouveau, on a 1
+= limn\rightarrow~+\infty~~\left
+(limx\rightarrow~1^-x^n~\right
+)\neq~limx\rightarrow~1^-~\left
+(limn\rightarrow~+\infty~x^n~\right
+) = 0.
+
+Théorème~10.1.6~(conservation de la continuité) Soit E et F deux espaces
+métriques, (fn)n\in\mathbb{N}~ une suite d'applications de E
+dans F qui converge simplement vers f : E \rightarrow~ F. Soit a \in E. On suppose
+que (i) chacune des fn est continue au point a (ii) il existe
+U voisinage de a telle que la suite (fn) converge uniformément
+sur U Alors f est continue au point a.
+
+Démonstration Soit \epsilon \textgreater{} 0 et soit N \in \mathbb{N}~ tel que n ≥ N
+\rigtharrow~\forall~x \in U, d(f(x),fn~(x)) \textless{}
+\epsilon \over 3 . Comme fN est continue au point a,
+il existe V voisinage de a tel que x \in V \rigtharrow~
+d(fN(x),fN(a)) \textless{} \epsilon \over
+3 . Alors, pour x \in U \bigcap V , on a d(f(x),f(a)) \leq
+d(f(x),fN(x)) + d(fN(x),fN(a)) +
+d(fN(a),f(a)) \leq \epsilon \over 3 + \epsilon
+\over 3 + \epsilon \over 3 = \epsilon. Donc f est
+continue au point a.
+
+Corollaire~10.1.7 Soit E et F deux espaces métriques,
+(fn)n\in\mathbb{N}~ une suite d'applications continues de E dans
+F qui converge uniformément vers f : E \rightarrow~ F. Alors f est continue.
+
+Remarque~10.1.7 Il suffit évidemment que tout point ait un voisinage sur
+lequel la suite converge uniformément, ce que l'on appelle la
+convergence uniforme locale.
+
+Théorème~10.1.8~(interversion des limites) Soit E un espace métrique, F
+un espace métrique complet, (fn)n\in\mathbb{N}~ une suite de
+fonctions de E dans F. Soit a \in E, A \subset~ E tel que a
+\in\overlineA et \forall~~n \in \mathbb{N}~, A
+\subset~ Def (fn~). On suppose que
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) la suite fn converge uniformément vers f sur A
+\item
+  (ii) chacune des fn a une limite \elln en a suivant A
+\end{itemize}
+
+Alors la suite (\elln) admet une limite \ell et f admet \ell pour
+limite en a suivant A, autrement dit
+
+limn\rightarrow~+\infty~~\left
+(limx\rightarrow~a,x\inAfn~(x)\right
+) = limx\rightarrow~a,x\inA~\left
+(limn\rightarrow~+\infty~fn~(x)\right
+)
+
+Démonstration Pour montrer que la suite (\elln) admet une limite
+\ell, il suffit de montrer que c'est une suite de Cauchy. Mais, la suite
+(fn) vérifie le critère de Cauchy uniforme sur A. Soit \epsilon
+\textgreater{} 0~; il existe N \in \mathbb{N}~ tel que p,q ≥ N
+\rigtharrow~\forall~x \in A, d(fp(x),fq~(x))
+\textless{} \epsilon. Soit p,q ≥ N~; en faisant tendre x vers a en restant dans
+A, on obtient d(\ellp,\ellq) \leq \epsilon ce qui montre
+effectivement que la suite (\elln) est une suite de Cauchy de F,
+donc qu'elle converge.
+
+Soit \epsilon \textgreater{} 0 et soit N \in \mathbb{N}~ tel que n ≥ N
+\rigtharrow~\forall~x \in A, d(f(x),fn~(x)) \textless{}
+\epsilon \over 3 et soit N' \in \mathbb{N}~ tel que n ≥ N' \rigtharrow~
+d(\elln,\ell) \textless{} \epsilon \over 3 . Soit n
+= max(N,N'). Comme fn~ admet
+\elln pour limite en a suivant A, il existe U voisinage de a dans
+E tel que x \in U \bigcap A \rigtharrow~ d(fn(x),\elln) \leq \epsilon
+\over 3 . Alors, pour x \in U \bigcap A, on a
+
+\begin{align*} d(f(x),\ell)& \leq&
+d(f(x),fn(x)) + d(fn(x),\elln) +
+d(\elln,\ell)\%& \\ &
+\textless{}& \epsilon \over 3 + \epsilon \over
+3 + \epsilon \over 3 = \epsilon \%&
+\\ \end{align*}
+
+ce qui montre que limx\rightarrow~a,x\inA~f(x) =
+\ell.
+
+Remarque~10.1.8 Le résultat suivant s'applique en particulier dans le
+cas où a = +\infty~ et A = \mathbb{N}~, c'est-à-dire au cas d'une suite double
+(xn,p) d'éléments de F~: avec les hypothèses
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) limn\rightarrow~+\infty~xn,p~ =
+  yp uniformément par rapport à p
+\item
+  (ii) limp\rightarrow~+\infty~xn,p~ =
+  \elln
+\end{itemize}
+
+Alors la suite (\elln) admet une limite \ell et on a
+limp\rightarrow~+\infty~yp~ = \ell, autrement
+dit
+
+limn\rightarrow~+\infty~~\left
+(limp\rightarrow~+\infty~xn,p~\right
+) = limp\rightarrow~+\infty~~\left
+(limn\rightarrow~+\infty~xn,p~\right
+)
+
+Exemple~10.1.6 Le résultat précédent utilise de manière essentielle la
+convergence uniforme par rapport à p comme le montre l'exemple
+xn,p = n \over n+p pour lequel on a
+
+0 = limn\rightarrow~+\infty~~\left
+(limp\rightarrow~+\infty~xn,p~\right
+)\neq~limp\rightarrow~+\infty~~\left
+(limn\rightarrow~+\infty~xn,p~\right
+) = 1
+
+Théorème~10.1.9~(intégration) Soit (fn) une suite de fonctions
+réglées de {[}a,b{]} dans E (espace vectoriel normé complet) qui
+converge uniformément vers f : {[}a,b{]} \rightarrow~ E. Alors f est réglée et la
+suite (\int  a^bfn~(t)
+dt) admet la limite \int ~
+a^bf(t) dt.
+
+Démonstration Soit \epsilon \textgreater{} 0~; il existe N \in \mathbb{N}~ tel que n ≥ N
+\rigtharrow~\\textbar{} f - fn\\textbar{}\infty~
+\textless{} \epsilon \over 2 . Mais puisque fN est
+réglée, il existe \phi : {[}a,b{]} \rightarrow~ E en escalier telle que
+\\textbar{}fN - \phi\\textbar{}\infty~
+\textless{} \epsilon \over 2 . On a donc
+\\textbar{}f - \phi\\textbar{}\infty~
+\leq\\textbar{} f - fN\\textbar{}\infty~
++\\textbar{} fN - \phi\\textbar{}\infty~
+\textless{} \epsilon ce qui montre que f est encore réglée. On a alors
+
+\\textbar{}\int ~
+a^bf -\int ~
+a^bf n\\textbar{}
+\leq\int ~
+a^b\\textbar{}f - f
+n\\textbar{} \leq (b - a)\\textbar{}f -
+fn\\textbar{}\infty~
+
+ce qui montre que la suite (\int ~
+a^bfn(t) dt) admet la limite
+\int  a^b~f(t) dt.
+
+Remarque~10.1.9 Comme le montre la démonstration précédente, le fait que
+l'intervalle soit borné est essentiel. Le résultat précédent ne s'étend
+donc pas aux intégrales sur des intervalles non bornés (voir pour cela
+le paragraphe sur les fonctions intégrables). Par contre on a
+
+Corollaire~10.1.10 Soit I un intervalle de \mathbb{R}~, (fn) une suite
+de fonctions réglées de I dans E (espace vectoriel normé complet) qui
+converge uniformément vers f : I \rightarrow~ E. Alors f est réglée. Soit a \in I,
+Fn(x) =\int ~
+a^xfn(t) dt et F(x)
+=\int  a^x~f(t) dt. Alors la
+suite (Fn) converge uniformément vers F sur tout segment
+inclus dans I.
+
+Démonstration Le théorème précédent montre que f est réglée sur tout
+segment inclus dans I, donc réglée. De plus, si J est un segment inclus
+dans I, on peut, quitte à l'agrandir, supposer qu'il contient a. On a
+alors, pour x \in J,
+
+\begin{align*} \\textbar{}F(x) -
+Fn(x)\\textbar{}& \leq& \left
+\textbar{}\int ~
+a^x\\textbar{}f(t) - f
+n(t)\\textbar{} dt\right \textbar{} \%&
+\\ & \leq& \textbar{}x -
+a\textbar{}\\textbar{}f -
+fn\\textbar{}\infty~ \leq
+\ell(J)\\textbar{}f -
+fn\\textbar{}\infty~\%&
+\\ \end{align*}
+
+(en travaillant séparément dans les cas a \leq x et a \textgreater{} x), ce
+qui montre la convergence uniforme sur J de Fn vers F.
+
+Par contre, la convergence uniforme d'une suite de fonctions dérivables
+n'implique pas que la limite soit elle-même dérivable. C'est même de
+cette manière, par limite uniforme, qu'ont été construits les premiers
+exemples de fonctions continues n'admettant de dérivée en aucun point
+(voir le paragraphe sur les séries de fonctions). Par contre on a
+
+Théorème~10.1.11 Soit I un intervalle de \mathbb{R}~, (fn) une suite de
+fonctions de I dans E (espace vectoriel normé complet) qui converge
+simplement vers f : I \rightarrow~ E. On suppose que (i) chacune des fn
+est de classe \mathcal{C}^1 (ii) la suite (fn') converge
+uniformément sur I vers une fonction g. Alors f est de classe
+\mathcal{C}^1 et f' = g.
+
+Démonstration Soit a \in I. Puisque chaque fn est de classe
+\mathcal{C}^1, on a \forall~x \in I, fn~(x) =
+fn(a) +\int ~
+a^xfn'(t) dt. D'après le théorème précédent la
+suite x\mapsto~\int ~
+a^xfn'(t) dt converge uniformément sur tout
+segment inclus dans I vers \int ~
+a^xg(t) dt. On obtient donc, en faisant tendre n vers +
+\infty~, \forall~~x \in I, f(x) = f(a)
++\int  a^x~g(t) dt. Comme g est
+continue (limite uniforme de fonctions continues), f est de classe
+\mathcal{C}^1 et f' = g.
+
+Remarque~10.1.10 Comme le montre la démonstration précédente, il suffit,
+avec les mêmes hypothèses, que la suite (fn) converge en un
+point a pour qu'elle converge simplement sur I, cette convergence étant
+d'ailleurs uniforme sur tout segment inclus dans I. On retiendra que,
+pour montrer la dérivabilité d'une limite de suites de fonctions, il
+faut s'attacher à la convergence uniforme de la suite des dérivées, et
+non à celle de la suite elle-même.
+
+\paragraph{10.1.7 Suites de fonctions intégrables sur un intervalle}
+
+Remarque~10.1.11 Les théorèmes du type
+lim\\int  fn~
+=\int  \limfn~
+démontrés précédemment ont des hypothèses trop restrictives~: ils
+nécessitent d'une part que l'intervalle soit borné et d'autre part que
+la suite de fonctions converge uniformément sur tout l'intervalle. La
+théorie de Lebesgue étend ces théorèmes à des situations plus générales
+que nous n'étudierons pas en détail, mais d'où nous extrairons un
+certain nombre de résultats utiles, qui ne seront pas démontrés en toute
+généralité, mais seulement avec quelques hypothèses supplémentaires.
+
+Nous admettrons le résultat fondamental suivant suivant dont la
+démonstration est difficile
+
+Lemme~10.1.12 Soit J un segment de \mathbb{R}~, (fn)n\in\mathbb{N}~ une
+suite de fonctions continues par morceaux de J dans \mathbb{R}~^+
+vérifiant
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  il existe M ≥ 0 tel que \forall~~n \in \mathbb{N}~,
+  \forall~t \in J, fn~(t) \leq M
+\item
+  la suite (fn)n\in\mathbb{N}~ converge simplement vers 0, soit
+  \forall~~t \in J,
+  limn\rightarrow~+\infty~fn~(t) = 0
+\end{itemize}
+
+Alors la suite (\int ~
+Jfn)n\in\mathbb{N}~ converge vers 0.
+
+On en déduit le lemme suivant
+
+Lemme~10.1.13~(Convergence bornée sur un segment) Soit J un segment de
+\mathbb{R}~, (fn)n\in\mathbb{N}~ une suite de fonctions continues par
+morceaux de J dans \mathbb{C} qui converge simplement vers f continue par
+morceaux. On suppose qu'il existe M ≥ 0 tel que
+\forall~n \in \mathbb{N}~, \\forall~~t \in J,
+\textbar{}fn(t)\textbar{}\leq M. Alors la suite
+(\int  Jfn)n\in\mathbb{N}~~
+admet la limite \int  J~f.
+
+Démonstration On pose gn(t) = \textbar{}f(t) -
+fn(t)\textbar{}. Comme \forall~~n \in \mathbb{N}~,
+\forall~t \in J, \textbar{}fn~(t)\textbar{}\leq
+M, en passant à la limite on a \textbar{}f(t)\textbar{}\leq M, soit encore
+0 \leq g(t) \leq 2M. D'autre part, \forall~~t \in J,
+limn\rightarrow~+\infty~gn~(t) = 0. D'après
+le lemme précédent, on a
+lim\\int ~
+Jgn = 0. Or
+
+\left \textbar{}\int  J~f
+-\int ~
+Jfn\right \textbar{} =
+\left \textbar{}\int ~
+J(f - fn)\right
+\textbar{}\leq\int  J~\textbar{}f -
+fn\textbar{} =\int ~
+Jgn
+
+qui tend vers 0. Autrement dit la suite (\\int
+ Jfn)n\in\mathbb{N}~ admet la limite
+\int  J~f.
+
+Théorème~10.1.14~(convergence dominée) Soit I un intervalle de \mathbb{R}~,
+(fn) une suite de fonctions de I dans \mathbb{C} continues par morceaux
+qui converge simplement vers f : I \rightarrow~ \mathbb{C} continue par morceaux. On suppose
+qu'il existe \phi : I \rightarrow~ \mathbb{R}~^+ continue par morceaux et intégrable
+sur I telle que \forall~~n \in \mathbb{N}~,
+\textbar{}fn\textbar{}\leq \phi (hypothèse de domination). Alors les
+fonctions fn et f sont intégrables sur I et la suite
+(\int  Ifn~) est convergente
+de limite \int  I~f~:
+
+\int  I~f =\
+limn\rightarrow~+\infty~\int  Ifn~
+
+Démonstration Comme \textbar{}fn(t)\textbar{}\leq \phi(t) et que \phi
+est intégrable, les fonctions fn sont intégrables sur I. De
+plus, en faisant tendre n vers + \infty~, on a aussi \textbar{}f(t)\textbar{}\leq
+\phi(t), donc f est également intégrable sur I. Soit J un segment inclus
+dans I. On a
+
+\begin{align*} \left
+\textbar{}\int  I~f
+-\int ~
+Ifn\right \textbar{}& \leq&
+\left \textbar{}\int  I~f
+-\int  J~f\right
+\textbar{} + \left \textbar{}\\int
+ Jf -\int ~
+Jfn\right \textbar{} +
+\left \textbar{}\int ~
+Jfn -\int ~
+Ifn\right \textbar{}\%&
+\\ & =& \left
+\textbar{}\int ~
+I\diagdownJf\right \textbar{} + \left
+\textbar{}\int  J~f
+-\int ~
+Jfn\right \textbar{} +
+\left \textbar{}\int ~
+I\diagdownJfn\right \textbar{} \%&
+\\ & \leq& \int ~
+I\diagdownJ\phi + \left
+\textbar{}\int  J~f
+-\int ~
+Jfn\right \textbar{}
++\int  I\diagdownJ~\phi \%&
+\\ \end{align*}
+
+Comme \phi est intégrable positive, on a \int ~
+I\phi =\
+sup\\int ~
+J\phi∣J \subset~ I\. Soit donc
+\epsilon \textgreater{} 0~; il existe J segment inclus dans I tel que
+\int  I\phi -\epsilon\over 3~
+\leq\int  J~\phi \leq\\int
+ I\phi, soit encore 0 \leq\int ~
+I\diagdownJ\phi \leq \epsilon\over 3. Fixons un tel segment J~;
+sur ce segment, la suite fn converge simplement vers f et
+\textbar{}fn(t)\textbar{}\leq \phi(t)\textbar{}\leq M avec M
+= supt\inJ~\phi(t) (qui existe puisque \phi
+est continue par morceaux, donc bornée sur tout segment). Le lemme de
+convergence bornée sur un segment assure que \\int
+ Jf =\
+limn\rightarrow~+\infty~\int  Jfn~~;
+donc il existe N \in \mathbb{N}~ tel que n ≥ N \rigtharrow~\left
+\textbar{}\int  J~f
+-\int ~
+Jfn\right \textbar{} \textless{}
+\epsilon\over 3. Alors, pour n ≥ N, on a
+
+\left \textbar{}\int  I~f
+-\int ~
+Ifn\right \textbar{}\leq
+2\epsilon\over 3 + \epsilon\over 3 = \epsilon
+
+ce qui montre bien que la suite (\int ~
+Ifn) est convergente de limite
+\int  I~f
+
+Remarque~10.1.12 Il est important de constater que l'hypothèse de
+domination par une fonction intégrable \phi indépendante de n sert non
+seulement à garantir l'intégrabilité des fn et de f, mais est
+également un argument essentiel de la démonstration de
+\int  I~f =\
+limn\rightarrow~+\infty~\int  Ifn~,
+et donc de la validité du résultat. Comme on l'a dé\\\\jmathmathmathmathà vu avec la suite
+de fonctions continues sur {[}0, \pi~\over 2 {]},
+t\mapsto~n^\alpha~\
+sin ^n-1tcos~ t, une suite de
+fonctions intégrables peut très bien converger simplement vers une
+fonction intégrable sans que l'on ait \int ~
+If =\
+limn\rightarrow~+\infty~\int  Ifn~.
+
+Théorème~10.1.15~(convergence monotone) Soit I un intervalle de \mathbb{R}~,
+(fn) une suite croissante de fonctions de I dans \mathbb{R}~ continues
+par morceaux et intégrables sur I, qui converge simplement vers f : I \rightarrow~
+\mathbb{R}~ continue par morceaux. Alors la suite (\int ~
+Ifn) est ma\\\\jmathmathmathmathorée si et seulement si la fonction f est
+intégrable. Dans ces conditions on a
+
+\int  I~f =\
+supn\in\mathbb{N}~\int  Ifn~
+= limn\rightarrow~+\infty~~\\int
+ Ifn
+
+Démonstration En rempla\ccant éventuellement
+fn par fn - f0 et f par f - f0,
+on peut supposer que les fonctions fn sont positives, et donc
+f également.
+
+Supposons tout d'abord que la fonction f est intégrable. On a alors
+\forall~t \in I, \textbar{}fn~(t)\textbar{} =
+fn(t) \leq f(t), et le théorème de convergence dominée assure que
+la suite (croissante) (\int ~
+Ifn)n\in\mathbb{N}~ converge vers
+\int  I~f~; en particulier elle est
+ma\\\\jmathmathmathmathorée.
+
+Supposons en sens inverse que que la suite
+(\int  Ifn)n\in\mathbb{N}~~ est
+ma\\\\jmathmathmathmathorée par M. Soit J un segment inclus dans I~; on a donc 0
+\leq\int  Jfn~
+\leq\int  Ifn~ \leq M, mais d'autre
+part, on a \forall~~t \in J,
+\textbar{}fn(t)\textbar{} = fn(t) \leq f(t) et f est
+intégrable sur le segment J puisqu'elle est continue par morceaux sur ce
+segment. On a donc \int  J~f
+= lim\\int ~
+Jfn \leq M par le théorème de convergence dominée. Pour
+tout segment J \subset~ I, on a \int  J~f \leq M
+et f est positive, par définition même, elle est intégrable sur I, ce
+qui achève la démonstration de l'équivalence
+
+{[}
+{[}

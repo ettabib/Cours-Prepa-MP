@@ -1,0 +1,114 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{2.3 Rang}
+
+\paragraph{2.3.1 Rang d'une famille de vecteurs}
+
+Définition~2.3.1
+\mathrmrg(xi)i\inI~
+= dim~
+\mathrmVect(xi~,i
+\in I) =\
+sup\\textbar{}J\textbar{}∣(xi)i\inJ\text
+libre \
+
+Démonstration L'égalité provient évidemment du théorème de la base
+incomplète qui garantit que l'on peut extraire de la famille
+(xi) une base du sous-espace
+\mathrmVect(xi~).
+
+Une application linéaire transformant une famille liée en une famille
+liée, on a~:
+
+Théorème~2.3.1 Soit u \in L(E,F) et (xi)i\inI une
+famille de E. Alors
+\mathrmrg(u(xi))i\inI~
+\leq\mathrmrg(xi)i\inI~.
+
+Recherche pratique~: voir le rang d'une matrice.
+
+\paragraph{2.3.2 Rang d'une application linéaire}
+
+Définition~2.3.2 Soit u \in L(E,F). Alors
+\mathrmrg~u
+= dim~
+\mathrmIm~u \in \mathbb{N}~
+\cup\ + \infty~\.
+
+Remarque~2.3.1 Recherche pratique~: Si (ei)i\inI est
+une base de E, (u(ei))i\inI est une famille
+génératrice de \mathrmIm~u
+et donc \mathrmrg~u
+=\
+\mathrmrg(u(ei))i\inI.
+
+Théorème~2.3.2 Soit u \in L(E,F). (i) Si dim~ E
+\textless{} +\infty~, alors u est de rang fini,
+\mathrmrg~u
+= dim E -\ dim~
+\mathrmKer~u~; on a
+\mathrmrg~u
+= dim~ E si et seulement si u est in\\\\jmathmathmathmathectif (ii)
+Si dim~ F \textless{} +\infty~, alors u est de rang
+fini, \mathrmrg~u
+\leq dim~ F~; on a
+\mathrmrg~u
+= dim~ F si et seulement si u est sur\\\\jmathmathmathmathectif
+
+Démonstration Découle immédiatement des résultats sur la dimension.
+
+Remarque~2.3.2 On a donc dans tous les cas
+\mathrmrg~u
+\leq min(\dim~
+E,dim~ F)
+
+Proposition~2.3.3 Soit u \in L(E,F),v \in L(F,G). Alors
+\mathrmrg~v \cdot u
+\leq\
+min(\mathrmrgv,\\mathrmrg~u).
+Si u est bi\\\\jmathmathmathmathectif,
+\mathrmrg~v \cdot u
+= \mathrmrg~v. Si v est
+bi\\\\jmathmathmathmathectif, \mathrmrg~v \cdot u
+= \mathrmrg~u.
+
+Démonstration Il suffit de remarquer que
+\mathrmIm~v \cdot u = v(u(E)).
+
+Théorème~2.3.4 On suppose ici dim~ E
+= dim~ F \textless{} +\infty~, u \in L(E,F). On a
+équivalence de
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) u in\\\\jmathmathmathmathective
+\item
+  (ii) u sur\\\\jmathmathmathmathective
+\item
+  (iii) u bi\\\\jmathmathmathmathective
+\item
+  (iv) \exists~v \in L(F,E), v \cdot u =
+  \mathrmIdE
+\item
+  (v) \exists~v \in L(F,E), u \cdot v =
+  \mathrmIdF
+\end{itemize}
+
+Démonstration L'équivalence entre (i), (ii) et (iii) est une compilation
+des résultats précédents. De plus (iii) \rigtharrow~ (iv) et (v), (iv) \rigtharrow~ (i) et (v)
+\rigtharrow~(ii), ce qui boucle la boucle.
+
+{[}
+{[}
+{[}
+{[}

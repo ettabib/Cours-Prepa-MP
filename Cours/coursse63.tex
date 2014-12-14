@@ -1,0 +1,425 @@
+
+\subsubsection{Notion de série entière}
+\label{sec:notion-de-serie}
+
+
+%\textbf{Warning: 
+%requires JavaScript to process the mathematics on this page.\\ If your
+%browser supports JavaScript, be sure it is enabled.}
+%
+%\begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%{[}
+%{[}{]}
+%{[}
+%
+%\subsubsection{11.1 Convergence des séries entières}
+%
+%\paragraph{11.1.1 Notion de série entière}
+%
+% Définition~11.1.1 Soit (an)n\in\mathbb{N}~ une suite de l'espace
+% vectoriel normé complet E. On appelle série entière associée à la suite
+% (an) la série de fonctions de \mathbb{C} (resp. \mathbb{R}~) dans E,
+% \\sum ~
+% n≥0un, où l'on pose un(z) =
+% anz^n~; on notera simplement
+% \\sum ~
+% n≥0anz^n cette série de fonctions de la
+% variable z.
+%
+%Remarque~11.1.1 Dans le cas où E = \mathbb{R}~ ou E = \mathbb{C}, la série entière est
+%associée à une unique série formelle
+%\\sum ~
+%n=0^+\infty~anX^n \in K{[}{[}X{]}{]}.
+%
+%\paragraph{11.1.2 Rayon de convergence}
+%
+%Lemme~11.1.1 (Abel). Soit E un K-espace vectoriel normé complet,
+%\\sum ~
+%anz^n une série entière à coefficients dans E. Soit
+%z0 \in K^∗ tel que la suite
+%(anz0^n) soit bornée. Alors la série
+%\\sum ~
+%anz^n converge absolument pour tout z \in K tel que
+%\textbar{}z\textbar{} \textless{} \textbar{}z0\textbar{}~; la
+%série entière converge même normalement dans tout disque fermé D'(0,r) =
+%\z \in
+%K∣\textbar{}z\textbar{}\leq r\
+%pour tout nombre réel r tel que r \textless{}
+%\textbar{}z0\textbar{}.
+%
+%Démonstration Soit M ≥ 0 tel que \forall~~n \in \mathbb{N}~,
+%\\textbar{}anz0^n\\textbar{}
+%\leq M et soit z \in K tel que \textbar{}z\textbar{} \textless{}
+%\textbar{}z0\textbar{}. On a alors
+%\\textbar{}anz^n\\textbar{}
+%=\\textbar{}
+%anz0^n\\textbar{}
+%\left \textbar{} z \over z0
+%\right \textbar{}^n \leq M\left
+%\textbar{} z \over z0 \right
+%\textbar{}^n. Comme \left \textbar{} z
+%\over z0 \right \textbar{}
+%\textless{} 1, la série géométrique est convergente et donc la série
+%\\sum ~
+%anz^n converge absolument. Pour z \in D'(0,r), on a
+%de la même fa\ccon
+%\\textbar{}anz^n\\textbar{}
+%\leq M\left \textbar{} r \over
+%z0 \right \textbar{}^n qui est une
+%série convergente indépendante de z, donc la série converge normalement
+%sur D'(0,r).
+%
+%Théorème~11.1.2 Soit E un K-espace vectoriel normé complet,
+%\\sum ~
+%anz^n une série entière à coefficients dans E.
+%Posons R1 =\
+%sup\\textbar{}z\textbar{}∣\\\sum
+% anz^n\text converge
+%\ \in \mathbb{R}~^+ \cup\ +
+%\infty~\ et R2 =\
+%sup\\textbar{}z\textbar{}∣(anz^n)\text
+%est bornée \ \in \mathbb{R}~^+ \cup\ +
+%\infty~\. On a R1 = R2. En notant R la
+%valeur commune, la série converge absolument dans D(0,R) =
+%\z \in K∣\textbar{}z\textbar{}
+%\textless{} R\ et converge normalement dans tout disque
+%fermé D'(0,r) = \z \in
+%K∣\textbar{}z\textbar{}\leq r\
+%tel que r \textless{} R.
+%
+%Démonstration Soit r \in {[}0,R1{[}~; d'après la propriété
+%caractéristique de la borne supérieure, il existe z \in K tel que la série
+%\\sum ~
+%anz^n converge avec r \textless{}
+%\textbar{}z\textbar{}\leq R1. Mais alors
+%limanz^n~ = 0, donc la
+%suite (anz^n) est bornée et a fortiori la suite
+%(anr^n) est bornée~; donc r \in {[}0,R2{]},
+%soit {[}0,R1{[}\subset~ {[}0,R2{]} et donc R1 \leq
+%R2. Soit r \in {[}0,R2{[}~; d'après la propriété
+%caractéristique de la borne supérieure, il existe z \in K tel que la suite
+%(anz^n) soit bornée avec r \textless{}
+%\textbar{}z\textbar{}\leq R2. Mais alors, d'après le lemme
+%d'Abel, la série \\sum ~
+%anr^n converge absolument, r \in
+%{[}0,R1{]}, soit {[}0,R2{[}\subset~ {[}0,R1{]} et
+%donc R2 \leq R1.
+%
+%Soit alors z \in D(0,R)~; il existe z0 \in K tel que la suite
+%(anz0^n) soit bornée avec
+%\textbar{}z\textbar{} \textless{} \textbar{}z0\textbar{}\leq R.
+%Mais alors, d'après le lemme d'Abel, la série
+%\\sum ~
+%anz^n converge absolument. De même, soit r
+%\textless{} R~; il existe z0 \in K tel que la suite
+%(anz0^n) soit bornée avec r \textless{}
+%\textbar{}z0\textbar{}\leq R. Mais alors, d'après le lemme
+%d'Abel, la série \\sum ~
+%anz^n converge normalement sur D'(0,r).
+%
+%Remarque~11.1.2 Le lecteur prendra garde au fait qu'en général la série
+%ne converge pas normalement sur D(0,R) ni même uniformément.
+%
+%Définition~11.1.2 R est appelé le rayon de convergence de la série
+%entière, D(0,R) son disque ouvert de convergence, C(0,R) =
+%\z \in K∣\textbar{}z\textbar{}
+%= R\ son cercle de convergence.
+%
+%Remarque~11.1.3 Par définition même au vu des résultats précédents, la
+%série converge absolument dans le disque ouvert de convergence (et même
+%uniformément dans tout disque fermé inclus dans le disque ouvert de
+%convergence)~; pour \textbar{}z\textbar{} \textgreater{} R la série
+%diverge et en fait, la suite (anz^n) n'est même pas
+%bornée. La nature de la série sur le disque fermé de convergence dépend
+%de la série et du point considéré.
+%
+%Exemple~11.1.1 Soit \alpha~ \in \mathbb{R}~~; la série entière
+%\\sum   z^n~
+%\over n^\alpha~ a pour rayon de convergence 1~;
+%pour \textbar{}z\textbar{} = 1 la nature de la série dépend à la fois de
+%\alpha~ et de z.
+%
+%\begin{itemize}
+%\itemsep1pt\parskip0pt\parsep0pt
+%\item
+%  (i) Pour \alpha~ \textgreater{} 1, la série converge pour tout z tel que
+%  \textbar{}z\textbar{} = 1
+%\item
+%  (ii) Pour \alpha~ \leq 0, la série diverge pour tout z tel que
+%  \textbar{}z\textbar{} = 1 (le terme général ne tend pas vers 0)
+%\item
+%  (iii) Pour 0 \textless{} \alpha~ \leq 1, la série diverge en z = 1 mais
+%  converge pout tout point z tel que \textbar{}z\textbar{} = 1 et
+%  z\neq~1 (appliquer le critère d'Abel).
+%\end{itemize}
+%
+%\paragraph{11.1.3 Recherche du rayon de convergence}
+%
+%Les deux remarques suivantes, qui découlent immédiatement des résultats
+%précédents peuvent rendre de grands services dans la détermination du
+%rayon de convergence
+%
+%\begin{itemize}
+%\itemsep1pt\parskip0pt\parsep0pt
+%\item
+%  (i) si z \in K est tel que la série
+%  \\sum ~
+%  anz^n converge, alors \textbar{}z\textbar{}\leq R
+%\item
+%  (ii) si z \in K est tel que la série
+%  \\sum ~
+%  anz^n diverge, alors R \leq\textbar{}z\textbar{}
+%\end{itemize}
+%
+%On pourra éventuellement, pour cette recherche, trouver refuge dans l'un
+%des théorèmes suivants
+%
+\begin{thm}[règle de d'Alembert]
+ On suppose que $|a_n| > 0$ . Si la suite
+   $\frac{||a_{n+1}||}{||a_n||}$ admet
+ une limite  $l \in \mathbb{R}^{+}  \cup\ +  \infty$ alors le  rayon de
+ convergence de la série entière $\sum a_n z^n$ est $\frac{1}{ l}$ .
+
+\end{thm}
+
+%Démonstration Il suffit d'appliquer la règle de d'Alembert pour les
+%séries numériques en remarquant que 
+%\\textbar{}an+1z^n+1\\textbar{}
+%\over
+%\\textbar{}anz^n\\textbar{}
+%admet la limite \ell\textbar{}z\textbar{} et que donc la série converge
+%absolument pour \ell\textbar{}z\textbar{} \textless{} 1 et diverge pour
+%\ell\textbar{}z\textbar{} \textgreater{} 1.
+%
+%Remarque~11.1.4 On prendra garde à la condition
+%\forall~~n \in \mathbb{N}~,
+%an\neq~0. En particulier, on ne tentera
+%pas d'appliquer cette règle à des séries comportant une infinité de
+%termes nuls comme les séries entières du type
+%\\sum ~
+%anz^2n ou
+%\\sum ~
+%anz^n^2 ~; c'est ainsi qu'une
+%application imprudente de la règle de d'Alembert à la série entière
+%\\sum ~
+%3^nz^2n pourrait faire croire que le rayon de
+%convergence est  1 \over 3 alors que l'écriture
+%\textbar{}3^nz^2n\textbar{} =
+%\left
+%(3\textbar{}z\textbar{}^2\right )^n
+%montre qu'il vaut  1 \over \sqrt3
+%.
+%
+%Exemple~11.1.2 Pour \\\sum
+%  z^n \over n! , on a R = +\infty~~; pour
+%\\sum   z^n~
+%\over n^\alpha~ , on a R = 1~; pour
+%\\sum  n!z^n~,
+%on a R = 0 (la série diverge pour tout z\neq~0).
+%
+\begin{thm}[règle d'Hadamard]
+  Le rayon de convergence de la série entière $\sum a_n z^n$ est égal à
+\[
+\frac{1}{\limsup ||a_n||^{1 \over n}} \in \mathbb{R}^+ \cup\ + \infty~\
+\]
+\end{thm}
+
+\begin{rem}
+  En particulier si $||a_n||^{1 \over n}\rightarrow l$ alors $R=\frac{1}{l}$
+\end{rem}
+%Démonstration Posons \ell =\
+%limsup\rootn\of\\textbar{}an\\textbar{}
+%\in \mathbb{R}~^+ \cup\ + \infty~\. Soit z \in K
+%tel que \textbar{}z\textbar{} \textless{} 1 \over \ell .
+%On a alors \ell \textless{} 1 \over
+%\textbar{}z\textbar{} . Soit donc \rho tel que \ell \textless{} \rho
+%\textless{} 1 \over \textbar{}z\textbar{} . D'après
+%la propriété de la limite supérieure, il existe N \in \mathbb{N}~ tel que n ≥ N
+%\rigtharrow~\rootn\of\\textbar{}an\\textbar{}
+%\leq \rho soit encore
+%\\textbar{}an\\textbar{} \leq
+%\rho^n et donc
+%\\textbar{}anz^n\\textbar{}
+%\leq (\rho\textbar{}z\textbar{})^n. Mais \rho\textbar{}z\textbar{}
+%\textless{} 1 et donc la série
+%\\sum ~
+%(\rho\textbar{}z\textbar{})^n converge. On en déduit que la
+%série \\sum ~
+%anz^n converge absolument, soit R ≥ 1
+%\over \ell . De plus, si \textbar{}z\textbar{}
+%\textgreater{} 1 \over \ell , on a \ell \textgreater{} 1
+%\over \textbar{}z\textbar{} . Comme \ell est valeur
+%d'adhérence de la suite
+%(\rootn\of\\textbar{}an\\textbar{}),
+%il existe une infinité de n tels que
+%\rootn\of\\textbar{}an\\textbar{}
+%\textgreater{} 1 \over \textbar{}z\textbar{} soit
+%\\textbar{}anz^n\\textbar{}
+%\textgreater{} 1~; la suite (anz^n) ne tend pas
+%vers 0, donc la série diverge~; ceci montre que R \leq 1
+%\over \ell , ce qui achève la démonstration.
+%
+%Remarque~11.1.5 En particulier, si la suite
+%(\rootn\of\\textbar{}an\\textbar{})
+%converge vers \ell, on a R = 1 \over \ell .
+%
+%\paragraph{11.1.4 Opérations sur les séries entières}
+%
+%Proposition~11.1.5 Soit
+%\\sum ~
+%anz^n et
+%\\sum ~
+%bnz^n deux séries entières à coefficients dans E de
+%rayons de convergence respectifs R1 et R2, \alpha~ et \beta~
+%des scalaires. Alors la série entière
+%\\sum  (\alpha~an~ +
+%\beta~bn)z^n a un rayon de convergence supérieur ou égal
+%à min(R1,R2~) et
+%
+%\textbar{}z\textbar{} \textless{}\
+%min(R1,R2) \rigtharrow~\\sum
+%n=0^+\infty~(\alpha~a n + \beta~bn)z^n =
+%\alpha~\sum n=0^+\infty~a~
+%nz^n + \beta~\\sum
+%n=0^+\infty~b nz^n
+%
+%Démonstration En effet, si \textbar{}z\textbar{}
+%\textless{} min(R1,R2~),
+%les deux séries \\sum ~
+%anz^n et
+%\\sum ~
+%bnz^n sont convergentes, et donc la série
+%\\sum  (\alpha~an~ +
+%\beta~bn)z^n converge également, soit R
+%≥ min(R1,R2~). La formule
+%découle immédiatement du résultat similaire sur les séries numériques.
+%
+%Remarque~11.1.6 L'exemple bn = -an, \alpha~ = \beta~ = 1,
+%montre que l'on peut avoir R \textgreater{}\
+%min(R1,R2)
+%
+%Proposition~11.1.6 Soit
+%\\sum ~
+%anz^n et
+%\\sum ~
+%bnz^n deux séries entières à coefficients dans K de
+%rayons de convergence respectifs R1 et R2. Posons
+%cn = \\sum ~
+%k=0^nakbn-k
+%= \\sum ~
+%p+q=napbq (série entière produit). Alors la
+%série entière \\sum ~
+%cnz^n a un rayon de convergence supérieur ou égal à
+%min(R1,R2~) et
+%
+%\textbar{}z\textbar{} \textless{}\
+%min(R1,R2) \rigtharrow~\\sum
+%n=0^+\infty~c nz^n =
+%\left (\\sum
+%n=0^+\infty~a nz^n\right
+%)\left (\\sum
+%n=0^+\infty~b nz^n\right
+%)
+%
+%Démonstration En effet, si \textbar{}z\textbar{}
+%\textless{} min(R1,R2~),
+%les deux séries \\sum ~
+%anz^n et
+%\\sum ~
+%bnz^n sont absolument convergentes, et donc la
+%série produit de Cauchy est également absolument convergente. Mais on a
+%\\sum ~
+%p+q=n(apz^p)(bqz^q) =
+%z^n \\sum ~
+%p+q=napbq = cnz^n. On a
+%donc R ≥ min(R1,R2~). La
+%formule découle immédiatement du résultat similaire sur les séries
+%numériques (la somme du produit de Cauchy est le produit des sommes des
+%séries).
+%
+%Proposition~11.1.7 Soit
+%\\sum ~
+%anz^n une série entière à coefficients dans K avec
+%a0\neq~0. Il existe alors une unique
+%série entière \\sum ~
+%bnz^n tel que le produit des deux séries entières
+%soit la constante 1. Si
+%\\sum ~
+%anz^n a un rayon de convergence non nul R, il en
+%est de même du rayon de convergence R' de la série entière
+%\\sum ~
+%bnz^n. On a
+%
+%\textbar{}z\textbar{} \textless{} min~(R,R')
+%\rigtharrow~\sum n=0^+\infty~b~
+%nz^n = 1 \over \\sum
+%n=0^+\infty~anz^n
+%
+%Démonstration On doit avoir a0b0 = 1 et pour n ≥ 1,
+%\\sum ~
+%k=0^nan-kbk = 0. La suite
+%(bn) est donc définie par b0 = 1
+%\over a0 et pour n ≥ 1, bn = - 1
+%\over a0 \
+%\sum ~
+%k=0^n-1an-kbk ce qui définit
+%parfaitement la suite par récurrence. Remarquons que si l'on multiplie
+%tous les an par \lambda~\neq~0, tous les
+%bn sont divisés par \lambda~, et les rayons de convergence ne sont
+%pas modifiés. Sans nuire à la généralité, on peut donc supposer que
+%a0 = 1. On a alors b0 = 1 et bn =
+%-\\sum ~
+%k=0^n-1an-kbk. Supposons donc R
+%\textgreater{} 0 et soit r \textless{} R. La suite
+%(anr^n) est donc bornée. Soit M tel que
+%\forall~~n,
+%\textbar{}an\textbar{}r^n \leq M soit
+%\textbar{}an\textbar{}\leq Mr^-n. On va montrer que
+%\forall~n ≥ 1, \textbar{}bn~\textbar{}\leq
+%M(M + 1)^n-1r^-n par récurrence sur n. Pour n = 1,
+%on a b1 = -a1, soit \textbar{}b1\textbar{}
+%= \textbar{}a1\textbar{}\leq Mr^-1 ce qui est bien
+%l'inégalité souhaitée. Supposons l'inégalité vérifiée de 1 à n - 1. On a
+%alors (compte tenu de b0 = 1)
+%
+%\begin{align*} \textbar{}bn\textbar{}&
+%\leq& \textbar{}an\textbar{} + \\sum
+%k=1^n-1\textbar{}a
+%n-k\textbar{}\textbar{}bk\textbar{} \%&
+%\\ & \leq& Mr^-n +
+%\sum k=1^n-1Mr^k-n~M(M
+%+ 1)^k-1r^-k \%& \\
+%& =& Mr^-n\left (1 +
+%M\sum k=1^n-1~(M +
+%1)^k-1\right ) \%&
+%\\ & =&
+%Mr^-n\left (1 + M (M + 1)^n-1 - 1
+%\over (M + 1) - 1 \right ) = M(M +
+%1)^n-1r^-n\%& \\
+%\end{align*}
+%
+%ce qui achève la récurrence. Alors
+%\textbar{}bnz^n\textbar{}\leq M \over
+%M+1 \left ( (M+1)\textbar{}z\textbar{}
+%\over r \right )^n ce qui
+%montre que la série \\\sum
+% bnz^n converge pour \textbar{}z\textbar{}
+%\textless{} r \over M+1 , soit R' ≥ r
+%\over M+1 \textgreater{} 0.
+%
+%La formule découle immédiatement de la proposition précédente.
+%
+%Remarque~11.1.7 L'exemple a0 = 1, a1 = -1,
+%an = 0 pour n ≥ 2 (c'est-à-dire de la série entière 1 - z),
+%pour laquelle la série inverse est la série
+%\\sum  z^n~
+%pour laquelle R' = 1, montre qu'on ne peut pas dire grand chose de la
+%valeur effective de R'. On peut avoir aussi bien R' \leq R que R' ≥ R
+%(échanger le rôle de \\\sum
+% anz^n et
+%\\sum ~
+%bnz^n).
+%
+%{[}
+%{[}

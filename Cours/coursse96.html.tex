@@ -1,0 +1,893 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}{]}
+{[}
+
+\subsubsection{18.1 Arcs paramétrés}
+
+\paragraph{18.1.1 Vocabulaire}
+
+Définition~18.1.1 Soit E un espace vectoriel normé sur \mathbb{R}~. On appelle arc
+paramétré de classe C^k de E tout couple (I,F) d'un
+intervalle I de \mathbb{R}~ et d'une application F : I \rightarrow~ E de classe
+C^k.
+
+Remarque~18.1.1 Vocabulaire associé. Soit \Gamma = (I,F) un arc paramétré de
+classe C^k de E.
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) On appelle point de l'arc \Gamma un élément t0 \in I
+\item
+  (ii) On appelle image ou support de \Gamma la partie F(I) de E
+\item
+  (iii) On appelle multiplicité d'un point m de l'image de \Gamma le cardinal
+  de l'ensemble F^-1(\m\)
+  (éventuellement infinie)~; on dit qu'un point de l'image est simple
+  s'il est de multiplicité 1, sinon on dit qu'il est multiple~; on dit
+  que l'arc est simple si tout point de l'image est de multiplicité 1
+\item
+  (iv) On dit qu'un point t0 \in I de l'arc \Gamma est régulier si
+  F'(t0)\neq~0~; on dit que l'arc est
+  régulier si tout point de l'arc est régulier~; un point non régulier
+  est dit singulier.
+\end{itemize}
+
+\paragraph{18.1.2 Equivalence des arcs paramétrés}
+
+Définition~18.1.2 Soit E un \mathbb{R}~ espace vectoriel normé, (I,F) et (J,G)
+deux arcs paramétrés de classe C^k. On dit que ces deux arcs
+sont C^k-équivalents s'il existe un difféomorphisme \theta : I \rightarrow~ J
+de classe C^k tel que F = G \cdot \theta.
+
+Remarque~18.1.2 On dira qu'un tel difféomorphisme est un changement de
+paramétrage admissible. L'étude des arcs paramétrés concerne
+essentiellement l'étude des propriétés des arcs qui sont invariantes par
+équivalence. L'application \theta étant bi\\\\jmathmathmathmathective on voit immédiatement que
+
+Proposition~18.1.1 Soit (I,F) et (J,G) deux arcs paramétrés de classe
+C^k qui sont C^k-équivalents. Alors les deux arcs
+ont la même image. Tous les points de l'image ont la même multiplicité
+pour les deux arcs. En particulier un point de l'image est simple pour
+l'un si et seulement si~il est simple pour l'autre.
+
+Remarque~18.1.3 Si on a F = G \cdot \theta, on a F'(t0) =
+\theta'(t0)G'(\theta(t0)). Si \theta est un difféomorphisme, on a
+\theta'(t0)\neq~0 et donc
+F'(t0)\neq~0
+\Leftrightarrow
+G'(\theta(t0))\neq~0. D'où
+
+Proposition~18.1.2 Soit (I,F) et (J,G) deux arcs paramétrés de classe
+C^k qui sont C^k-équivalents, \theta : I \rightarrow~ J un
+difféomorphisme de classe C^k tel que F = G \cdot \theta. Alors
+t0 est un point régulier de (I,F) si et seulement
+si~\theta(t0) est un point régulier de (J,G). En particulier, (I,F)
+est régulier si et seulement si~(J,G) l'est.
+
+\paragraph{18.1.3 Orientation}
+
+Un difféomorphisme d'un intervalle de \mathbb{R}~ sur un autre intervalle de \mathbb{R}~ est
+soit croissant soit décroissant. On peut donc définir
+
+Définition~18.1.3 Soit (I,F) et (J,G) deux arcs paramétrés de classe
+C^k qui sont C^k-équivalents, \theta : I \rightarrow~ J un
+difféomorphisme de classe C^k tel que F = G \cdot \theta. On dit que
+(I,F) et (J,G) sont de même sens si \theta est croissant, de sens contraire
+si \theta est décroissant.
+
+Remarque~18.1.4 Dans certains cas, il peut arriver (de manière assez
+exceptionnelle) qu'il existe deux difféomorphismes \theta1 et
+\theta2 tels que F = G \cdot \theta1 et F = G \cdot \theta2, l'un
+étant croissant et l'autre décroissant. Autrement dit deux arcs
+paramétrés peuvent être à la fois de même sens et de sens contraire. On
+dit alors que les arcs paramétrés ne sont pas orientables. Un exemple
+typique est l'arc de \mathbb{R}~^2~: \Gamma =
+(\mathbb{R}~,t\mapsto~(t^2,t^2)) où
+l'arc est de sens contraire à lui même puisque F \cdot \theta = F pour \theta(t) = -t.
+Le lecteur montrera facilement que cette situation ne peut pas se
+produire dès que l'arc est régulier ou bien dès que l'arc a au moins
+deux points simples.
+
+\paragraph{18.1.4 Tangente à un arc paramétré}
+
+Définition~18.1.4 Soit \Gamma = (I,F) un arc paramétré de classe
+C^k, k \in \mathbb{N}~^∗\cup\ +
+\infty~\. On dit que t0 \in I est un point non
+totalement singulier de \Gamma s'il existe n \leq k tel que
+F^(n)(t0)\neq~0.
+
+Remarque~18.1.5 Soit \Gamma = (I,F) un arc paramétré de classe C^k
+et t0 \in I un point non totalement singulier de \Gamma. Considérons
+p = min~\n \leq
+k∣F^(n)(t0)\mathrel\neq~0\.
+La formule de Taylor montre alors que
+
+F(t) = F(t0) + (t - t0)^p
+\over p! F^(p)(t 0) + (t -
+t0)^p\epsilon(t - t 0)
+
+avec limu\rightarrow~0~\epsilon(u) = 0. On en déduit
+que limt\rightarrow~t0~
+F(t)-F(t0) \over
+(t-t0)^p = 1 \over p!
+F^(p)(t 0). Ceci montre tout d'abord que pour
+t\neq~t0 mais assez proche de
+t0, on a F(t)\neq~F(t0) et
+que d'autre part le vecteur  F(t)-F(t0) \over
+(t-t0)^p qui est un vecteur directeur de la
+droite affine qui passe par les points F(t) et F(t0), admet
+pour limite le vecteur  1 \over p!
+F^(p)(t 0). On peut encore dire que la corde
+\\\\jmathmathmathmathoignant les points F(t0) et F(t) admet pour limite la droite
+affine F(t0) + \mathbb{R}~F^(p)(t0) ce qui \\\\jmathmathmathmathustifie
+la définition suivante~:
+
+Définition~18.1.5 Soit \Gamma = (I,F) un arc paramétré de classe
+C^k et t0 \in I un point non totalement singulier de
+\Gamma. Soit p = min~\n \leq
+k∣F^(n)(t0)\mathrel\neq~0\.
+On appelle tangente à \Gamma au point t0 la droite affine
+F(t0) + \mathbb{R}~F^(p)(t0).
+
+Proposition~18.1.3 La notion de tangente est invariante par changement
+de paramétrage admissible. Soit (I,F) et (J,G) deux arcs paramétrés de
+classe C^k qui sont C^k-équivalents, \theta : I \rightarrow~ J un
+difféomorphisme de classe C^k tel que F = G \cdot \theta. Alors
+t0 est un point non totalement singulier de (I,F) si et
+seulement si~\theta(t0) est un point non totalement singulier de
+(J,G), et dans ce cas la tangente à (I,F) au point t0 est
+égale à la tangente à (J,G) au point \theta(t0).
+
+Démonstration Nous allons montrer par récurrence sur n ≥ 1 que
+
+F^(n)(t) = \theta'(t)^nG^(n)(\theta(t)) +
+\sum \\\\jmathmathmathmath=1^n-1a~
+\\\\jmathmathmathmath,n(t)G^(\\\\jmathmathmathmath)(\theta(t))
+
+où les applications a\\\\jmathmathmathmath,n sont des applications de I dans \mathbb{R}~ de
+classe C^k-n. C'est clair pour n = 1 puisque F'(t) =
+\theta'(t)G'(\theta(t)). Supposons donc le résultat vrai pour n \leq k - 1. Alors
+toutes les applications considérées étant de classe \mathcal{C}^1, on a
+
+\begin{align*} F^(n+1)(t)& =&
+\theta'(t)^n+1G^(n+1)(\theta(t)) +
+n\theta'`(t)^n\theta'(t)^n-1G^(n)(\theta(t)) \%&
+\\ & & +\\sum
+\\\\jmathmathmathmath=1^n-1a \\\\jmathmathmathmath,n(t)\theta'(t)G^(\\\\jmathmathmathmath+1)(\theta(t))
++ \sum \\\\jmathmathmathmath=1^n-1a~
+\\\\jmathmathmathmath,n'(t)G^(\\\\jmathmathmathmath)(\theta(t))\%& \\ &
+=& \theta'(t)^n+1G^(n+1)(\theta(t)) +
+\sum \\\\jmathmathmathmath=1^na~
+\\\\jmathmathmathmath,n+1(t)G^(\\\\jmathmathmathmath)(\theta(t)) \%& \\
+\end{align*}
+
+avec an,n+1(t) = an-1,n\theta'(t) +
+n\theta'`(t)\theta'(t)^n-1 et pour \\\\jmathmathmathmath \leq n - 1, a\\\\jmathmathmathmath,n+1(t) =
+a\\\\jmathmathmathmath,n(t)\theta'(t) + a\\\\jmathmathmathmath-1,n'(t), ce qui achève la
+récurrence.
+
+Si on a alors G'(\theta(t0)) =
+\\ldots~ =
+G^(p-1)(\theta(t0)) = 0 et
+G^(p)(\theta(t0))\neq~0, on voit
+immédiatement que F'(t0) =
+\\ldots~ =
+F^(p-1)(t0) = 0 et que
+F^(p)(t0) =
+\theta'(t0)^pG^(p)(\theta(t0))\neq~0
+car \theta'(t0)\neq~0. On en déduit que si
+\theta(t0) est un point non totalement singulier de (J,G), alors
+t0 est un point non totalement singulier de (I,F) avec le même
+indice p. L'équivalence en résulte vu le rôle symétrique des deux arcs.
+De plus on a G(\theta(t0)) + \mathbb{R}~G^(p)(\theta(t0)) =
+F(t0) + \mathbb{R}~F^(p)(t0) (puisque les deux
+vecteurs tangents sont colinéaires) ce qui montre que les tangentes sont
+les mêmes.
+
+Remarque~18.1.6 Considérons F : \mathbb{R}~ \rightarrow~ \mathbb{R}~^2 définie par F(t) =
+(e^-1\diagupt^2 ,0) si t \textgreater{} 0, F(0) = (0,0)
+et F(t) = (0,e^-1\diagupt^2 ) si t \textless{} 0. On
+constate facilement que F est de classe C^\infty~ en remarquant que
+limt\rightarrow~0,t\neq~0F^(k)~(t)
+= 0 et en appliquant un théorème du cours sur les fonctions d'une
+variable. Pourtant, l'image de F est la réunion de deux segments faisant
+en F(0) un angle droit. Il n'est donc pas question de pouvoir définir de
+manière raisonnable une tangente à un arc (fût-il C^\infty~) en un
+point totalement singulier.
+
+\paragraph{18.1.5 Plan osculateur, concavité}
+
+Définition~18.1.6 Soit \Gamma = (I,F) un arc paramétré de classe
+C^k, k ≥ 2. On dit que t0 \in I est un point
+birégulier de \Gamma si la famille (F'(t0),F''(t0)) est
+libre. Un arc est dit birégulier si tous ses points sont biréguliers.
+
+Remarque~18.1.7 Un point birégulier est nécessairement régulier puisque
+F'(t0)\neq~0.
+
+Définition~18.1.7 Soit \Gamma = (I,F) un arc paramétré de classe
+C^k, k ≥ 2. Soit t0 \in I un point birégulier de \Gamma.
+On appelle plan osculateur au point t0 le plan affine
+F(t0) +\
+\mathrmVect(F'(t0),F''(t0)).
+
+Théorème~18.1.4 Les notions de point birégulier et de plan osculateur
+sont invariantes par changement de paramétrage admissible. Soit (I,F) et
+(J,G) deux arcs paramétrés de classe C^k qui sont
+C^k-équivalents, \theta : I \rightarrow~ J un difféomorphisme de classe
+C^k tel que F = G \cdot \theta. Alors t0 est un point
+birégulier de (I,F) si et seulement si~\theta(t0) est un point
+birégulier de (J,G), et dans ce cas le plan osculateur à (I,F) au point
+t0 est égal au plan osculateur à (J,G) au point
+\theta(t0).
+
+Démonstration On a F'(t0) =
+\theta'(t0)G'(\theta(t0)) et F'`(t0) =
+\theta'`(t0)G'(\theta(t0)) +
+\theta'(t0)^2G''(\theta(t0)). Donc la matrice des
+coordonnées de la famille (F'(t0),F''(t0)) par
+rapport à la famille (G'(\theta(t0)),G''(\theta(t0))) est la
+matrice inversible \left
+(\matrix\,\theta'(t0)&\theta'`(t0)
+\cr 0
+&\theta'(t0)^2\right ), ce qui montre
+que (F'(t0),F''(t0)) libre équivaut à
+(G'(\theta(t0)),G''(\theta(t0))) libre. Dans ce cas on voit
+que
+\mathrmVect(G'(\theta(t0)),G'`(\theta(t0~)))
+=\
+\mathrmVect(F'(t0),F''(t0)), ce
+qui montre que les plans osculateurs qui passent tous deux par le point
+image F(t0) = G(\theta(t0)) coïncident.
+
+Remarque~18.1.8 De plus la coordonnée de F''(t0) par rapport à
+G''(\theta(t0)) est égale à \theta'(t0)^2
+\textgreater{} 0 ce qui montre que les demi-plans F(t0) +
+\mathbb{R}~F'(t0) + \mathbb{R}~^+∗F''(t0) et
+G(\theta(t0)) + \mathbb{R}~G'(\theta(t0)) +
+\mathbb{R}~^+∗G''(\theta(t0)) coïncident. Ce qui amène à
+introduire
+
+Définition~18.1.8 Soit \Gamma = (I,F) un arc paramétré de classe
+C^k, k ≥ 2. Soit t0 \in I un point birégulier de \Gamma.
+On appelle demi-plan de concavité au point t0 le demi plan
+affine (inclus dans le plan osculateur et délimité par la tangente)
+F(t0) + \mathbb{R}~F'(t0) + \mathbb{R}~^+∗F''(t0).
+Il est invariant par changement de paramétrage admissible.
+
+\paragraph{18.1.6 Etude locale des arcs plans}
+
+Nous supposerons dans ce paragraphe et dans les suivants que
+dim~ E = 2. Soit \Gamma = (I,F) un arc paramétré de
+classe C^k, k ≥ 2 et t0 un point non totalement
+singulier de l'arc. Soit p =\
+min\n \leq
+k∣F^(n)(t0)\mathrel\neq~0\
+et nous supposerons que l'on peut trouver n \in {[}p + 1,k{]} tel que la
+famille (F^(p)(t0),F^(n)(t0))
+soit une famille libre. Nous considérerons le plus petit entier n ayant
+cette propriété, que nous noterons q. La famille
+(F^(p)(t0),F^(q)(t0)) est donc
+une base de E, et donc nous pouvons écrire F(t) - F(t0) =
+x(t)F^(p)(t0) + y(t)F^(q)(t0).
+Les nombres réels x(t) et y(t) apparaissent donc comme les coordonnées
+du point F(t) dans le repère affine
+(F(t0),(F^(p)(t0),F^(q)(t0))).
+
+Des renseignements essentiels sur l'allure de la courbe au voisinage du
+point t0 sont fournis par l'étude des signes de x(t) et de
+y(t) au voisinage de t0, sachant que la courbe passe par le
+point F(t0) et est tangente au vecteur
+F^(p)(t0). La formule de Taylor Young donne
+
+\begin{align*} F(t)& =& F(t0) + (t -
+t0)^p \over p!
+F^(p)(t 0) + \\sum
+n=p+1^q-1 (t - t0)^n
+\over n! F^(n)(t 0)\%&
+\\ & & + (t -
+t0)^q \over q!
+F^(q)(t 0) + (t - t0)^q\epsilon(t -
+t 0) \%& \\
+\end{align*}
+
+avec limu\rightarrow~0~\epsilon(u) = 0. En posant
+F^(n)(t0) =
+\lambda~nF^(p)(t0) pour p + 1 \leq n \leq q - 1 et
+\epsilon(u) = \alpha~(u)F^(p)(t0) +
+\beta~(u)F^(q)(t0), on a
+limu\rightarrow~0~\alpha~(u)
+= limu\rightarrow~0~\beta~(u) = 0 et
+
+\begin{align*} F(t)& =& F(t0) \%&
+\\ & +& (t -
+t0)^p\left ( 1 \over
+p! + \sum n=p+1^q-1~ (t -
+t0)^n-p \over n! \lambda~n + (t
+- t0)^q-p\alpha~(t - t 0)\right
+)F^(p)(t 0)\%& \\ &
++& (t - t0)^q( 1 \over q! + \beta~(t
+- t0))F^(q)(t 0) \%&
+\\ \end{align*}
+
+ce qui montre que
+
+\begin{align*} x(t)& =& (t -
+t0)^p\left ( 1 \over
+p! + \sum n=p+1^q-1~ (t -
+t0)^n-p \over n! \lambda~n + (t
+- t0)^q-p\alpha~(t - t 0)\right
+)\%& \\ & ∼& (t -
+t0)^p \over p! \%&
+\\ \end{align*}
+
+et que
+
+y(t) = (t - t0)^q( 1 \over q! +
+\beta~(t - t0)) ∼ (t - t0)^q
+\over q!
+
+Mais quand deux fonctions sont équivalentes au voisinage de
+t0, elles ont même signe au voisinage de t0 ce qui
+montre qu'il existe \eta \textgreater{} 0 tel que pour t \in{]}t0 -
+\eta,t0 + \eta{[} on ait
+\mathrmsgn~ (x(t))
+= \mathrmsgn~ ((t -
+t0)^p) et
+\mathrmsgn~ (y(t))
+= \mathrmsgn~ ((t -
+t0))^q en posant
+\mathrmsgn~ (u) =
+\left \ \cases 1 &si u
+\textgreater{} 0 \cr 0 &si u = 0 \cr
+-1&si u \textless{} 0  \right .. Ceci conduit à la
+discussion suivante
+
+Premier cas~: p impair, q pair (c'est par exemple le cas d'un point
+birégulier pour lequel p = 1 et q = 2) Pour t \in{]}t0 -
+\eta,t0{[}, on a x(t) \textless{} 0 et y(t) \textgreater{} 0~;
+pour t \in{]}t0,t0 + \eta{[}, on a x(t) \textgreater{} 0
+et y(t) \textgreater{} 0. La courbe reste d'un même coté de sa tangente
+F(t0) + \mathbb{R}~F^(p)(t0) tout en traversant la
+droite F(t0) + \mathbb{R}~F^(q)(t0)~; on dit alors
+que t0 est un point banal de \Gamma.
+
+\text\includegraphics{cours12x.png}
+
+Deuxième cas~: p impair, q impair (c'est le cas le plus courant de point
+non birégulier avec p = 1 et q = 3) Pour t \in{]}t0 -
+\eta,t0{[}, on a x(t) \textless{} 0 et y(t) \textless{} 0~; pour
+t \in{]}t0,t0 + \eta{[}, on a x(t) \textgreater{} 0 et
+y(t) \textgreater{} 0. La courbe traverse sa tangente F(t0) +
+\mathbb{R}~F^(p)(t0) tout en traversant la droite
+F(t0) + \mathbb{R}~F^(q)(t0)~; on dit alors que
+t0 est un point d'inflexion de \Gamma.
+
+\text\includegraphics{cours13x.png}
+
+Troisième cas~: p pair, q impair (c'est le cas le plus courant de point
+singulier avec p = 2 et q = 3) Pour t \in{]}t0 -
+\eta,t0{[}, on a x(t) \textgreater{} 0 et y(t) \textless{} 0~;
+pour t \in{]}t0,t0 + \eta{[}, on a x(t) \textgreater{} 0
+et y(t) \textgreater{} 0. La courbe traverse sa tangente F(t0)
++ \mathbb{R}~F^(p)(t0) tout en restant d'un même coté de la
+droite F(t0) + \mathbb{R}~F^(q)(t0)~; on dit alors
+que t0 est un point de rebroussement de première espèce de \Gamma.
+
+\text\includegraphics{cours14x.png}
+
+Quatrième cas~: p pair, q pair Pour t \in{]}t0 -
+\eta,t0{[}, on a x(t) \textgreater{} 0 et y(t) \textgreater{} 0
+et pour t \in{]}t0,t0 + \eta{[}, on a x(t) \textgreater{}
+0 et y(t) \textgreater{} 0. La courbe reste d'un même coté de sa
+tangente F(t0) + \mathbb{R}~F^(p)(t0) tout en
+restant d'un même coté de la droite F(t0) +
+\mathbb{R}~F^(q)(t0)~; on dit alors que t0 est un
+point de rebroussement de deuxième espèce de \Gamma.
+
+\text\includegraphics{cours15x.png}
+
+On a en particulier au passage démontré le résultat suivant
+
+Théorème~18.1.5 (convexité locale). Soit \Gamma = (I,F) un arc paramétré de
+classe C^k, k ≥ 2. Soit t0 \in I un point birégulier
+de \Gamma. Alors il existe un \eta \textgreater{} 0 tel que pour t
+\in{]}t0 - \eta,t0 +
+\eta{[}\diagdown\t0\, F(t) soit dans le
+demi plan ouvert de concavité.
+
+Remarque~18.1.9 On vérifie facilement que les entiers p et q définis
+ci-dessus sont invariants par changement de paramétrage admissible. Il
+en est donc de même des notions de point banal, point d'inflexion, point
+de rebroussement de première et deuxième espèce.
+
+\paragraph{18.1.7 Branches infinies}
+
+Définition~18.1.9 Soit \Gamma = (I,F) un arc paramétré de classe
+C^k et \alpha~ \in \mathbb{R}~ \cup\-\infty~,+\infty~\ une
+extrémité de I. On dit que \Gamma admet en \alpha~ une branche infinie si
+limt\rightarrow~\alpha~~\\textbar{}F(t)\\textbar{}
+= +\infty~.
+
+Définition~18.1.10 Soit \Gamma = (I,F) un arc paramétré de classe
+C^k et \alpha~ \in \mathbb{R}~ \cup\-\infty~,+\infty~\ une
+extrémité de I où \Gamma admet une branche infinie. Si
+limt\rightarrow~\alpha~~ F(t) \over
+\\textbar{}F(t)\\textbar{}
+=\vec u (vecteur nécessairement unitaire), on dit que
+\Gamma admet en \alpha~ la droite \mathbb{R}~\vecu comme direction
+asymptotique.
+
+Définition~18.1.11 Soit \Gamma = (I,F) un arc paramétré de classe
+C^k et \alpha~ \in \mathbb{R}~ \cup\-\infty~,+\infty~\ une
+extrémité de I où \Gamma admet une branche infinie. Soit D une droite affine
+de E. On dit que \Gamma admet en \alpha~ l'asymptote D si
+limt\rightarrow~\alpha~~d(F(t),D) = 0 (où d(F(t),D)
+désigne la distance du point F(t) au point D) (distance associée à une
+norme quelconque sur E).
+
+Proposition~18.1.6 Soit \Gamma = (I,F) un arc paramétré de classe
+C^k et \alpha~ \in \mathbb{R}~ \cup\-\infty~,+\infty~\ une
+extrémité de I où \Gamma admet une branche infinie. Si \Gamma admet en \alpha~ une
+droite D comme asymptote, il admet sa direction \vecD
+comme direction asymptotique.
+
+Démonstration Soit a un point de D. Utilisons une distance associée à
+une norme euclidienne sur E et soit P(t) la pro\\\\jmathmathmathmathection orthogonale de
+F(t) sur la droite D. On a alors d(F(t),D) =\\textbar{}
+F(t) - P(t)\\textbar{}. On a
+\\textbar{}P(t)\\textbar{}
+≥\\textbar{} F(t)\\textbar{}
+-\\textbar{} P(t) - F(t)\\textbar{} ce qui
+montre que
+lim~\\textbar{}P(t)\\textbar{}
+= +\infty~. On en déduit que pour t assez proche de \alpha~, le point P(t) reste
+d'un même côté de a et que donc le vecteur 
+\overrightarrowaP(t) \over
+\\textbar{}\overrightarrowaP(t)\\textbar{}
+est constant égal à un vecteur unitaire \vecu de
+\vecD. On a alors
+
+\begin{align*} F(t) \over
+\\textbar{}F(t)\\textbar{} & =& F(t)
+- P(t) + a \over
+\\textbar{}F(t)\\textbar{} +
+\\textbar{}\overrightarrowaP(t)\\textbar{}
+\over
+\\textbar{}F(t)\\textbar{} 
+\overrightarrowaP(t) \over
+\\textbar{}\overrightarrowaP(t)\\textbar{}
+\%& \\ & =& F(t) - P(t)
+\over
+\\textbar{}F(t)\\textbar{} +
+\\textbar{}\overrightarrowaP(t)\\textbar{}
+\over
+\\textbar{}F(t)\\textbar{}
+\vecu \%& \\
+\end{align*}
+
+avec lim~ F(t)-P(t)+a \over
+\\textbar{}F(t)\\textbar{} = 0 puisque
+le numérateur tend vers a et le dénominateur vers + \infty~, et
+lim~
+\\textbar{}\overrightarrowaP(t)\\textbar{}
+\over
+\\textbar{}F(t)\\textbar{} = 1 comme le
+montre l'encadrement
+
+\begin{align*}
+\\textbar{}F(t)\\textbar{}
+-\\textbar{} P(t) - F(t)\\textbar{}
+-\\textbar{} a\\textbar{} \leq&& \%&
+\\
+\\textbar{}\overrightarrowaP(t)\\textbar{}&
+=& \\textbar{}P(t) - a\\textbar{}
+\leq\\textbar{} F(t)\\textbar{}
++\\textbar{} P(t) - F(t)\\textbar{}
++\\textbar{} a\\textbar{}\%&
+\\ \end{align*}
+
+qui implique
+
+1 - \\textbar{}P(t) - F(t)\\textbar{}
+\over
+\\textbar{}F(t)\\textbar{} -
+\\textbar{}a\\textbar{}
+\over
+\\textbar{}F(t)\\textbar{} \leq
+\\textbar{}\overrightarrowaP(t)\\textbar{}
+\over
+\\textbar{}F(t)\\textbar{} \leq 1 +
+\\textbar{}P(t) - F(t)\\textbar{}
+\over
+\\textbar{}F(t)\\textbar{} +
+\\textbar{}a\\textbar{}
+\over
+\\textbar{}F(t)\\textbar{}
+
+On a donc lim~ F(t) \over
+\\textbar{}F(t)\\textbar{}
+=\vec u ce qui achève la démonstration.
+
+Proposition~18.1.7 Soit \Gamma = (I,F) un arc paramétré de classe
+C^k et \alpha~ \in \mathbb{R}~ \cup\-\infty~,+\infty~\ une
+extrémité de I où \Gamma admet une branche infinie. Soit
+\vecD une direction de droite, \Pi un hyperplan affine
+non parallèle à \vecD, m un point de \Pi. Pour t \in I,
+soit mt le point d'intersection de la parallèle à
+\vecD mené par F(t) avec l'hyperplan \Pi. On a
+équivalence de (i) \Gamma admet en \alpha~ la droite D = m +\vec
+D comme asymptote (ii)
+limt\rightarrow~\alpha~mt~ = m.
+
+Démonstration Mettons sur E une structure euclidienne telle que
+l'hyperplan \Pi soit orthogonal à \vecD et utilisons la
+distance d correspondante. Alors la distance de F(t) à D est égale à la
+distance de mt à m ce qui montre le résultat.
+
+Etude des branches infinies Si \Gamma admet en \alpha~ une branche infinie, on
+commence par regarder si  F(t) \over
+\\textbar{}F(t)\\textbar{} admet une
+limite. Si c'est le cas, soit \vecu cette limite et
+\vecD = \mathbb{R}~\vecu. On choisit pour \Pi
+un hyperplan affine non parallèle à \vecD et on
+recherche le point mt d'intersection de la droite F(t) +
+\mathbb{R}~\vecu avec \Pi~; si le point mt admet en \alpha~
+une limite m, la droite m + \mathbb{R}~\vecu est asymptote à la
+courbe, sinon la courbe n'admet pas d'asymptote en \alpha~. Pour la simplicité
+des calculs, on est souvent amené à choisir pour \Pi l'un des hyperplans
+de coordonnées.
+
+\paragraph{18.1.8 Plan d'étude d'un arc plan en paramétriques}
+
+Ici, E est un \mathbb{R}~ espace vectoriel normé de dimension 2, soit
+(\vec\imath,\vecȷ) une base de E. Soit
+F une fonction de \mathbb{R}~ vers E. On notera (lorsque cela a un sens) F(t) =
+\phi(t)\vec\imath + \psi(t)\vecȷ.
+
+Première étape~: domaine de définition On détermine le domaine de
+définition D = Def~ (\phi)
+\bigcap Def~ (\psi) de F~; c'est en général une réunion
+finie d'intervalles deux à deux dis\\\\jmathmathmathmathoints, si bien que la courbe étudiée
+sera une réunion finie d'arcs paramétrés.
+
+Deuxième étape~: réduction du domaine d'étude Supposons qu'il existe une
+application \theta : D\rightarrow~D tel que pour t \inD, F(\theta(t)) se déduise par une
+transformation géométrique simple S de F(t), et soit \Delta un domaine
+fondamental de \theta dans D c'est-à-dire une partie de D telle que D
+= \⋃ ~
+n\in\mathbb{N}~\theta^n(\Delta) (ou éventuellement si \theta est bi\\\\jmathmathmathmathective, D
+= \⋃ ~
+n\inℤ\theta^n(\Delta)). En se fondant sur la relation
+F(\theta^n(t)) = S^n(F(t)), on voit qu'il suffit
+d'étudier la courbe pour t \in \Delta pour en déduire simplement l'étude sur
+\theta^n(\Delta) et donc sur D.
+
+On recherchera principalement des transformations \theta du type
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) \theta(t) = t + T avec alors \Delta = {[}a,a + T{]} \bigcapD
+\item
+  (ii) \theta(t) = \omega - t avec alors \Delta = {[} \omega \over 2
+  ,+\infty~{[}\bigcapD
+\item
+  (iii) éventuellement \theta(t) = 1 \over t avec par
+  exemple \Delta = {[}-1,1{]} \bigcapD
+\end{itemize}
+
+En ce qui concerne les transformations géométriques simples, on repérera
+principalement
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) l'identité \phi(\theta(t)) = \phi(t), \psi(\theta(t)) = \psi(t)
+\item
+  (ii) des symétries
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    a) \phi(\theta(t)) = -\phi(t), \psi(\theta(t)) = \psi(t)~: symétrie par rapport à l'axe Oy
+  \item
+    b) \phi(\theta(t)) = \phi(t), \psi(\theta(t)) = -\psi(t)~: symétrie par rapport à l'axe Ox
+  \item
+    c) \phi(\theta(t)) = -\phi(t), \psi(\theta(t)) = -\psi(t)~: symétrie par rapport à
+    l'origine O.
+  \item
+    d) \phi(\theta(t)) = \psi(t), \psi(\theta(t)) = \phi(t)~: symétrie par rapport à la
+    première diagonale
+  \end{itemize}
+\item
+  (iii) des translations \phi(\theta(t)) = \phi(t) + \alpha~, \psi(\theta(t)) = \psi(t) + \beta~~:
+  translation de vecteur \alpha~\vec\imath +
+  \beta~\vecȷ
+\end{itemize}
+
+Troisième étape~: variations de \phi et \psi On étudie les signes des dérivées
+\phi' et \psi'. Au passage on repère un certain nombre de points remarquables
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) \phi'(t0) = 0,
+  \psi'(t0)\neq~0~: point régulier où la
+  tangente est verticale
+\item
+  (ii) \phi'(t0)\neq~0, \psi'(t0) =
+  0~: point régulier où la tangente est horizontale
+\item
+  (iii) \phi'(t0) = 0, \psi'(t0) = 0~: point singulier
+\end{itemize}
+
+Quatrième étape~: étude des points singuliers Une étude locale soit à
+l'aide de dérivées successives, soit de préférence avec un développement
+limité permet de déterminer les entiers p et q introduits ci dessus et
+de déterminer en conséquence le type de point singulier~: point de
+rebroussement de première espèce, point de rebroussement de deuxième
+espèce, point banal ou point d'inflexion (dans l'ordre décroissant des
+fréquences)~; au passage on détermine la tangente en un point singulier.
+
+Cinquième étape~: étude des branches infinies L'arc admet en \alpha~
+\in\overlineD une branche infinie si et seulement si
+l'une au moins des deux coordonnées \phi(t) et \psi(t) admet une limite \infty~.
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) Si lim~\textbar{}\phi(t)\textbar{} = +\infty~ et
+  \psi(t) est bornée, l'arc admet une direction asymptotique horizontale~;
+  il admet la droite y = y0 comme asymptote si et seulement
+  si~limt\rightarrow~\alpha~\psi(t) = y0~.
+\item
+  (ii) Si lim~\textbar{}\psi(t)\textbar{} = +\infty~ et
+  \phi(t) est bornée, l'arc admet une direction asymptotique verticale~; il
+  admet la droite x = x0 comme asymptote si et seulement
+  si~limt\rightarrow~\alpha~\phi(t) = x0~.
+\item
+  (iii) Si lim~\textbar{}\phi(t)\textbar{} = +\infty~ et
+  lim~\textbar{}\psi(t)\textbar{} = +\infty~, on étudie
+  le rapport  \psi(t) \over \phi(t)
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    a) s'il admet une limite \infty~, l'arc admet la verticale comme direction
+    asymptotique et il n'y a pas d'asymptote
+  \item
+    b) s'il admet la limite 0, l'arc admet l'horizontale comme direction
+    asymptotique et il n'y a pas d'asymptote
+  \item
+    c) s'il admet la limite a\neq~0, l'arc admet
+    la droite y = ax comme direction asymptotique et la droite
+    d'équation y = ax + b est asymptote si et seulement
+    si~limt\rightarrow~\alpha~~(\psi(t) - a\phi(t)) = b
+  \item
+    d) dans tous les autres cas, il n'y a pas de direction asymptotique
+  \end{itemize}
+\end{itemize}
+
+Une étude complémentaire de signe peut parfois préciser la position du
+point F(t) par rapport à une asymptote, ce qui peut permettre de
+préciser un tracé.
+
+Sixième étape~: ébauche de tracé En s'aidant d'une calculatrice ou d'un
+ordinateur, on peut calculer un certain nombre de points supplémentaires
+en plus des points remarquables~; ceci, en plus des points et des
+tangentes remarquables, des variations de \phi et \psi et de l'étude des
+branches infinies permet en général une ébauche convaincante du tracé.
+
+Etapes facultatives
+
+Si la question est posée ou si l'ébauche du tracé suggère la nécessité
+de certaines précisions, on peut procéder à quelques étapes
+supplémentaires
+
+Septième étape~: détermination des points non biréguliers Il suffit
+d'écrire \mathrm{det}~
+(\vec\imath,\vecȷ)(F'(t),F''(t))
+= 0, c'est-à-dire \left
+\textbar{}\matrix\,\phi'(t)&\psi'(t)
+\cr \phi'`(t)&\psi''(t)\right \textbar{},
+soit encore, si \psi' ne s'annule pas  d \over dt
+\left ( \phi'(t) \over \psi'(t)
+\right ) = 0~; ces points, une fois éliminés les points
+singuliers, sont souvent des points d'inflexion.
+
+Huitième étape~: détermination des points multiples Il s'agit de
+résoudre l'équation F(t) = F(t') ou encore le système \phi(t) = \phi(t'), \psi(t)
+= \psi(t') pour t\neq~t'.
+
+\paragraph{18.1.9 Notion de contact}
+
+Soit \Gamma = (I,F) un arc paramétré de classe C^k de
+\mathbb{R}~^n~; on pose F(t) =
+(f1(t),\\ldots,fn~(t)).
+Soit U un ouvert contenant l'image de \Gamma, G une application de classe
+C^k de U dans \mathbb{R}~, \Sigma =
+\(x1,\\ldots,xn~)
+\in
+U∣G(x1,\\ldots,xn~)
+= 0\ l'hypersurface correspondante de \mathbb{R}~^n.
+On pose \phi(t) =
+G(f1(t),\\ldots,fn~(t))~;
+donc \phi est une application de classe C^k de I dans \mathbb{R}~.
+
+Définition~18.1.12 On dit que \Gamma et \Sigma ont au point t0 \in I de \Gamma
+un contact d'ordre au moins p si \phi(t0) = \phi'(t0) =
+\\ldots~ =
+\phi^(p-1)(t0) = 0. On dit en particulier que \Gamma et \Sigma
+sont sécantes (resp. tangentes, resp. osculatrices, resp.
+surosculatrices) en t0 si elles ont en t0 un contact
+d'ordre au moins 1 (resp. 2, resp. 3, resp. 4).
+
+Remarque~18.1.10 On voit que \Gamma et \Sigma sont sécantes en t0 si et
+seulement si~F(t0) \in \Sigma ce qui est bien naturel. Pour que \Gamma et
+\Sigma soient tangentes en t0, il faut de plus que \phi'(t0)
+= 0. Mais \phi'(t0) =\
+\sum ~
+i=1^nfi'(t0) \partial~G
+\over \partial~xi (F(t0)), c'est-à-dire que
+\Gamma et \Sigma sont tangentes en t0, si et seulement si
+F(t0) \in \Sigma et le vecteur F'(t0) =
+(f1'(t0),\\ldots,fn'(t0~))
+appartient à l'hyperplan \Pi d'équation
+\\sum ~
+i=1^nxi \partial~G \over
+\partial~xi (F(t0)) = 0 (si
+\mathrmgrad~
+G(F(t0))\neq~0)~; or le vecteur
+F'(t0) détermine en général la tangente à \Gamma en t0 et
+l'hyperplan \Pi est en général (comme on l'a vu à l'occasion du théorème
+des fonctions implicites) l'hyperplan tangent à \Sigma au point
+F(t0) ce qui \\\\jmathmathmathmathustifie le vocabulaire employé.
+
+Remarque~18.1.11 Soit F(t) = x(t)\vec\imath +
+y(t)\vecȷ un arc paramétré plan~; soit t0
+un point régulier de l'arc et recherchons le contact en t0 de
+\Gamma avec une droite D d'équation ax + by + c = 0~; la direction
+\vecD de la droite D a pour équation ax + by = 0. On
+a alors \phi(t) = ax(t) + by(t) + c. On voit alors que, si on appelle p
+l'ordre du contact, on a (i) p ≥ 1 \Leftrightarrow
+F(t0) \in D (ii) p ≥ 2 \Leftrightarrow
+F(t0) \in D,F'(t0) \in\vec D~: seule
+la tangente en t0 a un contact d'ordre au moins 2 (iii) p ≥ 3
+\Leftrightarrow F(t0) \in D,F'(t0)
+\in\vec D,F''(t0) \in\vec
+D~: en général aucune droite ne répond à ces exigences, à moins que le
+point ne soit pas birégulier.
+
+On obtient donc que les points réguliers non biréguliers sont les points
+de \Gamma où existent une droite osculatrice ce qui peut fournir un autre
+moyen de recherche des points non biréguliers (en général des points
+d'inflexion) en étudiant la multiplicité d'intersection d'une droite D
+avec l'arc, dans la mesure où cela a un sens, et en particulier lorsque
+x(t) et y(t) sont des fractions rationnelles en t.
+
+Sur le même modèle, le lecteur montrera facilement qu'en un point
+birégulier d'un arc de \mathbb{R}~^3, il existe un seul plan qui soit
+osculateur à l'arc, à savoir le plan osculateur défini précédemment.
+
+\paragraph{18.1.10 Enveloppes}
+
+Ce paragraphe ne fait pas partie du programme des classes préparatoires.
+
+Soit (Dt)t\inI une famille de droites de
+\mathbb{R}~^2 indexée par un intervalle I de \mathbb{R}~. Intuitivement, on
+appellera enveloppe de la famille de droites un arc \Gamma = (I,F) telle que
+la tangente à \Gamma au point t soit la droite Dt. Nous allons
+préciser cette définition de la matière suivante
+
+Définition~18.1.13 Soit I un intervalle de \mathbb{R}~, a,b,c trois applications
+de classe C^2 de I dans \mathbb{R}~ telles que
+\forall~~t \in I,
+(a(t),b(t))\neq~(0,0). Pour t \in I soit
+Dt la droite de \mathbb{R}~^2 d'équation a(t)x + b(t)y + c(t)
+= 0. On appelle enveloppe de la famille de droite Dt tout arc
+paramétré (I,F) de classe \mathcal{C}^1 tel que
+
+\forall~~t \in I, F(t) \in
+Dt\text et F'(t)
+\in\overrightarrow Dt
+
+Remarque~18.1.12 En un point singulier de l'arc, on a F'(t) = 0 et la
+condition F'(t) \in\overrightarrow Dt est
+automatiquement vérifiée. En un tel point, la droite Dt n'a
+donc aucune raison d'être la tangente à l'arc (I,F). Nous allons voir
+cependant que c'est souvent le cas, sous des hypothèses raisonnables.
+
+Théorème~18.1.8 On suppose que \forall~~t \in I,
+a(t)b'(t) - a'(t)b(t)\neq~0. Alors la famille de
+droites Dt d'équations a(t)x + b(t)y + c(t) = 0 admet une
+unique enveloppe (I,F)~; pour tout t \in I, le point F(t) est le point
+d'intersection de la droite Dt avec la droite Dt'
+d'équation a'(t)x + b'(t)y + c'(t) = 0~; c'est aussi la limite quand h
+tend vers 0 du point d'intersection de la droite Dt+h avec la
+droite Dt. Pour tout point non totalement singulier t de l'arc
+(I,F), la droite Dt est la tangente à l'arc au point t.
+
+Démonstration Posons F(t) = (x(t),y(t)). Les conditions de la définition
+de l'enveloppe se traduisent par \forall~~t \in I,
+a(t)x(t) + b(t)y(t) + c(t) = 0, a(t)x'(t) + b(t)y'(t) = 0. Mais si la
+première condition est vérifiée, par dérivation on a
+\forall~~t \in I,a'(t)x(t) + b'(t)y(t) + c'(t) +
+a(t)x'(t) + b(t)y'(t) = 0 si bien que la seconde condition est
+équivalente à \forall~~t \in I, a'(t)x + b'(t)y + c'(t)
+= 0. On obtient donc
+
+\forall~~t \in I, \left
+\ \cases a(t)x(t) + b(t)y(t) + c(t) =
+0 \cr a'(t)x(t) + b'(t)y(y) + c'(t) = 0 
+\right .
+
+système aux inconnues x(t) et y(t) qui est un système de Cramer puisque
+a(t)b'(t) - a'(t)b(t)\neq~0. Ceci montre dé\\\\jmathmathmathmathà
+l'unicité de l'enveloppe et le fait que Dt \bigcap Dt' =
+\F(t)\. Inversement, si F(t) est ainsi
+défini, comme a,b et c sont de classe C^2, x(t) et y(t) sont
+de classe \mathcal{C}^1 et le même calcul que ci dessus en sens inverse
+montre que \forall~~t \in I, a(t)x(t) + b(t)y(t) + c(t)
+= 0, a(t)x'(t) + b(t)y'(t) = 0, donc (I,F) est bien enveloppe de la
+famille Dt.
+
+Soit maintenant h\neq~0. L'équation aux
+coordonnées des points d'intersection des droites Dt et
+Dt+h est donnée par
+
+\begin{align*} \left
+\ \cases a(t)x + b(t)y + c(t) = 0
+\cr a(t + h)x + b(t + h)y + c(t + h) = 0 
+\right . \Leftrightarrow&& \%&
+\\ & \left
+\ \cases a(t)x + b(t)y + c(t) = 0
+\cr  a(t+h)-a(t) \over h x +
+b(t+h)-b(t) \over h y + c(t+h)-c(t)
+\over h = 0  \right .&
+\%&\\ \end{align*}
+
+La limite du déterminant de ce système est a(t)b'(t) -
+a'(t)b(t)\neq~0, donc pour h assez petit ce
+déterminant est non nul et définit un unique point Fh(t) de
+coordonnées (xh(t),yh(t)). Les formules de Cramer
+montrent aussitôt que
+limh\rightarrow~0Fh~(t) = F(t).
+
+Supposons maintenant que a,b et c soient de classe C^k+1~;
+alors F est de classe C^k. Soit t0 un point non
+totalement singulier de (I,F), et soit p tel que F'(t0) =
+\\ldots~ =
+F^(p-1)(t0) = 0,
+F^(p)(t0)\neq~0. On a
+\forall~~t \in I,a(t)x'(t) + b(t)y'(t) = 0. En
+appliquant la formule de Leibnitz, on a
+
+\begin{align*} 0& =& d^p-1
+\over dt^p-1 (a(t)x'(t) +
+b(t)y'(t))t=t0 \%& \\
+& =& \sum n=0^p-1C~
+p-1^n\left (a^(n)(t
+0)x^(p-n)(t 0) + b^(n)(t
+0)y^(p-n)(t 0)\right )\%&
+\\ & =& a(t)x^(p)(t
+0) + b(t)y^(p)(t 0) \%&
+\\ \end{align*}
+
+puisque toutes les dérivées précédentes de x et y sont nulles au point
+t0. On en déduit que F^(p)(t0)
+\in\overrightarrow Dt0. La droite
+Dt0 contient le point F(t0) et est
+parallèle au vecteur tangent F^(p)(t0)~; c'est donc
+la tangente au point t0. Ceci achève la démonstration du
+théorème.
+
+{[}
+{[}

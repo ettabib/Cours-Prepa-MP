@@ -1,0 +1,482 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{7.6 Opérations sur les séries}
+
+\paragraph{7.6.1 Combinaisons linéaires}
+
+Proposition~7.6.1 Soit E un espace vectoriel normé,
+\\sum  an~ et
+\\sum  bn~ deux
+séries à termes dans E, \alpha~ et \beta~ deux scalaires. Si
+\\sum  an~ et
+\\sum  bn~ sont
+convergentes (resp. absolument convergentes), il en est de même de la
+série \\sum ~
+(\alpha~an + \beta~bn) et alors
+
+\sum n=0^+\infty~(\alpha~a n~ +
+\beta~bn) = \alpha~\\sum
+n=0^+\infty~a n + \beta~\\sum
+n=0^+\infty~b n
+
+Démonstration Le résultat a dé\\\\jmathmathmathmathà été vu pour la convergence~; pour la
+convergence absolue, il résulte de
+\\textbar{}\alpha~an +
+\beta~bn\\textbar{}
+\leq\textbar{}\alpha~\textbar{}\,\\textbar{}an\\textbar{}
++
+\textbar{}\beta~\textbar{}\,\\textbar{}bn\\textbar{}
+
+Corollaire~7.6.2 Soit (zn) une suite de nombres complexes,
+zn = xn + iyn, xn,yn \in
+\mathbb{R}~. Alors la série \\sum ~
+zn est convergente (resp. absolument convergente) si et
+seulement si~les deux séries
+\\sum  xn~ et
+\\sum  yn~ le
+sont.
+
+Démonstration Le sens direct résulte de xn = 1
+\over 2 (zn +
+\overlinezn) et yn = 1
+\over 2i (zn
+-\overlinezn). La réciproque est évidente.
+
+\paragraph{7.6.2 Sommation par paquets}
+
+Théorème~7.6.3 (Sommation par paquets) Soit E un espace vectoriel normé,
+\\sum  xn~ une
+série à termes dans E, \phi une application strictement croissante de \mathbb{N}~
+dans \mathbb{N}~. On pose y0 =\
+\sum  k=0^\phi(0)xk~ et
+pour n ≥ 1, yn =\
+\sum ~
+k=\phi(n-1)+1^\phi(n)xk. Alors
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) si la série \\sum ~
+  xn converge, la série
+  \\sum  yn~
+  converge et a même somme
+\item
+  (ii) la réciproque est vraie dans les deux cas suivants
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    (a) la suite xn tend vers 0 et la suite \phi(n + 1) - \phi(n)
+    (la taille des ''paquets'') est ma\\\\jmathmathmathmathorée
+  \item
+    (b) E = \mathbb{R}~ et à l'intérieur de chaque ''paquet'' (k \in {[}\phi(n - 1) +
+    1,\phi(n){]}), tous les xk, sont de même signe.
+  \end{itemize}
+\end{itemize}
+
+Démonstration On a d'abord
+
+Sn(y) = \\sum
+p=0^n(\\sum
+k=\phi(n-1)+1^\phi(n)x k) =
+\sum k=0^\phi(n)x k~ =
+S\phi(n)(x)
+
+(en convenant que \phi(-1) = -1). La suite Sn(y) est donc une
+sous suite de la suite Sn(x), ce qui montre l'assertion (i).
+
+(ii.a) Soit S = \\sum ~
+n=0^+\infty~yn et K tel que
+\forall~~n, \phi(n + 1) - \phi(n) \leq K. Soit n \in \mathbb{N}~ et p
+l'unique entier tel que \phi(p - 1) \textless{} n \leq \phi(p). On a alors
+
+Sp(y) - Sn(x) = S\phi(p)(x) - Sn(x)
+= \sum k=n+1^\phi(p)x k~
+
+Soit alors \epsilon \textgreater{} 0 et N \in \mathbb{N}~ tel que n ≥ N
+\rigtharrow~\\textbar{} xn\\textbar{}
+\textless{} \epsilon \over 2K . Alors pour n ≥ N, on a
+\\textbar{}Sp(y) -
+Sn(x)\\textbar{}
+\leq\\sum ~
+k=n+1^\phi(p)\\textbar{}xk\\textbar{}
+\leq (\phi(p) - n) \epsilon \over 2K \leq \epsilon \over
+2 . Mais il existe N' tel que q ≥ N' \rigtharrow~\\textbar{} S -
+Sq(y)\\textbar{} \textless{} \epsilon
+\over 2 . Si on choisit n ≥\
+max(N,\phi(N')), on a p ≥ N' et donc
+
+\\textbar{}S - Sn(x)\\textbar{}
+\leq\\textbar{} S -
+Sp(y)\\textbar{} +\\textbar{}
+Sp(y) - Sn(x)\\textbar{} \textless{}
+\epsilon
+
+ce qui montre que la série
+\\sum  xn~
+converge.
+
+(ii.b) La démonstration est similaire mais on remarque que
+
+\begin{align*} \textbar{}Sp(y) -
+Sn(x)\textbar{}& =& \textbar{}\\sum
+k=n+1^\phi(p)x k\textbar{} =
+\sum k=n+1^\phi(p)\textbar{}x~
+k\textbar{} \%& \\ & \leq&
+\\sum
+k=\phi(p-1)+1^\phi(p)\textbar{}x k\textbar{} =
+\textbar{}\\sum
+k=\phi(p-1)+1^\phi(p)x k\textbar{}\%&
+\\ & =& \textbar{}yp\textbar{}
+\%& \\ \end{align*}
+
+(car tous les xk sont de même signe). Comme la série
+\\sum  yq~
+converge, pour q ≥ N on a \textbar{}yq\textbar{} \textless{}
+\epsilon \over 2 . Alors pour n ≥ \phi(N), on a p ≥ N et donc
+\textbar{}Sp(y) -
+Sn(x)\textbar{}\leq\textbar{}yp\textbar{} \textless{}
+\epsilon \over 2 . On achève alors la démonstration comme dans
+le cas précédent.
+
+Remarque~7.6.1 La réciproque de (i) n'est pas valable en toute
+généralité comme le montre l'exemple de la série
+\\sum  (-1)^n~
+et de \phi(n) = 2n. On a alors yn = 0, la série
+\\sum  yn~
+converge alors que la série
+\\sum  xn~ est
+divergente. La réciproque (ii.b) est particulièrement intéressante pour
+le cas de séries de nombres réels qui ne sont pas de signe constant~; en
+regroupant ensemble les termes consécutifs de même signe, on obtient une
+série de même nature que la série initiale et dont les termes sont
+alternés en signe.
+
+\paragraph{7.6.3 Modification de l'ordre des termes}
+
+Nous allons ici étudier l'effet d'une permutation sur les termes d'une
+série convergente. Pour cela nous aurons besoin du lemme suivant.
+
+Théorème~7.6.4 Soit \\\sum
+ xn une série à termes réels ou complexes absolument
+convergente et soit \sigma : \mathbb{N}~ \rightarrow~ \mathbb{N}~ bi\\\\jmathmathmathmathective, une permutation de \mathbb{N}~. Alors la
+série \\sum ~
+x\sigma(n) est absolument convergente et
+\\sum ~
+n=0^+\infty~x\sigma(n) =\
+\sum  n=0^+\infty~xn~.
+
+Démonstration Premier cas~: série à termes réels positifs. Pour n \in \mathbb{N}~,
+soit Nn le plus grand élément de \sigma({[}0,n{]}). On a alors
+
+\sum k=0^nx \sigma(k)~
+\leq\sum p=0^Nn~
+xp \leq\\sum
+p=0^+\infty~x p
+
+ce qui montre que la série à termes réels positifs
+\\sum  x\sigma(k)~
+converge et que \\sum ~
+n=0^+\infty~x\sigma(n)
+\leq\\sum ~
+n=0^+\infty~xn. Mais les deux séries \\\\jmathmathmathmathouent un rôle
+symétrique puisque xn = x\sigma^-1(\sigma(n)), et
+donc on a aussi \\sum ~
+n=0^+\infty~xn
+\leq\\sum ~
+n=0^+\infty~x\sigma(n) ce qui nous donne l'égalité.
+
+Deuxième cas~: séries à termes réels On introduit, comme d'habitude,
+pour x \in \mathbb{R}~, x^+ = max~(x,0) \in
+\mathbb{R}~^+ et x^- = max~(-x,0) \in
+\mathbb{R}~^+ si bien que x = x^+ - x^-,
+\textbar{}x\textbar{} = x^+ + x^-. On a alors 0 \leq
+xn^+ \leq\textbar{}xn\textbar{} et 0 \leq
+xn^-\leq\textbar{}xn\textbar{}, ce qui montre
+que les deux séries à termes positifs
+\\sum ~
+xn^+ et
+\\sum ~
+xn^- sont convergentes. D'après le premier cas de la
+démonstration, les deux séries
+\\sum ~
+x\sigma(n)^+ et
+\\sum ~
+x\sigma(n)^- sont convergentes et on a
+
+\sum n=0^+\infty~x~
+\sigma(n)^+ = \\sum
+n=0^+\infty~x n^+,\quad
+\sum n=0^+\infty~x~
+\sigma(n)^- = \\sum
+n=0^+\infty~x n^-
+
+Comme \textbar{}x\sigma(n)\textbar{} = x\sigma(n)^+ +
+x\sigma(n)^-, la série
+\\sum ~
+\textbar{}x\sigma(n)\textbar{} converge, donc la série
+\\sum  x\sigma(n)~
+est absolument convergente, et comme x\sigma(n) =
+x\sigma(n)^+ - x\sigma(n)^-, on a
+
+\sum n=0^+\infty~x \sigma(n)~ =
+\sum n=0^+\infty~x~
+\sigma(n)^+-\\sum
+n=0^+\infty~x \sigma(n)^- =
+\sum n=0^+\infty~x~
+n^+-\\sum
+n=0^+\infty~x n^- =
+\sum n=0^+\infty~x n~
+
+Troisième cas~: séries à termes complexes On travaille de la même
+fa\ccon avec les parties réelles et parties
+imaginaires. On a 0
+\leq\textbar{}\mathrmRe(xn)\textbar{}\leq\textbar{}xn~\textbar{}
+et 0
+\leq\textbar{}\mathrmIm(xn)\textbar{}\leq\textbar{}xn~\textbar{},
+ce qui montre que les deux séries
+\\sum ~
+\mathrmRe(xn~) et
+\\sum ~
+\mathrmIm(xn~)
+sont absolument convergentes. D'après le deuxième cas de la
+démonstration, les deux séries
+\\sum ~
+\mathrmRe(x\sigma(n)~)
+et \\sum ~
+\mathrmIm(x\sigma(n)~)
+sont absolument convergentes et on a
+
+\\sum
+n=0^+\infty~\mathrmRe(x \sigma(n))
+= \\sum
+n=0^+\infty~\mathrmRe(x
+n),\quad \\sum
+n=0^+\infty~\mathrmIm(x \sigma(n))
+= \\sum
+n=0^+\infty~\mathrmIm(x n)
+
+Comme
+\textbar{}x\sigma(n)\textbar{}\leq\textbar{}\mathrmRe(x\sigma(n)~)\textbar{}
++
+\textbar{}\mathrmIm(x\sigma(n)~)\textbar{},
+la série \\sum ~
+\textbar{}x\sigma(n)\textbar{} converge, donc la série
+\\sum  x\sigma(n)~
+est absolument convergente, et comme x\sigma(n)
+=\
+\mathrmRe(x\sigma(n)) +
+i\mathrmRe(x\sigma(n)~),
+on a
+
+\sum n=0^+\infty~x \sigma(n)~ =
+\\sum
+n=0^+\infty~\mathrmRe(x
+\sigma(n))+i\\sum
+n=0^+\infty~\mathrmRe(x \sigma(n))
+= \\sum
+n=0^+\infty~\mathrmRe(x
+n)+i\\sum
+n=0^+\infty~\mathrmIm(x n) =
+\sum n=0^+\infty~x n~
+
+Remarque~7.6.2 La condition de convergence absolue est indispensable à
+la validité du théorème. Considérons la série semi convergente
+\\sum  xn~ avec
+xn = (-1)^n-1 \over n et soit S
+sa somme (on peut montrer que S = log~ 2). Soit
+\phi : \mathbb{N}~^∗\rightarrow~ \mathbb{N}~^∗ définie par \phi(3k + 1) = 2k + 1, \phi(3k
++ 2) = 4k + 2 et \phi(3k + 3) = 4k + 4. On vérifie facilement que \phi est une
+bi\\\\jmathmathmathmathection de \mathbb{N}~ dans \mathbb{N}~ (la bi\\\\jmathmathmathmathection réciproque est définie par des
+congruences modulo 4). Sommons alors par paquets de 3 la série
+\\sum  x\phi(n)~.
+On a
+
+\begin{align*} x\phi(3k+1) +
+x\phi(3k+2) + x\phi(3k+3)&& \%&
+\\ & =& 1 \over 2k +
+1 - 1 \over 4k + 2 - 1 \over 4k +
+4 = 1 \over 4k + 2 - 1 \over 4k +
+4 \%& \\ & =& 1
+\over 2 \left (x2k+1 +
+x2k+2\right ) \%&
+\\ \end{align*}
+
+Ceci montre (réciproque du théorème de sommation par paquets, la taille
+des paquets étant bornée et le terme général tendant vers 0) que la
+nouvelle série converge encore, mais que sa somme est la moitié de la
+somme de la série initiale.
+
+\paragraph{7.6.4 Produit de Cauchy}
+
+Définition~7.6.1 Soit \\\sum
+ an et \\\sum
+ bn deux séries à termes réels ou complexes. On appelle
+produit de Cauchy (ou produit de convolution) des deux séries, la série
+\\sum  cn~ avec
+
+\forall~n \in \mathbb{N}~, cn~ =
+\sum k=0^na~
+kbn-k = \\sum
+p+q=napbq
+
+Théorème~7.6.5 Soit \\\sum
+ an et \\\sum
+ bn deux séries à termes réels ou complexes, absolument
+convergentes. Alors leur produit de Cauchy
+\\sum  cn~ est
+une série absolument convergente et on a
+
+\sum n=0^+\infty~c n~ =
+\left (\\sum
+n=0^+\infty~a n\right
+)\left (\\sum
+n=0^+\infty~b n\right )
+
+Démonstration Cas particulier~: les deux séries sont à termes réels
+positifs. Notons Kn = {[}0,n{]} \times {[}0,n{]} \subset~ \mathbb{N}~^2
+et Tn = \(p,q) \in
+\mathbb{N}~^2∣p + q \leq n\.
+On a évidemment Tn \subset~ Kn \subset~ T2n. On a alors
+
+\begin{align*} \\sum
+k=0^nc k& =& \\sum
+k=0^n \\sum
+p+q=kapbq = \\sum
+(p,q)\inTnapbq
+\leq\\sum
+(p,q)\inKnapbq\%&
+\\ & =& \\sum
+p=0^na p \\sum
+q=0^nb q \leq\\sum
+p=0^+\infty~a p \\sum
+q=0^+\infty~b q \%&
+\\ \end{align*}
+
+La série \\sum ~
+cn est une série à termes réels positifs dont les sommes
+partielles sont ma\\\\jmathmathmathmathorées, donc elle converge. De plus les inclusions
+Tn \subset~ Kn \subset~ T2n se traduisent par
+Sn(c) \leq Sn(a)Sn(b) \leq S2n(c) et
+en faisant tendre n vers + \infty~, on obtient S(c) = S(a)S(b) ce qui est la
+formule souhaitée.
+
+Cas général Posons an' = \textbar{}an\textbar{},
+bn' = \textbar{}bn\textbar{} et cn'
+= \\sum ~
+p+q=n\textbar{}ap\textbar{}\textbar{}bq\textbar{}
+leur produit de Cauchy, et désignons par
+Sn(a'),Sn(b') et Sn(c') les sommes
+partielles d'indice n de ces trois séries. Puisque les séries
+\\sum  an~' et
+\\sum  bn~'
+sont convergentes, le cas particulier ci dessus montre que la série
+\\sum  cn~' est
+convergente et que sa somme est le produit des sommes de ces deux
+séries. Mais, comme \textbar{}cn\textbar{}\leq cn', on
+en déduit la convergence absolue de la série
+\\sum  cn~. On
+a alors
+
+\begin{align*} \left
+\textbar{}Sn(a)Sn(b) -
+Sn(c)\right \textbar{}& =&
+\left \textbar{}\\sum
+(p,q)\inKnapbq
+-\\sum
+(p,q)\inTnapbq\right
+\textbar{} = \left \textbar{}\\sum
+(p,q)\inKn\diagdownTnapbq\right
+\textbar{} \%& \\ & \leq&
+\\sum
+(p,q)\inKn\diagdownTn\textbar{}ap\textbar{}\textbar{}bq\textbar{}
+= \\sum
+(p,q)\inKn\textbar{}ap\textbar{}\textbar{}bq\textbar{}-\\sum
+(p,q)\inTn\textbar{}ap\textbar{}\textbar{}bq\textbar{}
+= Sn(a')Sn(b') -
+Sn(c')\%&\\
+\end{align*}
+
+Puisque la somme de la série
+\\sum  cn~' est
+le produit des sommes des deux séries
+\\sum  an~' et
+\\sum  bn~', on
+a
+limn\rightarrow~+\infty~(Sn(a')Sn~(b')
+- Sn(c')) = 0 et donc par la ma\\\\jmathmathmathmathoration ci-dessus
+limn\rightarrow~+\infty~(Sn(a)Sn~(b)
+- Sn(c)) = 0, ce qui montre que la somme de la série
+\\sum  cn~ est
+le produit des sommes des deux séries
+\\sum  an~ et
+\\sum  bn~ et
+achève la démonstration.
+
+Remarque~7.6.3 On aurait pu passer aussi du cas réel positif au cas
+complexe en utilisant, comme dans le théorème de permutation des termes,
+les parties positives x^+ et x^- d'un réel x, puis
+les parties réelle et imaginaire d'un nombre complexe, mais la
+démonstration n'aurait pas pu se généraliser comme nous le ferons
+ci-dessous au cas d'une application bilinéaire plus générale.
+
+Remarque~7.6.4 Le théorème ci dessus n'est plus valable pour des séries
+convergentes~: posons an = bn = (-1)^n
+\over \sqrtn+1 . On a
+\textbar{}cn\textbar{} =\
+\sum  k=0^n~ 1
+\over \sqrt(k+1)(n-k+1) . Mais pour
+k \in {[}0,n{]}, (k + 1)(n - k + 1) \leq ( n \over 2 +
+1)^2 (facile). Donc \textbar{}cn\textbar{}≥ n+1
+\over  n \over 2 +1 qui tend vers
+2~; donc la suite (cn) ne tend pas vers 0 et la série
+\\sum  cn~
+diverge.
+
+On a une généralisation du théorème précédent sous la forme suivante qui
+nous sera utile quand nous considérerons des séries d'endomorphismes.
+
+Théorème~7.6.6 Soit E, F et G sont trois espaces vectoriels normés, u :
+E \times F \rightarrow~ G une application bilinéaire continue,
+\\sum  an~ une
+série à termes dans E absolument convergente,
+\\sum  bn~ une
+série à termes dans F absolument convergente, et si l'on pose
+cn = \\sum ~
+p+q=nu(ap,bq), alors la série
+\\sum  cn~ est
+absolument convergente et on a
+
+\sum n=0^+\infty~c n~ =
+u\left (\\sum
+n=0^+\infty~a n,\\sum
+n=0^+\infty~b n\right )
+
+Démonstration La démonstration est tout à fait similaire~: utiliser
+l'existence d'un réel positif K tel que
+\\textbar{}u(x,y)\\textbar{} \leq
+K\\textbar{}x\\textbar{}
+\\textbar{}y\\textbar{} pour montrer que
+\left \textbar{}Sn(a)Sn(b) -
+Sn(c)\right \textbar{}\leq K\left
+(Sn(a')Sn(b') -
+Sn(c')\right ) en posant an'
+=\\textbar{} an\\textbar{},
+bn' =\\textbar{}
+bn\\textbar{} et cn'
+= \\sum ~
+p+q=n\\textbar{}ap\\textbar{}\\textbar{}bq\\textbar{}
+
+{[}
+{[}
+{[}
+{[}

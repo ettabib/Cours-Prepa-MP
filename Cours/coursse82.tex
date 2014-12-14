@@ -1,0 +1,1055 @@
+\section{Dérivées partielles}
+%
+\paragraph{Notion de dérivée partielle}
+ 
+%Définition~15.1.1 Soit E et F deux espaces vectoriels normés. Soit U un
+%ouvert de E, f : U \longrightarrow F, a \in U. Soit v \in E
+%∖\0\. On dit que f admet au point a
+%une dérivée partielle suivant le vecteur v si l'application
+%t\mathrel↦f(a + tv) (définie sur un voisinage de 0)
+%est dérivable au point 0.
+%
+%Remarque~15.1.1 L'existence de la dérivée partielle en a suivant le
+%vecteur v est donc équivalente à l'existence de
+%:gmathoplim}_t\longrightarrow0{ f(a+tv)−f(a)
+%\over t} = \partial_vf(a). Remarquons que si v' = λv,
+%λ\mathrel≠0, alors { f(a+tv')−f(a)
+%\over t} = λ f(a+uv)−f(a) \over u
+%avec u = λt ce qui montre que f admet en a une dérivée partielle selon v
+%si et seulement si f admet une dérivée partielle suivant λv et qu'alors
+%\partial_λv}f(a) = λ{\partial_vf(a).
+%
+%Exemple~15.1.1 Soit f : \mathbb{R}}\^{}{2 \longrightarrow \mathbb{R} définie par f(x,y) ={
+%x}\^{}{2} \over y si
+%y\mathrel≠0 et f(x,0) = 0. Soit v =
+%(a,b)\mathrel≠(0,0). On a { f((0,0)+tv)−f(0,0)
+%\over t} = \left \{
+%\cases{ 0 \&si b = 0 \cr {
+%a}\^{}{2} \over b \&si
+%b\mathrel≠}0  \right .. On en déduit
+%que f admet une dérivée partielle suivant tout vecteur v et que
+%\partial_vf(0,0) = \left \{
+%\cases{ 0 \&si b = 0 \cr {
+%a}\^{}{2} \over b \&si
+%b\mathrel≠}0  \right .. Remarquons
+%que l'application v\mathrel↦}{\partial_vf(0,0) n'est
+%pas linéaire. Remarquons également que f n'est pas continue en (0,0)
+%(puisque :gmathoplim}_t\longrightarrow0}f(t,{t}\^{}{2) =
+%1\mathrel≠f(0,0)). L'existence de dérivée partielle
+%suivant tout vecteur n'implique donc pas la continuité.
+%
+%Proposition~15.1.1 On a les propriétés évidentes de la dérivation de
+%t\mathrel↦f(a + tv) à savoir (i) si f et g admettent
+%en a une dérivée partielle suivant le vecteur v, il en est de même de αf
+%+ βg et \partial_v}(αf + βg)(a) = α{\partial_vf(a) +
+%β\partial_vg(a). (ii) si f et g (à valeurs scalaires) admettent en a
+%une dérivée partielle suivant le vecteur v, il en est de même de fg et
+%\partial_v}(fg)(a) = g(a){\partial_v}f(a) + f(a){\partial_vg(a).
+%
+%Remarque~15.1.2 Par contre, on n'a pas de théorème général de
+%composition des dérivées partielles. En reprenant l'exemple ci dessus, f
+%: \mathbb{R}}\^{}{2} \longrightarrow \mathbb{R} définie par f(x,y) ={ {x}\^{}{2
+%\over y} si y\mathrel≠0 et f(x,0) =
+%0, l'application f admet en (0,0) une dérivée partielle suivant tout
+%vecteur, l'application t\mathrel↦}(t,{t}\^{}{2)
+%est dérivable en 0 et pourtant
+%t\mathrel↦}f(t,{t}\^{}{2) n'est pas dérivable en
+%0 (elle n'y est même pas continue).
+%
+%Définition~15.1.2 Soit E un espace vectoriel normé de dimension finie, ℰ
+%=
+%(e_1},+{\ldots{}}},{e_n)
+%une base de E, F un espace vectoriel normé. Soit U un ouvert de E, f : U
+%\longrightarrow F, a \in U. On dit que f admet au point a une dérivée partielle d'indice
+%i (suivant la base ℰ) si elle admet une dérivée partielle suivant le
+%vecteur e_i. On note alors { \partialf \over
+%\partialx_i}} (a) = {\partial_{e_i}f(a).
+%
+%Exemple~15.1.2 Si E = \mathbb{R}}\^{}{n et si ℰ est la base canonique de
+%\mathbb{R}}\^{}{n, l'existence d'une dérivée partielle d'indice i au point
+%a =
+%(a_1},+{\ldots{}}},{a_n)
+%équivaut à la dérivabilité au point a_i de l'application
+%partielle
+%x_i}\mathrel{↦}f({a_1},+{\ldots{}}},{a_i−1},{x_i},{a_i+1},\mathop{\mathop{\ldots{}}},{a_n).
+%On retrouve bien la notion habituelle de dérivée partielle~: dérivée
+%suivant la variable x_i, toutes les autres étant considérées
+%comme constantes.
+%
+%\paragraph{15.1.2 Composition des dérivées partielles}
+%
+%On a vu précédemment qu'on n'avait pas de théorème de composition des
+%dérivées partielles en toute généralité. On va introduire une notion
+%d'application de classe C}\^{}{1.
+%
+%Définition~15.1.3 Soit U un ouvert de \mathbb{R}}\^{}{n, f : U \longrightarrow F. On dit
+%que f est de classe C}\^{}{1 au point a si, sur un certain
+%voisinage V de a, f admet des dérivées partielles de tout indice i \in
+%{[}1,n{]} et si ces dérivées partielles x\mathrel↦{
+%\partialf \over \partialx_i} (x) sont continues au point a.
+%
+%Lemme~15.1.2 Soit F un espace vectoriel de dimension finie, V un ouvert
+%de \mathbb{R}}\^{}{n, f : V \longrightarrow F. Soit I un intervalle de \mathbb{R}, t \in I et φ =
+%(φ_1},+{\ldots{}}},{φ_n)
+%: I \longrightarrow V . On suppose que φ est dérivable au point t et que f est de
+%classe C}\^{}{1 au point φ(t). Alors f ∘ φ est dérivable au point
+%t et (f ∘ φ)'(t) =:gmathop{\sum
+%}} }_i=1}\^{}{n}{ \partialf \over \partial{x_i}
+%(φ(t))φ_i'(t).
+%
+%Démonstration Sans nuire à la généralité, en prenant une base (sur \mathbb{R}) de
+%F et en travaillant composante par composante, on peut supposer que f
+%est à valeurs réelles. On écrit
+%
+%\begineqnarray* f(φ(t + h)) − f(φ(t))\&\& \%\&
+%\\ \& =\& f(φ_1(t +
+%h),+\ldots{}}},{φ_n(t
+%+ h)) −
+%f(φ_1}(t),+{\ldots{}}},{φ_n(t))
+%\%\& \\ \& =\& :gmathop{\sum
+%}}_i=1}\^{}{n}(f(\mathop{\ldots{}},{φ_{
+%i−1}(t),φ_i}(t + h),{φ_i+1(t +
+%h),\mathop\ldots{})\%\&
+%\\ \& \& \qquad −
+%f(+\ldots{}}},{φ_i−1}(t),{φ_i}(t),{φ_i+1(t
+%+ h),+\ldots{}})) \%\&
+%\\ \endeqnarray*
+%
+%Mais φ est continue au point t et donc pour h assez petit, tous les
+%(φ_1}(t),+{\ldots{}}},{φ_i−1}(t),{φ_i(t
+%+ h),φ_i+1(t +
+%h),+\ldots{}}},{φ_n(t
+%+ h)) se trouvent à l'intérieur d'une boule de centre a sur laquelle les
+%dérivées partielles de f de tout indice existent. En particulier,
+%l'application
+%x_i}\mathrel{↦}f({φ_1}(t),+{\ldots{}}},{φ_i−1}(t),{x_i},{φ_i+1(t
+%+
+%h),+\ldots{}}},{φ_n(t
+%+ h)) est dérivable sur le segment {[}φ_i}(t),{φ_i(t +
+%h){]} et on peut appliquer le théorème des accroissements finis. On
+%obtient l'existence d'un ξ_i \in
+%{[}φ_i}(t),{φ_i(t + h){]} tel que
+%
+%\begineqnarray*
+%f(φ_1}(t),+{\ldots{}}},{φ_i−1}(t),{φ_i(t
+%+ h),φ_i+1(t +
+%h),+\ldots{}}},{φ_n(t
+%+ h))\&\& \%\& \\ \& \&
+%−f(φ_1}(t),+{\ldots{}}},{φ_i−1}(t),{φ_i}(t),{φ_i+1(t
+%+
+%h),+\ldots{}}},{φ_n(t
+%+ h))\%\& \\ \& =\& (φ_i(t + h) −
+%φ_i(t)) \%\& \\ \& \&
+%\quad  \partialf \over \partial{x_i}
+%(φ_1}(t),+{\ldots{}}},{φ_i−1}(t),{ξ_i},{φ_i+1(t
+%+
+%h),+\ldots{}}},{φ_n(t
+%+ h)) \%\& \\
+%\endeqnarray*
+%
+%Comme φ est continue au point t et ξ_i \in
+%{[}φ_i}(t),{φ_i(t + h){]}, on a
+%
+%\begineqnarray*
+%:gmathoplim}_h\longrightarrow0}({φ_1}(t),\mathop{\mathop{\ldots{}}},{φ_i−1}(t),{ξ_i},{φ_i+1(t
+%+
+%h),+\ldots{}}},{φ_n(t
+%+ h))\&\&\%\& \\ \& =\&
+%(φ_1}(t),+{\ldots{}}},{φ_i−1}(t),{φ_i}(t),{φ_i+1}(t),\mathop{\mathop{\ldots{}}},{φ_n(t))\%\&
+%\\ \& =\& φ(t) \%\&
+%\\ \endeqnarray*
+%
+%et comme  \partialf \over \partial{x_i} est continue au
+%point φ(t), on a
+%
+%\begineqnarray*{ \partialf \over
+%\partialx_i} (φ(t))\&\& \%\& \\ \& =\&
+%:gmathoplim}_h\longrightarrow0{ \partialf \over
+%\partialx_i}
+%(φ_1}(t),+{\ldots{}}},{φ_i−1}(t),{ξ_i},{φ_i+1(t
+%+
+%h),+\ldots{}}},{φ_n(t
+%+ h))\%\& \\
+%\endeqnarray*
+%
+%Il suffit alors de diviser par h et de faire tendre h vers 0 pour voir
+%que
+%
+%:gmathoplim}_h\longrightarrow0{ f(φ(t + h)) − f(φ(t))
+%\over h} ={\sum
+%}}_i=1}\^{}{n}{ \partialf \over \partial{x_i}
+%(φ(t))φ_i'(t)
+%
+%ce qui achève la démonstration.
+%
+%Appliquant ce lemme à φ : t\mathrel↦g(a + tv) au
+%point t = 0, on obtient le théorème suivant
+%
+\begin{thm}
+Soit F un espace vectoriel de dimension finie, U un
+ouvert de $\mathbb{R}^{n}, f : U \longrightarrow F$. Soit E un espace vectoriel normé, V
+un ouvert de E et $g = (g_1},\ldots{},g_n) : V \longrightarrow U \subset \mathbb{R}^n$. Soit $a \in V$ et $v \in E-{0}$\\
+ Si g admet en a une dérivée
+partielle suivant le vecteur $v$ et si $f$ est de classe $C^1$ au
+point a, alors $f \circ g$ admet en a une dérivée partielle suivant le vecteur
+v et on a
+\partial_v(f \circ g)(a) ={\sum
+%}}_i=1}\^{}{n}{ \partialf \over \partial{x_i}
+%(g(a))\partial_v}{g_i(a)
+\end{thm}
+%Dans le cas particulier où E = \mathbb{R}}\^{}{p et où on prend pour v le
+%j-ième vecteur de la base canonique, on obtient la version suivante (on
+%a changé le nom des variables pour les appeler
+%y_1},+{\ldots{}}},{y_n
+%dans \mathbb{R}}\^{}{n).
+%
+%Corollaire~15.1.4 Soit F un espace vectoriel de dimension finie, U un
+%ouvert de \mathbb{R}}\^{}{n}, f : U \longrightarrow F. Soit V un ouvert de {\mathbb{R}}\^{}{p
+%et g =
+%(g_1},+{\ldots{}}},{g_n)
+%: V \longrightarrow U \subset \mathbb{R}}\^{}{n. Soit a \in V et j \in {[}1,p{]}. Si g admet en a
+%une dérivée partielle d'indice j et si f est de classe C}\^{}{1 au
+%point a, alors f ∘ g admet en a une dérivée partielle d'indice j et on a
+%
+% \partial(f ∘ g) \over \partial{x_j} (a) ={
+%\mathop\sum }_i=1}\^{}{n{ \partialf
+%\over \partialy_i}} (g(a)){ \partial{g_i
+%\over \partialx_j} (a)
+%
+%Remarque~15.1.3 On en déduit immédiatement que la composée de deux
+%applications de classe C}\^{}{1 est encore de classe
+%C}\^{}{1.
+%
+%Citons aussi le corollaire suivant du lemme, où l'on prend φ(t) = a + tv
+%
+%Corollaire~15.1.5 Soit F un espace vectoriel de dimension finie, V un
+%ouvert de \mathbb{R}}\^{}{n, f : V \longrightarrow F. Soit a \in V . Si f est de classe
+%C}\^{}{1 au point a, alors elle admet en a des dérivées partielles
+%suivant tout vecteur et on a
+%
+%\partial_vf(a) ={\sum
+%}}_i=1}\^{}{n}{v_ i{ \partialf \over
+%\partialx_i}} (a)\qquad \text{ si v =
+%(v_1},\mathop{\ldots{}},{v_n)
+%
+%Remarque~15.1.4 On voit que dans ce cas
+%v\mathrel↦}{\partial_vf(a) est linéaire. Cette
+%remarque nous conduira à la définition de la différentielle dans la
+%section suivante.
+%
+%\paragraph{15.1.3 Théorème des accroissements finis et applications}
+%
+%Théorème~15.1.6 Soit U un ouvert de \mathbb{R}}\^{}{n, f : U \longrightarrow \mathbb{R} de classe
+%C}\^{}{1}. Soit a \in U et h \in {\mathbb{R}}\^{}{n tel que {[}a,a + h{]} \subset
+%U. Alors, il existe \theta \in{]}0,1{[} tel que
+%
+%f(a + h) − f(a) ={\sum
+%}}_i=1}\^{}{n}{h_ i{ \partialf \over
+%\partialx_i} (a + \thetah)
+%
+%Démonstration Soit ψ : {[}0,1{]} \longrightarrow \mathbb{R} définie par ψ(t) = f(a + th). Le
+%lemme du paragraphe précédent montre que ψ est dérivable sur {[}0,1{]}
+%et que ψ'(t) =:gmathop\sum }
+%}_i=1}\^{}{n}{h_i{ \partialf \over
+%\partialx_i} (a + th). Le théorème des accroissements finis assure
+%qu'il existe \theta \in{]}0,1{[} tel que ψ(1) − ψ(0) = (1 − 0)ψ'(\theta), ce qui
+%n'est autre que la formule ci dessus.
+%
+%Corollaire~15.1.7 Soit U un ouvert de \mathbb{R}}\^{}{n, F un espace
+%vectoriel de dimension finie, f : U \longrightarrow F de classe C}\^{}{1. Alors
+%f est continue.
+%
+%Démonstration En prenant une base (sur \mathbb{R}) de F et en travaillant
+%composante par composante, on peut supposer que f est à valeurs réelles.
+%Puisque les dérivées partielles sont continues au point a, il existe η
+%\textgreater{} 0 tel que B(a,η) \subset U et∀}x \in
+%B(0,η), \textbar{} \partialf \over \partial{x_i} (x) −{ \partialf
+%\over \partialx_i} (a)\textbar{}≤ 1, d'où \textbar{}{
+%\partialf \over \partialx_i} (x)\textbar{}≤ 1 + \textbar{}{
+%\partialf \over \partialx_i} (a)\textbar{}. Pour
+%\\textbar{}h\\textbar{} \textless{} η, on
+%a alors {[}a,a + h{]} \subset B(0,η) et donc \textbar{}f(a + h) −
+%f(a)\textbar{}≤:gmathop\sum
+%}_i=1}\^{}{n}\textbar{}{h_i\textbar{}\,\left
+%(\left \textbar{}{ \partialf \over
+%\partialx_i} (a)\right \textbar{} +
+%1\right ), ce qui montre la continuité de f au point a.
+%
+%Corollaire~15.1.8 Soit U un ouvert connexe de \mathbb{R}}\^{}{n, F un
+%espace vectoriel de dimension finie, f : U \longrightarrow F. Alors f est constante si
+%et seulement si~elle est de classe C}\^{}{1 et toutes ses dérivées
+%partielles sont nulles.
+%
+%Démonstration Si f est constante, il est clair qu'elle est de classe
+%C}\^{}{1 et que toutes ses dérivées partielles sont nulles. Pour
+%la réciproque, en prenant une base (sur \mathbb{R}) de F et en travaillant
+%composante par composante, on peut supposer que f est à valeurs réelles.
+%Soit x_0 \in U et soit X = \{x \in
+%U\mathrel∣}f(x) = f({x_0})\.
+%Puisque f est continue (d'après le corollaire précédent), X est un fermé
+%de U, évidemment non vide. Montrons que X est également ouvert dans U~;
+%soit en effet x_1 dans X et soit η \textgreater{} 0 tel que
+%B(x_1,η) \subset U. Pour
+%\\textbar{}h\\textbar{} \textless{} η, on
+%a {[}x_1},{x_1} + h{]} \subset B({x_1,η) \subset U et le
+%théorème des accroissements finis nous donne f(x_1 + h) =
+%f(x_1}) = f({x_0), les dérivées partielles étant
+%supposées nulles. On a donc B(x_1,η) \subset X, et donc X est ouvert.
+%Comme X est à la fois ouvert et fermé, non vide dans U connexe, on a X =
+%U et donc f est constante.
+%
+%\paragraph{15.1.4 Dérivées partielles successives}
+%
+%On définit la notion de dérivées partielles successives de manière
+%récursive de la manière suivante
+%
+%Définition~15.1.4 Soit U un ouvert de \mathbb{R}}\^{}{n, a \in U et f : U \longrightarrow
+%E. Soit
+%(i_1},+{\ldots{}}},{i_k)
+%\in {[}1,n{]}}\^{}{k}. On dit que { {\partial}\^{}{kf
+%\over
+%\partialx_{i_1}}+{\ldots{}}}\partial{x_{i_k}}
+%(a) existe s'il existe un ouvert V tel que a \in V \subset U et sur lequel {
+%\partial}\^{}{k−1f \over
+%\partialx_{i_2}}+{\ldots{}}}\partial{x_{i_k}}
+%(x) existe et si l'application x\mathrel↦{
+%\partial}\^{}{k−1f \over
+%\partialx_{i_2}}+{\ldots{}}}\partial{x_{i_k}}
+%(x) admet une dérivée partielle d'indice i_1. On pose alors
+%
+% {\partial}\^{}{kf \over
+%\partialx_{i_1}}+{\ldots{}}}\partial{x_{i_k}}
+%(a) = \partial \over \partial{x_{i_1}}
+%\left ( {\partial}\^{}{k−1f \over
+%\partialx_{i_2}}+{\ldots{}}}\partial{x_{i_k}}
+%\right )(a)
+%
+%Définition~15.1.5 Soit U un ouvert de \mathbb{R}}\^{}{n et f : U \longrightarrow E. On
+%dit que f est de classe C}\^{}{k sur U si,
+%\mathop∀}({i_1},+{\ldots{}}},{i_k)
+%\in {[}1,n{]}}\^{}{k}, l'application x\mathrel{↦{
+%\partial}\^{}{kf \over
+%\partialx_{i_1}}+{\ldots{}}}\partial{x_{i_k}}
+%(x) est définie et continue sur U.
+%
+%Remarque~15.1.5 Comme on a vu que toute application de classe
+%C}\^{}{1 est continue, on en déduit immédiatement que toute
+%application de classe C}\^{}{k est aussi de classe
+%C}\^{}{k−1. On dira bien entendu que f est de classe
+%C}\^{}{∞} si elle est de classe {C}\^{}{k pour tout k. Une
+%récurrence évidente sur k montre que la composée de deux applications de
+%classe C}\^{}{k} est encore de classe {C}\^{}{k et que donc la
+%composée de deux applications de classe C}\^{}{∞ est encore de
+%classe C}\^{}{∞.
+%
+%Lemme~15.1.9 Soit U un ouvert de \mathbb{R}}\^{}{2, f : U \longrightarrow \mathbb{R} de classe
+%C}\^{}{2}. Alors, { {\partial}\^{}{2f \over
+%\partialx_1}\partial{x_2}} ={ {\partial}\^{}{2f \over
+%\partialx_2}\partial{x_1} .
+%
+%Démonstration Soit (a_1},{a_2) \in U et soit
+%
+%\begineqnarray*} φ({h_1},{h_2)\& =\&{
+%1 \over h_1}{h_2}} (f({a_1 +
+%h_1},{a_2} + {h_2}) − f({a_1 +
+%h_1},{a_2)\%\& \\ \& \&
+%\quad \quad \quad −
+%f(a_1},{a_2} + {h_2) +
+%f(a_1},{a_2)) \%\& \\
+%\endeqnarray*
+%
+%définie pour h_1} et {h_2 non nuls et assez petits. On a
+%φ(h_1},{h_2) ={ 1 \over
+%h_1}{h_2}} {ψ_1}({a_1} + {h_1) −
+%ψ_1}({a_1}) avec {ψ_1}({x_1) =
+%f(x_1},{a_2} + {h_2) −
+%f(x_1},{a_2}). Or {ψ_1 est dérivable sur
+%{[}a_1},{a_1} + {h_1{]} avec
+%ψ_1}'({x_1}) ={ \partialf \over \partial{x_1}
+%(x_1},{a_2} + {h_2) −{ \partialf \over
+%\partialx_1}} ({x_1},{a_2). On peut donc appliquer le
+%théorème des accroissements finis, et donc il existe ξ_1 \in
+%{[}a_1},{a_1} + {h_1{]} tel que
+%
+%\begineqnarray*} φ({h_1},{h_2)\& =\&{
+%1 \over h_2}} {ψ_1}'({ξ_1) \%\&
+%\\ \& =\&{ 1 \over
+%h_2} \left ({ \partialf \over
+%\partialx_1}} ({ξ_1},{a_2} + {h_2) −{ \partialf
+%\over \partialx_1}
+%(ξ_1},{a_2)\right )\%\&
+%\\ \& =\& {\partial}\^{}{2f
+%\over \partialx_2}\partial{x_1}
+%(ξ_1},{ξ_2) \%\& \\
+%\endeqnarray*
+%
+%avec ξ_2} \in {[}{a_2},{a_2} + {h_2{]} en
+%appliquant le théorème des accroissements finis à
+%x_2}\mathrel{↦{ \partialf \over
+%\partialx_1}} ({ξ_1},{x_2) qui est dérivable sur
+%{[}a_2},{a_2} + {h_2{]}, de dérivée {
+%\partial}\^{}{2}f \over \partial{x_2}\partial{x_1}
+%(ξ_1},{x_2}). Quand {h_1} et {h_2 tendent
+%vers 0, ξ_1} et {ξ_2 tendent respectivement vers
+%a_1} et {a_2} et la continuité de { {\partial}\^{}{2f
+%\over \partialx_2}\partial{x_1} montre que
+%:gmathoplim}_({h_1},{h_2})\longrightarrow(0,0)}φ({h_1},{h_2)
+%= {\partial}\^{}{2}f \over \partial{x_2}\partial{x_1}
+%(a_1},{a_2). Comme les deux variables jouent un rôle
+%symétrique dans la définition de φ, en posant ψ_2}({x_2)
+%= f(a_1} + {h_1},{x_2) −
+%f(a_1},{x_2) et en appliquant deux fois le théorème des
+%accroissements finis, on obtient
+%:gmathoplim}_({h_1},{h_2})\longrightarrow(0,0)}φ({h_1},{h_2)
+%= {\partial}\^{}{2}f \over \partial{x_1}\partial{x_2}
+%(a_1},{a_2}), ce qui démontre que { {\partial}\^{}{2f
+%\over \partialx_1}\partial{x_2}
+%(a_1},{a_2}) ={ {\partial}\^{}{2f \over
+%\partialx_2}\partial{x_1}} ({a_1},{a_2).
+%
+%Théorème~15.1.10 (Schwarz). Soit U un ouvert de \mathbb{R}}\^{}{n et f : U
+%\longrightarrow E (espace vectoriel normé de dimension finie) de classe
+%C}\^{}{2}. Alors∀(i,j) \in
+%{[}1,n{]}}\^{}{2,
+%
+% {\partial}\^{}{2}f \over \partial{x_i}\partial{x_j} ={
+%\partial}\^{}{2}f \over \partial{x_j}\partial{x_i}
+%
+%Démonstration En prenant une base de E, on peut se contenter de montrer
+%le résultat lorsque E = \mathbb{R}. Si i = j, le résultat est évident. Supposons
+%i \textless{} j et soit
+%(a_1},+{\ldots{}}},{a_n)
+%\in \mathbb{R}}\^{}{n. On applique le lemme précédent à l'application de
+%classe C}\^{}{2, définie sur un ouvert contenant
+%(a_i},{a_j),
+%
+%g(x_i},{x_j) =
+%f(a_1},+{\ldots{}}},{a_i−1},{x_i},{a_i+1},\mathop{\mathop{\ldots{}}},{a_j−1},{x_j},{a_j+1},\mathop{\mathop{\ldots{}}},{a_n)
+%
+%qui est de classe C}\^{}{2 (composée d'applications de classe
+%C}\^{}{2}). On a donc { {\partial}\^{}{2g \over
+%\partialx_i}\partial{x_j}} ({a_i},{a_j) ={
+%\partial}\^{}{2}g \over \partial{x_j}\partial{x_i}
+%(a_i},{a_j), soit encore
+%
+% {\partial}\^{}{2}f \over \partial{x_i}\partial{x_j}
+%(a_1},+{\ldots{}}},{a_n)
+%= {\partial}\^{}{2}f \over \partial{x_j}\partial{x_i}
+%(a_1},+{\ldots{}}},{a_n)
+%
+%Corollaire~15.1.11 Soit U un ouvert de \mathbb{R}}\^{}{n et f : U \longrightarrow E de
+%classe C}\^{}{k. Soit
+%(i_1},+{\ldots{}}},{i_k)
+%\in {[}1,n{]}}\^{}{k. Pour toute permutation σ de {[}1,k{]} on a
+%
+% {\partial}\^{}{kf \over
+%\partialx_{i_σ(1)}}+{\ldots{}}}\partial{x_{i_σ(k)}}
+%= {\partial}\^{}{kf \over
+%\partialx_{i_1}}+{\ldots{}}}\partial{x_{i_k}}
+%
+%Démonstration D'après le théorème de Schwarz, le résultat est vrai
+%lorsque σ = τ_j,j+1 est la transposition qui échange j et j +
+%1. Mais toute permutation de {[}1,k{]} est un produit de telles
+%transpositions (facile) ce qui démontre le corollaire.
+%
+%Notation définitive Soit
+%(i_1},+{\ldots{}}},{i_k)
+%\in {[}1,n{]}}\^{}{k}. Pour j \in {[}1,n{]}, soit {k_j le
+%nombre de i_q qui sont égaux à j. On a donc à une permutation
+%près, la famille
+%(i_1},+{\ldots{}}},{i_k)
+%qui est égale à
+%(\overbrace1,+{\ldots{}}},1}{k_1
+%fois,+\ldots{}}},\overbrace{j,\mathop{\mathop{\ldots{}}},j
+%k_j
+%fois,+\ldots{}}},\overbrace{n,\mathop{\mathop{\ldots{}}},n}{k_n
+%fois), chaque j étant compté k_j fois. En notant
+%\partialx_j}\^{}{{k_j} à la place de
+%\overbrace\partial{x_j}+{\ldots{}}}\partial{x_j}
+%k_j fois, on obtient
+%
+% {\partial}\^{}{kf \over
+%\partialx_{i_1}}+{\ldots{}}}\partial{x_{i_k}}
+%= {\partial}\^{}{kf \over
+%\partialx_1}\^{}{{k_1}}+{\ldots{}}}\partial{x_n}\^{}{{k_n}}
+%
+%\paragraph{15.1.5 Formules de Taylor}
+%
+%Lemme~15.1.12 Soit U un ouvert de \mathbb{R}}\^{}{n et f : U \longrightarrow E de classe
+%C}\^{}{k}. Soit a \in U et h \in {\mathbb{R}}\^{}{n tel que {[}a,a + h{]} \subset
+%U. Posons φ(t) = f(a + th), définie et de classe C}\^{}{k sur
+%{[}0,1{]}. Alors, pour tout t \in {[}0,1{]},
+%
+%\begineqnarray*}{ φ}\^{}{(k)(t) ={
+%\mathop{\sum
+%}_k_1}+\mathop{\ldots{}}+{k_n}=k{
+%k! \over
+%k_1}!\mathop{\ldots{}}{k_n}!
+%h_1}\^{}{{k_1
+%}\mathop\ldots{}}{h_n}\^{}{{k_n} {
+%\partial}\^{}{kf \over
+%\partialx_1}\^{}{{k_1}}\mathop{\ldots{}}\partial{x_n}\^{}{{k_n}}
+%(a + th)\& \& \%\& \\
+%\endeqnarray*
+%
+%Démonstration Par récurrence sur k. Pour k = 1, ce n'est qu'une autre
+%formulation du résultat
+%
+%\begineqnarray* φ'(t)\& =\&
+%:gmathop\sum }_i=1}\^{}{n}{h_ i{ \partialf
+%\over \partialx_i} (a + th) \%\&
+%\\ \& =\& :gmathop{\sum
+%}_k_1}+\mathop{\ldots{}}+{k_n}=1}{h_1}\^{}{{k_1
+%}\mathop\ldots{}}{h_n}\^{}{{k_n} {
+%\partialf \over
+%\partialx_1}\^{}{{k_1}}\mathop{\ldots{}}\partial{x_n}\^{}{{k_n}}
+%(a + th)\%\& \\
+%\endeqnarray*
+%
+%en posant k_i} = 1 et {k_j = 0 pour
+%i\mathrel≠j.
+%
+%Supposons le résultat démontré pour k − 1. On a donc
+%
+%\begineqnarray*}{ φ}\^{}{(k−1)(t) =\&\& \%\&
+%\\ \& \& :gmathop{\sum
+%}_k_1}+\mathop{\ldots{}}+{k_n}=k−1{
+%(k − 1)! \over
+%k_1}!\mathop{\ldots{}}{k_n}!
+%h_1}\^{}{{k_1
+%}\mathop\ldots{}}{h_n}\^{}{{k_n} {
+%\partial}\^{}{k−1f \over
+%\partialx_1}\^{}{{k_1}}\mathop{\ldots{}}\partial{x_n}\^{}{{k_n}}
+%(a + th)\%\& \\
+%\endeqnarray*
+%
+%On en déduit que
+%
+%\begineqnarray*}{ φ}\^{}{(k)(t) =\&\& \%\&
+%\\ \& \& :gmathop{\sum
+%}_k_1}+\mathop{\ldots{}}+{k_n}=k−1{
+%(k − 1)! \over
+%k_1}!\mathop{\ldots{}}{k_n}!
+%h_1}\^{}{{k_1
+%}\mathop\ldots{}}{h_n}\^{}{{k_n} {
+%d \over dt} \left ( {\partial}\^{}{k−1f
+%\over
+%\partialx_1}\^{}{{k_1}}\mathop{\ldots{}}\partial{x_n}\^{}{{k_n}}
+%(a + th)\right )\%\& \\
+%\endeqnarray*
+%
+%soit encore
+%
+%\begineqnarray*}{ φ}\^{}{(k)(t)\& =\&
+%:gmathop{\sum
+%}_k_1}+\mathop{\ldots{}}+{k_n}=k−1{
+%(k − 1)! \over
+%k_1}!\mathop{\ldots{}}{k_n}!
+%h_1}\^{}{{k_1
+%}\mathop\ldots{}}{h_n}\^{}{{k_n} 
+%\%\& \\ \& \& \quad
+%\quad {\sum
+%}}_i=1}\^{}{n}{h_ i}{ {\partial}\^{}{kf
+%\over
+%\partialx_1}\^{}{{k_1}}\mathop{\ldots{}}\partial{x_i}\^{}{{k_i}+1}\mathop{\ldots{}}\partial{x_n}\^{}{{k_n}}
+%(a + th)\%\& \\
+%\endeqnarray*
+%
+%En intervertissant les deux signes de somme on obtient
+%
+%\begineqnarray*}{ φ}\^{}{(k)(t)\& =\&
+%:gmathop\sum }_i=1}\^{}{n{
+%\mathop{\sum
+%}_k_1}+\mathop{\ldots{}}+{k_n}=k−1{
+%(k − 1)!(k_i + 1) \over
+%k_1}!\mathop{\ldots{}}({k_i +
+%1)!\mathop\ldots{}}{k_n}! \%\&
+%\\ \& \& \quad
+%\quad h_1}\^{}{{k_1
+%}+\ldots{}}}{h_i}\^{}{{k_i}+1}\mathop{\mathop{\ldots{}}}{h_{
+%n}\^{}{k_n} }{ {\partial}\^{}{kf \over
+%\partialx_1}\^{}{{k_1}}+{\ldots{}}}\partial{x_i}\^{}{{k_i}+1}\mathop{\mathop{\ldots{}}}\partial{x_n}\^{}{{k_n}}
+%(a + th)\%\& \\
+%\endeqnarray*
+%
+%et en faisant un changement d'indice
+%
+%\begineqnarray*}{ φ}\^{}{(k)(t)\& =\&
+%:gmathop\sum }_i=1}\^{}{n{
+%\mathop\sum _{
+%k_1}+\mathop{\ldots{}}+{k_n=k
+%\atop k_i}≥1} }{ (k − 1)!{k_i
+%\over
+%k_1}!\mathop{\ldots{}}{k_n}! \%\&
+%\\ \& \& \quad
+%\quad h_1}\^{}{{k_1
+%}+\ldots{}}}{h_i}\^{}{{k_i
+%}+\ldots{}}}{h_n}\^{}{{k_n
+%} {\partial}\^{}{kf \over
+%\partialx_1}\^{}{{k_1}}+{\ldots{}}}\partial{x_i}\^{}{{k_i}}\mathop{\mathop{\ldots{}}}\partial{x_n}\^{}{{k_n}}
+%(a + th)\%\& \\
+%\endeqnarray*
+%
+%Réintroduisons les termes pour k_i = 0 qui sont nuls puisqu'ils
+%contiennent le facteur (k − 1)!k_i, on obtient
+%
+%\begineqnarray*}{ φ}\^{}{(k)(t)\& =\&
+%:gmathop\sum }_i=1}\^{}{n{
+%\mathop{\sum
+%}_k_1}+\mathop{\ldots{}}+{k_n}=k{
+%(k − 1)!k_i \over
+%k_1}!\mathop{\ldots{}}{k_n}!
+%h_1}\^{}{{k_1
+%}\mathop\ldots{}}{h_i}\^{}{{k_i
+%}\mathop\ldots{}}{h_n}\^{}{{k_n
+%}\%\& \\ \& \& \quad
+%\quad \quad  {\partial}\^{}{kf
+%\over
+%\partialx_1}\^{}{{k_1}}+{\ldots{}}}\partial{x_i}\^{}{{k_i}}\mathop{\mathop{\ldots{}}}\partial{x_n}\^{}{{k_n}}
+%(a + th) \%\& \\
+%\endeqnarray*
+%
+%Ceci nous permet de réintervertir les deux sommations, soit encore,
+%après mise en facteur
+%
+%\begineqnarray*}{ φ}\^{}{(k)(t)\& =\&
+%:gmathop{\sum
+%}_k_1}+\mathop{\ldots{}}+{k_n}=k{
+%(k − 1)!:gmathop\sum }_i=1}\^{}{n}{k_i
+%\over
+%k_1}!\mathop{\ldots{}}{k_n}!
+%h_1}\^{}{{k_1
+%}\mathop\ldots{}}{h_i}\^{}{{k_i
+%}\mathop\ldots{}}{h_n}\^{}{{k_n
+%}\%\& \\ \& \& \quad
+%\quad \quad  {\partial}\^{}{kf
+%\over
+%\partialx_1}\^{}{{k_1}}+{\ldots{}}}\partial{x_i}\^{}{{k_i}}\mathop{\mathop{\ldots{}}}\partial{x_n}\^{}{{k_n}}
+%(a + th) \%\& \\
+%\endeqnarray*
+%
+%soit encore
+%
+%\begineqnarray*}{ φ}\^{}{(k)(t)\& =\&
+%:gmathop{\sum
+%}_k_1}+\mathop{\ldots{}}+{k_n}=k{
+%k! \over
+%k_1}!\mathop{\ldots{}}{k_n}!
+%h_1}\^{}{{k_1
+%}\mathop\ldots{}}{h_n}\^{}{{k_n} {
+%\partial}\^{}{kf \over
+%\partialx_1}\^{}{{k_1}}\mathop{\ldots{}}\partial{x_n}\^{}{{k_n}}
+%(a + th)\%\& \\
+%\endeqnarray*
+%
+%ce qui achève la récurrence.
+%
+%Remarque~15.1.6 Cette formule est tout à fait analogue à la formule du
+%binôme généralisée
+%
+%({X_1 +
+%+\ldots{}} +
+%X_n})}\^{}{k ={\sum
+%}_k_1}+\mathop{\ldots{}}+{k_n}=k{
+%k! \over
+%k_1}!\mathop{\ldots{}}{k_n}!
+%X_1}\^{}{{k_1
+%}\mathop\ldots{}}{X_n}\^{}{{k_n} 
+%
+%Cette remarque nous conduira à une notation plus compacte. Introduisons
+%un produit symbolique sur les expressions du type
+%h_1}\^{}{{k_1}}+{\ldots{}}}{h_n}\^{}{{k_n}{
+%\partial}\^{}{k \over
+%\partialx_1}\^{}{{k_1}}+{\ldots{}}}\partial{x_n}\^{}{{k_n}}
+%en posant
+%
+%\begineqnarray* \left
+%(h_1}\^{}{{k_1
+%}+\ldots{}}}{h_n}\^{}{{k_n
+%} {\partial}\^{}{k \over
+%\partialx_1}\^{}{{k_1}}+{\ldots{}}}\partial{x_n}\^{}{{k_n}}
+%\right ) ∗\left
+%(h_1}\^{}{{l_1
+%}+\ldots{}}}{h_n}\^{}{{l_n
+%} {\partial}\^{}{l \over
+%\partialx_1}\^{}{{l_1}}+{\ldots{}}}\partial{x_n}\^{}{{l_n}}
+%\right ) =\&\&\%\& \\ \& \&
+%h_1}\^{}{{k_1}+{l_1
+%}+\ldots{}}}{h_n}\^{}{{k_n}+{l_n
+%} {\partial}\^{}{k+l \over
+%\partialx_1}\^{}{{k_1}+{l_1}}+{\ldots{}}}\partial{x_n}\^{}{{k_n}+{l_n}}
+%\quad \quad \quad \%\&
+%\\ \endeqnarray*
+%
+%Ce produit est commutatif, et
+%
+%\begineqnarray* :gmathop{\sum
+%}_k_1}+\mathop{\ldots{}}+{k_n}=k{
+%k! \over
+%k_1}!\mathop{\ldots{}}{k_n}!
+%h_1}\^{}{{k_1
+%}\mathop\ldots{}}{h_n}\^{}{{k_n} {
+%\partial}\^{}{k \over
+%\partialx_1}\^{}{{k_1}}\mathop{\ldots{}}\partial{x_n}\^{}{{k_n}}
+%\&\&\%\& \\ \& \& ={ \left
+%(h_1}{ \partial \over \partial{x_1} +
+%+\ldots{}} +
+%h_n}{ \partial \over \partial{x_n}
+%\right )}\^{}k∗\quad
+%\quad \quad \%\&
+%\\ \endeqnarray*
+%
+%où la notation }\^{}{k∗ désigne la puissance k-ième pour ce
+%produit commutatif. La formule s'écrit alors de manière plus agréable
+%sous la forme
+%
+%φ}\^{}{(k)}(t) ={ \left ({h_ 1{ \partial
+%\over \partialx_1} +
+%+\ldots{}} +
+%h_n}{ \partial \over \partial{x_n}
+%\right )}\^{}k∗f(a + th)
+%
+%Ces puissances se développent de la manière évidente en respectant la
+%règle de calcul pour le produit ∗.
+%
+%Exemple~15.1.3 φ'(t) = \left (h_1{ \partial
+%\over \partialx_1} +
+%+\ldots{}} +
+%h_n}{ \partial \over \partial{x_n}
+%\right )f(a + th)
+%
+%\begineqnarray* φ''(t)\& =\&{ \left
+%(h_1}{ \partial \over \partial{x_1} +
+%+\ldots{}} +
+%h_n}{ \partial \over \partial{x_n}
+%\right )}\^{}2∗f(a + th) \%\&
+%\\ \& =\& :gmathop{\sum
+%}}_i=1}\^{}{n}{h_ i}\^{}{2}{ {\partial}\^{}{2f
+%\over \partialx_i}\^{}{2} (a + th) +
+%2:gmathop{\sum
+%}}_i\textless{}j}{h_i}{h_j}{ {\partial}\^{}{2f
+%\over \partialx_i}\partial{x_j} (a + th)\%\&
+%\\ \endeqnarray*
+%
+%et ainsi de suite.
+%
+%Théorème~15.1.13 (formule de Taylor avec reste intégral). Soit U un
+%ouvert de \mathbb{R}}\^{}{n} et f : U \longrightarrow E de classe {C}\^{}{k+1. Soit a
+%\in U et h \in \mathbb{R}}\^{}{n tel que {[}a,a + h{]} \subset U. Alors
+%
+%\begineqnarray* f(a + h)\& =\& f(a) +{
+%\mathop\sum }_p=1}\^{}{k{ 1
+%\over p!} :gleft (h_1{ \partial
+%\over \partialx_1} +
+%\mathop\ldots{}} + {h_n{ \partial
+%\over \partialx_n} \right
+%)}\^{}p∗f(a)\%\& \\
+%+:gmathop∫ } _0}\^{}{1{ {(1 −
+%t)}\^{}k} \over k! { \left
+%(h_1}{ \partial \over \partial{x_1} +
+%+\ldots{}} +
+%h_n}{ \partial \over \partial{x_n}
+%\right )}\^{}(k+1)∗f(a + th) dt\&\&\%\&
+%\\ \endeqnarray*
+%
+%Démonstration C'est simplement la formule de Taylor avec reste intégral
+%pour la fonction φ~:
+%
+%φ(1) = φ(0) +\sum }_p=1}\^{}{k{ 1
+%\over p!} φ}\^{}{(p)(0) +{
+%+∫ } 
+%}_0}\^{}{1}{ {(1 − t)}\^{}{k} \over k!
+%φ}\^{}{(k+1)(t) dt
+%
+%Remarque~15.1.7 On utilisera le plus souvent cette formule pour k = 1~;
+%dans cas d'une fonction définie sur un ouvert de \mathbb{R}}\^{}{2 on
+%obtiendra par exemple
+%
+%\begineqnarray*} f(a + h)\& =\& f(a) + {h_1{
+%\partialf \over \partialx_1}} (a) + {h_2{ \partialf
+%\over \partialx_2} (a) \%\&
+%\\ \& \& \quad +
+%h_1}\^{}{2}:gmathop{∫ } _0}\^{}{1(1
+%− t) {\partial}\^{}{2}f \over \partial{x_1}\^{}{2} (a
+%+ th) dt \%\& \\ \& \&
+%\quad + h_2}\^{}{2:gmathop{∫
+%} }_0}\^{}{1}(1 − t){ {\partial}\^{}{2f \over
+%\partialx_2}\^{}{2} (a + th) dt \%\&
+%\\ \& \& \quad +
+%2h_1}{h_2}:gmathop{∫ 
+%}_0}\^{}{1}(1 − t){ {\partial}\^{}{2f \over
+%\partialx_1}\partial{x_2} (a + th) dt\%\&
+%\\ \endeqnarray*
+%
+
+\begin{thm}[formule de Taylor-Lagrange]
+	Soit U un ouvert de
+$\mathbb{R}^n et $f : U \longrightarrow \mathbb{R}$ de classe $C^{k+1}$. Soit $a \in U$ et $h \in \mathbb{R}^n$ tel que $[a,a + h] \in  U$. Alors, il existe $\theta \in ]0,1[$ tel que
+
+\begin{eqnarray*} 
+f(a + h) & = & f(a) +\sum_{p=1}{k} { 1
+\over p!} \left(h_{1} { \partial
+\over \partial{x_1}} +\ldots{} + h_{n}{ \partial
+\over \partial x_n} \right)}^{p*}f(a) & \\
+& & +{ 1 \over (k + 1)!} \left(h_1 { \partial
+\over \partial x_1} +
++\ldots{} + h_n { \partial \over \partial{x_n}} \right)^{(k+1)*} f(a + \thetah)\
+
+\end{eqnarray*}
+\end{thm}
+%Démonstration C'est simplement la formule de Taylor Lagrange pour la
+%fonction φ~:
+%
+%φ(1) = φ(0) +\sum }_p=1}\^{}{k{ 1
+%\over p!} φ}\^{}{(p)(0) +{ 1 \over
+%(k + 1)!} φ}\^{}{(k+1)(\theta)
+%
+%Théorème~15.1.15 (formule de Taylor-Young). Soit U un ouvert de
+%\mathbb{R}}\^{}{n et f : U \longrightarrow E (espace vectoriel normé de dimension finie)
+%de classe C}\^{}{k. Soit a \in U. Alors, quand h tend vers 0 on a
+%
+%f(a + h) = f(a) +\sum }_p=1}\^{}{k{ 1
+%\over p!} :gleft (h_1{ \partial
+%\over \partialx_1} +
+%\mathop\ldots{}} + {h_n{ \partial
+%\over \partialx_n} \right
+%)}\^{}p∗f(a) +
+%o(\\textbar{}h\\textbar{}}\^{}{k)
+%
+%Démonstration Quitte à prendre une base de E et à travailler composante
+%par composante, on peut supposer que E = \mathbb{R}~; toutes les normes sur
+%\mathbb{R}}\^{}{n étant équivalentes, on peut supposer que
+%\\textbar{}h\\textbar{} =
+%\textbar{}h_1\textbar{} +
+%+\ldots{}} +
+%\textbar{}h_n\textbar{}. Soit ρ \textgreater{} 0 tel que B(a,ρ)
+%\subset U et soit h tel que
+%\\textbar{}h\\textbar{} \textless{} ρ. On
+%a alors {[}a,a + h{]} \subset B(a,ρ) \subset U~; on peut donc appliquer la formule
+%de Taylor-Lagrange à l'ordre k − 1 qui nous donne
+%
+%\begineqnarray* f(a + h)\& −\& f(a)
+%−:gmathop\sum }_p=1}\^{}{k{ 1
+%\over p!} :gleft (h_1{ \partial
+%\over \partialx_1} +
+%\mathop\ldots{}} + {h_n{ \partial
+%\over \partialx_n} \right
+%)}\^{}p∗f(a)\%\& \\ \& =\&{ 1
+%\over k!} :gleft (h_1{ \partial
+%\over \partialx_1} +
+%+\ldots{}} +
+%h_n}{ \partial \over \partial{x_n}
+%\right )}\^{}k∗f(a + \thetah) \%\&
+%\\ \& −\& 1 \over k!
+%:gleft (h_1{ \partial \over
+%\partialx_1} +
+%+\ldots{}} +
+%h_n}{ \partial \over \partial{x_n}
+%\right )}\^{}k∗f(a) \%\&
+%\\ \endeqnarray*
+%
+%Mais les dérivées partielles de f sont continues. Soit ε \textgreater{}
+%0~; il existe η \textgreater{} 0 tel que
+%
+%\begineqnarray*
+%\\textbar{}h\\textbar{} \textless{} η\&
+%⇒\&
+%\mathop∀}({k_1},+{\ldots{}}},{k_n)\text{
+%tel que }k_1 +
+%+\ldots{}} +
+%k_n} = k,∀t \in {[}0,1{]} \%\&
+%\\ \& \& \left \textbar{}{
+%\partial}\^{}{kf \over
+%\partialx_1}\^{}{{k_1}}+{\ldots{}}}\partial{x_n}\^{}{{k_n}}
+%(a + th)\right . −\left .{
+%\partial}\^{}{kf \over
+%\partialx_1}\^{}{{k_1}}+{\ldots{}}}\partial{x_n}\^{}{{k_n}}
+%(a)\right \textbar{} \textless{} ε\%\&
+%\\ \endeqnarray*
+%
+%Pour \\textbar{}h\\textbar{} \textless{}
+%η, on a alors (en développant les deux puissances symboliques)
+%
+%\begineqnarray* \big
+%\textbar{}:gleft (\mathop{\sum
+%}h_i}{ \partial \over \partial{x_i}
+%\right )}\^{}k∗f(a + \thetah) −:gleft
+%(\mathop\sum }{h_i{ \partial \over
+%\partialx_i} \right
+%)}\^{}k∗f(a)\big \textbar{}\&\&\%\&
+%\\ \& \textless{}\&
+%ε:gmathop{\sum
+%}_k_1}+\mathop{\ldots{}}+{k_n}=k{
+%k! \over
+%k_1}!\mathop{\ldots{}}{k_n}!
+%\textbar{}h_1}{\textbar{}}\^{}{{k_1
+%}\mathop\ldots{}}\textbar{}{h_n}{\textbar{}}\^{}{{k_n
+%}\%\& \\ \& =\&
+%ε(\textbar{}{h_1\textbar{} +
+%+\ldots{}} +
+%\textbar{}h_n}\textbar{})}\^{}{k =
+%ε\\textbar{}h\\textbar{}}\^{}{k \%\&
+%\\ \endeqnarray*
+%
+%ce qui démontre le résultat.
+%
+%\paragraph{15.1.6 Application aux extremums de fonctions de plusieurs
+%variables}
+%
+%Soit U un ouvert de \mathbb{R}}\^{}{n et f : U \longrightarrow \mathbb{R}. Nous allons rechercher
+%les extremums de la fonction f à l'aide des résultats qui suivent.
+%
+%Proposition~15.1.16 Soit U un ouvert de \mathbb{R}}\^{}{n et f : U \longrightarrow \mathbb{R} de
+%classe C}\^{}{1. Soit a \in U. Si f admet en a un extremum local, on
+%a∀}i \in {[}1,n{]},{ \partialf \over
+%\partialx_i} (a) = 0.
+%
+%Démonstration Il suffit de remarquer que la fonction
+%t\mathrel↦}f(a + t{e_i) (définie sur un
+%voisinage de 0) admet en 0 un extremum local. On a donc
+%
+% \partialf \over \partial{x_i} (a) ={ d
+%\over dt} :gleft (f(a +
+%te_i})\right )_t=0 = 0
+%
+%Dans le cas des fonctions d'une variable, la condition ci dessus n'est
+%déjà pas suffisante (considérer
+%x\mathrel↦}{x}\^{}{3 au point 0). Il est clair
+%qu'il en est de même a fortiori pour une fonction de plusieurs
+%variables. Pour obtenir des résultats plus précis et en particulier des
+%conditions suffisantes d'extremums, nous allons introduire une forme
+%quadratique sur \mathbb{R}}\^{}{n
+%
+%Définition~15.1.6 Soit U un ouvert de \mathbb{R}}\^{}{n et f : U \longrightarrow \mathbb{R} de
+%classe C}\^{}{2. Soit a \in U. On appelle différentielle seconde au
+%point a la forme quadratique sur \mathbb{R}}\^{}{n,
+%
+%\begineqnarray* h\& =\&
+%(h_1},+{\ldots{}}},{h_n})\mathrel{↦{\left
+%(h_1}{ \partial \over \partial{x_1} +
+%+\ldots{}} +
+%h_n}{ \partial \over \partial{x_n}
+%\right )}\^{}2∗f(a) \%\&
+%\\ \& \& ={\sum
+%}}_i=1}\^{}{n}{h_ i}\^{}{2}{ {\partial}\^{}{2f
+%\over \partialx_i}\^{}{2} (a) +
+%2:gmathop{\sum
+%}}_i\textless{}j}{h_i}{h_j}{ {\partial}\^{}{2f
+%\over \partialx_i}\partial{x_j} (a)\%\&
+%\\ \endeqnarray*
+%
+%Théorème~15.1.17 Soit U un ouvert de \mathbb{R}}\^{}{n et f : U \longrightarrow \mathbb{R} de
+%classe C}\^{}{2}. Soit a \in U tel que∀i \in
+%{[}1,n{]}, \partialf \over \partial{x_i} (a) = 0 et soit Φ
+%la forme quadratique différentielle seconde au point a. Alors (i) si Φ
+%est définie positive, c'est-à-dire si h\mathrel≠0 ⇒
+%Φ(h) \textgreater{} 0, alors f admet en a un minimum local strict (ii)
+%si Φ est définie négative, c'est-à-dire si
+%h\mathrel≠0 ⇒ Φ(h) \textless{} 0, alors f admet en a
+%un maximum local strict (iii) si Φ n'est ni positive ni négative, alors
+%f n'admet pas d'extremum en a (on dit dans ce cas que a est un point
+%selle ou point col de a, par analogie avec une selle de cheval ou un col
+%de montagne).
+%
+%Démonstration (i). Utilisons la formule de Taylor Young à l'ordre 2. On
+%a donc, en tenant compte de  \partialf \over \partial{x_i}
+%(a) = 0, f(a + h) = f(a) + 1 \over 2 Φ(h)
+%+\\textbar{}
+%h\\textbar{}}\^{}{2ε(h), avec
+%:gmathoplim}_h\longrightarrow0ε(h) = 0. Pour démontrer (i),
+%nous allons utiliser le lemme suivant
+%
+%Lemme~15.1.18 Soit Φ une forme quadratique définie positive sur
+%\mathbb{R}}\^{}{n (ou tout espace vectoriel normé de dimension finie).
+%Alors∃}α \textgreater{} 0,
+%\mathop∀}h \in {\mathbb{R}}\^{}{n, Φ(h) ≥
+%α\\textbar{}h\\textbar{}}\^{}{2.
+%
+%Démonstration Soit S la sphère unité de \mathbb{R}}\^{}{n. Comme Φ est
+%continue sur S qui est compact, Φ atteint sur S sa borne inférieure α.
+%Soit donc x_0} \in S tel que Φ({x_0) = α
+%=:gmathop inf} _x\inSΦ(x). Comme
+%x_0}\mathrel{≠0, on a α \textgreater{} 0. De
+%plus, si h\mathrel≠0, on a { h \over
+%\\textbar{}h\\textbar{}} \in S, soit Φ({ h
+%\over
+%\\textbar{}h\\textbar{}} ) ≥ α soit {
+%Φ(h) \over
+%\\textbar{}h\\textbar{}}\^{}{2} ≥
+%α, soit encore Φ(h) ≥
+%α\\textbar{}h\\textbar{}}\^{}{2.
+%
+%Puisque :gmathoplim}_h\longrightarrow0ε(h) = 0, il existe η
+%\textgreater{} 0 tel que
+%\\textbar{}h\\textbar{} \textless{} η
+%⇒\textbar{}ε(h)\textbar{}≤ α \over 4 . Pour
+%\\textbar{}h\\textbar{} \textless{} η, on
+%a donc
+%
+%\begineqnarray* f(a + h) − f(a)\& =\&{ 1
+%\over 2} Φ(h) +\\textbar{}
+%h\\textbar{}}\^{}{2ε(h) \%\&
+%\\ \& ≥\& α \over 2
+%\\textbar{}h\\textbar{}}\^{}{2 −{ α
+%\over 4}
+%\\textbar{}h\\textbar{}}\^{}{2 ={ α
+%\over 4}
+%\\textbar{}h\\textbar{}}\^{}{2
+%\textgreater{} 0\%\& \\
+%\endeqnarray*
+%
+%pour h\mathrel≠0. Donc f admet en a un minimum local
+%strict.
+%
+%Pour démontrer (ii) à partir de (i), il suffit de changer f en − f.
+%
+%(iii). Si Φ n'est ni positive, ni négative, il existe v_1 \in
+%\mathbb{R}}\^{}{n} tel que Φ({v_1) \textless{} 0 et il existe
+%v_2} \in {\mathbb{R}}\^{}{n} tel que Φ({v_2) \textgreater{} 0.
+%On a alors, d'après la même formule de Taylor, en posant h =
+%tv_i}, f(a + t{v_i) = f(a) +{ 1 \over
+%2} Φ(tv_i) +
+%t}\^{}{2}\\textbar{}{v{_{
+%i}\\textbar{}}\^{}2}ε(t{v_ i) = f(a) +{
+%t}\^{}{2} \over 2} Φ({v_i) +
+%t}\^{}{2}{ε_ i(t) avec
+%:gmathoplim}_t\longrightarrow0}{ε_i(t) = 0. On en
+%déduit qu'il existe un η \textgreater{} 0 tel que \textbar{}t\textbar{}
+%\textless{} η ⇒ f(a + tv_1) \textless{}
+%f(a)\text et }f(a + t{v_2) \textgreater{}
+%f(a). Donc f n'a ni minimum, ni maximum en a.
+%
+%Remarque~15.1.8 Dans le cas où Φ est soit positive, soit négative, mais
+%non définie (c'est-à-dire que Φ(h) peut être nul sans que h soit nul),
+%on ne peut pas conclure en général et il faut utiliser une formule de
+%Taylor à un ordre supérieur.
+%
+%Exemple~15.1.4 n = 2~; soit U un ouvert de \mathbb{R}}\^{}{2 et f : U \longrightarrow \mathbb{R},
+%(x,y)\mathrel↦f(x,y). Soit (a,b) \in U. Une condition
+%nécessaire pour que f admette en (a,b) un extremum est que { \partialf
+%\over \partialx} (a,b) = \partialf \over \partialy (a,b) =
+%0. Posons r = {\partial}\^{}{2}f \over \partial{x}\^{}{2}
+%(a,b), s = {\partial}\^{}{2}f \over \partialx\partialy (a,b), t ={
+%\partial}\^{}{2}f \over \partial{y}\^{}{2} (a,b) (notations
+%de Monge). La forme quadratique Φ est
+%(h,k)\mathrel↦}r{h}\^{}{2 + 2shk +
+%tk}\^{}{2. Considérons suivant le cas le rapport { h
+%\over k} ou le rapport  k \over h ,
+%on constate immédiatement à l'aide de l'étude du signe d'un trinome du
+%second degré que si (i) rt − s}\^{}{2 \textgreater{} 0 et r
+%\textgreater{} 0, alors Φ est définie positive et f a en a un minimum
+%local strict (ii) rt − s}\^{}{2 \textgreater{} 0 et r \textless{}
+%0, alors Φ est définie négative et f a en a un maximum local strict
+%(iii) rt − s}\^{}{2 \textless{} 0, alors f a en a un point selle
+%(pas d'extremum local en a) (iv) rt − s}\^{}{2 = 0, alors on ne
+%peut pas conclure.
+%
+%Le lecteur comparera les surfaces z = f(x,y) ainsi que lignes de niveau
+%de ces surfaces dans les trois exemples ci dessous (correspondant
+%respectivement à un minimum local, un point selle et un point de type
+%(iv))
+%
+%\includegraphics{cours8x.png}
+%
+%{[}\href{coursse83.html}{next}{]} {[}\href{coursse82.html}{front}{]}
+%{[}\href{coursch16.html\#coursse82.html}{up}{]}

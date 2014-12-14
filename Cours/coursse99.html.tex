@@ -1,0 +1,1301 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{18.4 Etude métrique des arcs}
+
+\paragraph{18.4.1 Arcs rectifiables}
+
+Soit E un espace vectoriel normé de dimension finie et \Gamma = ({[}a,b{]},F)
+un arc paramétré dont l'intervalle de définition est un segment de \mathbb{R}~. A
+toute subdivision \sigma = (ai)0\leqi\leqn de {[}a,b{]} on
+associe la longueur
+
+L(\Gamma,\sigma)
+
+de la ligne polygonale inscrite dans \Gamma dont les sommets sont les
+F(ai), c'est-à-dire
+
+L(\Gamma,\sigma) = \sum i=1^nd(F(a~
+i-1,F(ai)) = \\sum
+i=1^n\\textbar{}F(a i) -
+F(ai-1)\\textbar{}
+
+Lemme~18.4.1 Soit \sigma et \sigma' deux subdivisions de {[}a,b{]}. Si \sigma' est plus
+fine que \sigma, on a L(\Gamma,\sigma) \leq L(\Gamma,\sigma').
+
+Démonstration Par une récurrence évidente sur le nombre de points
+a\\\\jmathmathmathmathoutés à \sigma pour obtenir \sigma', il suffit de montrer le résultat lorsque \sigma
+est composée de a0 = a \textless{} a1 \textless{}
+\\ldots~ \textless{}
+an = b et \sigma' est composée de a0 = a \textless{}
+\\ldots~ \textless{}
+ak-1 \textless{} c \textless{} ak \textless{}
+\\ldots~ \textless{}
+an = b. Dans ce cas on a
+
+\begin{align*} L(\Gamma,\sigma)& =&
+\\sum
+i=1^n\\textbar{}F(a i) -
+F(ai-1)\\textbar{} =
+\\sum
+i=1^k-1\\textbar{}F(a i) -
+F(ai-1)\\textbar{}\%&
+\\ & &
++\\textbar{}F(ak) -
+F(ak-1)\\textbar{} +
+\\sum
+i=k+1^n\\textbar{}F(a i) -
+F(ai-1)\\textbar{}\ \%&
+\\ \end{align*}
+
+alors que
+
+\begin{align*} L(\Gamma,\sigma')& =&
+\\sum
+i=1^k-1\\textbar{}F(a i) -
+F(ai-1)\\textbar{} +\\textbar{}
+F(c) - F(ak-1)\\textbar{}\%&
+\\ & &
++\\textbar{}F(ak) -
+F(c)\\textbar{} + \\sum
+i=k+1^n\\textbar{}F(a i) -
+F(ai-1)\\textbar{}\%&
+\\ \end{align*}
+
+et le résultat découle immédiatement de l'inégalité triangulaire.
+
+Intuitivement, si l'on peut donner un sens à la longueur d'un arc
+paramétré, suivant le principe la ligne droite est le plus court chemin
+d'un point à un autre, la longueur de cet arc doit être plus grande que
+la longueur de toute ligne polygonale inscrite dans l'arc. Ceci \\\\jmathmathmathmathustifie
+l'introduction de la définition suivante.
+
+Définition~18.4.1 Soit E un espace vectoriel normé de dimension finie et
+\Gamma = ({[}a,b{]},F) un arc paramétré dont l'intervalle de définition est
+un segment de \mathbb{R}~. On dit que \Gamma est rectifiable si l'ensemble des L(\Gamma,\sigma)
+est ma\\\\jmathmathmathmathoré, \sigma décrivant l'ensemble des subdivisions de {[}a,b{]}. On
+appelle alors longueur de l'arc \Gamma le nombre l(\Gamma)
+=\
+sup\L(\Gamma,\sigma)∣\sigma\text
+subdivision de {[}a,b{]}\.
+
+Remarque~18.4.1 En général les arcs continus ne sont pas rectifiables~;
+les fractales donnent de bons exemples d'arcs paramétrés dont tout sous
+arc est de longueur infini. Sans aller \\\\jmathmathmathmathusque là, nous pouvons
+construire facilement un graphe de fonction continue qui n'est pas
+rectifiable. Prenons une fonction continue sur {[}0,1{]}, de classe
+\mathcal{C}^1 sur {]}0,1{]} mais telle que la fonction
+t\mapsto~\sqrt1 +
+f'(t)^2 ne soit pas intégrable sur {]}0,1{]} (par exemple
+f(t) = \sqrttsin~
+1\over  t^2 si
+t\neq~0 et f(0) = 0). Comme nous le verrons par
+la suite, la longueur du graphe de x à 1 est égale à
+\int  x^1~\sqrt1
++ f'(t)^2 dt et elle tend vers + \infty~ quand x tend vers 0,
+bien que f soit continue.
+
+Proposition~18.4.2 Soit \Gamma1 et \Gamma2 deux arcs définis
+sur des segments et C^k-équivalents. Alors \Gamma1 est
+rectifiable si et seulement si~\Gamma2 est rectifiable et dans ce
+cas ils ont même longueur.
+
+Démonstration Soit \Gamma1 = ({[}a,b{]},F) et \Gamma2 =
+({[}c,d{]},G). Soit \theta un difféomorphisme de {[}a,b{]} sur {[}c,d{]} tel
+que F = G \cdot \theta~; \theta est donc strictement monotone. A toute subdivision \sigma
+de {[}a,b{]}, on peut associer une subdivision \theta^∗(\sigma) de
+{[}c,d{]} de la manière suivante~: si \sigma est donnée par a0 = a
+\textless{} a1 \textless{}
+\\ldots~ \textless{}
+an = b, \theta^∗(\sigma) est la subdivision \theta(a0) =
+c \textless{} \theta(a1) \textless{}
+\\ldots~ \textless{}
+\theta(an) = d si \theta est croissant et la subdivision \theta(an)
+= c \textless{} \theta(an-1) \textless{}
+\\ldots~ \textless{}
+\theta(a1) \textless{} \theta(a0) = d si \theta est décroissant~;
+on obtient ainsi une bi\\\\jmathmathmathmathection de l'ensemble des subdivisions de
+{[}a,b{]} sur l'ensemble des subdivisions de {[}c,d{]}. La ligne
+polygonale \\\\jmathmathmathmathoignant les points F(ai) est encore la ligne
+polygonale \\\\jmathmathmathmathoignant les points G(\theta(ai)), et donc
+L(\Gamma1,\sigma) = L(\Gamma2,\theta^∗(\sigma)). Comme
+\theta^∗ est bi\\\\jmathmathmathmathective, \theta^∗(\sigma) parcourt toutes les
+subdivisions de {[}c,d{]}, et donc (en prenant des bornes supérieures
+dans \overline\mathbb{R}~)
+
+\begin{align*}
+sup\L(\Gamma1,\sigma)\mathrel∣~\sigma\text
+subdivision de {[}a,b{]}&& \%&
+\\ & =&
+sup\L(\Gamma2,\theta^∗(\sigma))\mathrel∣~\sigma\text
+subdivision de {[}a,b{]}\\%&
+\\ & =&
+sup\L(\Gamma2,\sigma')\mathrel∣~\sigma'\text
+subdivision de {[}c,d{]}\ \%&
+\\ \end{align*}
+
+ce qui montre la proposition.
+
+Proposition~18.4.3 Soit E un espace vectoriel normé de dimension finie
+et \Gamma = ({[}a,b{]},F) un arc paramétré dont l'intervalle de définition
+est un segment de \mathbb{R}~. Soit c \in{]}a,b{[}. Alors \Gamma est rectifiable si et
+seulement si~les deux sous arcs \Gamma1 =
+({[}a,c{]},F\textbar{}{[}a,c{]}) et \Gamma2 =
+({[}c,b{]},F\textbar{}{[}c,b{]}) sont rectifiables.
+Dans ce cas on a l(\Gamma) = l(\Gamma1) + l(\Gamma2).
+
+Démonstration Supposons tout d'abord que \Gamma est rectifiable et soit
+\sigma1 une subdivision de {[}a,c{]}, a0 = a \textless{}
+a1 \textless{}
+\\ldots~ \textless{}
+ap = c. En a\\\\jmathmathmathmathoutant le point b, on obtient une subdivision \sigma
+de {[}a,b{]} et on a L(\Gamma,\sigma) = L(\Gamma1,\sigma1)
++\\textbar{} f(b) - f(c)\\textbar{}. On en
+déduit que L(\Gamma1,\sigma1) \leq l(\Gamma)
+-\\textbar{} f(b) - f(c)\\textbar{} ce qui
+montre que \Gamma1 est rectifiable. On montre de même que
+\Gamma2 est rectifiable.
+
+Inversement, supposons \Gamma1 et \Gamma2 rectifiables et soit
+\sigma une subdivision de {[}a,b{]}. En a\\\\jmathmathmathmathoutant éventuellement à \sigma le point
+c on obtient une subdivision \sigma' de {[}a,b{]}, plus fine que \sigma et qui est
+la \\\\jmathmathmathmathuxtaposition d'une subdivision \sigma1 de {[}a,c{]} et d'une
+subdivision \sigma2 de {[}c,b{]}. La longueur de la ligne
+polygonale correspondant à \sigma' est donc la somme des longueurs des lignes
+polygonales correspondant à \sigma1 et \sigma2. On a donc
+
+L(\Gamma,\sigma) \leq L(\Gamma,\sigma') = L(\Gamma1,\sigma1) +
+L(\Gamma2,\sigma2) \leq l(\Gamma1) + l(\Gamma2)
+
+Ceci montre que \Gamma est rectifiable et que l(\Gamma) \leq l(\Gamma1) +
+l(\Gamma2).
+
+Inversement, soit \epsilon \textgreater{} 0. Par définition de la borne
+supérieure, il existe \sigma1 subdivision de {[}a,c{]} telle que
+L(\Gamma1,\sigma1) ≥ l(\Gamma1) - \epsilon
+\over 2 . De même, il existe \sigma2 subdivision
+de {[}c,b{]} telle que L(\Gamma2,\sigma2) ≥ l(\Gamma2)
+- \epsilon \over 2 . La \\\\jmathmathmathmathuxtaposition \sigma de \sigma1 et
+\sigma2 est une subdivision de {[}a,b{]} et on a
+
+l(\Gamma) ≥ L(\Gamma,\sigma) = L(\Gamma1,\sigma1) +
+L(\Gamma2,\sigma2) ≥ l(\Gamma1) + l(\Gamma2) - \epsilon
+
+Donc \forall~~\epsilon \textgreater{} 0, l(\Gamma) ≥
+l(\Gamma1) + l(\Gamma2) - \epsilon et donc l(\Gamma) ≥ l(\Gamma1) +
+l(\Gamma2). Comme l'inégalité en sens inverse était dé\\\\jmathmathmathmathà connue, on
+a l'égalité.
+
+On déduit immédiatement de ce résultat que si ({[}a,b{]},F) est
+rectifiable et si {[}c,d{]} est un segment contenu dans {[}a,b{]}, alors
+({[}c,d{]},F\textbar{}{[}c,d{]}) est encore
+rectifiable, autrement dit que tout sous arc d'un arc rectifiable est
+rectifiable. Ceci \\\\jmathmathmathmathustifie la définition suivante
+
+Définition~18.4.2 Soit \Gamma = (I,F) un arc paramétré. On dit que \Gamma est
+rectifiable si pour tout segment {[}a,b{]} \subset~ I, le sous arc
+({[}a,b{]},F\textbar{}{[}a,b{]}) est rectifiable.
+
+Dans ce cas, pour tout couple a,b de I tel que a \textless{} b, on peut
+définir \ell\Gamma(a,b) =
+l({[}a,b{]},F\textbar{}{[}a,b{]}). La proposition
+précédente montre clairement que si a \textless{} b \textless{} c, on a
+\ell\Gamma(a,c) = \ell\Gamma(a,b) + \ell\Gamma(b,c). On prolonge
+la définition de \ell\Gamma en posant \ell\Gamma(a,b) = 0 si a = b
+et \ell\Gamma(a,b) = -\ell\Gamma(b,a) si b \textless{} a (convention
+de Chasles). On obtient alors facilement
+
+Proposition~18.4.4 (relation de Chasles). Soit E un espace vectoriel
+normé, \Gamma = (I,F) un arc paramétré rectifiable de E. Alors
+
+\forall~a,b,c \in I, \ell\Gamma~(a,c) =
+\ell\Gamma(a,b) + \ell\Gamma(b,c)
+
+Remarque~18.4.2 Il découle immédiatement des résultats précédents que si
+deux arcs sont équivalents, ils sont simultanément rectifiables ou non
+rectifiables~; de plus si \Gamma1 est équivalent à \Gamma2 et
+de même sens (de manière à conserver la convention de Chasles), et si \theta
+est le changement de paramétrage croissant qui permet de passer de l'un
+à l'autre, on a
+
+\ell\Gamma1(a,b) = \ell\Gamma2(\theta(a),\theta(b))
+
+Par contre si \theta était décroissant, on aurait a \textless{} b \rigtharrow~ \theta(a)
+\textgreater{} \theta(b) et la convention de Chasles donnerait
+\ell\Gamma1(a,b) = -\ell\Gamma2(\theta(a),\theta(b))
+
+\paragraph{18.4.2 Arcs de classe \mathcal{C}^1}
+
+Théorème~18.4.5 Tout arc de classe \mathcal{C}^1 est rectifiable. Plus
+précisément, si \Gamma = (I,F) est un arc de classe \mathcal{C}^1 de E,
+alors \Gamma est rectifiable et
+
+\forall~a,b \in I, \ell\Gamma~(a,b)
+=\int ~
+a^b\\textbar{}F'(t)\\textbar{}
+dt
+
+Démonstration Soit {[}a,b{]} un segment inclus dans I, \Gamma0 le
+sous arc correspondant et \sigma = (ai)0\leqi\leqn une
+subdivision de {[}a,b{]}. Comme F est de classe \mathcal{C}^1, on a
+
+\begin{align*} L(\Gamma0,\sigma)& =&
+\\sum
+i=1^n\\textbar{}F(a i) -
+F(ai-1)\\textbar{} =
+\\sum
+i=1^n\\textbar{}
+\\int  ~
+ai-1^ai F'(t)
+dt\\textbar{}\%& \\ & \leq&
+\sum i=1^n~
+\\int  ~
+ai-1^ai
+\\textbar{}F'(t)\\textbar{} dt =
+\\int  ~
+a^b\\textbar{}F'(t)\\textbar{}
+dt \%& \\
+\end{align*}
+
+Ceci montre que \Gamma0 est rectifiable et que \ell\Gamma(a,b) =
+l(\Gamma0) \leq\int ~
+a^b\\textbar{}F'(t)\\textbar{}
+dt.
+
+Fixons maintenant a \in I~; nous allons montrer que
+\forall~t \in I, \ell\Gamma~(a,t)
+=\int ~
+a^t\\textbar{}F'(u)\\textbar{}
+du. Comme \ell\Gamma(a,a) = 0, il suffit de montrer que
+t\mapsto~\ell\Gamma(a,t) est dérivable et que sa
+dérivée est \\textbar{}F'(t)\\textbar{}~;
+on en déduira que t\mapsto~\ell\Gamma(a,t) est de
+classe \mathcal{C}^1 et que donc \ell\Gamma(a,t) = \ell\Gamma(a,a)
++\int  a^t~ d
+\over du \ell\Gamma(a,u) du
+=\int ~
+a^t\\textbar{}F'(u)\\textbar{}
+du. Montrons tout d'abord la dérivabilité à droite. Soit h
+\textgreater{} 0. On a alors \ell\Gamma(a,t + h) - \ell\Gamma(a,t) =
+\ell\Gamma(t,t + h). Mais en utilisant d'une part la ligne polygonale
+triviale qui \\\\jmathmathmathmathoint par un seul segment les points F(t) et F(t + h), et
+d'autre part la ma\\\\jmathmathmathmathoration de la longueur par l'intégrale de
+\\textbar{}F'\\textbar{} dé\\\\jmathmathmathmathà démontrée,
+on a
+
+\\textbar{}F(t + h) - F(t)\\textbar{} \leq
+\ell\Gamma(t,t + h) \leq\int ~
+t^t+h\\textbar{}F'(u)\\textbar{}
+du
+
+soit encore, en divisant par h
+
+\begin{align*} \\textbar{} F(t + h)
+- F(t) \over h \\textbar{}& \leq&
+\ell\Gamma(a,t + h) - \ell\Gamma(a,t) \over h \%&
+\\ & \leq& 1 \over h
+\int ~
+t^t+h\\textbar{}F'(u)\\textbar{}du
+\%& \\ & =& 1 \over
+h \left (\int ~
+a^t+h\\textbar{}F'(u)\\textbar{}
+du -\int ~
+a^t\\textbar{}F'(u)\\textbar{}
+du\right )\%& \\
+\end{align*}
+
+Quand h tend vers 0 le terme de gauche (par définition de la dérivée) et
+le terme de droite (dérivée d'une intégrale par rapport à sa borne
+supérieure) tendent tous les deux vers
+\\textbar{}F'(t)\\textbar{}. On en déduit
+que limh\rightarrow~0^+~
+\ell\Gamma(a,t+h)-\ell\Gamma(a,t) \over h
+=\\textbar{} F'(t)\\textbar{}. Donc
+t\mapsto~\ell\Gamma(a,t) est dérivable à droite,
+de dérivée \\textbar{}F'\\textbar{}. Le
+raisonnement est similaire à gauche.
+
+Si maintenant b et c sont dans I, on a \ell\Gamma(b,c) =
+\ell\Gamma(a,c) - \ell\Gamma(a,b) =\int ~
+a^c\\textbar{}F'(t)\\textbar{}
+dt -\int ~
+a^b\\textbar{}F'(t)\\textbar{}
+dt =\int ~
+b^c\\textbar{}F'(t)\\textbar{}
+dt ce qui achève la démonstration.
+
+Exemple~18.4.1 (i) Pour un arc paramétré plan
+t\mapsto~x(t)\vec\imath +
+y(t)\vecȷ dans un repère orthonormé, on a
+\\textbar{}F'(t)\\textbar{} =
+\sqrtx'(t)^2  + y'(t)^2 et donc
+\ell\Gamma(a,b) =\int ~
+a^b\sqrtx'(t)^2  +
+y'(t)^2 dt. En particulier le graphe d'une fonction f de
+classe \mathcal{C}^1 sur {[}a,b{]} est rectifiable et sa longueur est
+\int  a^b~\sqrt1
++ f'(t)^2 dt.
+
+(ii) Pour un arc plan donné par une équation polaire \rho = f(\theta), on a
+F'(\theta) = f'(\theta)\vecu(\theta) +
+f(\theta)\vecu'(\theta), soit
+\\textbar{}F'(\theta)\\textbar{} =
+\sqrtf(\theta)^2  + f'(\theta)^2 et donc
+\ell\Gamma(a,b) =\int ~
+a^b\sqrtf(\theta)^2  +
+f'(\theta)^2 d\theta
+
+(iii) Pour un arc paramétré de l'espace \mathbb{R}~^3,
+t\mapsto~x(t)\vec\imath +
+y(t)\vecȷ + z(t)\veck dans un
+repère orthonormé, on a
+\\textbar{}F'(t)\\textbar{} =
+\sqrtx'(t)^2  + y'(t)^2  +
+z'(t)^2 et donc \ell\Gamma(a,b)
+=\int ~
+a^b\sqrtx'(t)^2  +
+y'(t)^2  + z'(t)^2 dt
+
+Le lecteur adaptera ces formules pour un arc donné en coordonnées
+cylindriques ou sphériques.
+
+\paragraph{18.4.3 Abscisses curvilignes}
+
+Définition~18.4.3 Soit \Gamma = (I,F) un arc rectifiable. On appelle abscisse
+curviligne sur \Gamma toute application s : I \rightarrow~ \mathbb{R}~ telle que
+\forall~a,b \in I, \ell\Gamma~(a,b) = s(b) - s(a). On
+dit que \Gamma est paramétré par abscisse curviligne si s(t) = t est une
+abscisse curviligne, autrement dit si \forall~~a,b \in
+I, \ell\Gamma(a,b) = b - a.
+
+Remarque~18.4.3 Choisissons sur \Gamma une origine a0. La relation
+de Chasles montre de manière évidente que s(t) =
+\ell\Gamma(a0,t) est une abscisse curviligne sur \Gamma.
+
+Proposition~18.4.6 Sur un arc rectifiable, deux abscisses curvilignes
+diffèrent d'une constante.
+
+Démonstration Soit a0 \in I. On a \ell\Gamma(a0,t) =
+s1(t) - s1(a0) = s2(t) -
+s2(a0), si bien que s2(t) =
+s1(t) + K avec K = s2(a0) -
+s1(a0).
+
+Théorème~18.4.7 Un arc \Gamma = (I,F) de classe \mathcal{C}^1 est paramétré
+par abscisse curviligne si et seulement si~\forall~~t
+\in I, \\textbar{}F'(t)\\textbar{} = 1.
+
+Démonstration Supposons tout d'abord que \forall~~t \in
+I, \\textbar{}F'(t)\\textbar{} = 1. Alors
+on a \forall~a,b \in \Gamma, \ell\Gamma~(a,b)
+=\int ~
+a^b\\textbar{}F'(t)\\textbar{}
+dt =\int  a^b~ dt = b - a.
+Inversement, supposons l'arc paramétré par abscisse curviligne, alors si
+a \in I, on a \forall~t \in I, t - a = \ell\Gamma~(a,t)
+=\int ~
+a^t\\textbar{}F'(u)\\textbar{}
+du et en dérivant par rapport à t, on obtient 1
+=\\textbar{} F'(t)\\textbar{}.
+
+Théorème~18.4.8 Un arc de classe C^k (k ≥ 1) est
+C^k-équivalent à un arc paramétré par abscisse curviligne si
+et seulement si~il est régulier.
+
+Démonstration Le théorème précédent implique que tout arc paramétré par
+abscisse curviligne est régulier et comme tout arc équivalent à un arc
+régulier est lui même régulier, la condition est évidemment nécessaire.
+Inversement, soit \Gamma = (I,F) un arc paramétré régulier. Soit s(t) une
+abscisse curviligne sur \Gamma. On sait que, si a \in I, s(t) = s(a)
++\int ~
+a^t\\textbar{}F'(u)\\textbar{}
+du et donc s est de classe C^k (car
+u\mapsto~\\textbar{}F'(u)\\textbar{}
+est de classe C^k-1 si F' ne s'annule pas) et s'(t)
+=\\textbar{} F'(t)\\textbar{}
+\textgreater{} 0. On en déduit que s est un C^k
+difféomorphisme de I sur J = s(I). Soit G = F \cdot s^-1 : J \rightarrow~ E.
+L'arc (J,G) est C^k équivalent à (I,F) et on a (puisque
+s^-1 est un difféomorphisme croissant)
+
+\begin{align*}
+\ellJ,G(u1,u2)& =&
+\ell(I,F)(s^-1(u
+1),s^-1(u 2)) \%&
+\\ & =& s(s^-1(u
+1)) - s(s^-1(u 2)) = u1 -
+u2\%& \\
+\end{align*}
+
+donc (J,G) est paramétré par abscisse curviligne.
+
+Remarque~18.4.4 Soit (I,F) et (J,G) deux arcs paramétrés équivalents et
+de même sens et \theta un difféomorphisme croissant tel que F = G \cdot \theta.
+Supposons que (J,G) est paramétré par abscisse curviligne. On a alors
+F'(t) = \theta'(t)G'(\theta(t)) et comme G'(\theta(t)) est de norme 1 et \theta'(t)
+\textgreater{} 0, on a \theta'(t) =\\textbar{}
+F'(t)\\textbar{}. On voit que \theta est déterminé à une
+constante près. Si l'on pose s = \theta(t), on aura donc  ds
+\over dt =\\textbar{}
+F'(t)\\textbar{} ce qui peut encore s'écrire de la
+manière suivante
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) Pour un arc paramétré plan
+  t\mapsto~x(t)\vec\imath +
+  y(t)\vecȷ dans un repère orthonormé, on a
+  ds^2 = dx^2 + dy^2 (c'est-à-dire que
+  \left ( ds \over dt
+  \right )^2 = \left ( dx
+  \over dt \right )^2 +
+  \left ( dy \over dt
+  \right )^2)
+\item
+  (ii) Pour un arc plan donné par une équation polaire \rho = f(\theta), on a
+  ds^2 = d\rho^2 + \rho^2 d\theta^2
+  (c'est-à-dire que \left ( ds \over
+  d\theta \right )^2 = \left (
+  d\rho \over d\theta \right )^2 +
+  \rho^2)
+\item
+  (iii) Pour un arc paramétré de l'espace \mathbb{R}~^3,
+  t\mapsto~x(t)\vec\imath +
+  y(t)\vecȷ + z(t)\veck dans un
+  repère orthonormé, on a ds^2 = dx^2 +
+  dy^2 + dz^2 (c'est-à-dire que
+  \left ( ds \over dt
+  \right )^2 = \left ( dx
+  \over dt \right )^2 +
+  \left ( dy \over dt
+  \right )^2 + \left ( dz
+  \over dt \right )^2)
+\end{itemize}
+
+\paragraph{18.4.4 Introduction à la méthode du repère mobile}
+
+Soit E un espace affine euclidien de direction \vecE.
+On désigne par \mathcal{R} l'ensemble des repères orthonormés de E.
+
+Définition~18.4.4 On appelle repère mobile tout couple (I,R) d'un
+intervalle I de \mathbb{R}~ et d'une application t\mapsto~R(t)
+de I dans \mathcal{R}, de classe \mathcal{C}^1.
+
+On notera a(t) \in E l'origine du repère R(t) et \mathcal{E}(t) =
+(\overrightarrowe1(t),\\ldots,\overrightarrowen~(t))
+la base orthonormée définissant R(t). Le résultat essentiel est le
+suivant
+
+Théorème~18.4.9 Soit t\mapsto~R(t) =
+(a(t),\overrightarrowe1(t),\\ldots,\overrightarrowen~(t))
+un repère mobile. Alors, pour tout t \in I, la matrice des coordonnées des
+vecteurs  d\overrightarrowe1
+\over dt
+(t),\\ldots~,
+d\overrightarrowen \over
+dt (t) dans la base
+(\overrightarrowe1(t),\\ldots,\overrightarrowen~(t))
+est antisymétrique.
+
+Démonstration Posons  d\overrightarrowe\\\\jmathmathmathmath
+\over dt (t) =\
+\sum ~
+i=1^nai,\\\\jmathmathmathmath(t)\overrightarrowei(t).
+Par dérivation, la relation \forall~~t \in I,
+(\overrightarrowei(t)∣\overrightarrowei(t))
+= 1 donne \forall~~t \in I, 2(
+d\overrightarrowei \over
+dt
+(t)∣\overrightarrowei(t))
+= 0 soit encore ai,i(t) = 0. De même la relation
+\forall~~t \in I,
+(\overrightarrowei(t)∣\overrightarrowe\\\\jmathmathmathmath(t))
+= 0 donne par dérivation \forall~~t \in I, (
+d\overrightarrowei \over
+dt
+(t)∣\overrightarrowe\\\\jmathmathmathmath(t))
++ ( d\overrightarrowe\\\\jmathmathmathmath
+\over dt
+(t)∣\overrightarrowei(t))
+= 0 soit encore ai,\\\\jmathmathmathmath(t) + a\\\\jmathmathmathmath,i(t) = 0. Ceci montre
+bien que la matrice est antisymétrique.
+
+\paragraph{18.4.5 Repère de Frénet et courbure des arcs d'un plan
+euclidien orienté}
+
+On désigne par E un plan euclidien orienté.
+
+Définition~18.4.5 Soit \Gamma = (I,F) un arc paramétré par abscisse
+curviligne de classe \mathcal{C}^1. On appelle repère de Frénet au
+point s \in I le repère orthonormé direct
+(F(s),\vect(s),\vecn(s)) dont
+l'origine est le point F(s) et tel que \vect(s) =
+F'(s).
+
+Justification~: on sait que
+\\textbar{}F'(s)\\textbar{} = 1. De plus
+la connaissance de \vect(s) détermine parfaitement
+\vecn(s) qui doit être l'image de
+\vect(s) par la rotation d'angle + \pi~
+\over 2 .
+
+Supposons que (I,F) est un arc paramétré par abscisse curviligne de
+classe C^2. Alors l'application
+s\mapsto~\vect(s) = F'(s) est de
+classe \mathcal{C}^1 et il en est de même de
+s\mapsto~\vecn(s) =
+r\pi~\diagup2(\vect(s)). Le théorème sur le repère
+mobile nous dit que la matrice des coordonnées des vecteurs 
+d\vect \over ds (s),
+d\vecn \over ds (s) dans la base
+(\vect(s),\vecn(s)) est
+antisymétrique, donc de la forme \left
+(\matrix\,0 &-c(s) \cr
+c(s)&0 \right ).
+
+Définition~18.4.6 Soit \Gamma = (I,F) un arc paramétré par abscisse
+curviligne de classe C^2. On appelle courbure de \Gamma au point s
+de I le réel c(s) défini par la relation F''(s) =
+d\vect \over ds (s) =
+c(s)\vecn(s).
+
+Remarque~18.4.5 On a donc les formules (dites formules de Frénet)
+
+ d\vect \over ds (s) =
+c(s)\vecn(s), d\vecn
+\over ds (s) = -c(s)\vect(s)
+
+Définition~18.4.7 Soit \Gamma = (I,F) un arc paramétré régulier de classe
+C^2. Soit (J,G) un arc paramétré par abscisse curviligne
+équivalent et de même sens, \theta : I \rightarrow~ J un difféomorphisme croissant tel
+que F = G \cdot \theta. On appelle repère de Frénet (resp. courbure) à \Gamma au point
+t \in I le repère de Frénet (resp. la courbure) au point \theta(t) à l'arc
+(J,G).
+
+Remarque~18.4.6 Il faut voir bien entendu que cette définition ne dépend
+pas du choix de (J,G). Cela découle de la quasi-unicité de \theta que nous
+avons vue précédemment, ou bien plus simplement du théorème suivant
+
+Théorème~18.4.10 Soit \Gamma = (I,F) un arc paramétré régulier de classe
+C^2. Alors le repère de Frénet et la courbure au point t à \Gamma
+sont donnés respectivement par
+
+\vect\Gamma(t) = F'(t) \over
+\\textbar{}F'(t)\\textbar{}
+,\quad \vecn\Gamma(t) =
+r\pi~\diagup2(\vect\Gamma(t)),\quad
+c\Gamma(t) = {[}F'(t),F'`(t){]} \over
+\\textbar{}F'(t)\\textbar{}^3
+
+où {[}F'(t),F''(t){]} désigne le produit mixte des vecteurs F'(t) et
+F''(t).
+
+Démonstration Par définition, si (J,G) désigne un arc paramétré par
+abscisse curviligne équivalent et de même sens, \theta : I \rightarrow~ J un
+difféomorphisme tel que F = G \cdot \theta, on a
+\vect\Gamma(t) = G'(\theta(t)) et on a G''(\theta(t)) =
+c\Gamma(t)\vecn\Gamma(t). On a alors
+
+F'(t) = (G \cdot \theta)'(t) = \theta'(t)G'(\theta(t)) =
+\theta'(t)\vect\Gamma(t)
+
+Comme \theta'(t) \textgreater{} 0, on a \theta'(t) =\\textbar{}
+F'(t)\\textbar{} et donc
+\vect\Gamma(t) = F'(t) \over
+\\textbar{}F'(t)\\textbar{} . De plus on
+a
+
+\begin{align*} F'`(t)& =& \theta'`(t)G'(\theta(t)) +
+\theta'(t)^2G'`(\theta(t)) \%& \\ & =&
+\theta'`(t)\vect\Gamma(t) +\\textbar{}
+F'(t)\\textbar{}^2c
+\Gamma(t)\vecn\Gamma(t)\%&
+\\ \end{align*}
+
+d'où l'on déduit que
+
+\begin{align*} {[}F'(t),F'`(t){]}& =&
+{[}\\textbar{}F'(t)\\textbar{}\vect\Gamma(t),\theta'`(t)\vect\Gamma(t)
++\\textbar{}
+F'(t)\\textbar{}^2c
+\Gamma(t)\vecn\Gamma(t){]}\%&
+\\ & =&
+c\Gamma(t)\\textbar{}F'(t)\\textbar{}^3{[}\vect
+\Gamma(t),\vecn\Gamma(t){]} =
+c\Gamma(t)\\textbar{}F'(t)\\textbar{}^3
+\%& \\ \end{align*}
+
+ce qui démontre la dernière formule.
+
+Corollaire~18.4.11 Soit \Gamma = (I,F) un arc paramétré régulier de classe
+C^2 et t \in I. On a équivalence de (i) t est un point
+birégulier de \Gamma (ii) c\Gamma(t)\neq~0
+
+Démonstration En effet t est birégulier si et seulement si~la famille
+(F'(t),F''(t)) est libre c'est-à-dire si et seulement si~le produit
+mixte {[}F'(t),F''(t){]} est non nul.
+
+Corollaire~18.4.12 Soit \Gamma l'arc défini en polaire par \rho = f(\theta). Alors la
+courbure au point \theta est donnée par
+
+c = \rho^2 + 2\rho'^2 - \rho\rho'`\over
+(\rho^2 + \rho'^2)^3\diagup2
+
+(avec \rho' = f'(\theta) et \rho'`= f''(\theta)).
+
+Démonstration On a F'(\theta) = f'(\theta)\vecu(\theta) +
+f(\theta)\vecu'(\theta) et F'`(\theta) = (f'`(\theta) -
+f(\theta))\vecu(\theta) + 2f'(\theta)\vecu'(\theta).
+On en déduit que {[}F'(\theta),F'`(\theta){]} = \rho^2 + 2\rho'^2
+- \rho\rho'' et que \\textbar{}F'(\theta)\\textbar{}
+= \sqrt\rho^2  + \rho'^2, d'où la
+formule.
+
+Nous allons maintenant donner une autre interprétation de la courbure à
+l'aide d'une détermination de l'angle \phi du vecteur tangent unitaire
+\vect avec un vecteur fixe \vec\imath.
+Pour pouvoir dériver une telle détermination, nous utiliserons le lemme
+suivant
+
+Lemme~18.4.13 (lemme de relèvement \mathcal{C}^1). Soit I un intervalle
+de \mathbb{R}~ et f : I \rightarrow~ U = \z \in
+\mathbb{C}∣\textbar{}z\textbar{} = 1\
+une application de classe \mathcal{C}^1. Alors il existe g : I \rightarrow~ \mathbb{R}~ de
+classe \mathcal{C}^1 telle que \forall~~t \in I, f(t) =
+e^ig(t). Si g1 et g2 sont deux telles
+applications, il existe k \in ℤ tel que \forall~~t \in I,
+g2(t) = g1(t) + 2k\pi~.
+
+Démonstration Traitons tout d'abord la question de l'unicité. Soit
+g1 et g2 qui conviennent. Alors
+\forall~~t \in I,
+e^i(g2(t)-g1(t)) = 1 soit
+\forall~t \in I, g2(t) - g1~(t) \in
+2\pi~ℤ. Or, d'après le théorème des valeurs intermédiaires, (g2 -
+g1)(I) est un intervalle~; cet intervalle devant être contenu
+dans 2\pi~ℤ, c'est forcément un singleton et donc il existe k \in ℤ tel que
+\forall~t \in I, g2(t) = g1~(t) +
+2k\pi~. En ce qui concerne l'existence, remarquons que si g existe, on doit
+avoir f'(t) = ig'(t)e^ig(t) = ig'(t)f(t) et donc g'(t) =
+f'(t) \over if(t) .
+
+Puisque \forall~~t \in
+I,f(t)\overlinef(t) = 1, par dérivation on obtient
+\forall~t \in I,f(t)\overlinef'(t)~ +
+f'(t)\overlinef(t) = 0, donc  1
+\over i f'(t)\overlinef(t) =
+f'(t)\over if(t) \in \mathbb{R}~. Soit donc a \in I~; choisissons \alpha~
+\in \mathbb{R}~ tel que e^i\alpha~ = f(a) et soit g(t) = \alpha~
++\int  a^t~ f'(u)
+\over if(u) du = \alpha~ - i\int ~
+a^tf'(u)\overlinef(u) du. La fonction
+g est de classe \mathcal{C}^1 de I dans \mathbb{R}~ et g'(t) = f'(t)
+\over if(t) ~; posons h(t) = f(t)e^-ig(t)~;
+h est de classe \mathcal{C}^1 et on a h'(t) = f'(t)e^-ig(t)
+- ig'(t)f(t)e^-ig(t) = \left (f'(t) -
+ig'(t)f(t)\right )e^-ig(t) = 0. Donc h est
+constante. Comme h(a) = f(a)e^-ig(a) = f(a)e^-i\alpha~ =
+1, h est la constante 1 et donc \forall~~t \in I, f(t) =
+e^ig(t).
+
+Lemme~18.4.14 Soit E un plan vectoriel euclidien,
+(\vec\imath,\vecȷ) une base orthonormée
+de E, S = \x \in
+E∣\\textbar{}x\\textbar{}
+= 1\. Soit I un intervalle de \mathbb{R}~ et f : I \rightarrow~ S de classe
+\mathcal{C}^1. Alors il existe g : I \rightarrow~ \mathbb{R}~ de classe \mathcal{C}^1 telle
+que \forall~~t \in I, f(t) =\
+cos g(t)\,\vec\imath
++ sin~
+g(t)\,\vecȷ. Si g1 et
+g2 sont deux telles applications, il existe k \in ℤ tel que
+\forall~t \in I, g2(t) = g1~(t) +
+2k\pi~.
+
+Démonstration Il suffit d'utiliser l'isométrie L de E dans \mathbb{C} (considérés
+tous deux comme espaces euclidiens) définie par
+L(a\vec\imath + b\vecȷ) = a + ib et
+d'appliquer le lemme précédent à L \cdot f. On a alors L \cdot f(t) =
+e^ig(t), soit f(t) = L^-1(e^ig(t))
+= cos~
+g(t)\,\vec\imath +\
+sin g(t)\,\vecȷ.
+
+Théorème~18.4.15 Soit \Gamma = (I,F) un arc paramétré régulier de classe
+C^2 du plan euclidien E. Soit
+(\vec\imath,\vecȷ) une base orthonormée
+de E. Pour chaque t \in I soit \vect\Gamma(t) le
+vecteur tangent unitaire au point t, soit \phi : I \rightarrow~ \mathbb{R}~ une application de
+classe \mathcal{C}^1 telle que \forall~~t \in I,
+\vect\Gamma(t) = cos~
+\phi(t)\,\vec\imath +\
+sin \phi(t)\,\vecȷ et
+t\mapsto~s(t) une abscisse curviligne sur \Gamma. Alors
+
+\forall~t \in I, \phi'(t) = c\Gamma~(t)s'(t)
+
+Démonstration Si (J,G) désigne un arc paramétré par abscisse curviligne
+équivalent et de même sens, \theta : I \rightarrow~ J un difféomorphisme tel que F = G \cdot
+\theta, on a \vect\Gamma(t) = G'(\theta(t))~; on sait
+aussi que \theta'(t) =\\textbar{}
+F'(t)\\textbar{} = s'(t). On a donc F'(t) =
+\theta'(t)\vect\Gamma(t) =
+s'(t)(cos~
+\phi(t)\,\vec\imath +\
+sin \phi(t)\,\vecȷ) d'où F'`(t) =
+s'`(t)(cos~
+\phi(t)\,\vec\imath +\
+sin \phi(t)\,\vecȷ) +
+s'(t)\phi'(t)(-sin~
+\phi(t)\,\vec\imath +\
+cos \phi(t)\,\vecȷ) ce qui nous donne
+{[}F'(t),F'`(t){]} = s'(t)^2\phi'(t) alors que
+\\textbar{}F'(t)\\textbar{} = s'(t). La
+formule s'en déduit immédiatement.
+
+Remarque~18.4.7 Sur un arc paramétré par abscisse curviligne
+s\mapsto~F(s), on peut prendre le paramètre comme
+abscisse curviligne et on a donc \forall~~s \in I,
+c\Gamma(s) = d\phi \over ds (s). La courbure mesure
+donc la vitesse avec laquelle tourne le vecteur tangent en fonction de
+l'abscisse curviligne.
+
+Formulaire
+
+Pour un arc paramétré
+t\mapsto~x(t)\vec\imath +
+y(t)\vecȷ, on a vu que \left ( ds
+\over dt \right )^2 =
+\left ( dx \over dt
+\right )^2 + \left ( dy
+\over dt \right )^2~; de plus
+F'(t) =\\textbar{}
+F'(t)\\textbar{}(cos~
+\phi(t)\,\vec\imath +\
+sin \phi(t)\,\vecȷ) = ds
+\over dt (cos~
+\phi(t)\,\vec\imath +\
+sin \phi(t)\,\vecȷ) ce qui nous donne
+ dx \over dt = ds \over dt
+ cos \phi et  dy \over dt~ =
+ds \over dt  sin~ \phi, avec
+enfin  d\phi \over dt = c\Gamma\,
+ds \over dt . On retiendra ces formules en termes de
+formes différentielles sous la forme
+
+dx = ds\,cos~
+\phi,\quad dy =
+ds\,sin~ \phi,\quad
+d\phi = c\,ds
+
+d'où l'on retrouve que ds^2 = dx^2 +
+dy^2.
+
+Pour un arc en polaires donné par \rho = f(\theta), on a F'(\theta) =
+f'(\theta)\vecu(\theta) + f(\theta)\vecu'(\theta). Par
+le théorème de relèvement, il existe une application
+\theta\mapsto~\alpha~(\theta) de classe C^1 telle que
+\vect(\theta) = cos~
+\alpha~(\theta)\,\vecu(\theta)
++ sin~
+\alpha~(\theta)\,\vecu'(\theta) et on a alors
+
+\begin{align*} F'(\theta)& =&
+f'(\theta)\vecu(\theta) + f(\theta)\vecu'(\theta) \%&
+\\ & =&
+\\textbar{}F'(\theta)\\textbar{}(cos~
+\alpha~(\theta)\,\vecu(\theta)
++ sin~
+\alpha~(\theta)\,\vecu'(\theta))\%&
+\\ & =& ds \over d\theta
+(cos~
+\alpha~(\theta)\,\vecu(\theta)
++ sin~
+\alpha~(\theta)\,\vecu'(\theta)) \%&
+\\ \end{align*}
+
+On en déduit que \rho = f(\theta) = ds \over d\theta
+ sin~ \alpha~(\theta) et que  d\rho \over
+d\theta = ds \over d\theta  sin~
+\alpha~(\theta). D'autre part on peut évidemment prendre \phi(\theta) = \theta + \alpha~(\theta) ce qui
+nous donne les formules suivantes en termes de formes différentielles
+
+d\rho = ds\,cos~
+\alpha~,\quad \rho\,d\theta =
+ds\,sin~ \alpha~, \phi = \theta +
+\alpha~,\quad d\phi = c\,ds
+
+Exemple~18.4.2 Considérons la cardioïde d'équation \rho = a(1
++ cos~ \theta), \theta \in{]} - \pi~,\pi~{[}. On a alors
+ds\,cos~ \alpha~ = d\rho =
+-asin~ \theta\,d\theta =
+-2acos  \theta \over 2~
+ sin  \theta \over 2~
+\,d\theta et ds\,sin~
+\alpha~ = \rho\,d\theta = a(1 + cos~
+\theta)\,d\theta = 2acos ^2~
+\theta \over 2 \,d\theta. Comme  ds
+\over d\theta \textgreater{} 0, ceci nécessite ds =
+2acos  \theta \over 2~ d\theta. On a
+alors cos \alpha~ = -\sin~
+ \theta \over 2 , sin~ \alpha~
+= cos  \theta \over 2~ , ce qui
+détermine \alpha~ à une constante près par \alpha~ = \theta \over 2
++ \pi~ \over 2 . On en déduit que \phi = \alpha~ + \theta = 3\theta
+\over 2 + \pi~ \over 2 et donc d\phi = 3
+\over 2 \,d\theta = c\,ds =
+2accos  \theta \over 2~ d\theta. Par
+conséquent c = 3 \over 4a cos~
+ \theta \over 2  .
+
+\paragraph{18.4.6 Centre de courbure, cercle osculateur}
+
+Définition~18.4.8 Soit \Gamma = (I,F) un arc paramétré régulier de classe
+C^2 et t \in I un point birégulier de \Gamma. On appelle rayon de
+courbure au point t le nombre réel R\Gamma(t) = 1
+\over c\Gamma(t) .
+
+Remarque~18.4.8 Dans un arc paramétré par abscisse curviligne
+s\mapsto~F(s), les formules de Frénet peuvent alors
+s'écrire
+
+ d\vect \over ds (s) = 1
+\over R(s) \vecn(s),
+d\vecn \over ds (s) = - 1
+\over R(s) \vect(s)
+
+Définition~18.4.9 Soit \Gamma = (I,F) un arc paramétré régulier de classe
+C^2 et t \in I un point birégulier de \Gamma. Soit
+(F(t),\vect\Gamma(t),\vecn\Gamma(t))
+le repère de Frénet au point t et R\Gamma(t) le rayon de courbure
+au point t. On appelle centre de courbure au point t le point
+C\Gamma(t) = F(t) +
+R\Gamma(t)\vecn\Gamma(t), on appelle cercle
+de courbure au point t le cercle ayant pour centre le centre de courbure
+et pour rayon le rayon de courbure (et qui passe donc par le point
+F(t)).
+
+Remarque~18.4.9 Par définition même, il s'agit de notions invariantes
+par changement de paramétrage admissible~: si \Gamma = (I,F) et \Gamma' = (J,G)
+sont deux arcs équivalents et de même sens et si \theta est un
+difféomorphisme croissant tel que F = G \cdot \theta, alors le rayon de courbure
+(resp. le centre de courbure, resp. le cercle de courbure) au point \theta(t)
+à \Gamma' est le rayon de courbure (resp. le centre de courbure, resp. le
+cercle de courbure) au point t à \Gamma.
+
+Théorème~18.4.16 Soit \Gamma = (I,F) un arc paramétré régulier de classe
+C^2 et t0 \in I un point birégulier de \Gamma. Alors le
+cercle de courbure au point t0 est l'unique cercle osculateur
+à \Gamma au point t0.
+
+Démonstration La notion de contact étant invariante par changement de
+paramétrage admissible, on peut supposer que l'arc est paramétré par
+abscisse curviligne, s\mapsto~F(s) et nous noterons
+s0 à la place de t0. L'étude du contact pouvant se
+faire dans n'importe quel repère, nous pouvons à cet effet utiliser le
+repère de Frénet au point s0. Si on note alors
+\overrightarrowF(s0)F(s) =
+x(s)\vect(s0) +
+y(s)\vecn(s0), les formules
+F'(s0) =\vec t(s0) et
+F''(s0) =
+c(s0)\vecn(s0) se traduisent par
+x'(s0) = 1,y'(s0) = 0,x'`(s0) =
+0,y''(s0) = c(s0) avec bien entendu x(s0)
+= y(s0) = 0 puisque F(s0) est l'origine du repère.
+Considérons un cercle passant par F(s0)~; dans ce repère de
+Frénet il admet une équation du type X^2 + Y ^2 -
+2\alpha~X - 2\beta~Y = 0, son centre ayant pour coordonnées (\alpha~,\beta~). Si on introduit
+l'équation aux points d'intersection du cercle et de \Gamma, on pose \phi(s) =
+x(s)^2 + y(s)^2 - 2\alpha~x(s) - 2\beta~y(s) et la condition
+d'osculation se traduit par \phi(s0) = \phi'(s0) =
+\phi''(s0) = 0. Mais compte tenu des formules x(s0) =
+y(s0) = 0,x'(s0) = 1,y'(s0) =
+0,x'`(s0) = 0,y''(s0) = c(s0), on a
+\phi(s0) = 0, \phi'(s0) = 2x(s0)x'(s0)
++ 2y(s0)y'(s0) - 2\alpha~x'(s0) -
+2\beta~y'(s0) = -2\alpha~ et \phi'`(s0) =
+2x'(s0)^2 + 2x(s0)x'`(s0) +
+2y'(s0)^2 + 2y(s0)y'`(s0) -
+2\alpha~x'`(s0) - 2\beta~y''(s0) = 2 - 2\beta~c(s0). On
+voit donc que le cercle est tangent si et seulement si~\alpha~ = 0 (autrement
+dit le cercle est centré sur la normale, c'était prévisible) et qu'il
+est osculateur si et seulement si~\alpha~ = 0,\beta~ = 1 \over
+c(s0) = R(s0), c'est-à-dire si et seulement si~son
+centre est le point F(s0) +
+R(s0)\vecn(s0), soit le centre de
+courbure.
+
+\paragraph{18.4.7 Développée, développantes}
+
+Ces notions ne sont pas au programme des classes préparatoires.
+
+Définition~18.4.10 Soit \Gamma = (I,F) un arc paramétré birégulier de classe
+C^3. On appelle développée de \Gamma l'arc (I,C) tel que pour tout
+t \in I, C(t) soit le centre de courbure au point t à \Gamma.
+
+Théorème~18.4.17 Soit \Gamma = (I,F) un arc paramétré birégulier de classe
+C^k (k ≥ 3) de développée (I,C) et soit t0 \in I un
+point non totalement singulier de (I,C). Alors la tangente au point
+t0 à la développée est la normale au point t0 à \Gamma,
+c'est-à-dire la droite F(t0) +
+\mathbb{R}~\vecn\Gamma(t0)~: la développée de
+l'arc \Gamma est l'enveloppe des normales à \Gamma.
+
+Démonstration Par définition même cette normale passe par
+C(t0). Il nous suffit donc de montrer qu'elle est parallèle à
+un vecteur tangent à (I,C). Toutes les notions étant invariantes par
+changement de paramétrage admissible, on peut supposer que l'arc est
+paramétré par abscisse curviligne, s\mapsto~F(s) et
+nous noterons s0 à la place de t0. On a alors C(s) =
+F(s) + R(s)\vecn(s). Les formules de calcul de la
+courbure (et donc du rayon de courbure) montrent que
+s\mapsto~R(s) est de classe C^k-2~;
+d'autre part s\mapsto~\vecn(s)
+est (comme s\mapsto~\vect(s) dont
+elle se déduit par rotation) de classe C^k-1. On en déduit
+que s\mapsto~C(s) est de classe C^k-2. On
+a alors
+
+\begin{align*} C'(s)& =& F'(s) +
+R'(s)\vecn(s) + R(s) d\vecn
+\over dt (s) \%& \\ &
+=& \vect(s) + R'(s)\vecn(s) -
+R(s) \vect(s) \over R(s) =
+R'(s)\vecn(s)\%& \\
+\end{align*}
+
+On en déduit que s0 est un point régulier de la développée si
+et seulement si~R'(s0)\neq~0 et que
+dans ce cas le vecteur \vecn(s0) est un
+vecteur tangent à la développée, ce qui démontre dans ce cas le
+résultat. La formule de Leibnitz appliquée à C'(s) =
+R'(s)\vecn(s) nous montre clairement que s0
+est un point non totalement singulier de la développée si et seulement
+si~il existe n tel que
+R^(n)(s0)\neq~0. Si l'on
+suppose alors que R'(s0) =
+\\ldots~ =
+R^(p-1)(s0) = 0 et
+R^(p)(s0)\neq~0, cette même
+formule de Leibnitz montre que C'(s0) =
+\\ldots~ =
+C^(p-1)(s0) = 0 et C^(p)(s0) =
+R^(p)(s0)\vecn(s0)\neq~0
+(tous les autres termes faisant intervenir des dérivées d'ordre
+inférieur de R qui sont nulles au point s0). Le vecteur
+\vecn(s0) est donc un vecteur tangent à la
+développée, ce qui démontre dans le résultat.
+
+Remarque~18.4.10 Il est parfois beaucoup plus rapide de rechercher la
+développée comme enveloppe des normales que de calculer repère de Frénet
+et rayon de courbure. On pourra également, lorsque l'arc est paramétré
+par t\mapsto~x(t)\vec\imath +
+y(t)\vecȷ paramétrer la développée par
+t\mapsto~\xi~(t)\vec\imath +
+\eta(t)\vecȷ avec
+
+\begin{align*} \xi~(t)\vec\imath +
+\eta(t)\vecȷ& =& F(t) +
+R(t)\vecn(t) \%& \\ &
+=& x(t)\vec\imath + y(t)\vecȷ +
+s'(t) \over \phi'(t) (-sin~
+\phi(t)\vec\imath + cos~
+\phi(t)\vecȷ)\%& \\
+\end{align*}
+
+et en tenant compte de x'(t) = s'(t)cos~ \phi(t)
+et de y'(t) = s'(t)sin~ \phi(t) (qui traduit
+simplement F'(t) =\\textbar{}
+F'(t)\\textbar{}\vect(t), on obtient
+\xi~(t) = x(t) - y'(t) \over \phi'(t) , \eta(t) = y(t) +
+x'(t) \over \phi'(t) qu'on retiendra en terme de formes
+différentielles
+
+\xi~ = x - dy \over d\phi ,\quad \eta = y +
+dx \over d\phi
+
+Nous avons vu également que s0 est un point régulier de la
+développée si et seulement
+si~R'(s0)\neq~0. On en déduit que les
+points qui annulent R', et en particulier les points qui réalisent des
+extremums locaux de R (qui sont appelés les sommets de \Gamma), donnent des
+points singuliers de la développée (le plus souvent des points de
+rebroussement de première espèce).
+
+Considérons maintenant le problème inverse~: étant donné un arc \Gamma =
+(I,F) (que nous supposerons régulier), peut-on trouver un arc (I,G) dont
+\Gamma soit la développée. On peut, sans nuire à la généralité, supposer que
+(I,F) est paramétré par abscisse curviligne. La tangente F(s) +
+\mathbb{R}~\vect(s) à l'arc \Gamma doit être la normale à l'arc
+(I,G) et en particulier le point G(s) doit appartenir à cette tangente.
+On doit donc avoir G(s) = F(s) + \lambda~(s)\vect(s) avec
+\lambda~(s) =
+(\overrightarrowG(s)F(s)∣\vect(s))
+qui doit donc être de classe \mathcal{C}^1. On en déduit que
+
+\begin{align*} G'(s)& =& F'(s) +
+\lambda~'(s)\vect(s) +
+\lambda~(s)c(s)\vecn(s)\%& \\
+& =& (1 + \lambda~'(s))\vect(s) +
+\lambda~(s)c(s)\vecn(s) \%&
+\\ \end{align*}
+
+Comme la tangente à l'arc \Gamma doit être la normale à l'arc (I,G), il est
+nécessaire que G'(s) soit orthogonal à \vect(s),
+c'est-à-dire que 1 + \lambda~'(s) = 0. Ceci exige que \lambda~(s) = s0 - s.
+Inversement, si cette condition est vérifiée, on a G(s) = F(s) +
+(s0 - s)\vect(s) et G'(s) = (s0 -
+s)c(s)\vecn(s). Si l'arc \Gamma est birégulier et si
+s0∉I, alors l'arc (I,G) est
+régulier et \Gamma est l'enveloppe des normales à (I,G), donc la développée
+de (I,G). Pour un arc quelconque, ceci amène à introduire la définition
+suivante
+
+Définition~18.4.11 Soit \Gamma = (I,F) un arc paramétré régulier de classe
+\mathcal{C}^1, t\mapsto~s(t) une abscisse
+curviligne sur \Gamma et \vect(t) le vecteur tangent
+unitaire au point t. Les arcs paramétrés
+t\mapsto~F(t) + (s0 -
+s(t))\vect(t) où s0 \in \mathbb{R}~, sont appelés les
+développantes de l'arc \Gamma.
+
+Remarque~18.4.11 L'arc n'est la développée d'une de ses développantes
+t\mapsto~F(t) + (s0 -
+s(t))\vect(t) que s'il est suffisamment dérivable,
+birégulier et si s0 - s(t) ne s'annule pas sur I.
+
+\paragraph{18.4.8 Equations intrinsèques}
+
+Cette notion n'est pas au programme des classes préparatoires.
+
+Une question supplémentaire se pose~: étant donnée une fonction continue
+\gamma : I \rightarrow~ \mathbb{R}~, peut-on trouver un arc paramétré par abscisse curviligne \Gamma
+tel que la courbure au point s \in I soit égale à \gamma(s)~? Le théorème
+suivant répond à cette question
+
+Théorème~18.4.18 Soit \gamma : I \rightarrow~ \mathbb{R}~ une fonction continue, E un plan
+euclidien orienté, a \in E et \vecu
+\in\overrightarrow E tel que
+\\textbar{}u\\textbar{} = 1. Soit
+s0 \in I. Alors il existe un unique arc paramétré par abscisse
+curviligne (I,F) de classe C^2 tel que F(s0) = a et
+F'(s0) =\vec u.
+
+Démonstration Soit (\vec\imath,\vecȷ)
+une base orthonormée de \overrightarrowE et
+s\mapsto~\phi(s) une détermination de classe
+\mathcal{C}^1 de l'angle de F'(s) =\vec t(s) avec
+\vec\imath. Alors nécessairement F'(s)
+= cos \phi(s)\vec\imath~
++ sin \phi(s)\vecȷ~. Mais on
+sait de plus que \phi'(s) = c\Gamma(s) = \gamma(s). Alors nécessairement
+\phi(s) = \alpha~ +\int ~
+s0^s\gamma(u) du (où \alpha~ désigne une mesure de l'angle
+de \vec\imath avec \vecu)~; ceci
+détermine \phi(s) à un élément de 2\pi~ℤ près et donc détermine parfaitement
+\vect(s). Mais alors nécessairement
+
+\begin{align*} F(s)& =& F(s0)
++\int  s0^s~F'(u) du =
+a +\int ~
+s0^s\vect(u) du\%&
+\\ & =& a +\\int
+ s0^s(cos~
+\phi(u)\vec\imath + sin~
+\phi(u)\vecȷ) du \%& \\
+\end{align*}
+
+ce qui montre l'unicité de F. Mais en faisant les calculs en sens
+inverse, on constate que si on définit F(s) par cette formule, l'arc
+(I,F) convient~: il est paramétré par abscisse curviligne car
+\\textbar{}F'(s)\\textbar{}
+=\\textbar{} cos~
+\phi(s)\vec\imath + sin~
+\phi(s)\vecȷ\\textbar{} = 1, \phi(s) est une
+détermination de classe \mathcal{C}^1 de l'angle de F'(s)
+=\vec t(s) avec \vec\imath et comme
+\phi'(s) = \gamma(s), la courbure au point s est bien \gamma(s).
+
+Corollaire~18.4.19 Soit \Gamma1 = (I,F1) et \Gamma2
+= (I,F2) deux arcs paramétrés par abscisse curviligne tels que
+\forall~s \in I, c\Gamma1~(s) =
+c\Gamma2(s). Alors les deux arcs sont isométriques.
+
+Démonstration Soit s0 \in I et soit D l'unique déplacement de E
+qui vérifie D(F1(s0)) = F2(s0)
+et \overrightarrowD(F1'(s0)) =
+F2'(s0). Les deux arcs \Gamma2 et
+D(\Gamma1) ont la même fonction de courbure en fonction de
+l'abscisse curviligne (car la courbure, notion métrique, est bien
+entendu invariante par déplacement), coïncident en s0 ainsi
+que leurs vecteurs tangents. D'après l'unicité du théorème précédent,
+ces deux arcs sont égaux.
+
+Remarque~18.4.12 Autrement dit, la fonction
+s\mapsto~c\Gamma(s) définit l'arc \Gamma à un
+déplacement près du plan affine euclidien. On dira encore que l'équation
+c\Gamma(s) = \gamma(s) est une équation intrinsèque de l'arc \Gamma.
+
+\paragraph{18.4.9 Courbure des arcs gauches}
+
+Nous supposerons maintenant que E est un espace euclidien de dimension
+3, orienté. Soit \Gamma = (I,F) un arc paramétré par abscisse curviligne de
+classe C^2. On a donc \forall~~s \in I,
+\\textbar{}F'(s)\\textbar{} = 1 et donc
+\forall~~s \in I,
+(F'(s)∣F'(s)) = 1. En dérivant, on obtient
+\forall~~s \in I,(F'(s),F''(s)) = 0 ce qui montre que le
+vecteur F''(s) est orthogonal au vecteur F'(s). Si le point s est
+birégulier, on a  F'`(s) \over
+\\textbar{}F''(s)\\textbar{} qui est un
+vecteur unitaire orthogonal au vecteur unitaire F'(s). Ceci définit de
+manière unique une base orthonormée directe dont les deux premiers
+vecteurs sont F'(s) et  F'`(s) \over
+\\textbar{}F''(s)\\textbar{} .
+
+Définition~18.4.12 Soit E un espace euclidien de dimension 3 orienté.
+Soit \Gamma = (I,F) un arc paramétré par abscisse curviligne de classe
+C^2 et s un point birégulier de \Gamma. On appelle repère de
+Frénet au point s le repère orthonormé direct
+(F(s),\vect(s),\vecn(s),\vecb(s))
+dont l'origine est le point image F(s) et tel que
+\vect(s) = F'(s), \vecn(s) =
+F'`(s) \over
+\\textbar{}F''(s)\\textbar{}\\textbar{}
+, \vecb(s) =\vec t(s)
+∧\vec n(s).
+
+Si l'arc est birégulier de classe C^3, on dispose ainsi d'un
+repère mobile
+s\mapsto~(F(s),\vect(s),\vecn(s),\vecb(s)).
+La théorie du repère mobile assure que la matrice des coordonnées des
+dérivées des vecteurs
+\vect(s),\vecn(s),\vecb(s)
+dans la base
+(\vect(s),\vecn(s),\vecb(s))
+est antisymétrique. En tenant compte de ce que 
+d\vect \over ds (s) = F''(s) est
+colinéaire à \vecn, cette matrice est nécessairement
+de la forme
+
+\left (\matrix\,0
+&-c(s)&0 \cr c(s)&0 &-\tau(s) \cr 0
+&\tau(s) &0 \right )
+
+Définition~18.4.13 Soit E un espace euclidien de dimension 3 orienté.
+Soit \Gamma = (I,F) un arc paramétré par abscisse curviligne birégulier de
+classe C^3. Pour s \in I, on appelle courbure et torsion au
+point s les nombres réels définis par les formules
+
+ d\vect \over ds (s) =
+c(s)\vecn(s),\quad 
+d\vecb \over ds (s) =
+-\tau(s)\vecn(s)
+
+On a également  d\vecn \over ds
+(s) = -c(s)\vect(s) +
+\tau(s)\vecb(s).
+
+Remarque~18.4.13 On a  d\vect \over
+ds (s) = F''(s) = c(s)\vecn(s), d'où nécessairement
+c(s) =\\textbar{} F''(s)\\textbar{}
+\textgreater{} 0. Contrairement aux arcs plans, la courbure d'un arc
+gauche est nécessairement strictement positive.
+
+Comme dans le cas d'un arc plan, on étend ces définitions aux arcs
+biréguliers par équivalence d'arcs.
+
+Définition~18.4.14 Soit \Gamma = (I,F) un arc paramétré birégulier de classe
+C^3 de E espace euclidien de dimension 3 orienté. Soit (J,G)
+un arc paramétré par abscisse curviligne équivalent et de même sens, \theta :
+I \rightarrow~ J un difféomorphisme croissant tel que F = G \cdot \theta. On appelle repère
+de Frénet (resp. courbure, resp. torsion) à \Gamma au point t \in I le repère
+de Frénet (resp. la courbure, resp. la torsion) au point \theta(t) à l'arc
+(J,G).
+
+Méthodes de calcul
+
+Par définition, si s0 = \theta(t0), on a
+\vect(t0) = G'(s0) et
+\vecn(t0) = G'`(s0)
+\over
+\\textbar{}G''(s0)\\textbar{}
+. Mais on a G = F \cdot \theta ce qui nous donne F'(t0) =
+\theta'(t0)G'(\theta(t0)) =
+\theta'(t0)\vect(t0) et
+F'`(t0) = \theta'`(t0)G'(\theta(t0)) +
+\theta'(t0)^2G''(\theta(t0)). On en déduit que
+\theta'(t0) =\\textbar{}
+F'(t0)\\textbar{} (comme d'habitude) et que
+
+\begin{align*} F'(t0) ∧
+F'`(t0)& =& \theta'(t0)^3G'(s 0) ∧
+G'`(s0) \%& \\ & =&
+\theta'(t0)^3c(t
+0)\vect(t0) ∧\vec
+n(t0) = \theta'(t0)^3c(t
+0)\vecb(t0)\%&
+\\ \end{align*}
+
+Comme \theta'(t0)^3c(t0) \textgreater{} 0,
+c'est que \vecb(t0) =
+F'(t0)∧F'`(t0) \over
+\\textbar{}F'(t0)∧F''(t0)\\textbar{}
+. On a ensuite \vecn(t0)
+=\vec b(t0) ∧\vec
+t(b0).
+
+Reprenons alors le calcul ci dessus. On a vu que F'(t0) ∧
+F'`(t0) =
+\theta'(t0)^3c(t0)\vecb(t0).
+On en déduit, puisque la courbure est positive, que c(t0) =
+\\textbar{}F'(t0)∧F'`(t0)\\textbar{}
+\over \theta'(t0)^3 =
+\\textbar{}F'(t0)∧F'`(t0)\\textbar{}
+\over
+\\textbar{}F'(t0)\\textbar{}^3
+. On en déduit la proposition
+
+Proposition~18.4.20 Soit \Gamma = (I,F) un arc paramétré birégulier de classe
+C^3 de E espace euclidien de dimension 3 orienté et
+t0 \in I. Alors le repère de Frénet au point t0 est
+donné par les formules
+
+\vect(t0) = F'(t0)
+\over
+\\textbar{}F'(t0)\\textbar{}
+,\quad \vecb(t0) =
+F'(t0) ∧ F'`(t0) \over
+\\textbar{}F'(t0) ∧
+F''(t0)\\textbar{}
+
+\vecn(t0) =\vec
+b(t0) ∧\vec t(b0)
+
+La courbure au point t0 est donnée par
+
+c(t0) = \\textbar{}F'(t0) ∧
+F'`(t0)\\textbar{} \over
+\\textbar{}F'(t0)\\textbar{}^3
+
+Remarque~18.4.14 Avec la même technique, le lecteur montrera sans
+difficulté que la torsion est donnée par \tau(t0) =
+{[}F'(t0),F'`(t0),F'`'(t0){]}
+\over
+\\textbar{}F'(t0)∧F''(t0)\\textbar{}^2
+.
+
+{[}
+{[}
+{[}
+{[}

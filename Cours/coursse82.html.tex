@@ -1,0 +1,1040 @@
+% \textbf{Warning: 
+% requires JavaScript to process the mathematics on this page.\\ If your
+% browser supports JavaScript, be sure it is enabled.}
+
+% \begin{center}\rule{3in}{0.4pt}\end{center}
+
+% {[}
+% {[}{]}
+% {[}
+
+% \subsubsection{15.1 Dérivées partielles}
+
+% \paragraph{15.1.1 Notion de dérivée partielle}
+
+% Définition~15.1.1 Soit E et F deux espaces vectoriels normés. Soit U un
+% ouvert de E, f : U \rightarrow~ F, a \in U. Soit v \in E
+% \diagdown\0\. On dit que f admet au point a
+% une dérivée partielle suivant le vecteur v si l'application
+% t\mapsto~f(a + tv) (définie sur un voisinage de 0)
+% est dérivable au point 0.
+
+% Remarque~15.1.1 L'existence de la dérivée partielle en a suivant le
+% vecteur v est donc équivalente à l'existence de
+% limt\rightarrow~0~ f(a+tv)-f(a)
+% \over t = \partial~vf(a). Remarquons que si v' = \lambda~v,
+% \lambda~\neq~0, alors  f(a+tv')-f(a)
+% \over t = \lambda~ f(a+uv)-f(a) \over u
+% avec u = \lambda~t ce qui montre que f admet en a une dérivée partielle selon v
+% si et seulement si f admet une dérivée partielle suivant \lambda~v et qu'alors
+% \partial~\lambda~vf(a) = \lambda~\partial~vf(a).
+
+% Exemple~15.1.1 Soit f : \mathbb{R}~^2 \rightarrow~ \mathbb{R}~ définie par f(x,y) =
+% x^2 \over y si
+% y\neq~0 et f(x,0) = 0. Soit v =
+% (a,b)\neq~(0,0). On a  f((0,0)+tv)-f(0,0)
+% \over t = \left \
+% \cases 0 &si b = 0 \cr 
+% a^2 \over b &si
+% b\neq~0  \right .. On en déduit
+% que f admet une dérivée partielle suivant tout vecteur v et que
+% \partial~vf(0,0) = \left \
+% \cases 0 &si b = 0 \cr 
+% a^2 \over b &si
+% b\neq~0  \right .. Remarquons
+% que l'application v\mapsto~\partial~vf(0,0) n'est
+% pas linéaire. Remarquons également que f n'est pas continue en (0,0)
+% (puisque limt\rightarrow~0f(t,t^2~) =
+% 1\neq~f(0,0)). L'existence de dérivée partielle
+% suivant tout vecteur n'implique donc pas la continuité.
+
+% Proposition~15.1.1 On a les propriétés évidentes de la dérivation de
+% t\mapsto~f(a + tv) à savoir (i) si f et g admettent
+% en a une dérivée partielle suivant le vecteur v, il en est de même de \alpha~f
+% + \beta~g et \partial~v(\alpha~f + \beta~g)(a) = \alpha~\partial~vf(a) +
+% \beta~\partial~vg(a). (ii) si f et g (à valeurs scalaires) admettent en a
+% une dérivée partielle suivant le vecteur v, il en est de même de fg et
+% \partial~v(fg)(a) = g(a)\partial~vf(a) + f(a)\partial~vg(a).
+
+% Remarque~15.1.2 Par contre, on n'a pas de théorème général de
+% composition des dérivées partielles. En reprenant l'exemple ci dessus, f
+% : \mathbb{R}~^2 \rightarrow~ \mathbb{R}~ définie par f(x,y) = x^2
+% \over y si y\neq~0 et f(x,0) =
+% 0, l'application f admet en (0,0) une dérivée partielle suivant tout
+% vecteur, l'application t\mapsto~(t,t^2)
+% est dérivable en 0 et pourtant
+% t\mapsto~f(t,t^2) n'est pas dérivable en
+% 0 (elle n'y est même pas continue).
+
+% Définition~15.1.2 Soit E un espace vectoriel normé de dimension finie, \mathcal{E}
+% =
+% (e1,\\ldots,en~)
+% une base de E, F un espace vectoriel normé. Soit U un ouvert de E, f : U
+% \rightarrow~ F, a \in U. On dit que f admet au point a une dérivée partielle d'indice
+% i (suivant la base \mathcal{E}) si elle admet une dérivée partielle suivant le
+% vecteur ei. On note alors  \partial~f \over
+% \partial~xi (a) = \partial~eif(a).
+
+% Exemple~15.1.2 Si E = \mathbb{R}~^n et si \mathcal{E} est la base canonique de
+% \mathbb{R}~^n, l'existence d'une dérivée partielle d'indice i au point
+% a =
+% (a1,\\ldots,an~)
+% équivaut à la dérivabilité au point ai de l'application
+% partielle
+% xi\mapsto~f(a1,\\ldots,ai-1,xi,ai+1,\\\ldots,an~).
+% On retrouve bien la notion habituelle de dérivée partielle~: dérivée
+% suivant la variable xi, toutes les autres étant considérées
+% comme constantes.
+
+% \paragraph{15.1.2 Composition des dérivées partielles}
+
+% On a vu précédemment qu'on n'avait pas de théorème de composition des
+% dérivées partielles en toute généralité. On va introduire une notion
+% d'application de classe \mathcal{C}^1.
+
+% Définition~15.1.3 Soit U un ouvert de \mathbb{R}~^n, f : U \rightarrow~ F. On dit
+% que f est de classe \mathcal{C}^1 au point a si, sur un certain
+% voisinage V de a, f admet des dérivées partielles de tout indice i \in
+% {[}1,n{]} et si ces dérivées partielles x\mapsto~
+% \partial~f \over \partial~xi (x) sont continues au point a.
+
+% Lemme~15.1.2 Soit F un espace vectoriel de dimension finie, V un ouvert
+% de \mathbb{R}~^n, f : V \rightarrow~ F. Soit I un intervalle de \mathbb{R}~, t \in I et \phi =
+% (\phi1,\\ldots,\phin~)
+% : I \rightarrow~ V . On suppose que \phi est dérivable au point t et que f est de
+% classe \mathcal{C}^1 au point \phi(t). Alors f \cdot \phi est dérivable au point
+% t et (f \cdot \phi)'(t) =\ \\sum
+%  i=1^n \partial~f \over \partial~xi
+% (\phi(t))\phii'(t).
+
+% Démonstration Sans nuire à la généralité, en prenant une base (sur \mathbb{R}~) de
+% F et en travaillant composante par composante, on peut supposer que f
+% est à valeurs réelles. On écrit
+
+% \begin{align*} f(\phi(t + h)) - f(\phi(t))&& \%&
+% \\ & =& f(\phi1(t +
+% h),\\ldots,\phin~(t
+% + h)) -
+% f(\phi1(t),\\ldots,\phin~(t))
+% \%& \\ & =& \\sum
+% i=1^n(f(\ldots,\phi~
+% i-1(t),\phii(t + h),\phii+1(t +
+% h),\ldots~)\%&
+% \\ & & \qquad -
+% f(\\ldots,\phii-1(t),\phii(t),\phii+1~(t
+% + h),\\ldots~)) \%&
+% \\ \end{align*}
+
+% Mais \phi est continue au point t et donc pour h assez petit, tous les
+% (\phi1(t),\\ldots,\phii-1(t),\phii~(t
+% + h),\phii+1(t +
+% h),\\ldots,\phin~(t
+% + h)) se trouvent à l'intérieur d'une boule de centre a sur laquelle les
+% dérivées partielles de f de tout indice existent. En particulier,
+% l'application
+% xi\mapsto~f(\phi1(t),\\ldots,\phii-1(t),xi,\phii+1~(t
+% +
+% h),\\ldots,\phin~(t
+% + h)) est dérivable sur le segment {[}\phii(t),\phii(t +
+% h){]} et on peut appliquer le théorème des accroissements finis. On
+% obtient l'existence d'un \xi~i \in
+% {[}\phii(t),\phii(t + h){]} tel que
+
+% \begin{align*}
+% f(\phi1(t),\\ldots,\phii-1(t),\phii~(t
+% + h),\phii+1(t +
+% h),\\ldots,\phin~(t
+% + h))&& \%& \\ & &
+% -f(\phi1(t),\\ldots,\phii-1(t),\phii(t),\phii+1~(t
+% +
+% h),\\ldots,\phin~(t
+% + h))\%& \\ & =& (\phii(t + h) -
+% \phii(t)) \%& \\ & &
+% \quad  \partial~f \over \partial~xi
+% (\phi1(t),\\ldots,\phii-1(t),\xi~i,\phii+1~(t
+% +
+% h),\\ldots,\phin~(t
+% + h)) \%& \\
+% \end{align*}
+
+% Comme \phi est continue au point t et \xi~i \in
+% {[}\phii(t),\phii(t + h){]}, on a
+
+% \begin{align*}
+% limh\rightarrow~0(\phi1(t),\\\ldots,\phii-1(t),\xi~i,\phii+1~(t
+% +
+% h),\\ldots,\phin~(t
+% + h))&&\%& \\ & =&
+% (\phi1(t),\\ldots,\phii-1(t),\phii(t),\phii+1(t),\\\ldots,\phin~(t))\%&
+% \\ & =& \phi(t) \%&
+% \\ \end{align*}
+
+% et comme  \partial~f \over \partial~xi est continue au
+% point \phi(t), on a
+
+% \begin{align*} \partial~f \over
+% \partial~xi (\phi(t))&& \%& \\ & =&
+% limh\rightarrow~0~ \partial~f \over
+% \partial~xi
+% (\phi1(t),\\ldots,\phii-1(t),\xi~i,\phii+1~(t
+% +
+% h),\\ldots,\phin~(t
+% + h))\%& \\
+% \end{align*}
+
+% Il suffit alors de diviser par h et de faire tendre h vers 0 pour voir
+% que
+
+% limh\rightarrow~0~ f(\phi(t + h)) - f(\phi(t))
+% \over h = \\sum
+% i=1^n \partial~f \over \partial~xi
+% (\phi(t))\phii'(t)
+
+% ce qui achève la démonstration.
+
+% Appliquant ce lemme à \phi : t\mapsto~g(a + tv) au
+% point t = 0, on obtient le théorème suivant
+
+% Théorème~15.1.3 Soit F un espace vectoriel de dimension finie, U un
+% ouvert de \mathbb{R}~^n, f : U \rightarrow~ F. Soit E un espace vectoriel normé, V
+% un ouvert de E et g =
+% (g1,\\ldots,gn~)
+% : V \rightarrow~ U \subset~ \mathbb{R}~^n. Soit a \in V et v \in E
+% \diagdown\0\. Si g admet en a une dérivée
+% partielle suivant le vecteur v et si f est de classe \mathcal{C}^1 au
+% point a, alors f \cdot g admet en a une dérivée partielle suivant le vecteur
+% v et on a
+
+% \partial~v(f \cdot g)(a) = \\sum
+% i=1^n \partial~f \over \partial~xi
+% (g(a))\partial~vgi(a)
+
+% Dans le cas particulier où E = \mathbb{R}~^p et où on prend pour v le
+% \\\\jmathmathmathmath-ième vecteur de la base canonique, on obtient la version suivante (on
+% a changé le nom des variables pour les appeler
+% y1,\\ldots,yn~
+% dans \mathbb{R}~^n).
+
+% Corollaire~15.1.4 Soit F un espace vectoriel de dimension finie, U un
+% ouvert de \mathbb{R}~^n, f : U \rightarrow~ F. Soit V un ouvert de \mathbb{R}~^p
+% et g =
+% (g1,\\ldots,gn~)
+% : V \rightarrow~ U \subset~ \mathbb{R}~^n. Soit a \in V et \\\\jmathmathmathmath \in {[}1,p{]}. Si g admet en a
+% une dérivée partielle d'indice \\\\jmathmathmathmath et si f est de classe \mathcal{C}^1 au
+% point a, alors f \cdot g admet en a une dérivée partielle d'indice \\\\jmathmathmathmath et on a
+
+%  \partial~(f \cdot g) \over \partial~x\\\\jmathmathmathmath (a) =
+% \sum i=1^n~ \partial~f
+% \over \partial~yi (g(a)) \partial~gi
+% \over \partial~x\\\\jmathmathmathmath (a)
+
+% Remarque~15.1.3 On en déduit immédiatement que la composée de deux
+% applications de classe \mathcal{C}^1 est encore de classe
+% \mathcal{C}^1.
+
+% Citons aussi le corollaire suivant du lemme, où l'on prend \phi(t) = a + tv
+
+% Corollaire~15.1.5 Soit F un espace vectoriel de dimension finie, V un
+% ouvert de \mathbb{R}~^n, f : V \rightarrow~ F. Soit a \in V . Si f est de classe
+% \mathcal{C}^1 au point a, alors elle admet en a des dérivées partielles
+% suivant tout vecteur et on a
+
+% \partial~vf(a) = \\sum
+% i=1^nv i \partial~f \over
+% \partial~xi (a)\qquad \text si v =
+% (v1,\ldots,vn~)
+
+% Remarque~15.1.4 On voit que dans ce cas
+% v\mapsto~\partial~vf(a) est linéaire. Cette
+% remarque nous conduira à la définition de la différentielle dans la
+% section suivante.
+
+% \paragraph{15.1.3 Théorème des accroissements finis et applications}
+
+% Théorème~15.1.6 Soit U un ouvert de \mathbb{R}~^n, f : U \rightarrow~ \mathbb{R}~ de classe
+% \mathcal{C}^1. Soit a \in U et h \in \mathbb{R}~^n tel que {[}a,a + h{]} \subset~
+% U. Alors, il existe \theta \in{]}0,1{[} tel que
+
+% f(a + h) - f(a) = \\sum
+% i=1^nh i \partial~f \over
+% \partial~xi (a + \thetah)
+
+% Démonstration Soit \psi : {[}0,1{]} \rightarrow~ \mathbb{R}~ définie par \psi(t) = f(a + th). Le
+% lemme du paragraphe précédent montre que \psi est dérivable sur {[}0,1{]}
+% et que \psi'(t) = \\sum ~
+% i=1^nhi \partial~f \over
+% \partial~xi (a + th). Le théorème des accroissements finis assure
+% qu'il existe \theta \in{]}0,1{[} tel que \psi(1) - \psi(0) = (1 - 0)\psi'(\theta), ce qui
+% n'est autre que la formule ci dessus.
+
+% Corollaire~15.1.7 Soit U un ouvert de \mathbb{R}~^n, F un espace
+% vectoriel de dimension finie, f : U \rightarrow~ F de classe \mathcal{C}^1. Alors
+% f est continue.
+
+% Démonstration En prenant une base (sur \mathbb{R}~) de F et en travaillant
+% composante par composante, on peut supposer que f est à valeurs réelles.
+% Puisque les dérivées partielles sont continues au point a, il existe \eta
+% \textgreater{} 0 tel que B(a,\eta) \subset~ U et \forall~~x \in
+% B(0,\eta), \textbar{} \partial~f \over \partial~xi (x) - \partial~f
+% \over \partial~xi (a)\textbar{}\leq 1, d'où \textbar{}
+% \partial~f \over \partial~xi (x)\textbar{}\leq 1 + \textbar{}
+% \partial~f \over \partial~xi (a)\textbar{}. Pour
+% \\textbar{}h\\textbar{} \textless{} \eta, on
+% a alors {[}a,a + h{]} \subset~ B(0,\eta) et donc \textbar{}f(a + h) -
+% f(a)\textbar{}\leq\\sum ~
+% i=1^n\textbar{}hi\textbar{}\,\left
+% (\left \textbar{} \partial~f \over
+% \partial~xi (a)\right \textbar{} +
+% 1\right ), ce qui montre la continuité de f au point a.
+
+% Corollaire~15.1.8 Soit U un ouvert connexe de \mathbb{R}~^n, F un
+% espace vectoriel de dimension finie, f : U \rightarrow~ F. Alors f est constante si
+% et seulement si~elle est de classe \mathcal{C}^1 et toutes ses dérivées
+% partielles sont nulles.
+
+% Démonstration Si f est constante, il est clair qu'elle est de classe
+% \mathcal{C}^1 et que toutes ses dérivées partielles sont nulles. Pour
+% la réciproque, en prenant une base (sur \mathbb{R}~) de F et en travaillant
+% composante par composante, on peut supposer que f est à valeurs réelles.
+% Soit x0 \in U et soit X = \x \in
+% U∣f(x) = f(x0)\.
+% Puisque f est continue (d'après le corollaire précédent), X est un fermé
+% de U, évidemment non vide. Montrons que X est également ouvert dans U~;
+% soit en effet x1 dans X et soit \eta \textgreater{} 0 tel que
+% B(x1,\eta) \subset~ U. Pour
+% \\textbar{}h\\textbar{} \textless{} \eta, on
+% a {[}x1,x1 + h{]} \subset~ B(x1,\eta) \subset~ U et le
+% théorème des accroissements finis nous donne f(x1 + h) =
+% f(x1) = f(x0), les dérivées partielles étant
+% supposées nulles. On a donc B(x1,\eta) \subset~ X, et donc X est ouvert.
+% Comme X est à la fois ouvert et fermé, non vide dans U connexe, on a X =
+% U et donc f est constante.
+
+% \paragraph{15.1.4 Dérivées partielles successives}
+
+% On définit la notion de dérivées partielles successives de manière
+% récursive de la manière suivante
+
+% Définition~15.1.4 Soit U un ouvert de \mathbb{R}~^n, a \in U et f : U \rightarrow~
+% E. Soit
+% (i1,\\ldots,ik~)
+% \in {[}1,n{]}^k. On dit que  \partial~^kf
+% \over
+% \partial~xi1\\ldots\partial~xik~
+% (a) existe s'il existe un ouvert V tel que a \in V \subset~ U et sur lequel 
+% \partial~^k-1f \over
+% \partial~xi2\\ldots\partial~xik~
+% (x) existe et si l'application x\mapsto~
+% \partial~^k-1f \over
+% \partial~xi2\\ldots\partial~xik~
+% (x) admet une dérivée partielle d'indice i1. On pose alors
+
+%  \partial~^kf \over
+% \partial~xi1\\ldots\partial~xik~
+% (a) = \partial~ \over \partial~xi1
+% \left ( \partial~^k-1f \over
+% \partial~xi2\\ldots\partial~xik~
+% \right )(a)
+
+% Définition~15.1.5 Soit U un ouvert de \mathbb{R}~^n et f : U \rightarrow~ E. On
+% dit que f est de classe C^k sur U si,
+% \forall~(i1,\\\ldots,ik~)
+% \in {[}1,n{]}^k, l'application x\mapsto~
+% \partial~^kf \over
+% \partial~xi1\\ldots\partial~xik~
+% (x) est définie et continue sur U.
+
+% Remarque~15.1.5 Comme on a vu que toute application de classe
+% \mathcal{C}^1 est continue, on en déduit immédiatement que toute
+% application de classe C^k est aussi de classe
+% C^k-1. On dira bien entendu que f est de classe
+% C^\infty~ si elle est de classe C^k pour tout k. Une
+% récurrence évidente sur k montre que la composée de deux applications de
+% classe C^k est encore de classe C^k et que donc la
+% composée de deux applications de classe C^\infty~ est encore de
+% classe C^\infty~.
+
+% Lemme~15.1.9 Soit U un ouvert de \mathbb{R}~^2, f : U \rightarrow~ \mathbb{R}~ de classe
+% C^2. Alors,  \partial~^2f \over
+% \partial~x1\partial~x2 = \partial~^2f \over
+% \partial~x2\partial~x1 .
+
+% Démonstration Soit (a1,a2) \in U et soit
+
+% \begin{align*} \phi(h1,h2)& =&
+% 1 \over h1h2 (f(a1 +
+% h1,a2 + h2) - f(a1 +
+% h1,a2)\%& \\ & &
+% \quad \quad \quad -
+% f(a1,a2 + h2) +
+% f(a1,a2)) \%& \\
+% \end{align*}
+
+% définie pour h1 et h2 non nuls et assez petits. On a
+% \phi(h1,h2) = 1 \over
+% h1h2 \psi1(a1 + h1) -
+% \psi1(a1) avec \psi1(x1) =
+% f(x1,a2 + h2) -
+% f(x1,a2). Or \psi1 est dérivable sur
+% {[}a1,a1 + h1{]} avec
+% \psi1'(x1) = \partial~f \over \partial~x1
+% (x1,a2 + h2) - \partial~f \over
+% \partial~x1 (x1,a2). On peut donc appliquer le
+% théorème des accroissements finis, et donc il existe \xi~1 \in
+% {[}a1,a1 + h1{]} tel que
+
+% \begin{align*} \phi(h1,h2)& =&
+% 1 \over h2 \psi1'(\xi~1) \%&
+% \\ & =& 1 \over
+% h2 \left ( \partial~f \over
+% \partial~x1 (\xi~1,a2 + h2) - \partial~f
+% \over \partial~x1
+% (\xi~1,a2)\right )\%&
+% \\ & =& \partial~^2f
+% \over \partial~x2\partial~x1
+% (\xi~1,\xi~2) \%& \\
+% \end{align*}
+
+% avec \xi~2 \in {[}a2,a2 + h2{]} en
+% appliquant le théorème des accroissements finis à
+% x2\mapsto~ \partial~f \over
+% \partial~x1 (\xi~1,x2) qui est dérivable sur
+% {[}a2,a2 + h2{]}, de dérivée 
+% \partial~^2f \over \partial~x2\partial~x1
+% (\xi~1,x2). Quand h1 et h2 tendent
+% vers 0, \xi~1 et \xi~2 tendent respectivement vers
+% a1 et a2 et la continuité de  \partial~^2f
+% \over \partial~x2\partial~x1 montre que
+% lim(h1,h2)\rightarrow~(0,0)\phi(h1,h2~)
+% = \partial~^2f \over \partial~x2\partial~x1
+% (a1,a2). Comme les deux variables \\\\jmathmathmathmathouent un rôle
+% symétrique dans la définition de \phi, en posant \psi2(x2)
+% = f(a1 + h1,x2) -
+% f(a1,x2) et en appliquant deux fois le théorème des
+% accroissements finis, on obtient
+% lim(h1,h2)\rightarrow~(0,0)\phi(h1,h2~)
+% = \partial~^2f \over \partial~x1\partial~x2
+% (a1,a2), ce qui démontre que  \partial~^2f
+% \over \partial~x1\partial~x2
+% (a1,a2) = \partial~^2f \over
+% \partial~x2\partial~x1 (a1,a2).
+
+% Théorème~15.1.10 (Schwarz). Soit U un ouvert de \mathbb{R}~^n et f : U
+% \rightarrow~ E (espace vectoriel normé de dimension finie) de classe
+% C^2. Alors \forall~~(i,\\\\jmathmathmathmath) \in
+% {[}1,n{]}^2,
+
+%  \partial~^2f \over \partial~xi\partial~x\\\\jmathmathmathmath =
+% \partial~^2f \over \partial~x\\\\jmathmathmathmath\partial~xi
+
+% Démonstration En prenant une base de E, on peut se contenter de montrer
+% le résultat lorsque E = \mathbb{R}~. Si i = \\\\jmathmathmathmath, le résultat est évident. Supposons
+% i \textless{} \\\\jmathmathmathmath et soit
+% (a1,\\ldots,an~)
+% \in \mathbb{R}~^n. On applique le lemme précédent à l'application de
+% classe C^2, définie sur un ouvert contenant
+% (ai,a\\\\jmathmathmathmath),
+
+% g(xi,x\\\\jmathmathmathmath) =
+% f(a1,\\ldots,ai-1,xi,ai+1,\\\ldots,a\\\\jmathmathmathmath-1,x\\\\jmathmathmathmath,a\\\\jmathmathmathmath+1,\\\ldots,an~)
+
+% qui est de classe C^2 (composée d'applications de classe
+% C^2). On a donc  \partial~^2g \over
+% \partial~xi\partial~x\\\\jmathmathmathmath (ai,a\\\\jmathmathmathmath) =
+% \partial~^2g \over \partial~x\\\\jmathmathmathmath\partial~xi
+% (ai,a\\\\jmathmathmathmath), soit encore
+
+%  \partial~^2f \over \partial~xi\partial~x\\\\jmathmathmathmath
+% (a1,\\ldots,an~)
+% = \partial~^2f \over \partial~x\\\\jmathmathmathmath\partial~xi
+% (a1,\\ldots,an~)
+
+% Corollaire~15.1.11 Soit U un ouvert de \mathbb{R}~^n et f : U \rightarrow~ E de
+% classe C^k. Soit
+% (i1,\\ldots,ik~)
+% \in {[}1,n{]}^k. Pour toute permutation \sigma de {[}1,k{]} on a
+
+%  \partial~^kf \over
+% \partial~xi\sigma(1)\\ldots\partial~xi\sigma(k)~
+% = \partial~^kf \over
+% \partial~xi1\\ldots\partial~xik~
+
+% Démonstration D'après le théorème de Schwarz, le résultat est vrai
+% lorsque \sigma = \tau\\\\jmathmathmathmath,\\\\jmathmathmathmath+1 est la transposition qui échange \\\\jmathmathmathmath et \\\\jmathmathmathmath +
+% 1. Mais toute permutation de {[}1,k{]} est un produit de telles
+% transpositions (facile) ce qui démontre le corollaire.
+
+% Notation définitive Soit
+% (i1,\\ldots,ik~)
+% \in {[}1,n{]}^k. Pour \\\\jmathmathmathmath \in {[}1,n{]}, soit k\\\\jmathmathmathmath le
+% nombre de iq qui sont égaux à \\\\jmathmathmathmath. On a donc à une permutation
+% près, la famille
+% (i1,\\ldots,ik~)
+% qui est égale à
+% (\overbrace1,\\ldots,1k1~
+% fois,\\ldots,\overbrace\\\\jmathmathmathmath,\\\ldots,\\\\jmathmathmathmath~
+% k\\\\jmathmathmathmath
+% fois,\\ldots,\overbracen,\\\ldots,nkn~
+% fois), chaque \\\\jmathmathmathmath étant compté k\\\\jmathmathmathmath fois. En notant
+% \partial~x\\\\jmathmathmathmath^k\\\\jmathmathmathmath à la place de
+% \overbrace\partial~x\\\\jmathmathmathmath\\ldots\partial~x\\\\jmathmathmathmath~
+% k\\\\jmathmathmathmath fois, on obtient
+
+%  \partial~^kf \over
+% \partial~xi1\\ldots\partial~xik~
+% = \partial~^kf \over
+% \partial~x1^k1\\ldots\partial~xn^kn~
+
+% \paragraph{15.1.5 Formules de Taylor}
+
+% Lemme~15.1.12 Soit U un ouvert de \mathbb{R}~^n et f : U \rightarrow~ E de classe
+% C^k. Soit a \in U et h \in \mathbb{R}~^n tel que {[}a,a + h{]} \subset~
+% U. Posons \phi(t) = f(a + th), définie et de classe C^k sur
+% {[}0,1{]}. Alors, pour tout t \in {[}0,1{]},
+
+% \begin{align*} \phi^(k)(t) =
+% \\sum
+% k1+\ldots+kn=k~
+% k! \over
+% k1!\ldotskn!~
+% h1^k1
+% \ldotshn^kn ~
+% \partial~^kf \over
+% \partial~x1^k1\ldots\partial~xn^kn~
+% (a + th)& & \%& \\
+% \end{align*}
+
+% Démonstration Par récurrence sur k. Pour k = 1, ce n'est qu'une autre
+% formulation du résultat
+
+% \begin{align*} \phi'(t)& =&
+% \sum i=1^nh i~ \partial~f
+% \over \partial~xi (a + th) \%&
+% \\ & =& \\sum
+% k1+\ldots+kn=1h1^k1~
+% \ldotshn^kn ~
+% \partial~f \over
+% \partial~x1^k1\ldots\partial~xn^kn~
+% (a + th)\%& \\
+% \end{align*}
+
+% en posant ki = 1 et k\\\\jmathmathmathmath = 0 pour
+% i\neq~\\\\jmathmathmathmath.
+
+% Supposons le résultat démontré pour k - 1. On a donc
+
+% \begin{align*} \phi^(k-1)(t) =&& \%&
+% \\ & & \\sum
+% k1+\ldots+kn=k-1~
+% (k - 1)! \over
+% k1!\ldotskn!~
+% h1^k1
+% \ldotshn^kn ~
+% \partial~^k-1f \over
+% \partial~x1^k1\ldots\partial~xn^kn~
+% (a + th)\%& \\
+% \end{align*}
+
+% On en déduit que
+
+% \begin{align*} \phi^(k)(t) =&& \%&
+% \\ & & \\sum
+% k1+\ldots+kn=k-1~
+% (k - 1)! \over
+% k1!\ldotskn!~
+% h1^k1
+% \ldotshn^kn ~
+% d \over dt \left ( \partial~^k-1f
+% \over
+% \partial~x1^k1\ldots\partial~xn^kn~
+% (a + th)\right )\%& \\
+% \end{align*}
+
+% soit encore
+
+% \begin{align*} \phi^(k)(t)& =&
+% \\sum
+% k1+\ldots+kn=k-1~
+% (k - 1)! \over
+% k1!\ldotskn!~
+% h1^k1
+% \ldotshn^kn ~
+% \%& \\ & & \quad
+% \quad  \\sum
+% i=1^nh i \partial~^kf
+% \over
+% \partial~x1^k1\ldots\partial~xi^ki+1\\ldots\partial~xn^kn~
+% (a + th)\%& \\
+% \end{align*}
+
+% En intervertissant les deux signes de somme on obtient
+
+% \begin{align*} \phi^(k)(t)& =&
+% \sum i=1^n~
+% \\sum
+% k1+\ldots+kn=k-1~
+% (k - 1)!(ki + 1) \over
+% k1!\ldots(ki~ +
+% 1)!\ldotskn!~ \%&
+% \\ & & \quad
+% \quad h1^k1
+% \\ldotshi^ki+1\\\ldotsh~
+% n^kn  \partial~^kf \over
+% \partial~x1^k1\\ldots\partial~xi^ki+1\\\ldots\partial~xn^kn~
+% (a + th)\%& \\
+% \end{align*}
+
+% et en faisant un changement d'indice
+
+% \begin{align*} \phi^(k)(t)& =&
+% \sum i=1^n~
+% \sum ~
+% k1+\ldots+kn~=k
+% \atop ki≥1  (k - 1)!ki
+% \over
+% k1!\ldotskn!~ \%&
+% \\ & & \quad
+% \quad h1^k1
+% \\ldotshi^ki~
+% \\ldotshn^kn~
+%  \partial~^kf \over
+% \partial~x1^k1\\ldots\partial~xi^ki\\\ldots\partial~xn^kn~
+% (a + th)\%& \\
+% \end{align*}
+
+% Réintroduisons les termes pour ki = 0 qui sont nuls puisqu'ils
+% contiennent le facteur (k - 1)!ki, on obtient
+
+% \begin{align*} \phi^(k)(t)& =&
+% \sum i=1^n~
+% \\sum
+% k1+\ldots+kn=k~
+% (k - 1)!ki \over
+% k1!\ldotskn!~
+% h1^k1
+% \ldotshi^ki~
+% \ldotshn^kn~
+% \%& \\ & & \quad
+% \quad \quad  \partial~^kf
+% \over
+% \partial~x1^k1\\ldots\partial~xi^ki\\\ldots\partial~xn^kn~
+% (a + th) \%& \\
+% \end{align*}
+
+% Ceci nous permet de réintervertir les deux sommations, soit encore,
+% après mise en facteur
+
+% \begin{align*} \phi^(k)(t)& =&
+% \\sum
+% k1+\ldots+kn=k~
+% (k - 1)!\sum i=1^nki~
+% \over
+% k1!\ldotskn!~
+% h1^k1
+% \ldotshi^ki~
+% \ldotshn^kn~
+% \%& \\ & & \quad
+% \quad \quad  \partial~^kf
+% \over
+% \partial~x1^k1\\ldots\partial~xi^ki\\\ldots\partial~xn^kn~
+% (a + th) \%& \\
+% \end{align*}
+
+% soit encore
+
+% \begin{align*} \phi^(k)(t)& =&
+% \\sum
+% k1+\ldots+kn=k~
+% k! \over
+% k1!\ldotskn!~
+% h1^k1
+% \ldotshn^kn ~
+% \partial~^kf \over
+% \partial~x1^k1\ldots\partial~xn^kn~
+% (a + th)\%& \\
+% \end{align*}
+
+% ce qui achève la récurrence.
+
+% Remarque~15.1.6 Cette formule est tout à fait analogue à la formule du
+% binôme généralisée
+
+% (X1 +
+% \\ldots~ +
+% Xn)^k = \\sum
+% k1+\ldots+kn=k~
+% k! \over
+% k1!\ldotskn!~
+% X1^k1
+% \ldotsXn^kn ~
+
+% Cette remarque nous conduira à une notation plus compacte. Introduisons
+% un produit symbolique sur les expressions du type
+% h1^k1\\ldotshn^kn~
+% \partial~^k \over
+% \partial~x1^k1\\ldots\partial~xn^kn~
+% en posant
+
+% \begin{align*} \left
+% (h1^k1
+% \\ldotshn^kn~
+%  \partial~^k \over
+% \partial~x1^k1\\ldots\partial~xn^kn~
+% \right ) ∗\left
+% (h1^l1
+% \\ldotshn^ln~
+%  \partial~^l \over
+% \partial~x1^l1\\ldots\partial~xn^ln~
+% \right ) =&&\%& \\ & &
+% h1^k1+l1
+% \\ldotshn^kn+ln~
+%  \partial~^k+l \over
+% \partial~x1^k1+l1\\ldots\partial~xn^kn+ln~
+% \quad \quad \quad \%&
+% \\ \end{align*}
+
+% Ce produit est commutatif, et
+
+% \begin{align*} \\sum
+% k1+\ldots+kn=k~
+% k! \over
+% k1!\ldotskn!~
+% h1^k1
+% \ldotshn^kn ~
+% \partial~^k \over
+% \partial~x1^k1\ldots\partial~xn^kn~
+% &&\%& \\ & & = \left
+% (h1 \partial~ \over \partial~x1 +
+% \\ldots~ +
+% hn \partial~ \over \partial~xn
+% \right )^k∗\quad
+% \quad \quad \%&
+% \\ \end{align*}
+
+% où la notation ^k∗ désigne la puissance k-ième pour ce
+% produit commutatif. La formule s'écrit alors de manière plus agréable
+% sous la forme
+
+% \phi^(k)(t) = \left (h 1 \partial~
+% \over \partial~x1 +
+% \\ldots~ +
+% hn \partial~ \over \partial~xn
+% \right )^k∗f(a + th)
+
+% Ces puissances se développent de la manière évidente en respectant la
+% règle de calcul pour le produit ∗.
+
+% Exemple~15.1.3 \phi'(t) = \left (h1 \partial~
+% \over \partial~x1 +
+% \\ldots~ +
+% hn \partial~ \over \partial~xn
+% \right )f(a + th)
+
+% \begin{align*} \phi''(t)& =& \left
+% (h1 \partial~ \over \partial~x1 +
+% \\ldots~ +
+% hn \partial~ \over \partial~xn
+% \right )^2∗f(a + th) \%&
+% \\ & =& \\sum
+% i=1^nh i^2 \partial~^2f
+% \over \partial~xi^2 (a + th) +
+% 2\\sum
+% i\textless{}\\\\jmathmathmathmathhih\\\\jmathmathmathmath \partial~^2f
+% \over \partial~xi\partial~x\\\\jmathmathmathmath (a + th)\%&
+% \\ \end{align*}
+
+% et ainsi de suite.
+
+% Théorème~15.1.13 (formule de Taylor avec reste intégral). Soit U un
+% ouvert de \mathbb{R}~^n et f : U \rightarrow~ E de classe C^k+1. Soit a
+% \in U et h \in \mathbb{R}~^n tel que {[}a,a + h{]} \subset~ U. Alors
+
+% \begin{align*} f(a + h)& =& f(a) +
+% \sum p=1^k~ 1
+% \over p! \left (h1 \partial~
+% \over \partial~x1 +
+% \ldots + hn~ \partial~
+% \over \partial~xn \right
+% )^p∗f(a)\%& \\
+% +\int  0^1~ (1 -
+% t)^k \over k!  \left
+% (h1 \partial~ \over \partial~x1 +
+% \\ldots~ +
+% hn \partial~ \over \partial~xn
+% \right )^(k+1)∗f(a + th) dt&&\%&
+% \\ \end{align*}
+
+% Démonstration C'est simplement la formule de Taylor avec reste intégral
+% pour la fonction \phi~:
+
+% \phi(1) = \phi(0) + \sum p=1^k~ 1
+% \over p! \phi^(p)(0) +
+% \\int  ~
+% 0^1 (1 - t)^k \over k!
+% \phi^(k+1)(t) dt
+
+% Remarque~15.1.7 On utilisera le plus souvent cette formule pour k = 1~;
+% dans cas d'une fonction définie sur un ouvert de \mathbb{R}~^2 on
+% obtiendra par exemple
+
+% \begin{align*} f(a + h)& =& f(a) + h1
+% \partial~f \over \partial~x1 (a) + h2 \partial~f
+% \over \partial~x2 (a) \%&
+% \\ & & \quad +
+% h1^2\int  0^1~(1
+% - t) \partial~^2f \over \partial~x1^2 (a
+% + th) dt \%& \\ & &
+% \quad + h2^2\\int
+%  0^1(1 - t) \partial~^2f \over
+% \partial~x2^2 (a + th) dt \%&
+% \\ & & \quad +
+% 2h1h2\int ~
+% 0^1(1 - t) \partial~^2f \over
+% \partial~x1\partial~x2 (a + th) dt\%&
+% \\ \end{align*}
+
+% Théorème~15.1.14 (formule de Taylor-Lagrange). Soit U un ouvert de
+% \mathbb{R}~^n et f : U \rightarrow~ \mathbb{R}~ de classe C^k+1. Soit a \in U et h
+% \in \mathbb{R}~^n tel que {[}a,a + h{]} \subset~ U. Alors, il existe \theta
+% \in{]}0,1{[} tel que
+
+% \begin{align*} f(a + h)& =& f(a) +
+% \sum p=1^k~ 1
+% \over p! \left (h1 \partial~
+% \over \partial~x1 +
+% \ldots + hn~ \partial~
+% \over \partial~xn \right
+% )^p∗f(a) \%& \\ & & + 1
+% \over (k + 1)! \left (h1 \partial~
+% \over \partial~x1 +
+% \\ldots~ +
+% hn \partial~ \over \partial~xn
+% \right )^(k+1)∗f(a + \thetah)\%&
+% \\ \end{align*}
+
+% Démonstration C'est simplement la formule de Taylor Lagrange pour la
+% fonction \phi~:
+
+% \phi(1) = \phi(0) + \sum p=1^k~ 1
+% \over p! \phi^(p)(0) + 1 \over
+% (k + 1)! \phi^(k+1)(\theta)
+
+% Théorème~15.1.15 (formule de Taylor-Young). Soit U un ouvert de
+% \mathbb{R}~^n et f : U \rightarrow~ E (espace vectoriel normé de dimension finie)
+% de classe C^k. Soit a \in U. Alors, quand h tend vers 0 on a
+
+% f(a + h) = f(a) + \sum p=1^k~ 1
+% \over p! \left (h1 \partial~
+% \over \partial~x1 +
+% \ldots + hn~ \partial~
+% \over \partial~xn \right
+% )^p∗f(a) +
+% o(\\textbar{}h\\textbar{}^k)
+
+% Démonstration Quitte à prendre une base de E et à travailler composante
+% par composante, on peut supposer que E = \mathbb{R}~~; toutes les normes sur
+% \mathbb{R}~^n étant équivalentes, on peut supposer que
+% \\textbar{}h\\textbar{} =
+% \textbar{}h1\textbar{} +
+% \\ldots~ +
+% \textbar{}hn\textbar{}. Soit \rho \textgreater{} 0 tel que B(a,\rho)
+% \subset~ U et soit h tel que
+% \\textbar{}h\\textbar{} \textless{} \rho. On
+% a alors {[}a,a + h{]} \subset~ B(a,\rho) \subset~ U~; on peut donc appliquer la formule
+% de Taylor-Lagrange à l'ordre k - 1 qui nous donne
+
+% \begin{align*} f(a + h)& -& f(a)
+% -\sum p=1^k~ 1
+% \over p! \left (h1 \partial~
+% \over \partial~x1 +
+% \ldots + hn~ \partial~
+% \over \partial~xn \right
+% )^p∗f(a)\%& \\ & =& 1
+% \over k! \left (h1 \partial~
+% \over \partial~x1 +
+% \\ldots~ +
+% hn \partial~ \over \partial~xn
+% \right )^k∗f(a + \thetah) \%&
+% \\ & -& 1 \over k!
+% \left (h1 \partial~ \over
+% \partial~x1 +
+% \\ldots~ +
+% hn \partial~ \over \partial~xn
+% \right )^k∗f(a) \%&
+% \\ \end{align*}
+
+% Mais les dérivées partielles de f sont continues. Soit \epsilon \textgreater{}
+% 0~; il existe \eta \textgreater{} 0 tel que
+
+% \begin{align*}
+% \\textbar{}h\\textbar{} \textless{} \eta&
+% \rigtharrow~&
+% \forall~(k1,\\\ldots,kn~)\text
+% tel que k1 +
+% \\ldots~ +
+% kn = k, \forall~~t \in {[}0,1{]} \%&
+% \\ & & \left \textbar{}
+% \partial~^kf \over
+% \partial~x1^k1\\ldots\partial~xn^kn~
+% (a + th)\right . -\left .
+% \partial~^kf \over
+% \partial~x1^k1\\ldots\partial~xn^kn~
+% (a)\right \textbar{} \textless{} \epsilon\%&
+% \\ \end{align*}
+
+% Pour \\textbar{}h\\textbar{} \textless{}
+% \eta, on a alors (en développant les deux puissances symboliques)
+
+% \begin{align*} \big
+% \textbar{}\left (\\sum
+% hi \partial~ \over \partial~xi
+% \right )^k∗f(a + \thetah) -\left
+% (\sum hi~ \partial~ \over
+% \partial~xi \right
+% )^k∗f(a)\big \textbar{}&&\%&
+% \\ & \textless{}&
+% \epsilon\\sum
+% k1+\ldots+kn=k~
+% k! \over
+% k1!\ldotskn!~
+% \textbar{}h1\textbar{}^k1
+% \ldots\textbar{}hn\textbar{}^kn~
+% \%& \\ & =&
+% \epsilon(\textbar{}h1\textbar{} +
+% \\ldots~ +
+% \textbar{}hn\textbar{})^k =
+% \epsilon\\textbar{}h\\textbar{}^k \%&
+% \\ \end{align*}
+
+% ce qui démontre le résultat.
+
+% \paragraph{15.1.6 Application aux extremums de fonctions de plusieurs
+% variables}
+
+% Soit U un ouvert de \mathbb{R}~^n et f : U \rightarrow~ \mathbb{R}~. Nous allons rechercher
+% les extremums de la fonction f à l'aide des résultats qui suivent.
+
+% Proposition~15.1.16 Soit U un ouvert de \mathbb{R}~^n et f : U \rightarrow~ \mathbb{R}~ de
+% classe \mathcal{C}^1. Soit a \in U. Si f admet en a un extremum local, on
+% a \forall~~i \in {[}1,n{]}, \partial~f \over
+% \partial~xi (a) = 0.
+
+% Démonstration Il suffit de remarquer que la fonction
+% t\mapsto~f(a + tei) (définie sur un
+% voisinage de 0) admet en 0 un extremum local. On a donc
+
+%  \partial~f \over \partial~xi (a) = d
+% \over dt \left (f(a +
+% tei)\right )t=0 = 0
+
+% Dans le cas des fonctions d'une variable, la condition ci dessus n'est
+% dé\\\\jmathmathmathmathà pas suffisante (considérer
+% x\mapsto~x^3 au point 0). Il est clair
+% qu'il en est de même a fortiori pour une fonction de plusieurs
+% variables. Pour obtenir des résultats plus précis et en particulier des
+% conditions suffisantes d'extremums, nous allons introduire une forme
+% quadratique sur \mathbb{R}~^n
+
+
+% Démonstration (i). Utilisons la formule de Taylor Young à l'ordre 2. On
+% a donc, en tenant compte de  \partial~f \over \partial~xi
+% (a) = 0, f(a + h) = f(a) + 1 \over 2 \Phi(h)
+% +\\textbar{}
+% h\\textbar{}^2\epsilon(h), avec
+% limh\rightarrow~0~\epsilon(h) = 0. Pour démontrer (i),
+% nous allons utiliser le lemme suivant
+
+% Lemme~15.1.18 Soit \Phi une forme quadratique définie positive sur
+% \mathbb{R}~^n (ou tout espace vectoriel normé de dimension finie).
+% Alors \exists~\alpha~ \textgreater{} 0,
+% \forall~h \in \mathbb{R}~^n~, \Phi(h) ≥
+% \alpha~\\textbar{}h\\textbar{}^2.
+
+% Démonstration Soit S la sphère unité de \mathbb{R}~^n. Comme \Phi est
+% continue sur S qui est compact, \Phi atteint sur S sa borne inférieure \alpha~.
+% Soit donc x0 \in S tel que \Phi(x0) = \alpha~
+% = inf x\inS~\Phi(x). Comme
+% x0\neq~0, on a \alpha~ \textgreater{} 0. De
+% plus, si h\neq~0, on a  h \over
+% \\textbar{}h\\textbar{} \in S, soit \Phi( h
+% \over
+% \\textbar{}h\\textbar{} ) ≥ \alpha~ soit 
+% \Phi(h) \over
+% \\textbar{}h\\textbar{}^2 ≥
+% \alpha~, soit encore \Phi(h) ≥
+% \alpha~\\textbar{}h\\textbar{}^2.
+
+% Puisque limh\rightarrow~0~\epsilon(h) = 0, il existe \eta
+% \textgreater{} 0 tel que
+% \\textbar{}h\\textbar{} \textless{} \eta
+% \rigtharrow~\textbar{}\epsilon(h)\textbar{}\leq \alpha~ \over 4 . Pour
+% \\textbar{}h\\textbar{} \textless{} \eta, on
+% a donc
+
+% \begin{align*} f(a + h) - f(a)& =& 1
+% \over 2 \Phi(h) +\\textbar{}
+% h\\textbar{}^2\epsilon(h) \%&
+% \\ & ≥& \alpha~ \over 2
+% \\textbar{}h\\textbar{}^2 - \alpha~
+% \over 4
+% \\textbar{}h\\textbar{}^2 = \alpha~
+% \over 4
+% \\textbar{}h\\textbar{}^2
+% \textgreater{} 0\%& \\
+% \end{align*}
+
+% pour h\neq~0. Donc f admet en a un minimum local
+% strict.
+
+% Pour démontrer (ii) à partir de (i), il suffit de changer f en - f.
+
+% (iii). Si \Phi n'est ni positive, ni négative, il existe v1 \in
+% \mathbb{R}~^n tel que \Phi(v1) \textless{} 0 et il existe
+% v2 \in \mathbb{R}~^n tel que \Phi(v2) \textgreater{} 0.
+% On a alors, d'après la même formule de Taylor, en posant h =
+% tvi, f(a + tvi) = f(a) + 1 \over
+% 2 \Phi(tvi) +
+% t^2\\textbar{}v
+% i\\textbar{}^2\epsilon(tv i) = f(a) +
+% t^2 \over 2 \Phi(vi) +
+% t^2\epsilon i(t) avec
+% limt\rightarrow~0\epsiloni~(t) = 0. On en
+% déduit qu'il existe un \eta \textgreater{} 0 tel que \textbar{}t\textbar{}
+% \textless{} \eta \rigtharrow~ f(a + tv1) \textless{}
+% f(a)\text et f(a + tv2) \textgreater{}
+% f(a). Donc f n'a ni minimum, ni maximum en a.
+
+% Remarque~15.1.8 Dans le cas où \Phi est soit positive, soit négative, mais
+% non définie (c'est-à-dire que \Phi(h) peut être nul sans que h soit nul),
+% on ne peut pas conclure en général et il faut utiliser une formule de
+% Taylor à un ordre supérieur.
+
+% Exemple~15.1.4 n = 2~; soit U un ouvert de \mathbb{R}~^2 et f : U \rightarrow~ \mathbb{R}~,
+% (x,y)\mapsto~f(x,y). Soit (a,b) \in U. Une condition
+% nécessaire pour que f admette en (a,b) un extremum est que  \partial~f
+% \over \partial~x (a,b) = \partial~f \over \partial~y (a,b) =
+% 0. Posons r = \partial~^2f \over \partial~x^2
+% (a,b), s = \partial~^2f \over \partial~x\partial~y (a,b), t =
+% \partial~^2f \over \partial~y^2 (a,b) (notations
+% de Monge). La forme quadratique \Phi est
+% (h,k)\mapsto~rh^2 + 2shk +
+% tk^2. Considérons suivant le cas le rapport  h
+% \over k ou le rapport  k \over h ,
+% on constate immédiatement à l'aide de l'étude du signe d'un trinome du
+% second degré que si (i) rt - s^2 \textgreater{} 0 et r
+% \textgreater{} 0, alors \Phi est définie positive et f a en a un minimum
+% local strict (ii) rt - s^2 \textgreater{} 0 et r \textless{}
+% 0, alors \Phi est définie négative et f a en a un maximum local strict
+% (iii) rt - s^2 \textless{} 0, alors f a en a un point selle
+% (pas d'extremum local en a) (iv) rt - s^2 = 0, alors on ne
+% peut pas conclure.
+
+% Le lecteur comparera les surfaces z = f(x,y) ainsi que lignes de niveau
+% de ces surfaces dans les trois exemples ci dessous (correspondant
+% respectivement à un minimum local, un point selle et un point de type
+% (iv))
+
+% \includegraphics{cours8x.png}
+
+% {[}
+% {[}

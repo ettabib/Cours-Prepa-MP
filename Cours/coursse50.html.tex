@@ -1,0 +1,523 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}{]}
+{[}
+
+\subsubsection{9.1 Subdivisions, approximation des fonctions}
+
+\paragraph{9.1.1 Subdivisions d'un segment}
+
+Définition~9.1.1 Soit {[}a,b{]} un segment de \mathbb{R}~~; on appelle subdivision
+de {[}a,b{]} toute famille \sigma = (ai)0\leqi\leqn telle que
+a0 = a, an = b et \forall~~i \in
+{[}1,n{]}, ai-1 \textless{} ai. On appelle pas de la
+subdivision \sigma le nombre réel \delta(\sigma) =\
+mini\in{[}1,n{]}(ai - ai-1).
+
+On notera \mathrmPt~(\sigma) =
+\ai∣0 \leq i \leq
+n\ et S({[}a,b{]}) l'ensemble des subdivisions de
+{[}a,b{]}. On définit une relation d'ordre partielle sur S(I) en disant
+que \sigma' est plus fine que \sigma si
+\mathrmPt~(\sigma)
+\subset~\mathrmPt~(\sigma') on a alors
+clairement \delta(\sigma') \leq \delta(\sigma)). On notera \sigma \cup \sigma' la subdivision définie par
+\mathrmPt~(\sigma \cup \sigma')
+= \mathrmPt~(\sigma)
+\cup\mathrmPt~(\sigma'). Elle est
+plus fine que \sigma et que \sigma'.
+
+\paragraph{9.1.2 Propriétés liées aux subdivisions}
+
+Définition~9.1.2 On dit que f : {[}a,b{]} \rightarrow~ E est une fonction en
+escalier (resp. affine par morceaux) s'il existe une subdivision \sigma =
+(ai)0\leqi\leqn de {[}a,b{]} (que l'on dira adaptée à f)
+telle que f soit constante (resp. affine) sur chacun des intervalles
+ouverts {]}ai-1,ai{[}.
+
+Remarque~9.1.1 Il est clair que toute fonction affine par morceaux est
+bornée et que toute fonction en escalier est affine par morceaux.
+
+Définition~9.1.3 On dit que f : {[}a,b{]} \rightarrow~ E est une fonction de classe
+C^k par morceaux s'il existe une subdivision \sigma =
+(ai)0\leqi\leqn de {[}a,b{]} (que l'on dira adaptée à f)
+telle que l'on ait les conditions équivalentes (i) pour chaque i \in
+{[}1,n{]}, il existe une fonction fi :
+{[}ai-1,ai{]} \rightarrow~ E de classe C^k telle que
+\forall~t \in{]}ai-1,ai~{[}, f(t) =
+fi(t) (ii) la fonction f est de classe C^k sur
+{[}a,b{]}
+\diagdown\a0,\\ldots,an\~
+et
+f,f',\\ldots,f^(k)~
+admettent des limites à gauche et à droite en tous les points
+ai où cela a un sens.
+
+Démonstration (i) \rigtharrow~(ii) est clair puisque dans ce cas
+limt\rightarrow~ai^+f^(p)~(t)
+=\
+limt\rightarrow~ai^+fi+1^(p)(t) =
+fi+1^(p)(ai) et
+limt\rightarrow~ai^-f^(p)~(t)
+=\
+limt\rightarrow~ai^-fi^(p)(t) =
+fi^(p)(ai).
+
+En ce qui concerne (ii) \rigtharrow~(i) posons
+
+ fi(t) = \left \
+\cases f(t) &si ai-1 \textless{} t
+\textless{} ai \cr
+f(ai-1^+)&si t = ai-1 \cr
+f(ai^-) &si t = ai  \right
+.
+
+alors la fonction fi est continue sur
+{[}ai-1,ai{]}, de classe C^k sur
+{]}ai-1,ai{[} et toutes les dérivées
+fi^(p) = f^(p) admettent des limites aux
+points ai-1 et ai. On a vu dans le chapitre sur les
+fonctions d'une variable qu'une telle fonction était de classe
+C^k.
+
+Remarque~9.1.2 Une fonction de classe C^k par morceaux n'est
+pas nécessairement continue (en particulier f(ai) peut être
+distinct de la limite à gauche et de la limite à droite au point
+ai)~; cependant, comme chacune des fi est continue
+sur un compact donc bornée, et que les ai sont en nombre fini,
+une fonction de classe C^k par morceaux est bornée~;
+remarquons également qu'une fonction affine par morceaux (et a fortiori
+une fonction en escalier) est de classe C^\infty~ par morceaux.
+
+Remarque~9.1.3 Si f est en escalier, ou affine par morceaux, ou
+C^k par morceaux et si \sigma \inS({[}a,b{]}) est adaptée à f, alors
+toute subdivision plus fine est encore adaptée à f~; en particulier si \sigma
+est adaptée à f et \sigma' adaptée à g, alors \sigma \cup \sigma' est adaptée à la fois à
+f et à g, d'où l'on déduit immédiatement la proposition suivante~:
+
+Proposition~9.1.1 L'ensemble des applications en escalier (resp. affine
+par morceaux, resp. C^k par morceaux) est un sous-espace
+vectoriel ~de l'ensemble des applications de {[}a,b{]} dans E.
+
+Définition~9.1.4 (Extension).Si I est un intervalle de \mathbb{R}~, on dira que f
+: I \rightarrow~ E est en escalier (resp. affine par morceaux, resp. C^k
+par morceaux) si sa restriction à tout segment {[}a,b{]} contenu dans I
+est en escalier (resp. affine par morceaux, resp. C^k par
+morceaux).
+
+\paragraph{9.1.3 Approximation des fonctions}
+
+Soit {[}a,b{]} un segment de \mathbb{R}~ et ℬ({[}a,b{]},E) l'espace vectoriel des
+fonctions bornées de {[}a,b{]} dans E. Pour f \inℬ({[}a,b{]},E), on notera
+\\textbar{}f\\textbar{}\infty~
+=\
+supx\in{[}a,b{]}\\textbar{}f(x)\\textbar{}.
+
+Définition~9.1.5 On dit que f : {[}a,b{]} \rightarrow~ E est réglée si elle vérifie
+les conditions équivalentes (i) pour tout \epsilon \textgreater{} 0, il existe
+\phi : {[}a,b{]} \rightarrow~ E en escalier telle que
+supt\in{[}a,b{]}~\\textbar{}f(t)
+- \phi(t)\\textbar{} \leq \epsilon (ii) il existe une suite
+\phin de fonctions en escalier de {[}a,b{]} dans E telle que
+limn\rightarrow~+\infty~~\left
+(supt\in{[}a,b{]}~\\textbar{}f(t)
+- \phin(t)\\textbar{}\right ) = 0.
+L'ensemble des fonctions réglées de {[}a,b{]} dans E est un sous-espace
+vectoriel de ℬ({[}a,b{]},E).
+
+Démonstration Les deux définitions sont clairement équivalentes (prendre
+\epsilon = 1\diagupn pour (i) \rigtharrow~(ii)). La définition (i) implique évidemment que f - \phi
+est bornée et comme \phi l'est également, une fonction réglée sur un
+segment est nécessairement bornée. Autrement dit, le sous-espace
+vectoriel des fonctions réglées de {[}a,b{]} dans E (car il est
+évidemment stable par combinaisons linéaires) n'est autre que
+l'adhérence de l'espace vectoriel des fonctions en escalier pour la
+norme \\textbar{}.\\textbar{}\infty~.
+
+Théorème~9.1.2 Toute fonction continue par morceaux est réglée.
+
+Démonstration Commen\ccons par le démontrer pour une
+fonction continue sur un segment. Une telle fonction est uniformément
+continue. Soit \epsilon \textgreater{} 0. Il existe \eta \textgreater{} 0 tel que
+\forall~~t,t' \in {[}a,b{]}, \textbar{}t - t'\textbar{}
+\textless{} \eta \rigtharrow~\\textbar{} f(t) -
+f(t')\\textbar{} \textless{} \epsilon. Soit alors \sigma =
+(ai)0\leqi\leqn une subdivision de pas plus petit que \eta et
+définissons \phi : {[}a,b{]} \rightarrow~ E par \phi(ai) = f(ai) pour
+i \in {[}0,n{]} et \phi(t) = f( ai-1+ai
+\over 2 ) si t \in{]}ai-1,ai{[} avec
+i \in {[}1,n{]}. Alors \\textbar{}f(t) -
+\phi(t)\\textbar{} vaut 0 si t est l'un des ai et
+\\textbar{}f(t) - f( ai-1+ai
+\over 2 )\\textbar{} \leq \epsilon si t
+\in{]}ai-1,ai{[} puisque alors \textbar{}t -
+ai-1+ai \over 2 \textbar{}
+\textless{} \delta(\sigma) \textless{} \eta. On a bien une fonction \phi en escalier
+telle que
+supt\in{[}a,b{]}~\\textbar{}f(t)
+- \phi(t)\\textbar{} \leq \epsilon.
+
+Si maintenant f est continue par morceaux, soit \sigma =
+(ai)0\leqi\leqn une subdivision adaptée à f et soit
+fi : {[}ai-1,ai{]} \rightarrow~ E de classe
+C^o telle que \forall~~t
+\in{]}ai-1,ai{[}, f(t) = fi(t). On peut
+appliquer le cas précédent à fi et trouver \phii en
+escalier telle que
+supt\in{[}ai-1,ai{]}\\textbar{}fi~(t)
+- \phii(t)\\textbar{} \leq \epsilon. On définit alors une
+fonction en escalier \phi : {[}a,b{]} \rightarrow~ E par \phi(ai) =
+f(ai) et \phi(t) = \phii(t) si t
+\in{]}ai-1,ai{[}. Alors on a
+supt\in{[}a,b{]}~\\textbar{}f(t)
+- \phi(t)\\textbar{} \leq\
+maxi\in{[}1,n{]}\left
+(supt\in{[}ai-1,ai{]}\\textbar{}fi~(t)
+- \phii(t)\\textbar{}\right ) \leq \epsilon,
+ce qui montre que f est réglée.
+
+En fait, on peut montrer le résultat plus général suivant (que nous
+n'utiliserons pas par la suite)
+
+Théorème~9.1.3 Une fonction f : {[}a,b{]} \rightarrow~ E (espace vectoriel
+normé~complet) est réglée si et seulement si~elle admet en tout point de
+{[}a,b{]} (où cela a un sens) une limite à gauche et une limite à
+droite.
+
+Démonstration Supposons tout d'abord f réglée~; soit xo un
+point de {[}a,b{]} et montrons que, si
+xo\neq~b, f a une limite à droite au
+point xo à l'aide du critère de Cauchy pour les fonctions.
+Soit donc \epsilon \textgreater{} 0 et \phi en escalier telle que
+\forall~~t \in {[}a,b{]}, \\textbar{}f(t)
+- \phi(t)\\textbar{} \textless{} \epsilon \over
+3 . Soit (ai) une subdivision adaptée à \phi et soit \eta
+\textgreater{} 0 tel que {]}xo,xo +
+\eta{[}\subset~{]}ai-1,ai{[}. Pour t,t'
+\in{]}xo,xo + \eta{[}, on a
+\\textbar{}f(t) - f(t')\\textbar{}
+=\\textbar{} (f(t) - \phi(t)) + (\phi(t') -
+f(t'))\\textbar{} (car \phi(t) = \phi(t')), soit
+\\textbar{}f(t) - f(t')\\textbar{} \leq \epsilon
+\over 3 + \epsilon \over 3 \textless{} \epsilon.
+La fonction f vérifie donc le critère de Cauchy en xo à
+droite, et donc elle admet une limite à droite.
+
+Inversement, supposons que f admette en tout point de {[}a,b{]} une
+limite à gauche et une limite à droite et soit \epsilon \textgreater{} 0.
+Alors, pour tout x \in {[}a,b{]}, il existe \etax \textgreater{} 0
+tel que \forall~t,t' \in{]}x,x + \etax~{[},
+\\textbar{}f(t) - f(t')\\textbar{}
+\textless{} \epsilon et \forall~~t,t' \in{]}x -
+\etax,x{[}, \\textbar{}f(t) -
+f(t')\\textbar{} \textless{} \epsilon (critère de Cauchy comme
+condition nécessaire d'existence des limites). On a alors {[}a,b{]}
+\subset~\⋃ ~
+x\in{[}a,b{]}{]}x - \etax,x + \etax{[} (recouvrement
+de {[}a,b{]} par des ouverts). D'après le théorème de Borel Lebesgue, on
+peut trouver
+x1,\\ldots,xp~
+tels que {[}a,b{]} \subset~{]}x1 -
+\etax1,x1 +
+\etax1{[}\cup\\ldots\cup{]}xp~
+- \etaxp,xp + \etaxp{[}.
+Soit alors (ai)0\leqi\leqn une subdivision de {[}a,b{]}
+telle que, pour tout i \in {[}1,n{]}, il existe \\\\jmathmathmathmath \in {[}1,p{]} tel que
+{]}ai-1,ai{[}\subset~{]}x\\\\jmathmathmathmath -
+\etax\\\\jmathmathmathmath,x\\\\jmathmathmathmath{[} ou
+{]}ai-1,ai{[}\subset~{]}x\\\\jmathmathmathmath,x\\\\jmathmathmathmath +
+\etax\\\\jmathmathmathmath{[}. On a alors \forall~~t,t'
+\in{]}ai-1,ai{[}, \\textbar{}f(t) -
+f(t')\\textbar{} \textless{} \epsilon. On définit alors une
+fonction \phi : {[}a,b{]} \rightarrow~ E par \phi(ai) = f(ai) et \phi(t)
+= f( ai-1+ai \over 2 ) si t
+\in{]}ai-1,ai{[} avec i \in {[}1,n{]}. Alors on a
+\forall~~t \in {[}a,b{]}, \\textbar{}f(t)
+- \phi(t)\\textbar{} \leq \epsilon. Donc f est réglée.
+
+Remarque~9.1.4 En particulier, on retrouve que les fonctions continues
+par morceaux, mais aussi les fonctions monotones, sont réglées.
+
+Enfin, pour terminer sur le problème de l'approximation des fonctions
+nous donnerons les résultat suivants permettant d'approcher une fonction
+continue soit par une fonction continue et affine par morceaux, soit par
+une fonction polynomiale, soit par un polynôme trigonométrique.
+
+Théorème~9.1.4 Soit f : {[}a,b{]} \rightarrow~ \mathbb{R}~ continue. Alors, pour tout \epsilon
+\textgreater{} 0, il existe une fonction \phi : {[}a,b{]} \rightarrow~ E continue et
+affine par morceaux telle que \forall~~t \in {[}a,b{]},
+\\textbar{}f(t) - \phi(t)\\textbar{}
+\textless{} \epsilon.
+
+Démonstration Une telle fonction est uniformément continue. Soit \epsilon
+\textgreater{} 0. Il existe \eta \textgreater{} 0 tel que
+\forall~~t,t' \in {[}a,b{]}, \textbar{}t - t'\textbar{}
+\textless{} \eta \rigtharrow~\\textbar{} f(t) -
+f(t')\\textbar{} \textless{} \epsilon \over 2
+. Soit alors \sigma = (ai)0\leqi\leqn une subdivision de pas
+plus petit que \eta et définissons \phi : {[}a,b{]} \rightarrow~ E par \phi(ai) =
+f(ai) pour i \in {[}0,n{]}, \phi(t) = f(ai-1) +
+f(ai)-f(ai-1 \over
+ai-ai-1 (t - ai-1) si t
+\in{]}ai-1,ai{[}. Alors \phi est clairement affine par
+morceaux et continue. Alors \\textbar{}f(t) -
+\phi(t)\\textbar{} vaut 0 si t est l'un des ai et
+si t \in{]}ai-1,ai{[}, on a (en tenant compte de
+f(ai-1) = \phi(ai-1))
+
+\begin{align*} \\textbar{}f(t) -
+\phi(t)\\textbar{}& \leq& \\textbar{}f(t) -
+f(ai-1)\\textbar{} +\\textbar{}
+\phi(ai-1) - \phi(t)\\textbar{} \%&
+\\ & \leq& \\textbar{}f(t) -
+f(ai-1)\\textbar{} +\\textbar{}
+\phi(ai-1) - \phi(ai)\\textbar{}\%&
+\\ & =& \\textbar{}f(t) -
+f(ai-1)\\textbar{} +\\textbar{}
+f(ai-1) - f(ai)\\textbar{}\%&
+\\ & \textless{}& 2 \epsilon
+\over 2 = \epsilon \%& \\
+\end{align*}
+
+puisque, \phi étant affine sur {[}ai-1,ai{]}, on a
+\\textbar{}\phi(ai-1) -
+\phi(t)\\textbar{} \leq\\textbar{}
+\phi(ai-1) - \phi(ai)\\textbar{}. Ceci
+termine la démonstration.
+
+Théorème~9.1.5 (premier théorème de Weierstrass). Soit f : {[}a,b{]} \rightarrow~ \mathbb{C}
+continue. Alors, pour tout \epsilon \textgreater{} 0, il existe un polynôme P \in
+\mathbb{C}{[}X{]} tel que \forall~~t \in {[}a,b{]},
+\\textbar{}f(t) - P(t)\\textbar{}
+\textless{} \epsilon.
+
+Démonstration Ce résultat pourra être admis. Nous en donnerons cependant
+une démonstration qui construit effectivement un tel polynôme (appelé
+polynôme de Bernstein, de tels polynômes \\\\jmathmathmathmathouent un rôle important en
+infographie). Il suffit évidemment de montrer ce résultat lorsque a = 0
+et b = 1 (on fait ensuite un changement de variable affine qui
+transforme {[}0,1{]} en {[}a,b{]}). Pour cela on part des identités
+élémentaires suivantes (la première est la formule du binôme, les deux
+autres s'en déduisent en dérivant par rapport à u)
+
+\begin{align*} (u + v)^n& =&
+\sum k=0^nC~
+n^ku^kv^n-k \%&
+\\ n(u + v)^n-1& =&
+\sum k=1^nC~
+n^kku^k-1v^n-k \%&
+\\ n(n - 1)(u + v)^n-2& =&
+\sum k=2^nC~
+n^kk(k - 1)u^k-2v^n-k\%&
+\\ \end{align*}
+
+Changeant u en x et v en 1 - x, on en déduit que
+
+\begin{align*} 1& =& \\sum
+k=0^nC n^kx^k(1 -
+x)^n-k \%& \\ n& =&
+\sum k=1^nC~
+n^kkx^k-1(1 - x)^n-k \%&
+\\ n(n - 1)& =&
+\sum k=2^nC~
+n^kk(k - 1)x^k-2(1 - x)^n-k\%&
+\\ \end{align*}
+
+Soit a \in \mathbb{R}~. Ecrivons alors que
+
+ \left (a - k \over n
+\right )^2 = a^2 + ( 1
+\over n^2 - 2 a \over n
+)k + 1 \over n^2 k(k - 1)
+
+On en déduit que
+
+\begin{align*} \\sum
+k=0^nC n^k\left (a
+- k \over n \right
+)^2x^k(1 - x)^n-k&& \%&
+\\ & =& a^2
+\sum k=0^nC~
+n^kx^k(1 - x)^n-k + ( 1
+\over n^2 - 2 a \over n
+)\sum k=0^nC~
+n^kkx^k(1 - x)^n-k \%&
+\\ & \text & + 1
+\over n^2  \\sum
+k=0^nC n^kk(k - 1)x^k(1 -
+x)^n-k \%& \\ & =&
+a^2 \\sum
+k=0^nC n^kx^k(1 -
+x)^n-k + ( 1 \over n^2 - 2 a
+\over n )\\sum
+k=1^nC n^kkx^k(1 -
+x)^n-k \%& \\ &
+\text & + 1 \over n^2
+ \sum k=2^nC~
+n^kk(k - 1)x^k(1 - x)^n-k \%&
+\\ & =& a^2
+\sum k=0^nC~
+n^kx^k(1 - x)^n-k + ( 1
+\over n^2 - 2 a \over n
+)x\sum k=1^nC~
+n^kkx^k-1(1 - x)^n-k\%&
+\\ & \text & + 1
+\over n^2 x^2
+\sum k=2^nC~
+n^kk(k - 1)x^k-2(1 - x)^n-k \%&
+\\ & =& a^2 + ( 1
+\over n^2 - 2 a \over n
+)xn + 1 \over n^2 x^2n(n - 1) =
+(x - a)^2 + x(1 - x) \over n \%&
+\\ \end{align*}
+
+puis en rempla\ccant a par x
+
+\sum k=0^nC~
+n^k\left (x - k \over n
+\right )^2x^k(1 - x)^n-k
+= x(1 - x) \over n
+
+Soit \delta \textgreater{} 0. On a donc, pour x \in {[}0,1{]},
+
+\begin{align*} \delta^2
+\sum ~\left \textbar{}x- k
+\over n \right
+\textbar{}≥\deltaCn^kx^k(1 -
+x)^n-k&& \%& \\ & \leq&
+\sum ~\left \textbar{}x-
+k \over n \right
+\textbar{}≥\deltaCn^k\left (x - k
+\over n \right
+)^2x^k(1 - x)^n-k\%&
+\\ & \leq& \\sum
+k=0^nC n^k\left (x
+- k \over n \right
+)^2x^k(1 - x)^n-k \%&
+\\ & =& x(1 - x) \over
+n \leq 1 \over 4n \%&
+\\ \end{align*}
+
+soit encore
+
+\sum ~\left \textbar{}x-
+k \over n \right
+\textbar{}≥\deltaCn^kx^k(1 - x)^n-k
+\leq 1 \over 4n\delta^2
+
+Soit f : {[}0,1{]} \rightarrow~ \mathbb{C} continue et posons Bn(x)
+= \\sum ~
+k=0^nf( k \over n
+)Cn^kx^k(1 - x)^n-k (polynôme en
+x de degré inférieur ou égal à n). Ecrivons
+
+f(x) = f(x)1 = \\sum
+k=0^nf(x)C n^kx^k(1 -
+x)^n-k
+
+On a alors
+
+\begin{align*} \textbar{}f(x) -
+Bn(x)\textbar{}& =& \left
+\textbar{}\sum k=0^n~(f(x) - f(
+k \over n ))Cn^kx^k(1 -
+x)^n-k\right \textbar{}\%&
+\\ & \leq& \\sum
+k=0^n\left \textbar{}f(x) - f( k
+\over n )\right
+\textbar{}Cn^kx^k(1 - x)^n-k \%&
+\\ \end{align*}
+
+Soit \epsilon \textgreater{} 0, puisque f est continue sur {[}0,1{]}, elle est
+uniformément continue et donc il existe \delta \textgreater{} 0 tel que, pour
+tout couple t,t' vérifiant \textbar{}t - t'\textbar{} \textless{} \delta, on
+ait \textbar{}f(t) - f(t')\textbar{} \textless{} \epsilon
+\over 2 . On a alors en ma\\\\jmathmathmathmathorant suivant les cas
+\left \textbar{}f(x) - f( k \over n
+)\right \textbar{} par  \epsilon \over 2 ou
+par 2\\textbar{}f\\textbar{}\infty~
+
+\begin{align*} \textbar{}f(x) -
+Bn(x)\textbar{}& \leq& \\sum
+\left \textbar{}x- k \over n
+\right \textbar{}\textless{}\delta\left
+\textbar{}f(x) - f( k \over n )\right
+\textbar{}Cn^kx^k(1 - x)^n-k \%&
+\\ & \text &
++\sum ~\left \textbar{}x-
+k \over n \right
+\textbar{}≥\delta\left \textbar{}f(x) - f( k
+\over n )\right
+\textbar{}Cn^kx^k(1 - x)^n-k\%&
+\\ & \leq& \epsilon \over 2
+\sum ~\left \textbar{}x-
+k \over n \right
+\textbar{}\textless{}\deltaCn^kx^k(1 -
+x)^n-k \%& \\ &
+\text &
++2\\textbar{}f\\textbar{}\infty~\\sum
+\left \textbar{}x- k \over n
+\right
+\textbar{}≥\deltaCn^kx^k(1 - x)^n-k
+\%& \\ & \leq& \epsilon \over
+2 \sum k=0^nC~
+n^kx^k(1 - x)^n-k \%&
+\\ & \text &
++2\\textbar{}f\\textbar{}\infty~\\sum
+\left \textbar{}x- k \over n
+\right
+\textbar{}≥\deltaCn^kx^k(1 - x)^n-k
+\%& \\ & \leq& \epsilon \over
+2 +
+2\\textbar{}f\\textbar{}\infty~ 1
+\over 4n\delta^2 \%&
+\\ \end{align*}
+
+Prenons alors n assez grand pour que
+2\\textbar{}f\\textbar{}\infty~ 1
+\over 4n\delta^2 \textless{} \epsilon
+\over 2 . On a alors, pour tout x \in {[}0,1{]},
+\textbar{}f(x) - Bn(x)\textbar{} \textless{} \epsilon, ce qui achève
+la démonstration.
+
+Définition~9.1.6 On appelle polynôme trigonométrique de coefficients
+ap \in \mathbb{C}, p =
+-N,\\ldots~,N la
+fonction périodique de période 2\pi~ de \mathbb{R}~ dans \mathbb{C},
+t\mapsto~\\\sum
+ p=-N^Nape^ipt.
+
+Remarque~9.1.5 Les coefficients ap sont uniquement déterminés
+puisque les fonctions t\mapsto~e^ipt
+forment une famille libre (ce sont par exemple des vecteurs propres de
+l'opérateur de dérivation).
+
+On vérifie immédiatement que les polynômes trigonométriques forment une
+sous algèbre de l'algèbre des fonctions de classe C^\infty~ de \mathbb{R}~
+dans \mathbb{C}.
+
+Théorème~9.1.6 (deuxième théorème de Weierstrass). Soit f : \mathbb{R}~ \rightarrow~ \mathbb{C}
+continue, périodique de période 2\pi~. Alors, pour tout \epsilon \textgreater{} 0,
+il existe un polynôme trigonométrique g : \mathbb{R}~ \rightarrow~ \mathbb{C} tel que
+\forall~~t \in \mathbb{R}~, \\textbar{}f(t) -
+g(t)\\textbar{} \textless{} \epsilon.
+
+Démonstration Ce théorème sera admis~: c'est une conséquence facile du
+théorème de Dirichlet qui dit qu'une fonction continue, de classe
+\mathcal{C}^1 par morceaux, périodique de période 2\pi~ est somme de sa
+série de Fourier qui converge normalement, donc peut être approchée à 
+\epsilon \over 2 près par un polynôme trigonométrique. Il
+suffit donc d'approcher notre fonction continue à  \epsilon
+\over 2 près par une fonction continue, de classe
+\mathcal{C}^1 par morceaux, périodique de période 2\pi~, et pour cela
+d'approcher la restriction de f à {[}0,2\pi~{]} par une fonction continue
+affine par morceaux prenant la même valeur en 0 et 2\pi~, ce qui se fait
+comme ci-dessus.
+
+{[}
+{[}

@@ -1,0 +1,339 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{11.4 Application aux endomorphismes continus et aux
+matrices}
+
+\paragraph{11.4.1 Calcul fonctionnel et premières applications}
+
+Soit E un K-espace vectoriel normé complet. Si u est un endomorphisme
+continu de E, on pose
+\\textbar{}u\\textbar{}
+=\
+supx\neq~0
+\\textbar{}u(x)\\textbar{}
+\over
+\\textbar{}x\\textbar{} . On sait que
+\forall~~x \in E,
+\\textbar{}u(x)\\textbar{}
+\leq\\textbar{}
+u\\textbar{}\,\\textbar{}x\\textbar{}.
+Soit ℒ(E) l'algèbre des endomorphismes continus sur E. On sait que
+(ℒ(E),\\textbar{}.\\textbar{}) est un
+espace vectoriel normé complet et que \forall~~u,v
+\inℒ(E), \\textbar{}v \cdot u\\textbar{}
+\leq\\textbar{}
+v\\textbar{}\,\\textbar{}u\\textbar{}.
+En particulier, par une récurrence évidente sur n, on a
+
+\forall~n \in \mathbb{N}~, \\forall~~u \inℒ(E),
+\\textbar{}u^n\\textbar{}
+\leq\\textbar{} u\\textbar{}^n
+
+Proposition~11.4.1 Soit
+\\sum ~
+anz^n une série entière à coefficients dans K de
+rayon de convergence R \textgreater{} 0 et soit u \inℒ(E) tel que
+\\textbar{}u\\textbar{} \textless{} R.
+Alors la série \\sum ~
+anu^n est absolument convergente.
+
+Démonstration On a
+\\textbar{}anu^n\\textbar{}
+\leq\textbar{}an\textbar{}\,\\textbar{}u\\textbar{}^n
+et comme \\textbar{}u\\textbar{}
+\textless{} R, la série
+\\sum ~
+\textbar{}an\textbar{}\,\\textbar{}u\\textbar{}^n
+est convergente.
+
+Remarque~11.4.1 Bien entendu, en introduisant la somme
+\\sum ~
+n=0^+\infty~anu^n, on espère que bon
+nombre des propriétés formelles de la somme S(z)
+= \\sum ~
+n=0^+\infty~anz^n, valables pour z \in
+D(0,R), se transmettront à
+\\sum ~
+n=0^+\infty~anu^n.
+
+Donnons une première application de ce calcul fonctionnel qui généralise
+l'identité (1 - z)\\\sum
+ n=0^+\infty~z^n = 1~:
+
+Proposition~11.4.2 L'ensemble des automorphismes continus de E est un
+ouvert de ℒ(E).
+
+Démonstration Soit u \inℒ(E) tel que
+\\textbar{}u\\textbar{} \textless{} 1.
+D'après la proposition précédente, la série
+\\sum ~
+n≥0u^n converge absolument. Soit s sa somme. On a
+
+(\mathrmIdE - u) \cdot\left
+(\\sum
+n=0^Nu^n\right ) =
+\left (\\sum
+n=0^Nu^n\right ) \cdot
+(\mathrmId E - u) =
+\mathrmIdE - u^n+1
+
+En faisant tendre n vers + \infty~, on a
+(\mathrmIdE - u) \cdot s = s \cdot
+(\mathrmIdE - u) =
+\mathrmIdE, ce qui montre que
+\mathrmIdE - u est un automorphisme continu
+de E d'inverse s. Soit maintenant v un automorphisme continu de E et u
+\inℒ(E). On écrit v + u = v \cdot (\mathrmIdE +
+v^-1 \cdot u). D'après les préliminaires,
+\mathrmIdE + v^-1 \cdot u (et donc v
++ u) est un automorphisme continu de E dès que
+\\textbar{}v^-1 \cdot u\\textbar{}
+\textless{} 1 et donc dès que
+\\textbar{}u\\textbar{} \textless{} 1
+\over
+\\textbar{}v^-1\\textbar{} .
+On en déduit que la boule B(v, 1 \over
+\\textbar{}v^-1\\textbar{} )
+est contenue dans l'ensemble des automorphismes continus de E, qui est
+donc ouvert.
+
+\paragraph{11.4.2 Exponentielle d'un endomorphisme ou d'une matrice}
+
+Définition~11.4.1 Si u \inℒ(E), on pose exp~ (u)
+= \\sum ~
+n=0^+\infty~ u^n \over n! (série
+absolument convergente)
+
+Démonstration La série entière
+\\sum  n≥0~
+z^n \over n! étant de rayon de convergence
+infinie, la série \\\sum
+ n≥0 u^n \over n! est
+absolument convergente quelle que soit la norme de u \inℒ(E).
+
+Remarque~11.4.2 De même, si A \in Mp(K), on définit de la même
+fa\ccon exp~ (A) =
+e^A =\ \\sum
+ n=0^+\infty~ A^n \over n! .
+On a bien entendu
+Mat(\exp~ (u),\mathcal{E})
+= exp (\Mat~(u,\mathcal{E})) si
+\mathcal{E} est une base de E de dimension finie.
+
+Proposition~11.4.3
+
+\begin{itemize}
+\item
+  (i) Pour tout automorphisme continu v de E, on a
+  exp (v^-1~ \cdot u \cdot v) =
+  v^-1 \cdot exp~ (u) \cdot v
+\item
+  (ii) si u,v \inℒ(E) commutent, alors exp~ (u +
+  v) = exp (u) \cdot\ exp~
+  (v) = exp~ (v) \cdot\
+  exp (u)~; en particulier, pour tout u \inℒ(E),
+  exp~ (u) est un automorphisme continu de E et
+  (exp (u))^-1~
+  = exp~ (-u)
+\item
+  (iii) l'application \mathbb{R}~\mapsto~ℒ(E),
+  t\mapsto~exp~ (tu) est de
+  classe C^\infty~ et on a
+
+  \forall~n \in \mathbb{N}~, d^n~
+  \over dt^n  exp~
+  (tu) = u^n \cdot exp~ (tu)
+  = exp (tu) \cdot u^n~
+\end{itemize}
+
+Démonstration (i) On a
+\\sum ~
+n=0^N (v^-1\cdotu\cdotv)^n
+\over n! =\
+\sum  n=0^N~
+v^-1\cdotu^n\cdotv \over n! =
+v^-1 \cdot\left
+(\\sum ~
+n=0^N u^n \over n!
+\right ) \cdot v et en faisant tendre N vers + \infty~, on obtient
+exp (v^-1~ \cdot u \cdot v) =
+v^-1 \cdot exp~ (u) \cdot v.
+
+(ii) Si u,v \inℒ(E) commutent, on pose an = u^n
+\over n! et bn = v^n
+\over n! . Ces séries sont absolument convergentes. On
+peut donc faire le produit de Cauchy de ces deux séries et on a alors
+cn = \\sum ~
+k=0^n 1 \over k!(n-k)!
+u^kv^n-k = 1 \over n! (u +
+v)^n d'après la formule du binôme (car u et v commutent). On a
+donc
+
+\sum n=0^+\infty~~ (u +
+v)^n \over n! = \left
+(\sum n=0^+\infty~ u^n~
+\over n! \right ) \cdot\left
+(\sum n=0^+\infty~ v^n~
+\over n! \right )
+
+formule dans laquelle on peut également échanger u et v. On a alors bien
+entendu exp~ (u) \cdot\
+exp (-u) = exp~ (-u)
+\cdot exp (u) =\ exp~ (u -
+u) = exp~ (0) =
+\mathrmIdE, ce qui montre que
+exp~ (u) est un automorphisme continu de E et
+que (exp (u))^-1~
+= exp~ (-u)
+
+(iii) On a exp~ (tu)
+= \\sum ~
+k=0^+\infty~ u^k \over k!
+t^k, série entière en t de rayon de convergence infini
+puisqu'elle converge pour tout t. Sa somme est donc de classe
+C^\infty~ et (en dérivant terme à terme cette série entière) on a
+
+\begin{align*} d^n \over
+dt^n  exp~ (tu)& =&
+\sum k=n^+\infty~ u^k~
+\over (k - n)! t^k-n = u^n
+\cdot\sum k=n^+\infty~ u^k-n~
+\over (k - n)! t^k-n\%&
+\\ & =& u^n
+\cdot exp~ (tu) \%&
+\\ \end{align*}
+
+Mais exp~ (tu) et u commutent évidemment, d'où
+ d^n \over dt^n
+ exp (tu) = u^n~
+\cdot exp (tu) =\ exp~
+(tu) \cdot u^n.
+
+Bien entendu, ce théorème a sa traduction matricielle et on a
+
+Théorème~11.4.4
+
+\begin{itemize}
+\item
+  (i) \forall~A \in Mp~(K),
+  \forall~P \in GLp~(K),
+
+  exp (P^-1~AP) =
+  P^-1 exp~ (A)P
+\item
+  (ii) si A,B \in Mp(K) commutent, alors
+  exp (A + B) =\ exp~
+  (A)exp (B) =\ exp~
+  (B)exp~ (A)~; en particulier, pour tout A \in
+  Mp(K), exp~ (A) est dans
+  GLp(K) et (exp (A))^-1~
+  = exp~ (-A)
+\item
+  (iii) l'application \mathbb{R}~\mapsto~Mp(K),
+  t\mapsto~exp~ (tA) est de
+  classe C^\infty~ et on a
+
+  \forall~n \in \mathbb{N}~, d^n~
+  \over dt^n  exp~
+  (tA) = A^n exp~ (tA)
+  = exp (tA)A^n~
+\end{itemize}
+
+La première propriété montre en particulier que si A est diagonalisable,
+on a A =
+P\mathrmdiag(\lambda~1,\\\ldots,\lambda~p)P^-1~,
+et donc exp~ (A) =
+P\mathrmdiag(e^\lambda~1,\\\ldots,e^\lambda~p)P^-1~.
+
+Si A est nilpotente d'indice r, on a exp~ (A)
+= \\sum ~
+n=0^r-1 A^n \over n! .
+
+Si A \in Mp(\mathbb{C}) est quelconque, on a la décomposition de Jordan A
+= D + N avec D diagonalisable, N nilpotente et DN = ND. On a donc
+d'après la propriété (ii) ci dessus exp~ (A)
+= exp (D)\exp~ (N) ce
+qui permet le calcul de exp~ (A).
+
+Une autre manière de voir, est d'introduire les sous-espaces
+caractéristiques de u \in L(E). Soit
+\lambda~1,\\ldots,\lambda~k~
+les valeurs propres distinctes de u et Ei le sous-espace
+caractéristique de u associé à \lambda~i. Soit ui la
+restriction de u à Ei, \pi~i la pro\\\\jmathmathmathmathection sur
+Ei parallèlement à
+\\oplus~ ~
+\\\\jmathmathmathmath\neq~iE\\\\jmathmathmathmath. On a évidemment
+exp (tu)\textbar{}E~
+i = exp (tui~) et donc
+exp~ (tu) =\
+\sum ~
+i=1^k exp (tui~) \cdot
+\pi~i. Mais ui =
+\lambda~i\mathrmId + ni avec
+ni nilpotent. On a donc exp~
+(tui) = e^t\lambda~i\
+\sum~
+k=0^ri-1t^kni^k. On
+en déduit que exp~ (tu)
+= \\sum ~
+i=0^ke^t\lambda~i\
+\sum~
+k=0^ri-1t^kvi,k, avec
+vi,k = ni^k \cdot \pi~i ce qui donne la
+forme générique de exp~ (tu) sous forme de
+sommes de produits de fonctions exponentielles par des fonctions
+polynomiales.
+
+\paragraph{11.4.3 Application aux systèmes différentiels homogènes à
+coefficients constants}
+
+Soit A \in Mp(K) et le système différentiel à coefficients
+constants
+
+ dX \over dt = AX \Leftrightarrow
+\left \ \cases 
+dx1 \over dt &= a11x1 +
+\\ldots~ +
+a1pxp \cr
+\\ldots~
+\cr  dxp \over dt &=
+ap1x1 +
+\\ldots~ +
+appxp  \right .
+
+Théorème~11.4.5 Soit X0 \in Mp,1(K). L'unique solution
+du système homogène  dX \over dt = AX vérifiant X(0)
+= X0 est l'application
+t\mapsto~exp~
+(tA)X0.
+
+Démonstration Cette application convient évidemment puisque  d
+\over dt (exp~
+(tA)X0) = Aexp (tA)X0~.
+Soit t\mapsto~X(t) une autre solution et soit Y (t)
+= exp~ (-tA)X(t). On a Y `(t) =
+-exp~ (-tA)AX(t) +\
+exp (-tA)X'(t) = exp~ (-tA)(X'(t) - AX(t)) =
+0. On en déduit que Y est constante égale à Y (0). Mais Y (0) =
+X0. On a donc Y (t) = X0 soit encore X(t)
+= exp (tA)X0~.
+
+Remarque~11.4.3 En particulier, si K = \mathbb{C}, la discussion précédente
+montre que les fonctions
+x1,\\ldots,xp~
+sont des exponentielles polynômes.
+
+{[}
+{[}
+{[}
+{[}

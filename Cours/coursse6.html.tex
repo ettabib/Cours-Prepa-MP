@@ -1,0 +1,226 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{1.6 Polynômes à plusieurs variables}
+
+\paragraph{1.6.1 Généralités}
+
+Définition~1.6.1 Soit A un anneau commutatif.
+
+\begin{align*}
+A{[}X1,\\ldots,Xn~{]}
+=& \\\sum
+(k1,\ldots,kn)\in\mathbb{N}~^nak1,\\ldots,knX1^k1\\ldotsXn^kn\mathrel∣~&
+\%& \\ & \textnombre
+fini de
+ak1,\\ldots,kn~\text
+non nuls\ & \%& \\
+\end{align*}
+
+Remarque~1.6.1 On a bien entendu un isomorphisme naturel entre
+A{[}X1,\\ldots,Xn~{]}
+et
+A{[}X1,\\ldots,Xn-1{]}{[}Xn~{]}
+qui montre que si A est intègre, il en est de même de
+A{[}X1,\\ldots,Xn~{]}.
+
+Proposition~1.6.1 (règle de substitution). Soit A et B deux anneaux
+commutatifs et \phi:A \rightarrow~ B un morphisme d'anneaux. Soit
+\beta~1,\\ldots,\beta~n~
+\in B. Alors l'application
+T\phi,\beta~1,\\ldots,\beta~n:A{[}X1,\\\ldots,Xn~{]}
+\rightarrow~ B,
+
+\begin{align*} \\sum
+(k1,\ldots,kn)\in\mathbb{N}~^nak1,\\ldots,knX1^k1~
+\ldotsXn^kn~
+&& \%& \\ & &
+\mapsto~\\sum
+(k1,\ldots,kn)\in\mathbb{N}~^n\phi(ak1,\\ldots,kn)\beta~1^k1~
+\ldots\beta~n^kn~
+\%& \\ \end{align*}
+
+est un morphisme d'anneaux.
+
+\paragraph{1.6.2 Dérivées partielles, formule de Taylor}
+
+Définition~1.6.2 Soit P \in
+A{[}X1,\\ldots,Xn~{]}.
+On note  \partial~P \over \partial~Xi la dérivée de P dans
+(A{[}X1,\\ldots,Xi-1,Xi+1,\\\ldots,Xn{]}){[}Xi~{]}.
+
+Par simple calcul sur les monômes on montre alors
+
+Lemme~1.6.2 (Schwarz) Soit P \in
+A{[}X1,\\ldots,Xn~{]},
+i,\\\\jmathmathmathmath \in {[}1,n{]}. Alors  \partial~ \over \partial~Xi ( \partial~P
+\over \partial~X\\\\jmathmathmathmath ) = \partial~ \over
+\partial~X\\\\jmathmathmathmath ( \partial~P \over \partial~Xi ).
+
+Ceci permet de définir des dérivées partielles itérées 
+\partial~^kP \over
+\partial~X1^k1\\ldots\partial~Xn^kn~
+si k = k1 +
+\\ldots~ +
+kn. On a alors
+
+Théorème~1.6.3 (Formule de Taylor) Soit K un corps de caractéristique 0,
+P \in
+K{[}X1,\\ldots,Xn~{]}
+et
+(a1,\\ldots,an~)
+\in K^n. Alors
+
+\begin{align*} P(X1 +
+a1,\\ldots,Xn~
++ an)&& \%& \\ & & =
+\\sum
+k1,\ldots,kn~
+1 \over
+k1!\ldotskn!~ 
+\partial~^k1+\ldots+kn~P
+\over
+\partial~X1^k1\ldots\partial~Xn^kn~
+(a1,\ldots,an)X1^k1~
+\ldotsXn^kn~
+\%& \\ \end{align*}
+
+\paragraph{1.6.3 Degré total, polynômes homogènes}
+
+Définition~1.6.3 On définit le degré d'un monôme non nul
+aX1^k1\\ldotsXn^kn~
+comme étant l'entier k1 +
+\\ldots~ +
+kn. On appelle degré d'un polynôme P non nul, le plus grand
+des degrés de ses monômes non nuls. On dit qu'un polynôme P \in
+K{[}X1,\\ldots,Xn~{]}
+est homogène de degré p si tous ses monômes non nuls ont le même degré p
+ou s'il est nul. On notera
+Hp(X1,\\ldots,Xn~)
+l'espace vectoriel des polynômes homogènes de degré p.
+
+Théorème~1.6.4 On a Hp.Hq \subset~ Hp+q et
+K{[}X1,\\ldots,Xn~{]}
+=
+\oplus~p\in\mathbb{N}~Hp(X1,\\ldots,Xn~)
+(c'est-à-dire que tout polynôme s'écrit de manière unique comme somme
+finie de polynômes homogènes de degrés distincts).
+
+Démonstration La décomposition correspond tout simplement au
+regroupement des termes de même degré au sein d'un polynôme homogène.
+Cela montre à la fois l'existence et l'unicité de la décomposition.
+
+Corollaire~1.6.5 Soit K un corps. On a deg~ PQ
+= deg P +\ deg~ Q.
+
+Démonstration On décompose P et Q en polynômes homogènes P =
+Pm +
+\\ldots~ et Q =
+Qn +
+\\ldots~ où
+Pm et Qn sont les parties homogènes de plus haut
+degré. Alors PmQn\neq~0 et
+c'est la partie homogène de plus haut degré de PQ, d'où le résultat.
+
+Théorème~1.6.6 (Euler). Soit K un corps commutatif de caractéristique 0
+et P \in
+K{[}X1,\\ldots,Xn~{]}.
+On a équivalence de (i) P est homogène de degré p (ii)
+\\sum ~
+i=1^nXi \partial~P \over
+\partial~Xi = pP.
+
+Démonstration On pose D =\
+\sum  i=1^nXi~ \partial~
+\over \partial~Xi . On démontre (i) \rigtharrow~(ii) en
+calculant sur les monômes et en utilisant la linéarité de D. On démontre
+(ii) \rigtharrow~(i) en décomposant P en somme de polynômes homogènes~: si P =
+Pm +
+\\ldots~ +
+P0, on a pPm +
+\\ldots~ +
+pP0 = pP = DP = DPm +
+\\ldots~ +
+DP0 = mPm +
+\\ldots~ +
+0P0. Par unicité de la décomposition en polynômes homogènes,
+on a pour tout k, pPk = kPk ce qui exige
+Pk = 0 si k\neq~p. Finalement P =
+Pp est homogène de degré p.
+
+\paragraph{1.6.4 Polynômes symétriques}
+
+Définition~1.6.4 On dit que P \in
+K{[}X1,\\ldots,Xn~{]}
+est symétrique si pour toute permutation \sigma on a
+
+P(X\sigma(1),\\ldots,X\sigma(n)~)
+=
+P(X1,\\ldots,Xn~)
+
+Exemple~1.6.1 Pour 1 \leq k \leq n, on définit les polynômes symétriques
+élémentaires à n variables
+\sigmak(X1,\\ldots,Xn~)
+= \\sum ~
+1\leqi1\textless{}⋯\textless{}ik\leqnXi1\\ldotsXin~
+(homogène de degré k, Cn^k monômes). Ces polynômes
+symétriques vérifient la formule de récurrence (séparer les termes ne
+contenant pas Xn de ceux contenant Xn)~:
+
+\sigmak(X1,\\ldots,Xn~)
+=
+\sigmak(X1,\\ldots,Xn-1~)
++
+\sigmak-1(X1,\\ldots,Xn-1)Xn~
+
+Théorème~1.6.7
+
+\begin{align*} \∏
+i=1^n(T - X i)&& \%&
+\\ & =& T^n
+-\\sum
+k=1^n(-1)^k\sigma
+k(X1,\ldots,Xn)T^n-k~
+\%& \\ & =& T^n - \sigma
+1(X1,\\ldots,Xn)T^n-1~
++ \\ldots~ +
+(-1)^n\sigma
+n(X1,\\ldots,Xn~)\%&
+\\ \end{align*}
+
+Démonstration Par récurrence sur n en utilisant la formule de récurrence
+vérifiée par les \sigmak.
+
+Corollaire~1.6.8 Soit P \in K{[}X{]} scindé sur K. On peut donc écrire
+
+P(X) = anX^n +
+\\ldots + a~
+0 = an ∏ i=1^n~(X
+- \alpha~ i)
+
+Alors on a, \forall~~k \in {[}1,n{]},
+\sigmak(\alpha~1,\\ldots,\alpha~n~)
+= (-1)^k an-k \over an
+.
+
+On admettra le résultat suivant
+
+Théorème~1.6.9 Soit P \in
+K{[}X1,\\ldots,Xn~{]}
+un polynôme symétrique. Il existe un unique polynôme Q \in
+K{[}X1,\\ldots,Xn~{]}
+tel que P =
+Q(\sigma1,\\ldots,\sigman~).
+
+{[}
+{[}
+{[}
+{[}

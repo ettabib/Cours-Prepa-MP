@@ -1,0 +1,351 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{9.10 Convergence absolue, semi-convergence}
+
+\paragraph{9.10.1 Critère de Cauchy pour les intégrales}
+
+Théorème~9.10.1 (critère de Cauchy). Soit E un espace vectoriel normé
+complet et -\infty~ \textless{} a \textless{} b \leq +\infty~. Soit f : {[}a,b{[}\rightarrow~ E
+réglée. Alors l'intégrale \int ~
+a^bf(t) dt converge si et seulement si~
+
+\forall~~\epsilon \textgreater{} 0,
+\exists~c \in {[}a,b{[}, c \textless{} u \textless{} v
+\textless{} b \rigtharrow~\\textbar{}\int ~
+u^vf(t) dt\\textbar{} \textless{} \epsilon
+
+Démonstration Si F(x) =\int ~
+a^xf(t) dt, la propriété ci dessus est équivalente à
+
+\forall~~\epsilon \textgreater{} 0,
+\exists~c \in {[}a,b{[}, c \textless{} u \textless{} v
+\textless{} b \rigtharrow~\\textbar{} F(v) -
+F(u)\\textbar{} \textless{} \epsilon
+
+ce qui n'est autre que le critère de Cauchy pour l'existence de la
+limite de F au point b.
+
+\paragraph{9.10.2 Convergence absolue}
+
+Définition~9.10.1 Soit f : {[}a,b{[}\rightarrow~ E réglée. On dit que l'intégrale
+\int  a^b~f(t) dt converge
+absolument si l'intégrale \int ~
+a^b\\textbar{}f(t)\\textbar{}
+dt converge.
+
+Théorème~9.10.2 Soit E un espace vectoriel normé complet et -\infty~
+\textless{} a \textless{} b \leq +\infty~. Soit f : {[}a,b{[}\rightarrow~ E réglée. Si
+l'intégrale \int  a^b~f(t) dt
+converge absolument, elle converge.
+
+Démonstration Soit \epsilon \textgreater{} 0. Puisque l'intégrale
+\int ~
+a^b\\textbar{}f(t)\\textbar{}dt
+converge, d'après le critère de Cauchy, il existe c \in {[}a,b{[} tel que
+c \textless{} u \textless{} v \textless{} b \rigtharrow~\\int
+
+u^v\\textbar{}f(t)\\textbar{}
+dt \textless{} \epsilon. Alors c \textless{} u \textless{} v \textless{} b
+\rigtharrow~\\textbar{}\int ~
+u^vf(t) dt\\textbar{}
+\leq\int ~
+u^v\\textbar{}f(t)\\textbar{}
+dt \textless{} \epsilon. Donc l'intégrale \int ~
+a^bf(t) dt vérifie le critère de Cauchy, par conséquent
+elle converge.
+
+Remarque~9.10.1 L'avantage est évidemment que la convergence absolue
+concerne la convergence d'une intégrale de fonction à valeurs réelles
+positives pour laquelle nous disposons dé\\\\jmathmathmathmathà de critères simples.
+
+\paragraph{9.10.3 Règles de convergence}
+
+Proposition~9.10.3 Soit f : {[}a,b{[}\rightarrow~ E et g : {[}a,b{[}\rightarrow~ F réglées. On
+suppose que f = 0(g) et que l'intégrale \int ~
+a^bg(t) dt converge absolument. Alors l'intégrale
+\int  a^b~f(t) dt converge
+absolument.
+
+Démonstration En effet f = 0(g) \Leftrightarrow
+\\textbar{}f(t)\\textbar{} =
+O(\\textbar{}g(t)\\textbar{}) au voisinage
+de b.
+
+Remarque~9.10.2 En général la fonction étalon g sera choisie à valeurs
+réelles positives.
+
+Théorème~9.10.4 Soit f : {[}a,b{[}\rightarrow~ E et g : {[}a,b{[}\rightarrow~ \mathbb{R}~ réglées. On
+suppose que g est positive et qu'il existe \ell \in E
+\diagdown\0\ tel que, au voisinage de b, f(t)
+∼ \ellg(t). Alors (i) si \int ~
+a^bg(t) dt converge, l'intégrale
+\int  a^b~f(t) dt converge
+absolument (ii) si \int  a^b~g(t)
+dt diverge, l'intégrale \int ~
+a^bf(t) dt diverge.
+
+Démonstration On a bien entendu, f = O(g), et d'après la proposition
+précédente, si \int  a^b~g(t) dt
+converge, l'intégrale \int ~
+a^bf(t) dt converge absolument. Inversement, supposons
+que l'intégrale \int  a^b~f(t) dt
+converge. On a f - \ellg =
+o(\\textbar{}\ellg\\textbar{}) et donc il
+existe c \in {[}a,b{[} tel que t \textgreater{} c
+\rigtharrow~\\textbar{} f(t) - \ellg(t)\\textbar{} \leq 1
+\over 2
+\\textbar{}\ellg(t)\\textbar{} = 1
+\over 2
+\\textbar{}\ell\\textbar{}g(t). Soit alors c
+\textless{} u \textless{} v \textless{} b~; on a
+\\textbar{}\ell\\textbar{}\\int
+ u^vg(t) dt =\\textbar{}
+\ell\int  u^v~g(t)
+dt\\textbar{} puisque g est réelle positive. On a donc
+
+\begin{align*}
+\\textbar{}\ell\\textbar{}\\int
+ u^vg(t) dt& =&
+\\textbar{}\int ~
+u^v(\ellg(t) - f(t)) dt +\int ~
+u^vf(t) dt\\textbar{}\%&
+\\ & \leq& \int ~
+u^v\\textbar{}\ellg(t) -
+f(t)\\textbar{} dt
++\\textbar{}\int ~
+u^vf(t) dt\\textbar{} \%&
+\\ & \leq& 1 \over 2
+\\textbar{}\ell\\textbar{}\\int
+ u^vg(t) dt
++\\textbar{}\int ~
+u^vf(t) dt\\textbar{} \%&
+\\ \end{align*}
+
+On en déduit que \int  u^v~g(t)
+dt \leq 2 \over
+\\textbar{}\ell\\textbar{}
+\\textbar{}\int ~
+u^vf(t) dt\\textbar{}. Comme
+\int  a^b~f(t) dt converge,
+l'intégrale vérifie le critère de Cauchy~; l'inégalité ci dessus montre
+que l'intégrale \int  a^b~g(t) dt
+vérifie également le critère de Cauchy, donc converge.
+
+En utilisant alors nos fonctions ''étalons''  1 \over
+t^\alpha~ en + \infty~ et  1 \over
+(b-t)^\alpha~ en b \in \mathbb{R}~, on obtient les critères suivants
+
+Théorème~9.10.5 Soit E un espace vectoriel normé. Soit f : {[}a,+\infty~{[}\rightarrow~ E
+réglée. (i) S'il existe \alpha~ \textgreater{} 1 tel que f(t) = 0( 1
+\over t^\alpha~ ), alors l'intégrale
+\int  a^+\infty~~f(t) dt converge
+absolument (ii) S'il existe \alpha~ \in \mathbb{R}~ et \ell \in E
+\diagdown\0\ tels que f(t) ∼ \ell
+\over t^\alpha~ alors l'intégrale
+\int  a^+\infty~~f(t) dt converge
+absolument si \alpha~ \textgreater{} 1 et diverge si \alpha~ \leq 1. (iii) Si E = \mathbb{R}~ et
+f(t) ≥ 0, et s'il existe \alpha~ \leq 1 et \ell \textgreater{} 0 (y compris + \infty~) tel
+que limt\rightarrow~+\infty~t^\alpha~~f(t) = \ell,
+alors l'intégrale \int  a^+\infty~~f(t)
+dt diverge.
+
+Théorème~9.10.6 Soit E un espace vectoriel normé, b \in \mathbb{R}~. Soit f :
+{[}a,b{[}\rightarrow~ E réglée. (i) S'il existe \alpha~ \textless{} 1 tel que f(t) = 0(
+1 \over (b-t)^\alpha~ ), alors l'intégrale
+\int  a^b~f(t) dt converge
+absolument (ii) S'il existe \alpha~ \in \mathbb{R}~ et \ell \in E
+\diagdown\0\ tels que f(t) ∼ \ell
+\over (b-t)^\alpha~ alors l'intégrale
+\int  a^b~f(t) dt converge
+absolument si \alpha~ \textless{} 1 et diverge si \alpha~ ≥ 1. (iii) Si E = \mathbb{R}~ et
+f(t) ≥ 0, et s'il existe \alpha~ ≥ 1 et \ell \textgreater{} 0 (y compris + \infty~) tel
+que limt\rightarrow~b(b - t)^\alpha~~f(t) =
+\ell, alors l'intégrale \int ~
+a^bf(t) dt diverge.
+
+Exemple~9.10.1 La fonction
+t\mapsto~e^-t^2  est continue
+sur {[}0,+\infty~{[} et en + \infty~ on a e^-t^2  = o( 1
+\over t^2 ). Donc l'intégrale
+\int ~
+0^+\infty~e^-t^2  dt converge. De même,
+considérons l'intégrale \int ~
+0^+\infty~t^s-1e^-t dt. L'application
+t\mapsto~t^s-1e^-t est
+continue sur {]}0,+\infty~{[}, donc l'intégrale est a priori doublement
+impropre en 0 et en + \infty~. En + \infty~, on a t^s-1e^-t =
+o( 1 \over t^2 ) et donc l'intégrale
+converge en + \infty~. En 0, on a t^s-1e^-t ∼
+t^s-1 \textgreater{} 0, donc l'intégrale converge si et
+seulement si~s - 1 \textgreater{} -1 soit s \textgreater{} 0. En
+définitive, l'intégrale converge si et seulement si~s \textgreater{} 0.
+On pose alors \Gamma(s) =\int ~
+0^+\infty~t^s-1e^-t dt. Une intégration
+par parties donne alors pour s \textgreater{} 0
+
+\begin{align*} \int ~
+x^yt^se^-t dt& =&
+\left
+{[}-t^se^-t\right {]}
+x^y + s\int ~
+x^yt^s-1e^-t dt \%&
+\\ & =& x^se^-x -
+y^se^-y + s\int ~
+x^yt^s-1e^-t dt\%&
+\\ \end{align*}
+
+et en faisant tendre x vers 0 et y vers + \infty~, on obtient l'équation
+fonctionnelle \Gamma(s) = s\Gamma(s - 1). Tenant compte de \Gamma(1)
+=\int  0^+\infty~e^-t~ dt =
+1, on obtient \forall~~n \in \mathbb{N}~, \Gamma(n) = (n - 1)!.
+Remarquons également qu'en faisant le changement de variables t =
+\sqrtu qui est de classe \mathcal{C}^1 sur {[}x,y{]}
+pour 0 \textless{} x \textless{} y \textless{} +\infty~, on obtient
+
+\int ~
+x^ye^-t^2  dt = 1
+\over 2 \int ~
+\sqrtx^\sqrty
+e^-u \over \sqrtu du
+
+En faisant tendre x vers 0 et y vers + \infty~, on obtient
+\int ~
+0^+\infty~e^-t^2  dt = 1
+\over 2 \Gamma( 1 \over 2 ).
+
+\paragraph{9.10.4 Semi-convergence}
+
+On dit qu'une intégrale \int ~
+a^bf(t) dt est semi-convergente si elle converge, sans
+être absolument convergente. L'outil essentiel pour montrer une
+convergence non absolue est l'intégration par parties~; les autres
+outils sont un théorème d'Abel ou le retour pur et simple au critère de
+Cauchy.
+
+Exemple~9.10.2 Etude de l'intégrale \int ~
+1^+\infty~ sin~ t
+\over t^\alpha~ dt. On a 
+sin t \over t^\alpha~~ =
+O( 1 \over t^\alpha~ ), donc si \alpha~ \textgreater{}
+1 l'intégrale converge absolument.
+
+Si 0 \textless{} \alpha~ \leq 1, on a après intégration par parties
+
+\int  1^x~
+sin t \over t^\alpha~~ dt
+= cos 1 - \cos~ x
+\over x^\alpha~ +\int ~
+1^x cos~ t
+\over t^\alpha~+1 dt
+
+Mais limx\rightarrow~+\infty~~
+cos x \over x^\alpha~~ =
+0 et l'intégrale \int  1^+\infty~~
+cos t \over t^\alpha~+1~
+dt converge absolument puisque  cos~ t
+\over t^\alpha~+1 = O( 1 \over
+t^\alpha~+1 ). On en déduit que le terme de droite de l'égalité
+ci dessus a une limite en + \infty~, et donc le terme de gauche aussi. En
+conséquence, l'intégrale \int ~
+1^+\infty~ sin~ t
+\over t^\alpha~ dt converge. Montrons qu'elle ne
+converge pas absolument~; on a
+
+\begin{align*} \int ~
+1^x \textbar{}sin~ t\textbar{}
+\over t^\alpha~ & ≥& \\int
+ 1^x sin ^2~t
+\over t^\alpha~ dt = 1 \over 2
+\int  1^x~ 1
+- cos~ (2t) \over
+t^\alpha~ dt\%& \\ & =& 1
+\over 2 \int ~
+1^x 1 \over t^\alpha~ dt - 1
+\over 2 \int ~
+1^x cos~ (2t)
+\over t^\alpha~ dt \%&
+\\ \end{align*}
+
+Mais l'intégrale \int  1^+\infty~~ 1
+\over t^\alpha~ dt est divergente (car \alpha~ \leq 1),
+alors que l'intégrale \int ~
+1^+\infty~ cos~ (2t)
+\over t^\alpha~ dt converge (même méthode
+d'intégration par parties). On en déduit que
+limx\rightarrow~+\infty~~\\int
+ 1^x sin ^2~t
+\over t^\alpha~ dt = +\infty~ et donc aussi
+limx\rightarrow~+\infty~~\\int
+ 1^x \textbar{} sin~
+t\textbar{} \over t^\alpha~ dt = +\infty~.
+
+Si \alpha~ \leq 0, posons \beta~ = -\alpha~. On a (en posant t = u + n\pi~),
+
+\begin{align*} \left
+\textbar{}\int ~
+n\pi~^(n+1)\pi~t^\beta~ sin~ t
+dt\right \textbar{}& =& \int ~
+0^\pi~(u + n\pi~)^\beta~ sin~ u
+du \%& \\ & ≥&
+(n\pi~)^\beta~\int ~
+0^\pi~ sin~ u du =
+2(n\pi~)^\beta~\%& \\
+\end{align*}
+
+qui ne tend pas vers 0 quand n tend vers + \infty~~; le critère de Cauchy
+n'est pas vérifié, et donc l'intégrale diverge.
+
+Dans certains cas, le théorème d'Abel peut rendre des services (mais
+très souvent, une simple intégration par parties peut s'y substituer)
+
+Théorème~9.10.7 (Abel). Soit f : {[}a,b{[}\rightarrow~ \mathbb{R}~ de classe \mathcal{C}^1
+et g : {[}a,b{[}\rightarrow~ \mathbb{R}~ continue. On suppose que
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) f est positive, décroissante, de limite 0 en b
+\item
+  (ii) \existsM ≥ 0, \\forall~~x \in
+  {[}a,b{[},\quad \left
+  \textbar{}\int  a^x~g(t)
+  dt\right \textbar{}\leq M
+\end{itemize}
+
+Alors l'intégrale \int ~
+a^bf(t)g(t) dt converge.
+
+Démonstration On montre que cette intégrale impropre vérifie le critère
+de Cauchy à l'aide de la deuxième formule de la moyenne (dont les
+hypothèses sur {[}u,v{]} sont bien vérifiées)
+
+\begin{align*} \left
+\textbar{}\int  u^v~f(t)g(t)
+dt\right \textbar{}& =& f(u)\left
+\textbar{}\int  u^w~g(t)
+dt\right \textbar{} \%& \\
+& =& f(u)\left \textbar{}\int ~
+a^wg(t) dt -\int ~
+a^ug(t) dt\right \textbar{}\leq 2Mf(u)\%&
+\\ \end{align*}
+
+Soit \epsilon \textgreater{} 0. Il existe c \in {[}a,b{[} tel que c \textless{} u
+\textless{} b \rigtharrow~ 2Mf(u) \textless{} \epsilon. Alors c \textless{} u \textless{}
+v \textless{} b \rigtharrow~\left
+\textbar{}\int  u^v~f(t)g(t)
+dt\right \textbar{} ce qui assure la convergence de
+l'intégrale.
+
+{[}
+{[}
+{[}
+{[}

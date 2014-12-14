@@ -1,0 +1,441 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{4.2 Espaces métriques}
+
+\paragraph{4.2.1 Distances}
+
+Définition~4.2.1 Soit E un ensemble. On appelle distance sur E toute
+application d : E \times E \rightarrow~ \mathbb{R}~^+ vérifiant pour tout x,y,z \in E
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) d(x,y) = 0 \Leftrightarrow x = y (propriété de
+  séparation)
+\item
+  (ii) d(x,y) = d(y,x) (propriété de symétrie)
+\item
+  (iii) d(x,z) \leq d(x,y) + d(y,z) (inégalité triangulaire)
+\end{itemize}
+
+On appelle espace métrique un couple (E,d) d'un ensemble E et d'une
+distance d sur E.
+
+Proposition~4.2.1 Soit d une distance sur E Alors
+
+\forall~~x,y,z \in E, \textbar{}d(x,z) -
+d(y,z)\textbar{}\leq d(x,y)
+
+Démonstration On a d(x,z) - d(y,z) \leq d(x,y) d'après l'inégalité
+triangulaire. En échangeant x et y, on a aussi d(y,z) - d(x,z) \leq d(x,y),
+d'où le résultat.
+
+Exemple~4.2.1 Sur tout ensemble, d(x,y) = \left
+\ \cases 1&si
+x\neq~y \cr 0&si x = y
+\cr  \right . est une distance sur E
+appelée la distance discrète. Sur K = \mathbb{R}~ ou K = \mathbb{C}, d(x,y) = \textbar{}x -
+y\textbar{} est une distance appelée la distance usuelle. Sur
+K^n on trouve classiquement trois distances utiles
+d1(x,y) =\ \\sum
+ i\textbar{}xi - yi\textbar{},
+d2(x,y) =
+\sqrt\\\sum
+ i\textbar{}xi -
+yi\textbar{}^2 et d\infty~(x,y)
+= maxi\textbar{}xi~ -
+yi\textbar{} si x =
+(x1,\\ldots,xn~)
+et y =
+(y1,\\ldots,yn~).
+
+Définition~4.2.2 On appelle boule ouverte de centre a de rayon r
+\textgreater{} 0~: B(a,r) = \x \in
+E∣d(a,x) \textless{} r\.
+
+On appelle boule fermée de centre a de rayon r \textgreater{} 0~:
+B'(a,r) = \x \in E∣d(a,x) \leq
+r\.
+
+On appelle sphère de centre a de rayon r \textgreater{} 0~: S(a,r) =
+\x \in E∣d(a,x) =
+r\
+
+Définition~4.2.3 Soit (E,d) un espace métrique et dF la
+restriction de d à F \times F. Alors dF est encore une distance sur
+F appelée la distance induite par d.
+
+Remarque~4.2.1 On a clairement BdF(a,r) =
+Bd(a,r) \bigcap F et le résultat similaire pour les boules fermées,
+si a \in F.
+
+Définition~4.2.4 Soit
+(E1,d1),\\ldots,(Ek,dk~)
+des espaces métriques. Soit E = E1
+\times⋯ \times Ek. On définit alors sur E une
+distance produit par d(x,y) =\
+maxidi(xi,yi) si x =
+(x1,\\ldots,xk~)
+et y =
+(y1,\\ldots,yk~).
+
+Définition~4.2.5
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) Soit x \in E et A \subset~ E, A\neq~\varnothing~. On appelle
+  distance de x à A le réel d(x,A) = inf~
+  \d(x,a)∣a \in
+  A\
+\item
+  (ii) A,B \subset~ E non vides. On appelle distance de A et B le réel d(A,B)
+  = inf~
+  \d(a,b)∣a \in A,b \in
+  B\
+\item
+  (iii) On appelle diamètre de A \subset~ E, A\neq~\varnothing~, le
+  nombre \delta(A) =\
+  sup\d(a,a')∣a,a' \in
+  A\ \in \mathbb{R}~ \cup\ + \infty~\~; on
+  dit que A est bornée si \delta(A) \textless{} +\infty~.
+\end{itemize}
+
+Définition~4.2.6 Soit (E,d) et (F,\delta) deux espaces métriques. On appelle
+isométrie de E sur F toute application f : E \rightarrow~ F bi\\\\jmathmathmathmathective qui conserve
+la distance~:
+
+\forall~~x,y \in E, \delta(f(x),f(y)) = d(x,y)
+
+\paragraph{4.2.2 Topologie définie par une distance}
+
+Définition~4.2.7 Soit (E,d) un espace métrique. On appelle topologie
+définie sur E par la distance d l'ensemble des parties U de E (les
+ouverts de la topologie) vérifiant
+
+\forall~x \in U, \\exists~r
+\textgreater{} 0,\quad B(x,r) \subset~ U
+
+Démonstration C'est bien une topologie~: clairement E et \varnothing~ sont des
+ouverts~; si U et U' sont des ouverts et x \in U \bigcap U', il existe r
+\textgreater{} 0 et r' \textgreater{} 0 tels que B(x,r) \subset~ U et B(x,r') \subset~
+U' et alors r0 = min~(r,r')
+\textgreater{} 0 est tel que B(x,r0) \subset~ U \bigcap U'. Si les
+Ui, i \in I sont des ouverts, soit x
+\in\⋃ ~
+i\inIUi. Il existe i0 tel que x \in
+Ui0 puis r \textgreater{} 0 tel que B(x,r) \subset~
+Ui0. On a alors B(x,r)
+\subset~\⋃ ~
+i\inIUi.
+
+Proposition~4.2.2 Dans un espace métrique, toute boule ouverte est un
+ouvert, toute boule fermée est un fermé.
+
+Démonstration Soit x \in B(a,r) et \rho = r - d(a,x) \textgreater{} 0. Si y \in
+B(x,\rho), on a d(a,y) \leq d(a,x) + d(x,y) \textless{} d(a,x) + \rho = r soit
+B(x,\rho) \subset~ B(a,r). De même on montre que si
+x∉B'(a,r) et si \rho = d(a,x) - r \textgreater{}
+0, alors B(x,\rho) \subset~ E \diagdown B'(a,r). Donc E \diagdown B'(a,r) est ouvert et B'(a,r)
+est fermé.
+
+Remarque~4.2.2
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) V \in V (a) \Leftrightarrow
+  \exists~r \textgreater{} 0, B(a,r) \subset~ V
+\item
+  (ii) a \in A^o \Leftrightarrow
+  \exists~r \textgreater{} 0, B(a,r) \subset~ A
+\item
+  (iii) \overlineA = \x \in
+  E∣\forall~~r
+  \textgreater{} 0, B(x,r) \bigcap
+  A\neq~\varnothing~\
+\item
+  (iv) \mathrmFr~(A) =
+  \x \in
+  E∣\forall~~r
+  \textgreater{} 0, B(x,r) \bigcap
+  A\neq~\varnothing~\text et B(x,r)
+  \bigcapcA\neq~\varnothing~\
+\end{itemize}
+
+Proposition~4.2.3 Soit (E,d) un espace métrique et F \subset~ E. Alors la
+topologie induite sur F est la topologie définie par la distance
+dF.
+
+Démonstration On remarque que si a \in F, BdF(a,r) =
+Bd(a,r) \bigcap F. Soit V un ouvert pour la topologie induite, soit
+U ouvert de E tel que V = U \bigcap F. On a a \in U, donc il existe r
+\textgreater{} 0 tel que Bd(a,r) \subset~ U. On a alors
+BdF(a,r) = Bd(a,r) \bigcap F \subset~ U \bigcap F \subset~ U.
+Inversement, soit V un ouvert pour la distance dF. Pour tout x
+\in V , il existe rx \textgreater{} 0 tel que
+BdF(x,rx) \subset~ V . On a alors V
+= \⋃  ~x\inV
+BdF(x,rx) (cette réunion contient V de
+manière évidente et est contenue dans V car réunion de parties de V ).
+On pose alors U =\ \⋃
+ x\inV Bd(x,rx). C'est un ouvert de E et
+on a V = U \bigcap F.
+
+Remarque~4.2.3 Ceci montre que la topologie définie par la distance
+dF ne dépend que de la topologie sur E et pas vraiment de la
+distance d. Montrons de même que la topologie définie par la distance
+produit ne dépend que des topologies sur les espaces et pas des
+distances elles-mêmes
+
+Proposition~4.2.4 Soit (E1,d1) et
+(E2,d2) deux espaces métriques et (E1 \times
+E2,\delta) l'espace métrique produit. Soit U \subset~ E1 \times
+E2. Alors U est ouvert si et seulement si~
+
+\forall~(a1,a2~) \in U,
+\existsV 1 \in V (a1~),
+\existsV 2~ \in V
+(a2),\quad V 1 \times V 2 \subset~ U
+
+Démonstration Supposons que U est ouvert pour la distance produit. Si
+(a1,a2) \in U, il existe r \textgreater{} 0 tel que
+B\delta((a1,a2),r) \subset~ U. Mais on a
+
+\begin{align*}
+B\delta((a1,a2),r)& =&
+\(x1,x2)∣max(d1(x1,a1),d2(a2,r2~))
+\textless{} r\\%& \\ &
+=& Bd1(a1,r) \times
+Bd2(a2,r) \%&
+\\ \end{align*}
+
+et donc V 1 = Bd1(a1,r) et V
+2 = Bd2(a2,r) sont des voisinages
+de a1 et a2 tels que V 1 \times V 2 \subset~
+U. Inversement, si U vérifie cette propriété, soit
+(a1,a2) \in U et soit V 1 \in V
+(a1), V 2 \in V (a2) tels que V 1
+\times V 2 \subset~ U. Il existe r1 \textgreater{} 0 et
+r2 \textgreater{} 0 tels que
+Bdi(ai,ri) \subset~ V i. Soit
+r = min(r1,r2~)
+\textgreater{} 0. On a
+
+\begin{align*}
+B\delta((a1,a2),r)& =&
+Bd1(a1,r) \times
+Bd2(a2,r) \%&
+\\ & \subset~&
+Bd1(a1,r1) \times
+Bd2(a2,r2) \subset~ V 1 \times V
+2 \subset~ U\%& \\
+\end{align*}
+
+donc U est un ouvert pour \delta, ce qui achève la démonstration.
+
+Remarque~4.2.4 En particulier, si U1 et U2 sont des
+ouverts de E1 et E2, alors U1 \times
+U2 est un ouvert de E1 \times E2~; un tel
+ouvert sera dit ouvert élémentaire.
+
+\paragraph{4.2.3 Points isolés, points d'accumulation}
+
+Soit tou\\\\jmathmathmathmathours F une partie de E et x \in\overlineF. On
+sait que \forall~~V \in V (x) V \bigcap
+F\neq~\varnothing~. On a alors deux possibilités suivant que
+V \bigcap F peut être réduit à \x\ ou non.
+
+Définition~4.2.8
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) On dit que x \in F est point isolé de F, s'il existe V voisinage de
+  x dans E tel que V \bigcap F = \x\
+\item
+  (ii) On dit que x \in E est point d'accumulation de F si pour tout
+  voisinage V de x dans E, V \bigcap F
+  \diagdown\x\\neq~\varnothing~.
+\end{itemize}
+
+Théorème~4.2.5 Soit E un espace métrique.
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) x \in F est point isolé de F si et seulement
+  si~\x\ est ouvert dans F
+\item
+  (ii) x \in E est point d'accumulation de F si et seulement si~pour tout
+  voisinage V de x dans E, V \bigcap F est infini.
+\end{itemize}
+
+Démonstration (i) est tout à fait élémentaire et résulte de la
+définition de la topologie induite. En ce qui concerne (ii), la partie (
+⇐) est évidente. Montrons donc la partie ( \rigtharrow~). Soit x un point
+d'accumulation de F, V un voisinage de x et r \textgreater{} 0 tel que
+B(x,r) \subset~ V . Alors (B(x,r) \diagdown\x\) \bigcap
+F\neq~\varnothing~. Soit x1 \in (B(x,r)
+\diagdown\x\) \bigcap F. Si xn est supposé
+construit, on pose rn = d(x,xn) \textgreater{} 0 et
+on choisit xn+1 \in (B(x,rn)
+\diagdown\x\) \bigcap
+F\neq~\varnothing~. Alors la suite (d(x,xn)) est
+strictement décroissante, ce qui montre que les xn sont deux à
+deux distincts. Ils sont tous dans F et dans B(x,r) donc dans V .
+
+\paragraph{4.2.4 Propriété de séparation}
+
+Théorème~4.2.6 Soit E un espace métrique, a et b deux points distincts
+de E. Alors il existe U ouvert contenant a et V ouvert contenant b tels
+que U \bigcap V = \varnothing~.
+
+Démonstration Soit r = 1 \over 3 d(a,b), U = B(a,r)
+et V = B(b,r) conviennent.
+
+Corollaire~4.2.7 Soit E un espace métrique et \Delta =
+\(x,x) \in E \times E\. Alors \Delta est fermée
+dans E \times E.
+
+Démonstration Soit (a,b) \in E \times E \diagdown \Delta. On a donc
+a\neq~b. Il existe U ouvert contenant a et V
+ouvert contenant b tels que U \bigcap V = \varnothing~. Alors U \times V est un ouvert de E \times
+E (élémentaire) et (U \times V ) \bigcap \Delta = \varnothing~, soit U \times V \subset~ E \times E \diagdown \Delta. Donc E \times E
+\diagdown \Delta est voisinage de tous ses points et il est ouvert. Donc \Delta est
+fermée.
+
+\paragraph{4.2.5 Changement de distances}
+
+Définition~4.2.9 Soit E un ensemble. On dit que deux distances
+d1 et d2 sur E sont topologiquement équivalentes si
+elles définissent la même topologie (il s'agit clairement d'une relation
+d'équivalence).
+
+Théorème~4.2.8 Soit E un ensemble, d et d' deux distances sur E. Ces
+distances sont topologiquement équivalentes si et seulement si~elles
+vérifient
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) \forall~a \in E, \\forall~~r
+  \textgreater{} 0, \exists~r' \textgreater{}
+  0,\quad Bd'(a,r') \subset~ Bd(a,r)
+\item
+  (ii) \forall~a \in E, \\forall~~r'
+  \textgreater{} 0, \exists~r \textgreater{}
+  0,\quad Bd(a,r) \subset~ Bd'(a,r')
+\end{itemize}
+
+Démonstration Ces conditions sont évidemment nécessaires puisque les
+boules ouvertes pour d doivent être des ouverts pour d' et
+réciproquement. Supposons maintenant que (i) est vérifiée et soit U un
+ouvert pour d. Soit a \in U. Il existe r \textgreater{} 0 tel que
+Bd(a,r) \subset~ U. Alors \exists~r'
+\textgreater{} 0,\quad Bd'(a,r') \subset~
+Bd(a,r) \subset~ U. On en déduit que U est ouvert pour d', donc
+Td \subset~Td'. De même (ii) traduit l'inclusion
+Td' \subset~Td.
+
+Définition~4.2.10 Soit E un ensemble. On dit que deux distances
+d1 et d2 sur E sont équivalentes s'il existe \alpha~ et \beta~
+strictement positifs tels que
+
+\forall~~x,y \in E,\quad
+\alpha~d1(x,y) \leq d2(x,y) \leq \beta~d1(x,y)
+
+Proposition~4.2.9 Deux distances équivalentes sont topologiquement
+équivalentes.
+
+Démonstration On a d1(a,x) \textless{} r
+\over \beta~ \rigtharrow~ d2(x,y) \textless{} r soit
+Bd1(a, r \over \beta~ ) \subset~
+Bd2(a,r). De même Bd2(a,\alpha~r) \subset~
+Bd1(a,r).
+
+Remarque~4.2.5 Soit d une distance sur E et posons d'(x,y)
+= min~(1,d(x,y)). On vérifie facilement que d
+est une distance sur E, que d et d' sont topologiquement équivalentes
+(Bd(a,r) \subset~ Bd'(a,r) et
+Bd'(a,min~( 1 \over
+2 ,r)) \subset~ Bd(a,r)). Mais en général, d et d' ne sont pas
+équivalentes (d' est tou\\\\jmathmathmathmathours bornée alors que d ne l'est pas en
+général).
+
+\paragraph{4.2.6 La droite numérique achevée}
+
+On pose \overline\mathbb{R}~ = \mathbb{R}~
+\cup\-\infty~,+\infty~\ muni de la relation d'ordre
+évidente. Les intervalles ouverts sont donc les intervalles de la forme
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) I ={]}a,b{[}= \x \in \mathbb{R}~∣a
+  \textless{} x \textless{} b\ pour a,b
+  \in\overline\mathbb{R}~
+\item
+  (ii) I ={]}a,+\infty~{]} = \x
+  \in\overline\mathbb{R}~∣a
+  \textless{} x\ ou I = {[}-\infty~,a{[}= \x
+  \in\overline\mathbb{R}~∣x
+  \textless{} a\
+\item
+  (iii) I = {[}-\infty~,+\infty~{]} = \overline\mathbb{R}~
+\end{itemize}
+
+Comme sur \mathbb{R}~, ces intervalles ouverts engendrent une topologie appelée la
+topologie usuelle de \overline\mathbb{R}~. On a alors
+
+\begin{itemize}
+\item
+  (i) si a \in \mathbb{R}~, V \in V (a) \Leftrightarrow
+  \exists~\epsilon \textgreater{} 0,\quad
+  {]}a - \epsilon,a + \epsilon{[}\subset~ V
+\item
+  (ii) si a = +\infty~,
+
+  V \in V (+\infty~) \Leftrightarrow \exists~A
+  \textgreater{} 0,\quad {]}A,+\infty~{]} \subset~ V
+\item
+  (iii) si a = -\infty~,
+
+  V \in V (-\infty~) \Leftrightarrow \exists~A
+  \textless{} 0,\quad {[}-\infty~,A{[}\subset~ V
+\end{itemize}
+
+Théorème~4.2.10 La topologie usuelle sur \overline\mathbb{R}~
+est définie par une distance.
+
+Démonstration Soit \phi : \overline\mathbb{R}~ \rightarrow~ {[}-1,1{]}
+définie par \phi(x) = \left \
+\cases  x \over
+1+\textbar{}x\textbar{} &si x \in \mathbb{R}~ \cr 1 &si x = +\infty~
+\cr -1 &si x = -\infty~ \cr 
+\right .. L'application \phi est une bi\\\\jmathmathmathmathection strictement
+croissante donc respecte les intervalles ouverts, donc les topologies
+usuelles~: si U \subset~\overline\mathbb{R}~, U est ouvert dans
+\overline\mathbb{R}~ si et seulement si~\phi(U) est ouvert dans
+{[}-1,1{]}~; comme la topologie sur {[}-1,1{]} est définie par la
+distance \textbar{}x - y\textbar{}, la topologie sur
+\overline\mathbb{R}~ est définie par la distance d(x,y) =
+\textbar{}\phi(x) - \phi(y)\textbar{} (pour cette distance, \phi devient une
+isométrie).
+
+Remarque~4.2.6 On vérifie immédiatement que la topologie usuelle de
+\overline\mathbb{R}~ induit sur \mathbb{R}~ la topologie usuelle de \mathbb{R}~.
+
+{[}
+{[}
+{[}
+{[}

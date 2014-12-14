@@ -1,0 +1,363 @@
+
+\subsubsection{12.2 Formes quadratiques}
+
+\paragraph{12.2.1 Notion de forme quadratique}
+
+Soit E un K-espace vectoriel et \phi une forme bilinéaire symétrique sur E.
+Soit \Phi l'application de E dans K qui à x associe \Phi(x) = \phi(x,x).
+
+Proposition~12.2.1 On a les identités suivantes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item \Phi(\lambda~x) = \lambda~^2\Phi(x)
+\item
+  (ii) \Phi(x + y) = \Phi(x) + 2\phi(x,y) + \Phi(y) (identité de polarisation)
+\item
+  (iii) \Phi(x + y) + \Phi(x - y) = 2(\Phi(x) + \Phi(y)) (identité de la médiane)
+\end{itemize}
+
+Démonstration (i) \Phi(\lambda~x) = \phi(\lambda~x,\lambda~x) = \lambda~^2\phi(x,x) =
+\lambda~^2\Phi(x)
+
+(ii) \Phi(x + y) = \phi(x + y,x + y) = \Phi(x) + \phi(x,y) + \phi(y,x) + \Phi(y) = \Phi(x) +
+2\phi(x,y) + \Phi(y)
+
+(iii) changeant y en - y dans l'identité précédente, on a aussi \Phi(x - y)
+= \Phi(x) - 2\phi(x,y) + \Phi(y), et en additionnant les deux on trouve \Phi(x + y)
++ \Phi(x - y) = 2(\Phi(x) + \Phi(y)).
+
+Remarque~12.2.1 Si
+\mathrmcarK\mathrel\neq~~2,
+l'identité (ii) montre que l'application \phi\mapsto~\Phi
+est in\\\\jmathmathmathmathective de S2(E) dans K^E (espace vectoriel
+des applications de E dans K) puisque la connaissance de \Phi permet de
+retrouver \phi par
+
+\phi(x,y) = 1 \over 2 (\Phi(x + y) - \Phi(x) - \Phi(y))
+
+Ceci nous amène à poser
+
+Définition~12.2.1 Soit K un corps de caractéristique différente de 2 et
+E un K-espace vectoriel . On appelle forme quadratique sur E toute
+application \Phi : E \rightarrow~ K vérifiant les deux propriétés
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) \forall~\lambda~ \in K, \\forall~~x \in
+  E, \Phi(\lambda~x) = \lambda~^2\Phi(x)
+\item
+  (ii) l'application \phi : E \times E \rightarrow~ K, \phi(x,y) = 1 \over
+  2 (\Phi(x + y) - \Phi(x) - \Phi(y)) est une forme bilinéaire (évidemment
+  symétrique) sur E.
+\end{itemize}
+
+Dans ce cas, on a \forall~~x \in E, \Phi(x) = \phi(x,x)~; \phi
+est appelée la forme polaire de \Phi.
+
+Démonstration On a \phi(x,x) = 1 \over 2 (\Phi(2x) - 2\Phi(x))
+= 1 \over 2 (4\Phi(x) - 2\Phi(x)) = \Phi(x) en utilisant la
+propriété (i).
+
+Exemple~12.2.1 Sur K^n, \Phi(x) =\
+\sum  i=1^nxi^2~
+est une forme quadratique dont la forme polaire associée est \phi(x,y)
+= \\sum ~
+i=1^nxiyi. Si K = \mathbb{R}~ ou K = \mathbb{C}, et si E
+désigne l'espace vectoriel des fonctions continues de {[}a,b{]} dans K,
+\Phi(f) =\int  a^bf(t)^2~
+dt est une forme quadratique dont la forme polaire est \phi(f,g)
+=\int  a^b~f(t)g(t) dt.
+
+Proposition~12.2.2 L'ensemble Q(E) des formes quadratiques sur E est un
+sous-espace vectoriel de K^E~; l'application
+\phi\mapsto~\Phi est un isomorphisme d'espaces vectoriels
+de S2(E) sur Q(E).
+
+Remarque~12.2.2 Par la suite on confondra toutes les notions relatives à
+\phi et à \Phi~: orthogonalité, matrice, non dégénérescence, isotropie~; en
+particulier on posera
+\mathrmKer~\Phi
+= \mathrmKer~\phi =
+\x \in
+E∣\forall~~y \in E, \phi(x,y) =
+0\. On remarquera qu'en général,
+\mathrmKer\Phi\mathrel\neq~~\x
+\in E∣\Phi(x) = 0\.
+
+Théorème~12.2.3 (Pythagore). Soit E un K-espace vectoriel ~et \Phi \inQ(E), \phi
+la forme polaire de \Phi. Alors
+
+x \bot\phiy \Leftrightarrow \Phi(x + y) = \Phi(x) + \Phi(y)
+
+Démonstration C'est une conséquence évidente de l'identité de
+polarisation.
+
+\paragraph{12.2.2 Formes quadratiques en dimension finie}
+
+Soit E un K-espace vectoriel ~de dimension finie, \Phi \inQ(E) de forme
+polaire \phi.
+
+Théorème~12.2.4 Soit \mathcal{E} une base de E. Alors
+\mathrmMat~ (\phi,\mathcal{E}) est
+l'unique matrice \Omega \in MK(n) qui est symétrique et qui vérifie
+
+\forall~x \in E, \Phi(x) = ^t~X\OmegaX
+
+Démonstration Il est clair que \Omega =\
+\mathrmMat (\Phi,\mathcal{E}) est symétrique et vérifie \Phi(x) =
+\phi(x,x) = ^tX\OmegaX. Inversement, soit \Omega une matrice symétrique
+vérifiant cette propriété. On a alors
+
+\begin{align*} \phi(x,y)& =& 1 \over
+2 (\Phi(x + y) - \Phi(x) - \Phi(y)) \%& \\ &
+=& 1 \over 2 (^t(X + Y )\Omega(X + Y )
+-^tX\OmegaX -^tY \OmegaY \%&
+\\ & =& 1 \over 2
+(^tX\OmegaY + ^tY \OmegaX) \%&
+\\ \end{align*}
+
+Mais, une matrice 1 \times 1 étant forcément symétrique ^tY \OmegaX =
+^t(^tY \OmegaX) = ^tX^t\OmegaY =
+^tX\OmegaY puisque \Omega est symétrique. On a donc \phi(x,y) =
+^tX\OmegaY ce qui montre que \Omega =\
+\mathrmMat (\phi,\mathcal{E}).
+
+Remarque~12.2.3 On prendra garde à la condition de symétrie de \Omega. Il est
+en effet clair que l'on peut remplacer, dans la condition \Phi(x) =
+^tX\OmegaX, la matrice \Omega par une matrice \Omega' = \Omega + A où A est
+antisymétrique, puisque dans ce cas ^tXAX = 0. On aura alors
+\Phi(x) = ^tX\Omega'X bien que \Omega' ne soit pas la matrice de \Phi dans la
+base \mathcal{E}.
+
+Posons \Omega = \mathrmMat~ (\phi,\mathcal{E})
+= (\omegai,\\\\jmathmathmathmath)1\leqi,\\\\jmathmathmathmath\leqn. On a alors
+
+\phi(x,y) = \\sum
+i,\\\\jmathmathmathmath\omegai,\\\\jmathmathmathmathxiy\\\\jmathmathmathmath =
+\\sum
+i\omegai,ixiyi +
+\\sum
+i\textless{}\\\\jmathmathmathmath\omegai,\\\\jmathmathmathmath(xiy\\\\jmathmathmathmath +
+x\\\\jmathmathmathmathyi)
+
+en tenant compte de \omegai,\\\\jmathmathmathmath = \omega\\\\jmathmathmathmath,i. On a donc
+
+\Phi(x) = \phi(x,x) = \\sum
+i\omegai,ixi^2 +
+2\\sum
+i\textless{}\\\\jmathmathmathmath\omegai,\\\\jmathmathmathmathxix\\\\jmathmathmathmath =
+P\Phi(x1,\ldots,xn~)
+
+où P\Phi est le polynôme homogène de degré 2 à n variables
+P\Phi(X1,\\ldots,Xn~)
+= \\sum ~
+i\omegai,iXi^2 +\
+\sum ~
+i\textless{}\\\\jmathmathmathmath\omegai,\\\\jmathmathmathmathXiX\\\\jmathmathmathmath.
+Inversement, soit P un polynôme homogène de degré 2 à n variables,
+P(X1,\\ldots,Xn~)
+= \\sum ~
+i=1^nai,iXi^2
++ \\sum ~
+i\textless{}\\\\jmathmathmathmathai,\\\\jmathmathmathmathXiX\\\\jmathmathmathmath. Définissons
+\phi sur E par
+
+\phi(x,y) = \\sum
+iai,ixiyi +
+\sum i\textless{}\\\\jmathmathmathmath ai,\\\\jmathmathmathmath~
+\over 2 (xiy\\\\jmathmathmathmath +
+x\\\\jmathmathmathmathyi)
+
+si x = \\sum ~
+xiei et y =\
+\sum  yiei~. Alors \phi est
+clairement une forme bilinéaire symétrique sur E et la forme quadratique
+associée vérifie \Phi(x) =
+P(x1,\\ldots,xn~).
+On obtient donc
+
+Théorème~12.2.5 Soit E un K-espace vectoriel ~de dimension finie n, \mathcal{E}
+une base de E. L'application qui à une forme quadratique \Phi sur E de
+matrice \Omega = (\omegai,\\\\jmathmathmathmath)1\leqi,\\\\jmathmathmathmath\leqn dans la base \mathcal{E} associe le
+polynôme à n variables
+P\Phi(X1,\\ldots,Xn~)
+= \\sum ~
+i\omegai,iXi^2 +
+2\\sum ~
+i\textless{}\\\\jmathmathmathmath\omegai,\\\\jmathmathmathmathXiX\\\\jmathmathmathmath est un
+isomorphisme d'espaces vectoriels de Q(E) sur l'espace
+H2(X1,\\ldots,Xn~)
+des polynômes homogènes de degré 2 à n variables. Inversement, étant
+donné
+P(X1,\\ldots,Xn~)
+= \\sum ~
+i=1^nai,iXi^2
++ \\sum ~
+i\textless{}\\\\jmathmathmathmathai,\\\\jmathmathmathmathXiX\\\\jmathmathmathmath \in
+H2(X1,\\ldots,Xn~),
+la forme bilinéaire symétrique associée est donnée par \phi(x,y)
+= \\sum ~
+iai,ixiyi
++ \\sum ~
+i\textless{}\\\\jmathmathmathmath ai,\\\\jmathmathmathmath \over 2
+(xiy\\\\jmathmathmathmath + x\\\\jmathmathmathmathyi) (règle du
+dédoublement des termes).
+
+Remarque~12.2.4 La règle du dédoublement des termes signifie donc que
+l'on obtient l'expression de \phi(x,y) à partir de l'expression polynomiale
+de \Phi(x) en rempla\ccant partout les termes carrés
+xi^2 par xiyi et les termes
+rectangles xix\\\\jmathmathmathmath par  1 \over 2
+(xiy\\\\jmathmathmathmath + x\\\\jmathmathmathmathyi). Le lecteur
+vérifiera également sans difficulté que
+
+\phi(x,y) = 1 \over 2 \\sum
+i=1^nx i \partial~P \over
+\partial~Xi
+(y1,\ldots,yn~)
+
+\paragraph{12.2.3 Matrices et déterminants de Gram}
+
+Définition~12.2.2 Soit E un K-espace vectoriel , \Phi \inQ(E), \phi la forme
+polaire de \Phi. Soit
+(v1,\\ldots,vn~)
+une famille finie d'éléments de E. On appelle matrice de Gram de la
+famille la matrice
+Gram(v1,\\\ldots,vn~)
+= (\phi(vi,v\\\\jmathmathmathmath))1\leqi,\\\\jmathmathmathmath\leqn et déterminant de Gram
+le scalaire
+G(v1,\\ldots,vn~)
+= \mathrm{det}~
+Gram(v1,\\\ldots,vn~).
+
+Lemme~12.2.6 Soit V =\
+\mathrmVect(v1,\\ldots,vn~).
+Alors
+
+\mathrmrg(\Gram(v1,\\\ldots,vn~))
+= dim V -\ dim~ (V \bigcap
+V ^\bot)
+
+Démonstration Soit \mathcal{E} =
+(e1,\\ldots,en~)
+la base canonique de K^n et u l'application linéaire de
+K^n dans E définie par u(ei) = vi. Alors
+V = u(K^n). Soit \psi la forme bilinéaire symétrique sur
+K^n définie par \psi(x,y) = \phi(u(x),u(y)). On a donc, d'après le
+théorème du rang
+
+n = dim K^n~
+= \mathrmrg~\psi
++ dim~
+\mathrmKer~\psi
+
+Mais \mathrmMat~ (\psi,\mathcal{E}) =
+\left (\psi(ei,e\\\\jmathmathmathmath)\right
+) = \left
+(\phi(u(ei)),u(e\\\\jmathmathmathmath))\right ) =
+\left (\phi(vi,v\\\\jmathmathmathmath)\right
+) =\
+Gram(v1,\\ldots,vn~),
+si bien que \mathrmrg~\psi
+=\
+\mathrmrgGram(v1,\\\ldots,vn~).
+D'autre part
+
+\begin{align*} x
+\in\mathrmKer~\psi&
+\Leftrightarrow & \forall~~y \in
+K^n, \psi(x,y) = 0 \%& \\ &
+\Leftrightarrow & \forall~~y \in
+K^n,\phi(u(x),u(y)) = 0 \%& \\ &
+\Leftrightarrow & \forall~~v \in V =
+u(K^n), \phi(u(x),v) = 0\%& \\ &
+\Leftrightarrow & u(x) \in V ^\bot\bigcap V \%&
+\\ \end{align*}
+
+On a donc \mathrmKer~\psi =
+u^-1(V \bigcap V ^\bot), soit (puisque V \bigcap V ^\bot\subset~
+V = \mathrmIm~u),
+
+\begin{align*} dim~
+\mathrmKer~\psi& =&
+dim V \bigcap V ^\bot~
++ dim~
+\mathrmKer~u \%&
+\\ & =& dim~ V
+\bigcap V ^\bot + n - dim~
+\mathrmIm~u\%&
+\\ & =& dim~ V
+\bigcap V ^\bot + n - dim~ V \%&
+\\ \end{align*}
+
+D'où finalement
+
+\begin{align*}
+\mathrmrg(\Gram(v1,\\\ldots,vn~))&
+=& \mathrmrg~\psi = n
+- dim~
+\mathrmKer~\psi \%&
+\\ & =& dim~ V
+- dim (V \bigcap V ^\bot~)\%&
+\\ \end{align*}
+
+Comme dim~ V \leq n, on a donc
+\mathrmrg\Gram(v1,\\\ldots,vn~)
+= n \Leftrightarrow dim~ V = n et
+V \bigcap V ^\bot = \0\. On a donc
+
+Proposition~12.2.7 Soit E un K-espace vectoriel , \Phi \inQ(E), \phi la forme
+polaire de \Phi. Soit
+(v1,\\ldots,vn~)
+une famille finie d'éléments de E. Alors on a équivalence de
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i)
+  G(v1,\\ldots,vn)\mathrel\neq~~0
+\item
+  (ii) la famille
+  (v1,\\ldots,vn~)
+  est libre et le sous-espace
+  \mathrmVect(v1,\\\ldots,vn~)
+  est non isotrope.
+\end{itemize}
+
+Corollaire~12.2.8 Soit E un K-espace vectoriel , \Phi \inQ(E) une forme
+quadratique sur E qui est définie. Soit
+(v1,\\ldots,vn~)
+une famille finie d'éléments de E. Alors on a équivalence de
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i)
+  G(v1,\\ldots,vn)\mathrel\neq~~0
+\item
+  (ii) la famille
+  (v1,\\ldots,vn~)
+  est libre.
+\end{itemize}
+
+Remarque~12.2.5 Les déterminants de Gram permettent donc, moyennant la
+connaissance d'une forme quadratique définie sur E (s'il en existe), de
+tester la liberté d'une famille finie, quel que soit le cardinal de
+cette famille et même si l'espace vectoriel E est de dimension infinie.
+C'est ainsi que pour une famille
+(f1,\\ldots,fn~)
+de fonctions continues de {[}0,1{]} dans \mathbb{R}~, on a
+
+(f1,\\ldots,fn~)\text
+libre  \Leftrightarrow
+\mathrm{det}~
+\left (\int ~
+0^1f if\\\\jmathmathmathmath\right
+)\neq~0
+
+{[}
+{[}
+{[}
+{[}

@@ -1,0 +1,641 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{13.4 Endomorphismes d'un espace hermitien}
+
+\paragraph{13.4.1 Notion d'ad\\\\jmathmathmathmathoint}
+
+Soit E un espace préhilbertien complexe
+
+Définition~13.4.1 Soit E un espace préhilbertien complexe. Soit u,v \in
+L(E). On dit que u et v sont des endomorphismes ad\\\\jmathmathmathmathoints si
+
+\forall~x,y \in E, (u(x)\mathrel∣~y)
+= (x∣v(y))
+
+Remarque~13.4.1 La symétrie hermitienne du produit scalaire montre
+clairement que u et v \\\\jmathmathmathmathouent des rôles symétriques, donc que u est
+ad\\\\jmathmathmathmathoint de v si et seulement si~v est ad\\\\jmathmathmathmathoint de u.
+
+Théorème~13.4.1 Soit E un espace hermitien. Tout endomorphisme de E
+admet un unique ad\\\\jmathmathmathmathoint u^∗. Si u \in L(E), \mathcal{E} une base de E, \Omega
+= \mathrmMat~ (\phi,\mathcal{E}) et A
+= \mathrmMat~ (u,\mathcal{E}), alors
+
+\mathrmMat~
+(u^∗,\mathcal{E}) = \Omega^-1A^∗\Omega
+
+Démonstration Soit \mathcal{E} une base de E et \Omega =\
+\mathrmMat (\phi,\mathcal{E}). Comme \phi est non dégénérée, la
+matrice \Omega est inversible. Soit u,v \in L(E), A =\
+\mathrmMat (u,\mathcal{E}) et B =\
+\mathrmMat (v,\mathcal{E}). Si x,y \in E, on a
+(u(x)∣y) = (AX)^∗\OmegaY =
+X^∗A^∗\OmegaY et (x∣v(y)) =
+X^∗\OmegaBY . L'unicité de la matrice de la forme sesquilinéaire
+(x,y)\mapsto~(u(x)\mathrel∣y)
+montre que
+
+\begin{align*} \forall~~x,y \in E,
+(u(x)∣y) =
+(x∣v(y))&& \%&
+\\ & \Leftrightarrow &
+A^∗\Omega = \OmegaB \Leftrightarrow B =
+\Omega^-1A^∗\Omega\%& \\
+\end{align*}
+
+ce qui montre à la fois l'existence et l'unicité de l'ad\\\\jmathmathmathmathoint et la
+formule voulue.
+
+Proposition~13.4.2 Soit E un espace hermitien. L'application
+u\mapsto~u^∗ est un endomorphisme
+semi-linéaire involutif de L(E). Si u,v \in L(E), alors u \cdot v aussi et
+(u \cdot v)^∗ = v^∗\cdot u^∗. Si u \in L(E) est
+inversible, alors u^∗ est inversible et
+(u^-1)^∗ = (u^∗)^-1.
+
+Démonstration On a dé\\\\jmathmathmathmathà vu que la relation u et v sont ad\\\\jmathmathmathmathoints était
+symétrique, donc si u \in L(E), u^∗ aussi et u^∗∗ =
+u. Si u,v \in L(E), \alpha~,\beta~ \in \mathbb{C}, on a
+
+\begin{align*} ((\alpha~u +
+\beta~v)(x)∣y)& =& (\alpha~u(x) +
+\beta~v(x)∣y) \%&
+\\ & =&
+\overline\alpha~(u(x)∣y) +
+\overline\beta~(v(x)∣y) \%&
+\\ & =&
+\overline\alpha~(x∣u^∗(y))
++
+\overline\beta~(x∣v^∗(y))\%&
+\\ & =&
+(x∣(\overline\alpha~u^∗
++ \overline\beta~v^∗)(y)) \%&
+\\ \end{align*}
+
+ce qui montre que (\alpha~u + \beta~v)^∗ =
+\overline\alpha~u^∗ +
+\overline\beta~v^∗ et donc la semilinéarité de
+u\mapsto~u^∗. Si u,v \in L(E), on a
+
+(u \cdot v(x)∣y) =
+(v(x)∣u^∗(y)) =
+(x∣v^∗\cdot u^∗(y))
+
+ce qui montre que u \cdot v admet v^∗\cdot u^∗ comme
+ad\\\\jmathmathmathmathoint.
+
+Si u est inversible, on a u^-1 \cdot u =
+\mathrmIdE d'où (u^-1 \cdot
+u)^∗ = \mathrmIdE^∗, soit
+u^∗\cdot (u^-1)^∗ =
+\mathrmIdE. De même u \cdot u^-1 =
+\mathrmIdE donne par passage à l'ad\\\\jmathmathmathmathoint
+(u^-1)^∗\cdot u^∗ =
+\mathrmIdE. Ceci montre que u^∗
+est inversible et que (u^-1)^∗ =
+(u^∗)^-1
+
+Proposition~13.4.3 Soit E un espace hermitien, u \in L(E). Alors
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) \mathrm{det}~
+  u^∗ =
+  \overline\mathrm{det}~
+  u,
+  \mathrm{tr}u^∗~ =
+  \overline\mathrm{tr}u~,
+  \chiu^∗ = \overline\chiu
+\item
+  (ii)
+  \mathrmKeru^∗~
+  =
+  (\mathrmImu)^\bot~,
+  \mathrmImu^∗~ =
+  (\mathrmKeru)^\bot~
+\item
+  (iii)
+  \mathrmKeru^∗~u
+  = \mathrmKer~u et
+  \mathrmImu^∗~u
+  = \mathrmImu^∗~
+\end{itemize}
+
+Démonstration (i) Soit \mathcal{E} une base de E, \Omega =\
+\mathrmMat (\phi,\mathcal{E}) et A =\
+\mathrmMat (u,\mathcal{E}), alors
+\mathrmMat~
+(u^∗,\mathcal{E}) = \Omega^-1A^∗\Omega. On a donc
+\mathrm{det} u^∗~
+= \mathrm{det}~
+\Omega^-1A^∗\Omega =\
+\mathrm{det} A^∗ =
+\overline\mathrm{det}~
+A =
+\overline\mathrm{det}~
+u. La démonstration est la même pour la trace et pour le polynôme
+caractéristique.
+
+(ii) On a
+
+\begin{align*} x
+\in\mathrmKeru^∗~&
+\Leftrightarrow & u^∗(x) = 0
+\Leftrightarrow \forall~~y \in E,
+(u^∗(x)∣y) = 0 \%&
+\\ & \Leftrightarrow &
+\forall~y \in E, (x\mathrel∣~u(y)) =
+0 \Leftrightarrow x \in
+(\mathrmImu)^\bot~\%&
+\\ \end{align*}
+
+En appliquant ce résultat à u^∗ on obtient,
+\mathrmKer~u =
+(\mathrmImu^∗)^\bot~
+et en prenant l'orthogonal,
+\mathrmImu^∗~ =
+(\mathrmKeru)^\bot~
+
+(iii) On a visiblement u(x) = 0 \rigtharrow~ u^∗u(x) = 0, donc
+\mathrmKer~u
+\subset~\mathrmKeru^∗~u~;
+mais d'autre part, si x
+\in\mathrmKeru^∗~u,
+on a
+
+\\textbar{}u(x)\\textbar{}^2 =
+(u(x)∣u(x)) =
+(u^∗u(x)∣x) =
+(0∣x) = 0
+
+et donc u(x) = 0, soit
+\mathrmKeru^∗~u
+\subset~\mathrmKer~u et l'égalité.
+On en déduit alors que
+
+\mathrmImu^∗~u =
+(\mathrmKer(u^∗u)^∗)^\bot~
+=
+(\mathrmKeru^∗u)^\bot~
+=
+(\mathrmKeru)^\bot~
+= \mathrmImu^∗~
+
+Une des propriétés essentielles de l'ad\\\\jmathmathmathmathoint que nous utiliserons de
+fa\ccon systématique pour la réduction des
+endomorphismes est la suivante
+
+Théorème~13.4.4 Soit u \in L(E). Soit F un sous-espace de E stable par u~;
+alors F^\bot est stable par u^∗.
+
+Démonstration Soit x \in F^\bot. Si y \in F, on a
+\phi(u^∗(x),y) = \phi(x,u(y)) = 0 puisque u(y) \in F et x \in
+F^\bot. Donc u^∗(x) \in F^\bot et
+F^\bot est stable par u^∗.
+
+\paragraph{13.4.2 Endomorphismes hermitiens}
+
+Définition~13.4.2 Soit E un espace hermitien, u \in L(E). On dit que u est
+hermitien (ou autoad\\\\jmathmathmathmathoint) s'il vérifie les conditions équivalentes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) u^∗ = u
+\item
+  (ii) \forall~~x,y \in E,
+  (u(x)∣y) =
+  (x∣u(y))
+\end{itemize}
+
+Remarque~13.4.2 Si la base \mathcal{E} est orthonormée, alors
+\mathrmMat~ ((
+∣ ),\mathcal{E}) = In et
+\mathrmMat~
+(u^∗,\mathcal{E}) =\
+\mathrmMat (u,\mathcal{E})^∗~; en particulier
+
+Théorème~13.4.5 Soit \mathcal{E} une base orthonormée de E~; alors u est hermitien
+si et seulement
+si~\mathrmMat~ (u,\mathcal{E}) est une
+matrice hermitienne.
+
+Proposition~13.4.6 L'ensemble H(E) des endomorphismes hermitiens est un
+\mathbb{R}~-sous-espace vectoriel de L(E) (mais pas un \mathbb{C} sous-espace vectoriel).
+On a L(E) = H(E) \oplus~ iH(E)
+
+Démonstration L'endomorphisme de L^∗(E),
+u\mapsto~u^∗ étant \mathbb{R}~ linéaire et
+involutif, l'espace L(E) est somme directe du sous-espace propre associé
+à la valeur propre 1 (les endomorphismes hermitiens) et du sous-espace
+propre associé à la valeur propre -1 (les endomorphismes antihermitiens,
+qui ne sont autre que les endomorphismes hermitiens multipliés par i).
+
+\paragraph{13.4.3 Groupe unitaire}
+
+Soit E un espace hermitien
+
+Définition~13.4.3 On dit que u \in L(E) est un endomorphisme unitaire si
+on a les propriétés équivalentes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) \forall~~x \in E,
+  \\textbar{}u(x)\\textbar{}
+  =\\textbar{} x\\textbar{}
+\item
+  (ii) \forall~~x,y \in E,
+  (u(x)∣u(y)) =
+  (x∣y)
+\item
+  (iii) u est inversible et u^-1 = u^∗
+\item
+  (iv) u \cdot u^∗ = \mathrmIdE
+\item
+  (v) u^∗\cdot u = \mathrmIdE
+\end{itemize}
+
+Démonstration (ii) \rigtharrow~(i) est évident (faire y = x). (i) \rigtharrow~(ii) provient de
+l'identité de polarisation et de la linéarité de u. Pour un
+endomorphisme d'un espace vectoriel de dimension finie, on sait que
+l'inversibilité est équivalente à l'inversibilité à gauche ou à droite.
+On a donc (iii) \Leftrightarrow (iv)
+\Leftrightarrow (v). Supposons (ii) vérifié. Alors \phi(x,y) =
+\phi(u(x),u(y)) = \phi(x,u^∗\cdot u(y)), ce qui montre (puisque \phi est
+non dégénérée) que u^∗\cdot u =
+\mathrmIdE~; donc (ii) \rigtharrow~(v). De même (v)
+\rigtharrow~(ii) puisque \phi(u(x),u(y)) = \phi(x,u^∗\cdot u(y)).
+
+Théorème~13.4.7 L'ensemble U(E) des endomorphismes unitaires de E est un
+sous-groupe de (GL(E),\cdot). Pour tout endomorphisme unitaire u de E, on a
+\textbar{}\mathrm{det}~
+u\textbar{} = 1. L'ensemble SU(E) des endomorphismes unitaires de
+déterminant 1 est un sous-groupe distingué de U(E).
+
+Démonstration On a clairement \mathrmIdE \in
+U(E). La définition (i) montre évidemment que si u et v sont unitaires,
+il en est de même de u \cdot v. De plus, soit u \in U(E)~; on a
+\\textbar{}u^-1(x)\\textbar{}
+=\\textbar{}
+u(u^-1(x))\\textbar{}
+=\\textbar{} x\\textbar{} ce qui montre
+que u^-1 \in U(E). Donc U(E) est un sous-groupe de (GL(E),\cdot).
+On a alors 1 = \mathrm{det}~
+\mathrmIdE =\
+\mathrm{det} (u^∗\cdot u)
+= \mathrm{det}~
+u^∗\mathrm{det}~ u
+= \textbar{}\mathrm{det}~
+u\textbar{}^2, soit
+\textbar{}\mathrm{det}~
+u\textbar{} = 1. L'application de U(E) dans le groupe multiplicatif des
+nombres complexes de module 1,
+u\mapsto~\mathrm{det}~
+u est un morphisme de groupes~; son noyau SU(E) est donc un sous groupe
+distingué.
+
+Théorème~13.4.8 Soit u \in L(E).
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) Si u est unitaire, il envoie toute base orthonormée sur une base
+  orthonormée.
+\item
+  (ii) Inversement, s'il existe une base orthonormée \mathcal{E} de E telle que
+  u(\mathcal{E}) soit encore orthonormée, alors u est un endomorphisme unitaire.
+\end{itemize}
+
+Démonstration (i) On a
+(u(ei)∣u(e\\\\jmathmathmathmath)) =
+(ei∣e\\\\jmathmathmathmath) =
+\deltai^\\\\jmathmathmathmath.
+
+(ii) Soit x = \\sum ~
+xiei \in E. On a
+\\textbar{}x\\textbar{}^2
+= \\sum ~
+\textbar{}xi\textbar{}^2. Mais on a aussi u(x)
+= \\sum ~
+xiu(ei) et comme u(\mathcal{E}) est orthonormée,
+\\textbar{}u(x)\\textbar{}^2
+= \\sum ~
+\textbar{}xi\textbar{}^2~; on a donc
+\forall~~x \in E,
+\\textbar{}u(x)\\textbar{}
+=\\textbar{} x\\textbar{}.
+
+Théorème~13.4.9 Soit u un endomorphisme unitaire et F un sous-espace de
+E stable par u. Alors F^\bot est stable par u.
+
+Démonstration On a u(F) \subset~ F et comme u est inversible, on a
+dim u(F) =\ dim~ F. On
+a donc u(F) = F. Soit donc x \in F^\bot et y \in F~; il existe z \in F
+tel que u(z) = y, d'où (u(x)∣y) =
+(u(x)∣u(z)) =
+(x∣z) = 0, et donc u(x) \in F^\bot.
+
+\paragraph{13.4.4 Matrices unitaires}
+
+Proposition~13.4.10 Soit E un espace hermitien. Soit u \in L(E), \mathcal{E} une
+base de E, \Omega = \mathrmMat~
+(( ∣ ),\mathcal{E}) et A =\
+\mathrmMat (u,\mathcal{E}). Alors u est un endomorphisme
+unitaire si et seulement si~A^∗\OmegaA = \Omega.
+
+Démonstration On a \phi(u(x),u(y)) = (AX)^∗\Omega(AY ) =
+X^∗A^∗\OmegaAY . L'unicité de la matrice d'une forme
+bilinéaire montre que
+
+\forall~~x,y \in E,
+(u(x)∣u(y)) =
+(x∣y) \mathrel\Leftrightarrow
+A^∗\OmegaA = \Omega
+
+En particulier, si \mathcal{E} est une base orthonormée de E, u est un
+endomorphisme unitaire si et seulement si~A^∗A =
+In. Ceci conduit à la définition suivante
+
+Définition~13.4.4 Soit A \in M\mathbb{C}(n). On dit que A est une matrice
+unitaire si elle vérifie les conditions équivalentes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) A est inversible et A^-1 = A^∗
+\item
+  (ii) A^∗A = In
+\item
+  (iii) AA^∗ = In
+\end{itemize}
+
+Théorème~13.4.11 L'ensemble U(n) des matrices carrées unitaires d'ordre
+n est un sous-groupe de (GL\mathbb{C}(n),.). Pour toute matrice
+unitaire A, on a
+\textbar{}\mathrm{det}~
+A\textbar{} = 1. L'ensemble SU(n) des matrices unitaires de déterminant
+1 est un sous-groupe distingué de U(n) .
+
+Démonstration On a clairement In \in U(n). La définition (i)
+montre évidemment que si A et B sont unitaires, il en est de même de AB.
+De plus, soit A \in U(n)~; on a
+A^-1(A^-1)^∗ =
+A^-1(A^∗)^∗ = A^-1A =
+In ce qui montre que A^-1 \in U(n). Donc U(n) est un
+sous-groupe de (GL\mathbb{C}(n),.). On a alors 1
+= \mathrm{det} In~
+= \mathrm{det}~
+(A^∗A) =
+\textbar{}\mathrm{det}~
+A\textbar{}^2, soit
+\textbar{}\mathrm{det}~
+A\textbar{} = 1. L'application de U(n) dans le groupe multiplicatif des
+nombres complexes de module 1,
+A\mapsto~\mathrm{det}~
+A est un morphisme de groupes multiplicatifs~; son noyau SU(n) est donc
+un sous-groupe distingué.
+
+Dans ce paragraphe, on munira \mathbb{C}^n de la forme sesquilinéaire
+hermitienne naturelle (qui rend la base canonique orthonormée),
+c'est-à-dire que l'on posera (x∣y)
+= \\sum ~
+i=1^n\overlinexiyi
+
+Théorème~13.4.12 Une matrice A \in M\mathbb{C}(n) est unitaire si et
+seulement si~ses vecteurs colonnes (resp. lignes) forment une base
+orthonormée de \mathbb{C}^n.
+
+Démonstration Soit
+(c1,\\ldots,cn~)
+les vecteurs colonnes de A,
+(l1,\\ldots,ln~)
+ses vecteurs lignes. On a
+
+\begin{align*} A \in U(n)&
+\Leftrightarrow & A^∗A = I n
+\Leftrightarrow \forall~~i,\\\\jmathmathmathmath,
+(A^∗A) i,\\\\jmathmathmathmath = \deltai^\\\\jmathmathmathmath \%&
+\\ & \Leftrightarrow &
+\forall~~i,\\\\jmathmathmathmath, \\sum
+k=1^n\overlinea
+k,iak,\\\\jmathmathmathmath = \deltai^\\\\jmathmathmathmath
+\Leftrightarrow \forall~i,\\\\jmathmathmathmath, (c~
+i∣c\\\\jmathmathmathmath) = \deltai^\\\\jmathmathmathmath\%&
+\\ \end{align*}
+
+De la même fa\ccon, en traduisant la relation
+AA^∗ = In, on obtiendrait
+(li∣l\\\\jmathmathmathmath) =
+\deltai^\\\\jmathmathmathmath.
+
+Théorème~13.4.13 Soit E un espace hermitien. Soit \mathcal{E} une base orthonormée
+de E, \mathcal{E}' une base de E. Alors on a équivalence de
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) \mathcal{E}' est orthonormée
+\item
+  (ii) la matrice P\mathcal{E}^\mathcal{E}' de passage de la base \mathcal{E} à la
+  base \mathcal{E}' est unitaire.
+\end{itemize}
+
+Démonstration On sait que P\mathcal{E}^\mathcal{E}'
+= \mathrmMat~ (u,\mathcal{E}) où u est
+l'endomorphisme de E défini par \forall~~i,
+u(ei) = ei'. Or d'après les résultats du paragraphe
+précédent, u est un endomorphisme unitaire si et seulement si~\mathcal{E}' est
+orthonormée~; mais d'autre part, comme \mathcal{E} est orthonormée, u est unitaire
+si et seulement
+si~\mathrmMat~ (u,\mathcal{E}) est une
+matrice unitaire, d'où l'équivalence entre (i) et (ii).
+
+\paragraph{13.4.5 Réduction des endomorphismes normaux}
+
+Définition~13.4.5 Soit E un espace hermitien et u \in L(E). On dit que u
+est un endomorphisme normal si
+
+u^∗u = uu^∗
+
+Lemme~13.4.14 Soit u un endomorphisme normal. Alors
+\mathrmKeru^∗~
+= \mathrmKer~u.
+
+Démonstration On a
+
+\begin{align*} x
+\in\mathrmKeru^∗~&
+\Leftrightarrow &
+(u^∗(x)∣u^∗(x)) = 0
+\Leftrightarrow
+(uu^∗(x)∣x) = 0\%&
+\\ & \Leftrightarrow &
+(u^∗u(x)∣x) = 0
+\Leftrightarrow (u(x)\mathrel∣u(x)) = 0
+\%& \\ & \Leftrightarrow &
+x \in\mathrmKer~u \%&
+\\ \end{align*}
+
+Lemme~13.4.15 2. Soit u un endomorphisme normal. Alors, pour tout \lambda~ \in \mathbb{C},
+\mathrmKer(u^∗-\overline\lambda~\mathrmIdE~)
+= \mathrmKer~(u -
+\lambda~\mathrmIdE).
+
+Démonstration Il suffit de remarquer que u -
+\lambda~\mathrmId est encore normal (élémentaire) et de lui
+appliquer le lemme précédent en remarquant que
+u^∗-\overline\lambda~\mathrmIdE
+= (u - \lambda~\mathrmIdE)^∗
+
+Théorème~13.4.16 Soit u un endomorphisme d'un espace hermitien. On a
+équivalence de
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) u est normal
+\item
+  (ii) u est diagonalisable dans une base orthonormée.
+\end{itemize}
+
+Démonstration (ii) \rigtharrow~(i) Soit \mathcal{E} une base orthonormée de diagonalisation
+de u. Alors \mathrmMat~
+(u,\mathcal{E}) =\
+diag(\lambda~1,\\ldots,\lambda~n~).
+Comme \mathcal{E} est orthonormée, on a
+\mathrmMat~
+(u^∗,\mathcal{E}) =\
+\mathrmMat (u,\mathcal{E})^∗
+=\
+diag(\overline\lambda~1,\\ldots,\overline\lambda~n~).
+Les deux matrices diagonales commutant, on a uu^∗ =
+u^∗u, donc u est normal.
+
+(i) \rigtharrow~(ii) Montrons le résultat par récurrence sur
+dim~ E, le résultat étant évident si
+dim~ E = 1. Supposons que u est normal. Comme \mathbb{C}
+est algébriquement clos, u admet une valeur propre \lambda~. Comme
+\mathrmKer(u^∗-\overline\lambda~\mathrmIdE~)
+= \mathrmKer~(u -
+\lambda~\mathrmIdE), Eu(\lambda~)
+= \mathrmKer~(u -
+\lambda~\mathrmIdE) est stable par u^∗
+et donc Eu(\lambda~)^\bot est stable par u^∗∗ = u.
+Mais comme Eu(\lambda~) est stable par u, le sous-espace
+Eu(\lambda~)^\bot est stable par u^∗. Soit v =
+u\textbar{} Eu(\lambda~)^\bot. La
+relation (v(x)∣y) =
+(u(x)∣y) =
+(x∣u^∗(y)) pour x,y \in
+Eu(\lambda~)^\bot montre que v^∗ =
+u\textbar{} Eu(\lambda~)^\bot^∗,
+donc v^∗v = vv^∗ et donc v est un endomorphisme
+normal de Eu(\lambda~)^\bot. Par hypothèse de récurrence, il
+existe une base orthonormée de Eu(\lambda~)^\bot formée de
+vecteurs propres de v donc de u. Comme E = Eu(\lambda~) \bot \oplus~
+Eu(\lambda~)^\bot, si on réunit cette base avec une base
+orthonormée de Eu(\lambda~), on obtient une base orthonormée de E
+formée évidemment de vecteurs propres de u, ce qui achève la
+démonstration.
+
+Remarque~13.4.3 Soit \mathcal{E} une telle base. Alors
+\mathrmMat~ (u,\mathcal{E})
+=\
+diag(\lambda~1,\\ldots,\lambda~n~).
+L'endomorphisme u est hermitien si et seulement si~sa matrice dans la
+base orthonormée \mathcal{E} est hermitienne, c'est-à-dire si et seulement
+si~\forall~i, \lambda~i~ \in \mathbb{R}~~; de même u est
+unitaire si et seulement si~sa matrice dans la base orthonormée \mathcal{E} est
+unitaire, c'est-à-dire si et seulement si~\forall~~i,
+\textbar{}\lambda~i\textbar{} = 1. Comme il est clair que tout
+endomorphisme hermitien ou unitaire est normal on obtient les deux
+corollaires
+
+Corollaire~13.4.17 Soit u un endomorphisme d'un espace hermitien. On a
+équivalence de
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) u est hermitien
+\item
+  (ii) u est diagonalisable dans une base orthonormée et
+  \mathrm{Sp}~(u) \subset~ \mathbb{R}~
+\end{itemize}
+
+Corollaire~13.4.18 Soit u un endomorphisme d'un espace hermitien. On a
+équivalence de
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) u est unitaire
+\item
+  (ii) u est diagonalisable dans une base orthonormée et
+  \mathrm{Sp}~(u) \subset~ U
+  (ensemble des nombres complexes de module 1)
+\end{itemize}
+
+\paragraph{13.4.6 Réduction des matrices normales}
+
+En traduisant le paragraphe précédent en terme de matrices (en utilisant
+le produit hermitien canonique sur \mathbb{C}^2 défini par
+(x∣y) =\
+\sum ~
+i\overlinexiyi) on
+obtient la définition et les résultats suivants.
+
+Définition~13.4.6 Soit A \in M\mathbb{C}(n). On dit que A est une matrice
+normale si
+
+A^∗A = AA^∗
+
+Théorème~13.4.19 Soit A \in M\mathbb{C}(n). On a équivalence de
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) A est normal
+\item
+  (ii) Il existe P unitaire telle que P^-1AP =
+  P^∗AP soit diagonale.
+\end{itemize}
+
+Corollaire~13.4.20 Soit A \in M\mathbb{C}(n). On a équivalence de
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) A est hermitienne
+\item
+  (ii) Il existe P unitaire telle que P^-1AP =
+  P^∗AP soit diagonale réelle
+\end{itemize}
+
+Corollaire~13.4.21 Soit A \in M\mathbb{C}(n). On a équivalence de
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) A est unitaire
+\item
+  (ii) Il existe P unitaire telle que P^-1AP =
+  P^∗AP soit diagonale à éléments diagonaux dans U (ensemble
+  des nombres complexes de module 1)
+\end{itemize}
+
+{[}
+{[}
+{[}
+{[}

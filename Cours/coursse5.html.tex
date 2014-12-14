@@ -1,0 +1,403 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{1.5 Polynômes à une variable}
+
+On désignera par A un anneau commutatif.
+
+\paragraph{1.5.1 L'anneau des séries formelles à coefficients dans A}
+
+Définition~1.5.1 On appelle anneau des séries formelles à coefficients
+dans A, l'anneau ainsi défini~: son ensemble de base est l'ensemble
+A^\mathbb{N}~ des suites d'éléments de A muni des lois suivantes
+
+(an) + (bn) = (an +
+bn)\quad (an)(bn) =
+(cn)
+
+avec
+
+cn = \\sum
+p+q=napbq = \\sum
+p=0^na pbn-p
+
+L'élément unité est la suite
+(1,0,\\ldots,0,\\\ldots~)
+et on note X =
+(0,1,0,\\ldots,0,\\\ldots~).
+
+Démonstration Facile, sauf peut-être en ce qui concerne l'associativité
+de la multiplication. Mais on a~:
+((an)(bn))(cn) = (dn) avec
+dn = \\sum ~
+p+q+r=napbqcr, ce qui conduit à
+une vérification facile de cette associativité.
+
+Remarque~1.5.1 On vérifie immédiatement que X^n est la suite
+qui a un 1 à la (n + 1)-ième place et des 0 partout ailleurs si bien que
+(an) =\ \\sum
+ n≥0anX^n. Pour cette raison, cet
+anneau est noté A{[}{[}X{]}{]}. On utilisera systématiquement la
+notation \\sum ~
+n≥0anX^n pour désigner un de ses éléments.
+
+Exercice Montrer que les éléments inversibles de A{[}{[}X{]}{]} sont les
+séries formelles \\\sum
+ n≥0anX^n telles que a0 soit
+un élément inversible de A. Montrer que si A est un corps, l'anneau
+A{[}{[}X{]}{]} est un anneau principal n'ayant qu'un seul élément
+irréductible (à multiplication près par un élément inversible).
+
+\paragraph{1.5.2 L'anneau des polynômes à coefficients dans A}
+
+Définition~1.5.2 On appelle polynôme à coefficients dans A une série
+formelle à support fini, c'est-à-dire
+\\sum ~
+n≥0anX^n telle que
+\n∣an\mathrel\neq~0\
+est fini.
+
+Proposition~1.5.1 L'ensemble A{[}X{]} des polynômes à coefficients dans
+A est un sous anneau de A{[}{[}X{]}{]}.
+
+Définition~1.5.3 Soit P \in A{[}X{]}. On appelle degré et valuation de P~:
+
+deg~ P = \left
+\ \cases -\infty~ &si P = 0
+\cr
+max\k∣ak\mathrel\neq~0\~&si
+P = \\sum
+akX^k\neq~0 
+\right .
+
+v(P) = \left \ \cases
++\infty~ &si P = 0 \cr
+min\k∣ak\mathrel\neq~0\~&si
+P = \\sum
+akX^k\neq~0 
+\right .
+
+Proposition~1.5.2 On a (i) deg~ (P + Q)
+\leq max(\deg~
+P,deg~ Q) avec égalité si
+deg~
+P\neq~deg~ Q (ii)
+deg (PQ) \leq\ deg~ P
++ deg~ Q avec égalité sauf si le produit des
+termes de plus haut degré de P et Q est nul. En particulier on a égalité
+si A est intègre.
+
+Remarque~1.5.2 On a des résultats similaires pour la valuation.
+
+Proposition~1.5.3 (règle de substitution). Soit A et B deux anneaux
+commutatifs et \phi:A \rightarrow~ B un morphisme d'anneaux. Soit \beta~ \in B. Alors
+l'application T\phi,\beta~:A{[}X{]} \rightarrow~ B,
+\\sum ~
+k=0^nakX^k\mapsto~\\\sum
+ k=0^n\phi(ak)\beta~^k est un morphisme
+d'anneaux.
+
+Démonstration Faire le calcul.
+
+Remarque~1.5.3 Lorsque A \subset~ B et \phi(a) = a, on note P(\beta~) =
+T\phi,\beta~(P).
+
+\paragraph{1.5.3 Division euclidienne et racines}
+
+Théorème~1.5.4 (division euclidienne). Soit P1,P2 \in
+A{[}X{]} tels que P2\neq~0 et le terme
+de plus haut degré de P2 est inversible dans A. Alors il
+existe un unique couple (Q,R) \in A{[}X{]}^2 tel que
+P1 = P2Q + R avec deg~ R
+\textless{} deg P2~.
+
+Démonstration On démontre l'existence par récurrence sur n
+= deg P1~. Si n
+\textless{} deg P2~, alors Q = 0 et R
+= P1 conviennent. Supposons le résultat montré pour tout
+polynôme de degré strictement inférieur à n ≥\
+deg P2 et soit deg P1~ =
+n. On écrit P1(X) = anX^n +
+\\ldots~ et
+P2(X) = bmX^m +
+\\ldots~ avec
+bm inversible. Posons S1(X) = P1(X) -
+anbm^-1X^n-mP2(X)~;
+alors deg S1~
+\leq max(\deg~
+P,deg (X^n-mP2~)) = n et
+S1 n'a plus de terme de degré n. D'après l'hypothèse de
+récurrence, on peut donc écrire S1(X) =
+Q1(X)P2(X) + R(X) avec deg~
+R \textless{} deg P2~. Mais alors
+P(X) = S1(X) +
+anbm^-1X^n-mP2(X) =
+(Q1(X) +
+anbm^-1X^n-m)P2(X) +
+R(X) et donc Q(X) = Q1(X) +
+anbm^-1X^n-m et R(X) répondent aux
+exigences voulues.
+
+Pour l'unicité, on remarque que P = P2Q + R = P2Q' +
+R' exige P2(Q - Q') = R' - R. Or deg~
+(R' - R) \textless{} deg P2~, et, si
+Q - Q'\neq~0, deg~
+(P2(Q - Q')) = deg P2~
++ deg (Q - Q') ≥\ deg~
+P2 (car le coefficient de plus haut degré de Q2 est
+inversible, et donc le produit des coefficients de plus haut degré de
+P2 et Q - Q' ne peut pas être nul). C'est absurde. Donc Q =
+Q', ce qui implique également R = R', et montre l'unicité.
+
+Corollaire~1.5.5 Soit P \in A{[}X{]} et a \in A. Alors X -
+a∣P \mathrel\Leftrightarrow P(a) = 0.
+
+Démonstration Si X - a divise P, on a P(X) = (X - a)Q(X) et donc P(a) =
+0. Inversement, supposons que P(a) = 0 et effectuons la division
+euclidienne de P(X) par X - a (dont le coefficient de plus haut degré
+est 1, donc inversible)~; on peut écrire P(X) = (X - a)Q(X) + R(X) avec
+deg~ R \textless{} 1. Donc R est une constante
+b~; mais alors 0 = P(a) = (a - a)Q(a) + b = b et donc P(X) = (X - a)Q(X)
+et X - a divise P.
+
+Remarque~1.5.4 On dit que a est racine de P si P(a) = 0.
+
+Corollaire~1.5.6 Supposons A intègre. Soit P \in A{[}X{]} et
+a1,\\ldots,ak~
+des racines de P. Alors (X -
+a1)\\ldots~(X
+- ak)∣P. Si
+P\neq~0, on a k \leq deg~
+P.
+
+Démonstration Par récurrence sur k. On a dé\\\\jmathmathmathmathà vu le résultat pour k = 1.
+Supposons le vérifié pour k - 1~; on a donc dé\\\\jmathmathmathmathà le fait que (X -
+a1)\\ldots~(X
+- ak-1) divise P~; donc P(X) = (X -
+a1)\\ldots~(X
+- ak-1)Q(X). Mais alors 0 = P(ak) = (ak -
+a1)\\ldots(ak~
+- ak-1)Q(ak), et donc Q(ak) = 0 (les
+autres termes sont non nuls et A est intègre)~; en particulier X -
+ak divise Q et donc (X -
+a1)\\ldots~(X
+- ak)∣P.
+
+Remarque~1.5.5 Sur un anneau intègre un polynôme non nul n'a donc qu'un
+nombre fini de racines. En particulier on en déduit
+
+Corollaire~1.5.7 Soit A un anneau intègre infini. Alors l'application
+A{[}X{]} \rightarrow~ A^A,
+P\mapsto~\tildeP avec
+\tildeP(x) = P(x), qui à un polynôme associe sa
+fonction polynomiale, est un morphisme d'anneaux in\\\\jmathmathmathmathectif.
+
+\paragraph{1.5.4 Dérivation}
+
+Définition~1.5.4 Soit P =\
+\sum  k≥0akX^k~ \in
+A{[}X{]}. On appelle dérivée de P le polynôme
+
+P' = \\sum
+k≥1kakX^k-1
+
+Proposition~1.5.8 On a les formules (\alpha~P + \beta~Q)' = \alpha~P' + \beta~Q', (PQ)' = P'Q
++ PQ', (P^n)' = nP'P^n-1.
+
+Démonstration On montre les résultats sur les monômes et on les étend
+aux polynômes par linéarité.
+
+\paragraph{1.5.5 L'anneau principal K{[}X{]}}
+
+Soit K un corps commutatif. Le coefficient de plus haut degré d'un
+polynôme non nul de K{[}X{]} étant par essence même différent de 0 donc
+inversible, la division euclidienne est tou\\\\jmathmathmathmathours possible. L'anneau
+K{[}X{]} est donc un anneau euclidien, et par conséquent un anneau
+principal. Tous les résultats sur les anneaux principaux s'appliquent
+donc à K{[}X{]}~: existence du PGCD et du PPCM, identité de Bézout,
+théorème de Gauss, existence et unicité de la décomposition en polynômes
+irréductibles normalisés (ceux-ci étant des représentants naturels des
+classes d'éléments irréductibles). Il en est de même des résultats sur
+les anneaux euclidiens, et en particulier de l'algorithme de calcul du
+PGCD.
+
+Dans toute la suite du chapitre, les corps seront tou\\\\jmathmathmathmathours supposés
+commutatifs.
+
+\paragraph{1.5.6 Formule de Taylor. Multiplicité d'une racine}
+
+Définition~1.5.5 Soit K un corps, P \in K{[}X{]} et a \in K. On dit que a
+est racine de multiplicité k de P si (X -
+a)^k∣P et (X - a)^k+1 ne
+divise pas P.
+
+Proposition~1.5.9 Soit K un corps, P \in K{[}X{]},
+P\neq~0. Soit
+a1,\\ldots,ak~
+les racines de P de multiplicités respectives
+m1,\\ldots,mk~.
+Alors (X -
+a1)^m1\\ldots~(X
+- ak)^mk∣P et
+donc m1 +
+\\ldots~ +
+mk \leq deg~ P. Si on a égalité, on a P
+= \lambda~(X -
+a1)^m1\\ldots~(X
+- ak)^mk, avec \lambda~ \in K. On dit alors que P
+est scindé sur A.
+
+Démonstration En effet les polynômes (X -
+ai)^mi sont deux à deux premiers entre eux.
+
+Théorème~1.5.10 (formule de Taylor pour les polynômes). Soit K un corps
+de caractéristique 0, P \in K{[}X{]} et a \in K. Alors P(X + a)
+= \\sum ~
+k=0^deg P P^(k)~(a)
+\over k! X^k. Si A est un sous-anneau de K
+qui contient à la fois a et les coefficients de P, alors
+\forall~k, P^(k)~(a) \over
+k! \in A.
+
+Démonstration Le polynôme P(X + a) s'écrit sous la forme Q(X)
+= \\sum ~
+k=0^deg~
+PbkX^k (en développant chacun des (X +
+a)^k par la formule du binôme) et un calcul trivial montre que
+P^(k)(a) = Q^(k)(0) = k!bk, soit
+bk = P^(k)(a) \over k! ~; de
+plus, si les ak et a sont dans A, il en est de même des
+bk (tou\\\\jmathmathmathmathours par la formule du binôme).
+
+Corollaire~1.5.11 Soit K un corps de caractéristique 0, P \in K{[}X{]} et
+a \in K. Alors a est racine de multiplicité m de P si et seulement si P(a)
+= P'(a) = \\ldots~ =
+P^(m-1)(a) = 0 et
+P^(m)(a)\neq~0.
+
+Démonstration Si P(X) = (X - a)^mQ(X), une récurrence facile
+montre que P^(k)(X) = m(m -
+1)\\ldots~(m - k +
+1)(X - a)^m-kQ(X) + (X - a)^m-k+1Rk(X),
+pour k \leq m~; on en déduit que P^(k)(a) = 0 pour k \leq m - 1 et
+que P^(m)(a) = m!Q(a)\neq~0 si X - a
+ne divise pas Q, soit (X - a)^m+1 ne divise pas P.
+
+Inversement, si P(a) = P'(a) =
+\\ldots~ =
+P^(m-1)(a) = 0, la formule de Taylor (dont les m premiers
+termes sont nuls) montre que (X - a)^m divise P. Mais, le
+fait que P^(m)(a)\neq~0, montre
+d'après le sens direct, que (X - a)^m+1 ne divise pas P.
+
+Remarque~1.5.6 En particulier P a une racine multiple si et seulement si
+P et P' ont une racine commune.
+
+\paragraph{1.5.7 Racines et extensions de corps}
+
+Théorème~1.5.12 Soit K un corps et P \in K{[}X{]}. Alors il existe un
+corps L contenant K dans lequel P a une racine.
+
+Démonstration Il suffit bien entendu de démontrer ce résultat lorsque P
+est un polynôme irréductible. On prend alors L = K{[}X{]}\diagupPK{[}X{]} (qui
+contient K{[}X{]} en identifiant a \in K à \pi~(a) \in L) et alors, si on pose
+x = \pi~(X) on a, puisque \pi~ est un morphisme d'anneaux, P(x) = P(\pi~(X)) =
+\pi~(P(X)) = 0. Donc P a bien une racine dans L.
+
+On montre alors par récurrence sur deg~ P le
+corollaire suivant
+
+Corollaire~1.5.13 Soit K un corps et P \in K{[}X{]}. Alors il existe un
+corps L contenant K sur lequel P est scindé.
+
+Définition~1.5.6 On dit qu'un corps K est algébriquement clos s'il
+vérifie les conditions équivalentes suivantes (i) Tout polynôme de
+K{[}X{]} non constant a une racine dans K (ii) Tout polynôme de K{[}X{]}
+est scindé sur K (iii) Les seuls polynômes irréductibles de K{[}X{]}
+sont les polynômes de degré 1
+
+Théorème~1.5.14 On montre, et on admettra que le corps des nombres
+complexes est algébriquement clos (théorème de d'Alembert-Gauss)
+
+\paragraph{1.5.8 Polynômes sur \mathbb{C} et \mathbb{R}~}
+
+On a vu que \mathbb{C} est algébriquement clos. On en déduit le résultat suivant
+
+Théorème~1.5.15 Tout polynôme non constant de \mathbb{C}{[}X{]} a une racine dans
+\mathbb{C}. Les seuls polynômes irréductibles de \mathbb{C}{[}X{]} sont les polynômes de
+degré 1. Si
+\alpha~1,\\ldots,\alpha~k~
+sont les racines dans \mathbb{C} du polynôme P \in \mathbb{C}{[}X{]}, de multiplicités
+respectives
+m1,\\ldots,mk~,
+on a m1 +
+\\ldots~ +
+mk = deg~ P et P(X) =
+an \∏ ~
+i=1^k(X - \alpha~i)^mi.
+
+Théorème~1.5.16 Soit P \in \mathbb{R}~{[}X{]}.
+
+\begin{itemize}
+\item
+  Si \alpha~ \in \mathbb{C} est racine de P de multiplicité m, il en est de même de
+  \overline\alpha~.
+\item
+  Le nombre de racines non réelles de P est pair.
+\item
+  Si P est de degré impair, il a au moins une racine réelle.
+\item
+  Les polynômes irréductibles sur \mathbb{R}~ sont d'une part les polynômes de
+  degré 1, d'autre part les polynômes de degré 2 sans racine réelle (\Delta
+  \textless{} 0).
+\item
+  Soit P \in \mathbb{R}~{[}X{]}, soit
+  \alpha~1,\\ldots,\alpha~k~
+  ses racines réelles de multiplicités
+  m1,\\ldots,mk~,
+  \beta~1,\\ldots,\beta~l~
+  ses racines complexes de parties imaginaires strictement positives, de
+  multiplicités
+  n1,\\ldots,nl~.
+  Alors la décomposition de P en produit de polynômes irréductibles dans
+  \mathbb{R}~{[}X{]} est
+
+  P(X) = an \∏
+  i=1^k(X - \alpha~ i)^mi 
+  ∏ \\\\jmathmathmathmath=1^l(X^2~ -
+  2\mathrmRe(\beta~ \\\\jmathmathmathmath)X +
+  \textbar{}\beta~\\\\jmathmathmathmath\textbar{}^2)^n\\\\jmathmathmathmath 
+\end{itemize}
+
+Démonstration Pour les racines, on remarque que
+P^(k)(\overline\alpha~) =
+\overlineP^(k)(\alpha~) si P est à coefficients
+réels. Il suffit pour obtenir la décomposition de regrouper les racines
+non réelles deux à deux con\\\\jmathmathmathmathuguées en remarquant que (X - \beta~)(X
+-\overline\beta~) = X^2 -
+2\mathrmRe~(\beta~)X +
+\textbar{}\beta~\textbar{}^2 La caractérisation des polynômes
+irréductibles en découle immédiatement.
+
+\paragraph{1.5.9 Division suivant les puissances croissantes}
+
+Théorème~1.5.17 Soit A \in K{[}X{]} et P \in K{[}X{]} tel que
+P(0)\neq~0. Pour tout n \in \mathbb{N}~, il existe un unique
+couple (Q,R) de polynômes vérifiant A(X) = P(X)Q(X) +
+X^n+1R(X) avec deg~ Q \leq n.
+
+Démonstration Similaire à celle de la division euclidienne, la valuation
+prenant la place du degré.
+
+{[}
+{[}
+{[}
+{[}

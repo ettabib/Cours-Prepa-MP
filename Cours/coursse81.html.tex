@@ -1,0 +1,215 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{14.5 Produit de convolution}
+
+\paragraph{14.5.1 Convolution de fonctions périodiques}
+
+Définition~14.5.1 Soit f,g : \mathbb{R}~ \rightarrow~ \mathbb{C} continues par morceaux et périodiques
+de période 2\pi~. On définit le produit de convolution de f et g comme la
+fonction f ∗ g : \mathbb{R}~ \rightarrow~ \mathbb{C} définie par
+
+\forall~~x \in \mathbb{R}~, f ∗ g(x) = 1 \over
+2\pi~ \int  0^2\pi~~f(t)g(x - t) dt
+
+Théorème~14.5.1
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) la fonction f ∗ g est continue et périodique de période 2\pi~
+\item
+  (ii) l'application (f,g)\mapsto~f ∗ g est
+  bilinéaire
+\item
+  (iii) le produit de convolution est commutatif~: g ∗ f = f ∗ g
+\item
+  (iv) le produit de convolution est associatif~: (f ∗ g) ∗ h = f ∗ (g ∗
+  h)
+\end{itemize}
+
+Démonstration (i) On a f ∗ g(x + 2\pi~) = 1 \over 2\pi~
+\int  0^2\pi~~f(t)g(x + 2\pi~ - t) dt
+= 1 \over 2\pi~ \int ~
+0^2\pi~f(t)g(x - t) dt = f ∗ g(x) puisque g est périodique
+de période 2\pi~. Montrons la continuité de f ∗ g. Supposons tout d'abord
+que f est en escalier et soit a0 = 0 \leq a1
+\leq\\ldots~ \leq
+ap = 2\pi~ une subdivision de {[}0,2\pi~{]} adaptée à f, si bien que
+\forall~t \in{]}ai-1,ai~{[}, f(t) =
+\lambda~i~; on a alors
+
+\begin{align*} \int ~
+0^2\pi~f(t)g(x - t) dt& =& \\sum
+i=1^p\lambda~ i
+\\int  ~
+ai-1^ai g(x - t) dt \%&
+\\ & =& -\\sum
+i=1^p\lambda~ i
+\\int  ~
+x-ai-1^x-ai g(u) du\%&
+\\ \end{align*}
+
+en faisant le changement de variable u = x - t. Comme une intégrale de
+fonction réglée dépend de fa\ccon continue des bornes
+d'intégration, l'application
+x\mapsto~\int ~
+x-ai-1^x-aig(u) du est continue et
+donc f ∗ g est continue. Si maintenant f est continue par morceaux, soit
+(fn) une suite d'applications en escalier qui converge
+uniformément vers f. On a alors
+
+\begin{align*} \textbar{}f ∗ g(x) - fn ∗
+g(x)& =& \left \textbar{} 1 \over 2\pi~
+\int  0^2\pi~(f(t) - f~
+n(t))g(x - t) dt\right \textbar{}\%&
+\\ & \leq& 1 \over 2\pi~
+\int  0^2\pi~~\textbar{}f(t) -
+f n(t)\textbar{}\,\textbar{}g(x - t)\textbar{}
+dt \%& \\ & \leq&
+\\textbar{}f -
+fn\\textbar{}\infty~\\textbar{}g\\textbar{}\infty~
+\%& \\ \end{align*}
+
+ce qui montre que la suite (fn ∗ g) converge uniformément vers
+f ∗ g. Comme ces applications sont continues, il en est de même de f ∗
+g.
+
+(ii) est évident
+
+(iii) On a, en faisant le changement de variable u = x - t et en
+remarquant que la fonction intégrée étant périodique de période 2\pi~, son
+intégrale sur le segment de longueur 2\pi~, {[}x - 2\pi~,x{]} est égale à
+l'intégrale sur {[}0,2\pi~{]}
+
+\begin{align*} f ∗ g(x)& =& 1
+\over 2\pi~ \int ~
+0^2\pi~f(t)g(x - t) dt \%& \\
+& =& - 1 \over 2\pi~ \int ~
+x^x-2\pi~f(x - u)g(u) du \%&
+\\ & =& 1 \over 2\pi~
+\int  x-2\pi~^x~f(x - u)g(u) du \%&
+\\ & =& 1 \over 2\pi~
+\int  0^2\pi~~f(x - u)g(u) du = g ∗
+f(x)\%& \\
+\end{align*}
+
+Ceci démontre la commutativité.
+
+(iv) On a
+
+\begin{align*} (f ∗ g) ∗ h(x)& =& 1
+\over 2\pi~ \int ~
+0^2\pi~f ∗ g(t)h(x - t) dt \%&
+\\ & =& 1 \over
+4\pi~^2 \int  0^2\pi~~h(x
+- t)\left (\int ~
+0^2\pi~f(u)g(t - u) du\right ) dt\%&
+\\ & =& 1 \over
+4\pi~^2 \int ~
+0^2\pi~\left (\int ~
+0^2\pi~f(u)g(t - u)h(x - t) du\right ) dt\%&
+\\ \end{align*}
+
+Si f, g et h sont continues, le théorème de Fubini permet d'intervertir
+les deux signes d'intégration et on obtient
+
+\begin{align*} (f ∗ g) ∗ h(x)&& \%&
+\\ & =& 1 \over
+4\pi~^2 \int ~
+0^2\pi~\left (\int ~
+0^2\pi~f(u)g(t - u)h(x - t) dt\right ) du
+\%& \\ & =& 1 \over
+4\pi~^2 \int ~
+0^2\pi~f(u)\left (\\int
+ 0^2\pi~g(t - u)h(x - t) dt\right ) du \%&
+\\ & =& 1 \over
+4\pi~^2 \int ~
+0^2\pi~f(u)\left (\\int
+ -u^2\pi~-ug(v)h(x - u - v) dv\right )
+du\%& \\ & =& 1 \over
+4\pi~^2 \int ~
+0^2\pi~f(u)\left (\\int
+ 0^2\pi~g(v)h(x - u - v) dv\right ) du \%&
+\\ & =& 1 \over 2\pi~
+\int  0^2\pi~~f(u) g ∗ h(x - u) du =
+f ∗ (g ∗ h)(x) \%& \\
+\end{align*}
+
+en faisant le changement de variable v = t - u, soit t = v + u, dans
+l'intégrale interne et en utilisant le fait que la fonction est
+périodique de période 2\pi~. Si f et g sont seulement continues par
+morceaux, il suffit d'utiliser des subdivisions adaptées et de découper
+les intégrales suivant ces subdivisions.
+
+Théorème~14.5.2 Soit f et g des applications de \mathbb{R}~ dans \mathbb{C} périodiques de
+période 2\pi~. On suppose que f est continue par morceaux et que g est de
+classe C^k. Alors f ∗ g est de classe C^k et (f
+∗ g)^(k) = f ∗ (g^(k)).
+
+Démonstration Une récurrence évidente permet d'obtenir le résultat pour
+k quelconque à partir de k = 1. Quitte à utiliser une subdivision de
+{[}0,2\pi~{]} et à découper l'intégrale, il suffit de montrer que
+x\mapsto~\int ~
+a^bf(t)g(x - t) dt est de classe \mathcal{C}^1 lorsque f
+est continue sur {[}a,b{]} et g de classe \mathcal{C}^1 sur \mathbb{R}~. Mais
+l'application (x,t)\mapsto~f(t)g(x - t) admet une
+dérivée partielle par rapport à x égale à  \partial~ \over \partial~x
+(f(t)g(x - t)) = f(t)g'(x - t) qui est une fonction continue du couple
+(x,t). Le théorème de dérivation des intégrales dépendant d'un paramètre
+montre que x\mapsto~\int ~
+a^bf(t)g(x - t) dt est de classe \mathcal{C}^1 et que
+
+(f ∗ g)'(x) =\int  a^b~ \partial~
+\over \partial~x (f(t)g(x - t)) dt =\\int
+ a^bf(t)g'(x - t) dt
+
+Ceci montre que f ∗ g est de classe \mathcal{C}^1 et que (f ∗ g)' = f ∗
+(g').
+
+\paragraph{14.5.2 Produit de convolution et séries de Fourier}
+
+Théorème~14.5.3 Soit f et g des applications de \mathbb{R}~ dans \mathbb{C} périodiques de
+période 2\pi~, continues par morceaux. Alors \forall~~n \in
+ℤ, cn(f ∗ g) = cn(f)cn(g).
+
+Démonstration On a pour f continue par morceaux,
+
+\begin{align*} f ∗ en(x)& =& 1
+\over 2\pi~ \int ~
+0^2\pi~f(t)e^in(x-t) dt = 1
+\over 2\pi~ e^inx\int ~
+0^2\pi~f(t)e^-int dt\%&
+\\ & =& cn(f)e^inx
+\%& \\ \end{align*}
+
+On en déduit que
+
+\begin{align*} cn(f ∗ g)& =& (f ∗ g) ∗
+en(0) = f ∗ (g ∗ en)(0) \%&
+\\ & =& f ∗
+(cn(g)en)(0) = cn(g)(f ∗ en)(0)
+= cn(g)cn(f)\%& \\
+\end{align*}
+
+Remarque~14.5.1 Pour une fonction g donnée, l'application
+f\mapsto~f ∗ g se traduit donc comme un filtre sur
+le signal f~: l'amplitude cn(f) de l'harmonique de f
+correspondant à la fréquence n est multipliée par le coefficient
+cn(g). Comme les cn(g) tendent vers 0 quand
+\textbar{}n\textbar{} tend vers + \infty~, on voit qu'il ne peut exister
+d'élément neutre pour le produit de convolution, c'est-à-dire de
+fonction \epsilon telle que \forall~~f \inC, f ∗ \epsilon = f.
+
+{[}
+{[}
+{[}
+{[}

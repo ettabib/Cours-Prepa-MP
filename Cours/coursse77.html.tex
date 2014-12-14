@@ -1,0 +1,242 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}{]}
+{[}
+
+\subsubsection{14.1 Introduction~: transformée de Fourier sur les
+groupes abéliens finis}
+
+Ce paragraphe sert simplement d'introduction à la suite du chapitre.
+Lors d'une première lecture il peut être sauté sans inconvénient.
+
+\paragraph{14.1.1 Caractères des groupes abéliens finis}
+
+Définition~14.1.1 Soit (G,.) un groupe abélien fini. On appelle
+caractère de G tout morphisme de groupe \chi de G dans (\mathbb{C}^∗,.).
+On note \hatG l'ensemble des caractères de G.
+
+Remarque~14.1.1 On vérifie immédiatement que \hatG
+est lui même muni d'une structure de groupes en posant (\chi\chi')(x) =
+\chi(x)\chi'(x).
+
+Proposition~14.1.1 Soit \chi \in\hat G. Alors
+\forall~~x \in G, \textbar{}\chi(x)\textbar{} = 1.
+
+Démonstration Puisque G est un groupe fini, tout élément est d'ordre
+fini, et donc il existe n \in \mathbb{N}~ tel que x^n = e. On a donc 1 =
+\chi(e) = \chi(x^n) = \chi(x)^n ce qui montre que \chi(x) est
+une racine de l'unité donc de module 1.
+
+Proposition~14.1.2 \hatG est un groupe abélien fini.
+
+Démonstration On sait que \forall~~x \in G,
+x^\textbar{}G\textbar{} = e. Le même raisonnement que ci
+dessus monte que \chi(x) est une racine \textbar{}G\textbar{}-ième de
+l'unité. Donc \hatG est un sous-ensemble de
+l'ensemble des applications de G dans le groupe fini
+\Gamma\textbar{}G\textbar{} des racines \textbar{}G\textbar{}-ièmes
+de l'unité, donc il est fini.
+
+Lemme~14.1.3 Soit G un groupe abélien fini et H un sous-groupe de G.
+Soit \psi un caractère de H. Alors il existe un caractère \chi de G dont la
+restriction à H est \psi.
+
+Démonstration Pour des raisons de cardinal, il existe un sous-groupe K
+maximal auquel \psi admet un prolongement \phi \in\hat K.
+Nous allons montrer par l'absurde que K = G, ce qui démontrera le lemme.
+Supposons donc que K\neq~G et soit x \in G \diagdown K.
+L'ensemble des n \in ℤ tel que x^n \in K est un sous-groupe de ℤ,
+donc de la forme dℤ pour un d \textgreater{} 0 (car
+(x^\textbar{}G\textbar{} = e \in K) et
+d\neq~1 (car x\mathrel∉K).
+Soit \omega \in \mathbb{C} tel que \omega^d = \phi(x^d). Soit K' =
+\x^nk∣n \in ℤ, k \in
+K\ le sous-groupe de G engendré par K et x et
+prolongeons \phi à K' en posant \phi'(x^nk) = \omega^n\phi(k).
+Montrons tout d'abord que \phi' est bien définie. Si l'on a x^nk
+= x^mk', on a x^n-m = k'k^-1 \in K et
+donc d divise n - m. Posons n - m = dq si bien que x^dq =
+k'k^-1~; on a alors \phi(k')\phi(k)^-1 =
+\phi(x^dq) = \phi(x^d)^q =
+(\omega^d)^q = \omega^dq = \omega^n-m, si
+bien que \omega^n\phi(k) = \omega^m\phi(k') ce qui montre que \phi'
+est bien définie. Il est élémentaire de vérifier que \phi' est encore un
+morphisme de groupes et il est clair qu'il prolonge \phi et donc qu'il
+prolonge \psi. Mais ceci contredit alors la maximalité de K. On a donc K =
+G et donc \psi se prolonge à G tout entier.
+
+Théorème~14.1.4 Soit x \in G, x\neq~e. Alors il
+existe \chi \in\hat G tel que
+\chi(x)\neq~1.
+
+Démonstration Soit d l'ordre de x, \omega = exp~ (
+2i\pi~ \over d ), H le sous-groupe engendré par x.
+L'application x^n\mapsto~\omega^n
+est bien définie (car si x^n = x^p, alors d divise
+n - p et donc \omega^n = \omega^p) et c'est un caractère de
+H (facile). Donc il existe \chi \in\hat G qui prolonge \psi.
+On a en particulier \chi(x) = \omega\neq~1.
+
+Définition~14.1.2 Si f est une application de G dans \mathbb{C}, on notera
+\int  G~f =\
+\sum  x\inG~f(x). En posant alors
+(f∣g) = 1 \over
+\textbar{}G\textbar{} \int ~
+G\overlinefg, on munit l'espace E des
+applications de G dans \mathbb{C} d'une structure d'espace hermitien.
+
+Proposition~14.1.5
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) Soit \chi \in\hat G. Alors
+  \int  G~\chi = \left
+  \\cases 0 &si
+  \chi\neq~1 \cr
+  \textbar{}G\textbar{}&si \chi = 1  \right ..
+\item
+  (ii) Soit x \in G. Alors
+  \\sum ~
+  \chi\in\hatG\chi(x) = \left
+  \\cases 0 &si
+  x\neq~e \cr
+  \textbar{}\hatG\textbar{}&si x = e 
+  \right .
+\end{itemize}
+
+Démonstration (i) Supposons que \chi\neq~1 et soit x
+\in G tel que \chi(x)\neq~1. On a alors
+
+\chi(x)\sum g\inG~\chi(g) =
+\sum g\inG~\chi(xg) =
+\sum g\inG~\chi(g)
+
+puisque g\mapsto~xg est une bi\\\\jmathmathmathmathection de G sur lui
+même. Comme \chi(x)\neq~1, on en déduit que
+\\sum  g\inG~\chi(g)
+= 0. Si par contre, \chi = 1, on a
+\\sum  g\inG~\chi(g)
+= \textbar{}G\textbar{}.
+
+(ii) Si x\neq~e, soit \phi \in\hat
+G tel que \phi(x)\neq~1. On a alors
+
+\phi(x)\sum \chi\in\hatG~\chi(x)
+= \\sum
+\chi\in\hatG(\phi\chi)(x) =
+\sum \chi\in\hatG~\chi(x)
+
+puisque \chi\mapsto~\phi\chi est une bi\\\\jmathmathmathmathection de
+\hatG sur lui même. Comme
+\phi(x)\neq~1, on a
+\\sum ~
+\chi\in\hatG\chi(x) = 0. Si par contre, x = e, on a
+pour tout \chi, \chi(x) = 1 et donc
+\\sum ~
+\chi\in\hatG\chi(x) =
+\textbar{}\hatG\textbar{}.
+
+Corollaire~14.1.6 \textbar{}G\textbar{} =
+\textbar{}\hatG\textbar{}.
+
+Démonstration Soit S =\
+\sum ~
+\chi\in\hatG\
+\sum  x\inG~\chi(x). On a (en utilisant le
+symbole de Kronecker \deltaa^b = \left
+\ \cases 1&si a = b
+\cr 0&si a\neq~b\\ 
+\right . et en notant 1 le caractère constant égal à 1) S
+= \\sum ~
+\chi\in\hatG\textbar{}G\textbar{}\delta\chi^1
+= \textbar{}G\textbar{}. Mais on a aussi S =\
+\sum  x\inG~\
+\sum  \chi\in\hatG~\chi(x)
+= \\sum ~
+x\inG\textbar{}\hatG\textbar{}\deltax^e
+= \textbar{}\hatG\textbar{} d'où le résultat.
+
+Corollaire~14.1.7 \hatG est une famille orthonormée
+de E.
+
+Démonstration On a (\chi∣\phi) = 1
+\over \textbar{}G\textbar{} \\int
+ G\overline\chi\phi = 0 si
+\overline\chi\phi\neq~1, soit
+\chi\neq~\phi (puisque \overline\chi(g)
+= 1 \over \chi(g) comme nombre complexe de module 1). Si
+par contre, \chi = \phi, on a \overline\chi\phi =
+\textbar{}\chi\textbar{}^2 = 1 et donc
+(\chi∣\phi) = 1.
+
+\paragraph{14.1.2 Transformée de Fourier sur un groupe abélien fini}
+
+Définition~14.1.3 Soit G un groupe abélien fini et soit f : G \rightarrow~ \mathbb{C}. On
+définit la transformée de Fourier de f comme étant l'application
+\hatf :\hat G \rightarrow~ \mathbb{C} définie par
+
+\forall~\chi \in\hat G~,
+\hatf(\chi) = (\chi∣f) =
+1\over
+\textbar{}G\textbar{}\int ~
+Gf\overline\chi
+
+Théorème~14.1.8 (cf Dirichlet). Soit f : G \rightarrow~ \mathbb{C}. Alors,
+
+\forall~~x \in G, f(x) = \\sum
+\chi\in\hatG\hatf(\chi)\chi(x)
+
+Démonstration On a
+
+\begin{align*} \\sum
+\chi\in\hatG\hatf(\chi)\chi(x)&
+=& 1 \over \textbar{}G\textbar{}
+\sum \chi\in\hatG~
+\\sum
+y\inGf(y)\overline\chi(y)\chi(x)\%&
+\\ & =& 1 \over
+\textbar{}G\textbar{} \\sum
+y\inGf(y)\\sum
+\chi\in\hatG\chi(xy^-1) \%&
+\\ \end{align*}
+
+puisque \overline\chi(y) = 1 \over
+\chi(y) = \chi(y^-1). Mais, d'après un résultat précédent
+\\sum ~
+\chi\in\hatG\chi(xy^-1) = 0 si
+xy^-1\neq~e, soit
+y\neq~x et
+\\sum ~
+\chi\in\hatG\chi(xy^-1) =
+\textbar{}\hatG\textbar{} = \textbar{}G\textbar{} si
+y = x. D'où ne persiste dans la somme que le terme pour y = x et donc
+\\sum ~
+\chi\in\hatG\hatf(\chi)\chi(x) =
+f(x).
+
+Corollaire~14.1.9 \hatG est une base orthonormée de
+E.
+
+Démonstration Le théorème précédent montre que c'est une famille
+génératrice et on a vu précédemment que c'est une famille orthonormée,
+donc libre.
+
+Théorème~14.1.10 (cf Parseval-Plancherel). Soit f : G \rightarrow~ \mathbb{C}. Alors
+
+\\textbar{}f\\textbar{}^2 =
+(f∣f) = \\sum
+\chi\in\hatG\textbar{}\hatf(\chi)\textbar{}^2
+
+Démonstration On a vu précédemment que les \hatf(\chi)
+sont les coordonnées de f dans la base orthonormée
+\hatG de E et le carré de la norme de f dans E est la
+somme des modules des carrés des coordonnées dans une base orthonormée.
+
+{[}
+{[}

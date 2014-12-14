@@ -1,0 +1,732 @@
+%
+\subsubsection{Formes quadratiques réelles}
+%
+%\paragraph{12.4.1 Formes positives, négatives}
+%
+%Définition~12.4.1 Soit E un \mathbb{R}~ espace vectoriel et \Phi une forme
+%quadratique sur E. On dit que \Phi est positive (resp. négative) si
+%\forall~~x \in E, \Phi(x) ≥ 0 (resp. \leq 0).
+%
+%Remarque~12.4.1 On déduit de la définition précédente que \Phi est à la
+%fois définie et positive si et seulement
+%si~\forall~x\mathrel\neq~~0, \Phi(x)
+%\textgreater{} 0.
+%
+%Notons aussi la proposition suivante
+%
+%Proposition~12.4.1 Soit E un \mathbb{R}~ espace vectoriel et \Phi une forme
+%quadratique définie sur E. Alors \Phi est soit positive, soit négative.
+%
+%Démonstration Supposons que \Phi n'est ni positive, ni négative. Soit x \in E
+%tel que \Phi(x) \textless{} 0 (\Phi n'est pas positive) et y \in E tel que \Phi(y)
+%\textgreater{} 0 (\Phi n'est pas négative). Alors la famille (x,y) est
+%libre~: sinon il existerait par exemple \lambda~ \in \mathbb{R}~ tel que y = \lambda~x et on
+%aurait \Phi(y) = \lambda~^2\Phi(x) \leq 0. Pour t \in {[}0,1{]}, posons f(t) =
+%\Phi((1 - t)x + ty)~; l'identité de polarisation montre que f est un
+%polynôme du second degré en t et l'on a f(0) = \Phi(x) \textless{} 0, f(1)
+%= \Phi(y) \textgreater{} 0. Le théorème des valeurs intermédiaires assure
+%qu'il existe t0 \in {[}0,1{]} tel que f(t0) = 0, soit
+%\Phi((1 - t0)x + t0y) = 0~; mais comme la famille (x,y)
+%est libre, on a (1 - t0)x +
+%t0y\neq~0, ce qui montre que \Phi n'est
+%pas définie.
+%
+%Remarque~12.4.2 Un raisonnement similaire montre que si E est un
+%\mathbb{C}-espace vectoriel ~de dimension supérieure ou égale à 2, il ne peut pas
+%exister de forme quadratique définie sur E.
+%
+%\paragraph{12.4.2 Bases de Sylvester. Signature}
+%
+%Soit E un \mathbb{R}~ espace vectoriel de dimension finie et \Phi une forme
+%quadratique sur E. Soit \mathcal{E} une base orthogonale de E et \Omega
+%= \mathrmMat~ (\Phi,\mathcal{E})
+%=\
+%\mathrmdiag(\alpha~1,\\ldots,\alpha~n~)
+%la matrice de \Phi dans cette base (avec donc \alpha~i =
+%\Phi(ei)). Quitte à permuter les vecteurs de la base, on peut
+%supposer que \alpha~1 \textgreater{}
+%0,\\ldots,\alpha~p~
+%\textgreater{} 0,\alpha~p+1 \textless{}
+%0,\\ldots,\alpha~p+q~
+%\textless{} 0,\alpha~p+q+1 =
+%\\ldots~ =
+%\alpha~n = 0 avec p ≥ 0,q ≥ 0,p + q \leq n.
+%
+%Théorème~12.4.2 (inertie de Sylvester). Les entiers p et q sont
+%indépendants de la base orthogonale choisie~: l'entier p (resp. q) est
+%la dimension maximale des sous-espaces F de E tels que la restriction de
+%\Phi à F soit définie positive (resp. définie négative).
+%
+%Démonstration Pour x
+%\in\mathrmVect(e1,\\\ldots,ep~),
+%on a \Phi(x) = \\sum ~
+%i=1^p\alpha~ixi^2 ≥ 0 avec égalité
+%si et seulement si~\forall~i, xi~ = 0 soit x
+%= 0. Ceci montre que la restriction de \Phi à
+%\mathrmVect(e1,\\\ldots,ep~)
+%est définie positive. Soit maintenant F un sous-espace de E tel que la
+%restriction de \Phi à F soit définie positive. Pour x
+%\in\mathrmVect(ep+1,\\\ldots,en~),
+%on a \Phi(x) = \\sum ~
+%i=p+1^p+q\alpha~ixi^2 \leq 0. Pour x \in
+%F \diagdown\0\ on a \Phi(x) \textgreater{} 0. On
+%en déduit que F
+%\bigcap\mathrmVect(ep+1,\\\ldots,en~)
+%= \0\ et donc ces deux sous-espaces
+%sont en somme directe. En conséquence, dim~ F
+%+ dim~
+%\mathrmVect(ep+1,\\\ldots,en~)
+%\leq n, soit encore dim~ F + n - p \leq n, d'où
+%dim~ F \leq p. Donc p est la dimension maximale
+%des sous-espaces F de E tels que la restriction de \Phi à F soit définie
+%positive. Le raisonnement est similaire pour l'entier q.
+%
+%Définition~12.4.2 Le couple (p,q) est appelé la signature de la forme
+%quadratique \Phi. On a p + q =\
+%\mathrmrg\Phi.
+%
+%Remarque~12.4.3 \Phi est positive (resp. définie positive) si et seulement
+%si~elle est de signature (p,0) (resp. (n,0)).
+%
+%Reprenons alors notre base orthogonale \mathcal{E} avec \alpha~1
+%\textgreater{}
+%0,\\ldots,\alpha~p~
+%\textgreater{} 0,\alpha~p+1 \textless{}
+%0,\\ldots,\alpha~p+q~
+%\textless{} 0,\alpha~p+q+1 =
+%\\ldots~ =
+%\alpha~n = 0. Pour i \in {[}1,p + q{]} posons \epsiloni = 1
+%\over \sqrt\textbar{}\alpha~i 
+%\textbar{} ei et pour i \in {[}p + q + 1,n{]}, \epsiloni
+%= ei. Nous obtenons alors une nouvelle base orthogonale \mathcal{E}' de
+%E telle que
+%
+%\Phi(\epsilon1) =
+%\\ldots~ =
+%\Phi(\epsilonp) = 1,\Phi(\epsilonp+1) =
+%\\ldots~ =
+%\Phi(\epsilonp+q) = -1
+%
+%\Phi(\epsilonp+q+1) =
+%\\ldots~ =
+%\Phi(\epsilonn) = 0
+%
+%Définition~12.4.3 Une telle base orthogonale sera appelée une base de
+%Sylvester de E.
+%
+%Par définition même, la matrice de \Phi dans une base de Sylvester est la
+%matrice \left
+%(\matrix\,Ip&0 &0
+%\cr 0 &-Iq&0 \cr 0 &0
+%&0\right ).
+%
+%Remarque~12.4.4 Bien entendu, si \Phi est définie positive, une base de
+%Sylvester est simplement une base orthonormée.
+%
+%\paragraph{12.4.3 Inégalités}
+%
+%Théorème~12.4.3 (inégalité de Schwarz). Soit E un \mathbb{R}~ espace vectoriel et
+%\Phi une forme quadratique positive sur E de forme polaire \phi. Alors
+%
+%\forall~x,y \in E, \phi(x,y)^2~ \leq \Phi(x)\Phi(y)
+%
+%Si \Phi est en plus définie, alors il y a égalité si et seulement si~la
+%famille (x,y) est liée.
+%
+%Démonstration On écrit \forall~~t \in \mathbb{R}~, \Phi(x + ty) ≥ 0,
+%soit encore t^2\Phi(y) + 2t\phi(x,y) + \Phi(x) ≥ 0. Ce trinome de
+%degré inférieur ou égal à 2 doit donc avoir un discriminant réduit
+%négatif, soit \phi(x,y)^2 - \Phi(x)\Phi(y) \leq 0. Supposons que \Phi est
+%définie~; si on a l'égalité, deux cas sont possibles. Soit y = 0 auquel
+%cas la famille (x,y) est liée, soit \Phi(y)\neq~0~;
+%mais dans ce cas ce trinome en t a une racine double t0, et
+%donc \Phi(x + t0y) = 0 d'où x + t0y = 0 et donc la
+%famille est liée. Inversement, si la famille (x,y) est liée, on a par
+%exemple x = \lambda~y et dans ce cas \phi(x,y)^2 =
+%\lambda~^2\Phi(y)^2 = \Phi(x)\Phi(y).
+%
+%Corollaire~12.4.4 Soit E un \mathbb{R}~ espace vectoriel et \Phi une forme
+%quadratique positive sur E de forme polaire \phi. Alors le noyau de \Phi est
+%l'ensemble des vecteurs isotropes pour \Phi. En particulier, \Phi est non
+%dégénérée si et seulement si~elle est définie.
+%
+%Démonstration Tout vecteur du noyau est bien entendu isotrope.
+%Inversement, si x est un vecteur isotrope et si y \in E, alors 0 \leq
+%\phi(x,y)^2 \leq \Phi(x)\Phi(y) = 0, soit \phi(x,y) = 0 et donc x est dans
+%le noyau de \phi.
+%
+\begin{thm}[inégalité de Minkowski]
+	 Soit E un $\mathbb{R}$ espace vectoriel
+et $\Phi$ une forme quadratique positive sur E. Alors
+
+$\forall x,y \in E, \sqrt\Phi(x + y)~
+\leq\sqrt\Phi(x) + \sqrt\Phi(y)$
+%
+Si $\Phi$ est en plus définie, alors il y a égalité si et seulement si~la
+famille $(x,y)$ est positivement liée.
+\end{thm}
+%Démonstration On a
+%
+%\begin{align*} \Phi(x + y)& = \Phi(x) + 2\phi(x,y) + \Phi(y) \leq
+%\Phi(x) + 2\textbar{}\phi(x,y)\textbar{} + \Phi(y)& \%&
+%\\ & \leq \Phi(x) +
+%2\sqrt\Phi(x)\Phi(y) + \Phi(y) = \left
+%(\sqrt\Phi(x) +
+%\sqrt\Phi(y)\right )^2& \%&
+%\\ \end{align*}
+%
+%d'où \sqrt\Phi(x + y) \leq\sqrt\Phi(x) +
+%\sqrt\Phi(y). Si \Phi est définie, l'égalité nécessite à la
+%fois que \textbar{}\phi(x,y)\textbar{} = \sqrt\Phi(x)\Phi(y),
+%donc que (x,y) soit liée, et que \phi(x,y) ≥ 0, soit que le coefficient de
+%proportionnalité soit positif.
+%
+%\paragraph{12.4.4 Espaces préhilbertiens réels}
+%
+%Définition~12.4.4 On appelle espace préhilbertien réel un couple (E,\Phi)
+%d'un \mathbb{R}~-espace vectoriel ~E et d'une forme quadratique définie positive
+%sur E.
+%
+%Théorème~12.4.6 Soit (E,\Phi) un espace préhilbertien réel. Alors
+%l'application x\mapsto~\sqrt\Phi(x)
+%est une norme sur E appelée norme euclidienne.
+%
+%Démonstration La propriété de séparation provient du fait que \Phi est
+%définie. L'homogénéité provient de l'homogénéité de la forme
+%quadratique. Quant à l'inégalité triangulaire, ce n'est autre que
+%l'inégalité de Minkowski.
+%
+%Définition~12.4.5 On notera (x∣y) = \phi(x,y) et
+%\\textbar{}x\\textbar{}^2 =
+%(x∣x) = \Phi(x)
+%
+%Théorème~12.4.7 Soit E un espace préhilbertien réel et F un sous-espace
+%vectoriel de dimension finie de E. Alors l'orthogonal F^\bot de
+%F dans E est un supplémentaire de F, appelé le supplémentaire orthogonal
+%de F. La pro\\\\jmathmathmathmathection sur F parallèlement à F^\bot est appelée la
+%pro\\\\jmathmathmathmathection orthogonale sur F. On a
+%codimF^\bot~ =\
+%dim F et F^\bot\bot = F.
+%
+%Démonstration Tout d'abord, si x \in F \bigcap F^\bot, on a x \bot x et
+%donc (x∣x) = 0 ce qui implique x = 0~; on a
+%donc F \bigcap F^\bot = \0\. Soit
+%maintenant x \in E et soit f : F \rightarrow~ \mathbb{R}~ définie par f(y) =
+%(x∣y). Clairement, f est une forme linéaire
+%sur l'espace F~; comme F est un espace vectoriel de dimension finie muni
+%d'une forme bilinéaire symétrique non dégénérée, il existe x1
+%\in F tel que \forall~~y \in F, f(y) =
+%(x1∣y). On a donc
+%\forall~y \in F, (x\mathrel∣~y) =
+%(x1∣y) et donc
+%\forall~~y \in F, (x -
+%x1∣y) = 0. On en déduit que x -
+%x1 \in F^\bot. Comme x = x1 + (x -
+%x1), on a bien E = F + F^\bot. On en déduit que E = F
+%\oplus~ F^\bot, et donc que
+%codimF^\bot~ =\
+%dim F.
+%
+%On a clairement F \subset~ F^\bot\bot. Inversement, soit x \in
+%F^\bot\bot et écrivons x = x1 + x2 avec
+%x1 \in F et x2 \in F^\bot~; comme x2 \in
+%F^\bot et x \in F^\bot\bot, on a
+%(x2∣x) = 0 soit encore
+%(x2∣x1) +
+%(x2∣x2) = 0, soit encore,
+%compte tenu de (x2∣x1) =
+%0, (x2∣x2) = 0 et donc
+%x2 = 0~; ceci nous montre que x \in F, soit encore
+%F^\bot\bot\subset~ F et donc F^\bot\bot = F.
+%
+%Théorème~12.4.8 Soit E un espace préhilbertien réel et F un sous-espace
+%vectoriel de dimension finie de E. Soit x \in E. Il existe un unique v \in F
+%tel que d(x,F) =\\textbar{} x -
+%v\\textbar{}~; v est la pro\\\\jmathmathmathmathection orthogonale de x sur
+%F.
+%
+%Démonstration Ecrivons x = v + w avec v \in F et y \in F^\bot, et
+%donc v = pF(x). Pour y \in F, on a, en tenant compte de v - y \in
+%F et w \in F^\bot qui impliquent que v - y \bot w,
+%
+%\begin{align*} \\textbar{}x -
+%y\\textbar{}^2& =&
+%\\textbar{}(v - y) +
+%w\\textbar{}^2 =\\textbar{} v -
+%y\\textbar{}^2 +\\textbar{}
+%w\\textbar{}^2\%&
+%\\ & =& \\textbar{}v -
+%y\\textbar{}^2 +\\textbar{} x -
+%v\\textbar{}^2 ≥\\textbar{} x -
+%v\\textbar{}^2 \%&
+%\\ \end{align*}
+%
+%avec égalité si et seulement si~y = v, ce qui démontre la première
+%partie du résultat.
+%
+%Proposition~12.4.9 Si
+%(v1,\\ldots,vp~)
+%est une base de F, on a
+%
+%d(x,F)^2 =
+%\mathrm{det}~
+%Gram(v1,\\\ldots,vp~,x)
+%\over
+%\mathrm{det}~
+%Gram(v1,\\\ldots,vp)~
+%
+%Démonstration Si x \in F, la formule est évidente puisque les deux membres
+%de la formule sont nuls (la famille
+%(v1,\\ldots,vp~,x)
+%étant liée, son déterminant de Gram est nul). On a
+%
+%\begin{align*}
+%\mathrm{det}~
+%Gram(v1,\\\ldots,vp~,x)&&
+%\%& \\ & =& \left
+%\textbar{}\matrix\,Gram(v1,\\\ldots,vp)&\matrix\,(v1\mathrel∣~x)
+%\cr \⋮~
+%\cr (vp∣x)
+%\cr
+%\matrix\,(v1∣x)&\\ldots&(vp\mathrel∣x)~
+%&\\textbar{}x\\textbar{}^2
+%\right \textbar{} \%& \\
+%& =& \left
+%\textbar{}\matrix\,Gram(v1,\\\ldots,vp)&\matrix\,(v1\mathrel∣~v)
+%\cr \⋮~
+%\cr (vp∣v)
+%\cr
+%\matrix\,(v1∣v)&\\ldots&(vp\mathrel∣v)~
+%&\\textbar{}v\\textbar{}^2
+%+\\textbar{}
+%w\\textbar{}^2\right
+%\textbar{} \%& \\ & =&
+%\left
+%\textbar{}\matrix\,Gram(v1,\\\ldots,vp)&\matrix\,(v1\mathrel∣~v)
+%\cr \⋮~
+%\cr (vp∣v)
+%\cr
+%\matrix\,(v1∣v)&\\ldots&(vp\mathrel∣v)~
+%&\\textbar{}v\\textbar{}^2
+%\right \textbar{} + \left
+%\textbar{}\matrix\,Gram(v1,\\\ldots,vp~)&\matrix\,0
+%\cr \⋮~
+%\cr 0 \cr
+%\matrix\,(v1∣v)&\\ldots&(vp\mathrel∣v)~
+%&\\textbar{}w\\textbar{}^2\right
+%\textbar{} \%& \\ & =&
+%\mathrm{det}~
+%Gram(v1,\\\ldots,vp~,v)
+%+\\textbar{}
+%w\\textbar{}^2\
+%\mathrm{det} Gram(v~
+%1,\\ldots,vp~)\%&
+%\\ & =&
+%\\textbar{}w\\textbar{}^2\
+%\mathrm{det} Gram(v~
+%1,\\ldots,vp~)
+%\%& \\ & =&
+%\mathrm{det}~
+%Gram(v1,\\\ldots,vp)d(x,F)^2~
+%\%& \\ \end{align*}
+%
+%en remarquant que (vi∣x) =
+%(vi∣v),
+%\\textbar{}x\\textbar{}^2
+%=\\textbar{} v\\textbar{}^2
+%+\\textbar{} w\\textbar{}^2,
+%que v est une combinaison linéaire de
+%(v1,\\ldots,vp~)
+%ce qui implique que
+%\mathrm{det}~
+%Gram(v1,\\\ldots,vp~,v)
+%= 0 et en utilisant la linéarité du déterminant par rapport à sa
+%dernière colonne. Ceci démontre que
+%
+%d(x,F)^2 =
+%\mathrm{det}~
+%Gram(v1,\\\ldots,vp~,x)
+%\over
+%\mathrm{det}~
+%Gram(v1,\\\ldots,vp)~
+%
+%Remarque~12.4.5 En dimension 3, en tenant compte de divers résultats qui
+%expriment le déterminant de Gram en fonction du produit mixte ou de la
+%norme du produit vectoriel, on obtient les formules
+%
+%d(x, \mathbb{R}~u) = \\textbar{}x ∧ u\\textbar{}
+%\over
+%\\textbar{}u\\textbar{}
+%
+%et
+%
+%d(x,\mathrmVect~(u,v)) =
+%\big \textbar{} {[}u,v,x{]} \big
+%\textbar{} \over \\textbar{}u ∧
+%v\\textbar{}
+%
+%\paragraph{12.4.5 Espaces euclidiens}
+%
+%Définition~12.4.6 On appelle espace euclidien un espace préhilbertien
+%réel de dimension finie.
+%
+%Récapitulons les principales propriétés des espaces euclidiens qui
+%découlent presque immédiatement de tout ce que nous avons dé\\\\jmathmathmathmathà vu
+%précédemment
+%
+%Théorème~12.4.10 Soit E un espace euclidien.
+%
+%\begin{itemize}
+%\itemsep1pt\parskip0pt\parsep0pt
+%\item
+%  (i) pour toute forme linéaire f sur E, il existe un unique vecteur
+%  vf \in E tel que \forall~~x \in E, f(x) =
+%  (x∣vf)
+%\item
+%  (ii) pour tout sous-espace vectoriel A de E, on a E = A \oplus~
+%  A^\bot et (A^\bot)^\bot = A
+%\end{itemize}
+%
+%Démonstration (i) est une propriété générale des formes non dégénérées~;
+%(ii) est une propriété générale des formes définies.
+%
+%\paragraph{12.4.6 Algorithme de Gram-Schmidt}
+%
+%Théorème~12.4.11 (Algorithme de Gram-Schmidt). Soit E un espace
+%euclidien. Soit \mathcal{E} =
+%(e1,\\ldots,en~)
+%une base de E. Alors il existe une base orthogonale \mathcal{E}' =
+%(\epsilon1,\\ldots,\epsilonn~)
+%de E vérifiant les conditions équivalentes suivantes
+%
+%\begin{itemize}
+%\itemsep1pt\parskip0pt\parsep0pt
+%\item
+%  (i) \forall~k \in {[}1,n{]}, \epsilonk~
+%  \in\mathrmVect(e1,\\\ldots,ek~)
+%\item
+%  (ii) \forall~~k \in {[}1,n{]},
+%  \mathrmVect(\epsilon1,\\\ldots,\epsilonk~)
+%  =\
+%  \mathrmVect(e1,\\ldots,ek~)
+%\item
+%  (iii) la matrice de passage de \mathcal{E} à \mathcal{E}' est triangulaire supérieure
+%\end{itemize}
+%
+%Si \mathcal{E}' =
+%(\epsilon1,\\ldots,\epsilonn~)
+%et \mathcal{E}'' =
+%(\eta1,\\ldots,\etan~)
+%sont deux telles bases orthogonales, il existe des scalaires
+%\lambda~1,\\ldots,\lambda~n~
+%non nuls tels que \forall~i \in {[}1,n{]}, \etai~
+%= \lambda~i\epsiloni.
+%
+%Démonstration Démontrons tout d'abord l'équivalence des trois
+%propriétés. Il est clair que (i) \Leftrightarrow (iii) et
+%que (ii) \rigtharrow~(i). De plus, si (i) est vérifié, on a
+%\forall~i \in {[}1,k{]}, \epsiloni~
+%\in\mathrmVect(e1,\\\ldots,ei~)
+%\subset~\mathrmVect(e1,\\\ldots,ek~)
+%et donc
+%\mathrmVect(\epsilon1,\\\ldots,\epsilonk~)
+%\subset~\mathrmVect(e1,\\\ldots,ek~).
+%Comme les deux sous-espaces ont même dimension, ils sont égaux et donc
+%(i) \rigtharrow~(ii). Nous allons maintenant démontrer l'existence et l'unicité à
+%multiplication par des scalaires non nuls près. Posons V 0 =
+%\0\, V k
+%=\
+%\mathrmVect(e1,\\ldots,ek~)
+%et remarquons que le fait que la base soit orthogonale se traduit par le
+%fait que \epsilonk est orthogonal à
+%\mathrmVect(\epsilon1,\\\ldots,\epsilonk-1~),
+%soit encore d'après (ii) à
+%\mathrmVect(e1,\\\ldots,ek-1~)
+%= V k-1. On voit donc que l'on doit choisir \epsilonk \in V
+%k \bigcap V k-1^\bot. Mais ce sous-espace n'est autre
+%que l'orthogonal dans V k du sous espace V k-1~; cet
+%orthogonal est de dimension k - (k - 1) = 1~; ceci démontre dé\\\\jmathmathmathmathà que si
+%\epsilonk et \etak conviennent, alors ils sont proportionnels,
+%d'où la partie unicité de la proposition. Pour l'existence, choisissons
+%pour chaque k un vecteur non nul \epsilonk \in V k \bigcap V
+%k-1^\bot. On a alors, puisque V k-1 est non
+%isotrope, V k = V k-1 \oplus~ K\epsilonk~; une
+%récurrence évidente montre alors que V k
+%=\
+%\mathrmVect(\epsilon1,\\ldots,\epsilonk~).
+%Donc
+%(\epsilon1,\\ldots,\epsilonn~)
+%est une base de E (famille génératrice de cardinal n), évidemment
+%orthogonale et qui vérifie les conditions voulues.
+%
+%Remarque~12.4.6 Comme on l'a vu ci-dessus, la base orthogonale n'est pas
+%unique~; il y a divers moyens de la normaliser. L'un des plus simples
+%est de demander que \epsilonk ait une coordonnée égale à 1 suivant
+%ek (cette coordonnée est bien évidemment non nulle car V
+%k = V k-1 \oplus~ Kek et il est exclu que
+%\epsilonk appartienne à V k-1)~; dans ce cas la base est
+%évidemment unique. Une autre normalisation possible est de demander que
+%la nouvelle base soit orthonormée et que les produits scalaires
+%(ei∣\epsiloni) soient tous
+%positifs.
+%
+%Nous allons maintenant étudier un algorithme de construction de la base
+%\mathcal{E}' dans le cadre de cette normalisation. Il se fonde sur la remarque
+%suivante~: pour chaque k, on doit avoir \epsilonk = ek +
+%vk avec vk \in V k-1
+%=\
+%\mathrmVect(e1,\\ldots,ek-1~)
+%=\
+%\mathrmVect(\epsilon1,\\ldots,\epsilonk-1~)~;
+%ceci impose que,
+%\epsilon1,\\ldots,\epsilonk-1~
+%étant supposés dé\\\\jmathmathmathmathà déterminés, \epsilonk = ek
+%+ \\sum ~
+%i=1^k-1\alpha~i\epsiloni, les \alpha~i étant
+%déterminés par la condition que \epsilonk doit être orthogonal à
+%\epsilon1,\\ldots,\epsilonk-1~~;
+%or , pour \\\\jmathmathmathmath \in {[}1,k - 1{]},
+%
+%(\epsilonk∣\epsilon\\\\jmathmathmathmath) =
+%(ek∣\epsilon\\\\jmathmathmathmath) +
+%\sum i=1^k-1\alpha~~
+%i(\epsiloni∣\epsilon\\\\jmathmathmathmath) =
+%(ek∣\epsilon\\\\jmathmathmathmath) +
+%\alpha~\\\\jmathmathmathmath\\textbar{}\epsilon\\\\jmathmathmathmath\\textbar{}^2
+%
+%puisque (\epsiloni∣\epsilon\\\\jmathmathmathmath) = 0 si
+%i\neq~\\\\jmathmathmathmath. On doit donc poser \alpha~\\\\jmathmathmathmath = -
+%(ek∣\epsilon\\\\jmathmathmathmath)
+%\over
+%\\textbar{}\epsilon\\\\jmathmathmathmath\\textbar{}^2
+%.
+%
+%On obtient donc l'algorithme suivant (pour la première normalisation, où
+%l'on demande que \epsilonk ait une coordonnée égale à 1 suivant
+%ek)
+%
+%Algorithme de Gram-Schmidt
+%
+%\begin{itemize}
+%\itemsep1pt\parskip0pt\parsep0pt
+%\item
+%  \epsilon1 = e1
+%\item
+%  pour k de 2 à n faire
+%\item
+%  \quad \quad \epsilonk = ek
+%  -\\sum ~
+%  i=1^k-1
+%  (ek∣\epsiloni)
+%  \over
+%  (\epsiloni∣\epsiloni) \epsiloni
+%\end{itemize}
+%
+%Pour la deuxième normalisation, qui demande que la base soit
+%orthonormée, on a Algorithme de Gram-Schmidt
+%
+%\begin{itemize}
+%\itemsep1pt\parskip0pt\parsep0pt
+%\item
+%  \epsilon1 = e1\over
+%  \\textbar{}e1\\textbar{}
+%\item
+%  pour k de 2 à n faire
+%\item
+%  \quad \quad \epsilon'k = ek
+%  -\\sum ~
+%  i=1^k-1(ek∣\epsiloni)\epsiloni
+%\item
+%  \quad \quad \epsilonk =
+%  \epsilonk'\over
+%  \\textbar{}\epsilonk'\\textbar{}
+%\end{itemize}
+%
+%\paragraph{12.4.7 Application~: polynômes orthogonaux}
+%
+%Soit -\infty~\leq a \textless{} b \leq +\infty~ et \omega :{]}a,b{[}\rightarrow~ \mathbb{R}~ une application
+%continue positive non nulle telle que pour tout polynôme P \in \mathbb{R}~{[}X{]} la
+%fonction P\omega soit intégrable sur {]}a,b{[}.
+%
+%Théorème~12.4.12 La forme bilinéaire (P∣Q)
+%=\int  {]}a,b{[}~P(t)Q(t)\omega(t) dt est
+%définie positive sur \mathbb{R}~{[}X{]}.
+%
+%Démonstration On a (P∣P)
+%=\int  {]}a,b{[}P(t)^2~\omega(t)
+%dt ≥ 0. De plus, si (P∣P) = 0, comme
+%P(t)^2\omega(t) est continue positive, on a
+%\forall~t \in{]}a,b{[}, P(t)^2~\omega(t) = 0. Mais
+%comme \omega est non nulle, il existe un intervalle {]}c,d{[} sur lequel \omega ne
+%s'annule pas. On a donc \forall~~t \in{]}c,d{[}, P(t) =
+%0 et le polynôme P ayant une infinité de racines est le polynôme nul.
+%
+%Nous pouvons donc appliquer l'algorithme de Gram-Schmidt à la base
+%(X^n)n\in\mathbb{N}~ de \mathbb{R}~{[}X{]} et on obtient donc
+%
+%Théorème~12.4.13 Il existe une unique famille
+%(Pn)n\in\mathbb{N}~ de \mathbb{R}~{[}X{]} vérifiant les conditions
+%suivantes
+%
+%\begin{itemize}
+%\itemsep1pt\parskip0pt\parsep0pt
+%\item
+%  (i) pour tout n, Pn est un polynôme normalisé de degré n
+%\item
+%  (ii) \forall~~i,\\\\jmathmathmathmath \in \mathbb{N}~,
+%  i\neq~\\\\jmathmathmathmath \rigtharrow~
+%  (Pi∣P\\\\jmathmathmathmath) = 0
+%\end{itemize}
+%
+%Définition~12.4.7 Les polynômes Pn sont appelés les polynômes
+%orthogonaux relativement au poids \omega.
+%
+%Remarque~12.4.7 Pour chaque n \in \mathbb{N}~,
+%(P0,\\ldots,Pn~)
+%est une base de l'espace vectoriel \mathbb{R}~n{[}X{]} des polynômes de
+%degré inférieur ou égal à n, puisque c'est une famille libre (échelonnée
+%en degrés) de cardinal n + 1. On a bien entendu Pn+1 \bot
+%\mathbb{R}~n{[}X{]}.
+%
+%Théorème~12.4.14 Le polynôme Pn a toutes ses racines réelles
+%distinctes situées dans l'intervalle {]}a,b{[}.
+%
+%Démonstration Soit
+%\alpha~1,\\ldots,\alpha~k~
+%les racines de P de multiplicités impaires situées dans l'intervalle
+%{]}a,b{[} (avec k ≥ 0). Soit Q(X) =\
+%∏  i=1^k(X - \alpha~i~).
+%Supposons que k \leq n - 1~; alors Q \in \mathbb{R}~n-1{[}X{]} et donc
+%(Q∣Pn) = 0, soit
+%\int  {]}a,b{[}~P(t)Q(t)\omega(t) dt = 0.
+%Mais le polynôme PQ n'a que des racines de multiplicités paires sur
+%{]}a,b{[}, il est donc de signe constant et donc PQ\omega également. On en
+%déduit que PQ\omega = 0 sur {]}a,b{[}, puis comme précédemment que PQ = 0, ce
+%qui est absurde. Donc k = n, ce qui exige que les \alpha~i soient de
+%multiplicités 1 et que P(X) =\
+%∏  i=1^n(X - \alpha~i~).
+%
+%Application à l'intégration.
+%
+%Théorème~12.4.15 Les racines de Pn sont les seuls réels
+%\alpha~1,\\ldots,\alpha~n~
+%tels qu'il existe des scalaires
+%\lambda~1,\\ldots,\lambda~n~
+%vérifiant
+%
+%\forall~P \in \mathbb{R}~2n-1~{[}X{]},
+%\int  {]}a,b{[}~P(t)\omega(t) dt =
+%\sum i=1^n\lambda~~
+%iP(\alpha~i)
+%
+%Démonstration Soit
+%\alpha~1,\\ldots,\alpha~n~
+%les racines de Pn et \epsiloni la forme linéaire sur
+%\mathbb{R}~n-1{[}X{]}, P\mapsto~P(\alpha~i)~; si
+%\forall~i, \epsiloni~(P) = 0, P est un polynôme de
+%degré au plus n - 1 qui admet n racines distinctes, il est donc nul.
+%Donc
+%P\mapsto~(\epsilon1(P),\\ldots,\epsilonn~(P))
+%est in\\\\jmathmathmathmathective, donc bi\\\\jmathmathmathmathective, ce qui implique
+%\mathrmVect(\epsilon1,\\\ldots,\epsilonn~)
+%= \mathbb{R}~n-1{[}X{]}^∗. Comme f :
+%P\mapsto~\int ~
+%{]}a,b{[}P(t)\omega(t) dt est une forme linéaire sur
+%\mathbb{R}~n-1{[}X{]}, elle est combinaison linéaire de
+%\epsilon1,\\ldots,\epsilonn~,
+%soit f = \lambda~1\epsilon1 +
+%\\ldots~ +
+%\lambda~n\epsilonn. On a alors
+%
+%\forall~P \in \mathbb{R}~n-1~{[}X{]},
+%\int  {]}a,b{[}~P(t)\omega(t) dt =
+%\sum i=1^n\lambda~~
+%iP(\alpha~i)
+%
+%Soit maintenant P \in \mathbb{R}~2n-1{[}X{]}. on peut écrire P =
+%QPn + R avec Q,R \in \mathbb{R}~n-1{[}X{]}. On a bien entendu
+%P(\alpha~i) = R(\alpha~i) et
+%
+%\begin{align*} \int ~
+%{]}a,b{[}P(t)\omega(t) dt& =&
+%(Q∣Pn) +\\int
+% {]}a,b{[}R(t)\omega(t) dt =\int ~
+%{]}a,b{[}R(t)\omega(t) dt\%& \\ & =&
+%\sum i=1^n\lambda~~
+%iR(\alpha~i) = \\sum
+%i=1^n\lambda~ iP(\alpha~i) \%&
+%\\ \end{align*}
+%
+%ce qui montre que
+%\alpha~1,\\ldots,\alpha~n~
+%vérifient les conditions voulues. Inversement, supposons que
+%\alpha~1,\\ldots,\alpha~n~
+%sont n nombres réels vérifiant les conditions voulues et Q(X)
+%= \∏ ~
+%i=1^n(X - \alpha~i). Alors, pour tout P \in
+%\mathbb{R}~n-1{[}X{]}, on a PQ \in \mathbb{R}~2n-1{[}X{]} soit
+%
+%(P∣Q) =\int ~
+%{]}a,b{[}P(t)Q(t)\omega(t) dt = \\sum
+%i=1^n\lambda~ iP(\alpha~i)Q(\alpha~i) = 0
+%
+%et donc Q \bot Rn-1{[}X{]}. Comme Q est normalisé, on a Q =
+%Pn.
+%
+%Théorème~12.4.16 Il existe des scalaires an,bn tels
+%que
+%
+%\forall~n \in \mathbb{N}~^∗, P n+1~ = (X +
+%an)Pn + bnPn-1
+%
+%Démonstration Soit Q = XPn \in \mathbb{R}~n+1{[}X{]}~; on a donc
+%XPn = \\sum ~
+%i=0^n+1\lambda~iPi(X). En considérant le
+%terme de degré n + 1, les polynômes Pn+1 et XPn
+%étant normalisés, on a \lambda~n+1 = 1. Pour n ≥ 2 et i \leq n - 2, on a
+%
+%\begin{align*}
+%\lambda~i\\textbar{}Pi\\textbar{}^2&
+%=& (Q∣P i)
+%=\int  {]}a,b{[}Pi~(t)Q(t)\omega(t)
+%dt =\int ~
+%{]}a,b{[}Pi(t)tPn(t) dt\%&
+%\\ & =&
+%(Pn∣XPi) \%&
+%\\ \end{align*}
+%
+%Mais puisque i \leq n - 2, XPi \in \mathbb{R}~n-1{[}X{]} et donc
+%XPi \bot Pn, soit \lambda~i = 0. On a donc
+%
+%XPn = Pn+1 + \lambda~nPn +
+%\lambda~n-1Pn-1
+%
+%ce qui donne la formule demandée.
+%
+%Pour certains poids \omega particuliers, les polynômes orthogonaux vérifient
+%des équations différentielles linéaires d'ordre 2 que nous n'étudierons
+%pas de manière générale. Citons quelques cas particulièrement importants
+%de polynômes orthogonaux
+%
+%\begin{itemize}
+%\itemsep1pt\parskip0pt\parsep0pt
+%\item
+%  (i) a = -1,b = 1,\omega(t) = 1~: polynômes de Legendre Ln(t) =
+%  \lambda~n d^n \over dt^n
+%  (t^2 - 1)^n
+%\item
+%  (ii) a = -\infty~,b = +\infty~,\omega(t) = e^-t^2 ~: polynômes
+%  d'Hermite Hn(t)e^-t^2  =
+%  \lambda~n d^n \over dt^n
+%  e^-t^2 
+%\item
+%  (iii) a = -1,b = 1,\omega(t) = 1 \over
+%  \sqrt1-t^2 ~: polynômes de Tchebychev
+%  Tn(cos~ x) =
+%  \lambda~n cos~ (nx)
+%\end{itemize}
+%
+%{[}
+%{[}
+%{[}
+%{[}

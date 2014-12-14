@@ -1,0 +1,610 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{2.6 Matrices}
+
+\paragraph{2.6.1 Généralités}
+
+Définition~2.6.1 MK(m,n) =
+\(ai,\\\\jmathmathmathmath) 1\leqi\leqm \atop
+1\leq\\\\jmathmathmathmath\leqn \ est un K-espace vectoriel de dimension mn.
+Il admet pour base la famille (Ek,l) 1\leqk\leqm
+\atop 1\leql\leqn  avec
+
+ Ek,l = (\deltai,\\\\jmathmathmathmath^k,l) 1\leqi\leqm
+\atop 1\leq\\\\jmathmathmathmath\leqn  =\left (
+\includegraphics{cours0x.png} \,\right )
+
+Définition~2.6.2 Soit E et F deux espaces vectoriels de dimensions
+finies n et m respectivement et u \in L(E,F). Soit \mathcal{E} =
+(e1,\\ldots,en~)
+une base de E et ℱ =
+(f1,\\ldots,fm~)
+une base de F de base duale ℱ^∗ =
+(f1^∗,\\ldots,fm^∗~).
+On définit la matrice de u dans les bases \mathcal{E} et ℱ comme étant la matrice
+\mathrmMat~ (u,\mathcal{E},ℱ) =
+(ai,\\\\jmathmathmathmath) 1\leqi\leqm \atop 1\leq\\\\jmathmathmathmath\leqn 
+construite de fa\ccon équivalente par (i)
+\forall~\\\\jmathmathmathmath \in {[}1,n{]}, u(e\\\\jmathmathmathmath~)
+= \\sum ~
+i=1^mai,\\\\jmathmathmathmathfi (ii)
+\forall~i \in {[}1,m{]}, \\forall~~\\\\jmathmathmathmath \in
+{[}1,n{]}, ai,\\\\jmathmathmathmath = fi^∗(u(e\\\\jmathmathmathmath))
+=\langle
+fi^∗∣u(e\\\\jmathmathmathmath)\rangle
+
+Proposition~2.6.1 L'application L(E,F) \rightarrow~ MK(m,n),
+u\mapsto~\mathrmMat~
+(u,\mathcal{E},ℱ) est un isomorphisme de K-espaces vectoriels .
+
+Produit de matrices A = (ai,\\\\jmathmathmathmath) \in MK(m,n) et B =
+(bi,\\\\jmathmathmathmath) \in MK(n,p). On définit AB = (ci,\\\\jmathmathmathmath) \in
+MK(m,p) par
+
+\forall~(i,\\\\jmathmathmathmath) \in {[}1,m{]} \times {[}1,p{]}, ci,\\\\jmathmathmathmath~
+= \sum k=1^na~
+i,kbk,\\\\jmathmathmathmath
+
+Théorème~2.6.2 Soit u \in L(E,F), v \in L(F,G) où E, F et G sont trois
+espaces vectoriels de dimensions finies admettant des bases \mathcal{E}, ℱ et G.
+Alors on a
+
+\mathrmMat~ (v \cdot u,\mathcal{E},G)
+= \mathrmMat~
+(v,ℱ,G)\mathrmMat~ (u,\mathcal{E},ℱ)
+
+Démonstration En effet, si les dimensions des espaces sont
+respectivement p, n et m, et si l'on note A =\
+\mathrmMat (u,\mathcal{E},ℱ) et B =\
+\mathrmMat (v,ℱ,G), on a
+
+\begin{align*} v \cdot u(e\\\\jmathmathmathmath)& =&
+v(u(e\\\\jmathmathmathmath) = v(\\sum
+k=1^na k,\\\\jmathmathmathmathfk)\%&
+\\ & =& \\sum
+k=1^na k,\\\\jmathmathmathmathv(fk) \%&
+\\ & =& \\sum
+k=1^na k,\\\\jmathmathmathmath \\sum
+i=1^mb i,kgi \%&
+\\ & =& \\sum
+i=1^m\left (\\sum
+k=1^nb i,kak,\\\\jmathmathmathmath\right
+)gi\%& \\
+\end{align*}
+
+ce qui montre que la i-ième coordonnée de v \cdot u(e\\\\jmathmathmathmath) est bien
+le terme d'indice i,\\\\jmathmathmathmath de la matrice BA.
+
+Remarque~2.6.1 Ceci lié à l'isomorphisme avec les applications linéaires
+permet d'obtenir immédiatement les propriétés essentielles du produit
+des matrices~: associativité et bilinéarité.
+
+Définition~2.6.3 Soit x \in E et y \in F. Si x =\
+\sum ~
+i=1^nxiei, on définit X =
+\left
+(\matrix\,x1
+\cr \⋮~
+\cr xn\right ) (vecteur
+colonne des coordonnées de x dans la base \mathcal{E}). De même, on définit Y
+vecteur colonne des coordonnées de y dans la base ℱ. On a alors
+
+Théorème~2.6.3 \mathrmMat~
+(u,\mathcal{E},ℱ) est l'unique matrice A \in MK(m,n) vérifiant
+
+\forall~~(x,y) \in E \times F,\quad u(x) = y
+\Leftrightarrow Y = AX
+
+Démonstration En effet
+
+\begin{align*} u(x) = y&
+\Leftrightarrow & \\sum
+\\\\jmathmathmathmath=1^nx \\\\jmathmathmathmathu(e\\\\jmathmathmathmath) =
+\sum i=1^my~
+ifi \%& \\ &
+\Leftrightarrow & \\sum
+\\\\jmathmathmathmath=1^nx \\\\jmathmathmathmath \\sum
+i=1^ma i,\\\\jmathmathmathmathfi =
+\sum i=1^my~
+ifi\%& \\ &
+\Leftrightarrow & \forall~~i,
+yi = \\sum
+\\\\jmathmathmathmath=1^na i,\\\\jmathmathmathmathx\\\\jmathmathmathmath
+\Leftrightarrow Y = AX \%&
+\\ \end{align*}
+
+Inversement, si une matrice A vérifie cette condition, en prenant x =
+e\\\\jmathmathmathmath, on voit que ai,\\\\jmathmathmathmath est la i-ième coordonnée de
+u(e\\\\jmathmathmathmath), et donc A =\
+\mathrmMat (u,\mathcal{E},ℱ).
+
+\paragraph{2.6.2 Matrices carrées}
+
+Lemme~2.6.4 Soit (Ei,\\\\jmathmathmathmath) la base canonique de MK(n).
+On a Ei,\\\\jmathmathmathmathEk,l = \delta\\\\jmathmathmathmath^kEi,l
+
+Démonstration Calcul élémentaire
+
+Proposition~2.6.5 MK(n) (= MK(n,n)) est une
+K-algèbre de dimension n^2 dont le centre est constitué des
+matrices scalaires. Le groupe de ses éléments inversibles est noté
+GLK(n) (groupe linéaire d'indice n).
+
+Démonstration Tout est élémentaire, sauf la recherche du centre. Soit A
+\in Mk(n) une matrice qui commute à toutes les autres matrices
+carrées. On a A =\ \\sum
+ i,\\\\jmathmathmathmathai,\\\\jmathmathmathmathEi,\\\\jmathmathmathmath. On écrit pour
+k\neq~l, Ek,lA = AEk,l soit
+encore \\sum ~
+\\\\jmathmathmathmathal,\\\\jmathmathmathmathEk,\\\\jmathmathmathmath =\
+\sum  iai,kEi,l~. En
+prenant la coordonnée suivant Ek,k, on a al,k = 0.
+En prenant la coordonnée suivant Ek,l on a al,l =
+ak,k soit A = a1,1In.
+
+Remarque~2.6.2 Bien entendu si E est un K-espace vectoriel de dimension
+n admettant une base \mathcal{E}, les résultats précédents impliquent que
+l'application L(E) \rightarrow~ MK(n),
+u\mapsto~\mathrmMat~
+(u,\mathcal{E}) est un isomorphisme de K-algèbres.
+
+Définition~2.6.4 Si A = (ai,\\\\jmathmathmathmath) \in MK(n), on définit
+la trace de A comme
+\mathrm{tr}~A
+= \\sum ~
+i=1^nai,i.
+
+Théorème~2.6.6 Soit A \in MK(m,n) et B \in MK(n,m).
+Alors \mathrm{tr}~(AB)
+= \mathrm{tr}~(BA). En
+particulier, si A \in MK(n) et P \in GLK(n), alors
+\mathrm{tr}(P^-1~AP)
+= \mathrm{tr}~A.
+
+Démonstration On a en effet
+\mathrm{tr}~(AB)
+= \\sum ~
+i,\\\\jmathmathmathmathai,\\\\jmathmathmathmathb\\\\jmathmathmathmath,i qui est une expression
+visiblement symétrique en a et b.
+
+\paragraph{2.6.3 Transposée}
+
+Définition~2.6.5 Si A = (ai,\\\\jmathmathmathmath) \in MK(m,n) on pose
+^tA = (bi,\\\\jmathmathmathmath) \in MK(n,m) définie par
+\forall~~(i,\\\\jmathmathmathmath) \in {[}1,n{]} \times
+{[}1,m{]},\quad bi,\\\\jmathmathmathmath = a\\\\jmathmathmathmath,i.
+
+Proposition~2.6.7 L'application
+M\mapsto~^tM est linéaire bi\\\\jmathmathmathmathective de
+MK(m,n) sur MK(n,m) et on a
+^t(^tM) = M. Si M \in MK(m,n),N \in
+MK(n,p), alors ^t(MN) =
+^tN^tM. Si M \in MK(n) est inversible,
+^tM aussi et (^tM)^-1 =
+^t(M^-1).
+
+Démonstration Calcul élémentaire pour montrer que ^t(\alpha~M + \beta~N)
+= \alpha~^tM + \beta~^tN et que ^t(MN) =
+^tN^tM. Si M est inversible, on a MM^-1 =
+M^-1M = In et prenant la transposée,
+^t(M^-1)^tM =
+^tM^t(M^-1) = ^tIn =
+In. On en déduit que ^tM est inversible et que
+(^tM)^-1 = ^t(M^-1).
+
+Théorème~2.6.8 Soit E et F deux K-espaces vectoriels de dimensions
+finies admettant des bases \mathcal{E} et ℱ. Alors
+
+\mathrmMat~
+(^tu,ℱ^∗,\mathcal{E}^∗) =
+^t \mathrmMat~
+(u,\mathcal{E},ℱ)
+
+Démonstration Soit A et B les deux matrices. On a
+^tu(f\\\\jmathmathmathmath^∗) =\
+\sum ~
+ibi,\\\\jmathmathmathmathei^∗ soit bi,\\\\jmathmathmathmath =
+^tu(f\\\\jmathmathmathmath^∗)(ei) =
+f\\\\jmathmathmathmath^∗\cdot u(ei) =
+f\\\\jmathmathmathmath^∗(u(ei)) = a\\\\jmathmathmathmath,i.
+
+Définition~2.6.6 Soit M \in MK(n). On dit que M est symétrique
+si ^tM = M et antisymétrique si ^tM = -M.
+
+Proposition~2.6.9 L'ensemble SK(n) (resp. AK(n)) des
+matrices symétriques (resp. antisymétriques) est un sous-espace
+vectoriel de MK(n). On a dim~
+SK(n) = n(n+1) \over 2 . Si
+carK\mathrel\neq~~2, on a
+MK(n) = SK(n) \oplus~ AK(n) et
+dim AK~(n) = n(n-1)
+\over 2 .
+
+Démonstration Une base de SK(n) est clairement constituée des
+Ei,i 1 \leq i \leq n et des Ei,\\\\jmathmathmathmath + E\\\\jmathmathmathmath,i, 1 \leq i
+\textless{} \\\\jmathmathmathmath \leq n, donc dim SK~(n)
+= n(n+1) \over 2 . Si
+carK\mathrel\neq~~2, on peut
+écrire A = 1\over 2(A + ^tA) +
+1\over 2(A -^tA), ce qui montre que
+MK(n) = SK(n) + AK(n) et on a clairement
+SK(n) \bigcap AK(n) =
+\0\.
+
+Remarque~2.6.3 Par contre, si car~K = 2, on a 1
+= -1 et donc SK(n) = AK(n).
+
+\paragraph{2.6.4 Rang d'une matrice}
+
+Définition~2.6.7 Soit A \in MK(m,n). On appelle rang de A le
+rang dans K^m de la famille
+(c1,\\ldots,cn~)
+de ses vecteurs colonnes.
+
+Théorème~2.6.10 Si u \in L(E,F), \mathcal{E} une base de E, ℱ une base de F, A
+= \mathrmMat~ (u,\mathcal{E},ℱ). Alors
+\mathrmrg~A
+= \mathrmrg~u.
+
+Démonstration On a
+\mathrmrg~u
+=\
+\mathrmrg(u(e1),\\ldots,u(en~)).
+Mais le rang de la famille des u(e\\\\jmathmathmathmath) est aussi le rang de son
+image par l'isomorphisme de F dans K^m qui à un vecteur
+associe la famille de ses coordonnées dans la base ℱ, c'est-à-dire le
+rang de la famille des vecteurs colonnes de la matrice A.
+
+Corollaire~2.6.11
+\mathrmrg~(AB)
+\leq\
+min(\mathrmrgA,\\mathrmrg~B).
+
+Théorème~2.6.12 Soit A \in MK(n). On a équivalence de
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) A est inversible
+\item
+  (ii) \mathrmrg~A = n
+\item
+  (iii) \existsB \in MK~(n), AB =
+  In
+\item
+  (iv) \existsB \in MK(n), BA = In~
+\end{itemize}
+
+Démonstration Se déduit immédiatement du théorème analogue sur les
+endomorphismes d'un espace vectoriel de dimension finie.
+
+\paragraph{2.6.5 La méthode du pivot}
+
+La recherche pratique du rang d'une matrice peut se faire par la méthode
+du pivot~; dans les algorithmes qui suivent, la flèche vers la gauche
+décrira un remplacement~: x ← y signifiera remplacer x par y. Il s'agit
+là de l'analogue d'une affectation dans un langage de programmation.
+
+Définition~2.6.8 On définit les opérations élémentaires sur les vecteurs
+colonnes
+c1,\\ldots,cn~
+d'une matrice A \in MK(m,n)~:
+
+\begin{itemize}
+\item
+  (i) a\\\\jmathmathmathmathouter à une colonne c\\\\jmathmathmathmath une combinaison linéaire des
+  autres vecteurs colonnes
+
+  ci ← ci + \\sum
+  \\\\jmathmathmathmath\neq~i\lambda~\\\\jmathmathmathmathc\\\\jmathmathmathmath
+
+  ou encore
+
+  A ← A\left
+  (\matrix\,1& &\lambda~1& &
+  \cr
+  &⋱&\⋮~
+  & & \cr & &1 & & \cr &
+  &\⋮~
+  &⋱& \cr &
+  &\lambda~n& &1\right )
+\item
+  (ii) multiplier la colonne ci par un scalaire non nul
+
+  ci ← \lambda~ci
+
+  ou encore
+
+  A ← A\left
+  (\matrix\,1& & & &
+  \cr &⋱& & &
+  \cr & &\lambda~& & \cr & &
+  &⋱& \cr & & &
+  &1\right )
+\item
+  (iii) effectuer une permutation \sigma sur les vecteurs colonnes
+
+  (c1,\\ldots,cn~)
+  ←
+  (c\sigma(1),\\ldots,c\sigma(n)~)
+
+  ou encore
+
+  A ← AP\sigma
+
+  où P\sigma = (\deltai^\sigma(\\\\jmathmathmathmath)).
+\end{itemize}
+
+Proposition~2.6.13 Les opérations élémentaires ne changent pas le rang
+d'une matrice.
+
+Démonstration En effet, il est clair que les opérations élémentaires ne
+changent pas le sous-espace de K^n,
+\mathrmVect(c1,\\\ldots,cn~)~;
+on peut remarquer aussi que les opérations élémentaires s'effectuent par
+multiplications à droite par des matrices inversibles, donc ne changent
+pas le rang.
+
+Théorème~2.6.14 Soit M \in MK(n,p). Alors il existe une matrice
+M' qui se déduit de M par une suite d'opérations élémentaires, de la
+forme
+
+M' = \left (\matrix\,0
+&0 &\\ldots~&0
+&0&\\ldots~&0
+\cr \⋮~
+&\⋮~ &
+&\⋮~
+&\⋮~&
+&\⋮~
+\cr 0
+&\⋮~ &
+&\⋮~
+&\⋮~&
+&\⋮~
+\cr 1 &0
+&\\ldots~&0
+&0&\\ldots~&0
+\cr a\sigma(1)+1,1& &
+&\⋮~
+&\⋮~&
+&\⋮~
+\cr \⋮~
+&\⋮~ &
+&\⋮~
+&\⋮~&
+&\⋮~
+\cr \⋮~
+&1 & & & & & \cr
+\⋮~
+&a\sigma(2)+1,2 \cr
+\⋮~
+&\⋮~ &
+&\⋮~
+\cr & & &1 \cr & &
+&a\sigma(r)+1,r&\⋮~&
+&\⋮~
+\cr \⋮~
+&\⋮~ &
+&\⋮~ &0&
+&0\right )
+
+où \sigma est une application strictement croissante de {[}1,r{]} dans
+{[}1,n{]}. Dans toute telle écriture, on a
+\mathrmrg~M = r.
+
+Démonstration Par récurrence sur le nombre de colonnes de M. C'est
+évident s'il existe une seule colonne ou si M = 0. Sinon, soit \sigma(1)
+l'indice de la première ligne non nulle et \\\\jmathmathmathmath tel que
+a\sigma(1),\\\\jmathmathmathmath\neq~0. On effectue une
+permutation des colonnes pour amener la colonne c\\\\jmathmathmathmath en première
+colonne, puis on effectue les opérations c1 ← 1
+\over a\sigma(1),1c1 puis pour \\\\jmathmathmathmath allant
+de 2 à n, c\\\\jmathmathmathmath ← c\\\\jmathmathmathmath - a\sigma(1),\\\\jmathmathmathmathc1.
+On aboutit alors à une matrice
+
+\left (\matrix\,0
+&0&\\ldots&0&0&\\\ldots~&0
+\cr \⋮~
+&\⋮~&
+&\⋮&\\⋮~&
+&\⋮~
+\cr 0
+&\⋮~&
+&\⋮&\\⋮~&
+&\⋮~
+\cr 1
+&0&\\ldots&0&0&\\\ldots~&0
+\cr a\sigma(1)+1,1& &
+&\⋮&\\⋮~&
+&\⋮~
+\cr \⋮~
+&\⋮~&
+&\⋮&\\⋮~&
+&\⋮~\right
+)
+
+Il suffit alors d'utiliser l'hypothèse de récurrence sur les n - 1
+dernières colonnes de la matrice. Il est clair que
+\mathrmrg~M' = r, mais on a
+\mathrmrg~M
+= \mathrmrg~M', d'où
+\mathrmrg~M = r.
+
+Remarque~2.6.4 On peut ensuite utiliser les 1 qui sont dans les r
+premières colonnes pour éliminer au fur et à mesure en partant du bas
+tous les a\sigma(i),\\\\jmathmathmathmath. Si M est inversible, nécessairement \sigma =
+\mathrmId et alors la matrice obtenue est
+In. Mais on a M' =
+MP1\\ldotsPk~
+où les Pi sont les matrices des différentes opérations
+élémentaires effectuées. On en déduit que M^-1 =
+P1\\ldotsPk~.
+On peut calculer ce produit en partant de B ← In et en
+effectuant sur la matrice B les mêmes opérations élémentaires que sur la
+matrice A. On a donc à la fin B ←
+P1\\ldotsPk~,
+soit B ← M^-1.
+
+\paragraph{2.6.6 Changement de bases}
+
+Proposition~2.6.15 Soit \mathcal{E} =
+(e1,\\ldots,en~)
+une base de E et A = (ai,\\\\jmathmathmathmath) \in MK(n). Posons
+x\\\\jmathmathmathmath = \\sum ~
+i=1^nai,\\\\jmathmathmathmathei. Alors A est inversible
+si et seulement si
+(x1,\\ldots,xn~)
+est une base de E.
+
+Démonstration Comme précédemment, le rang de la famille des x\\\\jmathmathmathmath
+est aussi le rang de son image par l'isomorphisme de E sur
+K^n qui à un vecteur associe la famille de ses coordonnées
+dans la base \mathcal{E}, c'est-à-dire ici de la famille des vecteurs colonnes de
+A.
+
+Définition~2.6.9 Soit \mathcal{E} et \mathcal{E}' deux bases de E. On définit
+P\mathcal{E}^\mathcal{E}' comme étant la matrice inversible
+(ai,\\\\jmathmathmathmath) \in Mk(n) définie par e\\\\jmathmathmathmath'
+= \\sum ~
+i=1^nai,\\\\jmathmathmathmathei.
+
+Remarque~2.6.5 On a donc P\mathcal{E}^\mathcal{E}'
+= \mathrmMat~
+(\mathrmIdE,\mathcal{E}',\mathcal{E}) =\
+\mathrmMat (u,\mathcal{E},\mathcal{E}) où u est défini par
+u(ei) = ei'. De la première égalité on déduit
+immédiatement~:
+
+Théorème~2.6.16
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) P\mathcal{E}'^\mathcal{E} = (P\mathcal{E}^\mathcal{E}')^-1 et
+  P\mathcal{E}^\mathcal{E}'` =
+  P\mathcal{E}^\mathcal{E}'P\mathcal{E}'^\mathcal{E}''
+\item
+  (ii) si X et X' sont les vecteurs colonnes des coordonnées de x \in E
+  dans les bases \mathcal{E} et \mathcal{E}' et P = P\mathcal{E}^\mathcal{E}', on a X = PX'.
+\end{itemize}
+
+Théorème~2.6.17 Soit u \in L(E,F), \mathcal{E} et \mathcal{E}' deux bases de E, ℱ et ℱ' deux
+bases de F. On pose P = P\mathcal{E}^\mathcal{E}', Q =
+Pℱ^ℱ', M =\
+\mathrmMat (u,\mathcal{E},ℱ), M' =\
+\mathrmMat (u,\mathcal{E}',ℱ'). Alors on a M' =
+Q^-1MP.
+
+Démonstration y = u(x) \Leftrightarrow Y = MX
+\Leftrightarrow QY `= MPX' \mathrel\Leftrightarrow Y
+`= Q^-1MPX'. L'unicité de la matrice d'une application
+linéaire permet de conclure que M' = Q^-1MP.
+
+Définition~2.6.10 On dit que M,M' \in MK(m,n) sont équivalentes
+s'il existe Q \in GLK(m) et P \in GLK(n) telles que M' =
+Q^-1MP.
+
+Remarque~2.6.6 Ceci revient à dire que M et M' sont les matrices d'une
+même application linéaire dans des bases ''différentes''~; sous cette
+forme, il est clair qu'il s'agit d'une relation d'équivalence.
+
+Lemme~2.6.18 Si M est de rang r, elle est équivalente à Jr =
+\left
+(\matrix\,Ir&0
+\cr 0 &0\right )
+
+Démonstration Soit M =\
+\mathrmMat (u,\mathcal{E},ℱ). Soit V un supplémentaire de
+\mathrmKer~u dans E,
+(e1',\\ldots,er~')
+une base de V ,
+(er+1',\\ldots,en~')
+une base de \mathrmKer~u.
+Comme u\textbar{}V  est un isomorphisme de V sur
+\mathrmIm~u,
+(f1',\\ldots,fr~')
+=
+(u(e1'),\\ldots,u(er~'))
+est une base de \mathrmIm~u
+que l'on peut compléter en
+(f1',\\ldots,fm~')
+base de F. On a alors
+\mathrmMat~ (u,\mathcal{E}',ℱ') =
+Jr, d'où le résultat.
+
+Théorème~2.6.19 Deux matrices de MK(m,n) sont équivalentes si
+et seulement si elles ont même rang.
+
+Démonstration La condition est bien évidemment nécessaire, et le lemme
+précédent montre qu'elle est suffisante.
+
+Théorème~2.6.20 \mathrmrg~A
+= \mathrmrg^t~A.
+Autrement dit, le rang d'une matrice est aussi égal au rang de la
+famille de ses vecteurs lignes.
+
+Démonstration En effet si A est équivalente à Jr,
+^tA est équivalente à ^tJr qui est aussi
+de rang r.
+
+Remarque~2.6.7 Dans le cas d'un endomorphisme, on a en général \mathcal{E} = ℱ et
+\mathcal{E}' = ℱ' d'où le théorème
+
+Théorème~2.6.21 Soit u \in L(E), \mathcal{E} et \mathcal{E}' deux bases de E. On pose P =
+P\mathcal{E}^\mathcal{E}', M =\
+\mathrmMat (u,\mathcal{E}), M' =\
+\mathrmMat (u,\mathcal{E}'). Alors on a M' =
+P^-1MP.
+
+Définition~2.6.11 On dit que M,M' \in MK(n) sont semblables s'il
+existe P \in GLK(n) telles que M' = P^-1MP.
+
+Remarque~2.6.8 Cela revient à dire que M et M' sont les matrices d'un
+même endomorphisme dans des bases ''différentes''~; sous cette forme, il
+est clair qu'il s'agit d'une relation d'équivalence.
+
+Remarque~2.6.9 On remarque que deux matrices semblables ont même trace
+ce qui permet de définir
+
+Définition~2.6.12 Soit u \in L(E). On pose
+\mathrm{tr}~u
+=\
+\mathrm{tr}\mathrmMat~
+(u,\mathcal{E}), indépendant du choix de la base \mathcal{E} de E.
+
+\paragraph{2.6.7 Produit des matrices par blocs}
+
+Soit M \in MK(m,n),M' \in MK(n,p), 1 \leq q \leq m, 1 \leq r \leq n,
+1 \leq s \leq p. On écrit
+
+M =\left ( \includegraphics{cours1x.png}
+\,\right ),\quad M'
+=\left (
+
+\includegraphics{cours2x.png} \,\right )
+
+avec A \in MK(q,r),B \in MK(q,n - r),C \in MK(m
+- q,r),D \in MK(m - q,n - r),A' \in MK(r,s),B' \in
+MK(r,p - s),C' \in MK(n - r,s),D' \in MK(n -
+r,p - s) Alors
+
+MM' = \left (\matrix\,AA'
++ BC'&AB' + BD' \cr CA' + DC'&CB' +
+DD'\right )
+
+Démonstration Par le calcul (attention aux décalages d'indices).
+
+{[}
+{[}
+{[}
+{[}

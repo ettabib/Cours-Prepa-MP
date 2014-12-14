@@ -1,0 +1,758 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{17.3 Espaces affines euclidiens}
+
+\paragraph{17.3.1 Notion d'espace affine euclidien}
+
+Définition~17.3.1 On appelle espace affine euclidien un couple (E,\Phi)
+d'un espace affine de dimension finie sur le corps \mathbb{R}~ des nombres réels
+et d'une forme quadratique définie positive \Phi sur
+\overrightarrowE.
+
+Remarque~17.3.1 Comme d'habitude on notera
+\Phi(\overrightarrow\xi~)
+=\\textbar{}\overrightarrow
+\xi~\\textbar{}^2 et on notera la forme polaire
+de \Phi sous la forme
+(\overrightarrow\xi~,\overrightarrow\eta)\mapsto~(\overrightarrow\xi~\mathrel∣\overrightarrow\eta)
+(le produit scalaire associé).
+
+Proposition~17.3.1 Soit E un espace affine euclidien. L'application d :
+E \times E \rightarrow~ \mathbb{R}~,
+(x,y)\mapsto~\\textbar{}\overrightarrowxy\\textbar{}
+est une distance sur E (appelée la distance euclidienne).
+
+Démonstration Vérification laissée au lecteur.
+
+\paragraph{17.3.2 Formule de Leibnitz et applications}
+
+Théorème~17.3.2 Soit E un espace affine euclidien,
+(ai)i\inI une famille finie de points de E,
+(\lambda~i)i\inI une famille de scalaires telle que
+\\sum ~
+i\inI\lambda~i\neq~0. Soit g le
+barycentre de la famille de points massiques \left
+((ai,\lambda~i)\right )i\inI. Alors
+
+\forall~~m \in E, \\sum
+i\inI\lambda~i\\textbar{}\overrightarrowmai\\textbar{}^2
+= \left (\\sum
+i\inI\lambda~i\right )
+\\textbar{}\overrightarrowmg\\textbar{}^2
++ \\sum
+i\inI\lambda~i\\textbar{}\overrightarrowgai\\textbar{}^2
+
+Démonstration On a
+
+\begin{align*} \\sum
+i\inI\lambda~i\\textbar{}\overrightarrowmai\\textbar{}^2
+= \\sum
+i\inI\lambda~i\\textbar{}\overrightarrowmg
++\overrightarrow
+gai\\textbar{}^2&& \%&
+\\ & =& \left
+(\\sum
+i\inI\lambda~i\right )
+\\textbar{}\overrightarrowmg\\textbar{}^2
++ 2\\sum
+i\inI\lambda~i(\overrightarrowmg∣\overrightarrowgai)
++ \\sum
+i\inI\lambda~i\\textbar{}\overrightarrowgai\\textbar{}^2\%&
+\\ & =& \left
+(\\sum
+i\inI\lambda~i\right )
+\\textbar{}\overrightarrowmg\\textbar{}^2
++ 2\left
+(\overrightarrowmg∣\\sum
+i\inI\lambda~i\overrightarrowgai\right
+) + \\sum
+i\inI\lambda~i\\textbar{}\overrightarrowgai\\textbar{}^2\%&
+\\ & =& \left
+(\\sum
+i\inI\lambda~i\right )
+\\textbar{}\overrightarrowmg\\textbar{}^2
++ \\sum
+i\inI\lambda~i\\textbar{}\overrightarrowgai\\textbar{}^2
+\%& \\ \end{align*}
+
+en utilisant l'identité de polarisation et la formule
+\\sum ~
+i\inI\lambda~i\overrightarrowgai
+=\overrightarrow 0.
+
+Corollaire~17.3.3 Soit E un espace affine euclidien,
+(ai)i\inI une famille finie de points de E,
+(\lambda~i)i\inI une famille de scalaires telle que
+\\sum ~
+i\inI\lambda~i\neq~0. Soit g le
+barycentre de la famille de points massiques \left
+((ai,\lambda~i)\right )i\inI. Soit k \in
+\mathbb{R}~. Alors \m \in
+E∣\\\sum
+
+i\inI\lambda~i\\textbar{}\overrightarrowmai\\textbar{}^2
+= k\ est soit l'ensemble vide, soit le singleton
+\g\ soit une sphère de centre g.
+
+Démonstration D'après la formule de Leibnitz, on a
+
+\begin{align*} \\sum
+i\inI\lambda~i\\textbar{}\overrightarrowmai\\textbar{}^2
+= k& \Leftrightarrow & \left
+(\\sum
+i\inI\lambda~i\right )
+\\textbar{}\overrightarrowmg\\textbar{}^2
+= k -\\sum
+i\inI\lambda~i\\textbar{}\overrightarrowgai\\textbar{}^2\%&
+\\ & \Leftrightarrow &
+\\textbar{}\overrightarrowgm\\textbar{}^2
+= 1 \over \\sum
+i\inI\lambda~i \left (k
+-\\sum
+i\inI\lambda~i\\textbar{}\overrightarrowgai\\textbar{}^2\right
+) \%& \\ \end{align*}
+
+Donc, suivant que  1 \over
+\\sum ~
+i\inI\lambda~i \left (k
+-\\sum ~
+i\inI\lambda~i\\textbar{}\overrightarrowgai\\textbar{}^2\right
+) est strictement négatif, nul ou strictement positif, on trouve \varnothing~,
+\g\ ou la sphère de centre g de rayon
+\sqrt 1 \over
+\\sum ~
+i\inI\lambda~i \left (k
+-\\sum ~
+i\inI\lambda~i\\textbar{}\overrightarrowgai\\textbar{}^2\right
+).
+
+Remarque~17.3.2 Soit E un espace affine euclidien,
+(ai)i\inI une famille finie de points de E,
+(\lambda~i)i\inI une famille de scalaires telle que
+\\sum ~
+i\inI\lambda~i = 0. On sait qu'il existe un vecteur
+\overrightarrowu tel que \forall~~m
+\in E, \\sum ~
+\lambda~i\overrightarrowmai
+=\overrightarrow u. Soit a \in E. On a alors
+
+\begin{align*} \\sum
+i\inI\lambda~i\\textbar{}\overrightarrowmai\\textbar{}^2
+= \\sum
+i\inI\lambda~i\\textbar{}\overrightarrowma
++\overrightarrow
+aai\\textbar{}^2&& \%&
+\\ & =& \left
+(\\sum
+i\inI\lambda~i\right )
+\\textbar{}\overrightarrowma\\textbar{}^2
++ 2\\sum
+i\inI\lambda~i(\overrightarrowma∣\overrightarrowaai)
++ \\sum
+i\inI\lambda~i\\textbar{}\overrightarrowaai\\textbar{}^2\%&
+\\ & =& 2\left
+(\overrightarrowma∣\\sum
+i\inI\lambda~i\overrightarrowaai\right
+) + \\sum
+i\inI\lambda~i\\textbar{}\overrightarrowaai\\textbar{}^2
+\%& \\ & =&
+2(\overrightarrowma∣\overrightarrowu)
++ \\sum
+i\inI\lambda~i\\textbar{}\overrightarrowaai\\textbar{}^2
+\%& \\ \end{align*}
+
+On en déduit que
+
+\\sum
+i\inI\lambda~i\\textbar{}\overrightarrowmai\\textbar{}^2
+= k \Leftrightarrow
+(\overrightarrowma∣\overrightarrowu)
+= 1 \over 2 \left (k
+-\\sum
+i\inI\lambda~i\\textbar{}\overrightarrowaai\\textbar{}^2\right
+)
+
+qui est soit l'ensemble vide (si \overrightarrowu
+=\overrightarrow 0 et k
+-\\sum ~
+i\inI\lambda~i\\textbar{}\overrightarrowaai\\textbar{}^2\neq~0),
+soit un hyperplan orthogonal à \overrightarrowu
+(prendre par exemple un repère orthonormé), soit encore l'espace tout
+entier.
+
+Corollaire~17.3.4 Soit k \textgreater{} 0, a,b \in E distincts. Alors
+\m \in E∣d(m,a) =
+kd(m,b)\ est
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  si k\neq~1, une sphère de centre g barycentre
+  de (a,1) et de (b,-k^2)
+\item
+  si k = 1, l'hyperplan médiateur de a et b.
+\end{itemize}
+
+Démonstration On a en effet d(m,a) = kd(m,b)
+\Leftrightarrow
+\\textbar{}\overrightarrowma\\textbar{}^2
+-
+k^2\\textbar{}\overrightarrowmb\\textbar{}^2
+= 0. Si k\neq~1, alors 1 -
+k^2\neq~0 et l'ensemble qui ne peut
+être ni l'ensemble vide, ni un singleton (car il y a deux solutions
+évidentes sur la droite ab à savoir le barycentre de (a,1) et (b,k) et
+le barycentre de (a,1) et (b,-k)) est une sphère de centre g. Si par
+contre k = 1, on a (avec les notations de la remarque)
+\overrightarrowu =\overrightarrow
+ma -\overrightarrow mb
+=\overrightarrow ba, si bien que l'ensemble qui n'est
+pas l'ensemble vide (car le milieu de a et b convient) est un hyperplan
+orthogonal à \overrightarrowba et contenant le milieu
+de a et b, donc c'est l'hyperplan médiateur de a et b.
+
+\paragraph{17.3.3 Isométries affines}
+
+Définition~17.3.2 Soit E un espace affine euclidien et f : E \rightarrow~ E une
+application affine. On dit que f est une isométrie affine si elle
+vérifie les conditions équivalentes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) \forall~~x,y \in E, d(f(x),f(y)) = d(x,y)
+\item
+  (ii) \vecf est un endomorphisme orthogonal de
+  \overrightarrowE.
+\end{itemize}
+
+Démonstration On a en effet d(f(x),f(y))
+=\\textbar{}\overrightarrow
+f(x)f(y)\\textbar{}
+=\\textbar{}\vec
+f(\overrightarrowxy)\\textbar{} si
+bien que la condition (i) est équivalente à
+\forall~\overrightarrow\xi~~
+\in\overrightarrow E,
+\\textbar{}\vecf(\overrightarrow\xi~)\\textbar{}
+=\\textbar{}\overrightarrow
+\xi~\\textbar{} ce qui caractérise les endomorphismes
+orthogonaux.
+
+On peut définir une isométrie affine à l'aide de repères orthonormés par
+le théorème suivant
+
+Théorème~17.3.5 Soit
+(a,\vece1,\\ldots,\vecen~)
+et
+(a',\vece1',\\ldots,\vecen~')
+deux repères orthonormés de E~; alors il existe une unique isométrie
+affine f de E vérifiant f(a) = a' et \forall~~i \in
+{[}1,n{]}, \vecf(\vecei)
+=\vec ei'.
+
+Démonstration On sait qu'il existe une unique application affine
+vérifiant f(a) = a' et \forall~~i \in {[}1,n{]},
+\vecf(\vecei)
+=\vec ei'~; comme \vecf
+envoie une base orthonormée sur une base orthonormée, c'est un
+endomorphisme orthogonal.
+
+\paragraph{17.3.4 Forme réduite d'une isométrie affine}
+
+Théorème~17.3.6 Soit f : E \rightarrow~ E une isométrie affine. Alors il existe un
+unique couple (g,\overrightarrow\xi~) d'une isométrie
+affine ayant un point fixe et d'un vecteur
+\overrightarrow\xi~ \in\overrightarrow
+E vérifiant les propriétés équivalentes suivantes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) f = g \cdot t\overrightarrow\xi~ =
+  t\overrightarrow\xi~ \cdot g
+\item
+  (ii) f = t\overrightarrow\xi~ \cdot g et
+  \overrightarrow\xi~ est parallèle à l'ensemble des
+  points fixes de g
+\item
+  (iii) f = t\overrightarrow\xi~ \cdot g et
+  \vecf(\overrightarrow\xi~)
+  =\overrightarrow \xi~
+\end{itemize}
+
+Démonstration Vérifions tout d'abord l'équivalence de (i), (ii) et
+(iii). Tout d'abord soit a un point fixe de g. On a g(a) = a et donc
+g(x) = x \Leftrightarrow
+\vecg(\overrightarrowax)
+=\overrightarrow ax ce qui montre que la direction
+\overrightarrowF de l'ensemble F des points fixes de
+g n'est autre que l'ensemble des vecteurs
+\overrightarrow\xi~ tels que
+\vecg(\overrightarrow\xi~)
+=\overrightarrow \xi~. Mais d'autre part f =
+t\overrightarrow\xi~ \cdot g
+\rigtharrow~\vec f =\vec g~; on a donc
+immédiatement l'équivalence de (ii) et (iii). Il nous reste donc à
+montrer l'équivalence de (i) et (iii). Mais g \cdot
+t\overrightarrow\xi~(x) = g(x
++\overrightarrow \xi~) = g(x) +\vec
+g(\overrightarrow\xi~) = g(x) +\vec
+f(\overrightarrow\xi~) et
+t\overrightarrow\xi~ \cdot g(x) = g(x)
++\overrightarrow \xi~ ce qui montre bien l'équivalence
+de (i) et (iii).
+
+Montrons donc l'existence et l'unicité d'un couple
+(g,\overrightarrow\xi~) d'une isométrie affine ayant un
+point fixe et d'un vecteur \overrightarrow\xi~
+\in\overrightarrow E vérifiant (iii). On doit donc
+rechercher un vecteur \overrightarrow\xi~
+\in\overrightarrow E tel que
+\vecf(\overrightarrow\xi~)
+=\overrightarrow \xi~ et tel que g =
+t-\overrightarrow\xi~ \cdot f ait un point fixe.
+Soit a \in E et cherchons à résoudre l'équation
+t-\overrightarrow\xi~ \cdot f(x) = x, soit encore
+f(x) = x +\overrightarrow \xi~, c'est-à-dire f(a)
++\vec f(\overrightarrowax) = a
++\overrightarrow ax +\overrightarrow
+\xi~, soit \vecf(\overrightarrowax)
+-\overrightarrow ax =\overrightarrow
+f(a)a +\overrightarrow \xi~.
+
+Soit \overrightarrowF =
+\\overrightarrowu∣\vecf(\overrightarrowu)
+=\overrightarrow u\. On a
+\overrightarrowE =\overrightarrow
+F \oplus~\overrightarrow F^\bot et comme
+\overrightarrowF est stable par l'endomorphisme
+orthogonal \vecf, il en est de même de
+\overrightarrowF^\bot. Si on pose
+\overrightarrowax =\overrightarrow
+x1 +\overrightarrow x2,
+\overrightarrowf(a)a
+=\overrightarrow a1
++\overrightarrow a2,
+\overrightarrow\xi~ =\overrightarrow
+\xi~ +\overrightarrow 0 les décompositions des
+différents vecteurs dans la somme directe
+\overrightarrowE =\overrightarrow
+F \oplus~\overrightarrow F^\bot, on a
+
+\begin{align*}
+\vecf(\overrightarrowax)
+-\overrightarrow ax =\overrightarrow
+f(a)a +\overrightarrow \xi~&
+\Leftrightarrow & \left
+\\array
+\vecf(\overrightarrowx1)
+-\overrightarrow x1&
+=\overrightarrow a1
++\overrightarrow \xi~ \cr
+\vecf(\overrightarrowx2)
+-\overrightarrow x2&
+=\overrightarrow a2
++\overrightarrow 0  \right .\%&
+\\ & \Leftrightarrow &
+\left \\array
+\overrightarrow0 & =\overrightarrow
+a1 +\overrightarrow \xi~ \cr
+\vecf(\overrightarrowx2)
+-\overrightarrow x2&
+=\overrightarrow a2 
+\right .\%&\\
+\end{align*}
+
+puisque
+\vecf(\overrightarrowx1)
+-\overrightarrow x1
+=\overrightarrow 0. Ceci montre dé\\\\jmathmathmathmathà que
+\overrightarrow\xi~ =
+-\overrightarrowa1 d'où l'unicité de
+\overrightarrow\xi~ et donc de g.
+
+Il nous suffit donc de montrer que la deuxième équation a une solution.
+Mais \vecf -\mathrmId laisse
+stable \overrightarrowF^\bot et définit un
+endomorphisme in\\\\jmathmathmathmathectif de cet espace car si
+\overrightarrowu \in\overrightarrow
+F^\bot, on a
+
+f(\overrightarrowu) -\overrightarrow
+u =\overrightarrow 0
+\rigtharrow~\overrightarrow u \in\overrightarrow
+F \bigcap\overrightarrow F^\bot =
+\\overrightarrow0\
+
+Comme cet espace est de dimension finie, cet endomorphisme de
+\overrightarrowF^\bot est aussi sur\\\\jmathmathmathmathectif, et
+donc la deuxième équation a bien une solution.
+
+Remarque~17.3.3 Puisque g a un point fixe, en vectorialisant l'espace en
+un tel point, l'isométrie affine g s'identifie à l'endomorphisme
+orthogonal \vecg =\vec f. Une
+isométrie affine s'identifie au produit commutatif d'une isométrie
+vectorielle (que l'on connait dé\\\\jmathmathmathmathà) et d'une translation parallèlement à
+l'ensemble des points fixes de cette isométrie vectorielle. Ceci va nous
+permettre de décrire complètement les isométries affines en dimension 2
+ou 3 en distinguant suivant que f est un déplacement (c'est-à-dire que
+\vecf est une rotation) ou un antidéplacement
+(c'est-à-dire que \vecf \in
+O^-(\overrightarrowE)).
+
+Théorème~17.3.7 Soit E un espace affine euclidien de dimension 2. Alors
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) les déplacements de E sont d'une part les translations et d'autre
+  part les rotations ayant pour centre un point de E et pour angle un
+  élément non nul de \mathbb{R}~\diagup2\pi~ℤ.
+\item
+  (ii) les antidéplacements de E sont les produits (commutatifs) d'une
+  symétrie orthogonale par rapport à une droite et d'une translation
+  parallèlement à cette droite.
+\end{itemize}
+
+Théorème~17.3.8 Soit E un espace affine euclidien de dimension 3. Alors
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) les déplacements de E sont d'une part les translations et d'autre
+  part les vissages~: produits commutatifs d'une rotation autour d'un
+  axe D et d'une translation parallèlement à D
+\item
+  (ii) les antidéplacements de E sont d'une part les produits
+  (commutatifs) d'une symétrie orthogonale par rapport à un plan et
+  d'une translation parallèlement à ce plan et d'autre part les produits
+  commutatifs d'une rotation autour d'un axe D et d'une symétrie
+  orthogonale par rapport à un plan orthogonal à D.
+\end{itemize}
+
+\paragraph{17.3.5 Distance à un sous-espace affine}
+
+Théorème~17.3.9 Soit F un sous-espace affine de direction
+\overrightarrowF et x \in E. Il existe un unique point
+p \in F tel que d(x,F) = d(x,p). Le point p est l'unique point
+d'intersection de F et de x +\overrightarrow
+F^\bot~; on l'appelle la pro\\\\jmathmathmathmathection orthogonale de x sur F.
+Soit a \in F et
+(\vece1,\\ldots,\vecek~)
+une base de \overrightarrowF. On a
+
+d(x,F)^2 =
+\mathrm{det}~
+Gram(\overrightarrowax,\vece1,\\\ldots,\vecek~)
+\over
+\mathrm{det}~
+Gram(\vece1,\\\ldots,\vecek)~
+
+Démonstration Comme \overrightarrowF et
+\overrightarrowF^\bot sont supplémentaires,
+un résultat précédent montre que F \bigcap\left (x
++\overrightarrow F^\bot\right
+) est un singleton \p\. On a donc p \in
+F et \overrightarrowxp
+\in\overrightarrow F^\bot Soit alors y \in F. On
+a
+
+d(x,y)^2
+=\\textbar{}\overrightarrow
+xy\\textbar{}^2
+=\\textbar{}\overrightarrow xp
++\overrightarrow
+py\\textbar{}^2
+=\\textbar{}\overrightarrow
+xp\\textbar{}^2
++\\textbar{}\overrightarrow
+py\\textbar{}^2
+
+car \overrightarrowxp
+\in\overrightarrow F^\bot et
+\overrightarrowpy \in F. On en déduit que d(x,y) ≥
+d(x,p) avec égalité si et seulement
+si~\\textbar{}\overrightarrowpy\\textbar{}
+= 0 soit p = y, ce qui démontre que p est l'unique point de F tel que
+d(x,F) = d(x,p).
+
+De plus, si a \in F, soit y \in F. On a d(x,y)
+=\\textbar{}\overrightarrow
+xy\\textbar{}
+=\\textbar{}\overrightarrow ax
+-\overrightarrow ay\\textbar{}. Mais
+quand y décrit F, \overrightarroway décrit
+\overrightarrowF, si bien que d(x,F) =
+d(\overrightarrowax,\overrightarrowF).
+Mais on a vu dans le chapitre sur les formes quadratiques que
+d(\overrightarrow\xi~,\overrightarrowF)^2
+= \mathrm{det}~
+\
+Gram(\overrightarrow\xi~,\vece1,\\ldots,\vecek~)
+\over
+\mathrm{det}~
+\
+Gram(\vece1,\\ldots,\vecek)~
+, ce qui donne la formule voulue.
+
+En dimension 3, en interprétant le déterminant de Gram de trois vecteurs
+comme le carré du produit mixte et le déterminant de Gram de deux
+vecteurs comme le carré de la norme de leur produit vectoriel, on
+obtient les formules suivantes pour la distance à une droite ou à un
+plan
+
+Corollaire~17.3.10 Soit E un espace euclidien de dimension 3, a,x \in E,
+\overrightarrowu et
+\overrightarrowv deux vecteurs non colinéaires de
+\overrightarrowE. Alors
+
+d(x,a + \mathbb{R}~\overrightarrowu) =
+\\textbar{}\overrightarrowax
+∧\overrightarrow u\\textbar{}
+\over
+\\textbar{}\overrightarrowu\\textbar{}
+
+d(x,a + \mathbb{R}~\overrightarrowu +
+\mathbb{R}~\overrightarrowv) = \Big
+\textbar{}{[}\overrightarrowax,\overrightarrowu,\overrightarrowv{]}\Big
+\textbar{} \over
+\\textbar{}\overrightarrowu
+∧\overrightarrow v\\textbar{}
+
+En ce qui concerne les hyperplans, on a le résultat suivant
+
+Théorème~17.3.11 Soit
+(a,\vece1,\\ldots,\vecen~)
+un repère orthonormé de E, H un hyperplan affine de E d'équation
+u1x1 +
+\\ldots~ +
+unxn + h = 0. Alors le vecteur
+\overrightarrown =
+u1\vece1 +
+\\ldots~ +
+un\vecen est un vecteur normal au
+plan et pour tout x \in E de coordonnées
+x1,\\ldots,xn~,
+on a
+
+d(x,H) = \textbar{}u1x1 +
+\\ldots~ +
+unxn + h\textbar{} \over
+\sqrtu1 ^2  +
+\\ldots~ +
+un ^2
+
+Démonstration La direction \overrightarrowH de H
+admet pour équation u1x1 +
+\\ldots~ +
+unxn = 0, c'est donc visiblement
+\overrightarrown^\bot ce qui montre que
+\overrightarrown =
+u1\vece1 +
+\\ldots~ +
+un\vecen est un vecteur normal au
+plan. Soit f la forme affine sur E définie par f(x) =
+u1x1 +
+\\ldots~ +
+unxn + h. On a donc
+\vecf(\overrightarrow\xi~) =
+u1x1 +
+\\ldots~ +
+unxn =
+(\overrightarrow\xi~∣\overrightarrown).
+Soit x \in E et p sa pro\\\\jmathmathmathmathection orthogonale sur H. On a donc f(p) = 0,
+soit f(x) = f(x) - f(p) =\vec
+f(\overrightarrowpx) =
+(\overrightarrowpx∣\overrightarrown).
+Mais, les deux vecteurs \overrightarrowpx et
+\overrightarrown qui sont tous deux orthogonaux à
+\overrightarrowH sont colinéaires, si bien que
+
+\textbar{}f(x)\textbar{} =
+\textbar{}(\overrightarrowpx∣\overrightarrown)\textbar{}
+=\\textbar{}\overrightarrow
+px\\textbar{}
+\\textbar{}\overrightarrown\\textbar{}
+=
+d(x,H)\\textbar{}\overrightarrown\\textbar{}
+
+On en déduit que d(x,H) = \textbar{}f(x)\textbar{}
+\over
+\\textbar{}\overrightarrown\\textbar{}
+, ce qui n'est autre que la formule cherchée.
+
+Corollaire~17.3.12 Soit H1 et H2 deux hyperplans non
+parallèles de E. Alors l'ensemble des points x de E tels que
+d(x,H1) = d(x,H2) est la réunion de deux hyperplans
+orthogonaux, appelés les deux hyperplans bissecteurs de H1 et
+H2.
+
+Démonstration Sans nuire à la généralité on peut supposer que
+H1 est d'équation u1x1 +
+\\ldots~ +
+unxn + h = 0 et H2 d'équation
+v1x1 +
+\\ldots~ +
+vnxn + k = 0 avec u1^2 +
+\\ldots~ +
+un^2 = v1^2 +
+\\ldots~ +
+vn^2 = 1. Alors les vecteurs normaux
+\overrightarrown1 et
+\overrightarrown2 à ces deux hyperplans
+sont unitaires et
+
+\begin{align*} d(x,H1) =
+d(x,H2)&& \%& \\ &
+\Leftrightarrow & \textbar{}u1x1 +
+\\ldots~ +
+unxn + h\textbar{} =
+\textbar{}v1x1 +
+\\ldots~ +
+vnxn + k\textbar{}\%&
+\\ & \Leftrightarrow &
+(u1 + \epsilonv1)x1 +
+\\ldots~ +
+(un + \epsilonvn)xn + h + \epsilonk = 0 \%&
+\\ \end{align*}
+
+avec \epsilon = ±1. Il s'agit visiblement de deux équations d'hyperplans de
+vecteurs normaux \overrightarrown1
++\overrightarrow n2 et
+\overrightarrown1
+-\overrightarrow n2. Or ces deux vecteurs
+normaux sont orthogonaux puisque
+(\overrightarrown1
++\overrightarrow
+n2∣\overrightarrown1
+-\overrightarrow n2)
+=\\textbar{}\overrightarrow
+n1\\textbar{}^2
+-\\textbar{}\overrightarrow
+n2\\textbar{}^2 = 0. Ceci achève la
+démonstration.
+
+\paragraph{17.3.6 Distance de deux sous-espaces affines}
+
+Théorème~17.3.13 Soit E un espace affine euclidien, F et G deux
+sous-espaces affines de E. Alors il existe a \in F et b \in G tel que le
+vecteur \overrightarrowab soit orthogonal à la fois à
+F et à G. Ces points sont uniques si \overrightarrowF
+\bigcap\overrightarrow G =
+\\overrightarrow0\.
+On a d(F,G) = d(a,b).
+
+Démonstration Soit H = G +\overrightarrow F le
+sous-espace affine contenant G et auquel F est faiblement parallèle . On
+doit avoir b \in H et \overrightarrowab \bot H ce qui
+montre que b est nécessairement la pro\\\\jmathmathmathmathection orthogonale de a sur H.
+Soit donc F' la pro\\\\jmathmathmathmathection orthogonale de F sur H. Comme F est
+faiblement parallèle à H, F' est parallèle à F. Donc
+\overrightarrowF' +\overrightarrow
+G =\overrightarrow F
++\overrightarrow G =\overrightarrow
+H~; le théorème d'intersection des sous-espaces affines appliqués aux
+sous-espaces affines F' et G de H, montre que F' \bigcap
+G\neq~\varnothing~. Soit donc b \in F' \bigcap G et a \in F dont la
+pro\\\\jmathmathmathmathection orthogonale sur H est b. On a a \in F, b \in G et
+\overrightarrowab \bot H, donc
+\overrightarrowab est orthogonal à la fois à F et à
+G.
+
+Si x \in F et y \in G, on a
+
+\\textbar{}\overrightarrowxy\\textbar{}^2
+=\\textbar{}\overrightarrow ab +
+(\overrightarrowxa
++\overrightarrow
+by)\\textbar{}^2
+=\\textbar{}\overrightarrow
+ab\\textbar{}^2
++\\textbar{}\overrightarrow xa
++\overrightarrow
+by\\textbar{}^2
+
+d'après le théorème de Pythagore, puisque
+\overrightarrowab \bot\overrightarrow
+H et \overrightarrowxa
++\overrightarrow by \in\overrightarrow
+F +\overrightarrow G
+=\overrightarrow H. On en déduit que
+\\textbar{}\overrightarrowxy\\textbar{}^2
+≥\\textbar{}\overrightarrow
+ab\\textbar{}^2, soit encore d(x,y) ≥ d(a,b).
+Ceci montre que d(F,G) = d(a,b). De plus l'égalité nécessite que
+\overrightarrowxa +\overrightarrow
+by =\overrightarrow 0. Si
+\overrightarrowF et
+\overrightarrowG sont en somme directe, ceci ne peut
+se produire que si x = a et y = b, ce qui assure dans ce cas l'unicité
+de a et b.
+
+Définition~17.3.3 Soit E un espace affine euclidien, F et G deux
+sous-espaces affines de E. On appelle perpendiculaire commune à F et à G
+toute droite \\\\jmathmathmathmathoignant un point de F à un point de G et orthogonale à ces
+deux sous-espaces affines.
+
+Remarque~17.3.4 D'après le théorème ci dessus, une telle droite est
+unique si \overrightarrowF
+\bigcap\overrightarrow G =
+\\overrightarrow0\
+et si a et b sont distincts, soit F \bigcap G = \varnothing~. En particulier, en
+dimension 3, deux droites non parallèles et non sécantes ont une unique
+perpendiculaire commune (le résultat subsistant d'ailleurs évidemment
+pour deux droites sécantes non confondues)~: si ces deux droites
+D1 et D2 ont pour vecteurs directeurs
+\overrightarrowu1 et
+\overrightarrowu2, cette perpendiculaire
+commune est l'intersection du plan contenant D1 et parallèle à
+\overrightarrowu1
+∧\overrightarrow u2 et du plan contenant
+D2 et parallèle à
+\overrightarrowu1
+∧\overrightarrow u2.
+
+Pour calculer la distance de F à G à savoir d(a,b), on peut également
+remarquer que c'est la distance de a à H = G
++\overrightarrow F (puisque b est la pro\\\\jmathmathmathmathection
+orthogonale de a sur H). Mais comme F est faiblement parallèle à H, on a
+\forall~~x \in F, d(x,H) = d(a,H). On en déduit que la
+distance de F à G est la distance de n'importe quel point x de F à H = G
++\overrightarrow F, que l'on sait calculer à l'aide
+de déterminants de Gram moyennant la connaissance d'une base de
+\overrightarrowF +\overrightarrow
+G. En particulier, si E est de dimension 3, on a
+
+Proposition~17.3.14 Soit E un espace euclidien de dimension 3,
+D1 = a1 +
+\mathbb{R}~\overrightarrowu1 et D2 =
+a2 + \mathbb{R}~\overrightarrowu2 deux
+droites non parallèles. Alors
+
+d(D1,D2) = \Big
+\textbar{}{[}\overrightarrowa1a2,\overrightarrowu1,\overrightarrowu2{]}\Big
+\textbar{} \over
+\\textbar{}\overrightarrowu1
+∧\overrightarrow
+u2\\textbar{}
+
+Démonstration On a d(D1,D2) =
+d(a1,a2 +
+\mathbb{R}~\overrightarrowu1 +
+\mathbb{R}~\overrightarrowu2) et il suffit
+d'appliquer la formule donnant la distance d'un point à un plan.
+
+{[}
+{[}
+{[}
+{[}

@@ -1,0 +1,515 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{9.6 Intégration sur un intervalle quelconque~: fonctions
+à valeurs complexes}
+
+\paragraph{9.6.1 Fonctions à valeurs complexes intégrables}
+
+Définition~9.6.1 Soit I un intervalle de \mathbb{R}~ et f : I \rightarrow~ \mathbb{C} continue par
+morceaux. On dit que f est intégrable sur I si la fonction à valeurs
+réelles positives \textbar{}f\textbar{} est intégrable sur I.
+
+Théorème~9.6.1 Soit f : I \rightarrow~ \mathbb{C} continue par morceaux et intégrable. Alors
+pour toute suite (Jn) croissante de segments contenus dans I
+de réunion I, la suite (\int ~
+Jnf)n\in\mathbb{N}~ est convergente. Sa limite est
+indépendante de la suite (Jn) et notée
+\int  I~f.
+
+Démonstration Soit q \textgreater{} p. On a
+
+\left \textbar{}\int ~
+Jqf -\int ~
+Jpf\right \textbar{} =
+\left \textbar{}\int ~
+Jq\diagdownJpf\right
+\textbar{}\leq\int ~
+Jq\diagdownJp\textbar{}f\textbar{}
+=\int ~
+Jq\textbar{}f\textbar{}-\int ~
+Jp\textbar{}f\textbar{}
+
+(avec un tout petit abus d'écriture en notant Jq \diagdown
+Jp = {[}aq,ap{]} \cup
+{[}bp,bq{]} la réunion de deux segments dis\\\\jmathmathmathmathoints ).
+Comme \textbar{}f\textbar{} est intégrable, la suite
+(\int ~
+Jn\textbar{}f\textbar{}) converge, donc c'est une
+suite de Cauchy, et par conséquent il en est de même de la suite
+(\int  Jn~f) qui est donc
+convergente. Si (Kn) est une autre suite de segments vérifiant
+les mêmes propriétés, deux cas se présentent. Si
+\forall~n, Jn \subset~ Kn~, alors
+
+\left \textbar{}\int ~
+Knf -\int ~
+Jnf\right \textbar{} =
+\left \textbar{}\int ~
+Kn\diagdownJnf\right
+\textbar{}\leq\int ~
+Kn\diagdownJn\textbar{}f\textbar{}
+=\int ~
+Kn\textbar{}f\textbar{}-\int ~
+Jn\textbar{}f\textbar{}
+
+Mais les deux suites (\int ~
+Jn\textbar{}f\textbar{}) et
+(\int ~
+Kn\textbar{}f\textbar{}) ont la même limite et donc
+leur différence tend vers 0. Il en est donc de même de la différence des
+suites (\int  Jn~f) et
+(\int  Kn~f), qui, étant
+convergentes, ont donc la même limite. Si Jn n'est pas
+forcément inclus dans Kn il suffit d'écrire
+
+lim\\int ~
+Jnf =\
+lim\int  Jn\cupKn~f
+= lim\\int ~
+Knf
+
+Corollaire~9.6.2 Soit f : I \rightarrow~ \mathbb{C} continue par morceaux et intégrable.
+Alors \left \textbar{}\int ~
+If\right \textbar{}\leq\\int
+ I\textbar{}f\textbar{}.
+
+Démonstration Il suffit de passer à la limite à partir de l'inégalité
+\left \textbar{}\int ~
+Jnf\right \textbar{}
+\leq\int ~
+Jn\textbar{}f\textbar{}.
+
+Théorème~9.6.3 Soit -\infty~ \textless{} a \textless{} b \leq +\infty~ et f :
+{[}a,b{[}\rightarrow~ \mathbb{C} intégrable. Alors la fonction
+x\mapsto~\int ~
+a^xf(t) dt admet la limite \int ~
+{[}a,b{[}f au point b.
+
+Démonstration Soit a \textless{} x \textless{} y \textless{} b~; on a
+
+\left \textbar{}\int ~
+a^yf -\int ~
+a^xf\right \textbar{} =
+\left \textbar{}\int ~
+x^yf\right
+\textbar{}\leq\int ~
+x^y\textbar{}f\textbar{} =\int ~
+a^y\textbar{}f\textbar{}-\int ~
+a^x\textbar{}f\textbar{}
+
+Comme l'application
+x\mapsto~\int ~
+a^x\textbar{}f\textbar{} admet une limite au point b,
+elle vérifie le critère de Cauchy~: pour tout \epsilon \textgreater{} 0, il
+existe c \in {[}a,b{[} tel que c \textless{} x \textless{} y \textless{} b
+\rigtharrow~\left \textbar{}\int ~
+a^y\textbar{}f\textbar{}-\int ~
+a^x\textbar{}f\textbar{}\right \textbar{}
+\textless{} \epsilon~; alors l'inégalité ci dessus montre que
+x\mapsto~\int ~
+a^xf(t) dt vérifie également ce critère de Cauchy, donc
+admet une limite au point b. Soit alors bn une suite
+croissante de limite b. On a
+
+limx\rightarrow~b\\int ~
+a^xf(t) dt = lim~
+n\rightarrow~+\infty~\int  a^bn ~f(t)
+dt =\
+limn\rightarrow~+\infty~\int ~
+{[}a,bn{]}f =\int ~
+{[}a,b{[}f
+
+Proposition~9.6.4 Soit I un intervalle de \mathbb{R}~, f : I \rightarrow~ \mathbb{C} continue par
+morceaux, intégrable sur I. Alors f est intégrable sur tout intervalle
+I' inclus dans I.
+
+Démonstration En effet l'intégrabilité de f équivaut à celle de
+\textbar{}f\textbar{}.
+
+Proposition~9.6.5 Soit f : I \rightarrow~ \mathbb{C} et \phi : I \rightarrow~ \mathbb{R}~^+ continues par
+morceaux telles que 0 \leq\textbar{}f\textbar{}\leq \phi. Si \phi est intégrable sur
+I il en est de même de f et \left
+\textbar{}\int  I~f\right
+\textbar{}\leq\int  I~\phi.
+
+Démonstration Evident d'après les définitions.
+
+Corollaire~9.6.6 Soit I un intervalle borné de \mathbb{R}~ et soit f : I \rightarrow~ \mathbb{C}
+continue par morceaux et bornée. Alors f est intégrable sur I.
+
+Démonstration Appliquer la proposition précédente avec \phi constante
+ma\\\\jmathmathmathmathorant \textbar{}f\textbar{}.
+
+Proposition~9.6.7 Soit I = {[}a,b{]} un segment de \mathbb{R}~, f : I \rightarrow~ \mathbb{C} continue
+par morceaux. Alors f est intégrable sur I et
+\int  I~f =\\int
+ a^bf. De plus f est intégrable sur {]}a,b{[},
+{[}a,b{[} et {]}a,b{]}, toutes ces intégrales étant égales.
+
+Démonstration La fonction \textbar{}f\textbar{} est positive et continue
+par morceaux, donc intégrable sur {[}a,b{]}. Donc f l'est également. On
+sait alors que \textbar{}f\textbar{} est intégrable sur tout intervalle
+inclus dans I et en particulier sur {]}a,b{[}, {[}a,b{[} et {]}a,b{]}~;
+il en est donc de même pour f. De plus, si an = a + 1
+\over n et bn = b - 1 \over
+n , Jn = {[}an,bn{]} est une suite
+croissante de segments dont la réunion est {]}a,b{[}, donc
+
+\int  {]}a,b{[}~f
+= lim\\int ~
+an^bn f =\\int
+ a^bf
+
+par continuité de l'intégrale par rapport à ses bornes. On fait une
+démonstration similaire pour {[}a,b{[} avec {[}a,bn{]} et
+{]}a,b{]} avec {[}an,b{]}. Pour {[}a,b{]}, on prend
+an = a et bn = b.
+
+Théorème~9.6.8 Soit f,g : I \rightarrow~ \mathbb{C} continues par morceaux, soit \alpha~,\beta~ \in \mathbb{C}. Si
+f et g sont intégrables sur I, il en est de même de \alpha~f + \beta~g et on a
+
+\int  I~(\alpha~f + \beta~g) =
+\alpha~\int  I~f +
+\beta~\int  I~g
+
+Autrement dit, l'ensemble des applications de I dans \mathbb{C} qui sont
+intégrables sur I est un sous-espace vectoriel de l'espace vectoriel des
+applications de I dans \mathbb{C} et l'application
+f\mapsto~\int  I~f
+est linéaire.
+
+Démonstration L'intégrabilité est évidente à partir de l'inégalité
+\textbar{}\alpha~f + \beta~g\textbar{}\leq\textbar{}\alpha~\textbar{}\textbar{}f\textbar{} +
+\textbar{}\beta~\textbar{}\textbar{}g\textbar{} et du fait que
+\textbar{}f\textbar{} et \textbar{}g\textbar{} étant intégrables, il en
+est de même de \textbar{}\alpha~\textbar{}\textbar{}f\textbar{} +
+\textbar{}\beta~\textbar{}\textbar{}g\textbar{}. Pour les égalités, il suffit
+de prendre une suite (Jn) croissante de segments de réunion I
+et de passer à la limite dans les formules
+
+\int  Jn~(\alpha~f + \beta~g) =
+\alpha~\int  Jn~f +
+\beta~\int  Jn~g
+
+Proposition~9.6.9 Soit I un intervalle de \mathbb{R}~, f : I \rightarrow~ \mathbb{R}~ continue par
+morceaux. Soit a \in I^o. Alors f est intégrable sur I si et
+seulement si elle est intégrable sur I\bigcap{]} -\infty~,a{]} et sur I \bigcap
+{[}a,+\infty~{[}. Dans ce cas,
+
+\int  I~f =\\int
+ I\bigcap{]}-\infty~,a{]}f +\int ~
+I\bigcap{[}a,+\infty~{[}f
+
+Démonstration Le résultat similaire dé\\\\jmathmathmathmathà démontré pour
+\textbar{}f\textbar{} démontre l'équivalence entre les diverses
+intégrabilités. Soit alors Jn =
+{[}an,bn{]} une suite croissante de segments de
+réunion I. Pour n assez grand, on a an \leq a \leq bn car
+a est dans l'intérieur de I. Mais ({[}an,a{]}) est une suite
+croissante de segments de réunion I\bigcap{]} -\infty~,a{]} et
+({[}a,bn{]}) est une suite croissante de segments de réunion I
+\bigcap {[}a,+\infty~{[}. On peut donc passer à la limite dans la formule
+\int  {[}an,bn{]}~f
+=\int  {[}an,a{]}~f
++\int  {[}a,bn{]}~f, et on
+obtient
+
+\int  I~f =\\int
+ I\bigcap{]}-\infty~,a{]}f +\int ~
+I\bigcap{[}a,+\infty~{[}
+
+\paragraph{9.6.2 Décomposition des fonctions à valeurs complexes}
+
+Soit x \in \mathbb{R}~. On pose x^+ = max~(x,0)
+et x^- = max~(-x,0). On a
+x^+,x^-\in \mathbb{R}~^+, x = x^+ -
+x^-, \textbar{}x\textbar{} = x^+ + x^-,
+x^+ = 1 \over 2 (\textbar{}x\textbar{} +
+x) et x^- = 1 \over 2
+(\textbar{}x\textbar{}- x).
+
+Remarque~9.6.1 Si f : I \rightarrow~ \mathbb{R}~, on peut ainsi lui associer des fonctions
+f^+ et f^- à valeurs dans \mathbb{R}~^+. On a
+f^+,f^-\in \mathbb{R}~^+, f = f^+ -
+f^-, \textbar{}f\textbar{} = f^+ + f^-,
+f^+ = 1 \over 2 (\textbar{}f\textbar{} +
+f) et f^- = 1 \over 2
+(\textbar{}f\textbar{}- f). Ces deux dernières formules montrent
+clairement que si f est continue par morceaux, il en est de même de
+f^+ et f^-.
+
+Théorème~9.6.10 Soit f : I \rightarrow~ \mathbb{R}~ continue par morceaux. Alors f est
+intégrable sur I si et seulement si les fonctions (à valeurs réelles
+positives) f^+ et f^- le sont. Dans ce cas
+
+\int  I~f =\\int
+ If^+ -\int ~
+If^-\text et
+\int  I~\textbar{}f\textbar{}
+=\int  If^+~
++\int  If^-~
+
+Démonstration Si f est intégrable sur I, il en est de même pour
+\textbar{}f\textbar{} et donc pour f^+ et f^-
+puisque 0 \leq f^+ \leq\textbar{}f\textbar{} et 0 \leq
+f^-\leq\textbar{}f\textbar{}. Inversement, si f^+ et
+f^- sont intégrables, leur différence f l'est également. Les
+formules proviennent de la linéarité de l'intégrale.
+
+Théorème~9.6.11 Soit f : I \rightarrow~ \mathbb{C} continue par morceaux. Alors f est
+intégrable sur I si et seulement si les fonctions (à valeurs réelles)
+\mathrmRe~f et
+\mathrmIm~f le sont. Dans ce
+cas
+
+\int  I~f =\\int
+ I \mathrmRe~f +
+i\int  I~\
+\mathrmImf,\quad
+\int  I\overlinef~ =
+\overline\int  If~
+
+Démonstration Si f est intégrable sur I, il en est de même pour
+\textbar{}f\textbar{} et donc pour
+\mathrmRe~f et
+\mathrmIm~f puisque 0
+\leq\textbar{}\mathrmRe~f\textbar{}\leq\textbar{}f\textbar{}
+et 0
+\leq\textbar{}\mathrmIm~f\textbar{}\leq\textbar{}f\textbar{}.
+Inversement, si \mathrmRe~f
+et \mathrmIm~f sont
+intégrables, alors f =\
+\mathrmRef +
+i\mathrmIm~f l'est
+également. Les formules proviennent de la linéarité de l'intégrale.
+
+Remarque~9.6.2 La combinaison de ces deux théorèmes peut permettre de
+ramener un problème sur des fonctions à valeurs complexes à des
+problèmes sur des fonctions à valeurs réelles positives.
+
+\paragraph{9.6.3 Convention et relation de Chasles}
+
+Définition~9.6.2 Soit I un intervalle de \mathbb{R}~, f : I \rightarrow~ \mathbb{C} continue par
+morceaux et intégrable. Soit a,b \in\overlineI. Alors
+on posera
+
+\int  a^b~f(t) dt =
+\left \ \cases
+\int  {]}a,b{[}~f &si a \textless{} b
+\cr 0 &si a = b \cr
+-\int  {]}b,a{[}~f&si b \textless{} a
+ \right .
+
+La définition a bien un sens puisque f est intégrable sur {]}a,b{[}\subset~ I
+ou {]}b,a{[}\subset~ I suivant le cas.
+
+Théorème~9.6.12 Soit I un intervalle de \mathbb{R}~, f : I \rightarrow~ \mathbb{C} continue par
+morceaux et intégrable. Soit a,b,c \in\overlineI. Alors
+on a
+
+\int  a^c~f
+=\int  a^b~f
++\int  b^c~f
+
+Démonstration Etudier toutes les positions relatives de a,b et c.
+
+\paragraph{9.6.4 Règles de comparaison}
+
+Théorème~9.6.13 Soit f : {[}a,b{[}\rightarrow~ \mathbb{C} continue par morceaux et g :
+{[}a,b{[}\rightarrow~ \mathbb{R}~^+ continue par morceaux, positive et intégrable.
+On suppose qu'au voisinage de b on a f = O(g) (resp. f = o(g)). Alors f
+est intégrable sur {[}a,b{[} et \int ~
+{[}x,b{[}f(t) dt = O(\int ~
+{[}x,b{[}g(t) dt) (resp. \int ~
+{[}x,b{[}f(t) dt = o(\int ~
+{[}x,b{[}g(t) dt))
+
+Démonstration On a en effet \textbar{}f\textbar{} = O(g) (resp.
+\textbar{}f\textbar{} = o(g)) et \left
+\textbar{}\int ~
+{[}x,b{[}f\right
+\textbar{}\leq\int ~
+{[}x,b{[}\textbar{}f\textbar{}. Il suffit donc d'appliquer le
+théorème de comparaison à \textbar{}f\textbar{} et g.
+
+Remarque~9.6.3 Il suffit pour appliquer le théorème précédent que la
+condition de positivité de g soit vérifiée dans un voisinage de b.
+
+\paragraph{9.6.5 Espaces de fonctions continues}
+
+Théorème~9.6.14 Soit I un intervalle de \mathbb{R}~. L'ensemble des fonctions
+continues et intégrables sur I à valeurs complexes est un sous-espace
+vectoriel de l'espace C(I, \mathbb{C}). L'application
+f\mapsto~\\textbar{}f\\textbar{}1
+=\int  I~\textbar{}f\textbar{} est une
+norme sur cet espace (appelée la norme de la convergence en moyenne).
+
+Démonstration Vérification immédiate à partir des résultats précédents.
+
+Théorème~9.6.15 Soit I un intervalle de \mathbb{R}~. L'ensemble des fonctions
+continues à valeurs complexes dont le carré est intégrable sur I est un
+sous-espace vectoriel de l'espace C(I, \mathbb{C}). L'application
+(f,g)\mapsto~(f\mathrel∣g)
+=\int  I\overlinef~g
+est un produit scalaire hermitien sur cet espace. En particulier,
+l'application
+f\mapsto~\\textbar{}f\\textbar{}2
+= (f∣f)^1\diagup2 est une norme sur cet
+espace et on a l'inégalité de Cauchy-Schwarz
+\textbar{}(f∣g)\textbar{}\leq\\textbar{}
+f\\textbar{}2\\textbar{}g\\textbar{}2.
+
+Démonstration Il est clair que si f est de carré intégrable, il en est
+de même de \alpha~f pour \alpha~ \in \mathbb{C}. De plus l'inégalité élémentaire \textbar{}f +
+g\textbar{}^2 \leq 2\textbar{}f\textbar{}^2 +
+2\textbar{}g\textbar{}^2 montre que si f et g sont de carré
+intégrables, il en est de même de f + g. Comme de surcroît il existe des
+fonctions de carré intégrables (par exemple la fonction nulle),
+celles-ci forment un sous-espace vectoriel de C(I, \mathbb{C}). L'inégalité
+élémentaire \textbar{}\overlinefg\textbar{}\leq 1
+\over 2 \textbar{}f\textbar{}^2 + 1
+\over 2 \textbar{}g\textbar{}^2 montre que
+si f et g sont de carré intégrables, \overlinegf est
+intégrable ce qui permet de définir (f∣g)
+=\int  I\overlinef~g.
+L'application est visiblement sesquilinéaire hermitienne, on a
+(f∣f) =\int ~
+I\textbar{}f\textbar{}^2 ≥ 0 avec égalité si et
+seulement si \textbar{}f\textbar{}^2 = 0, soit f = 0, puisque
+f est continue. Les autres affirmations sont des conséquences des
+résultats sur les produits scalaires hermitiens.
+
+\paragraph{9.6.6 Notion d'intégrale impropre}
+
+Définition~9.6.3 Soit -\infty~ \textless{} a \textless{} b \leq +\infty~ et f :
+{[}a,b{[}\rightarrow~ E continue par morceaux. On dit que l'intégrale
+\int  a^b~f(t) dt converge si
+existe
+limx\rightarrow~b,x\textless{}b~\\int
+ a^xf(t) dt. Dans ce cas on pose
+\int  a^b~f(t) dt
+=\
+limx\rightarrow~b,x\textless{}b\int ~
+a^xf(t) dt.
+
+On a une notion similaire avec -\infty~\leq a \textless{} b \textless{} +\infty~ et f
+:{]}a,b{]} \rightarrow~ E continue par morceaux.
+
+Remarque~9.6.4 Si l'intégrale ne converge pas, elle est dite divergente.
+Si b \textless{} +\infty~ et si f est la restriction à {[}a,b{[} d'une
+fonction réglée sur {[}a,b{]}, alors l'application
+x\mapsto~\int ~
+a^xf(t) dt est continue au point b~; l'intégrale impropre
+est donc convergente et la valeur de l'intégrale impropre est donc la
+valeur de l'intégrale, si bien qu'il n'y a pas d'ambiguïté dans la
+notation \int  a^b~f(t) dt~; dans
+ce cas nous parlerons d'une intégrale faussement impropre. Un exemple
+typique est celui de \int  0^1~
+sin t \over t~ dt qui est a
+priori impropre en 0, mais qui est la restriction à {]}0,1{]} de la
+fonction continue f(t) = \left \
+\cases  sin~ t
+\over t &si t\neq~0
+\cr 1 &si t = 0 \cr 
+\right ..
+
+Proposition~9.6.16 Soit f : {[}a,b{[}\rightarrow~ E une fonction continue par
+morceaux et c \in {[}a,b{[}. Alors l'intégrale \\int
+ a^bf(t) dt converge si et seulement si~l'intégrale
+\int  c^b~f(t) dt converge.
+
+Démonstration On a \int  a^x~f(t)
+dt =\int  a^c~f(t) dt
++\int  c^x~f(t) dt ce qui montre
+que \int  a^x~f(t) dt a une
+limite en b si et seulement si~\int ~
+c^xf(t) dt en a une.
+
+Remarque~9.6.5 Cette propriété montre que si f : {[}a,b{[}\rightarrow~ E est une
+fonction continue par morceaux, la convergence de
+\int  a^b~f(t) dt ne dépend que
+de la restriction de f à un voisinage de b~; il s'agit donc d'une notion
+locale en b.
+
+Théorème~9.6.17 Si f est intégrable sur {[}a,b{[}, alors
+\int  a^b~f(t) dt converge. Mais
+la réciproque est fausse dans le cas général (mais vraie pour les
+fonctions à valeurs dans \mathbb{R}~^+).
+
+Démonstration On a vu que si f est intégrable sur {[}a,b{[}, alors
+x\mapsto~\int ~
+a^xf(t) dt admet la limite \int ~
+If au point b. L'exemple suivant montre que la réciproque est
+fausse.
+
+Exemple~9.6.1 Etude de l'intégrale \int ~
+1^+\infty~ sin~ t
+\over t^\alpha~ dt pour \alpha~ \textgreater{} 0. On a
+ sin t \over t^\alpha~~
+= O( 1 \over t^\alpha~ ), donc si \alpha~
+\textgreater{} 1 la fonction est intégrable.
+
+Si 0 \textless{} \alpha~ \leq 1, on a après intégration par parties
+
+\int  1^x~
+sin t \over t^\alpha~~ dt
+= cos 1 - \cos~ x
+\over x^\alpha~ +\int ~
+1^x cos~ t
+\over t^\alpha~+1 dt
+
+Mais limx\rightarrow~+\infty~~
+cos x \over x^\alpha~~ =
+0 et la fonction t\mapsto~
+cos t \over t^\alpha~+1~
+est intégrable puisque  cos~ t
+\over t^\alpha~+1 = O( 1 \over
+t^\alpha~+1 ). On en déduit que le terme de droite de l'égalité
+ci dessus a une limite en + \infty~, et donc le terme de gauche aussi. En
+conséquence, l'intégrale impropre \int ~
+1^+\infty~ sin~ t
+\over t^\alpha~ dt converge. Montrons que la
+fonction n'est pas intégrable~; on a
+
+\begin{align*} \int ~
+1^x \textbar{}sin~ t\textbar{}
+\over t^\alpha~ & ≥& \\int
+ 1^x sin ^2~t
+\over t^\alpha~ dt \%&
+\\ & =& 1 \over 2
+\int  1^x~ 1
+- cos~ (2t) \over
+t^\alpha~ dt \%& \\ & =& 1
+\over 2 \int ~
+1^x 1 \over t^\alpha~ dt - 1
+\over 2 \int ~
+1^x cos~ (2t)
+\over t^\alpha~ dt\%&
+\\ \end{align*}
+
+Mais l'intégrale \int  1^x~ 1
+\over t^\alpha~ dt admet pour limite + \infty~ (car \alpha~ \leq
+1), alors que l'intégrale \int ~
+1^x cos~ (2t)
+\over t^\alpha~ dt converge (même méthode
+d'intégration par parties). On en déduit que
+limx\rightarrow~+\infty~~\\int
+ 1^x sin ^2~t
+\over t^\alpha~ dt = +\infty~ et donc aussi
+limx\rightarrow~+\infty~~\\int
+ 1^x \textbar{} sin~
+t\textbar{} \over t^\alpha~ dt = +\infty~.
+
+{[}
+{[}
+{[}
+{[}

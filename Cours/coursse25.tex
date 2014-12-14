@@ -1,0 +1,279 @@
+\subsection{Espaces et parties compactes}
+%
+\subsubsection{Propriété de Bolzano-Weierstrass}
+
+\begin{de}[Compacité]
+	Soit E un espace métrique. On dit que E est compact
+	s'il vérifie la propriété de Bolzano Weierstrass~: toute suite de E a
+	une valeur d'adhérence dans E. On dit qu'une partie A de E est compacte
+	si toute suite de A a une valeur d'adhérence dans A.
+\end{de}
+%Remarque~4.8.1 La compacité est une notion purement topologique et non
+%métrique. Le fait pour une partie A d'être compacte ne dépend que de la
+%topologie de la partie et pas de l'espace ambiant E (comparer avec le
+%fait pour A d'être ouverte ou fermée qui dépend de E).
+%
+\begin{thm}
+	Soit E un espace métrique et F une partie de E.
+	\begin{itemize}
+		\item Si F est compacte, alors F est fermée et bornée dans E
+		\item Inversement, si E
+			est compact et F fermée dans E alors F est compacte
+	\end{itemize}
+
+\end{thm}
+%Démonstration (i) Soit x \in E qui est limite d'une suite (xn)
+%de F. La suite (xn) est une suite dans F, donc admet une
+%valeur d'adhérence \ell dans F. Mais la suite étant convergente, a une
+%seule valeur d'adhérence dans E, on a x = \ell \in F. Donc F est fermé dans
+%E. Le fait d'être borné résultera du lemme suivant
+%
+%Lemme~4.8.2 Soit F une partie compacte~; alors pour tout \epsilon
+%\textgreater{} 0, F peut être recouvert par un nombre fini de boules de
+%rayon \epsilon (propriété de précompacité)
+%
+%Démonstration Supposons que F ne peut pas être recouvert par un nombre
+%fini de boules de rayon \epsilon et soit x0 \in F~; on a
+%F⊄B'(x0,1)~; soit x1 \in F \diagdown B'(x0,\epsilon)~;
+%supposons
+%x0,\\ldots,xn~
+%construits~; alors F⊄B(x0,\epsilon)
+%\cup\\ldots~ \cup
+%B(xn,\epsilon) et on prend xn+1 \in F \diagdown\left
+%(B(x0,\epsilon)
+%\cup\\ldots~ \cup
+%B(xn,\epsilon)\right ). On construit ainsi une suite
+%(xn) telle que \forall~~p,q,
+%p\neq~q \rigtharrow~ d(xp,xq) ≥ \epsilon. Cette
+%suite n'admet aucune sous suite de Cauchy, donc aucune sous suite
+%convergente, donc pas de valeur d'adhérence. C'est absurde.
+%
+%(ii) Soit (xn) une suite dans F~; c'est aussi une suite dans E
+%donc elle admet une valeur d'adhérence x \in E (car E est compact), x
+%= limx\phi(n)~~; mais comme F est fermé
+%et x est limite d'une suite d'éléments de F, x appartient à F et il est
+%évidemment limite dans F de la suite (x\phi(n)). Donc la suite
+%admet une valeur d'adhérence dans F et F est compacte.
+%
+%Théorème~4.8.3 Soit f : E \rightarrow~ F continue. Pour toute partie compacte A de
+%E, f(A) est une partie compacte de F (et en particulier elle est fermée
+%et bornée).
+%
+%Démonstration Soit (bn) une suite de f(A). On pose
+%bn = f(an), an \in A. Alors an
+%admet une valeur d'adhérence dans A, a =\
+%lima\phi(n). Par continuité de f au point a, on a f(a)
+%= limf(a\phi(n)~) et donc la suite
+%(bn) a une valeur d'adhérence dans f(A).
+%
+%Corollaire~4.8.4 Soit E un espace métrique compact et f : E \rightarrow~ F
+%bi\\\\jmathmathmathmathective et continue. Alors f est un homéomorphisme.
+%
+%Démonstration Il faut montrer que f^-1 est continue autrement
+%dit que pour tout fermé A de E, (f^-1)^-1(A) =
+%f(A) est fermée dans F~; mais une telle partie A est fermée dans un
+%compact, donc compacte et donc f(A) est compacte dans F donc fermée.
+%Ceci montre la continuité de f^-1.
+%
+%Proposition~4.8.5 Si E1 et E2 sont deux espaces
+%métriques compacts, alors l'espace métrique produit est compact.
+%
+%Démonstration Soit (zn) une suite dans E = E1 \times
+%E2, zn = (xn,yn). La suite
+%(xn) est une suite dans E compact, donc admet une sous suite
+%convergente (x\phi(n)). La suite (y\phi(n)) est une suite
+%dans E2 compact, donc admet une sous suite convergente
+%(y\phi(\psi(n))). La suite (x\phi(\psi(n))) est une sous suite
+%d'une suite convergente, donc encore convergente et donc la suite
+%(z\phi(\psi(n))) est convergente. Toute suite de E admet bien une
+%valeur d'adhérence.
+%
+%Théorème~4.8.6 (Heine). Soit E un espace métrique compact et f : E \rightarrow~ F
+%continue. Alors f est uniformément continue.
+%
+%Démonstration Supposons f non uniformément continue. Alors
+%
+%\exists~\epsilon \textgreater{} 0,
+%\forall~~\eta \textgreater{} 0,\quad
+%\exists~a,b \in E, d(a,b) \textless{}
+%\eta\text et d(f(a),f(b)) ≥ \epsilon
+%
+%en prenant \eta = 1 \over n+1 , on trouve an
+%et bn tels que d(an,bn) \textless{} 1
+%\over n+1 alors que d(f(an),f(bn))
+%≥ \epsilon. La suite (an) admet une sous suite convergente
+%(a\phi(n)) de limite a~; comme d(a\phi(n),b\phi(n))
+%\textless{} 1 \over \phi(n)+1 on a aussi
+%limb\phi(n)~ = a. Cependant
+%d(f(a\phi(n)),f(b\phi(n))) ≥ \epsilon, ce qui montre que la suite
+%(d(f(a\phi(n)),f(b\phi(n)))) ne tend pas vers 0, alors que
+%les deux suites f(a\phi(n)),f(b\phi(n)) admettent la même
+%limite f(a) (continuité de f au point a). C'est absurde.
+%
+%\paragraph{4.8.2 Propriété de Borel Lebesgue}
+%
+%Définition~4.8.2 On dit qu'un espace topologique E vérifie la propriété
+%de Borel Lebesgue si on a les conditions équivalentes (i) Pour toute
+%famille d'ouverts (Ui)i\inI telle que E
+%= \⋃ ~
+%i\inIUi, il existe
+%i1,\\ldots,ik~
+%\in I tels que E =\ \⋃
+% p=1^kUip (ii) Pour toute famille
+%de fermés (Fi)i\inI telle que
+%\⋂ ~
+%i\inIFi = \varnothing~, il existe
+%i1,\\ldots,ik~
+%\in I tels que \⋂ ~
+%p=1^kFip = \varnothing~
+%
+%Démonstration Ces deux propriétés sont équivalentes par passage au
+%complémentaire.
+%
+%Remarque~4.8.2 On peut formuler (i) sous la forme~: de tout recouvrement
+%de E par des ouverts, on peut extraire un sous recouvrement fini.
+%
+%On a le lemme suivant, qui nous servira pour la démonstration du
+%théorème~:
+%
+%Lemme~4.8.7 Soit (E,d) un espace métrique compact et
+%(Ui)i\inI une famille d'ouverts telle que E
+%= \⋃ ~
+%i\inIUi. Alors, il existe \epsilon \textgreater{} 0 tel que
+%
+%\forall~~x \in E,
+%\existsix~ \in I, B(x,\epsilon) \subset~
+%Uix
+%
+%Démonstration Par l'absurde~; supposons que
+%
+%\forall~~\epsilon \textgreater{} 0,
+%\existsx \in E, \\forall~~i \in I,
+%B(x,\epsilon)⊄Ui
+%
+%Prenons \epsilon = 1 \over n+1 et xn
+%correspondant. La suite (xn) a donc une valeur d'adhérence x.
+%Il existe i0 \in I tel que x \in Ui0 et donc
+%un \eta \textgreater{} 0 tel que B(x,\eta) \subset~ Ui0. Mais x
+%est valeur d'adhérence de la suite xn et donc il existe n
+%\textgreater{} 2\diagup\eta tel que xn \in B(x,\eta\diagup2). Alors, si y \in
+%B(xn, 1 \over n+1 ), on a d(y,x) \leq
+%d(y,xn) + d(xn,x) \textless{} 1
+%\over n+1 + \eta \over 2 \textless{} \eta
+%soit B(xn, 1 \over n+1 ) \subset~ B(x,\eta) \subset~
+%Ui0. Mais ceci contredit la définition de
+%xn~: \forall~i \in I, B(xn~, 1
+%\over n+1 )⊄Ui. C'est absurde.
+%
+%Théorème~4.8.8 Un espace métrique E est compact si et seulement si~il
+%vérifie la propriété de Borel-Lebesgue.
+%
+%Démonstration ⇐ Supposons que E vérifie la propriété de Borel-Lebesgue,
+%et soit (xn) une suite de E. Pour N \in \mathbb{N}~, posons XN =
+%\xn∣n ≥
+%N\. On a
+%
+%\begin{align*} x\text valeur
+%d'adhérence de (xn)&& \%&
+%\\ & \Leftrightarrow &
+%\forall~V \in V (x), \\forall~~N \in \mathbb{N}~,
+%\existsn ≥ N, xn~ \in V \%&
+%\\ & \Leftrightarrow &
+%\forall~V \in V (x), \\forall~~N \in \mathbb{N}~,
+%V \bigcap XN\neq~\varnothing~ \%&
+%\\ & \Leftrightarrow &
+%\forall~~N \in \mathbb{N}~, x
+%\in\overlineXN \%&
+%\\ & \Leftrightarrow & x
+%\in\⋂
+%N\in\mathbb{N}~\overlineXN \%&
+%\\ \end{align*}
+%
+%Supposons donc que la suite n'a pas de valeur d'adhérence~; on a alors
+%\⋂ ~
+%N\in\mathbb{N}~\overlineXN = \varnothing~ et comme ce sont
+%des fermés de E qui vérifie la propriété de Borel-Lebesgue, il existe
+%N1,\\ldots,Nk~
+%tels que \⋂ ~
+%p=1^k\overlineXNp
+%= \varnothing~. Mais la suite (XN) est décroissante, et donc la suite
+%(\overlineXN) aussi. On a donc
+%\⋂ ~
+%p=1^k\overlineXNp
+%=
+%\overlineXmax(Np)\mathrel\neq~~\varnothing~.
+%C'est absurde. Donc E est compact.
+%
+%\rigtharrow~ Soit (Ui)i\inI une famille d'ouverts telle que E
+%= \⋃ ~
+%i\inIUi. Alors, il existe \epsilon \textgreater{} 0 tel que
+%
+%\forall~~x \in E,
+%\existsix~ \in I, B(x,\epsilon) \subset~
+%Uix
+%
+%Par le lemme de précompacité, on peut recouvrir E par un nombre fini de
+%boules de rayon \epsilon~: E = B(x1,\epsilon)
+%\cup\\ldots~ \cup
+%B(xk,\epsilon). Mais alors E \subset~ Uix 1
+%\cup\\ldots~ \cup
+%Uix k \subset~ E, ce qui démontre que l'on peut
+%recouvrir E par un nombre fini de Ui.
+%
+%\paragraph{4.8.3 Compacts de \mathbb{R}~ et \mathbb{R}~^n}
+%
+%Lemme~4.8.9 Tout segment {[}a,b{]} de \mathbb{R}~ est compact.
+%
+%Démonstration Soit (xn) une suite de {[}a,b{]}. On définit
+%deux suites (ap) et (bp) de la manière suivante~:
+%a0 = a et b0 = b~; si ap et bp
+%sont construits, on pose ap+1 = ap et bp+1
+%= ap+bp \over 2 si
+%\n \in \mathbb{N}~∣xn \in
+%{[}ap, ap+bp \over 2
+%{]}\ est infini~; sinon on pose ap+1 =
+%ap+bp \over 2 et bp+1 =
+%bp. On a évidemment~: (ap) croissante,
+%(bp) décroissante, bp - ap = b-a
+%\over 2^p et \n \in
+%\mathbb{N}~∣xn \in
+%{[}ap,bp{]}\ est infini. Les deux
+%suites étant ad\\\\jmathmathmathmathacentes, soit \ell leur limite commune et \epsilon \textgreater{}
+%0. Il existe n \in \mathbb{N}~ tel que \ell - \epsilon \textless{} an \leq \ell \leq
+%bn \textless{} \ell + \epsilon et donc \n \in
+%\mathbb{N}~∣xn \in{]}\ell - \epsilon,\ell +
+%\epsilon{[}\ est infini. Donc \ell est valeur d'adhérence de la
+%suite (xn).
+%
+%Théorème~4.8.10 Les parties compactes de \mathbb{R}~ et \mathbb{R}~^n sont les
+%parties à la fois fermées et bornées pour une des distances usuelles.
+%
+%Démonstration On sait dé\\\\jmathmathmathmathà qu'une partie compacte doit être fermée et
+%bornée. Inversement soit A une partie fermée et bornée de \mathbb{R}~. Il existe
+%a,b \in \mathbb{R}~ tels que A \subset~ {[}a,b{]}. Alors A = A \bigcap {[}a,b{]} est fermé dans
+%{[}a,b{]} donc compacte. Même chose dans \mathbb{R}~^n en
+%rempla\ccant {[}a,b{]} par
+%{[}a1,b1{]} \times⋯ \times
+%{[}an,bn{]} qui est compact comme produit de
+%compacts.
+%
+%Corollaire~4.8.11 Soit E un espace métrique compact. Toute application
+%continue de E dans \mathbb{R}~ est bornée et atteint ses bornes inférieure et
+%supérieure.
+%
+%Démonstration f(E) est compacte donc bornée et fermée (donc contient ses
+%bornes).
+%
+%Corollaire~4.8.12 \mathbb{R}~ est complet.
+%
+%Démonstration Une suite de Cauchy est bornée, donc peut être incluse
+%dans un segment qui est compact~; elle y admet donc une valeur
+%d'adhérence et donc elle converge.
+%
+%Remarque~4.8.3 Bien entendu la validité de cette démonstration dépend de
+%la construction de \mathbb{R}~ qui est employée.
+%
+%{[}
+%{[}
+%{[}
+%{[}

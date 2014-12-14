@@ -1,0 +1,240 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{5.4 Compléments~: le théorème de Baire et ses
+conséquences}
+
+\paragraph{5.4.1 Le théorème de Baire}
+
+Théorème~5.4.1 (Baire). Soit E un espace métrique complet et
+(Un)n\in\mathbb{N}~ une suite d'ouverts denses dans E. Alors
+\⋂ ~
+n\in\mathbb{N}~Un est encore dense dans E.
+
+Démonstration Rappelons qu'une partie est dense si et seulement si elle
+rencontre tout ouvert non vide. Soit donc U un tel ouvert de E, soit
+x0 \in U \bigcap U0 (qui est non vide par densité de
+U0 et ouvert comme intersection de deux ouverts). Soit
+r0 \textgreater{} 0 tel que B'(x0,r0) \subset~ U
+\bigcap U0. Supposons xn et rn construits et
+voyons comment nous allons construire xn+1 et rn+1.
+Comme Un+1 est dense et B(xn,rn) est un
+ouvert, Un+1 \bigcap B(xn,rn) est ouvert et non
+vide~; soit donc xn+1 \in Un+1 \bigcap
+B(xn,rn) et rn+1 \textless{}
+rn \over 2 tel que
+B'(xn+1,rn+1) \subset~ Un+1 \bigcap
+B(xn,rn) . On construit ainsi une suite de boules
+fermées B'(xn,rn) telles que
+B'(xn+1,rn+1) \subset~ B'(xn,rn) avec
+rn \textless{} r0 \over
+2^n . Le théorème des fermés emboîtés nous garantit que
+\⋂ ~
+n\in\mathbb{N}~B'(xn,rn)\neq~\varnothing~
+(car \delta(B'(xn,rn)) \textless{} 2rn tend
+vers 0). Mais on a B'(x0,r0) \subset~ U \bigcap U0 et
+pour n ≥ 1, B'(xn,rn) \subset~ Un. On en déduit
+que U \bigcap\⋂ ~
+n\in\mathbb{N}~Un\neq~\varnothing~, ce qui achève la
+démonstration.
+
+En passant au complémentaire, on obtient une version équivalente
+
+Théorème~5.4.2 (Baire). Soit E un espace métrique complet et
+(Fn)n\in\mathbb{N}~ une suite de fermés d'intérieurs vides de E.
+Alors \⋃ ~
+n\in\mathbb{N}~Fn est encore d'intérieur vide dans E.
+
+Exemple~5.4.1 On montre facilement qu'un sous-espace vectoriel de E
+distinct de E est d'intérieur vide (exercice). On en déduit que, si E,
+espace vectoriel normé~de dimension infinie, est complet, E (qui n'est
+pas d'intérieur vide) ne peut pas être réunion dénombrable de
+sous-espaces vectoriels de dimension finie (dont on sait qu'ils sont
+fermés). En particulier E ne peut pas admettre de base dénombrable.
+C'est ainsi que \mathbb{R}~{[}X{]} (qui admet une base dénombrable) n'est complet
+pour aucune norme.
+
+\paragraph{5.4.2 Les grands théorèmes}
+
+Nous en citerons trois qui concernent tous des applications linéaires
+dans des espaces vectoriels normés complets.
+
+Théorème~5.4.3 (Banach-Steinhaus). Soit E un espace vectoriel
+normé~complet et F un espace vectoriel normé. Soit H un ensemble
+d'applications linéaires continues telles que
+
+\forall~~x \in E,
+\existsKx~ ≥ 0,
+\forall~~u \in H,\quad
+\\textbar{}u(x)\\textbar{} \leq Kx
+
+Alors il existe K ≥ 0 tel que \forall~~u \in H,
+\\textbar{}u\\textbar{} \leq K.
+
+Démonstration Posons pour x \in E, p(x) =\
+supu\inH\\textbar{}u(x)\\textbar{}(\leq
+Kx) et considérons En = \x \in
+E∣p(x) \leq n\. Remarquons tout
+d'abord que En est fermé~: en effet si (xq) est une
+suite d'éléments de En qui converge vers x \in E, on a pour tout
+u dans H, \forall~~q \in \mathbb{N}~,
+\\textbar{}u(xq)\\textbar{} \leq
+n~; en faisant tendre q vers + \infty~ et en utilisant la continuité de u, on
+a encore \\textbar{}u(x)\\textbar{} \leq n et
+donc x \in En. Maintenant notre hypothèse implique que chaque x
+de E appartient à l'un des En (par exemple pour n =
+E(Kx) + 1). Donc E qui est d'intérieur évidemment non vide est
+réunion d'une famille de fermés. Le théorème de Baire implique que l'un
+des En est d'intérieur non vide~: soit donc N \in \mathbb{N}~,
+x0 \in E et r \textgreater{} 0 tel que B'(x0,r) \subset~
+EN. Prenons alors x \in B'(0,1) et u \in H. Alors x0 +
+rx \in B'(x0,r) et donc \\textbar{}u(x0
++ rx)\\textbar{} \leq N. Mais alors
+\\textbar{}u(x)\\textbar{} = 1
+\over r \\textbar{}u(x0 + rx)
+- u(x0)\\textbar{} \leq 1 \over
+r (N +\\textbar{}
+u(x0\\textbar{}) = K. On a donc
+\forall~~u \in H,
+\\textbar{}u\\textbar{} \leq K.
+
+Remarque~5.4.1 Sous les mêmes hypothèses, on montre alors facilement
+qu'une limite simple d'applications linéaires continues est encore
+continue (attention à l'hypothèse E complet)~; en effet le théorème de
+Banach Steinhaus implique que la suite est équicontinue (le module de
+continuité en x0, \eta(\epsilon,x0), ne dépend pas de n) et on
+montre simplement qu'une limite simple d'une suite équicontinue est
+continue.
+
+Théorème~5.4.4 (théorème de Banach). Soit E et F deux espaces vectoriels
+normés complets, et u : E \rightarrow~ F linéaire, continue, bi\\\\jmathmathmathmathective. Alors
+u^-1 est encore continue.
+
+Démonstration On va montrer que u(B'(0,1)) \subset~ F contient une boule de
+centre 0 dans F, B'(0,r1). On aura alors B'(0,r1) \subset~
+u(B'(0,1)), soit u^-1(B'(0,r1)) \subset~ B'(0,1) et donc
+si y \in F avec \\textbar{}y\\textbar{} \leq 1,
+on aura u^-1( r1 \over 2 y) \in
+B'(0,1) soit encore
+\\textbar{}u^-1(y)\\textbar{}
+\leq 2 \over r1 ce qui montrera que
+u^-1 est continue.
+
+Soit r \textgreater{} 0. On a E =\
+⋃  n\in\mathbb{N}~~nB'(0,r), on en déduit que F =
+u(E) = \⋃ ~
+n\in\mathbb{N}~nu(B'(0,r)) et a fortiori F =\
+⋃ ~
+n\in\mathbb{N}~n\overlineu(B'(0,r)). L'espace vectoriel
+normé complet F qui est son propre intérieur est réunion d'une famille
+dénombrable de fermés~; donc l'un d'entre eux (Baire) est d'intérieur
+non vide. Mais si n\overlineu(B'(0,r)) est
+d'intérieur non vide, il en est de même de
+\overlineu(B'(0,r)). Soit donc y0 \in F et \rho
+\textgreater{} 0 tel que B'(y0,\rho)
+\subset~\overlineu(B'(0,r)). On a aussi (puisque
+l'application x\mapsto~ - x laisse invariante
+B'(0,r)), B'(-y0,\rho) \subset~\overlineu(B'(0,r)),
+et alors, si y \in B'(0,\rho),
+
+2y = (y - y0) + (y + y0) \in B'(-y0,\rho) +
+B(y0,\rho0)
+
+or
+
+B'(-y0,\rho) + B(y0,\rho0)
+\subset~\overlineu(B'(0,r)) +
+\overlineu(B'(0,r))
+\subset~\overlineu(B'(0,2r))
+
+(facile) et donc y \in\overlineu(B'(0,r)). On a donc
+trouvé, pour tout r \textgreater{} 0 un \rho \textgreater{} 0 tel que
+B'(0,\rho) \subset~\overlineu(B'(0,r)). Les translations étant
+des homéomorphismes, on a évidemment pour tout x \in E, B'(u(x),\rho)
+\subset~\overlineu(B'(x,r)).
+
+Montrons alors que sous ces hypothèses B'(0,\rho) \subset~ u(B'(0,2r)). Soit en
+effet y \in B'(0,\rho). Soit \rhon le réel associé à  r
+\over 2^n par la propriété ci dessus. Quitte
+à remplacer les \rhon par des réels plus petits, on peut supposer
+que \rhon tend vers 0. On va construire un élément xn
+de E par récurrence de manière à vérifier
+\\textbar{}xn+1 -
+xn\\textbar{} \leq r \over
+2^n et \\textbar{}y -
+u(xn)\\textbar{} \leq \rhon. On pose
+x0 = 0~; supposons xn construit. On a donc y \in
+B'(u(xn),\rhon)
+\subset~\overlineu(B'(xn, r \over
+2^n )) et donc on peut trouver un point xn+1 \in
+B'(xn, r \over 2^n ) tel que
+\\textbar{}y -
+u(xn+1)\\textbar{} \leq \rhon+1, soit y \in
+B'(u(xn+1),\rhon+1), ce qui achève la construction par
+récurrence. On a donc pour tout n,
+\\textbar{}xn+1 -
+xn\\textbar{} \leq r \over
+2^n et \\textbar{}y -
+u(xn)\\textbar{} \leq \rhon. On a
+\\textbar{}xn+p -
+xn\\textbar{} \leq r \over
+2^n + r \over 2^n+1 +
+\\ldots~ + r
+\over 2^n+p-1 \leq r \over
+2^n-1 , ce qui montre que la suite (xn) est une
+suite de Cauchy. Comme E est complet, elle converge. Soit x sa limite.
+On a \\textbar{}x -
+x0\\textbar{} \leq 2r d'après l'inégalité ci
+dessus pour n = 0 et p tendant vers + \infty~. D'autre part l'inégalité
+\\textbar{}y - u(xn)\\textbar{}
+\leq \rhon et la continuité de u nous montrent que y = u(x), donc y
+appartient à u(B'(0,2r)).
+
+On a alors aussi B'(0, \rho \over 2r ) \subset~ u(B'(0,1)), ce
+qui montre comme on l'a remarqué, que u^-1 est continue.
+
+Théorème~5.4.5 (théorème du graphe fermé). Soit E et F deux espaces
+vectoriels normés complets, et u : E \rightarrow~ F linéaire. Alors u est continue
+si et seulement si~son graphe est fermé dans E \times F.
+
+Démonstration Supposons tout d'abord que u est continue et soit
+(xn,u(xn)) une suite du graphe qui converge vers
+(x,y) \in E \times F. Alors limxn~ = x et
+par continuité de u, limu(xn~) =
+u(x)~; mais alors l'unicité de la limite nécessite y = u(x), donc (x,y)
+est encore dans le graphe de u, ce qui montre bien que le graphe est
+fermé (il s'agit là d'une propriété tout à fait générale des espaces
+métriques, mais la réciproque est fausse en général). Supposons
+maintenant que u est linéaire de graphe \Gamma fermé. Alors \Gamma est un
+sous-espace vectoriel fermé de E \times F, donc il est complet. L'application
+\Gamma \rightarrow~ E, (x,u(x))\mapsto~x est linéaire continue et
+bi\\\\jmathmathmathmathective. D'après le théorème de Banach, sa réciproque
+x\mapsto~(x,u(x)) est continue et donc
+x\mapsto~u(x) aussi.
+
+Remarque~5.4.2 Il s'agit d'une technique importante~; il est en effet
+considérablement plus facile de montrer qu'un graphe est fermé plutôt
+qu'une continuité~; si (xn) est une suite de limite x, il
+s'agit de montrer non plus que la suite u(xn) converge vers
+u(x) mais plutôt que la suite u(xn) ne peut pas avoir d'autre
+limite que u(x)~; un exemple typique d'application linéaire de graphe
+fermé est la dérivation pour la topologie de la convergence uniforme~:
+le théorème de dérivation des suites uniformément convergentes ne fait
+que traduire la fermeture du graphe (si la suite des dérivées converge
+uniformément, alors c'est vers la dérivée de la limite)~; attention
+cependant que la dérivation n'est pas continue pour la topologie de la
+convergence uniforme (le théorème du graphe fermé ne s'applique pas car
+l'espace des applications \mathcal{C}^1 n'est pas complet).
+
+{[}
+{[}
+{[}
+{[}

@@ -1,0 +1,137 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{4.5 Continuité}
+
+\paragraph{4.5.1 Continuité en un point}
+
+Définition~4.5.1 Soit f une fonction de E vers F et a
+\in Def~ (f). On dit que f est continue au point
+a si elle vérifie les conditions équivalentes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) limx\rightarrow~a~f(x) = f(a)
+\item
+  (ii) \forall~~V \in V (f(a)),
+  \exists~U \in V (a), f(U) \subset~ V
+\item
+  (iii) \forall~~\epsilon \textgreater{} 0,
+  \exists~\eta \textgreater{} 0, d(x,a) \textless{} \eta \rigtharrow~
+  d(f(x),f(a)) \textless{} \epsilon
+\end{itemize}
+
+Remarque~4.5.1 On a bien entendu toutes les propriétés des limites, en
+particulier
+
+Proposition~4.5.1 La continuité est une notion locale~: si U0
+est un ouvert contenant a, f est continue au point a si et seulement
+si~f\textbar{}U0 est continue au point a.
+
+Proposition~4.5.2 Si f est une fonction de E vers F1
+\times⋯ \times Fk, f =
+(f1,\\ldots,fk~),
+alors f est continue au point a si et seulement si~chacune des
+fi est continue au point a.
+
+Proposition~4.5.3 Si f est continue au point a et g continue au point
+f(a), alors g \cdot f est continue au point a (on suppose que
+\mathrmIm~f
+\subset~ Def~ (g)).
+
+Théorème~4.5.4 f est continue au point a si et seulement si~pour toute
+suite (an) de Def~ (f) de limite a,
+la suite (f(an)) admet f(a) pour limite.
+
+\paragraph{4.5.2 Continuité sur un espace}
+
+Définition~4.5.2 Soit E et F deux espaces métriques. On dit que f : E \rightarrow~
+F est continue si elle est continue en tout point de E.
+
+Remarque~4.5.2 On a donc toutes les propriétés des limites et des
+fonctions continues~; en particulier, la composée de deux applications
+continues est continue.
+
+Théorème~4.5.5 Soit E et F deux espaces métriques et f : E \rightarrow~ F. On a
+équivalence de
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) f est continue (sur E)
+\item
+  (ii) pour tout ouvert V de F, f^-1(V ) est un ouvert de E
+\item
+  (iii) pour tout fermé K de F, f^-1(K) est un fermé de E
+\end{itemize}
+
+Démonstration (ii) et (iii) sont équivalents puisque pour toute partie B
+de F on a f^-1(cB) = cf^-1(B).
+
+((i) \rigtharrow~(ii)) Supposons que f est continue et soit V un ouvert de F et a \in
+f^-1(V ). On a f(a) \in V et V est un voisinage de f(a). Donc
+il existe U \in V (a) tel que f(U) \subset~ V , soit U \subset~ f^-1(V ) et
+donc f^-1(V ) est un voisinage de a. Puisque
+f^-1(V ) est voisinage de tous ses points il est ouvert.
+
+(ii) \rigtharrow~ (i)Inversement, supposons que l'image réciproque de tout ouvert
+est un ouvert et soit a \in E et V \in V (f(a)). Il existe V 0
+ouvert tel que f(a) \in V 0 \subset~ V . Alors U0 =
+f^-1(V 0) est un ouvert contenant a et on a
+f(U0) \subset~ V 0 \subset~ V . Donc f est continue en a.
+
+Théorème~4.5.6 Soit E et F deux espaces métriques, f,g : E \rightarrow~ F deux
+applications continues. Alors \x \in
+E∣f(x) = g(x)\ est fermé
+dans E.
+
+Démonstration Soit \phi : E \rightarrow~ F \times F,
+x\mapsto~(f(x),g(x)). Comme f et g sont continues, \phi
+est continue. Or \x \in E∣f(x)
+= g(x)\ = \phi^-1(\Delta) où \Delta =
+\(y,y)∣y \in
+F\. Or on sait, d'après la propriété de séparation que
+\Delta est un fermé de F \times F. Son image réciproque par \phi est donc un fermé de
+E.
+
+Corollaire~4.5.7 Soit E et F deux espaces métriques, f,g : E \rightarrow~ F deux
+applications continues. On suppose qu'il existe une partie A de E, dense
+dans E telle que \forall~~x \in A, f(x) = g(x). Alors f
+= g.
+
+Démonstration \x \in E∣f(x) =
+g(x)\ est un fermé contenant A donc
+\overlineA = E~; donc f = g.
+
+\paragraph{4.5.3 Homéomorphismes}
+
+Définition~4.5.3 Soit E et F deux espaces métriques. on dit que f : E \rightarrow~
+F est un homéomorphisme si f est bi\\\\jmathmathmathmathective et si f et f^-1
+sont continues.
+
+Remarque~4.5.3 Deux espaces homéomorphes ont exactement les mêmes
+propriétés topologiques (toutes celles qui peuvent s'exprimer sans faire
+intervenir de distances, uniquement en termes d'ouverts, de fermés et de
+voisinages).
+
+Exemple~4.5.1 Soit f : {[}0,2\pi~{[}\rightarrow~ U = \z \in
+\mathbb{C}∣\textbar{}z\textbar{} =
+1\, t\mapsto~e^it. Alors
+f est continue bi\\\\jmathmathmathmathective, mais sa réciproque n'est pas continue au point
+1 (faire tendre z vers 1 par parties imaginaires négatives,
+f^-1(z) tend vers 2\pi~\neq~0 =
+f^-1(1)).
+
+{[}
+{[}
+{[}
+{[}

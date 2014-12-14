@@ -1,0 +1,1042 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}{]}
+{[}
+
+\subsubsection{17.1 Généralités sur les espaces affines}
+
+\paragraph{17.1.1 Notion d'espace affine}
+
+Définition~17.1.1 On appelle espace affine un triplet
+(E,\overrightarrowE,+) d'un ensemble E (l'ensemble
+des points), d'un espace vectoriel \overrightarrowE
+(l'espace des vecteurs) et d'une application + : E
+\times\overrightarrow E \rightarrow~ E,
+(x,\overrightarrow\xi~)\mapsto~x
++\overrightarrow \xi~ vérifiant les propriétés
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i)
+  \forall~(x,\overrightarrow\xi~,\overrightarrow\eta~)
+  \in E \times\overrightarrow E
+  \times\overrightarrow E, (x
+  +\overrightarrow \xi~)
+  +\overrightarrow \eta = x +
+  (\overrightarrow\xi~ +\overrightarrow
+  \eta)
+\item
+  (ii)
+  \forall~(x,\overrightarrow\xi~~) \in E
+  \times\overrightarrow E, \left (x
+  +\overrightarrow \xi~ = x \Leftrightarrow
+  \overrightarrow\xi~ =\overrightarrow
+  0\right )
+\item
+  (iii) \forall~~x,y \in E,
+  \exists\overrightarrow\xi~~
+  \in\overrightarrow E, x
+  +\overrightarrow \xi~ = y
+\end{itemize}
+
+Remarque~17.1.1 L'assertion (i) et la moitié '' ⇐'' de l'assertion (iii)
+traduisent que l'application
+(x,\overrightarrow\xi~)\mapsto~x
++\overrightarrow \xi~ est une loi de groupe opérant sur
+un ensemble du groupe additif de l'espace vectoriel
+\overrightarrowE sur l'ensemble E. La propriété (iii)
+traduit le fait que cette opération est transitive, c'est-à-dire qu'il y
+a une seule orbite pour cette opération. La moitié '' \rigtharrow~'' de la
+propriété (ii) est appelée la fidélité de l'opération. Un espace affine
+est donc une opération transitive et fidèle du groupe additif d'un
+espace vectoriel sur un ensemble. L'espace vectoriel
+\overrightarrowE est appelé la direction de l'espace
+affine. Par la suite on confondra abusivement l'espace affine
+(E,\overrightarrowE,+) avec l'ensemble E de ses
+points.
+
+Proposition~17.1.1 Etant donné x,y \in E, il existe un unique vecteur noté
+\overrightarrowxy \in\overrightarrow
+E vérifiant x +\overrightarrow xy = y. On a
+\overrightarrowxy = 0 \Leftrightarrow x
+= y et on a la relation de Chasles
+
+\forall~~x,y,z \in E,
+\overrightarrowxz =\overrightarrow
+xy +\overrightarrow yz
+
+Démonstration L'existence est garantie par la propriété (iii). Pour
+l'unicité, si on a à la fois y = x +\overrightarrow \xi~
+= x +\overrightarrow \eta, on a x = x
++\overrightarrow 0 = (x
++\overrightarrow \xi~) +
+(-\overrightarrow\xi~) = (x
++\overrightarrow \eta) +
+(-\overrightarrow\xi~) = x +
+(\overrightarrow\eta -\overrightarrow
+\xi~) d'où \overrightarrow\xi~
+-\overrightarrow \eta =\overrightarrow
+0 et donc \overrightarrow\xi~
+=\overrightarrow \eta. La propriété
+\overrightarrowxy = 0 \Leftrightarrow x
+= y est une conséquence évidente de (ii). On a z = y
++\overrightarrow yz = (x
++\overrightarrow xy)
++\overrightarrow yz = x +
+(\overrightarrowxy +\overrightarrow
+yz) d'où \overrightarrowxz
+=\overrightarrow xy +\overrightarrow
+yz.
+
+Proposition~17.1.2 Soit a \in E. L'application \phia :
+x\mapsto~\overrightarrowax est
+une bi\\\\jmathmathmathmathection de l'espace affine E sur l'espace vectoriel
+\overrightarrowE.
+
+Démonstration L'application réciproque est bien entendu l'application
+\psia :\overrightarrow
+\xi~\mapsto~a +\overrightarrow \xi~.
+On vérifie immédiatement que \psia \cdot \phia =
+\mathrmIdE et que \phia \cdot \psia
+=
+\mathrmId\overrightarrowE.
+
+Remarque~17.1.2 Par transport des opérations algébriques de
+\overrightarrowE sur E, on munit ainsi E d'une
+structure d'espace vectoriel isomorphe à
+\overrightarrowE. On dira que l'espace vectoriel
+ainsi obtenu est le vectorialisé de E en l'origine a et on le notera par
+la suite Ea. On retiendra donc que le choix d'une origine dans
+l'espace affine transforme cet espace affine en un espace vectoriel.
+
+Définition~17.1.2 On appelle dimension de l'espace affine E la dimension
+de sa direction \overrightarrowE comme espace
+vectoriel.
+
+\paragraph{17.1.2 Repères affines, bases affines}
+
+Définition~17.1.3 On appelle repère affine de E tout couple (a,\mathcal{E}) d'un
+point a de E (l'origine du repère) et d'une base \mathcal{E} de
+\overrightarrowE. Si \mathcal{E} =
+(\vecei)i\inI tout point x \in E
+s'écrit de manière unique sous la forme x = a
++ \\sum ~
+i\inIxi\vecei~; on dit que
+les xi sont les coordonnées du point x dans le repère affine~;
+ce sont également les coordonnées du vecteur
+\overrightarrowax dans la base \mathcal{E}.
+
+Soit (a,\mathcal{E}) et (b,ℱ) deux repères affines de E. Ecrivons alors (avec des
+notations évidentes) b = a +\
+\sum ~
+i\inI\beta~i\vecei et
+\vecf\\\\jmathmathmathmath =\
+\sum ~
+i\inIui,\\\\jmathmathmathmath\vecei. On a
+alors, si les xi désignent les coordonnées de x dans le repère
+(a,\mathcal{E}) et les y\\\\jmathmathmathmath celles de x dans le repère (b,ℱ)
+
+\begin{align*} x& =& b +
+\\sum
+\\\\jmathmathmathmath\inJy\\\\jmathmathmathmath\vecf\\\\jmathmathmathmath = a +
+\\sum
+i\inI\beta~i\vecei +
+\sum \\\\jmathmathmathmath\inJy\\\\jmathmathmathmath~
+\\sum
+i\inIui,\\\\jmathmathmathmath\vecei\%&
+\\ & =& a + \\sum
+i\inI\beta~i\vecei +
+\sum i\inI~\left
+(\\sum
+\\\\jmathmathmathmath\inJui,\\\\jmathmathmathmathy\\\\jmathmathmathmath\right
+)ei \%& \\ & =& a +
+\sum i\inI~\left
+(\beta~i + \\sum
+\\\\jmathmathmathmath\inJui,\\\\jmathmathmathmathy\\\\jmathmathmathmath\right
+)ei \%& \\
+\end{align*}
+
+si bien que \forall~i \in I,xi = \beta~i~
++ \\sum ~
+\\\\jmathmathmathmath\inJui,\\\\jmathmathmathmathy\\\\jmathmathmathmath ce qui fournit les formules de
+changement de repère.
+
+Proposition~17.1.3 Soit (ai)i\inI une famille non vide
+de points de E. Alors les propriétés suivantes sont équivalentes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) il existe i0 \in I tel que la famille
+  (\overrightarrowai0ai)i\inI\diagdown\i0\
+  soit libre (resp. génératrice, resp. une base) dans
+  \overrightarrowE
+\item
+  (ii) pour tout i0 \in I, la famille
+  (\overrightarrowai0ai)i\inI\diagdown\i0\
+  est libre (resp. génératrice, resp. une base) dans
+  \overrightarrowE
+\end{itemize}
+
+On dit dans ce cas que la famille (ai)i\inI est
+affinement libre (resp. affinement génératrice, resp. une base affine)
+de E.
+
+Démonstration Libre~: Il est clair que (ii) \rigtharrow~(i). Supposons (i) vérifiée
+et soit i1 \in I. Soit
+(\lambda~i)i\inI\diagdown\i1\
+une famille de scalaires (avec seulement un nombre fini de scalaires non
+nuls) tels que \\sum ~
+i\inI\diagdown\i1\\lambda~i\overrightarrowai1ai
+=\overrightarrow 0. On a alors en notant que
+\overrightarrowai0ai0
+=\overrightarrow 0)
+
+\begin{align*} \overrightarrow0&
+=& \\sum
+i\inI\diagdown\i1\\lambda~i(\overrightarrowai1ai0
++\overrightarrow ai0ai)
+\%& \\ & =& \\sum
+i\inI\diagdown\i0,i1\\lambda~i\overrightarrowai0ai
+-\left (\\sum
+i\inI\diagdown\i1\\lambda~i\right
+)\overrightarrowai0ai1\%&
+\\ \end{align*}
+
+Comme la famille
+(\overrightarrowai0ai)i\inI\diagdown\i0\
+est libre, on doit donc avoir \forall~~i \in I
+\diagdown\i0,i1\,
+\lambda~i = 0 et également
+\\sum ~
+i\inI\diagdown\i1\\lambda~i
+= 0, ce qui nous donne évidemment que \lambda~i0 est
+également nul. D'où \forall~~i \in I
+\diagdown\i1\, \lambda~i = 0.
+
+Génératrice Il est clair que (ii) \rigtharrow~(i). Supposons (i) vérifiée et soit
+i1 \in I. On peut alors écrire, si
+\overrightarrow\xi~ \in\overrightarrow
+E,
+
+\begin{align*} \overrightarrow\xi~&
+=& \\sum
+i\inI\diagdown\i0\\lambda~i\overrightarrowai0ai
+= \\sum
+i\inI\diagdown\i0\\lambda~i(\overrightarrowai0ai1
++\overrightarrow
+ai1ai)\%&
+\\ & =& \\sum
+i\inI\diagdown\i0,i1\\lambda~i\overrightarrowai1ai
+-\left (\\sum
+i\inI\diagdown\i0\\lambda~i\right
+)\overrightarrowai1ai0
+\%& \\ & =& \\sum
+i\inI\diagdown\i1\\mui\overrightarrowai1ai
+\%& \\ \end{align*}
+
+avec \mui = \lambda~i pour i \in I
+\diagdown\i0,i1\ et
+\mui0 =\
+\sum ~
+i\inI\diagdown\i0\\lambda~i
+ce qui montre que la famille
+(\overrightarrowai1ai)i\inI\diagdown\i1\
+est encore génératrice.
+
+Le résultat pour les bases se déduit immédiatement de la combinaison des
+deux résultats précédents.
+
+\paragraph{17.1.3 Sous-espace affine}
+
+Définition~17.1.4 Soit E un espace affine et F une partie de E. On dit
+que F est un sous espace affine de E si on a les propriétés équivalentes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) il existe a \in F tel que
+  \\overrightarrowax∣x
+  \in F\ soit un sous-espace vectoriel de
+  \overrightarrowE
+\item
+  (ii) F\neq~\varnothing~ et pour tout a \in F,
+  \\overrightarrowax∣x
+  \in F\ est un sous espace vectoriel de
+  \overrightarrowE
+\item
+  (iii) il existe a \in F et un sous-espace vectoriel
+  \overrightarrowFa de
+  \overrightarrowE tel que F = a
+  +\overrightarrow Fa
+\item
+  (iv) F\neq~\varnothing~ et pour tout a \in F, il existe un
+  sous-espace vectoriel \overrightarrowFa
+  de \overrightarrowE tel que F = a
+  +\overrightarrow Fa
+\end{itemize}
+
+Le sous-espace vectoriel \overrightarrowFa
+est alors indépendant du choix de a \in F~; on l'appelle la direction de F
+et on le note \overrightarrowF
+
+Démonstration Il est clair que (ii) \rigtharrow~(i) et que (iv) \rigtharrow~(iii). D'autre
+part
+
+\begin{align*} F = a
++\overrightarrow Fa&
+\Leftrightarrow & F = \a
++\overrightarrow
+\xi~∣\overrightarrow\xi~
+\in\overrightarrow Fa\\%&
+\\ & \Leftrightarrow & F =
+a +
+\\overrightarrow\xi~∣\overrightarrow\xi~
+\in\overrightarrow Fa\\%&
+\\ & \Leftrightarrow &
+\overrightarrowFa =
+\\overrightarrowax∣x
+\in F\ \%& \\
+\end{align*}
+
+ce qui assure que (i) \Leftrightarrow(iii) et que (ii) \Leftrightarrow(iv). Il ne nous reste plus à
+montrer que (i) \rigtharrow~(iii) pour avoir les équivalences. Mais si b \in E, on a
+
+\\overrightarrowbx∣x
+\in F\ =
+\\overrightarrowba
++\overrightarrow ax∣x \in
+F\ = -\overrightarrowab +
+\\overrightarrowax∣x
+\in F\
+
+avec \overrightarrowab
+\in\\overrightarrowax∣x
+\in F\~; or un sous-espace vectoriel est stable par ses
+translations et donc -\overrightarrow ab +
+\\overrightarrowax∣x
+\in F\ =
+\\overrightarrowax∣x
+\in F\ ce qui montre à la fois que
+\\overrightarrowbx∣x
+\in F\ =
+\\overrightarrowax∣x
+\in F\ et que
+\\overrightarrowbx∣x
+\in F\ est un sous-espace vectoriel.
+
+Comme on l'a vu, on a alors
+
+\overrightarrowFb =
+\\overrightarrowbx∣x
+\in F\ =
+\\overrightarrowax∣x
+\in F\ =\overrightarrow Fa
+
+ce qui montre que \overrightarrowFa est
+indépendant du choix de a \in F.
+
+Remarque~17.1.3 On peut également traduire les propriétés (i) ou (ii)
+sous la forme~: F est un sous-espace vectoriel de Ea
+(vectorialisé de E en l'origine a). Remarquons qu'un sous-espace affine
+est nécessairement non vide.
+
+Définition~17.1.5 On appelle dimension du sous-espace affine F de E la
+dimension de \overrightarrowF.
+
+Proposition~17.1.4 Soit (Fi)i\inI une famille de
+sous-espaces affines de E. Alors
+\⋂ ~
+i\inIFi est soit l'ensemble vide, soit un sous-espace
+affine de direction \\⋂
+ i\inI\overrightarrowFi.
+
+Démonstration Supposons l'intersection non vide et soit a
+\in\⋂ ~
+i\inIFi. Alors
+
+x \in⋂ i\inIFi~
+\Leftrightarrow \forall~~i \in I,
+\overrightarrowax \in\overrightarrow
+Fi \Leftrightarrow
+\overrightarrowax \in\⋂
+i\inI\overrightarrowFi
+
+ce dernier étant un sous-espace vectoriel de
+\overrightarrowE. Ceci montre que
+\⋂ ~
+i\inIFi est un sous-espace affine et que sa direction
+est \⋂ ~
+i\inI\overrightarrowFi.
+
+Remarque~17.1.4 Ceci permet ensuite de parler de sous-espace affine
+engendré par une partie non vide de E~: c'est l'intersection de tous les
+sous-espaces affines contenant A. Cette intersection est un sous-espace
+affine contenant A et il est contenu dans tout espace affine contenant
+A. Comme dans les espaces vectoriels, ceci permet de définir le
+sous-espace affine Aff(ai~,i \in I)
+engendrée par une famille (ai)i\inI que l'on doit ici
+supposer non vide. Si i0 \in I, on vérifie immédiatement que
+
+\begin{align*}
+Aff(ai~,i \in I)& =&
+ai0 +\
+\mathrmVect(\overrightarrowai0ai,
+i \in I \diagdown\i0\)\%&
+\\ & =& ai0 +
+\\\sum
+i\inI\diagdown\i0\\lambda~i\overrightarrowai0ai\
+\%& \\ \end{align*}
+
+On en déduit que dim~
+Aff(ai~,i \in I) est inférieur ou égal
+au cardinal de I moins 1. Ceci permet également de parler de rang d'une
+famille de points.
+
+\paragraph{17.1.4 Parallélisme, intersection}
+
+Définition~17.1.6 Soit deux sous-espaces affines F et G. On dit que
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) F et G sont parallèles si \overrightarrowF
+  =\overrightarrow G
+\item
+  (ii) F est faiblement parallèle à G si
+  \overrightarrowF \subset~\overrightarrow
+  G
+\end{itemize}
+
+Théorème~17.1.5
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) Si a \in E, il existe un unique sous-espace affine passant par a et
+  parallèle à un sous-espace affine donné F
+\item
+  (ii) Si F et G sont parallèles, on a soit F = G, soit F \bigcap G = \varnothing~
+\item
+  (iii) Si F est faiblement parallèle à G , on a soit F \subset~ G, soit F \bigcap G
+  = \varnothing~
+\end{itemize}
+
+Démonstration (i) G = a +\overrightarrow F est bien
+entendu le seul qui convient. (ii) et (iii) sont évidents.
+
+Le théorème suivant va \\\\jmathmathmathmathouer un rôle important pour garantir que deux
+sous-espaces affines ont une intersection non vide
+
+Théorème~17.1.6 Soit F et G deux sous-espaces affines de E, a \in F et b \in
+G. On a équivalence de
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) F \bigcap G\neq~\varnothing~
+\item
+  (ii) \overrightarrowab
+  \in\overrightarrow F
+  +\overrightarrow G
+\end{itemize}
+
+Démonstration (i) \rigtharrow~(ii) Soit x \in F \bigcap G. On a donc
+\overrightarrowax \in\overrightarrow
+F et \overrightarrowxb
+\in\overrightarrow G, d'où
+\overrightarrowab =\overrightarrow
+ax +\overrightarrow bx
+\in\overrightarrow F +\overrightarrow
+G.
+
+(ii) \rigtharrow~(i) Ecrivons \overrightarrowab
+=\overrightarrow \xi~ +\overrightarrow
+\eta avec \overrightarrow\xi~
+\in\overrightarrow F et
+\overrightarrow\eta \in\overrightarrow
+G. On a alors b -\overrightarrow \eta = a
++\overrightarrow ab -\overrightarrow
+\eta = a +\overrightarrow \xi~. Alors le point x = b
+-\overrightarrow \eta = a
++\overrightarrow \xi~ appartient à la fois à F et à G.
+
+Remarque~17.1.5 En dimension 3 et pour deux droites non parallèles
+D1 = a + K\vecu et D2 = b +
+K\vecv, on en déduit que
+
+D1 \bigcap
+D2\neq~\varnothing~\mathrel\Leftrightarrow
+\overrightarrowab \in K\vecu +
+K\vecv \Leftrightarrow
+(\overrightarrowab,\vecu,\vecv)\text
+est liée 
+
+Corollaire~17.1.7 Soit F et G deux sous-espaces affines de E tels que
+\overrightarrowF et
+\overrightarrowG soient deux sous-espaces
+supplémentaires de \overrightarrowE. Alors F \bigcap G est
+un point.
+
+Démonstration Soit a \in F et b \in G~; on a
+\overrightarrowab \in\overrightarrow
+E =\overrightarrow F
++\overrightarrow G donc F \bigcap G n'est pas vide~; mais
+alors \overrightarrowF \bigcap G
+=\overrightarrow F \bigcap\overrightarrow
+G =
+\\overrightarrow0\
+et donc l'intersection est un point.
+
+\paragraph{17.1.5 Applications affines}
+
+Définition~17.1.7 Soit E et F deux espaces affines et f : E \rightarrow~ F. On dit
+que f est une application affine si elle vérifie
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) il existe a \in E et une application linéaire
+  \vecf de \overrightarrowE dans
+  \overrightarrowF tels que
+  \forall~~x \in E, f(x) = f(a) +\vec
+  f(\overrightarrowax)
+\item
+  (ii) il existe une application linéaire \vecf de
+  \overrightarrowE dans
+  \overrightarrowF telle que
+  \forall~~x \in E,
+  \forall~\overrightarrow\xi~~
+  \in\overrightarrow E, f(x
+  +\overrightarrow \xi~) = f(x) +\vec
+  f(\overrightarrow\xi~)
+\end{itemize}
+
+L'application linéaire \vecf est unique, on l'appelle
+l'application linéaire tangente à l'application affine f.
+
+Démonstration Il est clair que (ii) \rigtharrow~(i). Montrons donc que (i) \rigtharrow~(ii).
+On a en effet
+
+\begin{align*} f(x +\overrightarrow
+\xi~)& =& f(a +\overrightarrow ax
++\overrightarrow \xi~) = f(a) +\vec
+f(\overrightarrowax
++\overrightarrow \xi~) \%&
+\\ & =& f(a) +\vec
+f(\overrightarrowax) +\vec
+f(\overrightarrow\xi~) = f(x) +\vec
+f(\overrightarrow\xi~)\%&
+\\ \end{align*}
+
+La propriété (ii) montre que
+\vecf(\overrightarrow\xi~)
+=\overrightarrow f(x)f(x
++\overrightarrow \xi~) ce qui assure l'unicité de
+\vecf.
+
+Proposition~17.1.8
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) Si f : E \rightarrow~ F et g : F \rightarrow~ G sont deux applications affines, alors g
+  \cdot f est affine et on a \overrightarrowg \cdot f
+  =\vec g \cdot\vec f
+\item
+  (ii) f est in\\\\jmathmathmathmathective (resp. sur\\\\jmathmathmathmathective, resp. bi\\\\jmathmathmathmathective) si et
+  seulement si~\vecf est in\\\\jmathmathmathmathective (resp. sur\\\\jmathmathmathmathective,
+  resp. bi\\\\jmathmathmathmathective)
+\end{itemize}
+
+Démonstration Elémentaire.
+
+Remarque~17.1.6 Soit f une application affine de E dans E~; supposons
+que f a un point fixe a. On a alors \forall~~x \in E,
+\overrightarrowaf(x)
+=\overrightarrow f(a)f(x) =\vec
+f(\overrightarrowax) si bien qu'en identifiant E et
+\overrightarrowE par le choix de l'origine a
+(c'est-à-dire en identifiant x et \overrightarrowax),
+f s'identifie à \vecf. Une application affine ayant
+un point fixe s'identifie, par le choix d'un tel point fixe comme
+origine, à son application linéaire tangente. Il est donc
+particulièrement important de savoir qu'une application affine a un
+point fixe.
+
+Théorème~17.1.9 Soit E un espace affine de dimension finie, f : E \rightarrow~ E
+une application affine. Si 1 n'est pas valeur propre de
+\vecf, alors f a un unique point fixe.
+
+Démonstration Soit a \in E. On a
+
+\begin{align*}
+\overrightarrowxf(x)& =&
+\overrightarrowxa +\overrightarrow
+af(a) +\overrightarrow f(a)f(x) =
+-\overrightarrowax +\overrightarrow
+af(a) +\vec
+f(\overrightarrowax)\%&
+\\ & =& (\vecf
+-\mathrmId)(\overrightarrowax)
++\overrightarrow af(a) \%&
+\\ \end{align*}
+
+On en déduit que
+
+\begin{align*} x = f(x)&
+\Leftrightarrow & (\vecf
+-\mathrmId)(\overrightarrowax)
++\overrightarrow af(a)
+=\overrightarrow 0\%&
+\\ & \Leftrightarrow &
+(\vecf
+-\mathrmId)(\overrightarrowax)
+=\overrightarrow f(a)a \%&
+\\ \end{align*}
+
+Mais comme 1 n'est pas valeur propre de \vecf,
+\vecf -\mathrmId est bi\\\\jmathmathmathmathective et
+donc l'équation précédente définit un unique vecteur
+\overrightarrowax et donc un unique point x.
+
+Ceci nous amène à étudier certaines applications affines particulières.
+
+Définition~17.1.8 Soit \overrightarrow\xi~
+\in\overrightarrow E. On appelle translation de vecteur
+\overrightarrow\xi~ l'application
+t\overrightarrow\xi~ :
+x\mapsto~x +\overrightarrow \xi~.
+
+Définition~17.1.9 Soit a \in E et \lambda~ \in K^∗. On appelle
+homothétie de centre a de rapport \lambda~ l'application ha,\lambda~ :
+x\mapsto~a + \lambda~ \overrightarrowax.
+
+Proposition~17.1.10 Soit f une application affine de E dans E. Alors
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) f est une translation si et seulement si~\vecf
+  = \mathrmId
+\item
+  (ii) f est une homothétie de rapport \lambda~\neq~1 si
+  et seulement si~\vecf =
+  \lambda~\mathrmId.
+\end{itemize}
+
+Démonstration Si f est une translation de vecteur
+\overrightarrow\xi~, on a f(x
++\overrightarrow \eta) = x
++\overrightarrow \eta +\overrightarrow
+\xi~ = f(x) +\overrightarrow \eta ce qui montre que
+\vecf = \mathrmId. Inversement, si
+\vecf = \mathrmId, soit a \in E et
+\overrightarrow\xi~ =\overrightarrow
+af(a)~; alors f(x) = f(a) +\vec
+f(\overrightarrowax) = f(a)
++\overrightarrow ax = a
++\overrightarrow \xi~ +\overrightarrow
+ax = x +\overrightarrow \xi~ ce qui montre que f est
+la translation t\overrightarrow\xi~.
+
+Si f = ha,\lambda~, la définition même montre que
+\vecf = \lambda~\mathrmId. Inversement,
+si \vecf = \lambda~\mathrmId avec
+\lambda~\neq~1, \vecf
+-\mathrmId est bi\\\\jmathmathmathmathective et le même raisonnement que
+ci dessus montre que f a un unique point fixe a. Mais alors f(x) = f(a)
++\vec f(\overrightarrowax) = a + \lambda~
+\overrightarrowax, donc f = ha,\lambda~.
+
+Remarque~17.1.7 Considérons le groupe GA(E) des applications affines
+bi\\\\jmathmathmathmathectives de E dans E~; on dispose de l'application
+f\mapsto~\vecf de GA(E) dans
+GL(E) qui est visiblement un morphisme de groupes. L'ensemble constitué
+des homothéties et des translations est l'image réciproque par cette
+application du sous-groupe K^∗\mathrmId de
+GL(E). Il s'agit donc d'un sous-groupe de GA(E). On peut préciser ce
+résultat en utilisant \overrightarrowg \cdot f
+=\vec g \cdot\vec f~:la composée de
+deux translations est une translation, la composée d'une homothétie et
+d'une translation (dans n'importe quel ordre) est une homothétie, la
+composée de deux homothéties est en général une homothétie, à moins que
+le produit des deux rapports soit égal à 1 auquel cas la composée est
+une translation.
+
+\paragraph{17.1.6 Utilisation de repères affines}
+
+Théorème~17.1.11 Soit
+(a,(\vecei)i\inI) un repère affine
+de l'espace affine E. Soit b un point de l'espace affine F et
+(\vecui)i\inI une famille de
+vecteurs de \overrightarrowF. Alors il existe une
+unique application affine f : E \rightarrow~ F vérifiant f(a) = b et
+\forall~~i \in I,
+\vecf(\vecei)
+=\vec ui.
+
+Démonstration On a en effet nécessairement f(x) = f(a
++ \\sum ~
+xi\vecei) = f(a)
++ \\sum ~
+xi\vecf(\vecei)
+= b + \\sum ~
+i\inIxi\vecui. Inversement,
+il est clair que f ainsi définie convient.
+
+Corollaire~17.1.12 Soit (ai)i\inI une base affine de E
+et (bi)i\inI une famille de points de F. Il existe une
+unique application affine f : E \rightarrow~ F vérifiant
+\forall~i \in I,f(ai) = bi~.
+
+Démonstration En effet, si i0 \in I,
+(ai0,(\overrightarrowai0ai)i\inI\diagdown\i0\)
+est un repère de E et
+
+\begin{align*} \forall~~i \in
+I,f(ai) = bi&& \%&
+\\ & \Leftrightarrow &
+f(ai0) =
+bi0\text et
+\forall~~i \in I
+\diagdown\i0\,
+\overrightarrowf(ai0)f(ai)
+=\overrightarrow
+bi0bi\%&
+\\ & \Leftrightarrow &
+f(ai0) =
+bi0\text et
+\forall~~i \in I
+\diagdown\i0\,
+\vecf(\overrightarrowai0ai)
+=\overrightarrow bi0bi
+\%& \\ \end{align*}
+
+ce qui ramène au problème précédent.
+
+Supposons E et F de dimensions finies. Soit
+(a,(\vece\\\\jmathmathmathmath)1\leqi\leqn) un repère
+affine de l'espace affine E et
+(b,(\vecfi)1\leqi\leqp) un repère
+affine de F, soit u : E \rightarrow~ F une application affine. Considérons A =
+(ai,\\\\jmathmathmathmath)1\leqi\leqp,1\leq\\\\jmathmathmathmath\leqn =\
+\mathrmMat
+(\vecu,(\vece\\\\jmathmathmathmath)1\leq\\\\jmathmathmathmath\leqn,(\vecfi)1\leqi\leqp)
+la matrice de l' application linéaire \vecu dans les
+bases respectives de \overrightarrowE et
+\overrightarrowF. On a donc
+\vecu(\vece\\\\jmathmathmathmath)
+= \\sum ~
+i=1^pai,\\\\jmathmathmathmath\vecfi.
+Posons u(a) = b +\ \\sum
+
+i=1^p\alpha~i\vecfi.
+Soit x = a + \\sum ~
+\\\\jmathmathmathmath=1^nx\\\\jmathmathmathmath\vece\\\\jmathmathmathmath \in E.
+On a alors
+
+\begin{align*} u(x)& =& u(a) +
+\sum \\\\jmathmathmathmath=1^nx~
+\\\\jmathmathmathmath\vecu(\vece\\\\jmathmathmathmath) = b +
+\sum i=1^p\alpha~~
+i\vecfi + \\sum
+\\\\jmathmathmathmath=1^nx \\\\jmathmathmathmath \\sum
+i=1^pa
+i,\\\\jmathmathmathmath\vecfi\%&
+\\ & =& b + \\sum
+i=1^p\left (\alpha~ i +
+\sum \\\\jmathmathmathmath=1^na~
+i,\\\\jmathmathmathmathx\\\\jmathmathmathmath\right
+)\vecfi \%&
+\\ \end{align*}
+
+Donc les coordonnées
+y1,\\ldots,yp~
+de u(x) dans le repère
+(b,(\vecfi)1\leqi\leqp) de F sont
+données par
+
+\forall~i \in {[}1,p{]}, yi~ =
+\sum \\\\jmathmathmathmath=1^na~
+i,\\\\jmathmathmathmathx\\\\jmathmathmathmath + \alpha~i
+
+Introduisons les vecteurs colonnes X = \left
+(\matrix\,x1
+\cr \⋮~
+\cr xn \cr 1
+\right ), Y = \left
+(\matrix\,y1
+\cr \⋮~
+\cr yp \cr 1
+\right ) et A' = \left
+(\matrix\,A
+&\matrix\,\alpha~1
+\cr \⋮~
+\cr \alpha~p \cr
+\matrix\,0&\\ldots&0~&1
+\right ). On a alors
+
+y = u(x) \Leftrightarrow Y = A'X
+
+Définition~17.1.10 On dira que X = \left
+(\matrix\,x1
+\cr \⋮~
+\cr xn \cr 1
+\right ) est le vecteur colonne des coordonnées du
+point x = a + \\sum ~
+\\\\jmathmathmathmath=1^nx\\\\jmathmathmathmath\vece\\\\jmathmathmathmath dans
+le repère affine
+(a,(\vece\\\\jmathmathmathmath)1\leq\\\\jmathmathmathmath\leqn) de E. La
+matrice A' = \left
+(\matrix\,A
+&\matrix\,\alpha~1
+\cr \⋮~
+\cr \alpha~p \cr
+\matrix\,0&\\ldots&0~&1
+\right ) (où A = (ai,\\\\jmathmathmathmath)1\leqi\leqp,1\leq\\\\jmathmathmathmath\leqn
+= \mathrmMat~
+(\vecu,(\vece\\\\jmathmathmathmath)1\leq\\\\jmathmathmathmath\leqn,(\vecfi)1\leqi\leqp)
+est la matrice de l' application linéaire \vecu dans
+les bases respectives de \overrightarrowE et
+\overrightarrowF et u(a) = b
++ \\sum ~
+i=1^p\alpha~i\vecfi)
+sera appelée la matrice de l'application affine u dans les repères
+(a,(\vece\\\\jmathmathmathmath)1\leq\\\\jmathmathmathmath\leqn) et
+(b,(\vecfi)1\leqi\leqp).
+
+\paragraph{17.1.7 Formes affines et sous-espaces affines}
+
+Définition~17.1.11 On appelle forme affine sur E toute application
+affine f de E dans K.
+
+Remarque~17.1.8 Si E est de dimension finie n, soit
+(a,(\vece\\\\jmathmathmathmath)1\leq\\\\jmathmathmathmath\leqn) un repère
+affine de E. L'étude précédente sur la matrice d'une application affine
+montre que f : E \rightarrow~ K est une forme affine si et seulement si~elle est de
+la forme x = a +\ \\sum
+
+\\\\jmathmathmathmath=1^nx\\\\jmathmathmathmath\vece\\\\jmathmathmathmath\mapsto~\\\sum
+ \\\\jmathmathmathmath=1^na\\\\jmathmathmathmathx\\\\jmathmathmathmath + \alpha~.
+
+Théorème~17.1.13 Soit E un espace affine de dimension n et F une partie
+de E. Alors on a équivalence de
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) F est un sous-espace affine de E de dimension p
+\item
+  (ii) il existe des formes affines
+  f1,\\ldots,fn-p~
+  telles que la famille
+  (\vecf1,\\ldots,\vecfn-p~)
+  soit libre et F = \x \in
+  E∣f1(x) =
+  \\ldots~ =
+  fn-p(x) = 0\.
+\end{itemize}
+
+Démonstration Soit tout d'abord F un sous-espace affine de dimension p
+de direction \overrightarrowF. Soit
+(\vecf1,\\ldots,\vecfn-p~)
+une base de l'orthogonal de \overrightarrowF dans le
+dual \overrightarrowE^∗ de l'espace
+vectoriel \overrightarrowE. On a alors
+
+\overrightarrow\xi~ \in\overrightarrow
+F \Leftrightarrow \forall~~i \in {[}1,n -
+p{]},
+\vecfi(\overrightarrow\xi~)
+= 0
+
+Soit a \in F et soit fi la forme affine qui vaut 0 au point a et
+d'application linéaire tangente \vecfi,
+c'est-à-dire définie par fi(x) =\vec
+fi(\overrightarrowax). Alors
+
+\begin{align*} x \in F& \Leftrightarrow
+& \overrightarrowax
+\in\overrightarrow F \Leftrightarrow
+\forall~~i \in {[}1,n - p{]},
+\vecfi(\overrightarrowax)
+=\overrightarrow 0\%&
+\\ & \Leftrightarrow &
+\forall~i \in {[}1,n - p{]}, fi~(x) = 0 \%&
+\\ \end{align*}
+
+ce qui montre que (i) \rigtharrow~(ii).
+
+Inversement, soit a \in E. Nous allons tout d'abord démontrer que si (ii)
+est vérifiée alors F n'est pas vide. Pour cela, complétons
+(\vecf1,\\ldots,\vecfn-p~)
+en une base
+(\vecf1,\\ldots,\vecfn~)
+de \overrightarrowE^∗. Soit
+(\vece1,\\ldots,\vecen~)
+une base dont c'est la duale, si bien que
+\vecfi(\vece\\\\jmathmathmathmath)
+= \deltai^\\\\jmathmathmathmath. Posons b = a
+-\\sum ~
+i=1^n-pfi(a)\vecei.
+On a alors f\\\\jmathmathmathmath(b) = f\\\\jmathmathmathmath(a)
+-\\sum ~
+i=1^n-pfi(a)\vecf\\\\jmathmathmathmath(\vecei)
+= f\\\\jmathmathmathmath(a) -\\\sum
+ i=1^pfi(a)\deltai^\\\\jmathmathmathmath =
+f\\\\jmathmathmathmath(a) - f\\\\jmathmathmathmath(a) = 0 si bien que b appartient à F. On a
+alors
+
+\begin{align*} x \in F& \Leftrightarrow
+& \forall~i \in {[}1,n - p{]}, fi~(x) = 0
+\%& \\ & \Leftrightarrow &
+\forall~i \in {[}1,n - p{]}, fi~(b)
++\vec
+fi(\overrightarrowbx) = 0 \%&
+\\ & \Leftrightarrow &
+\forall~~i \in {[}1,n - p{]},
+\vecfi(\overrightarrowbx)
+= 0 \%& \\ &
+\Leftrightarrow & \forall~~i \in {[}1,n -
+p{]}, \overrightarrowbx \in
+(\vecf1,\\ldots,\vecfn-p)^\bot~\%&
+\\ \end{align*}
+
+On a donc F = b +
+(\vecf1,\\ldots,\vecfn-p)^\bot~
+qui est un sous-espace affine de dimension p.
+
+De fa\ccon plus pratique, dans un repère de E, on en
+déduit que F est un sous-espace affine de dimension p si et seulement
+si~F est l'ensemble des solutions d'un système de n - p équations
+linéaires de rang n - p
+
+x \in F\quad \Leftrightarrow
+\quad \left
+\\array \alpha~1,1x1 +
+\\ldots~ +
+\alpha~1,nxn & = \beta~1 \cr
+&\\ldots~\cr
+\alpha~ n-p,1x1 +
+\\ldots~ +
+\alpha~n-p,nxn& = \beta~n-p  \right
+.
+
+en posant fi(x) = \alpha~i,1x1 +
+\\ldots~ +
+\alpha~i,nxn - \beta~i (et donc
+\vecfi(\overrightarrow\xi~)
+= \alpha~i,1x1 +
+\\ldots~ +
+\alpha~i,nxn).
+
+Exemple~17.1.1 Un hyperplan affine (sous-espace affine de dimension n -
+1) est tou\\\\jmathmathmathmathours défini par F = \x \in
+E∣f(x) = 0\ où f est une
+forme affine telle que
+\vecf\neq~0 (soit f non
+constante). Autrement dit, avec des coordonnées dans un repère, un
+hyperplan est défini par une équation u1x1 +
+\\ldots~ +
+unxn + h = 0 avec
+(u1,\\ldots,un)\neq~(0,\\\ldots~,0).
+
+De la même fa\ccon, dans un espace de dimension 3,
+une droite est définie par deux équations
+
+\left \\array ax + by +
+cz + h& = 0\cr a'x + b'y + c'z + h' & = 0 
+\right .
+
+où la matrice \left
+(\matrix\,a&b&c\cr a'
+&b' &c'\right ) est de rang 2.
+
+Théorème~17.1.14 (faisceaux d'hyperplans). Soit E un espace affine de
+dimension finie, H1 et H2 deux hyperplans non
+parallèles d'équations f1(x) = 0 et f2(x) = 0. Alors
+les hyperplans contenant H1 \bigcap H2 sont exactement les
+hyperplans d'équations \lambda~1f1(x) +
+\lambda~2f2(x) = 0 avec
+(\lambda~1,\lambda~2)\neq~(0,0).
+
+Démonstration Les hyperplans vectoriels
+\overrightarrowH1 et
+\overrightarrowH2 sont définis par les
+équations
+\vecf1(\overrightarrow\xi~)
+= 0 et
+\vecf2(\overrightarrow\xi~)
+= 0. Comme ils sont distincts, ces formes linéaires
+\vecf1 et
+\vecf2 ne sont pas proportionnelles, et
+donc
+(\vecf1,\vecf2)
+est libre. On en déduit que F = H1 \bigcap H2 =
+\x \in E∣f1(x) =
+f2(x) = 0\ est un sous-espace affine de
+dimension n - 2 de E, en particulier F\neq~\varnothing~.
+Soit a \in F. Alors
+
+x \in F \Leftrightarrow
+\vecf1(\overrightarrowax)
+=\vec
+f2(\overrightarrowax) = 0
+\Leftrightarrow \overrightarrowax
+\in\mathrmVect(\vecf1,\vecf2)^\bot~
+
+si bien que \overrightarrowF
+=\
+\mathrmVect(\vecf1,\vecf2)^\bot
+Soit H un hyperplan et f une équation de H. Alors
+
+\begin{align*} F \subset~ H& \Leftrightarrow
+& f(a) = 0\text et
+\forall~\overrightarrow\xi~~ \in F,
+\vecf(\overrightarrow\xi~) = 0 \%&
+\\ & \Leftrightarrow & f(a)
+= 0\text et \vecf
+\in\left
+(\mathrmVect(\vecf1,\vecf2)^\bot~\right
+)^\bot\%& \\ &
+\Leftrightarrow & f(a) = 0\text et
+\vecf
+\in\mathrmVect(\vecf1,\vecf2~)
+\%& \\ \end{align*}
+
+Mais comme f1(a) = f2(a) = 0, la condition f =
+\lambda~1f1 + \lambda~2f2 est manifestement
+équivalente à f(a) = 0 et \vecf =
+\lambda~1\vecf1 +
+\lambda~2\vecf2 ce qui nous donne le
+résultat souhaité.
+
+Exemple~17.1.2 Dans un espace de dimension 3, soit D la droite
+d'équations
+
+\left \\array ax + by +
+cz + h& = 0\cr a'x + b'y + c'z + h' & = 0 
+\right .
+
+où la matrice \left
+(\matrix\,a&b&c\cr a'
+&b' &c'\right ) est de rang 2. Alors les plans
+contenant D sont exactement les plans d'équations \lambda~1(ax + by +
+cz + h) + \lambda~2(a'x + b'y + c'z + h') = 0 avec
+(\lambda~1,\lambda~2)\neq~(0,0).
+
+De même en dimension 2, si un point A est défini comme intersection de
+deux droites non parallèles d'équations ax + by + c = 0 et a'x + b'y +
+c' = 0, les droites contenant A sont exactement les droites admettant
+comme équations \lambda~1(ax + by + c) + \lambda~2(a'x + b'y + c')
+= 0 avec (\lambda~1,\lambda~2)\neq~(0,0).
+
+{[}
+{[}

@@ -1,0 +1,254 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{18.3 Problèmes classiques sur les courbes}
+
+\paragraph{18.3.1 Tra\\\\jmathmathmathmathectoires orthogonales}
+
+Ce paragraphe ne fait pas partie du programme des classes préparatoires.
+
+Soit E un espace euclidien.
+
+Soit (\Gamma\lambda~)\lambda~\inJ une famille d'arcs paramétrés indexée
+par un intervalle J de \mathbb{R}~ où \Gamma\lambda~ = (I,F\lambda~). On posera
+encore F\lambda~(t) = F(t,\lambda~) et on supposera que F : I \times J \rightarrow~ E est de
+classe \mathcal{C}^1.
+
+Donnons nous un arc paramétré (K,G) qui rencontre tous les \Gamma\lambda~.
+Le point u \in K de G est donc le point t(u) de l'arc \Gamma\lambda~(u) si
+bien que G(u) = F\lambda~(u)(t(u)) = F(t(u),\lambda~(u)). On obtient ainsi
+un arc paramétré u\mapsto~F(t(u),\lambda~(u)). On dira que
+c'est une tra\\\\jmathmathmathmathectoire orthogonale de la famille (\Gamma\lambda~) si cet
+arc est orthogonal à l'arc \Gamma\lambda~(u) au point t(u). On obtient
+donc la définition suivante~:
+
+Définition~18.3.1 On appelle tra\\\\jmathmathmathmathectoire orthogonale des arcs
+\Gamma\lambda~ tout arc paramétré (K,G) de la forme G(u) = F(t(u),\lambda~(u)),
+où u\mapsto~t(u) est une application de classe
+\mathcal{C}^1 de K dans I et u\mapsto~\lambda~(u) une
+application de classe \mathcal{C}^1 de K dans J telles que
+\forall~u \in K, F\lambda~(u)~'(t(u)) \bot G'(u)
+
+La recherche s'effectue en remarquant que F\lambda~'(t) = \partial~F
+\over \partial~t (t,\lambda~), soit F\lambda~(u)'(t(u)) = \partial~F
+\over \partial~t (t(u),\lambda~(u)) et que G'(u) = dt
+\over du (u) \partial~F \over \partial~t (t(u),\lambda~(u))
++ d\lambda~ \over du (u) \partial~F \over \partial~\lambda~
+(t(u),\lambda~(u)). La condition F\lambda~(u)'(t(u),\lambda~(u)) \bot G'(u) s'écrit
+donc
+
+\left ( \partial~F \over \partial~t
+(t(u),\lambda~(u))∣ dt \over du
+(u) \partial~F \over \partial~t (t(u),\lambda~(u)) + d\lambda~
+\over du (u) \partial~F \over \partial~\lambda~
+(t(u),\lambda~(u))\right ) = 0
+
+soit encore, en termes de formes différentielles
+
+\left ( \partial~F \over \partial~t
+(t,\lambda~)∣ \partial~F \over \partial~t (t,\lambda~)
+dt + \partial~F \over \partial~\lambda~ (t,\lambda~) d\lambda~\right ) = 0
+
+qui conduit à une équation différentielle reliant t et \lambda~.
+
+Exemples~: prenons la famille de paraboles y = x^2 + \lambda~, \lambda~ \in
+\mathbb{R}~. On peut les paramétrer par F(t,\lambda~) = (t,t^2 + \lambda~). On a
+alors  \partial~F \over \partial~t (t,\lambda~) = (1,2t) et  \partial~F
+\over \partial~\lambda~ (t,\lambda~) = (0,1). L'équation ci dessus s'écrit
+encore \\textbar{} \partial~F \over \partial~t
+(t,\lambda~)\\textbar{}^2 dt + \left
+( \partial~F \over \partial~t (t,\lambda~)∣ \partial~F
+\over \partial~\lambda~ (t,\lambda~)\right ) d\lambda~ = 0, soit ici
+(1 + 4t^2) dt + 2t d\lambda~ = 0. Il s'agit d'une équation à
+variable séparable. Elle s'écrit encore (2t + 1 \over
+2t )dt = -d\lambda~. On trouve donc \lambda~ = -t^2 - 1
+\over 2  log~
+\textbar{}t\textbar{} + \lambda~0, soit (t,t^2 + \lambda~) =
+(t,- 1 \over 2  log~
+\textbar{}t\textbar{} + \lambda~0) et donc les tra\\\\jmathmathmathmathectoires
+orthogonales sont équivalentes aux arcs
+t\mapsto~(t,- 1 \over 2
+ log t + \lambda~0~). En fait la division
+par t nous a fait perdre une solution évidente t = 0 correspondant à
+l'axe Oy.
+
+\paragraph{18.3.2 Inverse d'une courbe}
+
+Ce paragraphe ne fait pas partie du programme des classes préparatoires.
+
+Rappelons que si E est un espace affine euclidien, on appelle inversion
+de pôle O \in E l'application de E \diagdown\O\
+dans lui même qui à M \in E \diagdown\O\ associe
+l'unique point M' défini par
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) O,M et M' sont alignés
+\item
+  (ii) \overlineOM.\overlineOM' =
+  1
+\end{itemize}
+
+On vérifie immédiatement que M' = O +
+\overrightarrowOM \over
+\\textbar{}\overrightarrowOM\\textbar{}^2
+.
+
+Etant donné un arc (I,F) de E dont l'image est contenue dans E
+\diagdown\O\, on peut alors définir son
+inverse de pôle O~; c'est l'arc (I,G) tel que, pour tout t \in I, G(t)
+soit l'inverse de F(t).
+
+Supposons que E soit un plan euclidien rapporté à un repère orthonormé
+(O,\vec\imath,\vecȷ) et que
+\overrightarrowOF(t) = x(t)\vec\imath +
+y(t)\vecȷ. On a alors
+\overrightarrowOG(t) = X(t)\vec\imath +
+Y (t)\vecȷ avec
+
+X(t) = x(t) \over x(t)^2 +
+y(t)^2 ,\quad Y (t) = y(t)
+\over x(t)^2 + y(t)^2
+
+Si \Gamma = (I,F) est donné en polaires par l'équation \rho = f(\theta), on a
+\overrightarrowOF(\theta) =
+f(\theta)\vecu(\theta) et alors
+\overrightarrowOG(\theta) = 1 \over
+f(\theta) \vecu(\theta), si bien que l'inverse est donnée par
+l'équation polaire \rho = 1 \over f(\theta) .
+
+Exemple~18.3.1 Inverse des coniques de foyer O. On a vu qu'une telle
+conique admettait une équation polaire \rho = p \over
+1+e cos (\theta-\theta0)~ . L'inverse d'une
+telle conique est donc une courbe d'équation polaire \rho =
+1+e cos (\theta-\theta0~) \over
+p , soit encore (à une rotation près autour de l'origine) \rho = a(1 +
+ecos~ \theta). On obtient la famille des
+lima\ccons de Pascal (avec le cas particulier de la
+cardioïde, pour e = 1, qui est l'inverse d'une parabole par rapport à
+son foyer).
+
+\paragraph{18.3.3 Podaire d'une courbe}
+
+Ce paragraphe ne fait pas partie du programme des classes préparatoires.
+
+Soit E un espace affine euclidien, (I,F) un arc paramétré régulier de E
+et A un point de E.
+
+Définition~18.3.2 On appelle podaire de l'arc (I,F) par rapport au point
+A l'arc (I,G) où pour chaque t \in I, G(t) est la pro\\\\jmathmathmathmathection orthogonale
+de A sur la tangente au point t à l'arc (I,F).
+
+Comme cette tangente est définie comme F(t) + \mathbb{R}~F'(t), il suffit donc
+d'exprimer que la famille
+(F'(t),\overrightarrowF(t)G(t)) est liée et que
+\overrightarrowAG(t) \bot F'(t).
+
+Supposons que E soit un plan euclidien rapporté à un repère orthonormé
+(O,\vec\imath,\vecȷ) et que
+\overrightarrowOF(t) = x(t)\vec\imath +
+y(t)\vecȷ. Posons
+\overrightarrowOA = a\vec\imath +
+b\vecȷ et \overrightarrowOG(t) =
+X(t)\vec\imath + Y (t)\vecȷ. On doit
+donc écrire
+
+\left
+\textbar{}\matrix\,X(t) - x(t)&x'(t)
+\cr Y (t) - y(t)&y'(t)\right \textbar{}
+= 0\text et (X(t) - a)x'(t) + (Y (t) - b)y'(t) = 0
+
+ce qui conduit à un système de Cramer aux inconnues X(t) et Y (t)
+
+\left
+\\matrix\,y'(t)X(t) -
+x'(t)Y (t) = y'(t)x(t) - x'(t)y(t) \cr X(t)x'(t) + Y
+(t)y'(t) = ax'(t) + by'(t)\right .
+
+Exemple~18.3.2 Recherchons la podaire d'un cercle par rapport à un point
+du plan. On choisissant convenablement le repère, on peut supposer que
+le cercle est paramétré par t\mapsto~(a +
+Rcos t,R\sin~ t) avec
+a ≥ 0 et R \textgreater{} 0 et que le point A a pour coordonnées (0,0).
+Le système ci dessus devient alors (après simplification par R)
+
+\left
+\\matrix\,cos~
+tX(t) + sin~ tY (t) =
+acos~ t + R \cr
+-sin tX(t) +\ cos~ tY
+(t) = 0\right .
+
+d'où l'on déduit X(t) = (acos~ t +
+R)cos~ t et Y (t) =
+(acos t + R)\sin~ t.
+On en déduit que la podaire est la courbe d'équation polaire \rho =
+acos~ \theta + R. Il s'agit d'un
+lima\ccon de Pascal (évidemment dégénéré en un cercle
+si a = 0 c'est-à-dire si le cercle de départ est centré en A). On trouve
+une cardioïde lorsque a = R, c'est-à-dire lorsque le cercle passe par A.
+
+\paragraph{18.3.4 Conchoïdes d'une courbe}
+
+Ce paragraphe ne fait pas partie du programme des classes préparatoires.
+
+Soit \Gamma = (I,F) un arc paramétré d'un plan euclidien E, O un point de E
+n'appartenant pas à l'image de \Gamma et a \textgreater{} 0. On associe à \Gamma
+les arcs \Gamma1 = (I,F1) et \Gamma2 =
+(I,F2), appelés conchoïdes de centre O pour la longueur a, où
+Fi(t) est défini pour i
+\in\1,2\ par
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) O,F(t) et Fi(t) sont alignés
+\item
+  (ii) la distance de F(t) à Fi(t) est égale à a.
+\end{itemize}
+
+Supposons que E soit un plan euclidien rapporté à un repère orthonormé
+(O,\vec\imath,\vecȷ) et que
+\overrightarrowOF(t) = x(t)\vec\imath +
+y(t)\vecȷ. On a alors
+\overrightarrowOFi(t) =
+Xi(t)\vec\imath + Y
+i(t)\vecȷ avec
+
+X(t) = x(t) ± a x(t) \over
+\sqrtx(t)^2  + y(t)^2
+,\quad Y (t) = y(t) ± a y(t) \over
+\sqrtx(t)^2  + y(t)^2
+
+Si \Gamma = (I,F) est donné en polaires par l'équation \rho = f(\theta), on a
+\overrightarrowOF(\theta) =
+f(\theta)\vecu(\theta) et alors
+\overrightarrowOFi(\theta) = (f(\theta) ±
+a)\vecu(\theta), si bien que les conchoïdes sont donnés
+par l'équation polaire \rho = f(\theta) ± a.
+
+Exemple~18.3.3 Conchoïdes d'un cercle par rapport à l'un de ses points.
+En choisissant convenablement le repère d'origine 0, le cercle a pour
+équation polaire \rho = 2Rcos~ \theta si bien que les
+deux conchoïdes ont pour équation polaire \rho =
+2Rcos~ \theta ± a. Remarquons que les deux courbes
+d'équations polaires \rho = 2Rcos~ \theta + a et \rho =
+2Rcos~ \theta - a se déduisent l'une de l'autre par
+le changement de (\rho,\theta) en (-\rho,\theta + \pi~) ce qui redonne le même point
+géométrique. Elles ont donc la même image. Ce sont des
+lima\ccons de Pascal, le cas de la cardioïde
+correspondant à a = 2R (la longueur a est égale au diamètre du cercle).
+
+{[}
+{[}
+{[}
+{[}

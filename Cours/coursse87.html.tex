@@ -1,0 +1,147 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{16.2 Théorie de Cauchy-Lipschitz}
+
+\paragraph{16.2.1 Unicité de solutions, solutions maximales}
+
+Définition~16.2.1 Soit E un espace vectoriel normé de dimension finie, U
+un ouvert de \mathbb{R}~ \times E et F : U \rightarrow~ E. On dira que F vérifie la condition
+d'unicité du problème de Cauchy Lipschitz si pour toutes solutions (I,\phi)
+et (J,\psi) de l'équation différentielle y' = F(t,y) qui coïncident en un
+point t0 \in I \bigcap J (c'est-à-dire que \phi(t0) =
+\psi(t0)), on a
+
+\forall~~t \in I \bigcap J, \phi(t) = \psi(t)
+
+Définition~16.2.2 Soit E un espace vectoriel normé de dimension finie, U
+un ouvert de \mathbb{R}~ \times E et F : U \rightarrow~ E. On dira que F vérifie la condition
+d'existence au problème de Cauchy-Lipschitz, si pour tout
+(t0,y0) \in U, il existe \eta \textgreater{} 0 et une
+solution ({]}t0 - \eta,t0 + \eta{[},\phi) de l'équation
+différentielle y' = F(t,y) vérifiant la condition \phi(t0) =
+y0.
+
+Définition~16.2.3 Soit (I,\phi) et (J,\psi) deux solutions de l'équation
+différentielle y' = F(t,y). On dira que (J,\psi) est un prolongement de
+(I,\phi), et on notera (I,\phi) \prec~ (J,\psi) si I \subset~ J et \phi est la restriction de \psi
+à I.
+
+Remarque~16.2.1 Il est clair qu'il s'agit d'une relation d'ordre partiel
+sur l'ensemble des solutions de l'équation différentielle.
+
+Définition~16.2.4 On appelle solution maximale de l'équation
+différentielle y' = F(t,y) toute solution (I,\phi) qui est maximale pour la
+relation d'ordre \prec~.
+
+Remarque~16.2.2 Ceci signifie donc qu'il n'existe aucune solution
+définie sur un intervalle I' contenant strictement I et qui prolonge \phi.
+
+Théorème~16.2.1 (existence et unicité d'une solution maximale à
+condition initiale donnée). On suppose que F vérifie les conditions
+d'existence et d'unicité au problème de Cauchy Lipschitz. Soit
+(t0,y0) \in U~; alors il existe une unique solution
+maximale (I0,\phi0) de l'équation différentielle y' =
+F(t,y) qui vérifie \phi0(t0) = y0. Pour toute
+solution (J,\psi) de l'équation différentielle vérifiant \psi(t0) =
+y0, on a~:
+
+\text\$J \subset~ I0\$ et \$\psi\$ est la restriction
+de \$\phi0\$ à \$J\$.
+
+Démonstration Unicité~: Soit (I0,\phi0) et
+(I1,\phi1) deux solutions maximales vérifiant
+\phi0(t0) = \phi1(t0) = y0.
+Définissons I2 = I0 \cup I1 et soit
+\phi2 l'application de I2 dans E définie par
+\phi2(t) = \left \
+\cases \phi0(t)&si t \in I0
+\cr \phi1(t)&si t \in I1\\ 
+\right .. Comme \phi0 et \phi1 coïncident
+sur I0 \bigcap I1, \phi2 est bien définie. On
+vérifie facilement qu'elle est de classe \mathcal{C}^1 et solution de
+l'équation différentielle y' = F(t,y). La maximalité de
+(I0,\phi0) et (I1,\phi1) exige alors
+I2 = I0 = I1 et \phi2 =
+\phi0 = \phi1, ce qui montre l'unicité de la solution
+maximale.
+
+Existence Soit \left
+((I\\\\jmathmathmathmath,\psi\\\\jmathmathmathmath)\right )\\\\jmathmathmathmath\inℱ la
+famille de toutes les solutions de l'équation différentielle y' = F(t,y)
+définies sur un intervalle I\\\\jmathmathmathmath non réduit à un point contenant
+t0 et vérifiant \psi\\\\jmathmathmathmath(t0) = y0~;
+cette famille est non vide puisque la fonction F vérifie la condition
+d'existence au problème de Cauchy-Lipschitz. Posons I0
+= \⋃ ~
+\\\\jmathmathmathmath\inℱI\\\\jmathmathmathmath et définissons \phi0 : I0 \rightarrow~ E
+par \phi0(t) = \psi\\\\jmathmathmathmath(t) si t \in I\\\\jmathmathmathmath. Cette
+définition est bien cohérente car si t \in I\\\\jmathmathmathmath \bigcap Ik,
+alors \psi\\\\jmathmathmathmath et \psik coïncident sur I\\\\jmathmathmathmath \bigcap
+Ik, et en particulier \psi\\\\jmathmathmathmath(t) = \psik(t). On
+vérifie facilement que la fonction \phi0 est de classe
+\mathcal{C}^1 et si t \in I\\\\jmathmathmathmath, on a \phi'0(t) =
+\psi\\\\jmathmathmathmath'(t) = F(t,\psi\\\\jmathmathmathmath(t)) = F(t,\phi0(t)) ce qui
+montre que (I0,\phi0) est bien une solution de
+l'équation différentielle~; cette solution vérifie bien entendu
+\phi0(t0) = y0. De plus, si
+(I0,\phi0) \prec~ (I1,\phi1), on a
+\phi1(t0) = \phi0(t0) = y0,
+ce qui montre que (I1,\phi1) est l'une des
+(I\\\\jmathmathmathmath,\psi\\\\jmathmathmathmath) et que donc I1 \subset~ I0~; on
+a donc finalement I0 = I1 et \phi0 =
+\phi1 ce qui montre que cette solution est maximale.
+
+Si (J,\psi) est une solution de l'équation différentielle vérifiant
+\psi(t0) = y0, alors (J,\psi) est l'une des
+(I\\\\jmathmathmathmath,\psi\\\\jmathmathmathmath) ce qui montre que J \subset~ I0 et que \psi
+= \psi\\\\jmathmathmathmath est la restriction de \phi0 à J = I\\\\jmathmathmathmath.
+Ceci achève la démonstration.
+
+Remarque~16.2.3 On constate que du point de vue de la relation \prec~, la
+solution maximale vérifiant la condition \phi0(t0) =
+y0 est un plus grand élément de l'ensemble des solutions
+vérifiant cette condition initiale, ce qui en explique d'ailleurs
+l'unicité. Il est clair, d'après la condition d'existence, que
+t0 est un point intérieur à I0, intervalle de
+définition de la solution maximale~; nous allons d'ailleurs préciser ce
+point dans la proposition suivante
+
+Théorème~16.2.2 On suppose que F vérifie la condition d'existence et
+d'unicité au problème de Cauchy Lipschitz. Alors toute solution maximale
+de l'équation différentielle y' = F(t,y) est définie sur un intervalle
+ouvert.
+
+Démonstration Soit (I,\phi) une solution maximale et soit a
+\in\overline\mathbb{R}~ une borne de I (par exemple la borne
+supérieure). Supposons que a \in I si bien que (a,\phi(a)) \in U. D'après la
+condition d'existence il existe \eta \textgreater{} 0 et une solution ({]}a
+- \eta,a + \eta{[},\psi) vérifiant la condition initiale \psi(a) = \phi(a). D'après la
+condition d'unicité, \phi et \psi qui coïncident au point a, coïncident
+également sur l'intersection de leurs intervalles de définition, ce qui
+permet de définir I1 = I\cup{]}a - \eta,a + \eta{[} et \phi1 :
+I1 \rightarrow~ E par \phi1(t) = \left
+\ \cases \phi0(t)&si t \in I
+\cr \psi(t) &si t \in{]}a - \eta,a + \eta{[} 
+\right .. Le couple (I1,\phi1) est une
+solution de l'équation différentielle qui prolonge strictement (I,\phi) ce
+qui contredit le caractère maximal de cette solution.
+
+Remarque~16.2.4 On aurait pu aussi dire que si a \in I et si \phi(a) = b,
+(I,\phi) est une solution maximale pour la condition initiale \phi(a) = b, ce
+qui montre que a appartient à l'intérieur de I comme on l'a dé\\\\jmathmathmathmathà
+remarqué. Nous avons cependant pensé que la démonstration précédente
+était plus constructive.
+
+{[}
+{[}
+{[}
+{[}

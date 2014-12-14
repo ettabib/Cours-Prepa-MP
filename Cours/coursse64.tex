@@ -1,0 +1,429 @@
+
+
+\subsubsection{11.2 Somme d'une série entière}
+
+\paragraph{11.2.1 Etude sur le disque ouvert de convergence (domaine
+		complexe)}
+%
+%Théorème~11.2.1 (continuité de la somme). Soit
+%\\sum ~
+%anz^n une série entière à coefficients dans E, de
+%rayon de convergence R \textgreater{} 0. Alors la fonction S :
+%z\mapsto~\\\sum
+% n=0^+\infty~anz^n est continue sur le
+%disque D(0,R) = \z \in
+%K∣ z  \leq
+%R\.
+%
+%Démonstration On a vu en effet que la série convergeait normalement sur
+%D'(0,r) pour r \leq R, donc S est continue sur un tel D'(0,r) et
+%donc finalement sur D(0,R).
+%
+%Corollaire~11.2.2 (principe des zéros isolés). Soit
+%\\sum ~
+%anz^n une série entière non nulle à coefficients
+%dans E, de rayon de convergence R \textgreater{} 0. Alors, il existe \eta
+%\textgreater{} 0 tel que la fonction S :
+%z\mapsto~\\\sum
+% n=0^+\infty~anz^n ne s'annule pas sur
+%D(0,\eta) \diagdown\0\.
+%
+%Démonstration Soit en effet p =\
+				%min\k \in
+				%\mathbb{N}~∣ak\mathrel\neq~0\.
+				%On a alors S(z) =\ \\sum
+				% n=p^+\infty~anz^n =
+				%z^p \\sum ~
+				%n=p^+\infty~anz^n-p =
+				%z^p \\sum ~
+				%n=0^+\infty~an+pz^n. Mais la série entière
+				%\\sum ~
+				%nan+pz^n a même rayon de convergence que la
+				%série entière \\sum ~
+				%anz^n (facile) et sa somme définit donc une
+				%fonction s continue sur D(0,R) avec s(0) =
+				%ap\neq~0. Donc il existe \eta
+				%\textgreater{} 0 tel que  z  \leq \eta \rigtharrow~
+				%s(z)\neq~0. Mais alors, pour 0 \leq
+				% z  \leq \eta, on a S(z) =
+				%z^ps(z)\neq~0, ce que l'on voulait
+				%démontrer.
+				%
+				%Corollaire~11.2.3 (principe d'identification). Soit
+				%\\sum ~
+				%anz^n et et
+				%\\sum ~
+				%bnz^n deux séries entières à coefficients dans E,
+				%de rayons de convergence non nuls, de sommes S1 et
+				%S2. Alors on a équivalence de (i) \forall~~n
+				%\in \mathbb{N}~, an = bn (ii) il existe \eta \textgreater{} 0 tel
+				%que \forall~z \in D(0,\eta), S1~(z) =
+				%S2(z) (iii) il existe une suite (zn) de K formée
+				%d'éléments distincts telle que limzn~
+				%= 0 et \forall~n \in \mathbb{N}~, S1(zn~) =
+%S2(zn)
+	%
+	%Démonstration Il suffit d'appliquer le principe des zéros isolés à la
+	%série entière \\sum ~
+	%(an - bn)z^n dont la somme est
+	%S1 - S2 dans le disque
+	%D(0,min(R1,R2~)).
+	%
+	%Remarque~11.2.1 Le corollaire précédent qui garantit l'unicité du
+	%développement en série entière d'une fonction est très souvent utilisé~;
+	%il permet en particulier de travailler par identification. Il laisse
+	%penser qu'il doit être possible de récupérer les valeurs des
+	%coefficients an à partir de la somme S de la série. En fait,
+	%dans une première approche, les techniques sont très différentes suivant
+	%que le corps de base est \mathbb{C} ou \mathbb{R}~.
+	%
+	%Dans le cadre complexe, on a le théorème suivant qui relie les
+	%coefficients du développement en série entière à la somme de la fonction
+	%
+	%Théorème~11.2.4 (formules de Cauchy). Soit E un \mathbb{C}-espace vectoriel normé
+	%complet, \\sum ~
+	%anz^n une série entière à coefficients dans E, de
+	%rayon de convergence R \textgreater{} 0, de somme S. Alors, pour tout r
+	%\leq R, on a
+	%
+	%\forall~n \in \mathbb{N}~, an~ = 1
+	%\over 2\pi~r^n \int ~
+	%0^2\pi~S(re^i\theta)e^-in\theta d\theta
+	%
+	%Démonstration Puisque r \leq R, la série
+	%\\sum ~
+	%\ an\ r^n
+	%est convergente.
+	%
+	%On a S(re^i\theta)e^-in\theta =\
+					%\sum ~
+					%p=0^+\infty~apr^pe^i(p-n)\theta.
+					%Mais l'inégalité
+					%\ anr^pe^i(p-n)\theta\ 
+					%\leq\ 
+					%ap\ r^p montre que la série
+					%converge normalement par rapport à \theta. On en déduit que
+					%
+					%\begin{align*} \int ~
+					%0^2\pi~S(re^i\theta)e^-in\theta d\theta& =&
+					%\int  0^2\pi~~
+					%\sum p=0^+\infty~a~
+					%pr^pe^i(p-n)\theta d\theta\%&
+					%\\ & =& \\sum
+					%p=0^+\infty~a pr^p
+					%\\int  ~
+					%0^2\pi~e^i(p-n)\theta d\theta\%&
+					%\\ & =& 2\pi~anr^n
+					%\%& \\ \end{align*}
+					%
+					%car \int  0^2\pi~e^ik\theta~
+					%d\theta = \left \ \cases 0
+					%&si k\neq~0 \cr 2\pi~&si k = 0 
+					%\right .. On obtient donc la formule ci dessus.
+					%
+					%Théorème~11.2.5 Soit \\\sum
+					% anzn une série entière de rayon de convergence
+					%R et de somme S(z). Soit z0 \in \mathbb{C} tel que
+					% z0  \leq R. Alors la fonction
+					%S(z0 + u) est développable en série entière de u dans le
+					%disque ouvert  u  \leq R
+					%- z0 , ce que l'on traduit par~: la somme
+					%d'une série entière est analytique dans son disque ouvert de
+					%convergence.
+					%
+					%Démonstration Puisque  z0 +
+					%u \leq z0  +  u 
+					%\leq R, on peut écrire
+					%
+					%\begin{align*} S(z0 + u)& =&
+					%\sum n=0^+\infty~a~
+					%n(z0 + u)^n \%& \\
+						%& =& \\sum
+						%n=0^+\infty~\left (\\sum
+								%m=0^nC n^ma
+								%nz0^n-mu^m\right )\%&
+						%\\ \end{align*}
+						%
+						%On considère alors la famille (xm,n)m,n\in\mathbb{N}~ définie
+						%par
+						%
+						% xm,n = \left \
+							 %\cases
+							 %Cn^manz0^n-mu^m&si
+							 %m \leq n \cr 0 &si m \textgreater{} n 
+							 %\right .
+							 %
+							 %On a
+							 %
+							 %\sum m=0^+\infty~ x~
+							 %m,n  = \\sum
+							 %m=0^n C n^ma
+							 %nz0^n-mu^m  =  a
+							 %n ( z0  +
+									 % u )^n
+							 %
+							 %qui est une série convergente puisque la série
+							 %\\sum ~
+							 %n an ( z0 
+									 %+  u )^n converge (une série entière converge
+										 %absolument dans son disque ouvert de convergence). Ceci montre que la
+									 %famille (xm,n)m,n\in\mathbb{N}~ est sommable. On peut donc
+									 %appliquer d'interversion des sommations et on a
+									 %
+									 %\begin{align*} S(z0 + u)& =&
+									 %\sum n=0^+\infty~~\left
+									 %(\sum m=0^+\infty~x~
+											 %m,n\right ) = \\sum
+									 %m=0^+\infty~\left (\\sum
+											 %n=0^+\infty~x m,n\right )\%&
+									 %\\ & =& \\sum
+									 %m=0^+\infty~u^m\left
+									 %(\sum n=m^+\infty~C~
+											 %n^ma nz0^n-m\right )
+									 %
+									 %\%& \\ \end{align*}
+									 %
+									 %ce qui montre le résultat.
+									 %
+									 %
+									 %\paragraph{11.2.2 Etude sur le disque ouvert de convergence (domaine
+											 %réel)}
+									 %
+									 %Avant de regarder le cas réel, nous allons démontrer le lemme suivant
+									 %
+									 %Lemme~11.2.6 Soit \\sum ~
+									 %anz^n une série entière à coefficients dans le
+									 %K-espace vectoriel normé E, de rayon de convergence R. Soit F \in K(X) une
+									 %fraction rationnelle non nulle et N \in \mathbb{N}~ tel que F n'ait pas de pôle
+									 %entier supérieur à N. Alors la série entière
+									 %\\sum ~
+									 %F(n)anz^n a encore pour rayon de convergence R.
+									 %
+									 %Démonstration Soit z \in K tel que  z  \leq R et
+									 %soit r tel que  z  \leq r \leq R. La
+									 %suite
+									 %\ an\ r^n
+									 %est donc bornée, par exemple ma\\\\jmathmathmathmathorée par M. On a alors, pour n ≥ N,
+									 %\ F(n)anz^n\ 
+									 %\leq M F(n) \left (
+											 % z  \over r \right
+											 %)^n ∼ \lambda~n^d\left (
+												 % z  \over r \right
+												 %)^n (où d est le degré de la fraction rationnelle, différence
+													 %entre le degré de son numérateur et celui de son dénominateur, si bien
+													 %que  F(t) ∼ \lambda~t^d au voisinage de + \infty~) qui
+												 %tend vers 0 quand n tend vers + \infty~. On a donc R' ≥ R. Mais on a aussi
+												 %an = 1 \over F (n)\left
+												 %(F(n)an\right ) si bien que les suites
+												 %(an) et (F(n)an) \\\\jmathmathmathmathouent ici un rôle parfaitement
+												 %symétrique. On a donc aussi R ≥ R', soit R = R'.
+												 %
+												 %On va en déduire le théorème suivant
+												 %
+												 %Théorème~11.2.7 Soit E un \mathbb{R}~-espace vectoriel normé complet,
+												 %\\sum ~
+												 %ant^n une série entière à coefficients dans E, de
+												 %rayon de convergence R \textgreater{} 0, de somme S. Alors la fonction S
+												 %est de classe C^\infty~ sur {]} - R,R{[} et
+												 %\forall~p \in \mathbb{N}~, \\forall~~t \in{]} -
+												 %R,R{[}
+												 %
+												 %\begin{align*} S^(p)(t)& =&
+												 %\sum n=p^+\infty~~n(n -
+														 %1)\ldots(n - p + 1)a~
+												 %pt^n-p\%& \\ & =&
+												 %\sum n=0^+\infty~~ (n + p)!
+												 %\over n! an+pt^n \%&
+												 %\\ \end{align*}
+												 %
+												 %Démonstration Les deux formules se déduisent l'une de l'autre par un
+												 %changement d'indice (le changement de n - p en n). Il suffit donc de
+												 %montrer la première. Mais le lemme précédent assure que la série entière
+												 %\\sum  n≥p~n(n
+														 %- 1)\\ldots~(n - p +
+															 %1)apt^n a même rayon de convergence R que la série
+														 %de départ. Il en est donc de même de la série entière
+														 %\\sum  n≥p~n(n
+																 %- 1)\\ldots~(n - p +
+																	 %1)apt^n-p et cette série converge donc normalement
+																 %sur {[}-r,r{]} pour r \leq R. Montrons donc le résultat par
+																 %récurrence sur p. Pour p = 0, il n'y a rien à montrer. Supposons le
+																 %résultat vrai pour p avec \forall~~t \in{]} - R,R{[},
+																 %S^(p)(t) =\
+																	    %\sum  n=p^+\infty~~n(n -
+																			    %1)\\ldots~(n - p +
+																				    %1)apt^n-p. La série dérivée
+																			    %\\sum ~
+																			    %n≥p+1n(n -
+																					    %1)\\ldots~(n - p +
+																						    %1)(n - p)apt^n-p-1 converge normalement sur
+																					    %{[}-r,+r{]} et le théorème de dérivation des séries de fonctions nous
+																					    %garantit que S^(p) est de classe \mathcal{C}^1 (donc S de
+																							    %classe C^p+1) sur {[}-r,r{]} avec
+%\forall~t \in {[}-r,r{]}, S^(p)~(t)
+	%= \\sum ~
+	%n=p^+\infty~n(n -
+			%1)\\ldots~(n - p +
+				%1)(n - p)apt^n-p-1~; mais comme r est quelconque (r
+					%\leq R), S est de classe C^p+1 sur {]} - R,R{[} et la
+				%formule ci-dessus y reste valable, ce qui achève la récurrence.
+				%
+				%Corollaire~11.2.8 Soit E un \mathbb{R}~-espace vectoriel normé complet,
+				%\\sum ~
+				%ant^n une série entière à coefficients dans E, de
+				%rayon de convergence R \textgreater{} 0, de somme S. Alors
+	%
+%\forall~n \in \mathbb{N}~, an = S^(n)~(0)
+	%\over n!
+	%
+	%Démonstration Faire t = 0 dans la formule précédente.
+	%
+	%Remarque~11.2.2 Les coefficients an sont donc les mêmes que
+	%ceux qui apparaissent dans un développement limité en 0 de la fonction
+	%S.
+	%
+	%Le même argument de convergence normale sur {[}-r,r{]} \subset~{]} - R,R{[}
+	%montrera le théorème suivant
+	%
+	%Théorème~11.2.9 Soit E un \mathbb{R}~-espace vectoriel normé complet,
+	%\\sum ~
+	%ant^n une série entière à coefficients dans E, de
+	%rayon de convergence R \textgreater{} 0, de somme S. Alors
+	%
+	%\forall~~t \in{]} - R,R{[}, \\int
+	% 0^tS(u) du = \\sum
+	%n=0^+\infty~a n t^n+1
+	%\over n + 1
+	%
+	%
+	%\paragraph{11.2.3 Etude sur le cercle de convergence}
+	%
+	%On a vu qu'en un point du cercle de convergence, la série pouvait aussi
+	%bien diverger que converger. Si la série converge, la question de la
+	%continuité de la somme en ce point se pose immédiatement. En fait, on
+	%peut montrer que sur \mathbb{C}, la somme peut très bien être discontinue en un
+	%tel point, mais qu'il s'agit en fait d'une discontinuité tangentielle~:
+	%il se peut que S(z) ne tende pas vers S(z0) quand z tend vers
+	%z0 tangentiellement au cercle de convergence. Pour nous il
+	%nous suffira de savoir que S(z) tend vers S(z0) quand z tend
+	%vers z0 suivant un rayon, ce que garantit le théorème suivant
+	%
+	%Théorème~11.2.10 (Abel) Soit
+	%\\sum ~
+	%anz^n une série entière à coefficients dans E, de
+	%rayon de convergence R \textgreater{} 0 et S :
+	%z\mapsto~\\\sum
+	% n=0^+\infty~anz^n continue sur le
+	%disque D(0,R) = \z \in
+	%K∣ z  \leq
+	%R\. Soit z0 \in K tel que
+	% z0  = R et la série
+	%\\sum ~
+	%anz0^n converge. Alors
+	%
+	%\sum n=0^+\infty~a~
+	%nz0^n = lim
+%t\rightarrow~1^-S(tz0)
+	%
+	%Démonstration On considère la série de fonctions
+	%\\sum ~
+	%anz0^nt^n, qui converge sur
+	%{[}0,1{]}. Nous allons démontrer sa convergence uniforme~; ceci
+	%garantira la continuité de sa somme au point 1, ce qui n'est autre
+	%l'assertion à démontrer.
+	%
+	%Premier cas~: la série \\\sum
+	% anz0^n converge absolument. Alors on a
+	%\forall~~t \in {[}0,1{]},
+	%\ anz0^nt^n\ 
+	%\leq\ 
+	%anz0^n\ , série
+	%convergente indépendante de t. Donc la série converge normalement.
+	%
+	%Deuxième cas~: le critère des séries alternées s'applique à la série
+	%\\sum ~
+	%anz0^n, autrement dit
+	%anz0^n = (-1)^nbn avec
+	%(bn) qui tend vers 0 en décroissant. Alors
+	%anz0^nt^n =
+	%(-1)^nbnt^n, avec
+	%t\mapsto~bnt^n qui tend
+	%uniformément vers 0 en décroissant. Le critère de convergence uniforme
+	%des séries alternées garantit la convergence uniforme de la série.
+	%
+	%Cas général~: nous allons montrer que la série de fonctions vérifie le
+	%critère de Cauchy uniforme. Pour cela posons Rn
+	%= \\sum ~
+	%k=n^+\infty~akz0^k. On a alors
+	%
+	%\begin{align*} \\sum
+	%n=p^qa nz0^nt^n&
+	%=& \sum n=p^q(R n~ -
+			%Rn+1)t^n = \\sum
+	%n=p^qR nt^n
+	%-\sum n=p^qR~
+	%n+1t^n\%& \\ & =&
+	%\sum n=p^qR~
+	%nt^n -\\sum
+	%n=p+1^q+1R nt^n-1 \%&
+	%\\ & =& Rpt^p -
+	%R q+1t^q -\\sum
+%n=p+1^qR n(t^n-1 - t^n)
+	%\%& \\ \end{align*}
+	%
+	%On a limRn~ = 0 (reste d'une série
+			%convergente). Soit \epsilon \textgreater{} 0~; il existe N \in \mathbb{N}~ (indépendant de
+				%t) tel que n ≥ N \rigtharrow~\ 
+			%Rn\  \leq \epsilon
+			%\over 2 . Alors, en tenant compte de t^p ≥
+			%0, t^q ≥ 0 et t^n-1 - t^n ≥ 0, on a
+			%\forall~~t \in {[}0,1{]},
+			%
+			%\sum_{n=p}^{q}a_nz_0^n t^n\  \leq \epsilon
+			%\over 2 (t^p + t^q +
+					%\sum n=p+1^q(t^n-1~ -
+						%t^n)) = 2t^p \epsilon \over 2 \leq \epsilon
+			%
+			%ce qui montre que la série vérifie le critère de Cauchy uniforme, donc
+			%est uniformément convergente.
+			%
+			%Remarque~11.2.3 Une des premières utilités du théorème précédent est de
+			%calculer la somme de certaines séries numériques du type
+			%\\sum ~
+			%anz0^n~; il arrive en effet fréquemment que
+			%la somme de la série entière
+			%\\sum ~
+			%anz^n soit facile à calculer pour
+			% z  \leq R (par exemple par dérivation ou par
+					%résolution d'une certaine équation différentielle). Il suffit alors de
+			%passer à la limite pour calculer la somme de la série.
+			%
+			%\begin{example}
+			%
+			%On cherche à calculer la somme de la série alternée
+			%\\sum ~
+	%n=1^+\infty~ (-1)^n-1 \over n .
+%Pour  t  \leq 1, on pose f(t)
+	%= \\sum ~
+	%n=1^+\infty~ (-1)^n-1 \over n
+	%t^n~; on sait que f est C^\infty~ sur {]} - 1,1{[} et
+	%que f'(t) = \\sum ~
+	%n=1^+\infty~(-1)^n-1t^n-1 = 1
+%\over 1+t . Comme f(0) = 0, on a f(t)
+	%= log~ (1 + t). Le théorème précédent assure
+	%que \\sum ~
+	%n=1^+\infty~ (-1)^n-1 \over n
+	%=\
+	  %limt\rightarrow~1^-log~ (1 + t)
+	  %= log~ 2.
+	  %\end{example}
+	  %
+	  %Suivant le même principe, le lecteur
+	  %montrera que \\sum ~
+	  %n=0^+\infty~ (-1)^n \over 2n+1
+	  %= \mathrmarctg~ 1 = \pi~
+	  %\over 4 , en introduisant la série entière
+	  %\\sum ~
+	  %n=0^+\infty~ (-1)^n \over 2n+1
+	  %t^2n+1.
+	  %

@@ -1,0 +1,143 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{5.3 Espaces vectoriels normés de dimensions finies}
+
+\paragraph{5.3.1 Equivalence des normes}
+
+Lemme~5.3.1 Toutes les normes sur \mathbb{R}~^n sont équivalentes.
+
+Démonstration Posons
+\\textbar{}x\\textbar{}
+= max\textbar{}xi~\textbar{} et
+montrons que toute autre norme N est équivalente à cette norme. Soit
+(e1,\\ldotsen~)
+la base canonique de \mathbb{R}~^n et x \in \mathbb{R}~^n. On a N(x) =
+N(\\sum ~
+xiei)
+\leq\\sum ~
+\textbar{}xi\textbar{}N(ei)
+\leq\
+max\textbar{}xi\textbar{}\\\sum
+ iN(ei) =
+\beta~\\textbar{}x\\textbar{}. On en déduit que
+\textbar{}N(x) - N(y)\textbar{}\leq N(x - y) \leq \beta~\\textbar{}x
+- y\\textbar{} ce qui démontre que l'application N :
+(\mathbb{R}~^n,\\textbar{}.\\textbar{}) \rightarrow~
+\mathbb{R}~ est continue. Soit S = \x \in
+\mathbb{R}~^n∣\\textbar{}x\\textbar{}
+= 1\~; S est une partie compacte de
+(\mathbb{R}~^n,\\textbar{}.\\textbar{})
+(fermée bornée), donc l'application N y atteint sa borne inférieure.
+Soit \alpha~ = inf x\inS~N(x) =
+N(x0). On a x0\neq~0 (car
+x0 \in S) donc \alpha~ \textgreater{} 0. Alors, si x \in \mathbb{R}~^n,
+x\neq~0, on a  x \over
+\\textbar{}x\\textbar{} \in S soit N( x
+\over
+\\textbar{}x\\textbar{} ) ≥ \alpha~ soit
+encore N(x) ≥ \alpha~\\textbar{}x\\textbar{}. On
+a donc trouvé \alpha~ et \beta~ strictement positifs tels que
+\forall~x \in \mathbb{R}~^n~,
+\alpha~\\textbar{}x\\textbar{} \leq N(x) \leq
+\beta~\\textbar{}x\\textbar{}, ce qu'il fallait
+démontrer.
+
+Théorème~5.3.2 Sur un K-espace vectoriel normé~de dimension finie toutes
+les normes sont équivalentes.
+
+Démonstration Tout \mathbb{C}-espace vectoriel normé~étant aussi un \mathbb{R}~-espace
+vectoriel normé, il suffit de le montrer lorsque le corps de base est \mathbb{R}~.
+Soit N1 et N2 deux normes sur E~; soit \mathcal{E} =
+(e1,\\ldots,en~)
+une base de E et u : \mathbb{R}~^n \rightarrow~ E définie par
+u(x1,\\ldots,xn~)
+= \\sum ~
+xiei (u est un isomorphisme d'espaces vectoriels).
+Alors N1 \cdot u et N2 \cdot u sont deux normes sur
+\mathbb{R}~^n (facile), elles sont donc équivalentes, et donc il existe
+\alpha~ et \beta~ strictement positifs tels que \forall~~x \in
+\mathbb{R}~^n, \alpha~N1(u(x)) \leq N2(u(x)) \leq
+\beta~N1(u(x)). Mais tout élément de E s'écrivant sous la forme
+u(x), on a, \forall~y \in E, \alpha~N1~(y) \leq
+N2(y) \leq \beta~N1(y), ce qu'il fallait démontrer.
+
+\paragraph{5.3.2 Propriétés topologiques et métriques des espaces
+vectoriels normés de dimension finie}
+
+Remarque~5.3.1 Tout \mathbb{C}-espace vectoriel normé~étant aussi un \mathbb{R}~-espace
+vectoriel normé, il suffit de considérer le cas où le corps de base est
+\mathbb{R}~. Soit (E,\\textbar{}.\\textbar{}) un
+espace vectoriel normé~de dimension finie, soit \mathcal{E} =
+(e1,\\ldots,en~)
+une base de E et u : \mathbb{R}~^n \rightarrow~ E définie par
+u(x1,\\ldots,xn~)
+= \\sum ~
+xiei (u est un isomorphisme d'espaces vectoriels).
+Alors N :
+x\mapsto~\\textbar{}u(x)\\textbar{}
+est une norme sur \mathbb{R}~^n qui est équivalente à la norme
+\\textbar{}.\\textbar{}\infty~~; de
+plus l'application u : (\mathbb{R}~^n,N) \rightarrow~
+(E,\\textbar{}.\\textbar{}) est une
+isométrie~; on en déduit que
+(E,\\textbar{}.\\textbar{}) a, en tant
+qu'espace vectoriel normé, les mêmes propriétés que
+(\mathbb{R}~^n,\\textbar{}.\\textbar{}\infty~)
+c'est-à-dire
+
+Théorème~5.3.3 Tout espace vectoriel normé de dimension finie est
+complet~; les parties compactes en sont les fermés bornés.
+
+Corollaire~5.3.4 Tout sous-espace vectoriel de dimension finie d'un
+espace vectoriel normé~est fermé.
+
+Démonstration Muni de la restriction de la norme, il est complet, donc
+fermé.
+
+\paragraph{5.3.3 Continuité des applications linéaires}
+
+Théorème~5.3.5 Soit E et F deux espaces vectoriels normés, E étant
+supposé de dimension finie. Alors toute application linéaire de E dans F
+est continue.
+
+Démonstration Soit \mathcal{E} =
+(e1,\\ldots,en~)
+une base de E~; comme toute les normes sur E sont équivalentes, on peut
+prendre la norme définie par
+\\textbar{}x\\textbar{}
+= sup\textbar{}xi~\textbar{} si x
+= \\sum ~
+xiei. On a alors
+
+\begin{align*}
+\\textbar{}u(x)\\textbar{}& =&
+\\textbar{}\\sum
+xiu(ei)\\textbar{}
+\leq\\sum
+\textbar{}xi\textbar{}\,\\textbar{}u(ei)\\textbar{}\%&
+\\ & \leq&
+\\textbar{}x\\textbar{}\\sum
+\\textbar{}u(ei)\\textbar{} =
+K\\textbar{}x\\textbar{} \%&
+\\ \end{align*}
+
+Ceci montre la continuité de l'application linéaire u.
+
+Remarque~5.3.2 Ce résultat s'étend sans difficulté aux applications
+bilinéaires de E1 \times E2 dans F à condition que
+E1 et E2 soient de dimensions finies~; de même pour
+des applications p-linéaires.
+
+{[}
+{[}
+{[}
+{[}

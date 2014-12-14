@@ -1,0 +1,138 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{7.5 Séries semi-convergentes}
+
+\paragraph{7.5.1 Séries alternées}
+
+Théorème~7.5.1 (convergence des séries alternées). Soit (an)
+une suite de nombres réels, décroissante, de limite 0. Alors la série
+\\sum ~
+(-1)^nan converge~; le reste d'ordre n est du signe
+de son premier terme (c'est-à-dire (-1)^n+1) et sa valeur
+absolue est ma\\\\jmathmathmathmathorée par la valeur absolue de ce premier terme
+(c'est-à-dire an+1).
+
+Démonstration On a S2n+2 - S2n = a2n+2 -
+a2n+1 \leq 0 et S2n+3 - S2n+1 =
+a2n+2 - a2n+3 ≥ 0. La suite (S2n) est donc
+décroissante, la suite S2n+1 est croissante~; comme
+S2n - S2n+1 = a2n+1 est positif et tend
+vers 0, ces deux suites forment un couple de suites ad\\\\jmathmathmathmathacentes~; elles
+admettent donc une limite commune S qui est limite de la suite
+Sn. On a pour tout n, S2n-1 \leq S2n+1 \leq S \leq
+S2n. Ceci nous montre que 0 \leq-R2n = S2n -
+S \leq S2n - S2n+1 = a2n+1 et que 0 \leq
+R2n-1 = S - S2n-1 \leq S2n - S2n-1
+= a2n d'où les assertions sur le reste.
+
+\paragraph{7.5.2 Etude de séries semi-convergentes}
+
+Les théorèmes de comparaison ne s'appliquent pas aux séries quelconques.
+Ainsi on a  (-1)^n \over
+\sqrtn ∼ (-1)^n \over
+\sqrtn + 1 \over n alors que la
+première est convergente et la deuxième divergente (somme d'une série
+convergente et d'une série divergente). Pour une série à termes réels,
+on peut envisager le plan suivant
+
+(i) regarder si le critère de convergence des séries alternées
+s'applique (an =
+(-1)^n\textbar{}an\textbar{} avec
+\textbar{}an\textbar{} décroissant de limite 0).
+
+(ii) si an = (-1)^n\textbar{}an\textbar{}
+mais si on ne peut pas appliquer le critère de convergence des séries
+alternées, on peut essayer de trouver une série alternée
+\\sum  bn~ qui
+relève de ce critère telle que an ∼ bn~; alors,
+comme la série \\sum ~
+bn converge, la nature de la série
+\\sum  an~ sera
+la même que celle de la série
+\\sum  (an~ -
+bn), avec an - bn = o(an)~; on
+essayera de poursuivre le processus \\\\jmathmathmathmathusqu'à tomber soit sur une série
+divergente, soit sur une série absolument convergente
+
+(iii) si an n'est pas alterné en signes, on peut utiliser une
+sommation par paquets (cf plus loin)~: en regroupant les termes
+consécutifs de même signe, on aboutira à une série alternée en signe à
+laquelle on pourra appliquer l'une des méthodes précédentes
+
+Enfin, pour une série à termes non réels ou qui ne relève pas d'une des
+méthodes précédentes, on pourra utiliser un théorème d'Abel comme le
+suivant
+
+Théorème~7.5.2 Soit (an) une suite de nombres réels et
+(xn) une suite de l'espace vectoriel normé~complet E telles
+que
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) \existsM ≥ 0, \\forall~~n \in
+  \mathbb{N}~,
+  \\textbar{}\\\sum
+   p=0^nxp\\textbar{} \leq M
+\item
+  (ii) la suite (an) tend vers 0 en décroissant.
+\end{itemize}
+
+Alors la série \\sum ~
+anxn converge.
+
+Démonstration On a
+
+\begin{align*} \\sum
+n=p^qa nxn& =&
+\sum n=p^qa~
+n(Sn(x) - Sn-1(x)) \%&
+\\ & =& \\sum
+n=p^qa nSn(x)
+-\sum n=p^qa~
+nSn-1(x) \%& \\ & =&
+\sum n=p^qa~
+nSn(x) -\\sum
+n=p-1^q-1a n+1Sn(x) \%&
+\\ \text (changement
+d'indices \$n - 1\mapsto~n\$)&& \%&
+\\ & & \%&
+\\ & =& aqSq(x) -
+apSp-1(x) + \\sum
+n=p^q-1(a n -
+an+1)Sn(x)\%& \\
+\end{align*}
+
+On a effectué ici une transformation dite transformation d'Abel.
+
+Comme \forall~~n,
+\\textbar{}Sn(x)\\textbar{} \leq M
+on a
+
+\\textbar{}\\sum
+n=p^qa
+nxn\\textbar{} \leq
+M(\textbar{}aq\textbar{} + \textbar{}ap\textbar{}
++ \\sum
+n=p^q-1\textbar{}a n -
+an+1\textbar{}) = 2Map
+
+en tenant compte de an ≥ 0 et an - an+1 ≥
+0. Comme limap~ = 0, la série
+\\sum ~
+anxn vérifie le critère de Cauchy, donc elle
+converge.
+
+{[}
+{[}
+{[}
+{[}

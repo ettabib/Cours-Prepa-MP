@@ -1,0 +1,1205 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{12.6 Endomorphismes d'un espace euclidien}
+
+\paragraph{12.6.1 Droites et plans stables}
+
+Nous utiliserons à deux reprises le lemme suivant
+
+Lemme~12.6.1 Soit E un \mathbb{R}~-espace vectoriel ~de dimension finie et u \in
+L(E). Alors u admet soit une droite stable, soit un plan stable.
+
+Démonstration Soit P un polynôme normalisé annulateur de u et soit P =
+P1\\ldotsPn~
+la décomposition de P en polynômes normalisés irréductibles sur \mathbb{R}~. On a
+0 = P(u) = P1(u) \cdot⋯ \cdot
+Pn(u). Donc l'un des Pi(u) est non in\\\\jmathmathmathmathectif. Soit x
+\in\mathrmKerPi~(u)
+\diagdown\0\. Deux cas sont possibles~:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  P1 est de degré 1, soit P1(X) = X - \lambda~, alors (u -
+  \lambda~\mathrmId)(x) = 0, x est vecteur propre de u et la
+  droite \mathbb{R}~x est stable par u~;
+\item
+  P1 est de degré 2, alors P1(X) = X^2 -
+  aX - b et on a donc u^2(x) = au(x) + bx~; le sous-espace
+  \mathrmVect~(x,u(x)) est
+  de dimension au plus 2 (en fait il est facile de vérifier qu'elle est
+  égale à 2) et il est stable par u.
+\end{itemize}
+
+\paragraph{12.6.2 Réduction des endomorphismes symétriques}
+
+Théorème~12.6.2 Soit E un espace euclidien et u un endomorphisme de E.
+Alors on a équivalence de
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) u est un endomorphisme symétrique
+\item
+  (ii) il existe une base orthonormée formée de vecteurs propres de u
+\item
+  (iii) il existe une base orthonormée \mathcal{E} telle que
+  \mathrmMat~ (u,\mathcal{E}) soit
+  diagonale.
+\end{itemize}
+
+Démonstration (ii) et (iii) sont clairement équivalents. Si (iii) est
+vérifiée, la matrice de u dans la base orthonormée \mathcal{E} est symétrique et
+donc u est un endomorphisme symétrique. Il nous reste donc à montrer que
+(i) \rigtharrow~(ii), ce que nous allons faire par récurrence sur n
+= dim~ E. Montrons pour cela que u a un vecteur
+propre. D'après le lemme ci dessus, u admet soit une droite, soit un
+plan stable. Si u admet une droite stable, cette droite est engendrée
+par un vecteur propre. Si u a un plan stable \Pi, soit u' l'endomorphisme
+induit par u sur \Pi (c'est bien entendu un endomorphisme symétrique de
+\Pi), \mathcal{E} = (e1,e2) une base orthonormée de \Pi et
+\mathrmMat~ (u',\mathcal{E}) =
+\left
+(\matrix\,a&b\cr b
+&c\right )~; alors \chiu(X) = (X - a)(X - c) -
+b^2 = X^2 - (a + b)X + ac - b^2 de
+discriminant \Delta = (a + c)^2 - 4(ac - b^2) = (a -
+c)^2 + 4b^2 ≥ 0~; donc u' a un vecteur propre dans \Pi
+qui est également un vecteur propre de u dans E. Supposons donc que tout
+endomorphisme symétrique d'un espace de dimension n - 1 admet une base
+orthonormée de vecteurs propres. Soit e1 un vecteur propre de
+u (endomorphisme symétrique d'un espace euclidien de dimension n).
+Quitte à remplacer e1 par  e1 \over
+\\textbar{}e1\\textbar{} , on
+peut supposer que
+\\textbar{}e1\\textbar{} = 1.
+Soit H = e1^\bot. Comme Ke1 est stable par u,
+son orthogonal H est stable par u^∗ = u. La restriction u' de
+u à H est un endomorphisme symétrique de H de dimension n - 1, donc
+admet une base orthonormée
+(e2,\\ldots,en~)
+formée de vecteurs propres de u' (donc de u)~; alors
+(e1,\\ldots,en~)
+est une base orthonormée de E formée de vecteurs propres de u.
+
+Corollaire~12.6.3 Soit E un espace euclidien et u un endomorphisme
+symétrique de E~; alors E est somme directe orthogonale des sous-espaces
+propres de u.
+
+Démonstration Puisque u est diagonalisable, E est somme directe des
+sous-espaces propres de u. Il suffit de montrer que ces sous-espaces
+sont deux à deux orthogonaux. Mais, si x \in Eu(\lambda~) et y \in
+Eu(\mu) avec \lambda~\neq~\mu, on a
+
+\lambda~(x∣y) = (u(x)\mathrel∣y)
+= (x∣u(y)) =
+(x∣\muy) = \mu(x\mathrel∣y)
+
+Comme \lambda~\neq~\mu, on a
+(x∣y) = 0.
+
+Remarque~12.6.1 Ceci permet une pratique simple de la réduction d'un
+endomorphisme symétrique~; il suffit en effet de déterminer une base
+orthonormée de chacun des sous-espaces propres de u et de réunir ces
+bases~; on obtient une base orthonormée de E formée de vecteurs propres
+de u.
+
+Définition~12.6.1 Soit E un espace euclidien et u un endomorphisme
+symétrique de E. On dit que u est un endomorphisme positif (resp. défini
+positif) s'il vérifie les conditions équivalentes~:
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) \forall~~x \in
+  E,(u(x)∣x) ≥ 0 (resp.
+  \forall~x\neq~0,(u(x)\mathrel∣~x)
+  \textgreater{} 0)
+\item
+  (ii) L'application
+  x\mapsto~(u(x)\mathrel∣x) est
+  une forme quadratique positive sur E (resp. définie positive)
+\item
+  (iii) Les valeurs propres de u sont positives (resp. strictement
+  positives).
+\end{itemize}
+
+Démonstration En remarquant que l'application Qu :
+x\mapsto~(u(x)\mathrel∣x) est une
+forme quadratique de forme polaire
+(x,y)\mapsto~(u(x)\mathrel∣y), on
+a immédiatement l'équivalence de (i) et (ii). Soit \lambda~ une valeur propre
+de u et x un vecteur propre associé~; on a alors
+(u(x)∣x) = (\lambda~x\mathrel∣x)
+= \lambda~\\textbar{}x\\textbar{}^2,
+si bien que \lambda~ = (u(x)∣x)
+\over
+\\textbar{}x\\textbar{}^2 ~;
+il en résulte que (i) \rigtharrow~(iii). Inversement, supposons (iii) vérifiée et
+soit
+(e1,\\ldots,en~)
+une base orthonormée formée de vecteurs propres de u, u(ei) =
+\lambda~iei. On a alors, si x =\
+\sum  ixiei~,
+
+(u(x)∣x) = (\\sum
+i\lambda~ixiei∣\\sum
+ixiei) = \\sum
+i\lambda~ixi^2 ≥ 0
+
+(resp. \textgreater{} 0 si x\neq~0) si bien que
+(iii) \rigtharrow~(i).
+
+Théorème~12.6.4 (réduction simultanée des formes quadratiques). Soit E
+un \mathbb{R}~ espace vectoriel de dimension finie, \Phi une forme quadratique
+définie positive, \Psi une forme quadratique sur E. Alors il existe une
+base \mathcal{E} de E orthonormée pour \Phi et orthogonale pour \Psi.
+
+Démonstration On sait qu'il existe un unique endomorphisme u de E tel
+que \forall~~x,y \in E, \psi(x,y) = \phi(u(x),y). Comme \psi est
+symétrique, u est un endomorphisme symétrique de l'espace euclidien
+(E,\Phi) et il existe une base \mathcal{E} =
+(e1,\\ldots,en~)
+orthonormée pour \Phi formée de vecteurs propres de u~: u(ei) =
+\lambda~iei. On a alors
+
+\psi(ei,e\\\\jmathmathmathmath) = \phi(ei,u(e\\\\jmathmathmathmath)) =
+\phi(ei,\lambda~\\\\jmathmathmathmathe\\\\jmathmathmathmath) =
+\lambda~\\\\jmathmathmathmath\deltai^\\\\jmathmathmathmath
+
+ce qui montre que \mathcal{E} est une base orthogonale pour \psi.
+
+\paragraph{12.6.3 Normes d'endomorphismes}
+
+Théorème~12.6.5 Soit E un espace euclidien et u \in L(E). Alors
+
+\\textbar{}u\\textbar{}
+=\
+sup\\textbar{}x\\textbar{}\leq1,\\textbar{}y\\textbar{}\leq1\textbar{}(u(x)∣y)\textbar{}
+
+Démonstration Supposons que
+\\textbar{}x\\textbar{} \leq
+1,\\textbar{}y\\textbar{} \leq 1. On a alors
+d'après l'inégalité de Schwarz
+
+\textbar{}(u(x)∣y)\textbar{}\leq\\textbar{}
+u(x)\\textbar{}\\textbar{}y\\textbar{}
+\leq\\textbar{} u\\textbar{}
+
+ce qui montre que \\textbar{}u\\textbar{}
+≥\
+sup\\textbar{}x\\textbar{}\leq1,\\textbar{}y\\textbar{}\leq1\textbar{}(u(x)∣y)\textbar{}.
+Mais d'autre part, puisque la boule unité fermée est compacte, il existe
+x0 tel que
+\\textbar{}x0\\textbar{} \leq 1
+avec \\textbar{}u(x0)\\textbar{}
+=\
+sup\\textbar{}x\\textbar{}\leq1\\textbar{}u(x)\\textbar{}
+=\\textbar{} u\\textbar{}. Posons alors,
+si u\neq~0, y0 = u(x0)
+\over
+\\textbar{}u(x0)\\textbar{} .
+On a \\textbar{}y0\\textbar{} =
+1 et
+
+\textbar{}(u(x0)∣y0)\textbar{}
+= (u(x0)∣u(x0))
+\over
+\\textbar{}u(x0)\\textbar{}
+=\\textbar{} u(x0)\\textbar{}
+=\\textbar{} u\\textbar{}
+
+ce qui montre que \\textbar{}u\\textbar{}
+\leq\
+sup\\textbar{}x\\textbar{}\leq1,\\textbar{}y\\textbar{}\leq1\textbar{}(u(x)∣y)\textbar{},
+et donc l'égalité.
+
+Corollaire~12.6.6 Soit E un espace euclidien et u \in L(E). Alors
+\\textbar{}u\\textbar{}
+=\\textbar{} u^∗\\textbar{}.
+
+Démonstration En effet
+
+\\textbar{}u\\textbar{}
+=\
+sup\\textbar{}x\\textbar{}\leq1,\\textbar{}y\\textbar{}\leq1\textbar{}(u(x)∣y)\textbar{}
+=\
+sup\\textbar{}x\\textbar{}\leq1,\\textbar{}y\\textbar{}\leq1\textbar{}(x∣u^∗(y))\textbar{}
+=\\textbar{} u^∗\\textbar{}
+
+Théorème~12.6.7 Soit E un espace euclidien et u \in L(E) symétrique
+positif. Alors
+
+\\textbar{}u\\textbar{}
+=\
+sup\\textbar{}x\\textbar{}\leq1(u(x)∣x)
+=\
+max\lambda~\in\mathrm{Sp}(u)~\lambda~
+
+Démonstration Supposons que
+\\textbar{}x\\textbar{} \leq 1. On a alors
+d'après l'inégalité de Schwarz
+
+(u(x)∣x) \leq\\textbar{}
+u(x)\\textbar{}\\textbar{}x\\textbar{}
+\leq\\textbar{} u\\textbar{}
+
+ce qui montre que \\textbar{}u\\textbar{}
+≥\
+sup\\textbar{}x\\textbar{}\leq1(u(x)∣x).
+De plus, soit k =\
+sup\\textbar{}x\\textbar{}\leq1(u(x)∣x),
+si bien que \forall~~x \in
+E,(u(x)∣x) \leq
+k\\textbar{}x\\textbar{}^2, et
+supposons que \\textbar{}x\\textbar{} \leq
+1,\\textbar{}y\\textbar{} \leq 1. On a alors,
+puisque u est symétrique
+
+\begin{align*}
+\textbar{}(u(x)∣y)\textbar{}& =& 1
+\over 4 \textbar{}(u(x +
+y)∣x + y) - (u(x -
+y)∣x - y)\textbar{}\%&
+\\ & \leq& k \over 4
+(\\textbar{}x + y\\textbar{}^2
++\\textbar{} x -
+y\\textbar{}^2) = k \over 2
+(\\textbar{}x\\textbar{}^2
++\\textbar{} y\\textbar{}^2) \leq
+k \%& \\ \end{align*}
+
+et donc
+
+\\textbar{}u\\textbar{}
+=\
+sup\\textbar{}x\\textbar{}\leq1,\\textbar{}y\\textbar{}\leq1\textbar{}(u(x)∣y)\textbar{}\leq
+k
+
+et par conséquent
+
+\\textbar{}u\\textbar{}
+=\
+sup\\textbar{}x\\textbar{}\leq1(u(x)∣x)
+
+Soit
+(e1,\\ldots,en~)
+une base orthonormée formée de vecteurs propres de u, u(ei) =
+\lambda~iei. On peut supposer que \lambda~1 \leq
+\lambda~2
+\leq\\ldots~ \leq
+\lambda~n. On a alors, si x =\
+\sum  ixiei~,
+
+(u(x)∣x) = (\\sum
+i\lambda~ixiei∣\\sum
+ixiei) = \\sum
+i\lambda~ixi^2 \leq \lambda~ n
+\sum ixi^2 \leq \lambda~~
+n
+
+avec égalité si x = en. Ceci montre que
+
+sup\\textbar{}x\\textbar{}\leq1(u(x)\mathrel∣~x)
+=\
+max\lambda~\in\mathrm{Sp}(u)~\lambda~
+
+et achève la démonstration.
+
+Corollaire~12.6.8 Soit E un espace euclidien et u \in L(E). Alors
+u^∗u est un endomorphisme symétrique positif et
+\\textbar{}u^∗u\\textbar{}
+=\\textbar{} u\\textbar{}^2.
+
+Démonstration On a (u^∗u)^∗ =
+u^∗u^∗∗ = u^∗u donc u^∗u est
+symétrique. De plus (u^∗u(x)∣x) =
+(u(x)∣u(x)) =\\textbar{}
+u(x)\\textbar{}^2 ≥ 0, ce qui montre que
+u^∗u est positif. On a alors
+
+\\textbar{}u^∗u\\textbar{}^2
+= sup~\\textbar{}
+x\\textbar{}\leq1(u^∗u(x)∣x)
+= sup~\\textbar{}
+x\\textbar{}\leq1\\textbar{}u(x)\\textbar{}^2
+=\\textbar{} u\\textbar{}^2
+
+Corollaire~12.6.9 \\textbar{}u\\textbar{}
+est la racine carrée de la plus grande valeur propre de u^∗u.
+
+Démonstration Résulte immédiatement des résultats précédents.
+
+\paragraph{12.6.4 Endomorphismes orthogonaux d'un plan euclidien}
+
+Remarque~12.6.2 Soit E un \mathbb{R}~-espace vectoriel ~de dimension finie. La
+relation définie sur l'ensemble des bases de E par
+
+\mathcal{E}\mathcal{R}\mathcal{E}'\Leftrightarrow
+\mathrm{det}~
+P\mathcal{E}^\mathcal{E}' \textgreater{} 0
+
+est une relation d'équivalence pour laquelle il y a deux classes
+d'équivalence appelées orientations de l'espace. Le choix d'une de ces
+classes (les bases directes) oriente l'espace E.
+
+Soit E un espace euclidien de dimension 2.
+
+Théorème~12.6.10 Soit u \in O(E) et \mathcal{E} une base orthonormée de E.
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) Si u \in SO(E), alors
+  \mathrmMat~ (u,\mathcal{E}) =
+  \left
+  (\matrix\,cos~
+  \theta&-sin~ \theta\cr
+  sin \theta &\cos~
+  \theta\right ) pour un \theta \in \mathbb{R}~\diagup2\pi~ℤ ne dépendant que de
+  l'orientation de la base \mathcal{E} (un changement d'orientation changeant \theta en
+  - \theta)~; le groupe SO(E) est commutatif, isomorphe au groupe (\mathbb{R}~\diagup2\pi~ℤ,+)
+\item
+  (ii) Si \mathrm{det}~ u =
+  -1, alors \mathrmMat~
+  (u,\mathcal{E}) = \left
+  (\matrix\,cos~
+  \theta&sin~ \theta \cr
+  sin \theta&-\cos~
+  \theta\right )~; u est une symétrie orthogonale par
+  rapport à une droite.
+\end{itemize}
+
+Démonstration Posons \mathcal{E} = (e1,e2) et u(e1)
+= ae1 + be2. On a a^2 + b^2
+=\\textbar{}
+u(e1)\\textbar{}^2
+=\\textbar{}
+e1\\textbar{}^2 = 1, donc il existe
+\theta \in \mathbb{R}~\diagup2\pi~ℤ tel que a = cos~ \theta et b
+= sin \theta. On a u(e2~) \in
+u(e1)^\bot = \mathbb{R}~(-be1 + ae2). On en
+déduit que u(e2) = \lambda~(-sin~
+\thetae1 + cos \thetae2~)~; comme
+\\textbar{}u(e2)\\textbar{}
+=\\textbar{} e2\\textbar{} = 1,
+on doit avoir \lambda~^2 = 1, soit \lambda~ = ±1. Donc la matrice de u dans
+la base \mathcal{E} est de l'une des deux formes
+
+\left
+(\matrix\,cos~
+\theta&-sin~ \theta \cr
+sin \theta&\cos~ \theta
+\cr \right )\text ou
+\left
+(\matrix\,cos~
+\theta&sin~ \theta \cr
+sin \theta&-\cos~
+\theta\right )
+
+Il est clair que le premier cas correspond à
+\mathrm{det}~ u = 1 et le
+second cas à \mathrm{det}~ u =
+-1. Dans le second cas, on vérifie immédiatement que u^2 =
+\mathrmIdE, ce qui montre que u est une
+symétrie (évidemment orthogonale). Comme
+u\neq~\mathrmId et
+u\neq~ -\mathrmId, c'est
+nécessairement une symétrie par rapport à une droite.
+
+Dans le premier cas, on a
+\mathrm{tr}~u =
+2cos~ \theta, ce qui montre que
+cos~ \theta est indépendant du choix de la base \mathcal{E},
+et que donc \theta \in \mathbb{R}~\diagup2\pi~ℤ est déterminé au signe près. On vérifie
+immédiatement que
+
+\begin{align*} \left
+(\matrix\,cos~
+\theta&-sin~ \theta \cr
+sin \theta&\cos~ \theta
+\cr \right )\left
+(\matrix\,cos~
+\theta'&-sin~ \theta'\cr
+sin \theta' &\cos~
+\theta'\right )&& \%& \\ &
+\quad & = \left
+(\matrix\,cos~
+(\theta + \theta')&-sin~ (\theta + \theta') \cr
+sin (\theta + \theta')&\cos~ (\theta
++ \theta')\right )\%& \\
+\end{align*}
+
+ce qui montre que le groupe SO(2) = \R(\theta) =
+\left
+(\matrix\,cos~
+\theta&-sin~ \theta\cr
+sin \theta &\cos~
+\theta\right )∣\theta \in
+\mathbb{R}~\diagup2\pi~ℤ\ est commutatif et isomorphe à (\mathbb{R}~\diagup2\pi~ℤ,+). Soit u
+\in SO(E)~; si \mathcal{E} et \mathcal{E}' sont deux bases orthonormées de même sens
+(c'est-à-dire que
+\mathrm{det}~
+P\mathcal{E}^\mathcal{E}' \textgreater{} 0), alors P =
+P\mathcal{E}^\mathcal{E}'\in SO(2), on a
+
+\mathrmMat~ (u,\mathcal{E}') =
+P^-1 \mathrmMat~
+(u,\mathcal{E})P =
+P^-1P\mathrmMat~
+(u,\mathcal{E}) = \mathrmMat~ (u,\mathcal{E})
+
+puisque SO(2) est commutatif et que P et
+\mathrmMat~ (u,\mathcal{E}) sont
+toutes deux dans SO(2). Donc \theta ne dépend que de l'orientation de la base
+\mathcal{E}. Si maintenant, \mathcal{E} et \mathcal{E}' sont deux bases orthonormées de sens contraire
+(c'est-à-dire que
+\mathrm{det}~
+P\mathcal{E}^\mathcal{E}' \textless{} 0), alors
+\mathrmMat~ (u,\mathcal{E})P est une
+matrice orthogonale de déterminant - 1. Comme on l'a vu, son carré est
+nécessairement l'identité de même que le carré de P, ce qui montre que
+\mathrmMat~ (u,\mathcal{E}') =
+P^-1 \mathrmMat~
+(u,\mathcal{E})P = P\mathrmMat~ (u,\mathcal{E})P
+= \mathrmMat~
+(u,\mathcal{E})^-1 = R(-\theta) (si
+\mathrmMat~ (u,\mathcal{E}) = R(\theta))~:
+un changement d'orientation de la base change donc \theta en - \theta.
+
+Définition~12.6.2 Soit E un plan euclidien orienté, u \in SO(E). On
+appelle mesure de la rotation u l'unique élément \theta de \mathbb{R}~\diagup2\pi~ℤ tel que,
+pour toute base orthonormée directe \mathcal{E} de E, on ait
+\mathrmMat~ (u,\mathcal{E}) =
+\left
+(\matrix\,cos~
+\theta&-sin~ \theta\cr
+sin \theta &\cos~
+\theta\right ).
+
+\paragraph{12.6.5 Réduction des endomorphismes orthogonaux}
+
+Théorème~12.6.11 Soit E un espace euclidien et u un endomorphisme
+orthogonal de E. Alors il existe une base orthonormée \mathcal{E} de E telle que
+
+\mathrmMat~ (u,\mathcal{E}) =
+\left
+(\matrix\,Ip&0
+&\\ldots~
+&\\ldots&\\\ldots~&0
+\cr 0 &-Iq&0
+&\\ldots&\\\ldots&\\⋮~
+\cr \⋮~
+&0
+&A1&0&\\ldots&\\⋮~
+\cr \⋮~
+&\\ldots~
+&⋱
+&⋱&\mathrel⋱&\⋮~
+\cr \⋮~
+&\\ldots~
+&\\ldots~
+&⋱&\mathrel⋱&0
+\cr 0
+&\\ldots~
+&\\ldots~
+&\\ldots&0&As~\right
+)
+
+avec Ai = \left
+(\matrix\,cos~
+\thetai&-sin \thetai~
+\cr sin~
+\thetai&cos \thetai~
+\right ), \thetai \in \mathbb{R}~ \diagdown 2\pi~ℤ.
+
+Démonstration Par récurrence sur n = dim~ E. Si
+n = 1, alors u = ±\mathrmIdE et le résultat
+est évident. Supposons le donc démontré pour tout espace euclidien de
+dimension strictement inférieure à n et soit E de dimension n, u \in O(E).
+Si u admet une valeur propre \lambda~, soit x un vecteur propre associé. On a
+\textbar{}\lambda~\textbar{}\\textbar{}x\\textbar{}
+=\\textbar{} u(x)\\textbar{}
+=\\textbar{} x\\textbar{}, d'où \lambda~ = ±1. La
+droite \mathbb{R}~x est stable par u, donc H = (\mathbb{R}~x)^\bot aussi. La
+restriction v de u à H est un endomorphisme orthogonal de H et par
+l'hypothèse de récurrence, il existe une base orthonormée
+(e2,\\ldots,en~)
+de H telle que la matrice de v dans cette base soit de la forme voulue.
+Alors ( x \over
+\\textbar{}x\\textbar{}
+,e2,\\ldots,en~)
+est une base orthonormée de E et à une permutation près de cette base
+(si \lambda~ = -1), la matrice de u dans cette base est de la forme voulue. Si
+u n'a pas de valeur propre (réelle), soit \Pi un plan stable par u, dont
+l'existence est garantie par un lemme précédent. L'endomorphisme de \Pi
+induit par u est un endomorphisme orthogonal de \Pi sans valeur propre,
+donc une rotation d'angle \theta1 \in \mathbb{R}~ \diagdown \pi~ℤ. Soit
+(e1,e2) une base orthonormée de \Pi. Le sous-espace de
+dimension n - 2, H = \Pi^\bot est également stable par u et
+l'endomorphisme v de H induit par u est un endomorphisme orthogonal de H
+sans valeur propre. Par hypothèse de récurrence, il existe une base
+orthonormée
+(e3,\\ldots,en~)
+de H telle que la matrice de v dans cette base soit de la forme voulue
+(avec p = q = 0). Alors la matrice de u dans la base orthonormée
+(e1,e2,e3,\\ldots,en~)
+est de la forme voulue, ce qui achève la démonstration.
+
+Exemple~12.6.1 Si dim~ E = 3, on a les formes
+réduites possibles (en tenant compte de
+\mathrm{det}~ u =
+(-1)^q et de p + q + 2s = 3)
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  \mathrm{det}~ u = 1
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \left
+    (\matrix\,1&0&0 \cr
+    0&1&0 \cr 0&0&1\right )
+    (identité),
+  \item
+    \left (\matrix\,1&0
+    &0 \cr 0&-1&0 \cr 0&0
+    &-1\right ) (retournement d'axe \mathbb{R}~e1),
+  \item
+    \left (\matrix\,1&0
+    &0 \cr 0&cos~
+    \theta&-sin~ \theta \cr
+    0&sin \theta&\cos~ \theta
+    \right ) (rotation d'axe \mathbb{R}~e1)
+  \end{itemize}
+\item
+  \mathrm{det}~ u = -1
+
+  \begin{itemize}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    \left (\matrix\,-1&0
+    &0 \cr 0 &-1&0 \cr 0 &0
+    &-1\right )\quad (
+    -\mathrmIdE),
+  \item
+    \left
+    (\matrix\,1&0&0 \cr
+    0&1&0 \cr 0&0&-1\right )
+    (symétrie par rapport au plan
+    \mathrmVect(e1,e2~)),
+  \item
+    \left (\matrix\,-1&0
+    &0 \cr 0 &cos~
+    \theta&-sin~ \theta \cr 0
+    &sin \theta&\cos~ \theta
+    \right ) (composée de la symétrie par rapport au
+    plan
+    \mathrmVect(e2,e3~)
+    et d'une rotation d'axe \mathbb{R}~e1)
+  \end{itemize}
+\end{itemize}
+
+\paragraph{12.6.6 Produit vectoriel, produit mixte}
+
+Théorème~12.6.12 Soit E un espace euclidien orienté de dimension n.
+L'application n linéaire alternée
+\mathrm{det} \mathcal{E}~ est
+indépendante du choix de la base orthonormée directe \mathcal{E}.
+
+Démonstration Si \mathcal{E}' est une autre base orthonormée directe, la matrice
+de passage P\mathcal{E}^\mathcal{E}' est à la fois orthogonale et de
+déterminant strictement positif, donc de déterminant 1. Or on a
+
+\mathrm{det} \mathcal{E}~
+= \mathrm{det}~
+\mathcal{E}(\mathcal{E}')\mathrm{det}~
+\mathcal{E}' = \mathrm{det}~
+P\mathcal{E}^\mathcal{E}'\mathrm{det}~
+ \mathcal{E}' = \mathrm{det}~
+\mathcal{E}'
+
+Définition~12.6.3 On notera
+{[}x1,\\ldots,xn~{]}
+= \mathrm{det}~
+\mathcal{E}(x1,\\ldots,xn~)
+et on l'appellera le produit mixte des n vecteurs
+x1,\\ldots,xn~.
+
+Remarque~12.6.3 Il est clair qu'un changement d'orientation de l'espace
+change le produit mixte en son opposé.
+
+Théorème~12.6.13 Soit E un espace euclidien orienté. Alors, pour toute
+famille
+(x1,\\ldots,xn~)
+de E on a
+
+\mathrm{det}~
+Gram(x1,\\\ldots,xn~)
+=
+{[}x1,\\ldots,xn{]}^2~
+
+Démonstration Soit \mathcal{E} une base orthonormée directe et soit A la matrice
+des coordonnées de
+(x1,\\ldots,xn~)
+dans la base \mathcal{E}. On a alors
+\mathrm{det}~ A =
+{[}x1,\\ldots,xn~{]}.
+D'autre part
+
+(xi∣x\\\\jmathmathmathmath) =
+\sum k=1^na~
+k,iak,\\\\jmathmathmathmath = (^tAA) i,\\\\jmathmathmathmath
+
+si bien que
+Gram(x1,\\\ldots,xn~)
+= ^tAA. On a donc
+
+\mathrm{det}~
+Gram(x1,\\\ldots,xn~)
+= \mathrm{det}~
+^tAA =
+(\mathrm{det} A)^2~
+= {[}x
+1,\\ldots,xn{]}^2~
+
+Théorème~12.6.14 (et définition). Soit E un espace euclidien orienté de
+dimension n. Soit
+x1,\\ldots,xn-1~
+\in E. Il existe un unique vecteur, appelé le produit vectoriel des n - 1
+vecteurs
+x1,\\ldots,xn-1~
+et noté x1
+∧\\ldots~ ∧
+xn-1 tel que
+
+\forall~~y \in E,
+{[}x1,\\ldots,xn-1~,y{]}
+= (x1
+∧\\ldots~ ∧
+xn-1∣y)
+
+Démonstration L'application
+y\mapsto~{[}x1,\\ldots,xn-1~,y{]}
+est une forme linéaire sur E, donc représentée par le produit scalaire
+avec un unique vecteur.
+
+Proposition~12.6.15
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) x1
+  ∧\\ldots~ ∧
+  xn-1 = 0 \Leftrightarrow
+  (x1,\\ldots,xn-1~)
+  est une famille liée
+\item
+  (ii) \forall~i \in {[}1,n - 1{]}, x1~
+  ∧\\ldots~ ∧
+  xn-1 \bot xi
+\item
+  (iii) si
+  (x1,\\ldots,xn-1~)
+  est une famille libre, alors
+  (x1,\\ldots,xn-1,x1~
+  ∧\\ldots~ ∧
+  xn-1) est une base directe de E
+\item
+  (iv) \\textbar{}x1
+  ∧\\ldots~ ∧
+  xn-1\\textbar{}^2
+  = \mathrm{det}~
+  Gram(x1,\\\ldots,xn-1~).
+\end{itemize}
+
+Démonstration (i) On a en effet
+
+\begin{align*}
+(x1,\\ldots,xn-1~)\text
+libre & \Leftrightarrow & \exists~y
+\in E,
+(x1,\\ldots,xn-1~,y)\text
+base de E\%& \\ &
+\Leftrightarrow & \exists~y \in E,
+{[}x1,\\ldots,xn-1,y{]}\mathrel\neq~~0
+\%& \\ & \Leftrightarrow &
+\existsy \in E, (x1~
+∧\\ldots~ ∧
+xn-1∣y)\mathrel\neq~0
+\%& \\ & \Leftrightarrow &
+x1
+∧\\ldots~ ∧
+xn-1\neq~0 \%&
+\\ \end{align*}
+
+(ii) (x1
+∧\\ldots~ ∧
+xn-1∣xi) =
+{[}x1,\\ldots,xi,\\\ldots,xn-1,xi~{]}
+= 0
+
+(iii) On a
+
+\begin{align*}
+{[}x1,\\ldots,xn-1,x1~
+∧\\ldots~ ∧
+xn-1{]}& =& (x1
+∧\\ldots~ ∧
+xn-1∣x1
+∧\\ldots~ ∧
+xn-1)\%& \\ & =&
+\\textbar{}x1
+∧\\ldots~ ∧
+xn-1\\textbar{}^2 \textgreater{} 0
+\%& \\ \end{align*}
+
+(iv) Comme on vient de le voir,
+
+\begin{align*}
+\\textbar{}x1
+∧\\ldots~ ∧
+xn-1\\textbar{}^4&& \%&
+\\ & =&
+{[}x1,\\ldots,xn-1,x1~
+∧\\ldots~ ∧
+xn-1{]}^2 \%& \\ &
+=& \mathrm{det}~
+Gram(x1,\\\ldots,xn-1,x1~
+∧\\ldots~ ∧
+xn-1) \%& \\ & =&
+\left
+\textbar{}\matrix\,Gram(x1,\\\ldots,xn-1~)&0
+\cr 0 &\\textbar{}x1
+∧\\ldots~ ∧
+xn-1\\textbar{}^2\right
+\textbar{} \%& \\ & =&
+\\textbar{}x1
+∧\\ldots~ ∧
+xn-1\\textbar{}^2\
+\mathrm{det} Gram(x~
+1,\\ldots,xn-1~)\%&
+\\ \end{align*}
+
+puisque (x1
+∧\\ldots~ ∧
+xn-1∣xi) = 0. Si
+(x1,\\ldots,xn~)
+est libre, on peut simplifier par \\textbar{}x1
+∧\\ldots~ ∧
+xn-1\\textbar{}^2 et on obtient
+\\textbar{}x1
+∧\\ldots~ ∧
+xn-1\\textbar{}^2
+= \mathrm{det}~
+Gram(x1,\\\ldots,xn-1~),
+formule qui est encore exacte si la famille est liée puisque les deux
+termes valent 0.
+
+Remarque~12.6.4 Si
+(x1,\\ldots,xn-1~)
+est une famille libre, (ii) définit la droite engendrée par x1
+∧\\ldots~ ∧
+xn-1, (iii) définit son orientation sur cette droite et (iv)
+définit sa norme, ce qui fournit une construction géométrique du produit
+vectoriel~: c'est le vecteur orthogonal à l'hyperplan
+\mathrmVect(x1,\\\ldots,xn-1~),
+tel que la base
+(x1,\\ldots,xn-1,x1~
+∧\\ldots~ ∧
+xn-1) soit une base directe de E et dont la norme est
+\sqrt\\mathrm{det}
+  Gram (x1 ~ ,
+\\ldots~ ,
+xn-1  ).
+
+Coordonnées du produit vectoriel
+
+Soit \mathcal{E} une base orthonormée directe de E, x\\\\jmathmathmathmath
+= \\sum ~
+i=1^n\alpha~i,\\\\jmathmathmathmathei, y
+= \\sum ~
+i=1^nyiei. On a alors, en développant
+le déterminant suivant la dernière colonne
+
+\begin{align*}
+{[}x1,\\ldots,xn-1~,y{]}&
+=& \left
+\textbar{}\matrix\,\alpha~1,1&\\ldots&\alpha~1,n-1&y1~
+\cr
+\\ldots~
+&\\ldots&\\\ldots~
+&\\ldots~
+\cr
+\alpha~n,1&\\ldots&\alpha~n,n-1&yn~\right
+\textbar{} = \sum i=1^n\Delta~
+iyi\%& \\ & =&
+(\sum i=1^n\Delta~
+iei∣y) \%&
+\\ \end{align*}
+
+avec
+
+\Deltai = (-1)^n+i\left
+\textbar{}\matrix\,\alpha~1,1
+&\\ldots&\alpha~1,n-1~
+\cr
+\\ldots~
+&\\ldots&\\\ldots~
+\cr
+\alpha~i-1,1&\\ldots&\alpha~i-1,n-1~
+\cr
+\alpha~i+1,1&\\ldots&\alpha~i+1,n-1~
+\cr
+\\ldots~
+&\\ldots&\\\ldots~
+\cr \alpha~n,1
+&\\ldots&\alpha~n,n-1~
+\right \textbar{}
+
+On en déduit que
+
+x1
+∧\\ldots~ ∧
+xn-1 = \\sum
+i=1^n\Delta iei
+
+Produit vectoriel en dimension 3
+
+On a alors \\textbar{}x1 ∧
+x2\\textbar{}^2
+= \mathrm{det}~
+Gram(x1,x2~)
+=\\textbar{}
+x1\\textbar{}^2\\textbar{}x2\\textbar{}^2
+- (x1∣x2)^2
+=\\textbar{}
+x1\\textbar{}^2\\textbar{}x2\\textbar{}^2(1
+- cos ^2~\theta) où \theta désigne l'angle non
+orienté des vecteurs x1 et x2. On a donc alors
+
+\\textbar{}x1 ∧
+x2\\textbar{} =\\textbar{}
+x1\\textbar{}\,\\textbar{}x2\\textbar{}\
+sin \theta
+
+On a également le résultat important suivant
+
+Théorème~12.6.16 Soit E un espace euclidien de dimension 3,
+x1,x2,x3 \in E. Alors
+
+(x1 ∧ x2) ∧ x3 =
+(x1∣x3)x2 -
+(x2∣x3)x1
+
+Démonstration Si (x1,x2) est liée, on a par exemple
+x2 = \lambda~x1 et on vérifie facilement que les deux
+membres valent 0. Si (x1,x2) est libre, alors
+(x1 ∧ x2) ∧ x3 \in (x1 ∧
+x2)^\bot =\
+\mathrmVect(x1,x2), si bien
+qu'a priori (x1 ∧ x2) ∧ x3 = \lambda~x1
++ \mux2. Un calcul sur les coordonnées dans une base orthonormée
+directe adéquate (par exemple ( x1 \over
+\\textbar{}x1\\textbar{} ,
+x1∧x2 \over
+\\textbar{}x1∧x2\\textbar{}
+,\\ldots~)) fournit
+les valeurs de \lambda~ et \mu.
+
+Remarque~12.6.5 On pourra utiliser le moyen mnémotechnique suivant~: le
+produit scalaire affecté du signe + concerne les deux termes extrêmes de
+l'expression (x1 ∧ x2) ∧ x3.
+
+Corollaire~12.6.17 Soit a\neq~0. L'équation x ∧ a
+= b a une solution si et seulement si~a \bot b.
+
+Démonstration Il est clair que la condition est nécessaire. Si elle est
+vérifiée, cherchons x sous la forme x0 = \lambda~a ∧ b. On a alors
+
+x0 ∧ a = \lambda~(a ∧ b) ∧ a = \lambda~(a∣a)b -
+\lambda~(a∣b)a =
+\lambda~\\textbar{}a\\textbar{}^2b
+
+Donc x0 = 1 \over
+\\textbar{}a\\textbar{}^2 a ∧
+b est une solution.
+
+Remarque~12.6.6 On a alors
+
+\begin{align*} x ∧ a = b&
+\Leftrightarrow & x ∧ a = x0 ∧ a
+\Leftrightarrow (x - x0) ∧ a = 0\%&
+\\ & \Leftrightarrow & x -
+x0 = \lambda~a \%& \\
+\end{align*}
+
+\paragraph{12.6.7 Angles}
+
+On désigne par E un espace euclidien (de dimension finie), par O(E)
+(resp. O^+(E)) le groupe orthogonal (resp. le groupe des
+rotations de E).
+
+Notion générale d'angles d'ob\\\\jmathmathmathmathets
+
+Soit X un ensemble de parties de E stable par O(E), c'est-à-dire que
+
+\forall~~r \in O(E)\quad
+\forall~~A \in X\quad r(A) \in X.
+
+Exemple~: X peut être l'ensemble D(E) des droites de E, ou l'ensemble
+\tildeD(\mathcal{E}) des demi-droites de E, ou l'ensemble des
+plans de E, ou l'ensemble des hyperplans de E.
+
+Définition~12.6.4 On appelle angle non orienté (resp angle orienté)
+d'éléments de X le quotient de X \times X par la relation \mathcal{R} définie par
+
+\begin{align*}
+(D1,D2)\mathcal{R}(D1',D2')
+\Leftrightarrow&& \%& \\
+& & \exists~r \in O(E) (\textresp.
+O^+(E))\quad r(D 1) =
+D1'\text et r(D2) =
+D2'\%& \\
+\end{align*}
+
+On notera \overline(D1,D2)(resp.
+\widehat(D1,D2)) la classe
+d'équivalence du couple (D1,D2) et on l'appellera
+l'angle non orienté (resp. l'angle orienté) des ob\\\\jmathmathmathmathets D1 et
+D2.
+
+Cela revient à définir les angles par les propriétés
+
+\overline(D1,D2) =
+\overline(D1',D2')
+\Leftrightarrow \exists~r \in O(E),
+\quad r(D1) = D1',r(D2) =
+D2'
+
+et
+
+\widehat(D1,D2)
+=\widehat (D1',D2')
+\Leftrightarrow \exists~r \in
+O^+(E), \quad r(D 1) =
+D1',r(D2) = D2'
+
+On s'intéressera par la suite uniquement au cas où X est l'ensemble D(E)
+des droites de E ou l'ensemble \tildeD(\mathcal{E}) des
+demi-droites de E (angles de droites ou de demi droites).
+
+Comparaison des angles orientés et non orientés
+
+Théorème~12.6.18 Si dim~ E ≥ 3 les notions
+d'angles orientés ou non orientés coïncident aussi bien pour les droites
+que pour les demi-droites, c'est-à-dire que
+
+\existsr \in O(E)\quad r(D1~)
+= D1'\text et r(D2) =
+D2'
+
+si et seulement si
+
+\existsr \in O^+~(E)\quad
+r(D 1) = D1'\text et
+r(D2) = D2'.
+
+Démonstration L'implication '' ⇐'' est claire, et si la propriété de
+gauche est vérifiée, soit r appartient à O^+(E) et c'est
+terminé, soit r appartient à O^-(E), mais alors il suffit de
+composer r par une symétrie s par rapport à un hyperplan contenant
+D1' et D2' pour trouver un r' = s \cdot r \in
+O^+(E) tel que r'(D1) = D1' et
+r'(D2) = D2', car s laisse invariantes D1'
+et D2'.
+
+Mesure des angles non orientés de droites ou de demi-droites
+
+Pour (D1,D2) \inD(E)^2, on définit
+\phi(D1,D2) de la manière suivante~: soit x1
+un vecteur directeur de D1 et x2 un vecteur
+directeur de D2, le réel 
+\textbar{}(x1∣x2)\textbar{}
+\over
+\\textbar{}x1\\textbar{}
+\\textbar{}x2\\textbar{} \in
+{[}0,1{]} est indépendant du choix des vecteurs directeurs de
+D1 et D2 (changer x1 en \lambda~x1 et
+x2 en \mux2 avec \lambda~\neq~0 et
+\mu\neq~0 ne change pas sa valeur), on le définit
+comme \phi(D1,D2).
+
+Théorème~12.6.19 \forall~(D1,D2~)
+\inD(E)^2\quad
+\overline(D1,D2) =
+\overline(D1',D2')\quad
+\Leftrightarrow \quad
+\phi(D1,D2) = \phi(D1',D2').
+
+Démonstration ( \rigtharrow~). Il suffit de remarquer que si r \in O(E) alors
+
+
+\textbar{}(r(x1)∣r(x2))\textbar{}
+\over
+\\textbar{}r(x1)\\textbar{}
+\\textbar{}r(x2)\\textbar{}
+=
+\textbar{}(x1∣x2)\textbar{}
+\over
+\\textbar{}x1\\textbar{}
+\\textbar{}x2\\textbar{} .
+
+( ⇐). Supposons que \phi(D1,D2) =
+\phi(D1',D2')\neq~1. Soit
+d'abord r \in O(E) qui envoie D1 sur D1' et le plan
+Vect(D1,D2) sur le plan
+Vect(D1',D2') (la construire en prenant des bonnes
+bases orthonormées). Alors si on pose D3 = r(D2), on
+a \phi(D1',D3) = \phi(D1,D2) =
+\phi(D1',D2'). Dans le plan
+Vect(D1',D2') (qui contient les trois droites
+D1', D2' et D3) ceci impose que soit
+D3 = D2' (et dans ce cas on a trouvé r tel que
+r(D1) = D1' et r(D2) = D2'),
+soit D3 et D2' sont symétriques par rapport à
+D1, auquel cas en composant r par la symétrie orthogonale par
+rapport à l'hyperplan D1' \oplus~ V
+ect(D1',D2')^\bot on trouve un r' tel que
+r'(D1) = D1' et r'(D2) = D2'.
+
+Si \phi(D1,D2) = \phi(D1',D2') = 1, on
+a D1 = D2, D1' = D2' et il
+suffit de choisir un r tel que r(D1) = D1'.
+
+Définition~12.6.5 On appelle mesure de l'angle non orienté des droites
+D1 et D2 l'unique réel \theta \in {[}0,\pi~\diagup2{]} tel que
+cos \theta = \phi(D1,D2~).
+
+Le théorème précédent montre que deux angles non orientés de droites
+sont égaux si et seulement si leurs mesures sont égales.
+
+Pour les demi-droites on suit un plan analogue en posant cette fois
+\phi(D1,D2) =
+(x1∣x2)
+\over
+\\textbar{}x1\\textbar{}
+\\textbar{}x2\\textbar{} \in
+{[}-1,1{]} qui ne dépend pas du choix des vecteurs directeurs des
+demi-droites (car cette fois \lambda~ et \mu sont nécessairement positifs). On a
+le même théorème (avec une démonstration analogue) et on peut donc poser
+
+Définition~12.6.6 On appelle mesure de l'angle non orienté des
+demi-droites D1 et D2 l'unique réel \theta \in {[}0,\pi~{]}
+tel que cos \theta = \phi(D1,D2~).
+
+Le théorème montre que deux angles non orientés de demi-droites sont
+égaux si et seulement si leurs mesures sont égales.
+
+Angles orientés de demi-droites dans le plan euclidien
+
+On notera \tildeA(\mathcal{E}) l'ensemble des angles orientés
+de demi-droites du plan euclidien E.
+
+Théorème~12.6.20 Soit D \in\tildeD(\mathcal{E}). Alors
+l'application f : O^+(E) \rightarrow~\tildeA(\mathcal{E}),
+r\mapsto~\widehat(D,r(D)) est une
+bi\\\\jmathmathmathmathection qui ne dépend pas du choix de D.
+
+Démonstration Pour l'in\\\\jmathmathmathmathectivité, si on a f(r) = f(r') c'est qu'il
+existe r'' \in O^+(E) tel que r''(D) = D et r'`\cdot r(D) = r'(D).
+Mais la première relation impose que r'' = \mathrmId
+(une rotation du plan euclidien qui laisse invariante une demi-droite
+est l'identité) et la deuxième que r^-1 \cdot r'(D) = D soit r' =
+r pour la même raison. En ce qui concerne l'indépendance de D il suffit
+de remarquer que si D' \in\tildeD(\mathcal{E}), il existe
+r0 \in O^+(E) tel que D' = r0(D) et alors
+
+\widehat(D',r(D')) =\widehat
+(r0(D),r \cdot r0(D)) =\widehat
+(r0(D),r0 \cdot r(D)) =\widehat
+(D,r(D))
+
+(on voit ici le rôle essentiel de la commutativité de O^+(E)
+en dimension 2). La sur\\\\jmathmathmathmathectivité provient alors du fait que tout angle
+\widehat(D1,D2) est de la forme
+\widehat(D1,r(D1)) = f(r) en
+utilisant une rotation r qui envoie D1 sur D2.
+
+Cette bi\\\\jmathmathmathmathection naturelle permet de transporter la structure de groupe
+commutatif de O^+(E) à \tildeA(\mathcal{E}) en
+posant~:
+
+si \theta1 = f(r1) et \theta2 = f(r2) ,
+alors on pose \theta1 + \theta2 = f(r1 \cdot
+r2).
+
+On définit de plus l'angle nul comme étant
+f(\mathrmId) =\widehat (D,D),
+l'angle plat comme étant f(-\mathrmId)
+=\widehat (D,-D).
+
+Théorème~12.6.21 (relation de Chasles)
+\widehat(D1,D2)
++\widehat (D2,D3)
+=\widehat (D1,D3).
+
+Démonstration Soit r1 \in O^+(E) telle que
+r1(D1) = D2 et r2 \in
+O^+(E) telle que r2(D2) = D3.
+Alors
+
+\widehat(D1,D2)
++\widehat (D2,D3) =
+f(r1) + f(r2) = f(r2 \cdot r1)
+=\widehat (D1,r2 \cdot
+r1(D1)) =\widehat
+(D1,D3)
+
+On retrouve alors sans difficulté toutes les propriétés des angles de
+demi-droites. Comme de plus, si E est orienté, on connait un
+isomorphisme de groupes abéliens entre \mathbb{R}~\diagup2\pi~ℤ et O^+(E), on en
+déduit un isomorphisme entre \tildeA(\mathcal{E}) et \mathbb{R}~\diagup2\pi~ℤ qui
+permet de mesurer les angles modulo 2\pi~ et d'effectuer les calculs (en
+particulier les divisions par 2) dans \mathbb{R}~\diagup2\pi~ℤ. On en déduit par exemple
+facilement qu'un couple de demi-droites a deux bissectrices opposés.
+
+Angles orientés de droites dans le plan euclidien
+
+On notera A(E) l'ensemble des angles orientés de droites du plan
+euclidien E. La seule différence est que f n'est plus in\\\\jmathmathmathmathective, mais
+que f(r1) = f(r2) \Leftrightarrow
+r2 = ±r1. On en déduit que f induit une bi\\\\jmathmathmathmathection
+\tildef de O^+(E)\diagup\
+±\mathrmId\ sur A(E). On peut donc
+encore transporter la structure de groupe de
+O^+(E)\diagup\
+±\mathrmId\ sur A(E) et on obtient
+encore une relation de Chasles. Si E est orienté, on obtient un
+isomorphisme de A(E) avec \mathbb{R}~\diagup\pi~ℤ qui permet de mesurer les angles de
+droites modulo \pi~.
+
+Exemple~12.6.2 L'application \theta\mapsto~2\theta est un
+isomorphisme de groupes de \mathbb{R}~\diagup\pi~ℤ sur \mathbb{R}~\diagup2\pi~ℤ. On en déduit un isomorphisme
+encore noté \theta\mapsto~2\theta de A(E) sur
+\tildeA(\mathcal{E}). Soit D1 et D2 deux
+droites de E, s1 et s2 les symétries orthogonales
+par rapport à ces droites. Montrer que s2 \cdot s1 est
+la rotation d'angle (de demi-droites)
+2\widehat(D1,D2).
+
+{[}
+{[}
+{[}
+{[}

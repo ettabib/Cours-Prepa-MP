@@ -1,0 +1,359 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{7.4 Séries absolument convergentes}
+
+\paragraph{7.4.1 Notion de convergence absolue}
+
+Définition~7.4.1 Soit E un espace vectoriel normé. On dit que la série
+\\sum  xn~ est
+absolument convergente si la série à termes réels positifs
+\\sum ~
+\\textbar{}xn\\textbar{}
+converge.
+
+Théorème~7.4.1 Soit E un espace vectoriel normé~complet. Alors toute
+série absolument convergente à terme général dans E est convergente.
+
+Démonstration On a
+\\textbar{}\\\sum
+ n=p^qxn\\textbar{}
+\leq\\sum ~
+n=p^q\\textbar{}xn\\textbar{}.
+Si la série \\sum ~
+\\textbar{}xn\\textbar{}
+converge, elle vérifie le critère de Cauchy, il en est donc de même de
+la série \\sum ~
+xn et donc celle-ci converge.
+
+Remarque~7.4.1 L'avantage est bien entendu de ramener l'étude à celle
+d'une série à termes réels positifs.
+
+\paragraph{7.4.2 Critères de convergence absolue}
+
+Théorème~7.4.2 Soit \\\sum
+ xn et \\\sum
+ yn deux séries telles que xn = O(yn)
+et \\sum  yn~
+est absolument convergente. Alors
+\\sum  xn~
+converge absolument.
+
+Démonstration On a xn = O(yn)
+\Leftrightarrow
+\\textbar{}xn\\textbar{} =
+O(\\textbar{}yn\\textbar{}) et
+il suffit d'appliquer le théorème de comparaison pour les séries à
+termes réels positifs.
+
+Remarque~7.4.2 Le théorème ci-dessus reste valable même si les termes
+généraux xn et yn ne sont pas dans le même espace
+vectoriel normé. En particulier, la série étalon
+\\sum  yn~ sera
+le plus souvent une série à termes réels positifs.
+
+En ce qui concerne les équivalents, on a un résultat plus fort
+
+Théorème~7.4.3 Soit \\\sum
+ xn une série à terme général dans l'espace vectoriel
+normé~E et \\sum ~
+yn une série à termes réels positifs. On suppose qu'il existe
+\ell \in E \diagdown\0\ tel que xn ∼
+\ellyn. Alors les deux séries sont simultanément convergentes ou
+divergentes.
+
+Démonstration Si \\sum ~
+yn converge, on a xn = O(yn) et
+yn ≥ 0, donc la série
+\\sum  xn~ est
+absolument convergente. Inversement, supposons que la série
+\\sum  xn~
+converge. Puisque xn - \ellyn = o(\ellyn), il
+existe N \in \mathbb{N}~ tel que n ≥ N \rigtharrow~\\textbar{} xn -
+\ellyn\\textbar{} \leq 1 \over 2
+\\textbar{}\ellyn\\textbar{} = 1
+\over 2
+\\textbar{}\ell\\textbar{}yn. En
+sommant on obtient
+\\textbar{}\\\sum
+ n=p^qxn -
+\ell\\sum ~
+n=p^qyn\\textbar{} \leq 1
+\over 2
+\\textbar{}\ell\\textbar{}\\\sum
+ n=p^qyn. On en déduit
+
+\begin{align*}
+\\textbar{}\ell\\textbar{}\\sum
+n=p^qy n& =&
+\\textbar{}\ell\\sum
+n=p^qy n\\textbar{}
+\leq\\textbar{} \ell\\sum
+n=p^qy n -\\sum
+n=p^qx n\\textbar{}
++\\textbar{} \\sum
+n=p^qx n\\textbar{}\%&
+\\ & \leq& 1 \over 2
+\\textbar{}\ell\\textbar{}\\sum
+n=p^qy n +\\textbar{}
+\sum n=p^qx~
+n\\textbar{} \%& \\
+\end{align*}
+
+d'où en définitive \\\sum
+ n=p^qyn \leq 2 \over
+\\textbar{}\ell\\textbar{}
+\\textbar{}\
+\sum ~
+n=p^qxn\\textbar{}. La série
+\\sum  xn~
+converge, donc vérifie le critère de Cauchy. Il en est donc de même de
+la série \\sum ~
+yn, qui est par suite convergente.
+
+\paragraph{7.4.3 Règles classiques}
+
+Il suffit maintenant d'appliquer ces résultats à des séries étalons,
+comme les séries de Riemann ou les séries géométriques.
+
+Lemme~7.4.4 Soit a un nombre complexe. La série
+\\sum  a^n~
+converge si et seulement si~\textbar{}a\textbar{} \textless{} 1.
+
+Démonstration La condition est évidemment nécessaire puisque le terme
+général doit tendre vers 0. Supposons la vérifiée. On a
+\\sum ~
+p=0^na^p = 1-a^n+1
+\over 1-a qui admet la limite  1 \over
+1-a . Donc la série converge.
+
+Théorème~7.4.5 (règle de d'Alembert). Soit E un espace vectoriel normé
+complet. Soit \\sum ~
+xn une série à termes dans E telle que pour tout n \in \mathbb{N}~,
+xn\neq~0 et telle que la suite (
+\\textbar{}xn+1\\textbar{}
+\over
+\\textbar{}xn\\textbar{} )
+admet une limite \ell \in \mathbb{R}~ \cup\ + \infty~\. Alors
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) si \ell \textless{} 1, la série converge absolument
+\item
+  (ii) si \ell \textgreater{} 1, la série diverge
+\end{itemize}
+
+Démonstration (i) Si \ell \textless{} 1, soit \rho tel que \ell \textless{} \rho
+\textless{} 1~; il existe N \in \mathbb{N}~ tel que n ≥ N \rigtharrow~
+\\textbar{}xn+1\\textbar{}
+\over
+\\textbar{}xn\\textbar{} \leq \rho
+soit \\textbar{}xn+1\\textbar{}
+\leq \rho\\textbar{}xn\\textbar{}. On
+a donc alors par récurrence
+\\textbar{}xn\\textbar{} \leq
+\rho^n-N\\textbar{}xN\\textbar{}
+= O(\rho^n). Comme la série
+\\sum  \rho^n~
+converge, la série \\\sum
+ xn converge absolument.
+
+(ii) Si \ell \textgreater{} 1, il existe N \in \mathbb{N}~ tel que n ≥ N \rigtharrow~
+\\textbar{}xn+1\\textbar{}
+\over
+\\textbar{}xn\\textbar{}
+\textgreater{} 1 soit
+\\textbar{}xn+1\\textbar{}
+\textgreater{}\\textbar{}
+xn\\textbar{}. On a donc alors par récurrence
+\\textbar{}xn\\textbar{}
+\textgreater{}\\textbar{}
+xN\\textbar{}. La suite (xn) ne peut
+donc pas avoir 0 pour limite et la série diverge.
+
+Remarque~7.4.3 Si \ell = 1 on ne peut rien conclure comme le montre
+l'exemple des séries de Riemann. Lorsque la règle de d'Alembert
+s'applique, elle conduit à des convergences rapides (de type
+exponentielle) ou des divergences grossières (le terme général ne tend
+pas vers 0).
+
+Théorème~7.4.6 (règle de Riemann). Soit E un espace vectoriel normé.
+Soit \\sum  xn~
+une série à termes dans E.
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) S'il existe \alpha~ \textgreater{} 1 tel que xn = O( 1
+  \over n^\alpha~ ), alors la série converge
+  absolument
+\item
+  (ii) S'il existe \alpha~ \in \mathbb{R}~ et \ell \in E \diagdown\0\
+  tels que xn ∼ \ell \over n^\alpha~
+  alors la série converge absolument si \alpha~ \textgreater{} 1 et diverge si
+  \alpha~ \leq 1.
+\item
+  (iii) Si E = \mathbb{R}~ et xn ≥ 0, et s'il existe \alpha~ \leq 1 et \ell
+  \textgreater{} 0 (y compris + \infty~) tel que
+  limn^\alpha~xn~ = \ell, alors la
+  série diverge.
+\end{itemize}
+
+Démonstration (i) et (ii) résultent de ce qui précède. Pour (iii), il
+suffit de remarquer que les hypothèses impliquent que  1
+\over n^\alpha~ = O(xn). Comme \alpha~ \leq 1, la
+série \\sum ~  1
+\over n^\alpha~ diverge et donc aussi la série
+\\sum  xn~.
+
+\paragraph{7.4.4 Règles complémentaires}
+
+Théorème~7.4.7 (règle de Cauchy). Soit E un espace vectoriel normé
+complet. Soit \\sum ~
+xn une série à termes dans E telle que la suite
+\left
+(\rootn\of\\textbar{}xn\\textbar{}\right
+) admet une limite \ell \in \mathbb{R}~ \cup\ + \infty~\.
+Alors
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) si \ell \textless{} 1, la série converge absolument
+\item
+  (ii) si \ell \textgreater{} 1, la série diverge
+\end{itemize}
+
+Démonstration (i) Si \ell \textless{} 1, soit \rho tel que \ell \textless{} \rho
+\textless{} 1~; il existe N \in \mathbb{N}~ tel que n ≥ N
+\rigtharrow~\rootn\of\\textbar{}xn\\textbar{}
+\leq \rho soit
+\\textbar{}xn\\textbar{} \leq
+\rho^n. Comme la série
+\\sum  \rho^n~
+converge, la série \\\sum
+ xn converge absolument.
+
+(ii) Si \ell \textgreater{} 1, il existe N \in \mathbb{N}~ tel que n ≥ N
+\rigtharrow~\rootn\of\\textbar{}xn\\textbar{}
+\textgreater{} 1 soit
+\\textbar{}xn\\textbar{}
+\textgreater{} 1. La suite (xn) ne peut donc pas avoir 0 pour
+limite et la série diverge.
+
+Théorème~7.4.8 (règle de Duhamel). Soit
+\\sum  xn~ une
+série à termes dans \mathbb{R}~^+ telle que pour tout n \in \mathbb{N}~,
+xn\neq~0 et telle que  xn+1
+\over xn = 1 - \lambda~ \over n +
+o( 1 \over n ) . Alors
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) si \lambda~ \textgreater{} 1, la série converge
+\item
+  (ii) si \lambda~ \textless{} 1, la série diverge
+\end{itemize}
+
+Démonstration Posons yn = 1 \over
+n^\alpha~ . On a  yn+1 \over
+yn = 1 - \alpha~ \over n + o( 1
+\over n ). On en déduit que si
+\alpha~\neq~\lambda~,  xn+1 \over
+xn - yn+1 \over yn
+∼ \alpha~-\lambda~ \over n est pour n assez grand du signe de \alpha~ -
+\lambda~. Si \lambda~ \textless{} 1, soit \alpha~ tel que \lambda~ \textless{} \alpha~ \textless{} 1. On
+a donc pour n ≥ N,  xn+1 \over xn
+≥ yn+1 \over yn et comme la série
+\\sum  yn~
+diverge (car \alpha~ \textless{} 1), la série
+\\sum  xn~
+diverge. Si \lambda~ \textgreater{} 1, soit \alpha~ tel que \lambda~ \textgreater{} \alpha~
+\textgreater{} 1. On a donc pour n ≥ N,  xn+1
+\over xn \leq yn+1
+\over yn et comme la série
+\\sum  yn~
+converge (car \alpha~ \textgreater{} 1), la série
+\\sum  xn~
+converge.
+
+\paragraph{7.4.5 Comparaison à une intégrale}
+
+Théorème~7.4.9 Soit f : {[}0,+\infty~{[}\rightarrow~ \mathbb{C} de classe \mathcal{C}^1 telle que
+f' soit intégrable sur {[}0,+\infty~{[}. Posons wn
+=\int  n-1^n~f(t) dt - f(n).
+Alors la série \\sum ~
+wn est absolument convergente.
+
+Démonstration On a par une intégration par parties
+
+\begin{align*} \int ~
+n-1^n(t - n + 1)f'(t) dt& =& \left
+{[}(t - n + 1)f(t)\right {]} n-1^n
+-\int  n-1^n~f(t) dt\%&
+\\ & =& -wn \%&
+\\ \end{align*}
+
+On en déduit que
+
+\textbar{}wn\textbar{}\leq\int ~
+n-1^n(t - n + 1)\textbar{}f'(t)\textbar{} dt
+\leq\int ~
+n-1^n\textbar{}f'(t)\textbar{} dt
+
+et donc
+
+\sum p=1^n\textbar{}w~
+p\textbar{}\leq\\int  ~
+0^n\textbar{}f'(t)\textbar{} dt
+\leq\\int  ~
+0^+\infty~\textbar{}f'(t)\textbar{} dt
+
+ce qui montre la convergence de la série à termes positifs
+\\sum ~
+\textbar{}wn\textbar{} et donc la convergence absolue de la
+série.
+
+Corollaire~7.4.10 Soit f : {[}0,+\infty~{[}\rightarrow~ \mathbb{C} de classe \mathcal{C}^1 telle
+que f et f' soient intégrables sur {[}0,+\infty~{[}. Alors la série
+\\sum ~ f(n) est
+absolument convergente.
+
+Démonstration En effet la série
+\\sum ~
+\int ~
+n-1^n\textbar{}f(t)\textbar{} dt est convergente car
+
+\sum p=1^n~
+\\int  ~
+n-1^n\textbar{}f(t)\textbar{} dt =
+\\int  ~
+0^n\textbar{}f(t)\textbar{} dt
+\leq\\int  ~
+0^+\infty~\textbar{}f(t)\textbar{} dt
+
+et comme \left \textbar{}\int ~
+n-1^nf(t) dt\right
+\textbar{}\leq\int ~
+n-1^n\textbar{}f(t)\textbar{} dt, la série
+\\sum ~
+\int  n-1^n~f(t) dt est
+absolument convergente. Comme
+\\sum  wn~ est
+également absolument convergente, il en est de même de la série
+\\sum ~ f(n).
+
+{[}
+{[}
+{[}
+{[}

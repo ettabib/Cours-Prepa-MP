@@ -1,0 +1,158 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{4.3 Suites}
+
+\paragraph{4.3.1 Suites convergentes, limites}
+
+Définition~4.3.1 Soit E un espace métrique et
+(xn)n\in\mathbb{N}~ une suite de E. On dit qu'elle est
+convergente s'il existe \ell \in E vérifiant les conditions équivalentes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) \forall~V \in V (\ell), \\exists~N
+  \in \mathbb{N}~, n ≥ N \rigtharrow~ xn \in V
+\item
+  (ii) \forall~~\epsilon \textgreater{} 0,
+  \existsN \in \mathbb{N}~, n ≥ N \rigtharrow~ d(xn~,\ell)
+  \textless{} \epsilon
+\end{itemize}
+
+Une suite qui n'est pas convergente est dite divergente.
+
+Démonstration La propriété (ii) ne fait que traduire (i) pour V =
+B(\ell,\epsilon). Or toute boule est un voisinage et tout voisinage contient une
+boule. Donc (i) et (ii) sont équivalents.
+
+Proposition~4.3.1 Si la suite (xn)n\in\mathbb{N}~ est
+convergente, l'élément \ell de E est unique~; on l'appelle la limite de la
+suite. On note \ell = limxn~.
+
+Démonstration Si \ell et \ell' conviennent avec \ell\neq~\ell', il existe d'après la
+propriété de séparation U ouvert contenant \ell et V ouvert contenant \ell'
+tels que U \bigcap V = \varnothing~. Mais
+\existsN,\quad n ≥ N \rigtharrow~ xn~ \in
+U et \existsN', n ≥ N' \rigtharrow~ xn~ \in V . Pour n
+≥ max(N,N'), on a xn~ \in U \bigcap V . C'est
+absurde.
+
+Remarque~4.3.1 On prendra garde à ne pas introduire le symbole
+limxn~ de manière opératoire avant
+d'avoir démontré son existence. On remarquera d'autre part que les
+notions de convergence et de limites sont purement topologiques
+puisqu'on peut les exprimer en terme de voisinages~; elles sont donc
+inchangées par changement de distance topologiquement équivalente.
+
+\paragraph{4.3.2 Sous suites, valeurs d'adhérences}
+
+Définition~4.3.2 Soit (xn)n\in\mathbb{N}~ une suite d'éléments
+de E et soit \phi : \mathbb{N}~ \rightarrow~ \mathbb{N}~ strictement croissante. On dit alors que la suite
+(x\phi(n))n\in\mathbb{N}~ est une sous suite de la suite
+(xn)n\in\mathbb{N}~.
+
+Théorème~4.3.2 Si la suite (xn)n\in\mathbb{N}~ est convergente
+de limite \ell, alors toute sous suite converge et a la même limite.
+
+C'est une conséquence du lemme suivant qui se démontre à l'aide d'une
+récurrence facile.
+
+Lemme~4.3.3 Soit \phi : \mathbb{N}~ \rightarrow~ \mathbb{N}~ strictement croissante. Alors
+\forall~~n \in \mathbb{N}~, \phi(n) ≥ n.
+
+Démonstration (du théorème) Soit V voisinage de \ell et N \in \mathbb{N}~ tel que n ≥ N
+\rigtharrow~ xn \in V . Alors pour n ≥ N on a \phi(n) ≥ n ≥ N donc
+x\phi(n) \in V . Donc \ell est encore limite de la suite
+(x\phi(n))n\in\mathbb{N}~.
+
+Définition~4.3.3 Soit (xn)n\in\mathbb{N}~ une suite d'éléments
+de E et a \in E. On dit que a est valeur d'adhérence de la suite si on a
+les conditions équivalentes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) \forall~V \in V (a), \\forall~~N
+  \in \mathbb{N}~, \exists~n ≥ N,\quad
+  xn \in V
+\item
+  (i)' \forall~~\epsilon \textgreater{} 0,
+  \forall~N \in \mathbb{N}~, \\exists~n ≥
+  N,\quad d(xn,a) \textless{} \epsilon
+\item
+  (ii) \forall~~V \in V (a), \n \in
+  \mathbb{N}~∣xn \in V \ est
+  infini.
+\item
+  (ii)' \forall~~\epsilon \textgreater{} 0,
+  \n \in \mathbb{N}~∣d(xn,a)
+  \textless{} \epsilon\ est infini.
+\item
+  (iii) a est limite d'une sous suite (x\phi(n)) de la suite
+  (xn).
+\end{itemize}
+
+Démonstration (i)' n'est qu'une reformulation de (i) en termes de
+boules, comme (ii)' vis à vis de (ii). Si \n \in
+\mathbb{N}~∣xn \in V \ est
+fini, il existe N \in \mathbb{N}~ tel que n ≥ N \rigtharrow~
+xn∉V et donc (i) n'est pas vérifié.
+Ceci montre que (i) \rigtharrow~(ii). De même, si \n \in
+\mathbb{N}~∣xn \in V \ est
+infini, il contient des éléments d'indices arbitrairement grands, donc
+(ii) \rigtharrow~(i). Si a est limite de la sous suite (x\phi(n)) et V est
+un voisinage de a, il existe N \in \mathbb{N}~ tel que n ≥ N \rigtharrow~ x\phi(n) \in V .
+Donc \n \in \mathbb{N}~∣xn \in V
+\ contient \phi({[}N,+\infty~{[}), il est donc infini, soit
+(iii) \rigtharrow~(ii). Montrons maintenant que (i)' \rigtharrow~(iii), ce qui achèvera la
+démonstration. On construit \phi(n) par récurrence de la manière suivante~:
+on prend \epsilon = 1 \over n+1 et N = \left
+\ \cases 0 &si n = 0
+\cr \phi(n - 1) + 1&si n ≥ 1 \cr 
+\right .~; il existe alors p ≥ \phi(n - 1) + 1 tel que
+d(a,xp) \textless{} 1 \over n+1 ~; on pose
+\phi(n) = p. On construit ainsi une fonction strictement croissante de \mathbb{N}~
+dans \mathbb{N}~ vérifiant d(a,x\phi(n)) \textless{} 1
+\over n+1 . D'où une sous suite de limite a.
+
+Remarque~4.3.2 On a donc vu qu'une suite convergente admet une unique
+valeur d'adhérence, sa limite. Il est clair qu'une valeur d'adhérence
+d'une sous suite est encore une valeur d'adhérence de la suite.
+
+\paragraph{4.3.3 Caractérisation des fermés d'un espace métrique}
+
+Théorème~4.3.4 Soit E un espace métrique, A une partie de E et a \in E.
+Alors a est dans l'adhérence de A si et seulement si~a est limite (dans
+E) d'une suite d'éléments de A.
+
+Démonstration Si a est limite d'une suite (an)n\in\mathbb{N}~
+d'éléments de A, soit V un voisinage de a. Alors
+\existsN \in \mathbb{N}~, n ≥ N \rigtharrow~ an~ \in V . En
+particulier an \in V \bigcap A qui est donc non vide. Donc a
+appartient à \overlineA. Inversement, soit a
+\in\overlineA. Alors, pour tout \epsilon \textgreater{} 0, A \bigcap
+B(a,\epsilon)\neq~\varnothing~. Pour \epsilon = 1 \over
+n+1 on peut donc trouver an \in A tel que d(a,an)
+\textless{} 1 \over n+1 . Donc a est limite de la
+suite (an) d'éléments de A.
+
+Corollaire~4.3.5 Soit E un espace métrique. Une partie A de E est fermée
+si et seulement si~toute suite d'éléments de A qui converge dans E a une
+limite qui appartient à A.
+
+Démonstration Ceci traduit simplement l'inclusion
+\overlineA \subset~ A.
+
+{[}
+{[}
+{[}
+{[}

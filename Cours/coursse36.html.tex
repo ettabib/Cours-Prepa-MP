@@ -1,0 +1,117 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{7.2 Généralités sur les séries}
+
+\paragraph{7.2.1 Notion de série}
+
+Définition~7.2.1 Soit E un espace vectoriel normé~et (xn) une
+suite de E. On appelle sommes partielles de la série
+\\sum  xn~ les
+Sn = \\sum ~
+p=0^nxp (notée Sn(x) s'il y a risque
+de confusion). On dit que la série converge si la suite des sommes
+partielles converge dans E~; sa limite est alors appelée la somme de la
+série et notée \\sum ~
+n=0^+\infty~xn =\
+limn\rightarrow~+\infty~\\\sum
+ p=0^nxp. Une série non convergente est
+dite divergente.
+
+Remarque~7.2.1 Soit (an) une suite de E. Définissons une suite
+(xn) par x0 = a0 et pour n ≥ 1,
+xn = an - an-1. On a immédiatement
+Sn(x) = an et donc la série
+\\sum  xn~
+converge si et seulement si~la suite (an) converge~; dans ce
+cas on a d'ailleurs liman~
+= \\sum ~
+n=0^+\infty~xn. Ceci peut permettre dans certains cas
+de ramener une étude de convergence de suite à une étude de convergence
+de série.
+
+Proposition~7.2.1 Soit E un espace vectoriel normé,
+\\sum  xn~ et
+\\sum  yn~ deux
+séries d'éléments de E. On suppose qu'il existe N \in \mathbb{N}~ tel que n ≥ N \rigtharrow~
+xn = yn (autrement dit les deux suites ne diffèrent
+que par un nombre fini de termes). Alors les deux séries sont de même
+nature (simultanément convergentes ou divergentes).
+
+Démonstration Pour n ≥ N, on a Sn(x) = Sn(y) +
+(SN(x) - SN(y)) donc l'une des suites Sn
+converge si et seulement si~l'autre converge.
+
+Remarque~7.2.2 En faisant tendre n vers + \infty~, on obtient S(x) = S(y) +
+(SN(x) - SN(y)).
+
+Définition~7.2.2 Soit E un espace vectoriel normé,
+\\sum  xn~ une
+série convergente et p \in \mathbb{N}~. Alors la série
+\\sum ~
+n≥p+1xn est convergente~; sa somme est notée
+Rp (ou Rp(x)). On a par définition Sn +
+Rn = \\sum ~
+p=0^+\infty~xp et
+limRn~ = 0.
+
+Proposition~7.2.2 Soit E un espace vectoriel normé. Alors l'ensemble des
+suites (xn) telles que la série
+\\sum  xn~
+convergent est un sous-espace vectoriel de E^\mathbb{N}~. L'application
+(xn)n\in\mathbb{N}~\mapsto~\\\sum
+ n=0^+\infty~xn est linéaire de ce sous-espace
+vectoriel dans E.
+
+Démonstration Il suffit de remarquer que si \alpha~ et \beta~ sont des scalaires,
+Sn(\alpha~x + \beta~y) = \alpha~Sn(x) + \beta~Sn(y).
+
+\paragraph{7.2.2 Terme général, critère de Cauchy}
+
+Théorème~7.2.3 Si la série
+\\sum  xn~
+converge, alors la suite (xn) admet 0 pour limite.
+
+Démonstration xn = Sn - Sn-1 et les deux
+suites ont la même limite S =\
+\sum  n=0^+\infty~xn~.
+
+Théorème~7.2.4 (critère de Cauchy pour les séries). Soit E un espace
+vectoriel normé~complet et
+\\sum  xn~ une
+série à termes de E. La série
+\\sum  xn~
+converge si et seulement si~elle vérifie
+
+\forall~~\epsilon \textgreater{} 0,
+\exists~N \in \mathbb{N}~, q ≥ p ≥ N
+\rigtharrow~\\textbar{}\\sum
+n=p^qx n\\textbar{}
+\textless{} \epsilon
+
+Démonstration C'est simplement le critère de Cauchy pour la suite
+(Sn) des sommes partielles puisque
+\\sum ~
+n=p^qxn = Sq - Sp-1.
+
+Exemple~7.2.1 La série harmonique
+\\sum  n≥1~ 1
+\over n diverge puisque  1 \over n+1
++ \\ldots~ + 1
+\over 2n ≥ n \times 1 \over 2n = 1
+\over 2 . La série ne vérifie donc pas le critère de
+Cauchy (bien que lim~ 1 \over
+n = 0), donc elle diverge.
+
+{[}
+{[}
+{[}
+{[}

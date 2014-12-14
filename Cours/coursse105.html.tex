@@ -1,0 +1,375 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{20.2 Intégrales multiples}
+
+\paragraph{20.2.1 Pavés et subdivisions. Ensembles négligeables}
+
+Définition~20.2.1 On appelle pavé de \mathbb{R}~^n tout ensemble P de
+la forme P = {[}a1,b1{]}
+\times⋯ \times {[}an,bn{]}. On
+notera mesure du pavé P le nombre réel positif m(P)
+= \∏ ~
+i=1^n(bi - ai).
+
+Remarque~20.2.1 Un pavé est clairement compact.
+
+Définition~20.2.2 Soit P = {[}a1,b1{]}
+\times⋯ \times {[}an,bn{]} un pavé
+de \mathbb{R}~^n. On appelle subdivision de P toute famille \sigma =
+(\sigma1,\\ldots,\sigman~)
+où chaque \sigmai est une subdivision de
+{[}ai,bi{]}. Si \sigmai =
+(ai,\\\\jmathmathmathmath)1\leq\\\\jmathmathmathmath\leqni, les sous pavés
+P\\\\jmathmathmathmath1,\\ldots,\\\\jmathmathmathmathn~
+= {[}a1,\\\\jmathmathmathmath1-1,a1,\\\\jmathmathmathmath1{]}
+\times⋯ \times
+{[}an,\\\\jmathmathmathmathn-1,an,\\\\jmathmathmathmathn{]} sont appelés
+les sous pavés de la subdivision. On appelle pas de la subdivision \sigma =
+(\sigma1,\\ldots,\sigman~)
+le plus grand des diamètres des sous pavés de \sigma.
+
+Définition~20.2.3 Un sous-ensemble A de \mathbb{R}~^n est dit
+négligeable (au sens de Riemann) si quelque soit \epsilon \textgreater{} 0, il
+existe une famille finie de pavés (Pi)1\leqi\leqN
+vérifiant
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) A \subset~\⋃ ~
+  i=1^NPi
+\item
+  (ii) \\sum ~
+  i=1^Nm(Pi) \leq \epsilon.
+\end{itemize}
+
+Proposition~20.2.1
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) tout ensemble négligeable est borné
+\item
+  (ii) si A est négligeable et B \subset~ A, alors B est aussi négligeable
+\item
+  (iii) une partie A est négligeable si et seulement
+  si~\overlineA est négligeable
+\item
+  (iv) toute réunion finie de parties négligeables est négligeable
+\end{itemize}
+
+Démonstration Tout est à peu près évident. L'affirmation (iii) résulte
+de ce que, si A \subset~\\⋃
+ i=1^NPi, alors on a aussi
+\overlineA
+\subset~\⋃ ~
+i=1^NPi puisque
+\⋃ ~
+i=1^NPi est fermé.
+
+Théorème~20.2.2 Soit Q un pavé de \mathbb{R}~^n-1 et f une application
+continue de Q dans \mathbb{R}~. Alors le graphe de f est une partie négligeable de
+\mathbb{R}~^n.
+
+Démonstration Puisque f est continue sur le compact Q, elle est
+uniformément continue. Soit donc \epsilon \textgreater{} 0. Il existe \eta
+\textgreater{} 0 tel que \forall~~x,x' \in Q,
+\\textbar{}x - x'\\textbar{} \textless{} \eta
+\rigtharrow~\textbar{}f(x) - f(x')\textbar{} \textless{} \epsilon \over
+2m(Q) . Soit alors \sigma une subdivision de Q de pas inférieur strictement
+à \eta et (Qi)1\leqi\leqN les sous pavés de la subdivision.
+Choisissons un point xi dans chaque Qi et posons
+Pi = Qi \times {[}f(xi) - \epsilon
+\over 2m(Q) ,f(xi) + \epsilon \over
+2m(Q) {]}. Chaque Pi est un pavé de \mathbb{R}~^n et
+m(Pi) = \epsilon \over m(Q) m(Qi) si
+bien que \\sum ~
+m(Pi) = \epsilon \over m(Q)
+ \\sum  m(Qi~)
+= \epsilon \over m(Q) m(Q) = \epsilon. Mais soit (x,f(x)) un point
+du graphe de f avec x \in Q~; soit i tel que x \in Qi~; on a alors
+\\textbar{}x - xi\\textbar{} \leq
+\delta(\sigma) \textless{} \eta et donc \textbar{}f(x) - f(xi)\textbar{}\leq
+\epsilon \over 2m(Q) , soit encore f(x) \in {[}f(xi)
+- \epsilon \over 2m(Q) ,f(xi) + \epsilon
+\over 2m(Q) {]}, si bien que (x,f(x)) \in Pi.
+On en déduit que le graphe de f est contenu dans
+\⋃ ~
+i=1^NPi avec
+\\sum  m(Pi~) =
+\epsilon. Donc le graphe de f est négligeable.
+
+Corollaire~20.2.3 Toute partie de \mathbb{R}~^n qui est une réunion
+finie de graphes d'applications continues sur des pavés
+
+\begin{align*}
+(x1,\\ldots,xi-1,xi+1,\\\ldots,xn~)&&
+\%& \\ & \mapsto~&
+xi =
+f(x1,\\ldots,xi-1,xi+1,\\\ldots,xn~)\%&
+\\ \end{align*}
+
+est négligeable.
+
+\paragraph{20.2.2 Intégrales multiples sur un pavé de \mathbb{R}~^n}
+
+Remarque~20.2.2 On appelle point de discontinuité de f tout point où f
+n'est pas continue. Si f est une application de l'espace métrique X dans
+l'espace métrique E, on notera
+\mathrmDisc~ (f) l'ensemble
+des points de discontinuité de f.
+
+Proposition~20.2.4 Soit E un espace vectoriel normé de dimension finie
+et P un pavé de \mathbb{R}~^n. L'ensemble \mathcal{E} des fonctions f : P \rightarrow~ E
+bornées et dont l'ensemble des points de discontinuité est négligeable
+est un sous-espace vectoriel de l'espace des applications de P dans E.
+
+Démonstration Cet ensemble est évidemment non vide (il contient par
+exemple toutes les fonctions continues sur P)~; si f et g sont dans \mathcal{E},
+si \alpha~ et \beta~ sont des scalaires, on a évidemment \alpha~f + \beta~g qui est bornée et
+de plus \mathrmDisc~ (\alpha~f +
+\beta~g) \subset~\mathrmDisc~ (f)
+\cup\mathrmDisc~ (g) (puisque
+là où f et g sont toutes deux continues, \alpha~f + \beta~g l'est également), donc
+\mathrmDisc~ (\alpha~f + \beta~g) est
+négligeable.
+
+On admettra le théorème suivant
+
+Théorème~20.2.5 Il existe une application qui à toute fonction f bornée
+de P dans E dont l'ensemble des points de discontinuité est négligeable
+associe un élément de E noté \int  P~f
+vérifiant les propriétés suivantes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) l'application
+  f\mapsto~\int  P~f
+  est linéaire (\int  P~(\alpha~f + \beta~g) =
+  \alpha~\int  P~f +
+  \beta~\int  P~g)
+\item
+  (ii) \\textbar{}\int ~
+  Pf\\textbar{} \leq\int ~
+  P\\textbar{}f\\textbar{}
+\item
+  (iii) \int  P~1 = m(P)
+\item
+  (iv) si P est la réunion de deux pavés P1 et P2
+  dont l'intersection est contenue dans l'intersection des frontières,
+  alors \int  P~f
+  =\int  P1~f
+  +\int  P2~f
+\item
+  (v) si \x \in
+  P∣f(x)\mathrel\neq~0\
+  est négligeable, alors \int  P~f = 0.
+\end{itemize}
+
+Proposition~20.2.6
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) Si f : P \rightarrow~ \mathbb{R}~ est une fonction bornée dont l'ensemble des points de
+  discontinuité est négligeable et si f est positive, alors
+  \int  p~f ≥ 0
+\item
+  (ii) Si f,g : P \rightarrow~ \mathbb{R}~ sont deux fonctions bornées dont l'ensemble des
+  points de discontinuité est négligeable et si f \leq g alors
+  \int  P~f \leq\\int
+   Pg
+\item
+  (iii) Si f : P \rightarrow~ \mathbb{R}~ est une fonction bornée dont l'ensemble des points
+  de discontinuité est négligeable, alors
+  \\textbar{}\int ~
+  Pf\\textbar{} \leq
+  m(P)supx\inP~\\textbar{}f(x)\\textbar{}.
+\end{itemize}
+
+Démonstration (i) On a \int  P~f
+=\int ~
+P\textbar{}f\textbar{}≥\left
+\textbar{}\int  P~f\right
+\textbar{} d'où \int  P~f ≥ 0
+
+(ii) On a \int  P~g
+-\int  P~f =\\int
+ P(g - f) ≥ 0 puisque g - f ≥ 0
+
+(iii) Si M =\
+supx\inP\\textbar{}f(x)\\textbar{},
+on a \\textbar{}\int ~
+Pf\\textbar{} \leq\int ~
+P\\textbar{}f\\textbar{}
+\leq\int  P~M =
+M\int  P~1 = Mm(P)
+
+Définition~20.2.4 Soit f : P \rightarrow~ E une application, soit \sigma une subdivision
+de P, (Pi)1\leqi\leqN les sous pavés de la subdivision et
+pour chaque i \in {[}1,N{]}, xi un point de Pi~; la
+somme S(f,\sigma,x) =\ \\sum
+ i=1^Nm(Pi)f(xi) sera appelée une
+somme de Riemann associée à la subdivision \sigma et à la famille x =
+(xi)1\leqi\leqN.
+
+On admettra également le résultat suivant
+
+Théorème~20.2.7 Soit f une fonction bornée de P dans E dont l'ensemble
+des points de discontinuité est négligeable. Alors, pour tout \epsilon
+\textgreater{} 0, il existe un réel \eta \textgreater{} 0 tel que pour
+toute subdivision \sigma de P de pas plus petit que \eta et pour toute famille x
+= (xi) associée, on a
+\\textbar{}\int  P~f -
+S(f,\sigma,x)\\textbar{} \textless{} \epsilon.
+
+Remarque~20.2.3 Comme dans le cas des fonctions d'une variable, on peut
+aussi définir, lorsque f est à valeurs réelles des sommes de Darboux
+supérieure et inférieure D(f,\sigma) =\
+\sum ~
+i=1^Nm(Pi)Mi et
+\\sum ~
+i=1^Nm(Pi)mi où Mi
+= supx\inPi~f(t) et
+mi = inf~
+x\inPif(t). La même démonstration que pour les fonctions
+d'une variable montre alors que ces sommes de Darboux inférieure et
+supérieure tendent vers l'intégrale de f sur P lorsque le pas de la
+subdivision tend vers 0.
+
+\paragraph{20.2.3 Intégrales multiples sur une partie de \mathbb{R}~^n}
+
+Soit A une partie de \mathbb{R}~^n bornée de frontière négligeable et f
+: A \rightarrow~ E continue et bornée. Soit P un pavé de \mathbb{R}~^n contenant A
+et f^∗ l'application de P dans E définie par
+
+ f^∗(x) = \left \
+\cases f(x)&si x \in A \cr 0 &si x \in A
+ \right .
+
+L'ensemble des points de discontinuité de f^∗ est contenu
+dans la frontière de A car si x est dans l'intérieur de A, la fonction
+f^∗ coïncide avec la fonction continue f sur tout un
+voisinage de x, donc est continue au point x et si x appartient à
+l'intérieur de P \diagdown A, alors f^∗ coïncide avec la fonction
+nulle sur tout un voisinage de x, donc est continue au point x. On peut
+donc définir \int  Pf^∗~. De
+plus, si P1 et P2 sont deux pavés contenant A, ''la
+fonction f^∗'' est nulle sur P2 \diagdown P1 et
+sur P1 \diagdown P2, si bien que \\int
+ P1f^∗ =\int ~
+P2f^∗, ce qui montre que
+\int  Pf^∗~ ne dépend pas du
+choix du pavé P contenant A.
+
+Définition~20.2.5 Soit A une partie de \mathbb{R}~^n bornée de
+frontière négligeable et f : A \rightarrow~ E continue et bornée~; on posera
+\int  A~f =\\int
+ Pf^∗.
+
+Théorème~20.2.8
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) L'application
+  f\mapsto~\int  A~f
+  est linéaire (\int  A~(\alpha~f + \beta~g) =
+  \alpha~\int  A~f +
+  \beta~\int  A~g)
+\item
+  (ii) \\textbar{}\int ~
+  Af\\textbar{} \leq\int ~
+  A\\textbar{}f\\textbar{}
+\item
+  (iii) si A1 \bigcap A2 est négligeable, alors
+  \int  A1\cupA2~f
+  =\int  A1~f
+  +\int  A2~f
+\item
+  (iv) si A est négligeable, alors \int ~
+  Af = 0.
+\end{itemize}
+
+Démonstration (i) et (ii) résultent de (\alpha~f + \beta~g)^∗ =
+\alpha~f^∗ + \beta~g^∗ et de
+\\textbar{}f^∗\\textbar{}
+=\\textbar{} f\\textbar{}^∗ qui
+sont évidents. Pour (iii) si on considère P un pavé contenant
+A1 \cup A2, f^∗ l'extension de f de
+A1 \cup A2 à P, f1^∗ et
+f2^∗ les extensions de f depuis respectivement
+A1 et A2 à P, on a f^∗ =
+f1^∗ + f2^∗ sauf sur A1 \bigcap
+A2. On a donc f^∗ = f1^∗ +
+f2^∗ + g où g est une fonction nulle sauf sur
+l'ensemble négligeable A1 \bigcap A2~; on en déduit que
+
+\begin{align*} \int ~
+A1\cupA2f& =& \int ~
+Pf^∗ =\int ~
+P(f1^∗ + f 2^∗ + g) \%&
+\\ & =& \int ~
+Pf1^∗ +\int ~
+Pf2^∗ +\int ~
+Pg =\int ~
+Pf1^∗ +\int ~
+Pf2^∗\%& \\ &
+=& \int  A1~f
++\int  A2~f \%&
+\\ \end{align*}
+
+Quand à (iv), il est évident puisque \x \in
+P∣f^∗(x)\mathrel\neq~0\
+\subset~ A
+
+\paragraph{20.2.4 Mesure d'un sous-ensemble borné de \mathbb{R}~^n}
+
+Définition~20.2.6 On dit qu'une partie A de \mathbb{R}~^n est quarrable
+si elle est bornée et de frontière négligeable.
+
+Définition~20.2.7 Soit A une partie quarrable de \mathbb{R}~^n~; on
+appelle mesure de A le nombre réel positif m(A)
+=\int  A~1.
+
+Proposition~20.2.9 Soit A une partie quarrable de \mathbb{R}~^n~; alors
+l'intérieur et l'adhérence de A sont aussi quarrables et ont la même
+mesure.
+
+Démonstration En effet, la frontière de l'intérieur et de l'adhérence de
+A sont contenues dans la frontière de A qui est négligeable. De plus
+\int  \overlineA~1
+=\int  \overlineA\diagdownA~1
++\int  A~1 =\\int
+ A1 puisque \overlineA \diagdown A est contenu dans
+la frontière de A et donc est négligeable~; la démonstration est
+similaire pour l'intérieur.
+
+Proposition~20.2.10 Si f : A \rightarrow~ E est une fonction continue bornée sur
+l'ensemble quarrable A, alors
+\\textbar{}\int ~
+Af\\textbar{} \leq
+m(A)supx\inA~\\textbar{}f(x)\\textbar{}.
+
+Démonstration Si M =\
+supx\inA\\textbar{}f(x)\\textbar{},
+on a \\textbar{}\int ~
+Af\\textbar{} \leq\int ~
+A\\textbar{}f\\textbar{}
+\leq\int  A~M =
+M\int  A~1 = Mm(A)
+
+{[}
+{[}
+{[}
+{[}

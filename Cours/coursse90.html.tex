@@ -1,0 +1,901 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{16.5 Equations différentielles non linéaires}
+
+\paragraph{16.5.1 Théorie de Cauchy-Lipschitz}
+
+Définition~16.5.1 Soit E un espace vectoriel normé de dimension finie, U
+un ouvert de \mathbb{R}~ \times E et F : U \rightarrow~ E,
+(t,y)\mapsto~F(t,y). On dira que F est localement
+lipschitzienne par rapport à la variable y si, pour tout
+(t0,y0) \in U, il existe \eta \textgreater{} 0 et r
+\textgreater{} 0 et une constante L ≥ 0 telle que
+
+\begin{align*} \forall~~t \in
+{[}t0 - \eta,t0 + \eta{]},
+\forall~y1,y2~ \in
+B'(y0,r),& & \%& \\
+\\textbar{}F(t,y1) -
+F(t,y2)\\textbar{} \leq
+L\\textbar{}y1 -
+y2\\textbar{}& & \%&
+\\ \end{align*}
+
+L'ensemble C = {[}t0 - \eta,t0 + \eta{]} \times
+B'(y0,r) sera appelé un cylindre de sécurité associé à la
+constante L.
+
+Théorème~16.5.1 Soit E un espace vectoriel normé de dimension finie, U
+un ouvert de \mathbb{R}~ \times E et f : U \rightarrow~ E, (t,y)\mapsto~f(t,y)
+de classe \mathcal{C}^1. Alors f est localement lipschitzienne par
+rapport à la variable y.
+
+Démonstration Notons \partial~yf(t,y) la différentielle au point y de
+l'application z\mapsto~f(t,z) de E dans E. Cette
+application est composée de z\mapsto~(t,z) dont la
+différentielle en tout point est l'application \\\\jmathmathmathmath :
+h\mapsto~(0,h) et de l'application f. Si bien que
+\partial~yf(t,y).h = df(t,y).(0,h) = df(t,y) \cdot \\\\jmathmathmathmath(h). On en déduit que
+l'application (t,y)\mapsto~\partial~yf(t,y) =
+df(t,y) \cdot \\\\jmathmathmathmath est continue (comme l'application
+(t,y)\mapsto~df(t,y)). Soit alors \eta \textgreater{} 0
+et r \textgreater{} 0 tels que {[}t0 - \eta,t0 + \eta{]} \times
+B'(0,r) \subset~ U. L'application
+(t,y)\mapsto~\partial~yf(t,y) est continue sur le
+compact {[}t0 - \eta,t0 + \eta{]} \times B'(0,r), donc elle y
+est bornée. Il existe donc L ≥ 0 tel que
+\forall~(t,y) \in {[}t0 - \eta,t0~ +
+\eta{]} \times B'(0,r),
+\\textbar{}\partial~yf(t,y)\\textbar{} \leq
+L. Mais alors, soit t \in {[}t0 - \eta,t0 + \eta{]},
+y1,y2 \in B'(y0,r)~; l'inégalité des
+accroissements finis appliquée à la fonction
+y\mapsto~f(t,y) sur le segment
+{[}y1,y2{]} \subset~ B'(y0,r) assure que
+
+\\textbar{}f(t,y1) -
+f(t,y2)\\textbar{} \leq\\textbar{}
+y1 -
+y2\\textbar{}\
+supy\in{[}y1,y2{]}\\textbar{}\partial~yf(t,y)\\textbar{}
+\leq L\\textbar{}y1 -
+y2\\textbar{}
+
+ce qui démontre le résultat.
+
+Théorème~16.5.2 (Cauchy Lipschitz, unicité). Soit E un espace vectoriel
+normé de dimension finie, U un ouvert de \mathbb{R}~ \times E et F : U \rightarrow~ E,
+(t,y)\mapsto~F(t,y) localement lipschitzienne par
+rapport à la variable y. Alors F vérifie la condition d'unicité au
+problème de Cauchy-Lipschitz~:
+
+soit (I,\phi) et (J,\psi) deux solutions de l'équation différentielle y' =
+F(t,y) qui coïncident au point t0 \in I \bigcap J . Alors \phi et \psi
+coïncident sur I \bigcap J.
+
+Démonstration I \bigcap J est un intervalle. En particulier I \bigcap J est connexe.
+Soit X = \t \in I \bigcap J∣\phi(t) =
+\psi(t)\. Comme \phi et \psi sont continues sur I \bigcap J, X = (\phi
+- \psi)^-1(\0\) est un fermé de
+I \bigcap J (image réciproque d'un fermé par une application continue). Soit
+alors t1 \in I \bigcap J et y1 = \phi(t1) =
+\psi(t1). On a donc d'après un théorème précédent
+\forall~t \in I \bigcap J, \phi(t) = y1~
++\int  t1^t~F(u,\phi(u))
+du et \psi(t) = y1 +\int ~
+t1^tF(u,\psi(u)) du. On en déduit que \phi(t) - \psi(t)
+=\int  t1^t~(F(u,\phi(u))
+- F(u,\psi(u))) du, et donc, pour t ≥ t1,
+
+\\textbar{}\phi(t) - \psi(t)\\textbar{}
+\leq\int ~
+t1^t\\textbar{}F(u,\phi(u)) -
+F(u,\psi(u))\\textbar{} du
+
+Puisque F est localement lipschitzienne, il existe \eta \textgreater{} 0 et
+r \textgreater{} 0 et une constante L ≥ 0 telle que
+
+\begin{align*} \forall~~t \in
+{[}t1 - \eta,t1 + \eta{]},
+\forall~z1,z2~ \in
+B'(y1,r),& & \%& \\
+\\textbar{}F(t,z1) -
+F(t,z2)\\textbar{} \leq
+L\\textbar{}z1 -
+z2\\textbar{}& & \%&
+\\ \end{align*}
+
+Comme \phi et \psi sont continues au point t1, il existe \eta'
+\textgreater{} 0 tel que \textbar{}t - t1\textbar{}\leq \eta' \rigtharrow~
+\phi(t),\psi(t) \in B(y1,r). Pour \textbar{}t - t1\textbar{}
+\textless{} \alpha~ = min~(\eta,\eta'), on a donc
+\\textbar{}F(t,\phi(t)) -
+F(t,\psi(t))\\textbar{} \leq L\\textbar{}\phi(t) -
+\psi(t)\\textbar{}, et donc, en appliquant l'inégalité ci
+dessus \\textbar{}\phi(t) - \psi(t)\\textbar{}
+\leq\int ~
+t1^tL\\textbar{}\phi(u) -
+\psi(u)\\textbar{} du. On peut donc appliquer à la fonction
+\\textbar{}\phi - \psi\\textbar{} le lemme de
+Gronwall avec c = 0, g(t) = L qui montre que \\textbar{}\phi
+- \psi\\textbar{} est nulle sur {[}t1,t1
++ \alpha~{[}\bigcapI \bigcap J. On montre de manière similaire que
+\\textbar{}\phi - \psi\\textbar{} est nulle sur
+{]}t1 - \alpha~,t1{]}\, \bigcap I \bigcap J. Donc, si X
+contient t1, il contient {]}t1 - \alpha~,t1 +
+\alpha~{[}\, \bigcap I \bigcap J ce qui montre que X est un ouvert de I \bigcap
+J. En résumé X est une partie ouverte et fermée, non vide (car
+t0 \in X) de I \bigcap J qui est connexe. Par définition de la
+connexité, on a X = I \bigcap J, et donc \phi et \psi coïncident sur I \bigcap J.
+
+Théorème~16.5.3 (Cauchy Lipschitz, existence locale). Soit E un espace
+vectoriel normé de dimension finie, U un ouvert de \mathbb{R}~ \times E et F : U \rightarrow~ E,
+(t,y)\mapsto~F(t,y) continue et localement
+lipschitzienne par rapport à la variable y. Alors F vérifie la condition
+d'existence au problème de Cauchy-Lipschitz. Soit
+(t0,y0) \in U, \alpha~ \textgreater{} 0 et r \textgreater{}
+0 tels que C = {[}t0 - \alpha~,t0 + \alpha~{]} \times
+B'(y0,r) \subset~ U soit un cylindre de sécurité pour F associé à la
+constante L, M =\
+sup(t,y)\inC\\textbar{}F(t,y)\\textbar{},
+\eta = min(\alpha~, r \over M~ )~;
+alors il existe une solution \phi de l'équation différentielle y' = F(t,y)
+définie sur {]}t0 - \eta,t0 + \eta{[} et vérifiant
+\phi(t0) = y0.
+
+Démonstration Remarquons tout d'abord que l'existence de M résulte de la
+compacité du cylindre de sécurité C et de la continuité de F. Nous
+savons d'autre part que \phi est une solution de l'équation différentielle
+y' = F(t,y) vérifiant \phi(t0) = y0 si et seulement si
+\phi est une fonction continue vérifiant \phi(t) = y0
++\int  t0^t~F(u,\phi(u))
+du, autrement dit si \phi est point fixe de l'application
+\psi\mapsto~\Gamma(\psi), où l'on définit \Gamma(\psi)(t) =
+y0 +\int ~
+t0^tF(u,\psi(u)) du. Nous inspirant de la
+démonstration du théorème du point fixe, nous allons rechercher \phi par
+une méthode d'approximation successive. Posons donc, pour t
+\in{]}t0 - \eta,t0 + \eta{[}, \phi0(t) =
+y0~; supposons maintenant que \phin est définie de
+telle sorte que \forall~t \in{]}t0~ -
+\eta,t0 + \eta{[}, \phin(t) \in B'(y0,r) et posons
+alors \phin+1(t) = y0 +\int ~
+t0^tF(u,\phin(u)) du (ceci a bien un
+sens car \forall~u \in {[}t0~,t{]},
+(u,\phin(u)) \in C \subset~ U). On a alors
+
+\begin{align*}
+\\textbar{}\phin+1(t) -
+y0\\textbar{}& =&
+\\textbar{}\int ~
+t0^tF(u,\phi n(u))
+du\\textbar{} \%& \\ &
+\leq& \textbar{}t -
+t0\textbar{}sup(u,y)\inC~\\textbar{}F(u,y)\\textbar{}
+\leq \etaM \leq r\%& \\
+\end{align*}
+
+Ceci montre qu'en posant \phi0(t) = y0 et pour n ≥ 0,
+\phin+1(t) = y0 +\int ~
+t0^tF(u,\phin(u)) du, on définit bien
+une suite d'applications continues de {]}t0 - \eta,t0 +
+\eta{[} dans B'(y0,r).
+
+Montrons maintenant par récurrence sur n que
+
+\begin{align*} \forall~~n \in \mathbb{N}~,
+\forall~t \in{]}t0 - \eta,t0~ + \eta{[},
+\\textbar{}\phin+1(t) -
+\phin(t)\\textbar{} \leq M \over L
+ L^n+1\textbar{}t - t0\textbar{}^n+1
+\over (n + 1)! & & \%&
+\\ \end{align*}
+
+Pour n = 1, on a
+
+\begin{align*}
+\\textbar{}\phi1(t) -
+\phi0(t)\\textbar{} =\\textbar{}
+\phi1(t) - y0\\textbar{}
+=\\textbar{}\int ~
+t0^tF(u,y 0)
+du\\textbar{} \leq M\textbar{}t - t0\textbar{}&
+& \%& \\
+\end{align*}
+
+ce qui est bien la formule voulue. Si maintenant l'inégalité est
+vérifiée pour n - 1, on a alors pour t \in {[}t0,t0 +
+\eta{[}
+
+\begin{align*}
+\\textbar{}\phin+1(t) -
+\phin(t)\\textbar{}& =&
+\\textbar{}\int ~
+t0^t\left (F(u,\phi n(u))
+- F(u,\phin-1(u))\right )
+du\\textbar{}\%& \\ & \leq&
+\int ~
+t0^t\\textbar{}F(u,\phi
+n(u)) - F(u,\phin-1(u))\\textbar{} du \%&
+\\ & \leq& \int ~
+t0^tL\\textbar{}\phi n(u)
+- \phin-1(u)\\textbar{} du \%&
+\\ & \leq& L\int ~
+t0^t M \over L 
+L^n\textbar{}u - t0\textbar{}^n
+\over n! du \%& \\ &
+=& M \over L  L^n+1\textbar{}t -
+t0\textbar{}^n+1 \over (n + 1)!
+\%& \\ \end{align*}
+
+Un calcul similaire conduit à la même inégalité pour t \in{]}t0
+- \eta,t0{]}.
+
+On en déduit donc que
+
+\forall~n \in \mathbb{N}~, \\forall~~t
+\in{]}t0 - \eta,t0 + \eta{[},
+\\textbar{}\phin+1(t) -
+\phin(t)\\textbar{} \leq M \over L
+ L^n+1\eta^n+1 \over (n + 1)!
+
+Alors pour q \textgreater{} p, on a donc
+
+\begin{align*} \forall~~t
+\in{]}t0 - \eta,t0 + \eta{[}&& \%&
+\\
+\\textbar{}\phiq(t) -
+\phip(t)\\textbar{}& \leq&
+\\sum
+n=p^q-1\\textbar{}\phi n+1(t) -
+\phin(t)\\textbar{}\%&
+\\ & \leq& M \over L
+\sum n=p^q-1~
+L^n+1\eta^n+1 \over (n + 1)! \%&
+\\ & \leq& M \over L
+\sum n=p^+\infty~~
+L^n+1\eta^n+1 \over (n + 1)! \%&
+\\ \end{align*}
+
+Comme la série \\sum ~
+n L^n+1\eta^n+1 \over
+(n+1)! est une série convergente (exponentielle d'un nombre réel), son
+reste tend vers 0~; étant donné \epsilon \textgreater{} 0, il existe N \in \mathbb{N}~ tel
+que p ≥ N \rigtharrow~ M \over L \
+\sum  n=p^+\infty~~
+L^n+1\eta^n+1 \over (n+1)!
+\textless{} \epsilon. Alors
+
+q \textgreater{} p ≥ N \rigtharrow~\forall~t \in{]}t0~ -
+\eta,t0 + \eta{[}, \\textbar{}\phiq(t) -
+\phip(t)\\textbar{} \textless{} \epsilon
+
+La suite (\phin) vérifie donc la critère de Cauchy uniforme. En
+conséquence, elle converge uniformément vers une fonction \phi
+:{]}t0 - \eta,t0 + \eta{[}\rightarrow~ B'(y0,r) qui est
+elle même continue.
+
+L'inégalité \\textbar{}F(u,\phi(u)) -
+F(u,\phin(u))\\textbar{} \leq
+L\\textbar{}\phi(u) -
+\phin(u)\\textbar{}, montre que la suite
+F(u,\phin(u)) converge uniformément vers F(u,\phi(u))~; ceci nous
+permet de passer à la limite sous le signe d'intégration et d'obtenir
+
+\begin{align*} y0
++\int  t0^t~F(u,\phi(u))
+du&& \%& \\ & =& y0
++ limn\rightarrow~+\infty~~\\int
+ t0^tF(u,\phi n(u)) du\%&
+\\ & =&
+limn\rightarrow~+\infty~\phin+1~(t) = \phi(t) \%&
+\\ \end{align*}
+
+Comme \phi est continue, ceci montre que \phi est la solution cherchée de
+l'équation y' = F(t,y) vérifiant \phi(t0) = y0.
+
+Théorème~16.5.4 (Cauchy Lipschitz~: existence et unicité d'une solution
+maximale). Soit E un espace vectoriel normé de dimension finie, U un
+ouvert de \mathbb{R}~ \times E et F : U \rightarrow~ E, (t,y)\mapsto~F(t,y)
+continue et localement lipschitzienne par rapport à la variable y. Soit
+(t0,y0) \in U~; alors il existe une unique solution
+maximale (I0,\phi0) de l'équation différentielle y' =
+F(t,y) qui vérifie \phi0(t0) = y0.
+L'intervalle I0 est ouvert. Pour toute solution (J,\psi) de
+l'équation différentielle vérifiant \psi(t0) = y0, on
+a~:
+
+\text\$J \subset~ I0\$ et \$\psi\$ est la restriction
+de \$\phi0\$ à \$J\$.
+
+Démonstration La fonction F vérifie les conditions d'existence et
+d'unicité au problème de Cauchy-Lipschitz et on sait que ces conditions
+impliquent l'existence et l'unicité d'une solution maximale vérifiant
+une condition initiale donnée. On sait d'autre part que cette solution
+maximale est définie sur un intervalle ouvert et que c'est un plus grand
+élément de l'ensemble des solutions vérifiant la condition initiale.
+
+Remarque~16.5.1 L'intervalle I0 de définition d'une solution
+maximale est difficilement contrôlable a priori. Il dépend bien entendu
+de l'équation différentielle, mais aussi de la condition initiale
+imposée, quelle que soit la régularité de la fonction F. Considérons par
+exemple l'équation différentielle scalaire (c'est-à-dire que les
+solutions sont à valeurs réelles) du premier ordre y' = -y^2.
+La fonction F(t,y) = -y^2 est bien entendu de classe
+\mathcal{C}^1 donc localement lipschitzienne si bien que les résultats
+précédents s'appliquent. Comme la fonction nulle définie sur \mathbb{R}~ est
+solution, toute solution (I,\phi) qui s'annule en un point doit coïncider
+sur I \bigcap \mathbb{R}~ = I avec la fonction nulle, donc être la fonction nulle. On en
+déduit qu'une solution (I,\phi) non identiquement nulle ne doit pas
+s'annuler et doit donc vérifier  \phi'(t) \over
+\phi(t)^2 = -1 soit encore  d \over dt
+\left ( 1 \over \phi(t)
+\right ) = 1, ou encore  1 \over \phi(t)
+= t + \lambda~. On en déduit que toute solution est du type
+(I,t\mapsto~ 1 \over t+\lambda~ ).
+Cherchons une solution vérifiant la condition initiale \phi(t0) =
+y0 avec y0\neq~0 (puisque
+seule la solution nulle peut s'annuler). On obtient y0 = 1
+\over t0+\lambda~ soit encore \lambda~ = 1
+\over y0 - t0 si bien que toute
+solution vérifiant la condition initiale en question est de la forme
+(I,t\mapsto~ 1 \over
+t-t0+ 1 \over y0  ), la
+continuité de la fonction imposant que t0 - 1
+\over y0 ∉I. A
+partir de là, il est immédiat de déterminer les solutions maximales
+vérifiant la condition initiale y(t0) = y0~: il
+suffit de déterminer un intervalle maximal contenant t0 et ne
+contenant pas t0 - 1 \over y0 .
+(i) si y0 = 0, la solution maximale est ({]}
+-\infty~,+\infty~{[},t\mapsto~0) (ii) si y0
+\textgreater{} 0, la solution maximale est ({]}t0 - 1
+\over y0
+,+\infty~{[},t\mapsto~ 1 \over
+t-t0+ 1 \over y0  ) (iii) si
+y0 \textless{} 0, la solution maximale est ({]}
+-\infty~,t0 - 1 \over y0
+{[},t\mapsto~ 1 \over
+t-t0+ 1 \over y0  )
+
+Bien que la fonction F(t,y) = -y^2 soit parfaitement
+régulière sur \mathbb{R}~^2 tout entier, les solutions maximales
+présentent des asymptotes verticales et ne sont pas (sauf la solution
+nulle), définies sur \mathbb{R}~ tout entier.
+
+Remarque~16.5.2 La condition imposée à F d'être localement
+lipschitzienne (par exemple de classe \mathcal{C}^1) est essentielle.
+Si on considère par exemple l'équation différentielle y' =
+2\sqrt\textbar{}y\textbar{}, le lecteur vérifiera
+sans difficulté que la fonction nulle et la fonction
+t\mapsto~t\textbar{}t\textbar{} sont toutes deux des
+solutions maximales définies sur \mathbb{R}~ et vérifiant la même condition
+initiale y(0) = 0 si bien que l'unicité d'une solution maximale à
+condition initiale donnée n'est pas vérifiée.
+
+\paragraph{16.5.2 Application aux équations d'ordre n}
+
+Par la technique de réduction à l'ordre 1, on aboutit aux résultats
+suivants
+
+Théorème~16.5.5 (Cauchy Lipschitz, unicité). Soit E un espace vectoriel
+normé de dimension finie, U un ouvert de \mathbb{R}~ \times E^n et f : U \rightarrow~
+E,
+(t,y0,\\ldots,yn-1)\mapsto~f(t,y0,\\\ldots,yn-1~)
+de classe \mathcal{C}^1. Alors f vérifie la condition d'unicité au
+problème de Cauchy-Lipschitz~: soit (I,\phi) et (J,\psi) deux solutions de
+l'équation différentielle y^(n) =
+f(t,y,y',\\ldots,y^(n-1)~)
+qui vérifient \phi(t0) =
+\psi(t0),\\ldots,\phi^(n-1)(t0~)
+= \psi^(n-1)(t0). Alors \phi et \psi coïncident sur I \bigcap J.
+
+Théorème~16.5.6 (Cauchy Lipschitz, existence locale). Soit E un espace
+vectoriel normé de dimension finie, U un ouvert de \mathbb{R}~ \times E^n et
+f : U \rightarrow~ E de classe \mathcal{C}^1. Alors f vérifie la condition
+d'existence au problème de Cauchy-Lipschitz. Soit
+(t0,y0,\\ldots,yn-1~)
+\in U, alors il existe \eta \textgreater{} 0 et une solution \phi de l'équation
+différentielle y^(n) =
+f(t,y,y',\\ldots,y^(n-1)~)
+définie sur {]}t0 - \eta,t0 + \eta{[} et vérifiant
+\phi(t0) =
+y0,\\ldots,\phi^(n-1)(t0~)
+= yn-1.
+
+Théorème~16.5.7 (Cauchy Lipschitz, existence et unicité d'une solution
+maximale). Soit E un espace vectoriel normé de dimension finie, U un
+ouvert de \mathbb{R}~ \times E^n et f : U \rightarrow~ E de classe \mathcal{C}^1. Soit
+(t0,y0,\\ldots,yn-1~)
+\in U~; alors il existe une unique solution maximale
+(I0,\phi0) de l'équation différentielle
+y^(n) =
+f(t,y,y',\\ldots,y^(n-1)~)
+qui vérifie \phi(t0) =
+y0,\\ldots,\phi^(n-1)(t0~)
+= yn-1. L'intervalle I0 est ouvert. Pour toute
+solution (J,\psi) de l'équation différentielle vérifiant \psi(t0) =
+y0,\\ldots,\psi^(n-1)(t0~)
+= yn-1, on a~:
+
+\text\$J \subset~ I0\$ et \$\psi\$ est la restriction
+de \$\phi0\$ à \$J\$.
+
+\paragraph{16.5.3 Systèmes différentiels autonomes d'ordre 1}
+
+Définition~16.5.2 Soit E un espace vectoriel normé, U un ouvert de
+E^n et F : U \rightarrow~ E. On dit que l'équation différentielle
+d'ordre n, y^(n) =
+F(y,y',\\ldots,y^(n-1)~)
+(indépendante du temps t) est une équation différentielle autonome.
+
+Proposition~16.5.8 (invariance par translation de l'ensemble des
+solutions). Soit (I,\phi) une solution de l'équation différentielle
+autonome y^(n) =
+F(y,y',\\ldots,y^(n-1)~),
+et soit T \in \mathbb{R}~. Alors le couple (IT,\phiT), où
+\phiT(t) = \phi(t + T) et IT est le translaté de I par le
+nombre réel - T, est encore une solution de l'équation.
+
+Démonstration En effet, pour t \in IT, on a t + T \in I et donc
+
+\phi^(n)(t + T) = F(\phi(t + T),\phi'(t +
+T),\\ldots,\phi^(n-1)~(t
++ T))
+
+c'est-à-dire \phiT^(n)(t) =
+F(\phiT(t),\phiT'(t),\\ldots,\phiT^(n-1)~(t))
+
+Par la suite, nous nous intéresserons tout particulièrement au cas d'une
+équation autonome d'ordre 1 à valeurs dans \mathbb{R}~^2. Dans ce cas,
+en introduisant les deux composantes y1 et y2 de la
+fonction inconnue y et les deux composantes f et g de la fonction F, on
+obtient un système différentiel autonome d'ordre 1
+
+\left \ \cases
+y1' = f(y1,y2)& \cr
+y2' = g(y1,y2)&\\ 
+\right .
+
+que l'on pourra encore écrire après un changement de notation
+
+\left \ \cases x' =
+f(x,y)& \cr y' = g(x,y)&\\  \right .
+
+Le théorème de Cauchy-Lipschitz pour un tel système peut encore s'écrire
+sous la forme
+
+Théorème~16.5.9 Soit U un ouvert de \mathbb{R}~^2, f et g deux
+applications de classe \mathcal{C}^1 de U dans \mathbb{R}~ et S le système
+différentiel autonome \left \
+\cases x' = f(x,y)& \cr y' = g(x,y)&\\
+ \right .. Alors (i) (unicité) si deux solutions
+(I,(\phi1,\psi1)) et (J,(\phi2,\psi2))
+coïncident en point t0 \in I \bigcap J, elles coïncident sur I \bigcap J
+(ii) (existence locale) pour tout t0 \in \mathbb{R}~ et tout couple
+(x0,y0) \in U, il existe \eta \textgreater{} 0 et une
+solution ({]}t0 - \eta,t0 + \eta{[},(\phi,\psi)) du système
+différentiel (S) vérifiant \phi(t0) =
+x0,\psi(t0) = y0 (iii) (solutions maximales)
+pour tout t0 \in \mathbb{R}~ et tout couple (x0,y0) \in
+U, il existe une unique solution maximale (I,(\phi,\psi)) du système
+différentiel (S) vérifiant \phi(t0) =
+x0,\psi(t0) = y0~; I est un intervalle
+ouvert.
+
+Comme nous l'avons vu ci dessus, si (I,(\phi,\psi)) est une solution du
+système différentiel autonome (S) et si T \in \mathbb{R}~^∗, alors
+(IT,(\phiT,\psiT)) est encore une solution du
+système différentiel autonome (S). Il est clair que l'une des deux
+solutions est maximale si et seulement si l'autre l'est~; dans ce cas,
+s'il existe t0 \in I \bigcap IT tel que \phi(t0 + T)
+= \phi(t0) et \psi(t0 + T) = \psi(t0), on doit
+avoir (I,(\phi,\psi)) = (IT,(\phiT,\psiT)), ce qui
+implique que I = \mathbb{R}~ et que \phi et \psi sont périodiques de période T. On en
+déduit~:
+
+Théorème~16.5.10 Soit U un ouvert de \mathbb{R}~^2, f et g deux
+applications de classe \mathcal{C}^1 de U dans \mathbb{R}~ et (I,(\phi,\psi)) une
+solution maximale du système différentiel autonome \left
+\ \cases x' = f(x,y)&
+\cr y' = g(x,y)&  \right .. S'il existe
+t1,t2 \in I distincts tels que \phi(t1) =
+\phi(t2) et \psi(t1) = \psi(t2), alors I = \mathbb{R}~ et \phi
+et \psi sont périodiques de période t2 - t1.
+
+Parmi les solutions d'un système différentiel autonome, on peut
+rechercher les constantes t\mapsto~(a,b)~; il est
+clair qu'une telle constante est solution si et seulement si f(a,b) =
+g(a,b) = 0. Ceci conduit à la définition~:
+
+Définition~16.5.3 On appelle position d'équilibre d'un système autonome
+\left \ \cases x' =
+f(x,y)& \cr y' = g(x,y)&  \right .
+tout couple (a,b) tel que f(a,b) = g(a,b) = 0.
+
+Si (a,b) est une telle position d'équilibre,
+(\mathbb{R}~,(t\mapsto~a,t\mathrel\mapsto~b)) est
+clairement une solution maximale. Si f et g sont de classe
+\mathcal{C}^1, on en déduit que toute solution (I,(\phi,\psi)) qui passe par
+cette position d'équilibre, c'est-à-dire pour laquelle il existe
+t0 \in I tel que \phi(t0) = a,\psi(t0) = b, est
+constante.
+
+Interprétation géométrique des systèmes autonomes~: soit U un ouvert de
+\mathbb{R}~^2 et V un champ de vecteurs sur U, c'est-à-dire une
+application de V dans \mathbb{R}~^2. Pour (x,y) \in U, on peut écrire V
+(x,y) = (f(x,y),g(x,y)). Alors les solutions (I,(\phi,\psi)) du système
+autonome \left \ \cases
+x' = f(x,y)& \cr y' = g(x,y)&  \right
+.sont exactement les arcs paramétrés (I,\Phi) qui admettent en chaque point
+m = \Phi(t) de l'image de l'arc un vecteur tangent \Phi'(t) = V (\Phi(t)), valeur
+du champ de vecteurs V au point m. Un tel arc paramétré est appelé une
+courbe intégrale du champ de vecteurs V .
+
+\paragraph{16.5.4 Equations différentielles et formes différentielles}
+
+Définition~16.5.4 Soit \omega = a(t,y)dt + b(t,y)dy une forme différentielle
+sur un ouvert U de \mathbb{R}~^2. On appelle solution de l'équation \omega =
+0 tout couple (I,(f1,f2)) d'un intervalle I de \mathbb{R}~ et
+d'une application (f1,f2) : I \rightarrow~ \mathbb{R}~^2 de
+classe \mathcal{C}^1 tel que (i) \forall~~u \in I,
+(f1(u),f2(u)) \in U (ii) \forall~~u
+\in I, a(f1(u),f2(u))f1'(u) +
+b(f1(u),f2(u))f2'(u) = 0
+
+Formellement, (f1,f2) est solution de l'équation \omega =
+0 si en rempla\ccant t par f1(u), dt par
+f1'(u) du, y par f2(u) et dy par f2'(u)
+du, on obtient la forme différentielle nulle. Nous allons à l'aide du
+théorème suivant relier les solutions de l'équation a(t,y)dt + b(t,y)dy
+= 0 aux solutions de l'équation différentielle a(t,y) + b(t,y) dy
+\over dt = 0, obtenue formellement par division par dt
+de la forme différentielle.
+
+Théorème~16.5.11 Soit \omega = a(t,y)dt + b(t,y)dy une forme différentielle
+sur un ouvert U de \mathbb{R}~^2. (i) Pour toute solution (I,f) de
+l'équation différentielle a(t,y) + b(t,y) dy \over dt
+= 0, le couple (I,t\mapsto~(t,f(t))) est une
+solution de l'équation \omega = 0. (ii) Inversement si
+(J,(f1,f2)) est une solution de l'équation \omega = 0
+telle que \forall~~u \in
+J,f1'(u)\neq~0, alors f1 est
+un difféomorphisme de classe \mathcal{C}^1 de J sur un intervalle I =
+f1(J) de \mathbb{R}~ et le couple (I,f2 \cdot
+f1^-1) est une solution de l'équation différentielle
+a(t,y) + b(t,y) dy \over dt = 0.
+
+Démonstration (i) On a en effet f1(t) = t et f2(t) =
+f(t), si bien que
+
+\begin{align*}
+a(f1(t),f2(t))f1'(t) +
+b(f1(t),f2(t))f2'(t)& & \%&
+\\ = a(t,f(t)) + b(t,f(t))f'(t) = 0& &
+\%& \\ \end{align*}
+
+(ii) Comme f1' ne s'annule pas sur J et qu'elle est continue,
+cette fonction dérivée est de signe constant. Donc f1 est
+strictement monotone et c'est donc un homéomorphisme de J sur un
+intervalle I = f1(J). Comme f1' ne s'annule pas,
+l'application f1^-1 est elle aussi de classe
+\mathcal{C}^1 et donc f1 est un difféomorphisme. De plus si f
+= f2 \cdot f1^-1, on a
+
+f'(t) = \left
+(f1^-1\right )'(t)f
+2'(f1^-1(t)) =
+f2'(f1^-1(t)) \over
+f1'(f1^-1(t))
+
+si bien qu'en posant u = f1^-1(t) et donc t =
+f1(u), f(t) = f2(u), on a
+
+\begin{align*} a(t,f(t)) + b(t,f(t))f'(t)&& \%&
+\\ & =&
+a(f1(u),f2(u)) +
+b(f1(u),f2(u)) f2'(u)
+\over f1'(u) \%&
+\\ & =&
+a(f1(u),f2(u))f1'(u) +
+b(f1(u),f2(u))f2'(u) \over
+f1'(u) = 0\%& \\
+\end{align*}
+
+donc (I,f) est solution de l'équation différentielle.
+
+Remarque~16.5.3 Le résultat précédent signifie qu'il est équivalent de
+résoudre l'équation différentielle ou de rechercher les solutions de
+l'équation \omega = 0 tels que f1' ne s'annule pas~; autrement dit
+les graphes des solutions de l'équation différentielle (c'est-à-dire les
+courbes intégrales de l'équation différentielle) sont paramétrés par les
+solutions de l'équation \omega = 0. Ceci va nous permettre, plutôt que de
+résoudre l'équation différentielle, de résoudre l'équation \omega = 0 et de
+rechercher, parmi les arcs paramétrés solutions, ceux qui paramètrent
+des graphes d'applications de classe \mathcal{C}^1, c'est-à-dire ceux
+tels que f1' ne s'annule pas.
+
+\paragraph{16.5.5 Equations aux différentielles totales}
+
+Théorème~16.5.12 Soit U un ouvert de \mathbb{R}~^2 et F : U \rightarrow~ \mathbb{R}~ de
+classe \mathcal{C}^1, \omega = dF = \partial~F \over \partial~t (t,y) dt
++ \partial~F \over \partial~y (t,y) dy. Alors les solutions de
+l'équation \omega = 0 sont les applications (f1,f2) de
+classe \mathcal{C}^1 d'un intervalle I de \mathbb{R}~ dans U telles que
+l'application
+u\mapsto~F(f1(u),f2(u)) soit
+constante.
+
+Démonstration On a en effet
+
+\begin{align*} d \over du
+F(f1(u),f2(u))&& \%&
+\\ & =& \partial~F \over \partial~t
+(f1(u),f2(u)) f1'(u) + \partial~F
+\over \partial~y (f1(u),f2(u))
+f2'(u)\%& \\
+\end{align*}
+
+qui vaut 0 si et seulement si~f = (f1,f2) est
+solution de l'équation \omega = 0.
+
+On en déduit que si la forme différentielle a(t,y) dt + b(t,y) dy est la
+différentielle d'une fonction F sur U, alors les solutions de l'équation
+différentielle a(t,y) + b(t,y)y' = 0 sont les couples (I,f) d'un
+intervalle I de \mathbb{R}~ et d'une application f : I \rightarrow~ \mathbb{R}~ tel que l'application
+t\mapsto~F(t,f(t)) soit constante. Autrement dit,
+les solutions de l'équation différentielle sont définies implicitement
+par l'équation F(t,y) = k où k est une constante. Une telle équation
+sera dite équation aux différentielles totales~; une telle équation est
+donc résoluble de manière implicite (ou même graphique~: il suffit de
+tracer les courbes de niveau de la fonction F et d'en rechercher les
+parties qui sont des graphes d'applications de classe \mathcal{C}^1)~;
+dans certains cas, ceci peut conduire à une résolution explicite.
+
+Exemple~16.5.1 Soit à résoudre l'équation différentielle y + (t - y)y' =
+0. Sur l'ouvert U défini par t - y\neq~0, on a y'
+= y \over y-t si bien que la théorie de Cauchy
+Lipschitz s'applique. La forme différentielle y dt + (t - y) dy est
+exacte puisque  \partial~y \over \partial~y = \partial~(t-y)
+\over \partial~t . On constate sans difficulté qu'à un facteur
+2 près, c'est la différentielle de la fonction F(t,y) = 2ty -
+y^2. Autrement dit, les solutions de l'équation
+différentielle sont les couples (I,f) tels que f(t)^2 -
+2tf(t) = k. Cherchons les solutions telles que f(t0) =
+y0. Alors nécessairement f(t)^2 - 2tf(t) =
+y0^2 - 2t0y0, si bien que nous
+pouvons résoudre l'équation du second degré à l'inconnue f(t). Le
+discriminant (réduit) est égal à \Delta' = t^2 +
+(y0^2 - 2t0y0) et on a donc
+
+f(t) = t ±\sqrtt^2  + y0 ^2
+ - 2t0  y0
+
+Cherchons donc les solutions dont le graphe est contenu dans U
+c'est-à-dire telles que f(t) - t ne s'annule pas. Alors f(t) - t =
+±\sqrtt^2  + y0 ^2  -
+2t0  y0 ne s'annule pas, et est donc de signe
+constant. On en déduit que le signe ± ne dépend pas de t. De plus, on a
+f(t0) = t0 ±\sqrtt0
+^2  + y0 ^2  - 2t0  y0 =
+t0 ±\textbar{}y0 - t0\textbar{} ce qui
+montre que ce signe est égal à celui de y0 - t0, que
+nous noterons \epsilon0. On a donc \forall~~t \in I,
+f(t) = t + \epsilon0\sqrtt^2  +
+y0 ^2  - 2t0  y0. Un intervalle
+maximal de définition de cette solution dépend évidemment du signe de
+l'expression y0^2 - 2t0y0 =
+y0(y0 - 2t0). Si cette expression est
+positive, la solution est définie sur \mathbb{R}~ tout entier. Si cette expression
+est négative, la solution est définie sur celui des intervalles {]}
+-\infty~,-\sqrtt0 ^2  + 2t0 
+y0{[} ou {]}\sqrtt0 ^2  +
+2t0  y0,+\infty~{[} qui contient t0 (ce qui
+dépend bien entendu du signe de t0). La figure ci dessous
+représente un aper\ccu des courbes intégrales de
+l'équation différentielle avec les deux droites séparatrices
+y0 = 0 et y0 = 2t0. On remarquera que par
+les points vérifiant y0 = t0 passent deux courbes
+intégrales (mais qui en fait ne sont pas dérivables en ce point)~: la
+moitié supérieure de la branche d'hyperbole et la moitié inférieure~;
+les autres courbes intégrales correspondent à des solutions définies sur
+\mathbb{R}~ tout entier.
+
+\includegraphics{cours10x.png}
+
+\paragraph{16.5.6 Equations à variables séparables}
+
+Définition~16.5.5 On appelle équation à variables séparées une équation
+du type a(t) = b(y)y', où a : I \rightarrow~ \mathbb{R}~ et b : J \rightarrow~ \mathbb{R}~ sont continues.
+
+La forme différentielle correspondante est la forme différentielle \omega =
+a(t) dt - b(y) dy. Si A désigne une primitive de a sur I et B une
+primitive de b sur J, on a \omega = dF avec F(t,y) = A(t) - B(y). Une
+solution (I0,f) vérifiant f(t0) = y0 doit
+donc vérifier A(t) - B(f(t)) = A(t0) - B(y0), où
+encore en termes d'intégrales \int ~
+t0^ta(u) du =\int ~
+y0^f(t)b(v) dv. Si b = B' ne s'annule pas, B
+est un difféomorphisme de J sur B(J) et la solution (I0,f) est
+donnée par f(t) = B^-1\left (A(t) -
+A(t0) + B(y0)\right ).
+
+Remarque~16.5.4 On appelle équation à variables séparables une équation
+se ramenant par produits et quotients à une équation à variables
+séparées. On prendra garde au fait que la séparation des variables est
+une opération à risque. La multiplication par un facteur pouvant
+s'annuler risque de faire apparaître de fausses solutions de l'équation
+différentielle. Quant à la division par des facteurs pouvant s'annuler,
+elle risque au contraire de faire disparaître des solutions annulant ces
+facteurs.
+
+\paragraph{16.5.7 Equations se ramenant à des équations à variables
+séparables}
+
+Certaines équations sont connues comme pouvant se ramener à des
+équations à variables séparables, ce sont les équations incomplètes
+(c'est-à-dire où l'un des termes t ou y n'apparaît pas) et les équations
+homogènes (c'est à dire les équations ne dépendant que de y' et de  y
+\over t ).
+
+Equations sous formes normales
+
+Nous nous intéresserons tout d'abord aux équations sous forme normale.
+Les équations incomplètes sont alors de deux types~: soit y' = F(t) soit
+y' = F(y). La première se ramène à un simple calcul de primitive. La
+seconde est une équation à variables séparables~: la division par F(y)
+sépare les deux variables~; cependant cette division n'est possible que
+pour des solutions t\mapsto~y(t) telles que F(y(t))
+ne s'annule pas. Cherchons tout d'abord ces solutions~: l'équation
+s'écrit alors  dy \over F(y) = dt ce qui conduit pour
+une solution vérifiant \phi(t0) = y0 à
+\int  y0^\phi(t)~ du
+\over F(u) = t - t0~; on obtient donc ainsi t
+en fonction de y = \phi(t) et il ne reste plus qu'à inverser la fonction
+obtenue. Inversement, si F(y0) = 0, il est clair que la
+fonction constante t\mapsto~y0 est
+solution. Dans le cas où le théorème de Cauchy-Lipschitz s'applique (par
+exemple si F est de classe \mathcal{C}^1), on est certain d'avoir
+obtenu ainsi toutes les solutions.
+
+Remarque~16.5.5 Les équations incomplètes du type y' = F(y) présentent
+une certaine invariance par translation~: si \phi en est une solution,
+toutes les t\mapsto~\phi(t + T) en sont également
+solutions.
+
+Une équation homogène sous forme normale se présente nécessairement sous
+la forme y' = F( y \over t ), t variant soit dans {]}
+-\infty~,0{[}, soit dans {]}0,+\infty~{[}. Faisons le changement de fonction
+inconnue y = tz. On obtient alors tz' + z = F(z) soit encore tz' = F(z)
+- z. Il s'agit d'une équation à variables séparables. La séparation des
+variables conduisant à l'équation  dz \over F(z)-z
+= dt \over t nécessite une division par t qui de
+toute fa\ccon ne s'annule pas sur les intervalles
+considérés, mais aussi une division par F(z) - z qui lui peut s'annuler.
+Les solutions t\mapsto~z(t) telles que F(z(t)) -
+z(t) ne s'annulent pas sont données par \int ~
+z0^z du \over F(u)-u
+= log~ \left \textbar{} t
+\over t0 \right \textbar{},
+avec z(t) = y(t) \over t et z0 =
+y0 \over t0 . Par contre, si
+F(z0) - z0 = 0, il est clair que la fonction
+constante t\mapsto~z0 est solution de tz'
+= F(z) - z et donc t\mapsto~tz0 est
+solution de y' = F( y \over t ). Dans le cas où le
+théorème de Cauchy-Lipschitz s'applique (par exemple si F est de classe
+\mathcal{C}^1), on est certain d'avoir obtenu ainsi toutes les
+solutions.
+
+Remarque~16.5.6 Les équations homogènes du type y' = F( y
+\over t ) présentent une invariance par homothétie~: si
+\phi en est une solution, toutes les
+t\mapsto~\lambda~\phi\left ( t
+\over \lambda~ \right ) en sont également
+solutions.
+
+Equations sous formes non normales
+
+Les équations incomplètes se présentent sous la forme F(t,y') = 0 ou
+F(y,y') = 0, les équations homogènes sous la forme F( y
+\over t ,y') = 0. Dans tous les cas, on supposera que
+l'on sait paramétrer la courbe F(X,Y ) = 0 par X = \phi(u) et Y = \psi(u). On
+cherchera alors à paramétrer les courbes intégrales de l'équation
+différentielle en fonction de u ce qui peut se faire simplement en
+termes de formes différentielles.
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  F(t,y') = 0. On écrit t = \phi(u),  dy \over dt =
+  \psi(u)~; ceci conduit à dy = \psi(u) dt = \psi(u)\phi'(u) du. Un simple calcul de
+  primitive conduit à y = \Psi(u) et les courbes intégrales sont
+  paramétrées par t = \phi(u), y = \Psi(u).
+\item
+  F(y,y') = 0. On écrit y = \phi(u),  dy \over dt =
+  \psi(u)~; ceci conduit à dy = \phi'(u) du = \psi(u) dt qui est une équation à
+  variable séparable entre u et t~; si \psi(u) ne s'annule pas, un calcul
+  de primitive conduit à t = \Phi(u) et les courbes intégrales sont
+  paramétrées par t = \Phi(u), y = \psi(u). Si \phi(u0) = 0, on obtient
+  également comme solution la fonction constante
+  t\mapsto~\phi(u0).
+\item
+  F( y \over t ,y') = 0. On écrit  y
+  \over t = \phi(u),  dy \over dt =
+  \psi(u)~; ceci conduit à y = t\phi(u), d'où dy = \phi(u) dt + t\phi'(u) du = \psi(u)
+  dt qui est une équation à variable séparable entre u et t que l'on
+  peut écrire (\psi(u) - \phi(u)) dt = t\phi'(u) du. Comme t ne s'annule pas, si
+  \psi - \phi ne s'annule pas, un calcul de primitive conduit à t = \Phi(u) et
+  les courbes intégrales sont paramétrées par t = \Phi(u), y = t\psi(u) =
+  \Phi(u)\psi(u). Si \psi(u0) - \phi(u0) = 0, on obtient
+  également comme solution la fonction affine y = t\phi(u0).
+\end{itemize}
+
+Remarque~16.5.7 Le lecteur vérifiera sans difficulté que l'ensemble des
+courbes intégrales d'une équation incomplète est invariant par
+translation parallèlement à l'un des axes et que l'ensemble des courbes
+intégrales d'une équation homogène est invariant par homothétie de
+centre O.
+
+\paragraph{16.5.8 Equation de Riccati}
+
+On considère une équation différentielle du type y' = a(t)y^2
++ b(t)y + c(t), où b et c sont des applications continues de I dans \mathbb{R}~ et
+a une application de classe \mathcal{C}^1 de I dans \mathbb{R}~ ne s'annulant
+pas. Faisons le changement de fonction inconnue z
+= exp (-\\int ~ a(t)y(t)
+dt) soit encore a(t)y = - z' \over z où z est une
+fonction de classe C^2 ne s'annulant pas. On obtient alors y'
+= - 1 \over a(t)  z'`\over z + 1
+\over a(t)  z'^2 \over
+z^2 + a'(t) \over a(t)^2 
+z' \over z si bien que l'équation devient
+
+\begin{align*} - 1 \over a(t) 
+z'`\over z + 1 \over a(t) 
+z'^2 \over z^2 + a'(t)
+\over a(t)^2  z' \over z
+= 1 \over a(t)  z'^2
+\over z^2 - b(t) \over
+a(t)  z' \over z + c(t)& & \%&
+\\ \end{align*}
+
+soit encore après multiplication par a(t)z,
+
+z'`-\left ( a'(t) \over a(t) +
+b(t)\right )z' + a(t)c(t)z = 0
+
+qui est une équation différentielle homogène d'ordre 2.
+
+Inversement, étant donnée une équation homogène d'ordre 2, z'`+ p(t)z' +
+q(t)z = 0, p et q étant des fonctions continues de I dans \mathbb{R}~, si l'on
+recherche les solutions ne s'annulant pas sous la forme z =
+e^u, on a z' = u'e^u et z'`= (u'`+
+u'^2)e^u et donc, en posant y = u',
+
+\begin{align*} z'`+ p(t)z' + q(t)z = 0&
+\Leftrightarrow & u'`+ u'^2 + p(t)u' + q(t) =
+0\%& \\ & \Leftrightarrow
+& y' = -y^2 + p(t)y + q(t) \%&
+\\ \end{align*}
+
+qui est une équation de Riccati.
+
+On voit donc en définitive que la résolution des équations de Riccati y'
+= a(t)y^2 + b(t)y + c(t) est équivalente à la recherche des
+solutions ne s'annulant pas des équations différentielles homogènes
+d'ordre 2.
+
+{[}
+{[}
+{[}
+{[}

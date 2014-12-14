@@ -1,0 +1,826 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{14.3 Série de Fourier d'une fonction}
+
+\paragraph{14.3.1 Les espaces C et D}
+
+Définition~14.3.1 On considère l'espace vectoriel C des fonctions de \mathbb{R}~
+dans \mathbb{C}, continues par morceaux et périodiques de période 2\pi~. On
+désignera par D le sous-espace vectoriel des applications f : \mathbb{R}~ \rightarrow~ \mathbb{C},
+continues par morceaux, périodiques de période 2\pi~ et vérifiant
+\forall~~x \in \mathbb{R}~, f(x) =
+f(x^+)+f(x^-) \over 2 (où
+f(x^+) et f(x^-) désignent respectivement les
+limites à gauche et à droite de f au point x). Pour f,g \inC, on posera
+(f∣g) = 1 \over 2\pi~
+\int ~
+0^2\pi~\overlinef(t)g(t) dt,
+\\textbar{}f\\textbar{}2 =
+\sqrt(f∣ f) et
+en : t\mapsto~e^int.
+
+Théorème~14.3.1 L'application
+(f,g)\mapsto~(f\mathrel∣g) est
+une forme hermitienne positive sur C dont la restriction à D est définie
+positive. La famille (en)n\inℤ est une famille
+orthonormée de C. Pour toute f \inC, on a
+\\textbar{}f\\textbar{}2
+\leq\\textbar{} f\\textbar{}\infty~
+(norme de la convergence uniforme).
+
+Démonstration Le caractère sesquilinéaire et la symétrie hermitienne
+sont évidents. Si f \inC, on a (f∣f) = 1
+\over 2\pi~ \int ~
+0^2\pi~\textbar{}f(t)\textbar{}^2 dt ≥ 0. La
+nullité de (f∣f) nécessite que f soit nulle
+en tout point de {[}0,2\pi~{]} où elle est continue, soit sur {[}0,2\pi~{]}
+privé d'un nombre fini de points. Si f est dans D, alors en chacun de
+ces points on a f(x^+) = f(x^-) = 0 (car il existe
+tout un intervalle ouvert à gauche de x sur lequel f est nul, et de même
+à droite) et donc f(x) = 0, par conséquent f est la fonction nulle sur
+{[}0,2\pi~{]}, donc sur \mathbb{R}~.
+
+Remarque~14.3.1 On prendra garde que si f est seulement continue par
+morceaux,
+\\textbar{}f\\textbar{}2 = 0
+n'implique pas f = 0.
+
+\paragraph{14.3.2 Coefficients de Fourier d'une fonction continue par
+morceaux}
+
+Définition~14.3.2 Soit f : \mathbb{R}~ \rightarrow~ \mathbb{C} continue par morceaux et périodique de
+période 2\pi~. On définit les coefficients de Fourier de la fonction f par
+
+\begin{align*} \forall~~n \in
+ℤ,\quad cn(f)& =&
+(en∣f) = 1 \over
+2\pi~ \int ~
+0^2\pi~f(t)e^-int dt\%&
+\\ \forall~~n ≥
+0,\quad an(f)& =& 1 \over
+\pi~ \int ~
+0^2\pi~f(t)cos~ nt dt \%&
+\\ \forall~~n ≥
+1,\quad bn(f)& =& 1 \over
+\pi~ \int ~
+0^2\pi~f(t)sin~ nt dt \%&
+\\ \end{align*}
+
+Remarque~14.3.2 Les fonctions intégrées étant périodiques de période 2\pi~,
+on a aussi pour tout a \in \mathbb{R}~, cn(f) = 1 \over
+2\pi~ \int ~
+a^a+2\pi~f(t)e^-int dt, an(f) = 1
+\over \pi~ \int ~
+a^a+2\pi~f(t)cos~ nt dt,
+bn(f) = 1 \over \pi~
+\int ~
+a^a+2\pi~f(t)sin~ nt dt et en
+particulier cn(f) = 1 \over 2\pi~
+\int  -\pi~^\pi~f(t)e^-int~
+dt, an(f) = 1 \over \pi~
+\int ~
+-\pi~^\pi~f(t)cos~ nt dt,
+bn(f) = 1 \over \pi~
+\int ~
+-\pi~^\pi~f(t)sin~ nt dt
+
+Proposition~14.3.2 On a les relations suivantes
+
+\begin{align*} c0(f)& =&
+a0(f) \over 2 \%&
+\\ \forall~~n ≥
+1,\quad cn(f)& =& an(f) -
+ibn(f) \over 2 ,\quad
+c-n(f) = an(f) + ibn(f)
+\over 2 \%& \\
+\forall~n ≥ 1,\quad an~(f)&
+=& cn(f) + c-n(f),\quad bn
+= i(cn(f) - c-n(f)) \%&
+\\ \end{align*}
+
+Démonstration Elémentaire
+
+Proposition~14.3.3 Soit f : \mathbb{R}~ \rightarrow~ \mathbb{C} continue par morceaux et périodique de
+période 2\pi~. Si f est à valeurs réelles, on a an(f) \in \mathbb{R}~,
+bn(f) \in \mathbb{R}~ et c-n(f) =
+\overlinecn(f). Si f est paire (resp.
+impaire) on a bn(f) = 0 (resp. an(f) = 0).
+
+Démonstration Si f est à valeurs réelles, il en est de même de
+x\mapsto~f(x)cos~ nx et de
+x\mapsto~f(x)sin~ nx ce qui
+montre que an(f) et bn(f) sont réels~; de plus
+f(x)e^inx = \overlinef(x)e^-inx
+ce qui montre que c-n(f) =
+\overlinecn(f). Si f est paire, on a
+bn(f) = 1 \over 2\pi~
+\int ~
+-\pi~^\pi~f(x)sin~ nx dx = 0 puisque
+la fonction f(x)sin~ nx est impaire. Le
+raisonnement est similaire si f est impaire avec les an(f).
+
+Définition~14.3.3 Soit f : \mathbb{R}~ \rightarrow~ \mathbb{C} continue par morceaux et périodique de
+période 2\pi~. On appelle série de Fourier de la fonction f la série
+trigonométrique
+
+\begin{align*} c0(f) +
+\sum n≥1(cn(f)e^inx~
++ c -n(f)e^-inx)&& \%&
+\\ & & = a0(f)
+\over 2 + \\sum
+n≥1(an(f)\cos nx +
+bn(f)\sin nx)\%&
+\\ \end{align*}
+
+Définition~14.3.4 Pour n ≥ 1, on posera (sommes partielles de la série
+de Fourier)
+
+\begin{align*} Sn(f)(x)& =&
+c0(f) + \\sum
+p=1^n(c p(f)e^ipx + c
+-p(f)e^-ipx) \%& \\ & =&
+a0(f) \over 2 + \\sum
+p=1^n(a p(f)\cos px +
+bp(f)\sin px)\%&
+\\ \end{align*}
+
+\paragraph{14.3.3 Inégalité de Bessel et théorème de Riemann-Lebesgue}
+
+Définition~14.3.5 Pour N ≥ 1, on posera TN
+=\
+\mathrmVect(e-N,e-N+1,\\ldots,e-1,e0,e1,\\\ldots,eN-1,eN~)
+(espace vectoriel des polynômes trigonométriques de degré inférieur ou
+égal à N.
+
+Remarque~14.3.3 On a également
+
+TN = \x\mapsto~
+a0 \over 2 + \\sum
+p=1^N(a p \cos px +
+bp \sin px)\
+
+Par définition même
+(e-N,e-N+1,\\ldots,e-1,e0,e1,\\\ldots,eN-1,eN~)
+est une base orthonormée de TN.
+
+Lemme~14.3.4 Soit f : \mathbb{R}~ \rightarrow~ \mathbb{C} continue par morceaux et périodique de
+période 2\pi~. Alors
+\\textbar{}SN(f)\\textbar{}2^2
+= \\sum ~
+k=-N^N\textbar{}ck(f)\textbar{}^2.
+
+Démonstration
+c-N(f),\\ldots,c0(f),\\\ldots,cN~(f)
+sont les coordonnées de SN(f) dans la base orthonormée
+(e-N,e-N+1,\\ldots,e-1,e0,e1,\\\ldots,eN-1,eN~)~;
+la norme au carré de SN(f) est donc la somme des carrés des
+modules de ces coordonnées~; d'où le résultat.
+
+Lemme~14.3.5 Soit f : \mathbb{R}~ \rightarrow~ \mathbb{C} continue par morceaux et périodique de
+période 2\pi~. Alors SN(f) est la pro\\\\jmathmathmathmathection orthogonale de f sur
+le sous-espace vectoriel TN.
+
+Démonstration Puisque SN(f) appartient à TN, il
+suffit de montrer que f - SN(f) \bot TN ou encore que
+\forall~~n \in {[}-N,N{]},
+(en∣f - SN(f)) = 0, ou
+encore que \forall~~n \in {[}-N,N{]},
+(en∣f) =
+(en∣SN(f)). Mais
+(en∣SN(f)) est la
+coordonnée suivant en de SN(f) (puisque la base est
+orthonormée), c'est donc cn(f) =
+(en∣f) par définition, ce qui
+montre le résultat.
+
+Théorème~14.3.6 (Bessel). Soit f : \mathbb{R}~ \rightarrow~ \mathbb{C} continue par morceaux et
+périodique de période 2\pi~. Alors la série
+\textbar{}c0(f)\textbar{}^2
++ \\sum ~
+n≥1(\textbar{}cn(f)\textbar{}^2 +
+\textbar{}c-n(f)\textbar{}^2) est convergente et on
+a
+
+\textbar{}c0(f)\textbar{}^2 +
+\sum n=1^+\infty~(\textbar{}c~
+n(f)\textbar{}^2 + \textbar{}c
+-n(f)\textbar{}^2) \leq\\textbar{}
+f\\textbar{} 2^2
+
+Démonstration Puisque SN(f) est la pro\\\\jmathmathmathmathection orthogonale de f
+sur TN, on a f = SN(f) + (f - SN(f)) avec
+SN(f) \bot f - SN(f). Le théorème de Pythagore assure
+que
+\\textbar{}f\\textbar{}2^2
+=\\textbar{}
+SN(f)\\textbar{}2^2
++\\textbar{} f -
+SN(f)\\textbar{}2^2, d'où
+encore d'après le lemme 1
+
+\textbar{}c0(f)\textbar{}^2 +
+\sum n=1^N(\textbar{}c~
+n(f)\textbar{}^2 + \textbar{}c
+-n(f)\textbar{}^2) =\\textbar{} S
+N(f)\\textbar{}2^2
+\leq\\textbar{} f\\textbar{}
+2^2
+
+La série à termes positifs
+\textbar{}c0(f)\textbar{}^2
++ \\sum ~
+n≥1(\textbar{}cn(f)\textbar{}^2 +
+\textbar{}c-n(f)\textbar{}^2) a ses sommes
+partielles ma\\\\jmathmathmathmathorées par
+\\textbar{}f\\textbar{}2^2,
+donc elle converge et sa somme est ma\\\\jmathmathmathmathorée par
+\\textbar{}f\\textbar{}2^2,
+ce qui achève la démonstration.
+
+Remarque~14.3.4 Un calcul élémentaire montre que pour n ≥ 1,
+
+\textbar{}cn(f)\textbar{}^2 + \textbar{}c
+-n(f)\textbar{}^2 = 1 \over 2
+(\textbar{}an(f)\textbar{}^2 + \textbar{}b
+n(f)\textbar{}^2)
+
+ce qui montre que les séries
+\\sum ~
+\textbar{}an(f)\textbar{}^2 et
+\\sum ~
+\textbar{}bn(f)\textbar{}^2 convergent et que (en
+tenant compte de a0(f) = c0(f)
+\over 2 )
+
+ \textbar{}a0(f)\textbar{}^2 \over
+4 + 1 \over 2 \\sum
+n=1^+\infty~(\textbar{}a
+n(f)\textbar{}^2 + \textbar{}b
+n(f)\textbar{}^2) \leq\\textbar{}
+f\\textbar{}^2
+
+Théorème~14.3.7 (Riemann-Lebesgue). Soit f : \mathbb{R}~ \rightarrow~ \mathbb{C} continue par morceaux
+et périodique de période 2\pi~. Alors
+
+limn\rightarrow~±\infty~cn~(f)
+= limn\rightarrow~+\infty~an~(f)
+= limn\rightarrow~+\infty~bn~(f) = 0
+
+Démonstration Puisque les séries
+\\sum ~
+n≥1(\textbar{}cn(f)\textbar{}^2 +
+\textbar{}c-n(f)\textbar{}^2),
+\\sum ~
+\textbar{}an(f)\textbar{}^2 et
+\\sum ~
+\textbar{}bn(f)\textbar{}^2 sont convergentes,
+leurs termes généraux admettent la limite 0, ce qui montre le résultat.
+
+\paragraph{14.3.4 Les théorèmes de Dirichlet}
+
+Nous aurons besoin par la suite du lemme suivant
+
+Lemme~14.3.8 Pour tout entier n ≥ 1 et pour
+t∉2\pi~ℤ,
+\\sum ~
+k=-n^ne^ikt = sin~
+(2n+1) t \over 2 \over
+sin  t \over 2 ~ .
+
+Démonstration On a en effet
+
+\begin{align*} \\sum
+k=-n^ne^ikt& =& e^-int
+\sum k=0^2ne^ikt~ =
+e^-int e^(2n+1)it - 1 \over
+e^it - 1 \%& \\ & =&
+e^(n+1)it - e^-int \over
+e^it - 1 = e^(n+ 1 \over 2
+)it - e^-(n+ 1 \over 2 )it
+\over e^i t \over 2  -
+e^-i t \over 2  \%&
+\\ \end{align*}
+
+en multipliant numérateur et dénominateur par e^-it\diagup2. On en
+déduit immédiatement la formule souhaitée.
+
+Théorème~14.3.9 (Dirichlet). Soit f : \mathbb{R}~ \rightarrow~ \mathbb{C} de classe \mathcal{C}^1 par
+morceaux et périodique de période 2\pi~. Alors la série de Fourier de f
+converge sur \mathbb{R}~ et
+
+\forall~x \in \mathbb{R}~, f(x^+~) +
+f(x^-) \over 2 = c0(f) +
+\sum n=1^+\infty~(c~
+n(f)e^inx + c -n(f)e^-inx)
+
+Démonstration On a
+
+\begin{align*} Sn(f)(x)& =& 1
+\over 2\pi~ \\sum
+k=-n^ne^inx
+\\int  ~
+0^2\pi~f(t)e^-int dt\%&
+\\ & =& 1 \over 2\pi~
+\int ~
+0^2\pi~f(t)\left (\\sum
+k=-n^ne^in(x-t)\right )
+dt\%& \\ & =& 1 \over
+2\pi~ \int  0^2\pi~~f(t)
+sin (2n + 1) x-t \over 2~
+\over sin~  x-t
+\over 2  dt \%& \\
+\end{align*}
+
+Faisons le changement de variable t = x + u, on obtient
+
+\begin{align*} Sn(f)(x)& =& 1
+\over 2\pi~ \int ~
+-x^2\pi~-xf(x + u) sin~ (2n +
+1) u \over 2 \over
+sin  u \over 2 ~ du\%&
+\\ & =& 1 \over 2\pi~
+\int  -\pi~^\pi~~f(x + u)
+sin (2n + 1) u \over 2~
+\over sin~  u
+\over 2  du \%& \\
+\end{align*}
+
+puisque la fonction intégrée est périodique de période 2\pi~ et que donc
+son intégrale sur tout intervalle de longueur 2\pi~ est la même. Coupons
+l'intégrale en deux, l'une de - \pi~ à 0, l'autre de 0 à \pi~. Dans la
+première faisons le changement de variable u = -2v et dans la seconde le
+changement de variable u = 2v. On obtient
+
+\begin{align*} Sn(f)(x)& =& 1
+\over \pi~ \int ~
+0^\pi~\diagup2f(x - 2v) sin~ (2n + 1)v
+\over sin v~ dv \%&
+\\ & \text & + 1
+\over \pi~ \int ~
+0^\pi~\diagup2f(x + 2v) sin~ (2n + 1)v
+\over sin v~ dv \%&
+\\ & =& 1 \over \pi~
+\int  0^\pi~\diagup2~(f(x + 2v) + f(x -
+2v)) sin~ (2n + 1)v \over
+sin v~ dv\%&
+\\ \end{align*}
+
+Appliquons le résultat précédent à la fonction constante f0 :
+x\mapsto~1. On a bien entendu
+Sn(f0)(x) = 1 puisque c0(f0) = 1
+et cn(f0) = 0 pour n\neq~0~;
+on obtient
+
+1 = 2 \over \pi~ \int ~
+0^\pi~\diagup2 sin~ (2n + 1)v
+\over sin v~ dv
+
+On en déduit que
+
+\begin{align*} Sn(f)(x) -
+f(x^+) + f(x^-) \over 2 =&&
+\%& \\ & & 1 \over \pi~
+\int  0^\pi~\diagup2~ f(x + 2v) -
+f(x^+) + f(x - 2v) - f(x -) \over
+sin v \sin~ (2n +
+1)v dv\%& \\
+\end{align*}
+
+Considérons la fonction g périodique de période 2\pi~ définie par
+
+\begin{align*} g(v)& =& f(x + 2v) -
+f(x^+) + f(x - 2v) - f(x-) \over
+sin v \text pour ~v
+\in{]}0, \pi~ \over 2 {]}\%&
+\\ g(0)& =& 2(f'(x^+) -
+f'(x^-)) \%& \\ g(v)& =&
+0\text pour v \in{]} \pi~ \over 2
+,2\pi~{[} \%& \\
+\end{align*}
+
+Comme la fonction \tildef définie par
+\tildef(x) = f(x^+) et
+\tildef(t) = f(t) pour t \textgreater{} x est
+dérivable à droite au point x (puisque f est de classe \mathcal{C}^1
+par morceaux), on a, quand v tend vers 0 par valeurs supérieures,
+
+\begin{align*} f(x + 2v) - f(x^+))
+\over sin v~ &
+∼v\rightarrow~0,v\textgreater{}0& f(x + 2v) - f(x^+)
+\over v \%& \\ & = &
+2 \tildef(x + 2v) -\tilde f(x)
+\over 2v \%& \\
+\end{align*}
+
+de limite 2f'(x^+). De même on a
+
+limv\rightarrow~0,v\textgreater{}0~ f(x - 2v)
+- f(x-) \over sin v~
+= -2f'(x^-)
+
+ce qui montre que g est continue à droite au point 0. On en déduit
+immédiatement que g est continue par morceaux. Mais alors
+
+\begin{align*} Sn(f)(x) -
+f(x^+) + f(x^-) \over 2 && \%&
+\\ & =& 1 \over \pi~
+\int ~
+0^2\pi~g(v)sin~ (2n + 1)v dv =
+b 2n+1(g)\%& \\
+\end{align*}
+
+D'après le théorème de Riemann-Lebesgue, cette expression tend vers 0
+quand n tend vers + \infty~, ce qui montre à la fois la convergence de la
+série et donne la valeur de sa somme.
+
+Lemme~14.3.10 Soit f : \mathbb{R}~ \rightarrow~ \mathbb{C} périodique de période 2\pi~de classe
+\mathcal{C}^1 par morceaux et continue. Alors
+\forall~n \in ℤ, cn(f') = incn~(f)
+(où f' désigne la fonction de D égale à la dérivée de f sauf en un
+nombre fini de points modulo 2\pi~).
+
+Démonstration Soit \sigma = (ai)0\leqi\leqp une subdivision de
+{[}0,2\pi~{]} adaptée à f. En tout point de {[}0,2\pi~{]}
+\diagdown\a0,\\ldots,ap\~,
+f'(t) est la dérivée de f et on pose f'(ai) = 1
+\over 2 (f'(ai^+) + f'(a
+i^-)), si bien que f' \inD. Une intégration par parties donne, si
+{[}a,b{]} \subset~{]}ai-1,ai{[},
+
+\begin{align*} \int ~
+a^bf'(t)e^-int dt& =& \left
+{[}f(t)e^-int\right {]} a^b +
+in\int  a^bf(t)e^-int~
+dt \%& \\ & =& f(b)e^-inb -
+f(a)e^-ina + in\int ~
+a^bf(t)e^-int dt\%&
+\\ \end{align*}
+
+En faisant tendre a vers ai-1 et b vers ai, en
+tenant compte de la continuité de f aux points ai-1 et
+ai on obtient
+
+\begin{align*} \int ~
+ai-1^ai f'(t)e^-int dt&
+=& f(a i)e^-inai  -
+f(ai-1)e^-inai-1 \%&
+\\ & \text &
++in\int ~
+ai-1^ai f(t)e^-int dt \%&
+\\ \end{align*}
+
+et en sommant
+
+\begin{align*} \int ~
+0^2\pi~f'(t)e^-int dt&& \%&
+\\ & =& \\sum
+i=1^p
+\\int  ~
+ai-1^ai f'(t)e^-int dt
+\%& \\ & =& \\sum
+i=1^p\left (f(a
+i)e^-inai  -
+f(ai-1)e^-inai-1 \right )
++ in\\int  ~
+ai-1^ai f(t)e^-int dt\%&
+\\ & =&
+f(ap)e^-inap  -
+f(a0)e^-ina0  +
+in\int  a0^ap~
+f(t)e^-int dt \%& \\ & =&
+in\int ~
+0^2\pi~f(t)e^-int dt \%&
+\\ \end{align*}
+
+puisque a0 = 0, ap = 2\pi~,
+f(ap)e^-inap = f(2\pi~)e^-in2\pi~ =
+f(2\pi~) = f(0) = f(a0)e^-ina0. En divisant
+par 2\pi~, on obtient cn(f') = incn(f).
+
+Théorème~14.3.11 (Dirichlet). Soit f : \mathbb{R}~ \rightarrow~ \mathbb{C} périodique de période 2\pi~ de
+classe \mathcal{C}^1 par morceaux et continue. Alors la série
+\textbar{}c0(f)\textbar{} +\
+\sum ~
+n≥1(\textbar{}cn(f)\textbar{} +
+\textbar{}c-n(f)\textbar{}) converge, la série de Fourier de f
+converge normalement sur \mathbb{R}~ et on a
+
+\forall~x \in \mathbb{R}~, f(x) = c0~(f) +
+\sum n=1^+\infty~(c~
+n(f)e^inx + c -n(f)e^-inx)
+
+(autrement dit f est somme de sa série de Fourier).
+
+Démonstration Pour a et b réels on a ab \leq 1 \over 2
+(a^2 + b^2)~; on en déduit que si
+n\neq~0, on a 0
+\leq\textbar{}cn(f)\textbar{} = \left \textbar{}
+cn(f') \over in \right
+\textbar{}\leq 1 \over 2
+(\textbar{}cn(f)\textbar{}^2 + 1
+\over n^2 ). D'après le théorème de Bessel,
+la série \\sum ~
+n≥0\textbar{}cn(f')\textbar{}^2 converge et
+d'après la théorie des séries de Riemann la série
+\\sum ~  1
+\over n^2 converge. On en déduit que la
+série \\sum ~
+n≥1\textbar{}cn(f)\textbar{} converge. On montre de la
+même fa\ccon que la série
+\\sum ~
+n≥1\textbar{}c-n(f)\textbar{} converge, d'où la
+convergence de la série
+\\sum ~
+n≥1(\textbar{}cn(f)\textbar{} +
+\textbar{}c-n(f)\textbar{}). La convergence normale de la
+série de Fourier en résulte immédiatement puisque
+
+\forall~~x \in \mathbb{R}~,
+\textbar{}cn(f)e^inx + c
+-n(f)e^-inx\textbar{}\leq\textbar{}c n(f)\textbar{}
++ \textbar{}c-n(f)\textbar{}
+
+qui est une série convergente indépendante de x. La formule résulte du
+premier théorème de Dirichlet en remarquant que si f est continue, f(x)
+= f(x^+)+f(x^-) \over 2 .
+
+\paragraph{14.3.5 Coefficients de Fourier des fonctions de classe
+C^k}
+
+Théorème~14.3.12 Soit f : \mathbb{R}~ \rightarrow~ \mathbb{C} périodique de période 2\pi~ de classe
+C^k. Alors
+
+\forall~n \in ℤ, cn~(f) =
+(in)^kc n(f^(k))
+
+et, quand \textbar{}n\textbar{} tend vers + \infty~, cn(f) = o( 1
+\over n^k ).
+
+Démonstration On a vu que cn(f') = incn(f) et il
+suffit de faire une récurrence évidente sur k pour obtenir
+cn(f) = (in)^kcn(f^(k)). Comme
+le théorème de Riemann-Lebesgue assure que
+lim\textbar{}n\textbar{}\rightarrow~+\infty~cn(f^(k)~)
+= 0, on a cn(f) = o( 1 \over n^k
+).
+
+Remarque~14.3.5 Autrement dit, plus la fonction est régulière, plus vite
+les coefficients de Fourier tendent vers 0 à l'infini. Si f est de
+classe C^\infty~, on a pour tout k \in \mathbb{N}~,
+lim\textbar{}n\textbar{}\rightarrow~+\infty~n^kcn~(f)
+= 0 (typiquement les coefficients de Fourier seront à décroissance
+exponentielle).
+
+\paragraph{14.3.6 Le théorème de Parseval}
+
+Lemme~14.3.13 Soit f : \mathbb{R}~ \rightarrow~ \mathbb{C} périodique de période 2\pi~ et continue par
+morceaux. Alors, pour tout \epsilon \textgreater{} 0, il existe g : \mathbb{R}~ \rightarrow~ \mathbb{C}
+périodique de période 2\pi~, de classe \mathcal{C}^1 par morceaux et
+continue telle que \\textbar{}f -
+g\\textbar{}2 \textless{} \epsilon.
+
+Démonstration Supposons tout d'abord que f est en escalier et soit 0 =
+a0 \textless{} a1 \textless{}
+\\ldots~ \textless{}
+ap = 2\pi~ une subdivision de {[}0,2\pi~{]} adaptée à f avec f(t) =
+\lambda~i pour t \in{]}ai-1,ai{[}. Soit \delta le pas de
+la subdivision. Pour  2 \over n \textless{} \eta
+définissons une fonction gn par
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) \forall~~i \in {[}0,p{]},
+  gn(ai) = 0
+\item
+  (ii) \forall~~i \in {[}1,p{]},
+  \forall~t \in {[}ai-1~ + 1
+  \over n ,ai - 1 \over n
+  {]}, gn(t) = \lambda~i
+\item
+  (iii) gn est affine sur chacun des intervalles
+  {[}ai-1,ai-1 + 1 \over n {]} et
+  {[}ai - 1 \over n ,ai{]}.
+\end{itemize}
+
+Il est clair que gn est continue, affine par morceaux. Comme
+de plus gn(0) = gn(2\pi~) = 0 elle se prolonge en une
+application continue et périodique de période 2\pi~ sur \mathbb{R}~. Puisque
+gn est affine par morceaux, elle est a fortiori de classe
+\mathcal{C}^1 par morceaux. On a
+
+\begin{align*} \int ~
+ai-1^ai \textbar{}f(t) -
+gn(t)\textbar{}^2 dt& =&
+\int ~
+ai-1^ai-1+ 1 \over n
+\textbar{}f(t) - gn(t)\textbar{}^2 dt + \%&
+\\ & \text &
+\int  ai~- 1
+\over n ^ai \textbar{}f(t) -
+gn(t)\textbar{}^2 dt \%&
+\\ \end{align*}
+
+Mais on a g(t) = n\lambda~i(t - ai) pour t \in
+{[}ai-1,ai-1 + 1 \over n {]} et
+g(t) = -n\lambda~i(t - ai) pour t \in {[}ai - 1
+\over n ,ai{]}. On a donc
+
+\begin{align*} \int ~
+ai-1^ai \textbar{}f(t) -
+gn(t)\textbar{}^2 dt&& \%&
+\\ & =&
+\textbar{}\lambda~i\textbar{}^2\left
+(\int ~
+ai-1^ai-1+ 1 \over n
+(1 - n(t - ai-1))^2 dt\right .
+\%& \\ & \text &
+\quad \quad + \left
+.\int  ai~- 1
+\over n ^ai (1 + n(t -
+ai))^2 dt\right ) \%&
+\\ & =&
+\textbar{}\lambda~i\textbar{}^2\left
+(\int  0~^ 1 \over
+n (1 - nu)^2 dt +\int  ~-
+1 \over n ^0(1 + nu)^2
+dt\right )\%& \\ & =&
+\textbar{}\lambda~i\textbar{}^2 \over 3n
+\left (\left {[}-(1 -
+nu)^3\right {]} 0^ 1
+\over n  + \left {[}(1 +
+nu)^3\right {]}- 1 \over
+n ^0\right ) \%&
+\\ & =&
+2\textbar{}\lambda~i\textbar{}^2 \over 3n
+\%& \\ \end{align*}
+
+soit encore
+
+2\pi~\\textbar{}f -
+gn\\textbar{}2^2
+=\int  0^2\pi~~\textbar{}f(t) -
+g n(t)\textbar{}^2 dt = 2 \over
+3n \\sum
+i=1^p\textbar{}\lambda~ i\textbar{}^2
+
+On en déduit que
+limn\rightarrow~+\infty~~\\textbar{}f -
+gn\\textbar{}2 = 0 et que donc on
+peut trouver un n tel que  2 \over n \textless{} \eta
+avec \\textbar{}f -
+gn\\textbar{}2 \textless{} \epsilon.
+
+Supposons maintenant que f est continue par morceaux. Sa restriction à
+{[}0,2\pi~{]} est réglée et donc on peut trouver \phi en escalier sur
+{[}0,2\pi~{[} (et que l'on prolonge par périodicité) telle que
+\\textbar{}f - \phi\\textbar{}\infty~
+\textless{} \epsilon \over 2 . On a alors
+
+\begin{align*} \\textbar{}f -
+\phi\\textbar{}2^2& =& 1
+\over 2\pi~ \int ~
+0^2\pi~\textbar{}f(t) - \phi(t)\textbar{}^2 dt \leq 1
+\over 2\pi~ \int ~
+0^2\pi~\\textbar{}f -
+\phi\\textbar{} \infty~^2 dt\%&
+\\ & =& \\textbar{}f -
+\phi\\textbar{}\infty~^2 \%&
+\\ \end{align*}
+
+soit encore \\textbar{}f -
+\phi\\textbar{}2 \leq\\textbar{} f -
+\phi\\textbar{}\infty~ \textless{} \epsilon
+\over 2 . Mais d'autre part, comme \phi est en escalier,
+on sait qu'on peut trouver g continue et affine par morceaux telle que
+\\textbar{}\phi - g\\textbar{}2
+\textless{} \epsilon \over 2 . On a alors
+\\textbar{}f - g\\textbar{}2
+\leq\\textbar{} f - \phi\\textbar{}2
++\\textbar{} \phi - g\\textbar{}2
+\textless{} \epsilon ce qui démontre le lemme.
+
+Théorème~14.3.14 (Parseval-Plancherel). Soit f : \mathbb{R}~ \rightarrow~ \mathbb{C} périodique de
+période 2\pi~ et continue par morceaux. Alors
+
+\begin{align*}
+\\textbar{}f\\textbar{}2^2&
+=& 1 \over 2\pi~ \int ~
+0^2\pi~\textbar{}f(t)\textbar{}^2 dt \%&
+\\ & =&
+\textbar{}c0(f)\textbar{}^2 +
+\sum n=1^+\infty~(\textbar{}c~
+n(f)\textbar{}^2 + \textbar{}c
+-n(f)\textbar{}^2) \%& \\ &
+=& \textbar{}a0(f)\textbar{}^2
+\over 4 + 1 \over 2
+\sum n=1^+\infty~(\textbar{}a~
+n(f)\textbar{}^2 + \textbar{}b
+n(f)\textbar{}^2)\%& \\
+\end{align*}
+
+Démonstration On sait que
+\textbar{}c0(f)\textbar{}^2
++ \\sum ~
+n=1^N(\textbar{}cn(f)\textbar{}^2 +
+\textbar{}c-n(f)\textbar{}^2)
+=\\textbar{}
+SN(f)\\textbar{}2^2. D'autre
+part, à l'aide du théorème de Pythagore et puisque SN(f) est
+la pro\\\\jmathmathmathmathection orthogonale de f sur le sous-espace TN des
+polynômes trigonométriques de degré au plus N, on a
+\\textbar{}f\\textbar{}2^2
+=\\textbar{}
+SN(f)\\textbar{}2^2
++\\textbar{} f -
+SN(f)\\textbar{}2^2. Le
+résultat à démontrer est donc équivalent à
+limN\rightarrow~+\infty~\\textbar{}SN(f)\\textbar{}2^2~
+=\\textbar{}
+f\\textbar{}2^2, soit encore à
+limN\rightarrow~+\infty~~\\textbar{}f -
+SN(f)\\textbar{}2 = 0.
+
+Supposons tout d'abord que f est \mathcal{C}^1 par morceaux et
+continue. On sait que la série de Fourier de f converge normalement,
+donc uniformément vers f. On a donc
+limN\rightarrow~+\infty~~\\textbar{}f -
+SN(f)\\textbar{}\infty~ = 0, mais comme ci
+dessus, on a \\textbar{}f -
+SN(f)\\textbar{}2
+\leq\\textbar{} f -
+SN(f)\\textbar{}\infty~ ce qui montre que
+limN\rightarrow~+\infty~~\\textbar{}f -
+SN(f)\\textbar{}2 = 0.
+
+Si maintenant f est seulement continue par morceaux, soit \epsilon
+\textgreater{} 0 et g : \mathbb{R}~ \rightarrow~ \mathbb{C} périodique de période 2\pi~, de classe
+\mathcal{C}^1 par morceaux et continue telle que
+\\textbar{}f - g\\textbar{}2
+\textless{} \epsilon \over 2 . D'après le premier cas, on a
+limN\rightarrow~+\infty~~\\textbar{}g -
+SN(g)\\textbar{}2 = 0 et donc il
+existe N0 \in \mathbb{N}~ tel que N ≥ N0
+\rigtharrow~\\textbar{} g -
+SN(g)\\textbar{}2 \textless{} \epsilon
+\over 2 . Mais comme SN(g) \in TN et
+que SN(f) est la pro\\\\jmathmathmathmathection orthogonale de f sur TN,
+on a \\textbar{}f -
+SN(f)\\textbar{}2
+\leq\\textbar{} f -
+SN(g)\\textbar{}2 soit encore, pour N
+≥ N0,
+
+\begin{align*} \\textbar{}f -
+SN(f)\\textbar{}2& \leq&
+\\textbar{}f -
+SN(g)\\textbar{}2
+\leq\\textbar{} f - g\\textbar{}2
++\\textbar{} g -
+SN(g)\\textbar{}2\%&
+\\ & \textless{}& \epsilon
+\over 2 + \epsilon \over 2 = \epsilon \%&
+\\ \end{align*}
+
+ce qui démontre le résultat. La deuxième formule résulte d'un calcul
+précédent qui montre que
+
+\begin{align*}
+\textbar{}c0(f)\textbar{}^2& +&
+\sum n=1^+\infty~(\textbar{}c~
+n(f)\textbar{}^2 + \textbar{}c
+-n(f)\textbar{}^2) \%& \\ &
+=& \textbar{}a0(f)\textbar{}^2
+\over 4 + 1 \over 2
+\sum n=1^+\infty~(\textbar{}a~
+n(f)\textbar{}^2 + \textbar{}b
+n(f)\textbar{}^2)\%& \\
+\end{align*}
+
+Corollaire~14.3.15 (in\\\\jmathmathmathmathectivité de la transformation de Fourier). Soit f
+et g deux fonctions de D telles que \forall~~n \in \mathbb{N}~,
+cn(f) = cn(g). Alors f = g.
+
+Démonstration On a \forall~n \in \mathbb{N}~, cn~(f - g)
+= 0, soit encore d'après le théorème de Parseval,
+\\textbar{}f - g\\textbar{}2 =
+0. Comme f - g appartient à D sur laquelle le produit scalaire est
+défini positif, on a f - g = 0.
+
+Remarque~14.3.6 Si on suppose seulement que f et g sont continues par
+morceaux, on obtient seulement que f et g coïncident sauf en un nombre
+fini de points (sur un intervalle de longueur 2\pi~).
+
+{[}
+{[}
+{[}
+{[}

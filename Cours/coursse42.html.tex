@@ -1,0 +1,120 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{7.8 Espaces de suites}
+
+Définition~7.8.1 On dit qu'une suite (xn)n\in\mathbb{N}~ de
+nombres réels ou complexes est sommable si la série
+\\sum  xn~ est
+absolument convergente.
+
+Proposition~7.8.1 L'ensemble \ell^1(\mathbb{N}~) des suites sommables de
+nombres complexes est un sous espace vectoriel de \mathbb{C}^\mathbb{N}~.
+L'application u =
+(un)n\in\mathbb{N}~\mapsto~\\textbar{}u\\textbar{}1
+= \\sum ~
+n=0^+\infty~\textbar{}un\textbar{} est une norme sur
+cet espace vectoriel. L'application
+u\mapsto~\\\sum
+ n\in\mathbb{N}~un est linéaire de \ell^1(\mathbb{N}~) dans \mathbb{C}.
+
+Démonstration Si (un) et (vn) sont deux suites
+sommables et \alpha~,\beta~ \in \mathbb{C}, les suites (\textbar{}un\textbar{}) et
+(\textbar{}vn\textbar{}) sont sommables~; il en est donc de
+même de la suite (\textbar{}\alpha~\textbar{}\textbar{}un\textbar{}
++ \textbar{}\beta~\textbar{}\textbar{}vn\textbar{}) (résultat sur
+les séries à réels positifs) et donc de la suite
+(\textbar{}\alpha~un + \beta~vn\textbar{}) puisque
+\textbar{}\alpha~un +
+\beta~vn\textbar{}\leq\textbar{}\alpha~\textbar{}\textbar{}un\textbar{}
++ \textbar{}\beta~\textbar{}\textbar{}vn\textbar{}. Donc la suite
+(\alpha~un + \beta~vn) est sommable. La suite nulle étant de
+surcroît sommable, l'ensemble \ell^1(\mathbb{N}~) des suites sommables de
+nombres complexes est un sous espace vectoriel de \mathbb{C}^\mathbb{N}~. La
+vérification des propriétés d'une norme est élémentaire. On a alors
+
+\begin{align*} \\sum
+n=0^+\infty~(\alpha~u n + \beta~vn)& =&
+limp\rightarrow~+\infty~~\\sum
+n=0^p(\alpha~u n + \beta~vn) \%&
+\\ & =&
+\alpha~limp\rightarrow~+\infty~~\\sum
+n=0^pu n +
+\beta~limp\rightarrow~+\infty~\\sum
+n=0^pv n\%& \\
+& =& \alpha~\sum n=0^+\infty~u n~
++ \beta~\sum n=0^+\infty~v n~ \%&
+\\ \end{align*}
+
+d'où la linéarité de
+u\mapsto~\\\sum
+ n=0^+\infty~un.
+
+Proposition~7.8.2 L'ensemble \ell^2(\mathbb{N}~) des suites de nombres
+complexes dont les carrés forment une suite sommable est un sous-espace
+vectoriel de \mathbb{C}^\mathbb{N}~. L'application (u,v) = \left
+((un)n\in\mathbb{N}~,(vn)n\in\mathbb{N}~\right
+)\mapsto~(u\mathrel∣v)
+= \\sum ~
+n=0^+\infty~\overlineunvn
+est un produit scalaire hermitien sur cet espace~; en conséquence
+l'application u =
+(un)n\in\mathbb{N}~\mapsto~\\textbar{}u\\textbar{}2
+= \left
+(\\sum ~
+n=0^+\infty~\textbar{}un\textbar{}^2\right
+)^1\diagup2 est une norme sur cet espace vectoriel.
+
+Démonstration Il est clair que si (un) est de carré sommable,
+il en est de même de \alpha~(un) = (\alpha~un). Si
+(un) et (vn) sont de carré sommable, l'inégalité
+élémentaire \textbar{}un + vn\textbar{}^2
+\leq 2\textbar{}un\textbar{}^2 +
+2\textbar{}vn\textbar{}^2 montre que la suite
+(un + vn) est de carré sommable. La suite nulle
+étant de surcroît de carré sommable, les suites de carrés sommables
+forment donc bien un sous-espace vectoriel de \mathbb{C}^\mathbb{N}~. Si
+(un) et (vn) sont de carré sommable, l'inégalité
+élémentaire
+\textbar{}\overlineunvn\textbar{}\leq
+1 \over 2 \textbar{}un\textbar{}^2
++ 1 \over 2
+\textbar{}vn\textbar{}^2 montre que la suite
+(\overlineunvn) est sommable. On
+peut donc poser (u∣v)
+= \\sum ~
+n=0^+\infty~\overlineunvn.
+Il est clair que
+(u,v)\mapsto~(u\mathrel∣v) est
+sesquilinéaire hermitienne. De plus, si u\neq~0,
+(u∣u) \in \mathbb{R}~^+∗ ce qui montre que
+cette forme sesquilinéaire est définie positive~; on a donc un produit
+scalaire hermitien et la norme associée est
+\\textbar{}u\\textbar{}2^2
+= (u∣u).
+
+Remarque~7.8.1 Le théorème ci dessus n'est plus valable pour des séries
+convergentes~: posons an = bn = (-1)^n
+\over \sqrtn+1 . On a
+\textbar{}cn\textbar{} =\
+\sum  k=0^n~ 1
+\over \sqrt(k+1)(n-k+1) . Mais pour
+k \in {[}0,n{]}, (k + 1)(n - k + 1) \leq ( n \over 2 +
+1)^2 (facile). Donc \textbar{}cn\textbar{}≥ n+1
+\over  n \over 2 +1 qui tend vers
+2~; donc la suite (cn) ne tend pas vers 0 et la série
+\\sum  cn~
+diverge.
+
+{[}
+{[}
+{[}
+{[}

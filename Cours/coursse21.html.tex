@@ -1,0 +1,240 @@
+\textbf{Warning: 
+requires JavaScript to process the mathematics on this page.\\ If your
+browser supports JavaScript, be sure it is enabled.}
+
+\begin{center}\rule{3in}{0.4pt}\end{center}
+
+{[}
+{[}
+{[}{]}
+{[}
+
+\subsubsection{4.4 Limites de fonctions}
+
+Définition~4.4.1 Si E et F sont deux ensembles, on appellera fonction de
+E vers F toute application d'une partie X de E (le domaine de définition
+de la fonction) dans F. On notera Def~ (f) le
+domaine de définition de la fonction f.
+
+\paragraph{4.4.1 Notion de limite suivant une partie}
+
+Définition~4.4.2 Soit E et F deux espaces métriques, A \subset~ F , a
+\in\overlineA. Soit f une fonction de E vers F telle
+que A \subset~ Def~ (f). On dit que f admet une limite
+en a suivant A s'il existe \ell \in F vérifiant les conditions équivalentes
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) \forall~V \in V (\ell), \\exists~U
+  \in V (a),\quad f(U \bigcap A) \subset~ V
+\item
+  (ii) \forall~~\epsilon \textgreater{} 0,
+  \exists~\eta \textgreater{} 0,\quad (x
+  \in A\text et d(x,a) \textless{} \eta) \rigtharrow~ d(f(x),\ell)
+  \textless{} \epsilon.
+\end{itemize}
+
+Démonstration De nouveau, (ii) n'est qu'une reformulation de (i) en
+termes de boules~: toute boule est un voisinage, tout voisinage contient
+une boule.
+
+Remarque~4.4.1 Sans la condition a \in\overlineA, on
+pourrait avoir U \bigcap A = \varnothing~ et la notion deviendrait triviale, tout élément
+\ell vérifiant la condition.
+
+Proposition~4.4.1 Si la fonction f admet une limite en a suivant A,
+l'élément \ell de E est unique~; on l'appelle la limite de la fonction en a
+suivant A. On pose \ell =\
+limx\rightarrow~a,x\inAf(x).
+
+Démonstration Si \ell et \ell' conviennent avec \ell\neq~\ell', il existe d'après la
+propriété de séparation V ouvert contenant \ell et V ' ouvert contenant \ell'
+tels que V \bigcap V ' = \varnothing~. Mais \exists~U \in V (a), f(U \bigcap
+A) \subset~ V et \exists~U' \in V (a), f(U' \bigcap A) \subset~ V '. On a
+alors f(U \bigcap U' \bigcap A) \subset~ V \bigcap V ' = \varnothing~ alors que U \bigcap U' \bigcap
+A\neq~\varnothing~ puisque U \bigcap U' est un voisinage de a et
+que a \in\overlineA. C'est absurde.
+
+Remarque~4.4.2 On prendra garde à ne pas introduire le symbole
+limx\rightarrow~a,x\inA~f(x) de manière opératoire
+avant d'avoir démontré son existence. On remarquera d'autre part que les
+notions de convergence et de limites sont purement topologiques
+puisqu'on peut les exprimer en terme de voisinages~; elles sont donc
+inchangées par changement de distance topologiquement équivalente.
+
+Théorème~4.4.2 Soit U0 un ouvert contenant a. Alors f admet
+une limite en a suivant A si et seulement si il admet une limite suivant
+U0 \bigcap A et dans ce cas la limite est la même (on dit que la
+notion de limite est une notion locale).
+
+Démonstration Si f(U \bigcap A) \subset~ V , on a à fortiori f(U \bigcap U0 \bigcap A)
+\subset~ V . Inversement, si f(U \bigcap U0 \bigcap A) \subset~ V , U' = U \bigcap
+U0 est un voisinage de a tel que f(U' \bigcap A) \subset~ V .
+
+Exemple~4.4.1
+
+\begin{enumerate}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Pour E = \overline\mathbb{R}~, A = \mathbb{N}~, a = +\infty~ et f(n) =
+  xn on retrouve le cas particulier des suites.
+\item
+  Pour A ={]}a,+\infty~{[}\bigcapDef~ (f) on trouve le cas
+  particulier d'une limite à droite (si cela a un sens, c'est à dire si
+  a est dans l'adhérence de cet ensemble)~; de même pour les limites à
+  gauche.
+\item
+  Pour A = Def~ (f)
+  \diagdown\a\ on trouve le cas important de
+  limite quand x tend vers a en étant distinct de a.
+\item
+  Pour a \in Def~ (f) et A
+  = Def~ (f), la seule limite possible est f(a)
+  (facile).
+\end{enumerate}
+
+\paragraph{4.4.2 Propriétés élémentaires}
+
+Proposition~4.4.3 Si f admet \ell pour limite en a suivant A, alors \ell
+\in\overlinef(A).
+
+Démonstration Si V \in V (\ell), il existe U \in V (a) tel que f(U \bigcap A) \subset~ V
+(\bigcapf(A)) et comme U \bigcap A\neq~\varnothing~, on a V \bigcap
+f(A)\neq~\varnothing~. Donc \ell
+\in\overlinef(A).
+
+Remarque~4.4.3 Si f admet \ell pour limite en a suivant A et si A' \subset~ A est
+tel que a \in\overlineA', il est clair que f(U \bigcap A') \subset~
+f(U \bigcap A) et donc f admet encore \ell comme limite en a suivant A'. La
+réciproque est évidemment fausse mais on a
+
+Théorème~4.4.4 Soit A et A' deux parties de E telles que A \cup A'
+\subset~ Def (f) et a \in\overlineA~
+\bigcap\overlineA'. Alors on a équivalence de
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  (i) f admet une limite en a suivant A \cup A'
+\item
+  (ii) f admet une limite suivant A, une limite suivant A' et ces
+  limites sont égales.
+\end{itemize}
+
+Démonstration D'après la remarque précédente, on a (i) \rigtharrow~(ii).
+Inversement supposons que \ell =\
+limAf(x) = limA'~f(x). Soit
+V un voisinage de \ell. Soit U \in V (a) tel que f(U \bigcap A) \subset~ V et U' \in V (a)
+tel que f(U' \bigcap A') \subset~ V . Alors U \bigcap U' est un voisinage de a et f((U \bigcap
+U') \bigcap (A \cup A')) \subset~ V (facile). Donc \ell est limite suivant A \cup A'.
+
+Exemple~4.4.2 Une suite (xn) converge si et seulement si~les
+deux sous suites (x2n) et (x2n+1) convergent et ont
+la même limite. De même, une fonction admet une limite en a si et
+seulement si~elle a une limite à gauche et une limite à droite et ces
+limites sont égales (à condition que tout cela ait un sens).
+
+\paragraph{4.4.3 Composition des limites}
+
+Théorème~4.4.5 Soit E,F et G trois espaces métriques, f fonction de E
+vers F, g une fonction de F vers G. Soit A une partie de E et B une
+partie de F. On suppose que A \subset~ Def~ (f), B
+\subset~ Def~ (g) et f(A) \subset~ B (si bien que g \cdot f est
+définie sur A). Si f admet une limite b en a suivant A et si g admet une
+limite \ell en b suivant B, alors g \cdot f admet \ell pour limite en a suivant A.
+
+Démonstration Remarquons que b \in\overlinef(A)
+\subset~\overlineB. Soit alors W \in V (\ell). Il existe V \in V
+(b) tel que g(V \bigcap B) \subset~ W. Pour ce voisinage V , il existe U \in V (a) tel
+que f(U \bigcap A) \subset~ V . Mais on a f(U \bigcap A) \subset~ f(A) \subset~ B et donc f(U \bigcap A) \subset~ V \bigcap
+B soit g \cdot f(U \bigcap A) \subset~ W, ce qui achève la démonstration.
+
+Proposition~4.4.6 Soit
+E,F1,\\ldots,Fp~
+des espaces métriques, F = F1 \times⋯ \times
+Fp, pi la pro\\\\jmathmathmathmathection de F sur Fi définie
+par
+pi(y1,\\ldots,yp~)
+= yi. Soit f une fonction de E vers F, fi =
+pi \cdot f si bien que f(x) =
+(f1(x),\\ldots,fp~(x)).
+Alors f admet une limite \ell en a suivant A si et seulement si~chacune des
+fi admet une limite \elli en a suivant A. dans ce cas \ell
+=
+(\ell1,\\ldots,\ellp~).
+
+Lemme~4.4.7 Pour tout b \in F on a
+limy\rightarrow~bpi~(y) =
+pi(b).
+
+Démonstration Soit V i un voisinage ouvert de bi =
+pi(b). Alors U = F1 \times⋯ \times
+V i \times⋯ \times Fp est un ouvert
+contenant b tel que pi(U) \subset~ V .
+
+Démonstration La condition est nécessaire d'après le théorème de
+composition des limites~: si f admet \ell pour limite, alors pi \cdot
+f admet pour limite pi(\ell) que l'on nomme \elli. On a
+alors bien entendu, \ell =
+(\ell1,\\ldots,\ellp~).
+Réciproquement, supposons que chacune des fi admet
+\elli pour limite en a suivant A et soit \ell =
+(\ell1,\\ldots,\ellp~).
+Soit V un voisinage de \ell. Il existe alors un ouvert élémentaire V
+1 \times⋯ \times V p tel que
+(\ell1,\\ldots,\ellp~)
+\subset~ V 1 \times⋯ \times V p \subset~ V . Pour
+chaque i, il existe Ui voisinage de a tel que
+fi(Ui \bigcap A) \subset~ V i. Soit U = U1
+\bigcap\\ldots~ \bigcap
+Up. On a alors f(U \bigcap A) \subset~ V 1
+\times⋯ \times V p \subset~ V , ce qui montre que f
+a \ell pour limite en a suivant A.
+
+\paragraph{4.4.4 Limites et suites}
+
+Théorème~4.4.8 Soit E et F deux espaces métriques. Alors f admet \ell pour
+limite en a suivant A si et seulement si~pour toute suite (an)
+d'éléments de A de limite a, la suite (f(an))n\in\mathbb{N}~
+admet \ell pour limite.
+
+Démonstration Le fait que la condition soit nécessaire résulte du
+théorème de composition des limites~: soit V voisinage de \ell~; il existe
+U \in V (a) tel que f(U \bigcap A) \subset~ V ~; il existe N \in \mathbb{N}~ tel que n ≥ N \rigtharrow~
+an \in U(\bigcapA)~; alors, pour n ≥ N, on a f(an) \in V ,
+donc \ell est limite de la suite (f(an)). Supposons maintenant
+que f n'admet pas \ell pour limite en a suivant A~; ceci signifie que
+
+\exists~\epsilon \textgreater{} 0,
+\forall~~\eta \textgreater{}
+0\exists~a' \in A\text tel que
+d(a,a') \textless{} \eta\text et d(f(x),\ell) ≥ \epsilon
+
+Pour \eta = 1 \over n+1 , on a donc an \in A tel
+que d(a,an) \textless{} 1 \over n+1 avec
+d(\ell,f(an)) ≥ \epsilon, d'où une suite d'éléments de A de limite a
+telle que la suite (f(an)) n'admet pas \ell pour limite. Ceci
+démontre la réciproque par contraposition.
+
+Corollaire~4.4.9 Avec les mêmes notations, f admet une limite en a
+suivant A si et seulement si~pour toute suite (an) d'éléments
+de A de limite a, la suite (f(an)) converge.
+
+Démonstration La condition est évidemment nécessaire. Pour la
+réciproque, il suffit de montrer que la limite de la suite
+(f(an)) ne dépend pas de la suite (an)~; or si
+(an) et (bn) sont deux telles suites, on définit
+(cn) par c2n = an et c2n+1 =
+bn~; cette suite converge vers a, donc la suite
+(f(cn)) converge et donc ses deux sous suites
+(f(an)) et (f(bn)) ont la même limite.
+
+Remarque~4.4.4 Ce corollaire permet d'assurer l'existence d'une limite
+sans expliciter celle-ci à condition d'avoir un critère de convergence
+des suites (par exemple le critère de Cauchy).
+
+{[}
+{[}
+{[}
+{[}
