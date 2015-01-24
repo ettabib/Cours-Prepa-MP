@@ -1,412 +1,413 @@
-\textbf{Warning: 
-requires JavaScript to process the mathematics on this page.\\ If your
-browser supports JavaScript, be sure it is enabled.}
-
-\begin{center}\rule{3in}{0.4pt}\end{center}
-
-{[}
-{[}
-{[}{]}
-{[}
-
-\subsubsection{12.3 Réduction des formes quadratiques en dimension
-finie}
-
-\paragraph{12.3.1 Familles et bases orthogonales}
-
-Définition~12.3.1 Soit E un K-espace vectoriel ~et \Phi une forme
-quadratique sur E de forme polaire \phi. Soit (ei)i\inI
-une famille d'éléments de E. On dit que la famille est
-
-\begin{itemize}
-\itemsep1pt\parskip0pt\parsep0pt
-\item
-  (i) orthogonale si i\neq~\\\\jmathmathmathmath \rigtharrow~
-  \phi(ei,e\\\\jmathmathmathmath) = 0
-\item
-  (ii) orthonormée si \forall~~i,\\\\jmathmathmathmath,
-  \phi(ei,e\\\\jmathmathmathmath) = \deltai^\\\\jmathmathmathmath
-\end{itemize}
-
-Proposition~12.3.1 Une famille orthogonale ne contenant pas de vecteur
-isotrope est libre~; en particulier toute famille orthonormée est libre.
-
-Démonstration Soit (ei)i\inI une famille orthogonale.
-Soit (\lambda~i)i\inI des scalaires tels que
-\i \in
-I∣\lambda~i\mathrel\neq~0\
-est fini et \\sum ~
-\lambda~iei = 0. Soit k \in I. On a alors
-
-0 = \phi(ek,\sum \lambda~iei~)
-= \sum \lambda~i\phi(ek,ei~) =
-\lambda~k\phi(ek,ek) = \lambda~k\Phi(ek)
-
-Comme \Phi(ek)\neq~0, on a \lambda~k =
-0 ce qui montre que la famille est libre.
-
-En dimension finie nous nous intéresserons tout particulièrement aux
-bases qui sont orthogonales ou même mieux orthonormées.
-
-
-Démonstration Evident puisque
-\mathrmMat~ (\phi,\mathcal{E}) =
-(\phi(ei,e\\\\jmathmathmathmath))1\leqi,\\\\jmathmathmathmath\leqn.
-
-
-Démonstration Nous allons montrer ce résultat par récurrence sur
-dim E. Pour \dim~ E =
-1, il n'y a rien à démontrer toute base étant orthogonale. Supposons le
-résultat démontré pour tout espace vectoriel de dimension n - 1 et soit
-E de dimension n. Si \Phi = 0, alors toute base est orthogonale. Sinon,
-soit a \in E tel que \Phi(a)\neq~0~; on a
-a\neq~0 et on peut donc compléter a en une base
-(a,v2,\\ldots,vn~)
-de E. Posons ei = vi + \lambda~ia et cherchons à
-déterminer \lambda~i pour que \phi(a,ei) = 0~; ceci conduit à
-l'équation \phi(a,vi) + \lambda~i\Phi(a) = 0, soit encore
-\lambda~i = - \phi(a,ei) \over \Phi(a) . Les
-\lambda~i (et donc les ei) étant ainsi choisis, la famille
-(a,e2,\\ldots,en~)
-est encore une base de E (on vérifie facilement qu'elle est libre et
-elle a le bon cardinal), avec \forall~~i \in {[}2,n{]},
-ei \bot a. Soit H =\
-\mathrmVect(e2,\\ldotsen~)~;
-on a donc a \bot H. Par hypothèse de récurrence, H admet une base
-(a2,\\ldots,an~)
-orthogonale pour \Phi\textbar{}H (et donc pour \Phi).
-Comme Ka et H sont supplémentaires dans E,
-(a,a2,\\ldots,an~)
-est une base de E et elle est orthogonale pour \phi.
-
-
-Démonstration Soit \Phi la forme quadratique sur K^n dont la
-matrice dans la base canonique \mathcal{E} est A. Soit \mathcal{E}' une base orthogonale
-pour \phi et P la matrice de passage de \mathcal{E} à \mathcal{E}'. Alors la matrice de \phi dans
-la base \mathcal{E}' est ^tPAP et elle est diagonale.
-
-Remarque~12.3.1 On prendra soin de ne pas confondre ^tPAP et
-P^-1AP~; ce corollaire ne concerne aucunement une quelconque
-diagonalisabilité de la matrice A (dont nous verrons qu'elle dépend
-essentiellement du corps de base).
-
-Soit E un K-espace vectoriel ~de dimension finie et \Phi une forme
-quadratique sur E de forme polaire \phi. Soit \mathcal{E} une base orthogonale de E.
-Alors la matrice de \phi dans la base \mathcal{E} est diagonale donc de la forme
-
-\left
-(\matrix\,\alpha~1&0&\\ldots~&0
-\cr 0
-&⋱&\mathrel⋱&\⋮~
-\cr \⋮~
-&⋱&\mathrel⋱&0
-\cr 0
-&\\ldots&0&\alpha~n~\right
-)
-
-et quitte à permuter les vecteurs de base on peut supposer que
-\alpha~1\neq~0,\\ldots,\alpha~r\mathrel\neq~0,\alpha~r+1~
-= \\ldots~ =
-\alpha~n = 0 pour un certain r \in {[}0,n{]}. On a bien entendu r
-=\
-\mathrmrg\mathrmMat~
-(\phi,\mathcal{E})) = \mathrmrg~\phi ce qui
-montre que r ne dépend pas de la base choisie. Les vecteurs
-er+1,\\ldots,en~
-sont bien entendu dans
-\mathrmKer~\phi (étant
-orthogonaux à tous les autres vecteurs de base mais aussi à eux mêmes,
-ils sont orthogonaux à tout vecteur de E)~; mais
-dim~
-\mathrmKer~\phi = n
--\mathrmrg~\phi = n - r. On en
-déduit que ces vecteurs forment une base de
-\mathrmKer~\phi et que donc
-\mathrmKer~\phi
-=\
-\mathrmVect(er+1,\\ldots,en~).
-Donnons nous d'autre part
-\lambda~1,\\ldots,\lambda~r~
-non nuls et considérons la base \mathcal{E}' =
-(\lambda~1e1,\\ldots,\lambda~rer,er+1,\\\ldots,en~).
-Il s'agit encore d'une base orthogonale et
-
-\mathrmMat~ (\phi,\mathcal{E}) =
-\left
-(\matrix\,\lambda~1^2\alpha~1&0&\\ldots~
-&0&0 \cr 0
-&⋱&\mathrel⋱
-&\\ldots&\\⋮~
-\cr \⋮~
-&⋱&\lambda~r^2\alpha~r&\mathrel⋱&\⋮~
-\cr \⋮~
-&\\ldots&\mathrel⋱~
-&0&⋱ \cr
-\⋮~
-&\\ldots&\\\ldots~
-&⋱&\mathrel⋱\right
-)
-
-On voit donc que l'on peut multiplier
-\alpha~1,\\ldots,\alpha~r~
-par des carrés non nuls arbitraires. En particulier, si
-\alpha~1,\\ldots,\alpha~r~
-sont des carrés, en prenant \lambda~i tel que \lambda~i^2
-= 1 \over \alpha~i on obtient une base dans
-laquelle
-
-\mathrmMat~ (\phi,\mathcal{E}) =
-\left
-(\matrix\,Ir&0
-\cr 0 &0\right )
-
-Si K est algébriquement clos, tout élément de K est un carré et cette
-réduction est tou\\\\jmathmathmathmathours possible. On a donc
-
-Théorème~12.3.5 Soit K un corps algébriquement clos, E un K-espace
-vectoriel ~de dimension finie et \Phi une forme quadratique sur E de forme
-polaire \phi, de rang r. Alors il existe des bases (orthogonales) de E
-telles que \mathrmMat~ (\phi,\mathcal{E})
-= \left
-(\matrix\,Ir&0
-\cr 0 &0\right ). En particulier, si \Phi
-est non dégénérée, il existe des bases orthonormées de E.
-
-Corollaire~12.3.6 Soit K un corps algébriquement clos et A,B \in
-MK(n) des matrices symétriques. Alors A et B sont congruentes
-si et seulement si~elles ont même rang. En particulier, si A est une
-matrice symétrique inversible, il existe P inversible telle que A =
-^tPP.
-
-Démonstration Le premier point résulte immédiatement du théorème. En ce
-qui concerne le deuxième, si A est une matrice symétrique inversible,
-elle est congruente à l'identité, donc il existe P inversible telle que
-A = ^tPInP = ^tPP.
-
-\paragraph{12.3.2 Décomposition en carrés. Algorithme de Gauss}
-
-Théorème~12.3.7 (décomposition en carrés). Soit E un K-espace vectoriel
-~de dimension finie et \Phi une forme quadratique sur E. Alors il existe
+%\textbf{Warning: 
+%requires JavaScript to process the mathematics on this page.\\ If your
+%browser supports JavaScript, be sure it is enabled.}
+%
+%\begin{center}\rule{3in}{0.4pt}\end{center}
+%
+%{[}
+%{[}
+%{[}{]}
+%{[}
+%
+%\subsubsection{12.3 Réduction des formes quadratiques en dimension
+%finie}
+%
+%\paragraph{12.3.1 Familles et bases orthogonales}
+%
+%Définition~12.3.1 Soit E un K-espace vectoriel ~et \Phi une forme
+%quadratique sur E de forme polaire \phi. Soit (ei)i\inI
+%une famille d'éléments de E. On dit que la famille est
+%
+%\begin{itemize}
+%\itemsep1pt\parskip0pt\parsep0pt
+%\item
+%  (i) orthogonale si i\neq~\\\\jmathmathmathmath \rigtharrow~
+%  \phi(ei,e\\\\jmathmathmathmath) = 0
+%\item
+%  (ii) orthonormée si \forall~~i,\\\\jmathmathmathmath,
+%  \phi(ei,e\\\\jmathmathmathmath) = \deltai^\\\\jmathmathmathmath
+%\end{itemize}
+%
+%Proposition~12.3.1 Une famille orthogonale ne contenant pas de vecteur
+%isotrope est libre~; en particulier toute famille orthonormée est libre.
+%
+%Démonstration Soit (ei)i\inI une famille orthogonale.
+%Soit (\lambda~i)i\inI des scalaires tels que
+%\i \in
+%I∣\lambda~i\mathrel\neq~0\
+%est fini et \\sum ~
+%\lambda~iei = 0. Soit k \in I. On a alors
+%
+%0 = \phi(ek,\sum \lambda~iei~)
+%= \sum \lambda~i\phi(ek,ei~) =
+%\lambda~k\phi(ek,ek) = \lambda~k\Phi(ek)
+%
+%Comme \Phi(ek)\neq~0, on a \lambda~k =
+%0 ce qui montre que la famille est libre.
+%
+%En dimension finie nous nous intéresserons tout particulièrement aux
+%bases qui sont orthogonales ou même mieux orthonormées.
+%
+%
+%Démonstration Evident puisque
+%\mathrmMat~ (\phi,\mathcal{E}) =
+%(\phi(ei,e\\\\jmathmathmathmath))1\leqi,\\\\jmathmathmathmath\leqn.
+%
+%
+%Démonstration Nous allons montrer ce résultat par récurrence sur
+%dim E. Pour \dim~ E =
+%1, il n'y a rien à démontrer toute base étant orthogonale. Supposons le
+%résultat démontré pour tout espace vectoriel de dimension n - 1 et soit
+%E de dimension n. Si \Phi = 0, alors toute base est orthogonale. Sinon,
+%soit a \in E tel que \Phi(a)\neq~0~; on a
+%a\neq~0 et on peut donc compléter a en une base
+%(a,v2,\\ldots,vn~)
+%de E. Posons ei = vi + \lambda~ia et cherchons à
+%déterminer \lambda~i pour que \phi(a,ei) = 0~; ceci conduit à
+%l'équation \phi(a,vi) + \lambda~i\Phi(a) = 0, soit encore
+%\lambda~i = - \phi(a,ei) \over \Phi(a) . Les
+%\lambda~i (et donc les ei) étant ainsi choisis, la famille
+%(a,e2,\\ldots,en~)
+%est encore une base de E (on vérifie facilement qu'elle est libre et
+%elle a le bon cardinal), avec \forall~~i \in {[}2,n{]},
+%ei \bot a. Soit H =\
+%\mathrmVect(e2,\\ldotsen~)~;
+%on a donc a \bot H. Par hypothèse de récurrence, H admet une base
+%(a2,\\ldots,an~)
+%orthogonale pour \Phi\textbar{}H (et donc pour \Phi).
+%Comme Ka et H sont supplémentaires dans E,
+%(a,a2,\\ldots,an~)
+%est une base de E et elle est orthogonale pour \phi.
+%
+%
+%Démonstration Soit \Phi la forme quadratique sur K^n dont la
+%matrice dans la base canonique \mathcal{E} est A. Soit \mathcal{E}' une base orthogonale
+%pour \phi et P la matrice de passage de \mathcal{E} à \mathcal{E}'. Alors la matrice de \phi dans
+%la base \mathcal{E}' est ^tPAP et elle est diagonale.
+%
+%Remarque~12.3.1 On prendra soin de ne pas confondre ^tPAP et
+%P^-1AP~; ce corollaire ne concerne aucunement une quelconque
+%diagonalisabilité de la matrice A (dont nous verrons qu'elle dépend
+%essentiellement du corps de base).
+%
+%Soit E un K-espace vectoriel ~de dimension finie et \Phi une forme
+%quadratique sur E de forme polaire \phi. Soit \mathcal{E} une base orthogonale de E.
+%Alors la matrice de \phi dans la base \mathcal{E} est diagonale donc de la forme
+%
+%\left
+%(\matrix\,\alpha~1&0&\\ldots~&0
+%\cr 0
+%&⋱&\mathrel⋱&\⋮~
+%\cr \⋮~
+%&⋱&\mathrel⋱&0
+%\cr 0
+%&\\ldots&0&\alpha~n~\right
+%)
+%
+%et quitte à permuter les vecteurs de base on peut supposer que
+%\alpha~1\neq~0,\\ldots,\alpha~r\mathrel\neq~0,\alpha~r+1~
+%= \\ldots~ =
+%\alpha~n = 0 pour un certain r \in {[}0,n{]}. On a bien entendu r
+%=\
+%\mathrmrg\mathrmMat~
+%(\phi,\mathcal{E})) = \mathrmrg~\phi ce qui
+%montre que r ne dépend pas de la base choisie. Les vecteurs
+%er+1,\\ldots,en~
+%sont bien entendu dans
+%\mathrmKer~\phi (étant
+%orthogonaux à tous les autres vecteurs de base mais aussi à eux mêmes,
+%ils sont orthogonaux à tout vecteur de E)~; mais
+%dim~
+%\mathrmKer~\phi = n
+%-\mathrmrg~\phi = n - r. On en
+%déduit que ces vecteurs forment une base de
+%\mathrmKer~\phi et que donc
+%\mathrmKer~\phi
+%=\
+%\mathrmVect(er+1,\\ldots,en~).
+%Donnons nous d'autre part
+%\lambda~1,\\ldots,\lambda~r~
+%non nuls et considérons la base \mathcal{E}' =
+%(\lambda~1e1,\\ldots,\lambda~rer,er+1,\\\ldots,en~).
+%Il s'agit encore d'une base orthogonale et
+%
+%\mathrmMat~ (\phi,\mathcal{E}) =
+%\left
+%(\matrix\,\lambda~1^2\alpha~1&0&\\ldots~
+%&0&0 \cr 0
+%&⋱&\mathrel⋱
+%&\\ldots&\\⋮~
+%\cr \⋮~
+%&⋱&\lambda~r^2\alpha~r&\mathrel⋱&\⋮~
+%\cr \⋮~
+%&\\ldots&\mathrel⋱~
+%&0&⋱ \cr
+%\⋮~
+%&\\ldots&\\\ldots~
+%&⋱&\mathrel⋱\right
+%)
+%
+%On voit donc que l'on peut multiplier
+%\alpha~1,\\ldots,\alpha~r~
+%par des carrés non nuls arbitraires. En particulier, si
+%\alpha~1,\\ldots,\alpha~r~
+%sont des carrés, en prenant \lambda~i tel que \lambda~i^2
+%= 1 \over \alpha~i on obtient une base dans
+%laquelle
+%
+%\mathrmMat~ (\phi,\mathcal{E}) =
+%\left
+%(\matrix\,Ir&0
+%\cr 0 &0\right )
+%
+%Si K est algébriquement clos, tout élément de K est un carré et cette
+%réduction est tou\\\\jmathmathmathmathours possible. On a donc
+%
+%Théorème~12.3.5 Soit K un corps algébriquement clos, E un K-espace
+%vectoriel ~de dimension finie et \Phi une forme quadratique sur E de forme
+%polaire \phi, de rang r. Alors il existe des bases (orthogonales) de E
+%telles que \mathrmMat~ (\phi,\mathcal{E})
+%= \left
+%(\matrix\,Ir&0
+%\cr 0 &0\right ). En particulier, si \Phi
+%est non dégénérée, il existe des bases orthonormées de E.
+%
+%Corollaire~12.3.6 Soit K un corps algébriquement clos et A,B \in
+%MK(n) des matrices symétriques. Alors A et B sont congruentes
+%si et seulement si~elles ont même rang. En particulier, si A est une
+%matrice symétrique inversible, il existe P inversible telle que A =
+%^tPP.
+%
+%Démonstration Le premier point résulte immédiatement du théorème. En ce
+%qui concerne le deuxième, si A est une matrice symétrique inversible,
+%elle est congruente à l'identité, donc il existe P inversible telle que
+%A = ^tPInP = ^tPP.
+%
+\subsubsection{ Décomposition en carrés. Algorithme de Gauss}
+%
+\begin{thm}[décomposition en carrés] 
+	Soit E un K-espace vectoriel
+de dimension finie et $\Phi$ une forme quadratique sur E. Alors il existe
 des formes linéaires
-f1,\\ldots,fr~
+$f1,\ldots,fr$
 linéairement indépendantes et des scalaires
-\alpha~1,\\ldots,\alpha~r~
-non nuls tels que \forall~~x \in E, \Phi(x)
-= \\sum ~
-i=1^r\alpha~ifi(x)^2. Dans toute
+$\alpha_1,\ldots,\alpha_r$
+non nuls tels que $\forall x \in E, \Phi(x)
+= \sum_{i=1}^r \alpha_i fi(x)^2$. Dans toute
 telle décomposition, on a
-\mathrmrg~\Phi = r.
-
-Démonstration Soit \mathcal{E} =
-(e1,\\ldots,en~)
-une base orthogonale pour \Phi, A =\
-\mathrmdiag(\alpha~1,\\ldots,\alpha~n~)
-la matrice de \Phi dans la base \mathcal{E}. Quitte à permuter la base, on peut
-supposer que
-\alpha~1\neq~0,\\ldots,\alpha~r\mathrel\neq~~0
-et que \alpha~r+1 =
-\\ldots~ =
-\alpha~n = 0. Dans une telle base, on a, en notant
-(e1^∗,\\ldots,en^∗~)
-la base duale de \mathcal{E},
-
-\Phi(x) = ^tXAX = \\sum
-i=1^r\alpha~ ixi^2 =
-\sum i=1^r\alpha~~
-iei^∗(x)^2
-
-ce qui montre l'existence d'une telle décomposition avec fi =
-ei^∗ pour 1 \leq i \leq r. Inversement, considérons une telle
-décomposition. Comme la famille
-(f1,\\ldots,fr~)
-est libre, on peut la compléter en une base
-(f1,\\ldots,fn~)
-de E^∗~; cette base est la base duale d'une unique base
-(e1,\\ldots,en~)
-de E. Si x = \\sum ~
-xiei, alors
-
-\Phi(x) = \sum i=1^r\alpha~~
-ifi(x)^2 = \\sum
-i=1^r\alpha~ iei^∗(x)^2
-= \sum i=1^r\alpha~~
-ixi^2
-
-On en déduit que la matrice de \Phi dans la base \mathcal{E} est la matrice
-\mathrmdiag(\alpha~1,\\\ldots,\alpha~r,0,\\\ldots~,0),
-ce qui montre que r est le rang de \Phi.
-
-Remarque~12.3.2 La démonstration précédente montre qu'à toute base
-orthogonale de E est associée une telle décomposition en carrés de \Phi et
-qu'inversement à toute telle décomposition (avec
-f1,\\ldots,fr~
-linéairement indépendantes) correspond une base orthogonale. Les
-problèmes de la décomposition en carrés d'une forme quadratique ou de la
-construction d'une base orthogonale sont donc équivalents (ils sont en
-fait duaux l'un de l'autre). Nous allons commencer par un algorithme de
-décomposition en carrés en renvoyant au paragraphe suivant un algorithme
-de construction de bases orthogonales.
-
-Pour décrire un algorithme de décomposition en carrés de formes
-linéaires nous allons travailler sur les polynômes homogènes. Soit en
-effet \mathcal{E} une base de E. Il existe un unique polynôme homogène de degré 2,
-P \in
-H2(X1,\\ldots,Xn~),
-tel que \Phi(x) =
-P(x1,\\ldots,xn~)
-si x = \\sum ~
-xiei. De même, si f est une forme linéaire sur E, on
-a f = \\sum ~
-aiei^∗, d'où f(x) =\
-\sum  aixi~ =
-F(x1,\\ldots,xn~)
-où F est un polynôme homogène de degré 1~; inversement à tout tel
-polynôme homogène de degré 1 est associée une unique forme linéaire. Une
-traduction du théorème de décomposition en carrés est donc
-
-Proposition~12.3.8 Soit P \in
-K{[}X1,\\ldots,Xn~{]}
-un polynôme homogène de degré 2. Alors il existe des polynômes homogènes
-de degré 1,
-P1,\\ldots,Pr~,
-linéairement indépendants et des scalaires non nuls
-\alpha~1,\\ldots,\alpha~r~
-tels que P = \\sum ~
-i=1^r\alpha~iPi^2.
-
-Algorithme de Gauss
-
-L'algorithme de Gauss va permettre d'expliciter une telle décomposition
-en travaillant par récurrence sur le nombre n de variables du polynôme P
-(en considérant par convention que pour n = 0, le polynôme est nul).
-
-Si n = 1, alors P(X1) = \alpha~1X1^2 et
-on a soit r = 0 si \alpha~1 = 0, soit P(X1) =
-\alpha~1P1(X1)^2 avec
-P1(X1) = X1 si
-\alpha~1\neq~0.
-
-Supposons donc connue une telle décomposition pour tout polynôme à n - 1
-ou n - 2 variables. Soit P \in
-K{[}X1,\\ldots,Xn~{]}
-un polynôme homogène de degré 2 à n variables. On a donc
-
-P(X1,\\ldots,Xn~)
-= \sum \omegai,iXi^2~ +
-2\\sum
-i\textless{}\\\\jmathmathmathmath\omegai,\\\\jmathmathmathmathXiX\\\\jmathmathmathmath
-
-Distinguons alors deux cas
-
-Premier cas~: il existe i \in {[}1,n{]} tel que
-\omegai,i\neq~0. Quitte à permuter les noms
-des variables, on peut supposer que
-\omegan,n\neq~0. Utilisant une mise sous
-forme canonique du trinome du second degré en la variable Xn,
-on peut donc écrire
-
-P(X1,\\ldots,Xn~)
-= \omegan,n\left (Xn +
-\sum i=1^n-1 \omegai,n~
-\over \omegan,n Xi\right
-)^2 + Q(X
-1,\\ldots,Xn-1~)
-
-où Q est un polynôme homogène de degré 2 en n - 1 variables. D'après
-l'hypothèse de récurrence, on peut écrire Q =\
-\sum ~
-i=1^k\alpha~iPi^2 où Pi \in
-K{[}X1,\\ldots,Xn-1~{]}
-\subset~
-K{[}X1,\\ldots,Xn~{]},
-les Pi étant homogènes de degré 1 et linéairement
-indépendants, les \alpha~i étant non nuls. En posant Pk+1
-= Xn +\ \\sum
- i=1^n-1 \omegai,n \over
-\omegan,n Xi et \alpha~k+1 =
-\omegan,n\neq~0 on a alors P
-= \\sum ~
-i=1^k+1\alpha~iPi^2~; il nous reste
-à vérifier que
-P1,\\ldots,Pk+1~
-sont linéairement indépendants. Mais si \lambda~1P1 +
-\\ldots~ +
-\lambda~k+1Pk+1 = 0, en considérant le coefficient de la
-variable Xn (qui ne figure que dans Pk+1 avec le
-coefficient 1), on a \lambda~k+1 = 0~; mais alors, comme la famille
-(P1,\\ldots,Pk~)
-est libre, on a \forall~i \in {[}1,k{]}, \lambda~i~ =
-0, ce qui termine le traitement de ce cas.
-
-Deuxième cas~: pour tout i \in {[}1,n{]}, on a \omegai,i = 0, mais il
-existe i et \\\\jmathmathmathmath tels que i \textless{} \\\\jmathmathmathmath et
-\omegai,\\\\jmathmathmathmath\neq~0. Quitte à permuter les noms
-des variables, on peut supposer que
-\omegan-1,n\neq~0. On a alors
-
-\begin{align*}
-P(X1,\\ldots,Xn~)
-= 2\\sum
-i\textless{}\\\\jmathmathmathmath\omegai,\\\\jmathmathmathmathXiX\\\\jmathmathmathmath&& \%&
-\\ & =&
-2\omegan-1,n\left (Xn-1 +
-\sum i=1^n-2 \omegai,n~
-\over \omegan-1,n
-Xi\right )\left (Xn
-+ \sum i=1^n-2~
-\omegai,n-1 \over \omegan-1,n
-Xi\right )\%& \\
-& \text &
-+Q(X1,\\ldots,Xn-2~)
-\%& \\ \end{align*}
-
-où Q est un polynôme homogène de degré 2 en n - 2 variables. D'après
-l'hypothèse de récurrence, on peut écrire Q =\
-\sum ~
-i=1^k\alpha~iPi^2 où Pi \in
-K{[}X1,\\ldots,Xn-2~{]}
-\subset~
-K{[}X1,\\ldots,Xn~{]},
-les Pi étant homogènes de degré 1 et linéairement
-indépendants, les \alpha~i étant non nuls. Utilisant l'identité 2ab
-= 1 \over 2 \left ((a +
-b)^2 - (a - b)^2\right ), on obtient
-alors P = \\sum ~
-i=1^k+2\alpha~iPi^2 avec
-\alpha~k+1 = -\alpha~k+2 = \omegan-1,n
-\over 2 ,
-
-Pk+1 = Xn-1 + Xn +
-\sum i=1^n-2 \omegai,n~ +
-\omegai,n-1 \over \omegan-1,n Xi
-
-et
-
-Pk+2 = Xn-1 - Xn +
-\sum i=1^n-2 \omegai,n~ -
-\omegai,n-1 \over \omegan-1,n Xi
-
-Il nous reste à vérifier que
-P1,\\ldots,Pk+2~
-sont linéairement indépendants. Si \lambda~1P1 +
-\\ldots~ +
-\lambda~k+2Pk+2 = 0, en considérant le coefficient de la
-variable Xn-1 (qui ne figure que dans Pk+1 et
-Pk+2), on a \lambda~k+1 + \lambda~k+2 = 0 et en
-considérant le coefficient de la variable Xn (qui ne figure
-que dans Pk+1 et Pk+2), on a \lambda~k+1 -
-\lambda~k+2 = 0~; on a donc \lambda~k+1 = \lambda~k+2 = 0~;
-mais alors, comme la famille
-(P1,\\ldots,Pk~)
-est libre, on a \forall~i \in {[}1,k{]}, \lambda~i~ =
-0, ce qui termine le traitement de ce cas.
-
-Troisième cas~: \Phi est la forme quadratique nulle, et il n'y a rien à
-faire.
-
-Ceci achève la description de l'algorithme de Gauss.
-
-{[}
-{[}
-{[}
-{[}
+$\mathrm{rg} \Phi = r$.
+\end{thm}
+%
+%Démonstration Soit \mathcal{E} =
+%(e1,\\ldots,en~)
+%une base orthogonale pour \Phi, A =\
+%\mathrmdiag(\alpha~1,\\ldots,\alpha~n~)
+%la matrice de \Phi dans la base \mathcal{E}. Quitte à permuter la base, on peut
+%supposer que
+%\alpha~1\neq~0,\\ldots,\alpha~r\mathrel\neq~~0
+%et que \alpha~r+1 =
+%\\ldots~ =
+%\alpha~n = 0. Dans une telle base, on a, en notant
+%(e1^∗,\\ldots,en^∗~)
+%la base duale de \mathcal{E},
+%
+%\Phi(x) = ^tXAX = \\sum
+%i=1^r\alpha~ ixi^2 =
+%\sum i=1^r\alpha~~
+%iei^∗(x)^2
+%
+%ce qui montre l'existence d'une telle décomposition avec fi =
+%ei^∗ pour 1 \leq i \leq r. Inversement, considérons une telle
+%décomposition. Comme la famille
+%(f1,\\ldots,fr~)
+%est libre, on peut la compléter en une base
+%(f1,\\ldots,fn~)
+%de E^∗~; cette base est la base duale d'une unique base
+%(e1,\\ldots,en~)
+%de E. Si x = \\sum ~
+%xiei, alors
+%
+%\Phi(x) = \sum i=1^r\alpha~~
+%ifi(x)^2 = \\sum
+%i=1^r\alpha~ iei^∗(x)^2
+%= \sum i=1^r\alpha~~
+%ixi^2
+%
+%On en déduit que la matrice de \Phi dans la base \mathcal{E} est la matrice
+%\mathrmdiag(\alpha~1,\\\ldots,\alpha~r,0,\\\ldots~,0),
+%ce qui montre que r est le rang de \Phi.
+%
+%Remarque~12.3.2 La démonstration précédente montre qu'à toute base
+%orthogonale de E est associée une telle décomposition en carrés de \Phi et
+%qu'inversement à toute telle décomposition (avec
+%f1,\\ldots,fr~
+%linéairement indépendantes) correspond une base orthogonale. Les
+%problèmes de la décomposition en carrés d'une forme quadratique ou de la
+%construction d'une base orthogonale sont donc équivalents (ils sont en
+%fait duaux l'un de l'autre). Nous allons commencer par un algorithme de
+%décomposition en carrés en renvoyant au paragraphe suivant un algorithme
+%de construction de bases orthogonales.
+%
+%Pour décrire un algorithme de décomposition en carrés de formes
+%linéaires nous allons travailler sur les polynômes homogènes. Soit en
+%effet \mathcal{E} une base de E. Il existe un unique polynôme homogène de degré 2,
+%P \in
+%H2(X1,\\ldots,Xn~),
+%tel que \Phi(x) =
+%P(x1,\\ldots,xn~)
+%si x = \\sum ~
+%xiei. De même, si f est une forme linéaire sur E, on
+%a f = \\sum ~
+%aiei^∗, d'où f(x) =\
+%\sum  aixi~ =
+%F(x1,\\ldots,xn~)
+%où F est un polynôme homogène de degré 1~; inversement à tout tel
+%polynôme homogène de degré 1 est associée une unique forme linéaire. Une
+%traduction du théorème de décomposition en carrés est donc
+%
+%Proposition~12.3.8 Soit P \in
+%K{[}X1,\\ldots,Xn~{]}
+%un polynôme homogène de degré 2. Alors il existe des polynômes homogènes
+%de degré 1,
+%P1,\\ldots,Pr~,
+%linéairement indépendants et des scalaires non nuls
+%\alpha~1,\\ldots,\alpha~r~
+%tels que P = \\sum ~
+%i=1^r\alpha~iPi^2.
+%
+%Algorithme de Gauss
+%
+%L'algorithme de Gauss va permettre d'expliciter une telle décomposition
+%en travaillant par récurrence sur le nombre n de variables du polynôme P
+%(en considérant par convention que pour n = 0, le polynôme est nul).
+%
+%Si n = 1, alors P(X1) = \alpha~1X1^2 et
+%on a soit r = 0 si \alpha~1 = 0, soit P(X1) =
+%\alpha~1P1(X1)^2 avec
+%P1(X1) = X1 si
+%\alpha~1\neq~0.
+%
+%Supposons donc connue une telle décomposition pour tout polynôme à n - 1
+%ou n - 2 variables. Soit P \in
+%K{[}X1,\\ldots,Xn~{]}
+%un polynôme homogène de degré 2 à n variables. On a donc
+%
+%P(X1,\\ldots,Xn~)
+%= \sum \omegai,iXi^2~ +
+%2\\sum
+%i\textless{}\\\\jmathmathmathmath\omegai,\\\\jmathmathmathmathXiX\\\\jmathmathmathmath
+%
+%Distinguons alors deux cas
+%
+%Premier cas~: il existe i \in {[}1,n{]} tel que
+%\omegai,i\neq~0. Quitte à permuter les noms
+%des variables, on peut supposer que
+%\omegan,n\neq~0. Utilisant une mise sous
+%forme canonique du trinome du second degré en la variable Xn,
+%on peut donc écrire
+%
+%P(X1,\\ldots,Xn~)
+%= \omegan,n\left (Xn +
+%\sum i=1^n-1 \omegai,n~
+%\over \omegan,n Xi\right
+%)^2 + Q(X
+%1,\\ldots,Xn-1~)
+%
+%où Q est un polynôme homogène de degré 2 en n - 1 variables. D'après
+%l'hypothèse de récurrence, on peut écrire Q =\
+%\sum ~
+%i=1^k\alpha~iPi^2 où Pi \in
+%K{[}X1,\\ldots,Xn-1~{]}
+%\subset~
+%K{[}X1,\\ldots,Xn~{]},
+%les Pi étant homogènes de degré 1 et linéairement
+%indépendants, les \alpha~i étant non nuls. En posant Pk+1
+%= Xn +\ \\sum
+% i=1^n-1 \omegai,n \over
+%\omegan,n Xi et \alpha~k+1 =
+%\omegan,n\neq~0 on a alors P
+%= \\sum ~
+%i=1^k+1\alpha~iPi^2~; il nous reste
+%à vérifier que
+%P1,\\ldots,Pk+1~
+%sont linéairement indépendants. Mais si \lambda~1P1 +
+%\\ldots~ +
+%\lambda~k+1Pk+1 = 0, en considérant le coefficient de la
+%variable Xn (qui ne figure que dans Pk+1 avec le
+%coefficient 1), on a \lambda~k+1 = 0~; mais alors, comme la famille
+%(P1,\\ldots,Pk~)
+%est libre, on a \forall~i \in {[}1,k{]}, \lambda~i~ =
+%0, ce qui termine le traitement de ce cas.
+%
+%Deuxième cas~: pour tout i \in {[}1,n{]}, on a \omegai,i = 0, mais il
+%existe i et \\\\jmathmathmathmath tels que i \textless{} \\\\jmathmathmathmath et
+%\omegai,\\\\jmathmathmathmath\neq~0. Quitte à permuter les noms
+%des variables, on peut supposer que
+%\omegan-1,n\neq~0. On a alors
+%
+%\begin{align*}
+%P(X1,\\ldots,Xn~)
+%= 2\\sum
+%i\textless{}\\\\jmathmathmathmath\omegai,\\\\jmathmathmathmathXiX\\\\jmathmathmathmath&& \%&
+%\\ & =&
+%2\omegan-1,n\left (Xn-1 +
+%\sum i=1^n-2 \omegai,n~
+%\over \omegan-1,n
+%Xi\right )\left (Xn
+%+ \sum i=1^n-2~
+%\omegai,n-1 \over \omegan-1,n
+%Xi\right )\%& \\
+%& \text &
+%+Q(X1,\\ldots,Xn-2~)
+%\%& \\ \end{align*}
+%
+%où Q est un polynôme homogène de degré 2 en n - 2 variables. D'après
+%l'hypothèse de récurrence, on peut écrire Q =\
+%\sum ~
+%i=1^k\alpha~iPi^2 où Pi \in
+%K{[}X1,\\ldots,Xn-2~{]}
+%\subset~
+%K{[}X1,\\ldots,Xn~{]},
+%les Pi étant homogènes de degré 1 et linéairement
+%indépendants, les \alpha~i étant non nuls. Utilisant l'identité 2ab
+%= 1 \over 2 \left ((a +
+%b)^2 - (a - b)^2\right ), on obtient
+%alors P = \\sum ~
+%i=1^k+2\alpha~iPi^2 avec
+%\alpha~k+1 = -\alpha~k+2 = \omegan-1,n
+%\over 2 ,
+%
+%Pk+1 = Xn-1 + Xn +
+%\sum i=1^n-2 \omegai,n~ +
+%\omegai,n-1 \over \omegan-1,n Xi
+%
+%et
+%
+%Pk+2 = Xn-1 - Xn +
+%\sum i=1^n-2 \omegai,n~ -
+%\omegai,n-1 \over \omegan-1,n Xi
+%
+%Il nous reste à vérifier que
+%P1,\\ldots,Pk+2~
+%sont linéairement indépendants. Si \lambda~1P1 +
+%\\ldots~ +
+%\lambda~k+2Pk+2 = 0, en considérant le coefficient de la
+%variable Xn-1 (qui ne figure que dans Pk+1 et
+%Pk+2), on a \lambda~k+1 + \lambda~k+2 = 0 et en
+%considérant le coefficient de la variable Xn (qui ne figure
+%que dans Pk+1 et Pk+2), on a \lambda~k+1 -
+%\lambda~k+2 = 0~; on a donc \lambda~k+1 = \lambda~k+2 = 0~;
+%mais alors, comme la famille
+%(P1,\\ldots,Pk~)
+%est libre, on a \forall~i \in {[}1,k{]}, \lambda~i~ =
+%0, ce qui termine le traitement de ce cas.
+%
+%Troisième cas~: \Phi est la forme quadratique nulle, et il n'y a rien à
+%faire.
+%
+%Ceci achève la description de l'algorithme de Gauss.
+%
+%{[}
+%{[}
+%{[}
+%{[}

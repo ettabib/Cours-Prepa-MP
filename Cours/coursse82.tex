@@ -1,7 +1,9 @@
+
+\chapter{Calcul différentiel}
 \section{Dérivées partielles}
 %
 \paragraph{Notion de dérivée partielle}
- 
+~ 
 %Définition~15.1.1 Soit E et F deux espaces vectoriels normés. Soit U un
 %ouvert de E, f : U \longrightarrow F, a \in U. Soit v \in E
 %∖\0\. On dit que f admet au point a
@@ -193,29 +195,32 @@ un ouvert de E et $g = (g_1},\ldots{},g_n) : V \longrightarrow U \subset \mathbb
 partielle suivant le vecteur $v$ et si $f$ est de classe $C^1$ au
 point a, alors $f \circ g$ admet en a une dérivée partielle suivant le vecteur
 v et on a
-\partial_v(f \circ g)(a) ={\sum
-%}}_i=1}\^{}{n}{ \partialf \over \partial{x_i}
-%(g(a))\partial_v}{g_i(a)
+\[
+\partial_v(f \circ g)(a) =\sum_{i=1}^{n}{ \partial f \over \partial{x_i}}
+(g(a)) \partial_v g_i(a)
+\]
 \end{thm}
-%Dans le cas particulier où E = \mathbb{R}}\^{}{p et où on prend pour v le
-%j-ième vecteur de la base canonique, on obtient la version suivante (on
-%a changé le nom des variables pour les appeler
-%y_1},+{\ldots{}}},{y_n
-%dans \mathbb{R}}\^{}{n).
+Dans le cas particulier où $E = \mathbb{R}^p $et où on prend pour v le
+j-ième vecteur de la base canonique, on obtient la version suivante (on
+a changé le nom des variables pour les appeler
+$y_1,+\ldots,y_n$
+dans $\mathbb{R}^n$.
 %
-%Corollaire~15.1.4 Soit F un espace vectoriel de dimension finie, U un
-%ouvert de \mathbb{R}}\^{}{n}, f : U \longrightarrow F. Soit V un ouvert de {\mathbb{R}}\^{}{p
-%et g =
-%(g_1},+{\ldots{}}},{g_n)
-%: V \longrightarrow U \subset \mathbb{R}}\^{}{n. Soit a \in V et j \in {[}1,p{]}. Si g admet en a
-%une dérivée partielle d'indice j et si f est de classe C}\^{}{1 au
-%point a, alors f ∘ g admet en a une dérivée partielle d'indice j et on a
-%
-% \partial(f ∘ g) \over \partial{x_j} (a) ={
-%\mathop\sum }_i=1}\^{}{n{ \partialf
-%\over \partialy_i}} (g(a)){ \partial{g_i
-%\over \partialx_j} (a)
-%
+\begin{cor}
+  Soit F un espace vectoriel de dimension finie, U un
+  ouvert de $\mathbb{R}^{n},$ $f : U \longrightarrow F.$ Soit V un ouvert de
+  $\mathbb{R}^{p}$
+  et $g =
+(g_1,\ldots,g_n)
+  : V \longrightarrow U \subset \mathbb{R}^{n}.$ Soit $a \in V $et $j \in
+  [1,p].$ Si g admet en a
+une dérivée partielle d'indice j et si f est de classe C}\^{}{1 au
+point a, alors $f ∘ g $ admet en a une dérivée partielle d'indice j et on a
+
+\[ \frac{\partial (f \circ g)}{\partial x_j} (a) =
+  \sum_{i=1}^n \frac{ \partial f}{\partial y_i} (g(a)) \frac{\partial g_i}{\partial x_j} (a)
+\]
+\end{cor}
 %Remarque~15.1.3 On en déduit immédiatement que la composée de deux
 %applications de classe C}\^{}{1 est encore de classe
 %C}\^{}{1.
@@ -275,11 +280,12 @@ v et on a
 %\partialx_i} (a)\right \textbar{} +
 %1\right ), ce qui montre la continuité de f au point a.
 %
-%Corollaire~15.1.8 Soit U un ouvert connexe de \mathbb{R}}\^{}{n, F un
-%espace vectoriel de dimension finie, f : U \longrightarrow F. Alors f est constante si
-%et seulement si~elle est de classe C}\^{}{1 et toutes ses dérivées
-%partielles sont nulles.
-%
+\begin{cor}
+  Soit U un ouvert connexe de $\mathbb{R}^n,$ F un
+espace vectoriel de dimension finie, $f : U \longrightarrow F.$ Alors f est constante si
+et seulement si~elle est de classe $C^1$ et toutes ses dérivées
+partielles sont nulles.
+\end{cor}
 %Démonstration Si f est constante, il est clair qu'elle est de classe
 %C}\^{}{1 et que toutes ses dérivées partielles sont nulles. Pour
 %la réciproque, en prenant une base (sur \mathbb{R}) de F et en travaillant
@@ -298,7 +304,7 @@ v et on a
 %Comme X est à la fois ouvert et fermé, non vide dans U connexe, on a X =
 %U et donc f est constante.
 %
-%\paragraph{15.1.4 Dérivées partielles successives}
+\paragraph{ Dérivées partielles successives}
 %
 %On définit la notion de dérivées partielles successives de manière
 %récursive de la manière suivante

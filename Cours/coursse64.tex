@@ -4,42 +4,41 @@
 
 \paragraph{11.2.1 Etude sur le disque ouvert de convergence (domaine
 		complexe)}
+~
 %
-%Théorème~11.2.1 (continuité de la somme). Soit
-%\\sum ~
-%anz^n une série entière à coefficients dans E, de
-%rayon de convergence R \textgreater{} 0. Alors la fonction S :
-%z\mapsto~\\\sum
-% n=0^+\infty~anz^n est continue sur le
-%disque D(0,R) = \z \in
-%K∣ z  \leq
-%R\.
+		\begin{prop}[continuité de la somme] 
+Soit
+$\sum a_n z^n$ une série entière à coefficients dans E, de
+rayon de convergence $R \textgreater{} 0$. Alors la fonction $S :
+z\mapsto \sum_{n=0}^{+\infty} a_n z^n$ est continue sur le
+disque $D(0,R) = \{ z \in K \∣ z \leq R \} $.
+\end{prop}
 %
 %Démonstration On a vu en effet que la série convergeait normalement sur
 %D'(0,r) pour r \leq R, donc S est continue sur un tel D'(0,r) et
 %donc finalement sur D(0,R).
 %
 %Corollaire~11.2.2 (principe des zéros isolés). Soit
-%\\sum ~
+%\sum ~
 %anz^n une série entière non nulle à coefficients
 %dans E, de rayon de convergence R \textgreater{} 0. Alors, il existe \eta
 %\textgreater{} 0 tel que la fonction S :
-%z\mapsto~\\\sum
+%z\mapsto~\\sum
 % n=0^+\infty~anz^n ne s'annule pas sur
 %D(0,\eta) \diagdown\0\.
 %
 %Démonstration Soit en effet p =\
 				%min\k \in
 				%\mathbb{N}~∣ak\mathrel\neq~0\.
-				%On a alors S(z) =\ \\sum
+				%On a alors S(z) =\ \sum
 				% n=p^+\infty~anz^n =
-				%z^p \\sum ~
+				%z^p \sum ~
 				%n=p^+\infty~anz^n-p =
-				%z^p \\sum ~
+				%z^p \sum ~
 				%n=0^+\infty~an+pz^n. Mais la série entière
-				%\\sum ~
+				%\sum ~
 				%nan+pz^n a même rayon de convergence que la
-				%série entière \\sum ~
+				%série entière \sum ~
 				%anz^n (facile) et sa somme définit donc une
 				%fonction s continue sur D(0,R) avec s(0) =
 				%ap\neq~0. Donc il existe \eta
@@ -50,9 +49,9 @@
 				%démontrer.
 				%
 				%Corollaire~11.2.3 (principe d'identification). Soit
-				%\\sum ~
+				%\sum ~
 				%anz^n et et
-				%\\sum ~
+				%\sum ~
 				%bnz^n deux séries entières à coefficients dans E,
 				%de rayons de convergence non nuls, de sommes S1 et
 				%S2. Alors on a équivalence de (i) \forall~~n
@@ -64,7 +63,7 @@
 %S2(zn)
 	%
 	%Démonstration Il suffit d'appliquer le principe des zéros isolés à la
-	%série entière \\sum ~
+	%série entière \sum ~
 	%(an - bn)z^n dont la somme est
 	%S1 - S2 dans le disque
 	%D(0,min(R1,R2~)).
@@ -81,7 +80,7 @@
 	%coefficients du développement en série entière à la somme de la fonction
 	%
 	%Théorème~11.2.4 (formules de Cauchy). Soit E un \mathbb{C}-espace vectoriel normé
-	%complet, \\sum ~
+	%complet, \sum ~
 	%anz^n une série entière à coefficients dans E, de
 	%rayon de convergence R \textgreater{} 0, de somme S. Alors, pour tout r
 	%\leq R, on a
@@ -91,7 +90,7 @@
 	%0^2\pi~S(re^i\theta)e^-in\theta d\theta
 	%
 	%Démonstration Puisque r \leq R, la série
-	%\\sum ~
+	%\sum ~
 	%\ an\ r^n
 	%est convergente.
 	%
@@ -109,7 +108,7 @@
 					%\int  0^2\pi~~
 					%\sum p=0^+\infty~a~
 					%pr^pe^i(p-n)\theta d\theta\%&
-					%\\ & =& \\sum
+					%\\ & =& \sum
 					%p=0^+\infty~a pr^p
 					%\\int  ~
 					%0^2\pi~e^i(p-n)\theta d\theta\%&
@@ -121,7 +120,7 @@
 					%&si k\neq~0 \cr 2\pi~&si k = 0 
 					%\right .. On obtient donc la formule ci dessus.
 					%
-					%Théorème~11.2.5 Soit \\\sum
+					%Théorème~11.2.5 Soit \\sum
 					% anzn une série entière de rayon de convergence
 					%R et de somme S(z). Soit z0 \in \mathbb{C} tel que
 					% z0  \leq R. Alors la fonction
@@ -138,8 +137,8 @@
 					%\begin{align*} S(z0 + u)& =&
 					%\sum n=0^+\infty~a~
 					%n(z0 + u)^n \%& \\
-						%& =& \\sum
-						%n=0^+\infty~\left (\\sum
+						%& =& \sum
+						%n=0^+\infty~\left (\sum
 								%m=0^nC n^ma
 								%nz0^n-mu^m\right )\%&
 						%\\ \end{align*}
@@ -156,14 +155,14 @@
 							 %On a
 							 %
 							 %\sum m=0^+\infty~ x~
-							 %m,n  = \\sum
+							 %m,n  = \sum
 							 %m=0^n C n^ma
 							 %nz0^n-mu^m  =  a
 							 %n ( z0  +
 									 % u )^n
 							 %
 							 %qui est une série convergente puisque la série
-							 %\\sum ~
+							 %\sum ~
 							 %n an ( z0 
 									 %+  u )^n converge (une série entière converge
 										 %absolument dans son disque ouvert de convergence). Ceci montre que la
@@ -173,10 +172,10 @@
 									 %\begin{align*} S(z0 + u)& =&
 									 %\sum n=0^+\infty~~\left
 									 %(\sum m=0^+\infty~x~
-											 %m,n\right ) = \\sum
-									 %m=0^+\infty~\left (\\sum
+											 %m,n\right ) = \sum
+									 %m=0^+\infty~\left (\sum
 											 %n=0^+\infty~x m,n\right )\%&
-									 %\\ & =& \\sum
+									 %\\ & =& \sum
 									 %m=0^+\infty~u^m\left
 									 %(\sum n=m^+\infty~C~
 											 %n^ma nz0^n-m\right )
@@ -191,12 +190,12 @@
 									 %
 									 %Avant de regarder le cas réel, nous allons démontrer le lemme suivant
 									 %
-									 %Lemme~11.2.6 Soit \\sum ~
+									 %Lemme~11.2.6 Soit \sum ~
 									 %anz^n une série entière à coefficients dans le
 									 %K-espace vectoriel normé E, de rayon de convergence R. Soit F \in K(X) une
 									 %fraction rationnelle non nulle et N \in \mathbb{N}~ tel que F n'ait pas de pôle
 									 %entier supérieur à N. Alors la série entière
-									 %\\sum ~
+									 %\sum ~
 									 %F(n)anz^n a encore pour rayon de convergence R.
 									 %
 									 %Démonstration Soit z \in K tel que  z  \leq R et
@@ -221,7 +220,7 @@
 												 %On va en déduire le théorème suivant
 												 %
 												 %Théorème~11.2.7 Soit E un \mathbb{R}~-espace vectoriel normé complet,
-												 %\\sum ~
+												 %\sum ~
 												 %ant^n une série entière à coefficients dans E, de
 												 %rayon de convergence R \textgreater{} 0, de somme S. Alors la fonction S
 												 %est de classe C^\infty~ sur {]} - R,R{[} et
@@ -239,11 +238,11 @@
 												 %Démonstration Les deux formules se déduisent l'une de l'autre par un
 												 %changement d'indice (le changement de n - p en n). Il suffit donc de
 												 %montrer la première. Mais le lemme précédent assure que la série entière
-												 %\\sum  n≥p~n(n
+												 %\sum  n≥p~n(n
 														 %- 1)\\ldots~(n - p +
 															 %1)apt^n a même rayon de convergence R que la série
 														 %de départ. Il en est donc de même de la série entière
-														 %\\sum  n≥p~n(n
+														 %\sum  n≥p~n(n
 																 %- 1)\\ldots~(n - p +
 																	 %1)apt^n-p et cette série converge donc normalement
 																 %sur {[}-r,r{]} pour r \leq R. Montrons donc le résultat par
@@ -253,7 +252,7 @@
 																	    %\sum  n=p^+\infty~~n(n -
 																			    %1)\\ldots~(n - p +
 																				    %1)apt^n-p. La série dérivée
-																			    %\\sum ~
+																			    %\sum ~
 																			    %n≥p+1n(n -
 																					    %1)\\ldots~(n - p +
 																						    %1)(n - p)apt^n-p-1 converge normalement sur
@@ -261,7 +260,7 @@
 																					    %garantit que S^(p) est de classe \mathcal{C}^1 (donc S de
 																							    %classe C^p+1) sur {[}-r,r{]} avec
 %\forall~t \in {[}-r,r{]}, S^(p)~(t)
-	%= \\sum ~
+	%= \sum ~
 	%n=p^+\infty~n(n -
 			%1)\\ldots~(n - p +
 				%1)(n - p)apt^n-p-1~; mais comme r est quelconque (r
@@ -269,7 +268,7 @@
 				%formule ci-dessus y reste valable, ce qui achève la récurrence.
 				%
 				%Corollaire~11.2.8 Soit E un \mathbb{R}~-espace vectoriel normé complet,
-				%\\sum ~
+				%\sum ~
 				%ant^n une série entière à coefficients dans E, de
 				%rayon de convergence R \textgreater{} 0, de somme S. Alors
 	%
@@ -286,12 +285,12 @@
 	%montrera le théorème suivant
 	%
 	%Théorème~11.2.9 Soit E un \mathbb{R}~-espace vectoriel normé complet,
-	%\\sum ~
+	%\sum ~
 	%ant^n une série entière à coefficients dans E, de
 	%rayon de convergence R \textgreater{} 0, de somme S. Alors
 	%
 	%\forall~~t \in{]} - R,R{[}, \\int
-	% 0^tS(u) du = \\sum
+	% 0^tS(u) du = \sum
 	%n=0^+\infty~a n t^n+1
 	%\over n + 1
 	%
@@ -309,16 +308,16 @@
 	%vers z0 suivant un rayon, ce que garantit le théorème suivant
 	%
 	%Théorème~11.2.10 (Abel) Soit
-	%\\sum ~
+	%\sum ~
 	%anz^n une série entière à coefficients dans E, de
 	%rayon de convergence R \textgreater{} 0 et S :
-	%z\mapsto~\\\sum
+	%z\mapsto~\\sum
 	% n=0^+\infty~anz^n continue sur le
 	%disque D(0,R) = \z \in
 	%K∣ z  \leq
 	%R\. Soit z0 \in K tel que
 	% z0  = R et la série
-	%\\sum ~
+	%\sum ~
 	%anz0^n converge. Alors
 	%
 	%\sum n=0^+\infty~a~
@@ -326,13 +325,13 @@
 %t\rightarrow~1^-S(tz0)
 	%
 	%Démonstration On considère la série de fonctions
-	%\\sum ~
+	%\sum ~
 	%anz0^nt^n, qui converge sur
 	%{[}0,1{]}. Nous allons démontrer sa convergence uniforme~; ceci
 	%garantira la continuité de sa somme au point 1, ce qui n'est autre
 	%l'assertion à démontrer.
 	%
-	%Premier cas~: la série \\\sum
+	%Premier cas~: la série \\sum
 	% anz0^n converge absolument. Alors on a
 	%\forall~~t \in {[}0,1{]},
 	%\ anz0^nt^n\ 
@@ -341,7 +340,7 @@
 	%convergente indépendante de t. Donc la série converge normalement.
 	%
 	%Deuxième cas~: le critère des séries alternées s'applique à la série
-	%\\sum ~
+	%\sum ~
 	%anz0^n, autrement dit
 	%anz0^n = (-1)^nbn avec
 	%(bn) qui tend vers 0 en décroissant. Alors
@@ -353,21 +352,21 @@
 	%
 	%Cas général~: nous allons montrer que la série de fonctions vérifie le
 	%critère de Cauchy uniforme. Pour cela posons Rn
-	%= \\sum ~
+	%= \sum ~
 	%k=n^+\infty~akz0^k. On a alors
 	%
-	%\begin{align*} \\sum
+	%\begin{align*} \sum
 	%n=p^qa nz0^nt^n&
 	%=& \sum n=p^q(R n~ -
-			%Rn+1)t^n = \\sum
+			%Rn+1)t^n = \sum
 	%n=p^qR nt^n
 	%-\sum n=p^qR~
 	%n+1t^n\%& \\ & =&
 	%\sum n=p^qR~
-	%nt^n -\\sum
+	%nt^n -\sum
 	%n=p+1^q+1R nt^n-1 \%&
 	%\\ & =& Rpt^p -
-	%R q+1t^q -\\sum
+	%R q+1t^q -\sum
 %n=p+1^qR n(t^n-1 - t^n)
 	%\%& \\ \end{align*}
 	%
@@ -389,10 +388,10 @@
 			%
 			%Remarque~11.2.3 Une des premières utilités du théorème précédent est de
 			%calculer la somme de certaines séries numériques du type
-			%\\sum ~
+			%\sum ~
 			%anz0^n~; il arrive en effet fréquemment que
 			%la somme de la série entière
-			%\\sum ~
+			%\sum ~
 			%anz^n soit facile à calculer pour
 			% z  \leq R (par exemple par dérivation ou par
 					%résolution d'une certaine équation différentielle). Il suffit alors de
@@ -401,17 +400,17 @@
 			%\begin{example}
 			%
 			%On cherche à calculer la somme de la série alternée
-			%\\sum ~
+			%\sum ~
 	%n=1^+\infty~ (-1)^n-1 \over n .
 %Pour  t  \leq 1, on pose f(t)
-	%= \\sum ~
+	%= \sum ~
 	%n=1^+\infty~ (-1)^n-1 \over n
 	%t^n~; on sait que f est C^\infty~ sur {]} - 1,1{[} et
-	%que f'(t) = \\sum ~
+	%que f'(t) = \sum ~
 	%n=1^+\infty~(-1)^n-1t^n-1 = 1
 %\over 1+t . Comme f(0) = 0, on a f(t)
 	%= log~ (1 + t). Le théorème précédent assure
-	%que \\sum ~
+	%que \sum ~
 	%n=1^+\infty~ (-1)^n-1 \over n
 	%=\
 	  %limt\rightarrow~1^-log~ (1 + t)
@@ -419,11 +418,11 @@
 	  %\end{example}
 	  %
 	  %Suivant le même principe, le lecteur
-	  %montrera que \\sum ~
+	  %montrera que \sum ~
 	  %n=0^+\infty~ (-1)^n \over 2n+1
 	  %= \mathrmarctg~ 1 = \pi~
 	  %\over 4 , en introduisant la série entière
-	  %\\sum ~
+	  %\sum ~
 	  %n=0^+\infty~ (-1)^n \over 2n+1
 	  %t^2n+1.
 	  %

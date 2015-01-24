@@ -1,557 +1,550 @@
-\textbf{Warning: 
-requires JavaScript to process the mathematics on this page.\\ If your
-browser supports JavaScript, be sure it is enabled.}
 
-\begin{center}\rule{3in}{0.4pt}\end{center}
+\subsubsection{Formes différentielles}
 
-{[}
-{[}
-{[}{]}
-{[}
-
-\subsubsection{15.3 Formes différentielles}
-
-Remarque~15.3.1 En dehors de la notion de gradient, cette section ne
+\begin{example}[Remarque]
+En dehors de la notion de gradient, cette section ne
 fait pas partie du programme des classes préparatoires. Cependant, les
 formes différentielles de degré 1 sont un outil particulièrement commode
 même à ce niveau.
 
-\paragraph{15.3.1 Rappels sur les formes linéaires alternées}
-
-Proposition~15.3.1 Soit E un \mathbb{R}~-espace vectoriel,
-f1,\\ldots,fp~
-\in E^∗. Alors f1
-∧\\ldots~ ∧
-fp : E^p \rightarrow~ K définie par
-(x1,\\ldots,xp)\mapsto~\\mathrm{det}~
-(fi(x\\\\jmathmathmathmath))1\leqi\leqp,1\leq\\\\jmathmathmathmath\leqp est une forme p-
-linéaire alternée sur E. L'application (E^∗)^p \rightarrow~
-Ap(E),
-(f1,\\ldots,fp)\mapsto~f1~
-∧\\ldots~ ∧
-fp est elle même p-linéaire et alternée.
-
-Ceci permet d'exhiber une base de l'espace Ap(E) des formes
-p-linéaires alternées sur E. Pour cela soit E un K-espace vectoriel de
-dimension n et
-(e1,\\ldots,en~)
-une base de E.
-
-Théorème~15.3.2 La famille des
-(ei1^∗∧\\ldots~
-∧
-eip^∗)1\leqi1\textless{}i2\textless{}\\ldots\textless{}ip\leqn~
-est une base de Ap(E) (qui est donc de dimension
-Cn^p).
-
-\paragraph{15.3.2 Notion de forme différentielle}
-
-Définition~15.3.1 Soit U un ouvert de \mathbb{R}~^n. On appelle forme
-différentielle de degré p sur U toute application de U dans
-Ap(\mathbb{R}~^n) (en posant par convention
-A0(\mathbb{R}~^n) = \mathbb{R}~).
-
-Remarque~15.3.2 Soit \omega : U \rightarrow~ Ap(\mathbb{R}~^n) une forme
-différentielle de degré p. Soit
-(e1,\\ldots,en~)
-la base canonique de \mathbb{R}~^n et
-(ei1^∗∧\\ldots~
-∧
-eip^∗)1\leqi1\textless{}i2\textless{}\\ldots\textless{}ip\leqn~
-la base correspondante de Ap(\mathbb{R}~^n). On a alors, pour
-x \in U, \omega(x) = \\sum ~
-1\leqi1\textless{}i2\textless{}\\ldots\textless{}ip\leqnai1,\\\ldots,ip(x)ei1^∗∧\\\ldots~
-∧ eip^∗. On dit que \omega est de classe
-C^k si toutes les applications
-ai1,\\ldots,ip~
-: U \rightarrow~ \mathbb{R}~ sont de classe C^k.
-
-Remarque~15.3.3 Soit f : U \rightarrow~ \mathbb{R}~ de classe \mathcal{C}^1. Alors pour tout
-x \in U, df(x) est une application linéaire de \mathbb{R}~^n dans \mathbb{R}~ donc
-une forme linéaire sur \mathbb{R}~^n, donc un élément de
-(\mathbb{R}~^n)^∗ = A1(E). On en déduit que df :
-x\mapsto~df(x) est une forme différentielle de degré
-1 sur U. On sait que
-
-df(x).h = \sum i=1^n~ \partial~f
-\over \partial~xi (x)hi =
-\sum i=1^n~ \partial~f
-\over \partial~xi (x)ei^∗(h)
-
-On en déduit que df(x) =\
-\sum  i=1^n~ \partial~f
-\over \partial~xi (x)ei^∗. Prenons
-par exemple f = ei^∗. On a \forall~~x
-\in U, df(x) = ei^∗. Si on note xi,
-l'application i-ième coordonnée (c'est-à-dire encore
-ei^∗), on a donc dxi = ei^∗
-si bien que l'on peut noter df(x) =\
-\sum  i=1^n~ \partial~f
-\over \partial~xi (x)dxi. Plus
-généralement, une forme différentielle de degré p sur U sera de la forme
-
-\omega(x) = \\sum
-1\leqi1\textless{}i2\textless{}\ldots\textless{}ip\leqnai1,\\ldots,ip(x)dxi1~
-∧\ldots ∧ dxip~
-
-C'est cette dernière forme que nous utiliserons par la suite, avec comme
-seule propriété à connaître le fait que ∧ est multilinéaire et alternée.
-
-Exemple~15.3.1 Dans le cas de la dimension 3 et de p = 2, on préfère
-utiliser une base invariante par permutation circulaire, à savoir
-dx2 ∧ dx3,dx3 ∧
-dx1,dx1 ∧ dx2. On aura ainsi les
-expressions générales de formes différentielles de degré p sur un ouvert
-de \mathbb{R}~^n.
-
-p = 0~: dans tous les cas, une forme différentielle de degré 0 est
-simplement une fonction à valeurs réelles et une forme différentielle de
-degré 1 s'écrit
-
-\omega(x1,\\ldots,xn~))
-=
-a1(x1,\\ldots,xn)dx1~
-+ \\ldots~ +
-an(x1,\\ldots,xn)dxn~
-
-\begin{align*} n = 2,p = 2& :&
-\omega(x1,x2) = a(x1,x2)dx1
-∧ dx2 \%& \\ n = 3,p = 2& :&
-\omega(x1,x2,x3) =
-a1(x1,x2,x3)dx2 ∧
-dx3 \%& \\ & &
-+a2(x1,x2,x3)dx3 ∧
-dx1 +
-a3(x1,x2,x3)dx1 ∧
-dx2\%& \\ n = 3,p = 3& :&
-\omega(x1,x2,x3) =
-a(x1,x2,x3)dx1 ∧ dx2 ∧
-dx3 \%& \\
-\end{align*}
-
-
-
-Remarque~15.3.4 Supposons que E = \mathbb{R}~^n muni de sa structure
-euclidienne naturelle (celle qui rend la base canonique orthonormée).
-Alors
-
-df(x).h = \sum i=1^nh~
-i \partial~f \over \partial~xi (x) =
-(\sum i=1^n~ \partial~f
-\over \partial~xi
-(x)ei∣h)
-
-si bien que l'on retrouve l'expression classique du gradient de f
-
-grad~f(x) = \\sum
-i=1^n \partial~f \over \partial~xi
-(x)ei = ( \partial~f \over \partial~x1
-(x),\ldots~, \partial~f \over
-\partial~xn (x))
-
-\paragraph{15.3.4 Invariance de la différentielle}
-
-Soit U un ouvert de \mathbb{R}~^p et f : U \rightarrow~ \mathbb{R}~ de classe
-\mathcal{C}^1. Soit V un ouvert de \mathbb{R}~^n et soit \phi =
-(\phi1,\\ldots,\phip~)
-: V \rightarrow~ U. Posons y1 =
-\phi1(x1,\\ldots,xn),\\\ldots,yp~
-=
-\phip(x1,\\ldots,xn~).
-On a donc dy\\\\jmathmathmathmath =\
-\sum  i=1^n \partial~\phi\\\\jmathmathmathmath~
-\over \partial~xi dxi. De plus,
-f(y1,\\ldots,yp~)
-=
-f(\phi1(x1,\\ldots,xn),\\\ldots,\phip(x1,\\\ldots,xn~))
-si bien que
-
-\begin{align*}
-d(f(y1,\\ldots,yp~))&&
-\%& \\ & =& \\sum
-i=1^n \partial~ \over \partial~xi
-\left
-(f(\phi1(x1,\ldots,xn),\\ldots,\phip(x1,\\ldots,xn~))\right
-)dxi \%& \\ & =&
-\sum i=1^n~\left
-(\sum \\\\jmathmathmathmath=1^p~ \partial~f
-\over \partial~y\\\\jmathmathmathmath
-(\phi1(x1,\ldots,xn),\\ldots,\phip(x1,\\ldots,xn~))
-\partial~\phi\\\\jmathmathmathmath \over \partial~xi \right
-)dxi\%& \\ & =&
-\sum \\\\jmathmathmathmath=1^p~ \partial~f
-\over \partial~y\\\\jmathmathmathmath
-(y1,\ldots,yp~)\left
-(\sum i=1^n \partial~\phi\\\\jmathmathmathmath~
-\over \partial~xi dxi\right
-) \%& \\ & =&
-\sum \\\\jmathmathmathmath=1^p~ \partial~f
-\over \partial~y\\\\jmathmathmathmath
-(y1,\ldots,yp)dy\\\\jmathmathmathmath~
-\%& \\ \end{align*}
-
-en utilisant la règle de dérivation partielle des fonctions composées et
-en intervertissant les deux sommations.
-
-On voit donc que la formule
-d(f(y1,\\ldots,yp~))
-= \\sum ~
-\\\\jmathmathmathmath=1^p \partial~f \over \partial~y\\\\jmathmathmathmath
-(y1,\\ldots,yp)dy\\\\jmathmathmathmath~
-est valable aussi bien quand
-y1,\\ldots,yp~
-désignent des variables libres (c'est-à-dire qui varient dans un ouvert
-de \mathbb{R}~^p) que lorsque
-y1,\\ldots,yp~
-désignent des fonctions d'autres variables (ici
-x1,\\ldots,xn~).
-C'est une propriété essentielle de la différentielle qui fait tout
-l'intérêt des formes différentielles (en particulier de degré 1)~: on
-peut différentier une expression sans savoir quelles sont les variables
-et quelles sont les fonctions.
-
-On prendra simplement garde au fait suivant~: lorsque
-y1,\\ldots,yp~
-désignent des variables libres, qui varient dans des ouverts de
-\mathbb{R}~^p, on a dy\\\\jmathmathmathmath = e\\\\jmathmathmathmath^∗, et donc les
-formes différentielles
-dy1,\\ldots,dyp~
-forment une famille libre (ce qui permet en particulier des
-identifications)~; il n'en est évidemment plus de même lorsque
-y1,\\ldots,yp~
-sont elles mêmes des fonctions d'autres variables
-x1,\\ldots,xn~.
-
-\paragraph{15.3.5 Différentielle extérieure}
-
-Définition~15.3.3 Soit \omega(x) =\
-\sum ~
-1\leqi1\textless{}i2\textless{}\\ldots\textless{}ip\leqnai1,\\\ldots,ip(x)dxi1~
-∧\\ldots~ ∧
-dxip une forme différentielle de degré p, de classe
-\mathcal{C}^1 sur l'ouvert U de \mathbb{R}~^n. On appelle
-différentielle extérieure de \omega, la forme différentielle de degré p + 1
-définie par
-
-d\omega(x) = \\sum
-1\leqi1\textless{}i2\textless{}\ldots\textless{}ip\leqndai1,\\ldots,ip~(x)
-∧ dxi1 ∧\ldots~ ∧
-dxip
-
-Remarque~15.3.5 Le calcul effectif se fait en utilisant la définition de
-dai1,\\ldots,ip~(x)
-et les propriétés de l'opérateur ∧~: linéaire par rapport à chaque
-terme, alterné, antisymétrique. On a donc
-
-\begin{align*}
-dai1,\\ldots,ip~(x)
-∧ dxi1
-∧\\ldots~ ∧
-dxip&& \%& \\ &
-=& \left (\\sum
-\\\\jmathmathmathmath=1^n
-\partial~ai1,\ldots,ip~
-\over \partial~x\\\\jmathmathmathmath
-\,dx\\\\jmathmathmathmath\right ) ∧
-dxi1
-∧\\ldots~ ∧
-dxip\%& \\ & =&
-\sum \\\\jmathmathmathmath=1^n~
-\partial~ai1,\ldots,ip~
-\over \partial~x\\\\jmathmathmathmath \,dx\\\\jmathmathmathmath ∧
-dxi1 ∧\ldots~ ∧
-dxip \%& \\
-\end{align*}
-
-avec dx\\\\jmathmathmathmath ∧ dxi1
-∧\\ldots~ ∧
-dxip = 0 si \\\\jmathmathmathmath
-\in\i1,\\ldots,ip\~
-et dx\\\\jmathmathmathmath ∧ dxi1
-∧\\ldots~ ∧
-dxip = ±dxi1
-∧\\ldots~ ∧
-dx\\\\jmathmathmathmath
-∧\\ldots~ ∧
-dxip où l'on met de signe + ou le signe - suivant la
-parité du nombre de transpositions nécessaires pour intercaler \\\\jmathmathmathmath à la
-bonne place dans la suite
-\i1,\\ldots,ip\~.
-Dans le cas d'une forme différentielle de degré 0 (une fonction), on
-trouve bien entendu tout simplement la différentielle de la fonction.
-
-Exemple~15.3.2 Calcul dans le cas n = 3. Si p = 0, on a \omega = f et d\omega =
-\partial~f \over \partial~x1 dx1 + \partial~f
-\over \partial~x2 dx2 + \partial~f
-\over \partial~x3 dx3 et on retrouve
-l'expression du gradient de la fonction f.
-
-Si p = 1, on a \omega(x) = a1(x)dx1 +
-a2(x)dx2 + a3(x)dx3, et donc
-
-\begin{align*} d\omega(x)& =& da1(x) ∧
-dx1 + da2(x) ∧ dx2 + da3(x) ∧
-dx3 \%& \\ & =& (
-\partial~a1 \over \partial~x1 (x)dx1 +
-\partial~a1 \over \partial~x2 (x)dx2 +
-\partial~a1 \over \partial~x3 (x)dx3) ∧
-dx1 \%& \\ & & +(
-\partial~a2 \over \partial~x1 (x)dx1 +
-\partial~a2 \over \partial~x2 (x)dx2 +
-\partial~a2 \over \partial~x3 (x)dx3) ∧
-dx2\%& \\ & & +(
-\partial~a3 \over \partial~x1 (x)dx1 +
-\partial~a3 \over \partial~x2 (x)dx2 +
-\partial~a3 \over \partial~x3 (x)dx3) ∧
-dx3\%& \\ & =& (
-\partial~a3 \over \partial~x2 (x) - \partial~a2
-\over \partial~x3 (x))dx2 ∧ dx3
-\%& \\ & & +( \partial~a1
-\over \partial~x3 (x) - \partial~a3
-\over \partial~x1 (x))dx3 ∧ dx1
-\%& \\ & & +( \partial~a2
-\over \partial~x1 (x) - \partial~a1
-\over \partial~x2 (x))dx1 ∧ dx2
-\%& \\ \end{align*}
-
-en tenant compte de dxi ∧ dxi = 0 et de
-dxi ∧ dx\\\\jmathmathmathmath = -dx\\\\jmathmathmathmath ∧ dxi. On
-reconnaît là l'expression classique du rotationnel du champ de vecteurs
-de composantes (a1(x),a2(x),a3(x)).
-
-Si p = 2, on a \omega(x) = a1(x)dx2 ∧ dx3 +
-a2(x)dx3 ∧ dx1 +
-a3(x)dx1 ∧ dx2 et donc
-
-\begin{align*} d\omega(x)& =& da1(x) ∧
-dx2 ∧ dx3 + da2(x) ∧ dx3 ∧
-dx1 \%& \\ & &
-+da3(x) ∧ dx1 ∧ dx2 \%&
-\\ & =& ( \partial~a1
-\over \partial~x1 (x)dx1 + \partial~a1
-\over \partial~x2 (x)dx2 + \partial~a1
-\over \partial~x3 (x)dx3) ∧ dx2 ∧
-dx3 \%& \\ & & +(
-\partial~a2 \over \partial~x1 (x)dx1 +
-\partial~a2 \over \partial~x2 (x)dx2 +
-\partial~a2 \over \partial~x3 (x)dx3) ∧
-dx3 ∧ dx1\%& \\ & &
-+( \partial~a3 \over \partial~x1 (x)dx1
-+ \partial~a3 \over \partial~x2 (x)dx2
-+ \partial~a3 \over \partial~x3 (x)dx3)
-∧ dx1 ∧ dx2\%& \\ &
-=& \left ( \partial~a1 \over
-\partial~x1 (x) + \partial~a2 \over
-\partial~x2 (x) + \partial~a3 \over
-\partial~x3 (x)\right )dx1 ∧ dx2
-∧ dx3 \%& \\
-\end{align*}
-
-en tenant compte de dxi ∧ dx\\\\jmathmathmathmath ∧ dxk = 0 si
-i,\\\\jmathmathmathmath et k ne sont pas distincts et de dx\\\\jmathmathmathmath ∧ dxk ∧
-dxi = dxi ∧ dx\\\\jmathmathmathmath ∧ dxk si i,\\\\jmathmathmathmath,k
-sont distincts (les permutations circulaires de trois éléments sont de
-signature + 1). On reconnaît là l'expression classique de la divergence
-du champ de vecteurs de composantes
-(a1(x),a2(x),a3(x)).
-
-La différentielle extérieure des formes différentielles est donc une
-généralisation (et une unification) des notions classiques de gradient
-d'une fonction et de rotationnel ou divergence d'un champ de vecteurs.
-
-\paragraph{15.3.6 Théorème de Poincaré}
-
-Théorème~15.3.3 Soit U un ouvert de \mathbb{R}~^n et \omega une forme
-différentielle de degré p de classe C^2 sur U. Alors d(d\omega) =
-0.
-
-Démonstration On a
-
-\begin{align*} d\omega& =& \\sum
-1\leqi1\textless{}i2\textless{}\ldots\textless{}ip\leqndai1,\\ldots,ip~
-∧ dxi1 ∧\ldots~ ∧
-dxip \%& \\ & =&
-\\sum
-1\leqi1\textless{}i2\textless{}\ldots\textless{}ip\leqn~\left
-(\sum \\\\jmathmathmathmath=1^n~
-\partial~ai1,\ldots,ip~
-\over \partial~x\\\\jmathmathmathmath
-\,dx\\\\jmathmathmathmath\right ) ∧
-dxi1 ∧\ldots~ ∧
-dxip\%& \\ & =&
-\sum \\\\jmathmathmathmath=1^n~
-\\sum
-1\leqi1\textless{}i2\textless{}\ldots\textless{}ip\leqn~
-\partial~ai1,\ldots,ip~
-\over \partial~x\\\\jmathmathmathmath dx\\\\jmathmathmathmath ∧
-dxi1 ∧\ldots~ ∧
-dxip \%& \\
-\end{align*}
-
-d'où
-
-\begin{align*} d(d\omega)&& \%&
-\\ & =& \\sum
-\\\\jmathmathmathmath=1^n \\sum
-1\leqi1\textless{}i2\textless{}\ldots\textless{}ip\leqn~d\left
-(
-\partial~ai1,\ldots,ip~
-\over \partial~x\\\\jmathmathmathmath \right ) ∧
-dx\\\\jmathmathmathmath ∧ dxi1
-∧\ldots ∧ dxip~ \%&
-\\ & =& \\sum
-\\\\jmathmathmathmath=1^n \\sum
-1\leqi1\textless{}i2\textless{}\ldots\textless{}ip\leqn~\left
-(\sum k=1^n~
-\partial~^2a
-i1,\ldots,ip~
-\over \partial~xk\partial~x\\\\jmathmathmathmath
-dxk\right ) ∧ dx\\\\jmathmathmathmath ∧
-dxi1 ∧\ldots~ ∧
-dxip \%& \\ & =&
-\sum k=1^n~
-\sum \\\\jmathmathmathmath=1^n~
-\\sum
-1\leqi1\textless{}i2\textless{}\ldots\textless{}ip\leqn~
-\partial~^2ai1,\ldots,ip~
-\over \partial~xk\partial~x\\\\jmathmathmathmath dxk ∧
-dx\\\\jmathmathmathmath ∧ dxi1
-∧\ldots ∧ dxip~ \%&
-\\ & =& \\sum
-k\textless{}\\\\jmathmathmathmath \\sum
-1\leqi1\textless{}i2\textless{}\ldots\textless{}ip\leqn~\left
-(
-\partial~^2ai1,\ldots,ip~
-\over \partial~xk\partial~x\\\\jmathmathmathmath -
-\partial~^2ai1,\ldots,ip~
-\over \partial~x\\\\jmathmathmathmath\partial~xk \right
-)dxk ∧ dx\\\\jmathmathmathmath ∧ dxi1
-∧\ldots ∧ dxip~\%&
-\\ \end{align*}
-
-en tenant compte de dx\\\\jmathmathmathmath ∧ dxk = 0 si \\\\jmathmathmathmath = k et
-dx\\\\jmathmathmathmath ∧ dxk = -dxk ∧ dx\\\\jmathmathmathmath si
-\\\\jmathmathmathmath\neq~k. Mais le théorème de Schwarz montre que
- \partial~^2a
-i1,\\ldots,ip~
-\over \partial~xk\partial~x\\\\jmathmathmathmath =
-\partial~^2a
-i1,\\ldots,ip~
-\over \partial~x\\\\jmathmathmathmath\partial~xk et donc d(d\omega) = 0.
-
-En tenant compte des expressions trouvées pour d\omega dans le cas n = 3, on
-obtient donc le corollaire suivant
-
-Corollaire~15.3.4 (i) Soit f une fonction de classe C^2 sur
-un ouvert U de \mathbb{R}~^3. Alors
-rot\grad~f = 0 (ii)
-Soit V un champ de vecteurs de classe C^2 sur un ouvert U de
-\mathbb{R}~^3. Alors
-div\rot~V = 0
-
-Nous allons maintenant nous intéresser à la réciproque du théorème
-précédent
-
-Théorème~15.3.5 (Poincaré). Soit U \subset~ \mathbb{R}~^n un ouvert étoilé en
-a \in U (c'est-à-dire que \forall~~x \in U, {[}a,x{]} \subset~
-U). Soit \omega une forme différentielle de degré p ≥ 1 de classe
-\mathcal{C}^1 sur U. Alors les conditions suivantes sont équivalentes
-(i) d\omega = 0 (ii) \omega est exacte~: il existe une forme différentielle \alpha~ de
-degré p - 1 de classe C^2 sur U telle que \omega = d\alpha~.
-
-Démonstration Le théorème précédent implique clairement que (ii) \rigtharrow~(i).
-Nous nous contenterons de démontrer que (i) \rigtharrow~(ii) lorsque p = 1, en
-admettant le cas général. Par une translation, sans nuire à la
-généralité, on peut supposer que a = 0. Soit U \subset~ \mathbb{R}~^n un
-ouvert étoilé en 0 \in U et soit \omega =\
-\sum ~
-i=1^nci(x)dxi. On a par un calcul
-facile
-
-d\omega = \\sum
-i\textless{}\\\\jmathmathmathmath\left ( \partial~c\\\\jmathmathmathmath
-\over \partial~xi - \partial~ci
-\over \partial~x\\\\jmathmathmathmath \right
-)dxi ∧ dx\\\\jmathmathmathmath
-
-Donc d\omega = 0 \Leftrightarrow
-\forall~i,\\\\jmathmathmathmath, \partial~c\\\\jmathmathmathmath~ \over
-\partial~xi = \partial~ci \over \partial~x\\\\jmathmathmathmath .
-
-Définissons f : U \rightarrow~ \mathbb{R}~ par f(x) =\
-\sum ~
-i=1^nxi\int ~
-0^1ci(tx) dt. Comme
-(t,x\\\\jmathmathmathmath)\mapsto~ci(tx) =
-ci(tx1,\\ldots,txn~)
-admet une dérivée partielle par rapport à x\\\\jmathmathmathmath,  \partial~
-\over \partial~x\\\\jmathmathmathmath
-(ci(tx1,\\ldots,txn~))
-= t \partial~ci \over \partial~x\\\\jmathmathmathmath
-(tx1,\\ldots,txn~)
-qui est une fonction continue du couple (t,x\\\\jmathmathmathmath), l'application
-x\\\\jmathmathmathmath\mapsto~\int ~
-0^1ci(tx) dt est dérivable et  \partial~
-\over \partial~x\\\\jmathmathmathmath \int ~
-0^1ci(tx) dt =\int ~
-0^1t \partial~ci \over \partial~x\\\\jmathmathmathmath
-(tx) dt. On en déduit que
-
-\begin{align*} \partial~f \over
-\partial~x\\\\jmathmathmathmath (x)& =& \\sum
-i=1^n \partial~xi \over
-\partial~x\\\\jmathmathmathmath  \\int ~
- 0^1c i(tx) dt + \\sum
-i=1^nx i \partial~ \over
-\partial~x\\\\jmathmathmathmath  \\int ~
- 0^1c i(tx) dt\%&
-\\ & =& \int ~
-0^1c \\\\jmathmathmathmath(tx) dt + \\sum
-i=1^nx i
-\\int  ~
-0^1t \partial~ci \over \partial~x\\\\jmathmathmathmath
-(tx) dt \%& \\ & =&
-\int  0^1~\left
-(c \\\\jmathmathmathmath(tx) + \\sum
-i=1^ntx i \partial~ci
-\over \partial~x\\\\jmathmathmathmath (tx)\right ) dt \%&
-\\ \end{align*}
-
-Utilisons alors  \partial~c\\\\jmathmathmathmath \over \partial~xi
-= \partial~ci \over \partial~x\\\\jmathmathmathmath . On obtient
-
-\begin{align*} \partial~f \over
-\partial~x\\\\jmathmathmathmath (x)& =& \int ~
-0^1\left (c \\\\jmathmathmathmath(tx) +
-\sum i=1^ntx i~
-\partial~c\\\\jmathmathmathmath \over \partial~xi
-(tx)\right ) dt\%& \\ &
-=& \int  0^1~ d
-\over dt \left
-(tc\\\\jmathmathmathmath(tx1,\\ldots,txn~)\right
-) dt \%& \\ & =& \big
-{[}tc\\\\jmathmathmathmath(tx)\big {]}0^1 =
-c \\\\jmathmathmathmath(x) \%& \\
-\end{align*}
-
-Ceci montre à la fois que f est de classe C^2 et que \omega = df.
-
-En réutilisant les calculs faits dans \mathbb{R}~^3, nous pouvons
-traduire ce résultat sous la forme
-
-Corollaire~15.3.6 Soit U \subset~ \mathbb{R}~^n un ouvert étoilé en a \in U
-(c'est-à-dire que \forall~~x \in U, {[}a,x{]} \subset~ U), soit
-V un champ de vecteurs de classe \mathcal{C}^1 sur U. Alors les
-conditions suivantes sont équivalentes (i) il existe une fonction f de
-classe C^2 telle que V = grad~f
-(resp. il existe un champ de vecteurs W de classe C^2 tel que
-V = rotW) (ii) \rot~V
-= 0 (resp. div~ V = 0)
-
-Remarque~15.3.6 Dans le premier cas, on dit que V dérive du potentiel
-scalaire f, dans le deuxième cas qu'il dérive du potentiel vecteur W.
-
-{[}
-{[}
-{[}
-{[}
+  
+\end{example}
+% \paragraph{15.3.1 Rappels sur les formes linéaires alternées}
+
+% Proposition~15.3.1 Soit E un \mathbb{R}~-espace vectoriel,
+% f1,\\ldots,fp~
+% \in E^∗. Alors f1
+% ∧\\ldots~ ∧
+% fp : E^p \rightarrow~ K définie par
+% (x1,\\ldots,xp)\mapsto~\\mathrm{det}~
+% (fi(x\\\\jmathmathmathmath))1\leqi\leqp,1\leq\\\\jmathmathmathmath\leqp est une forme p-
+% linéaire alternée sur E. L'application (E^∗)^p \rightarrow~
+% Ap(E),
+% (f1,\\ldots,fp)\mapsto~f1~
+% ∧\\ldots~ ∧
+% fp est elle même p-linéaire et alternée.
+
+% Ceci permet d'exhiber une base de l'espace Ap(E) des formes
+% p-linéaires alternées sur E. Pour cela soit E un K-espace vectoriel de
+% dimension n et
+% (e1,\\ldots,en~)
+% une base de E.
+
+% Théorème~15.3.2 La famille des
+% (ei1^∗∧\\ldots~
+% ∧
+% eip^∗)1\leqi1\textless{}i2\textless{}\\ldots\textless{}ip\leqn~
+% est une base de Ap(E) (qui est donc de dimension
+% Cn^p).
+
+% \paragraph{15.3.2 Notion de forme différentielle}
+
+% Définition~15.3.1 Soit U un ouvert de \mathbb{R}~^n. On appelle forme
+% différentielle de degré p sur U toute application de U dans
+% Ap(\mathbb{R}~^n) (en posant par convention
+% A0(\mathbb{R}~^n) = \mathbb{R}~).
+
+% Remarque~15.3.2 Soit \omega : U \rightarrow~ Ap(\mathbb{R}~^n) une forme
+% différentielle de degré p. Soit
+% (e1,\\ldots,en~)
+% la base canonique de \mathbb{R}~^n et
+% (ei1^∗∧\\ldots~
+% ∧
+% eip^∗)1\leqi1\textless{}i2\textless{}\\ldots\textless{}ip\leqn~
+% la base correspondante de Ap(\mathbb{R}~^n). On a alors, pour
+% x \in U, \omega(x) = \\sum ~
+% 1\leqi1\textless{}i2\textless{}\\ldots\textless{}ip\leqnai1,\\\ldots,ip(x)ei1^∗∧\\\ldots~
+% ∧ eip^∗. On dit que \omega est de classe
+% C^k si toutes les applications
+% ai1,\\ldots,ip~
+% : U \rightarrow~ \mathbb{R}~ sont de classe C^k.
+
+% Remarque~15.3.3 Soit f : U \rightarrow~ \mathbb{R}~ de classe \mathcal{C}^1. Alors pour tout
+% x \in U, df(x) est une application linéaire de \mathbb{R}~^n dans \mathbb{R}~ donc
+% une forme linéaire sur \mathbb{R}~^n, donc un élément de
+% (\mathbb{R}~^n)^∗ = A1(E). On en déduit que df :
+% x\mapsto~df(x) est une forme différentielle de degré
+% 1 sur U. On sait que
+
+% df(x).h = \sum i=1^n~ \partial~f
+% \over \partial~xi (x)hi =
+% \sum i=1^n~ \partial~f
+% \over \partial~xi (x)ei^∗(h)
+
+% On en déduit que df(x) =\
+% \sum  i=1^n~ \partial~f
+% \over \partial~xi (x)ei^∗. Prenons
+% par exemple f = ei^∗. On a \forall~~x
+% \in U, df(x) = ei^∗. Si on note xi,
+% l'application i-ième coordonnée (c'est-à-dire encore
+% ei^∗), on a donc dxi = ei^∗
+% si bien que l'on peut noter df(x) =\
+% \sum  i=1^n~ \partial~f
+% \over \partial~xi (x)dxi. Plus
+% généralement, une forme différentielle de degré p sur U sera de la forme
+
+% \omega(x) = \\sum
+% 1\leqi1\textless{}i2\textless{}\ldots\textless{}ip\leqnai1,\\ldots,ip(x)dxi1~
+% ∧\ldots ∧ dxip~
+
+% C'est cette dernière forme que nous utiliserons par la suite, avec comme
+% seule propriété à connaître le fait que ∧ est multilinéaire et alternée.
+
+% Exemple~15.3.1 Dans le cas de la dimension 3 et de p = 2, on préfère
+% utiliser une base invariante par permutation circulaire, à savoir
+% dx2 ∧ dx3,dx3 ∧
+% dx1,dx1 ∧ dx2. On aura ainsi les
+% expressions générales de formes différentielles de degré p sur un ouvert
+% de \mathbb{R}~^n.
+
+% p = 0~: dans tous les cas, une forme différentielle de degré 0 est
+% simplement une fonction à valeurs réelles et une forme différentielle de
+% degré 1 s'écrit
+
+% \omega(x1,\\ldots,xn~))
+% =
+% a1(x1,\\ldots,xn)dx1~
+% + \\ldots~ +
+% an(x1,\\ldots,xn)dxn~
+
+% \begin{align*} n = 2,p = 2& :&
+% \omega(x1,x2) = a(x1,x2)dx1
+% ∧ dx2 \%& \\ n = 3,p = 2& :&
+% \omega(x1,x2,x3) =
+% a1(x1,x2,x3)dx2 ∧
+% dx3 \%& \\ & &
+% +a2(x1,x2,x3)dx3 ∧
+% dx1 +
+% a3(x1,x2,x3)dx1 ∧
+% dx2\%& \\ n = 3,p = 3& :&
+% \omega(x1,x2,x3) =
+% a(x1,x2,x3)dx1 ∧ dx2 ∧
+% dx3 \%& \\
+% \end{align*}
+
+
+
+% Remarque~15.3.4 Supposons que E = \mathbb{R}~^n muni de sa structure
+% euclidienne naturelle (celle qui rend la base canonique orthonormée).
+% Alors
+
+% df(x).h = \sum i=1^nh~
+% i \partial~f \over \partial~xi (x) =
+% (\sum i=1^n~ \partial~f
+% \over \partial~xi
+% (x)ei∣h)
+
+% si bien que l'on retrouve l'expression classique du gradient de f
+
+% grad~f(x) = \\sum
+% i=1^n \partial~f \over \partial~xi
+% (x)ei = ( \partial~f \over \partial~x1
+% (x),\ldots~, \partial~f \over
+% \partial~xn (x))
+
+% \paragraph{15.3.4 Invariance de la différentielle}
+
+% Soit U un ouvert de \mathbb{R}~^p et f : U \rightarrow~ \mathbb{R}~ de classe
+% \mathcal{C}^1. Soit V un ouvert de \mathbb{R}~^n et soit \phi =
+% (\phi1,\\ldots,\phip~)
+% : V \rightarrow~ U. Posons y1 =
+% \phi1(x1,\\ldots,xn),\\\ldots,yp~
+% =
+% \phip(x1,\\ldots,xn~).
+% On a donc dy\\\\jmathmathmathmath =\
+% \sum  i=1^n \partial~\phi\\\\jmathmathmathmath~
+% \over \partial~xi dxi. De plus,
+% f(y1,\\ldots,yp~)
+% =
+% f(\phi1(x1,\\ldots,xn),\\\ldots,\phip(x1,\\\ldots,xn~))
+% si bien que
+
+% \begin{align*}
+% d(f(y1,\\ldots,yp~))&&
+% \%& \\ & =& \\sum
+% i=1^n \partial~ \over \partial~xi
+% \left
+% (f(\phi1(x1,\ldots,xn),\\ldots,\phip(x1,\\ldots,xn~))\right
+% )dxi \%& \\ & =&
+% \sum i=1^n~\left
+% (\sum \\\\jmathmathmathmath=1^p~ \partial~f
+% \over \partial~y\\\\jmathmathmathmath
+% (\phi1(x1,\ldots,xn),\\ldots,\phip(x1,\\ldots,xn~))
+% \partial~\phi\\\\jmathmathmathmath \over \partial~xi \right
+% )dxi\%& \\ & =&
+% \sum \\\\jmathmathmathmath=1^p~ \partial~f
+% \over \partial~y\\\\jmathmathmathmath
+% (y1,\ldots,yp~)\left
+% (\sum i=1^n \partial~\phi\\\\jmathmathmathmath~
+% \over \partial~xi dxi\right
+% ) \%& \\ & =&
+% \sum \\\\jmathmathmathmath=1^p~ \partial~f
+% \over \partial~y\\\\jmathmathmathmath
+% (y1,\ldots,yp)dy\\\\jmathmathmathmath~
+% \%& \\ \end{align*}
+
+% en utilisant la règle de dérivation partielle des fonctions composées et
+% en intervertissant les deux sommations.
+
+% On voit donc que la formule
+% d(f(y1,\\ldots,yp~))
+% = \\sum ~
+% \\\\jmathmathmathmath=1^p \partial~f \over \partial~y\\\\jmathmathmathmath
+% (y1,\\ldots,yp)dy\\\\jmathmathmathmath~
+% est valable aussi bien quand
+% y1,\\ldots,yp~
+% désignent des variables libres (c'est-à-dire qui varient dans un ouvert
+% de \mathbb{R}~^p) que lorsque
+% y1,\\ldots,yp~
+% désignent des fonctions d'autres variables (ici
+% x1,\\ldots,xn~).
+% C'est une propriété essentielle de la différentielle qui fait tout
+% l'intérêt des formes différentielles (en particulier de degré 1)~: on
+% peut différentier une expression sans savoir quelles sont les variables
+% et quelles sont les fonctions.
+
+% On prendra simplement garde au fait suivant~: lorsque
+% y1,\\ldots,yp~
+% désignent des variables libres, qui varient dans des ouverts de
+% \mathbb{R}~^p, on a dy\\\\jmathmathmathmath = e\\\\jmathmathmathmath^∗, et donc les
+% formes différentielles
+% dy1,\\ldots,dyp~
+% forment une famille libre (ce qui permet en particulier des
+% identifications)~; il n'en est évidemment plus de même lorsque
+% y1,\\ldots,yp~
+% sont elles mêmes des fonctions d'autres variables
+% x1,\\ldots,xn~.
+
+% \paragraph{15.3.5 Différentielle extérieure}
+
+% Définition~15.3.3 Soit \omega(x) =\
+% \sum ~
+% 1\leqi1\textless{}i2\textless{}\\ldots\textless{}ip\leqnai1,\\\ldots,ip(x)dxi1~
+% ∧\\ldots~ ∧
+% dxip une forme différentielle de degré p, de classe
+% \mathcal{C}^1 sur l'ouvert U de \mathbb{R}~^n. On appelle
+% différentielle extérieure de \omega, la forme différentielle de degré p + 1
+% définie par
+
+% d\omega(x) = \\sum
+% 1\leqi1\textless{}i2\textless{}\ldots\textless{}ip\leqndai1,\\ldots,ip~(x)
+% ∧ dxi1 ∧\ldots~ ∧
+% dxip
+
+% Remarque~15.3.5 Le calcul effectif se fait en utilisant la définition de
+% dai1,\\ldots,ip~(x)
+% et les propriétés de l'opérateur ∧~: linéaire par rapport à chaque
+% terme, alterné, antisymétrique. On a donc
+
+% \begin{align*}
+% dai1,\\ldots,ip~(x)
+% ∧ dxi1
+% ∧\\ldots~ ∧
+% dxip&& \%& \\ &
+% =& \left (\\sum
+% \\\\jmathmathmathmath=1^n
+% \partial~ai1,\ldots,ip~
+% \over \partial~x\\\\jmathmathmathmath
+% \,dx\\\\jmathmathmathmath\right ) ∧
+% dxi1
+% ∧\\ldots~ ∧
+% dxip\%& \\ & =&
+% \sum \\\\jmathmathmathmath=1^n~
+% \partial~ai1,\ldots,ip~
+% \over \partial~x\\\\jmathmathmathmath \,dx\\\\jmathmathmathmath ∧
+% dxi1 ∧\ldots~ ∧
+% dxip \%& \\
+% \end{align*}
+
+% avec dx\\\\jmathmathmathmath ∧ dxi1
+% ∧\\ldots~ ∧
+% dxip = 0 si \\\\jmathmathmathmath
+% \in\i1,\\ldots,ip\~
+% et dx\\\\jmathmathmathmath ∧ dxi1
+% ∧\\ldots~ ∧
+% dxip = ±dxi1
+% ∧\\ldots~ ∧
+% dx\\\\jmathmathmathmath
+% ∧\\ldots~ ∧
+% dxip où l'on met de signe + ou le signe - suivant la
+% parité du nombre de transpositions nécessaires pour intercaler \\\\jmathmathmathmath à la
+% bonne place dans la suite
+% \i1,\\ldots,ip\~.
+% Dans le cas d'une forme différentielle de degré 0 (une fonction), on
+% trouve bien entendu tout simplement la différentielle de la fonction.
+
+% Exemple~15.3.2 Calcul dans le cas n = 3. Si p = 0, on a \omega = f et d\omega =
+% \partial~f \over \partial~x1 dx1 + \partial~f
+% \over \partial~x2 dx2 + \partial~f
+% \over \partial~x3 dx3 et on retrouve
+% l'expression du gradient de la fonction f.
+
+% Si p = 1, on a \omega(x) = a1(x)dx1 +
+% a2(x)dx2 + a3(x)dx3, et donc
+
+% \begin{align*} d\omega(x)& =& da1(x) ∧
+% dx1 + da2(x) ∧ dx2 + da3(x) ∧
+% dx3 \%& \\ & =& (
+% \partial~a1 \over \partial~x1 (x)dx1 +
+% \partial~a1 \over \partial~x2 (x)dx2 +
+% \partial~a1 \over \partial~x3 (x)dx3) ∧
+% dx1 \%& \\ & & +(
+% \partial~a2 \over \partial~x1 (x)dx1 +
+% \partial~a2 \over \partial~x2 (x)dx2 +
+% \partial~a2 \over \partial~x3 (x)dx3) ∧
+% dx2\%& \\ & & +(
+% \partial~a3 \over \partial~x1 (x)dx1 +
+% \partial~a3 \over \partial~x2 (x)dx2 +
+% \partial~a3 \over \partial~x3 (x)dx3) ∧
+% dx3\%& \\ & =& (
+% \partial~a3 \over \partial~x2 (x) - \partial~a2
+% \over \partial~x3 (x))dx2 ∧ dx3
+% \%& \\ & & +( \partial~a1
+% \over \partial~x3 (x) - \partial~a3
+% \over \partial~x1 (x))dx3 ∧ dx1
+% \%& \\ & & +( \partial~a2
+% \over \partial~x1 (x) - \partial~a1
+% \over \partial~x2 (x))dx1 ∧ dx2
+% \%& \\ \end{align*}
+
+% en tenant compte de dxi ∧ dxi = 0 et de
+% dxi ∧ dx\\\\jmathmathmathmath = -dx\\\\jmathmathmathmath ∧ dxi. On
+% reconnaît là l'expression classique du rotationnel du champ de vecteurs
+% de composantes (a1(x),a2(x),a3(x)).
+
+% Si p = 2, on a \omega(x) = a1(x)dx2 ∧ dx3 +
+% a2(x)dx3 ∧ dx1 +
+% a3(x)dx1 ∧ dx2 et donc
+
+% \begin{align*} d\omega(x)& =& da1(x) ∧
+% dx2 ∧ dx3 + da2(x) ∧ dx3 ∧
+% dx1 \%& \\ & &
+% +da3(x) ∧ dx1 ∧ dx2 \%&
+% \\ & =& ( \partial~a1
+% \over \partial~x1 (x)dx1 + \partial~a1
+% \over \partial~x2 (x)dx2 + \partial~a1
+% \over \partial~x3 (x)dx3) ∧ dx2 ∧
+% dx3 \%& \\ & & +(
+% \partial~a2 \over \partial~x1 (x)dx1 +
+% \partial~a2 \over \partial~x2 (x)dx2 +
+% \partial~a2 \over \partial~x3 (x)dx3) ∧
+% dx3 ∧ dx1\%& \\ & &
+% +( \partial~a3 \over \partial~x1 (x)dx1
+% + \partial~a3 \over \partial~x2 (x)dx2
+% + \partial~a3 \over \partial~x3 (x)dx3)
+% ∧ dx1 ∧ dx2\%& \\ &
+% =& \left ( \partial~a1 \over
+% \partial~x1 (x) + \partial~a2 \over
+% \partial~x2 (x) + \partial~a3 \over
+% \partial~x3 (x)\right )dx1 ∧ dx2
+% ∧ dx3 \%& \\
+% \end{align*}
+
+% en tenant compte de dxi ∧ dx\\\\jmathmathmathmath ∧ dxk = 0 si
+% i,\\\\jmathmathmathmath et k ne sont pas distincts et de dx\\\\jmathmathmathmath ∧ dxk ∧
+% dxi = dxi ∧ dx\\\\jmathmathmathmath ∧ dxk si i,\\\\jmathmathmathmath,k
+% sont distincts (les permutations circulaires de trois éléments sont de
+% signature + 1). On reconnaît là l'expression classique de la divergence
+% du champ de vecteurs de composantes
+% (a1(x),a2(x),a3(x)).
+
+% La différentielle extérieure des formes différentielles est donc une
+% généralisation (et une unification) des notions classiques de gradient
+% d'une fonction et de rotationnel ou divergence d'un champ de vecteurs.
+
+% \paragraph{15.3.6 Théorème de Poincaré}
+
+% Théorème~15.3.3 Soit U un ouvert de \mathbb{R}~^n et \omega une forme
+% différentielle de degré p de classe C^2 sur U. Alors d(d\omega) =
+% 0.
+
+% Démonstration On a
+
+% \begin{align*} d\omega& =& \\sum
+% 1\leqi1\textless{}i2\textless{}\ldots\textless{}ip\leqndai1,\\ldots,ip~
+% ∧ dxi1 ∧\ldots~ ∧
+% dxip \%& \\ & =&
+% \\sum
+% 1\leqi1\textless{}i2\textless{}\ldots\textless{}ip\leqn~\left
+% (\sum \\\\jmathmathmathmath=1^n~
+% \partial~ai1,\ldots,ip~
+% \over \partial~x\\\\jmathmathmathmath
+% \,dx\\\\jmathmathmathmath\right ) ∧
+% dxi1 ∧\ldots~ ∧
+% dxip\%& \\ & =&
+% \sum \\\\jmathmathmathmath=1^n~
+% \\sum
+% 1\leqi1\textless{}i2\textless{}\ldots\textless{}ip\leqn~
+% \partial~ai1,\ldots,ip~
+% \over \partial~x\\\\jmathmathmathmath dx\\\\jmathmathmathmath ∧
+% dxi1 ∧\ldots~ ∧
+% dxip \%& \\
+% \end{align*}
+
+% d'où
+
+% \begin{align*} d(d\omega)&& \%&
+% \\ & =& \\sum
+% \\\\jmathmathmathmath=1^n \\sum
+% 1\leqi1\textless{}i2\textless{}\ldots\textless{}ip\leqn~d\left
+% (
+% \partial~ai1,\ldots,ip~
+% \over \partial~x\\\\jmathmathmathmath \right ) ∧
+% dx\\\\jmathmathmathmath ∧ dxi1
+% ∧\ldots ∧ dxip~ \%&
+% \\ & =& \\sum
+% \\\\jmathmathmathmath=1^n \\sum
+% 1\leqi1\textless{}i2\textless{}\ldots\textless{}ip\leqn~\left
+% (\sum k=1^n~
+% \partial~^2a
+% i1,\ldots,ip~
+% \over \partial~xk\partial~x\\\\jmathmathmathmath
+% dxk\right ) ∧ dx\\\\jmathmathmathmath ∧
+% dxi1 ∧\ldots~ ∧
+% dxip \%& \\ & =&
+% \sum k=1^n~
+% \sum \\\\jmathmathmathmath=1^n~
+% \\sum
+% 1\leqi1\textless{}i2\textless{}\ldots\textless{}ip\leqn~
+% \partial~^2ai1,\ldots,ip~
+% \over \partial~xk\partial~x\\\\jmathmathmathmath dxk ∧
+% dx\\\\jmathmathmathmath ∧ dxi1
+% ∧\ldots ∧ dxip~ \%&
+% \\ & =& \\sum
+% k\textless{}\\\\jmathmathmathmath \\sum
+% 1\leqi1\textless{}i2\textless{}\ldots\textless{}ip\leqn~\left
+% (
+% \partial~^2ai1,\ldots,ip~
+% \over \partial~xk\partial~x\\\\jmathmathmathmath -
+% \partial~^2ai1,\ldots,ip~
+% \over \partial~x\\\\jmathmathmathmath\partial~xk \right
+% )dxk ∧ dx\\\\jmathmathmathmath ∧ dxi1
+% ∧\ldots ∧ dxip~\%&
+% \\ \end{align*}
+
+% en tenant compte de dx\\\\jmathmathmathmath ∧ dxk = 0 si \\\\jmathmathmathmath = k et
+% dx\\\\jmathmathmathmath ∧ dxk = -dxk ∧ dx\\\\jmathmathmathmath si
+% \\\\jmathmathmathmath\neq~k. Mais le théorème de Schwarz montre que
+%  \partial~^2a
+% i1,\\ldots,ip~
+% \over \partial~xk\partial~x\\\\jmathmathmathmath =
+% \partial~^2a
+% i1,\\ldots,ip~
+% \over \partial~x\\\\jmathmathmathmath\partial~xk et donc d(d\omega) = 0.
+
+% En tenant compte des expressions trouvées pour d\omega dans le cas n = 3, on
+% obtient donc le corollaire suivant
+
+% Corollaire~15.3.4 (i) Soit f une fonction de classe C^2 sur
+% un ouvert U de \mathbb{R}~^3. Alors
+% rot\grad~f = 0 (ii)
+% Soit V un champ de vecteurs de classe C^2 sur un ouvert U de
+% \mathbb{R}~^3. Alors
+% div\rot~V = 0
+
+% Nous allons maintenant nous intéresser à la réciproque du théorème
+% précédent
+
+% Théorème~15.3.5 (Poincaré). Soit U \subset~ \mathbb{R}~^n un ouvert étoilé en
+% a \in U (c'est-à-dire que \forall~~x \in U, {[}a,x{]} \subset~
+% U). Soit \omega une forme différentielle de degré p ≥ 1 de classe
+% \mathcal{C}^1 sur U. Alors les conditions suivantes sont équivalentes
+% (i) d\omega = 0 (ii) \omega est exacte~: il existe une forme différentielle \alpha~ de
+% degré p - 1 de classe C^2 sur U telle que \omega = d\alpha~.
+
+% Démonstration Le théorème précédent implique clairement que (ii) \rigtharrow~(i).
+% Nous nous contenterons de démontrer que (i) \rigtharrow~(ii) lorsque p = 1, en
+% admettant le cas général. Par une translation, sans nuire à la
+% généralité, on peut supposer que a = 0. Soit U \subset~ \mathbb{R}~^n un
+% ouvert étoilé en 0 \in U et soit \omega =\
+% \sum ~
+% i=1^nci(x)dxi. On a par un calcul
+% facile
+
+% d\omega = \\sum
+% i\textless{}\\\\jmathmathmathmath\left ( \partial~c\\\\jmathmathmathmath
+% \over \partial~xi - \partial~ci
+% \over \partial~x\\\\jmathmathmathmath \right
+% )dxi ∧ dx\\\\jmathmathmathmath
+
+% Donc d\omega = 0 \Leftrightarrow
+% \forall~i,\\\\jmathmathmathmath, \partial~c\\\\jmathmathmathmath~ \over
+% \partial~xi = \partial~ci \over \partial~x\\\\jmathmathmathmath .
+
+% Définissons f : U \rightarrow~ \mathbb{R}~ par f(x) =\
+% \sum ~
+% i=1^nxi\int ~
+% 0^1ci(tx) dt. Comme
+% (t,x\\\\jmathmathmathmath)\mapsto~ci(tx) =
+% ci(tx1,\\ldots,txn~)
+% admet une dérivée partielle par rapport à x\\\\jmathmathmathmath,  \partial~
+% \over \partial~x\\\\jmathmathmathmath
+% (ci(tx1,\\ldots,txn~))
+% = t \partial~ci \over \partial~x\\\\jmathmathmathmath
+% (tx1,\\ldots,txn~)
+% qui est une fonction continue du couple (t,x\\\\jmathmathmathmath), l'application
+% x\\\\jmathmathmathmath\mapsto~\int ~
+% 0^1ci(tx) dt est dérivable et  \partial~
+% \over \partial~x\\\\jmathmathmathmath \int ~
+% 0^1ci(tx) dt =\int ~
+% 0^1t \partial~ci \over \partial~x\\\\jmathmathmathmath
+% (tx) dt. On en déduit que
+
+% \begin{align*} \partial~f \over
+% \partial~x\\\\jmathmathmathmath (x)& =& \\sum
+% i=1^n \partial~xi \over
+% \partial~x\\\\jmathmathmathmath  \\int ~
+%  0^1c i(tx) dt + \\sum
+% i=1^nx i \partial~ \over
+% \partial~x\\\\jmathmathmathmath  \\int ~
+%  0^1c i(tx) dt\%&
+% \\ & =& \int ~
+% 0^1c \\\\jmathmathmathmath(tx) dt + \\sum
+% i=1^nx i
+% \\int  ~
+% 0^1t \partial~ci \over \partial~x\\\\jmathmathmathmath
+% (tx) dt \%& \\ & =&
+% \int  0^1~\left
+% (c \\\\jmathmathmathmath(tx) + \\sum
+% i=1^ntx i \partial~ci
+% \over \partial~x\\\\jmathmathmathmath (tx)\right ) dt \%&
+% \\ \end{align*}
+
+% Utilisons alors  \partial~c\\\\jmathmathmathmath \over \partial~xi
+% = \partial~ci \over \partial~x\\\\jmathmathmathmath . On obtient
+
+% \begin{align*} \partial~f \over
+% \partial~x\\\\jmathmathmathmath (x)& =& \int ~
+% 0^1\left (c \\\\jmathmathmathmath(tx) +
+% \sum i=1^ntx i~
+% \partial~c\\\\jmathmathmathmath \over \partial~xi
+% (tx)\right ) dt\%& \\ &
+% =& \int  0^1~ d
+% \over dt \left
+% (tc\\\\jmathmathmathmath(tx1,\\ldots,txn~)\right
+% ) dt \%& \\ & =& \big
+% {[}tc\\\\jmathmathmathmath(tx)\big {]}0^1 =
+% c \\\\jmathmathmathmath(x) \%& \\
+% \end{align*}
+
+% Ceci montre à la fois que f est de classe C^2 et que \omega = df.
+
+% En réutilisant les calculs faits dans \mathbb{R}~^3, nous pouvons
+% traduire ce résultat sous la forme
+
+% Corollaire~15.3.6 Soit U \subset~ \mathbb{R}~^n un ouvert étoilé en a \in U
+% (c'est-à-dire que \forall~~x \in U, {[}a,x{]} \subset~ U), soit
+% V un champ de vecteurs de classe \mathcal{C}^1 sur U. Alors les
+% conditions suivantes sont équivalentes (i) il existe une fonction f de
+% classe C^2 telle que V = grad~f
+% (resp. il existe un champ de vecteurs W de classe C^2 tel que
+% V = rotW) (ii) \rot~V
+% = 0 (resp. div~ V = 0)
+
+% Remarque~15.3.6 Dans le premier cas, on dit que V dérive du potentiel
+% scalaire f, dans le deuxième cas qu'il dérive du potentiel vecteur W.
+
+% {[}
+% {[}
+% {[}
+% {[}
