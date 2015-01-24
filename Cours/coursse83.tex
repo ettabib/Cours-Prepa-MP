@@ -1,0 +1,389 @@
+\subsection{Différentielle}
+%
+\subsubsection{Applications différentiables}
+%
+\begin{de}
+  Soit E et F deux espaces vectoriels normés, U un
+  ouvert de E, $a \in U$ et $f : U \rightarrow F$. On dit que f est différentiable au
+  point a s'il existe une application linéaire continue $L : E \rightarrow~ F$ telle
+  que, pour h voisin de 0,
+  \[
+    f(a + h) = f(a) + L(h) +
+    o(|h|)
+  \]
+  Dans ce cas, l'application L est unique et est appelée la différentielle
+  de f au point a, notée $df(a)$ ou encore $d_a f$.
+\end{de}
+%
+%Démonstration Supposons que L1 et L2 conviennent.
+%Par différence, on a L1(h) - L2(h) =
+%o(|h|). On a donc,
+%pour x \in E \diagdown\0\
+%
+%limt\rightarrow~0,t\textgreater{}0L1~(tx)
+%- L2(tx)\over
+%|tx| = 0
+%
+%Mais pour t \textgreater{} 0, on a
+%L1(tx)-L2(tx)\over
+%|tx| =
+%L1(x)-L2(x)\over
+%|x| ~; ceci montre
+%que L1(x) = L2(x) et donc L1 =
+%L2.
+%
+%Remarque~15.2.1 Pour alléger les notations, on écrira df(a).h à la place
+%de \big {[}df(a)\big {]}(h). On a donc par
+%définition f(a + h) = f(a) + df(a).h +
+%o(|h|) ou encore f(a +
+%h) = f(a) + df(a).h +|
+%h|\epsilon(h) avec
+%limh\rightarrow~0~\epsilon(h) = 0.
+%
+\begin{example}[Remarque]
+  Si E est de dimension finie, une application linéaire de
+  E dans F est automatiquement continue. Il est clair d'autre part que la
+  différentiabilité est une notion locale et que le changement des normes
+  sur E et F en normes équivalentes ne change ni la différentiabilité, ni
+  la différentielle.
+
+\end{example}
+%
+\begin{cor}
+  Si f est différentiable au point a, elle est continue
+  au point a.
+%
+\end{cor}
+%Démonstration On a f(a + h) = f(a) + df(a).h +|
+%h|\epsilon(h) avec
+%limh\rightarrow~0~\epsilon(h) = 0. Comme df(a) est une
+%application linéaire continue, on a
+%limh\rightarrow~0~df(a).h = df(a).0 = 0 et donc
+%limh\rightarrow~0~f(a + h) = f(a).
+%
+\subsubsection{Exemples d'applications différentiables}
+%
+\begin{prop}
+  Soit E et F deux espaces vectoriels normés, u une
+  application linéaire continue de E dans F. Alors u est différentiable en
+  tout point a de E et $du(a) = u$.
+\end{prop}
+%Démonstration On a en effet u(a + h) = u(a) + u(h) + 0.
+%
+\begin{prop}
+  Soit E, F et G trois espaces vectoriels normés, $u : E
+  \times F \rightarrow~ G $ une application bilinéaire continue. Alors f est différentiable
+  en tout point (a,b) de $E \times F $et $du(a,b).(h,k) = u(a,k) + u(h,b).$
+%
+\end{prop}
+%Démonstration On a u((a,b) + (h,k)) = u(a + h,b + k) = u(a,b) +
+%\left (u(a,k) + u(h,b)\right ) + u(h,k).
+%Mais comme u est bilinéaire continue, il existe une constante A telle
+%que |u(h,k)| \leq
+%A|h||k|
+%soit encore |u(h,k)| \leq
+%Amax(|h|,|k|)^2~
+%=
+%A|(h,k)|^2.
+%On a donc u((a,b) + (h,k)) = u(a,b) + \left (u(a,k) +
+%u(h,b)\right ) +
+%O(|(h,k)|^2).
+%Comme (h,k)\mapsto~u(a,k) + u(h,b) est clairement
+%linéaire et continue, c'est la différentielle de u au point (a,b).
+%
+%Exemple~15.2.1 Tous les produits usuels (produit dans K, produits
+%scalaires, produits vectoriels, produits matriciels) sont donc
+%différentiables en tout point.
+%
+\paragraph{Opérations sur les différentielles}
+%
+\begin{prop}
+  Soit E et F deux espaces vectoriels normés, U un
+  ouvert de E, $a \in U $et $f,g : U \rightarrow~ F.$ Si f et g sont différentiables en a,
+  il en est de même pour $\alpha~f + \beta~g $et $d(\alpha~f + \beta~g)(a) =
+  \alpha~df(a) + \beta~dg(a).$
+%
+\end{prop}
+%Démonstration On a f(a + h) = f(a) + df(a).h +
+%o(|h|) et g(a + h) =
+%g(a) + dg(a).h +
+%o(|h|), d'où (\alpha~f +
+%\beta~g)(a + h) = (\alpha~f + \beta~g)(a) + \alpha~df(a).h + \beta~dg(a).h +
+%o(|h|) avec \alpha~df(a) +
+%\beta~dg(a) application linéaire continue.
+%
+\begin{thm}
+  Soit E, F et G trois espaces vectoriels normés, U un
+  ouvert de E, V un ouvert de F, $f : U \rightarrow~ F $tel que $f(U) \subset~ V $
+  et$ g : V \rightarrow~ G.$
+  Soit $a \in U.$ Si f est différentiable au point a et g différentiable au
+  point $f(a),$ alors $g \cdot f $est différentiable au point a et $d(g \cdot
+  f)(a) =
+  dg\left (f(a)\right ) \cdot df(a).$
+\end{thm}
+%Démonstration On a, en posant b = f(a), f(a + h) = f(a) + df(a).h
+%+| h|\epsilon(h) avec
+%limh\rightarrow~0~\epsilon(h) = 0 et g(b + k) = g(b) +
+%dg(b).k +| k|\eta(k) avec
+%limk\rightarrow~0~\eta(k) = 0. Prenons en
+%particulier
+%
+%k = \phi(h) = f(a + h) - f(a) = df(a).h +|
+%h|\epsilon(h)
+%
+%On a b + k = f(a + h), et donc
+%
+%g(f(a + h)) = g(f(a)) + dg(b).\phi(h) +|
+%\phi(h)|\eta(\phi(h))
+%
+%Mais on a
+%
+%\begin{align*} dg(b).\phi(h)& =&
+%dg(b).\left (df(a).h +|
+%h|\epsilon(h)\right ) \%&
+%\\ & =& dg(b) \cdot df(a).h
+%+| h|dg(b).\epsilon(h)\%&
+%\\ & =& dg(b) \cdot df(a).h +
+%o(|h|) \%&
+%\\ \end{align*}
+%
+%puisque limh\rightarrow~0~dg(b).\epsilon(h) = dg(b).0 =
+%0. D'autre part,
+%
+%\begin{align*}
+%|\phi(h)|& \leq&
+%|df(a).h +|
+%h|\epsilon(h)| \%&
+%\\ & \leq&
+%|df(a)|\,|h|
+%+|
+%\epsilon(h)|\,|h|
+%= O(|h|)\%&
+%\\ \end{align*}
+%
+%donc |\phi(h)|\eta(\phi(h)) =
+%o(|h|) puisque
+%limh\rightarrow~0~\phi(h) = 0 (continuité de f au
+%point a) et donc limh\rightarrow~0~\eta(\phi(h)) = 0.
+%On a donc en définitive, g(f(a + h)) = g(f(a)) + dg(b) \cdot df(a).h +
+%o(|h|) ce qui termine
+%la démonstration.
+%
+\begin{example}[Remarque]
+  En particulier, si u est une application linéaire
+  continue et si f est différentiable,$ u \cdot f $est différentiable et
+  $d(u \cdot
+  f)(a) = u \cdot df(a).$
+%
+\end{example}
+%\paragraph{15.2.4 Différentielle et dérivées partielles}
+%
+%Regardons tout d'abord le cas des fonctions d'une variable. On a un
+%résultat très simple qui montre que la notion de différentiabilité est
+%une généralisation de la notion de dérivabilité.
+%
+\begin{thm}
+  Soit U un ouvert de $\mathbb{R}$~, $a \in U $et F un $K-espace $vectoriel
+  normé. Soit $f : U \rightarrow~ F$. Alors f est différentiable au point a si et
+  seulement si~elle est dérivable au point a et on a $f'(a) = df(a).$1 et
+  $df(a).h = hf'(a)$.
+
+\end{thm}
+
+%Démonstration Si f est dérivable au point a, on a f(a + h) = f(a) +
+%hf'(a) + o(h), ce qui montre que f est différentiable en a et que
+%df(a).h = hf'(a). Inversement si f est différentiable au point a, on a
+%f(a + h) = f(a) + df(a).h + o(h) = f(a) + hdf(a).1 + o(h) (car h est un
+%réel), soit encore limh\rightarrow~0~
+%f(a+h)-f(a) \over h = df(a).1, ce qui montre que f est
+%dérivable au point 1 et que f'(a) = df(a).1.
+%
+%Exemple~15.2.2 Soit U un ouvert de \mathbb{R}~, V un ouvert de E, soit \phi : U \rightarrow~ E
+%telle que \phi(U) \subset~ V et f : V \rightarrow~ F. Soit a \in U. Supposons que \phi est
+%dérivable (donc différentiable) au point a et que f est différentiable
+%au point \phi(a). Alors f \cdot \phi est différentiable (donc dérivable) au point
+%a et (f \cdot \phi)'(a) = d(f \cdot \phi)(a).1 = df(\phi(a)) \cdot d\phi(a).1 = df(\phi(a)).\phi'(a).
+%On retiendra donc la formule importante (f \cdot \phi)'(a) = df(\phi(a)).\phi'(a).
+%
+%En ce qui concerne les fonctions de plusieurs variables, le lien entre
+%différentiabilité et dérivée partielle est plus complexe puisque l'on a
+%vu que l'existence de dérivées partielles n'impliquait même pas la
+%continuité, et donc certainement pas la différentiabilité. On a le
+%résultat suivant
+%
+\begin{thm}
+  Soit E et F deux espaces vectoriels normés de dimensions
+  finies, U un ouvert de E et $f : U \rightarrow~ F$. 
+  (i) si f est différentiable au
+  point $a \in U$, alors f admet en a une dérivée partielle suivant tout
+  vecteur v et $\partial~vf(a) = df(a).v $
+  (ii) inversement, si $E = \mathbb{R}~^n $et si f est de classe $ \mathcal{C}^1$ sur U, alors f est
+  différentiable en tout point a de U et df(a).h= \sum_{i=1}^n
+  h_i \frac{\partial f}{\partial x_i}(a).
+\end{thm}
+%Démonstration (i) On a f(a + h) = f(a) + df(a).h
+%+| h|\epsilon(h), soit encore
+%f(a + tv) = f(a) + tdf(a).v +
+%\textbar{}t\textbar{}\,|v|\epsilon(tv),
+%c'est-à-dire limt\rightarrow~0~ f(a+tv)-f(a)
+%\over t = df(a).v, donc f admet en a une dérivée
+%partielle suivant v et \partial~vf(a) = df(a).v.
+%
+%(ii) La formule de Taylor Young à l'ordre 1 montre en effet que f(a + h)
+%= f(a) + \\sum ~
+%i=1^nhi \partial~f \over
+%\partial~xi (a) +
+%o(|h|) ce qui montre
+%que f est différentiable en a et que df(a).h =\
+%\sum  i=1^nhi~ \partial~f
+%\over \partial~xi (a).
+%
+%Remarque~15.2.4 Si E = \mathbb{R}~^n, et si f est différentiable au
+%point a, on a nécessairement
+%
+%\begin{align*} df(a).h& =&
+%df(a).(\sum i=1^nh~
+%iei) = \\sum
+%i=1^nh idf(a).ei\%&
+%\\ & =& \\sum
+%i=1^nh i\partial~eif(a) =
+%\sum i=1^nh i~ \partial~f
+%\over \partial~xi (a) \%&
+%\\ \end{align*}
+%
+%Donc en fait montrer la différentiabilité de f en a, c'est montrer que
+%les  \partial~f \over \partial~xi (a) existent et que f(a +
+%h) - f(a) -\\sum ~
+%i=1^nhi \partial~f \over
+%\partial~xi (a) =
+%o(|h|).
+%
+\paragraph{15.2.5 Matrices Jacobiennes}
+%
+\ \ 
+\begin{de}
+   Soit U un ouvert de $\mathbb{R}~^n$ et $f : U \rightarrow~
+  \mathbb{R}~^p$. Soit $a \in U$ tel que f soit différentiable au point a. On
+  appelle matrice jacobienne de f au point a la matrice $Jf(a)$ de
+  l'application linéaire $df(a)$ dans les bases canoniques de $\mathbb{R}~^n$
+  et $\mathbb{R}~^p$. Si
+  $f(x_1,\ldots,x_n)
+    =
+      (f1(x_1,\ldots,x_n),\ldots,fp(x_1,\ldots,x_n))$,
+  c'est la matrice
+
+  \begin{align*} 
+    Jf(a) =
+    \left( \frac{\partial f_i}{\partial x} (a) \right )_{1\leq i \leq p
+    \atop 1 \leq j \leq n}
+    =
+    \left( 
+    \matrix\, \frac{\partial f_1}{\partial x_1}(a)& \ldots & \frac{\partial
+    f_1}{\partial x_n} (a) \cr
+    \ldots & \ldots & \ldots \cr 
+    \frac{\partial f_p}{\partial x_1}(a) & \ldots & \frac{\partial f_p}{\partial
+    x_n} (a) \right) 
+    \in M_{\mathbb{R}}(p,n)   \\ 
+  \end{align*}
+
+\end{de}
+%
+%Démonstration Il faut en effet mettre dans la j-ième colonne de
+%Jf(a) les coordonnées du vecteur df(a).ej =
+%\partial~ejf(a) = \partial~f \over \partial~xj
+%(a) = ( \partial~f1 \over \partial~xj
+%(a),\ldots~,
+%\partial~fp \over \partial~xj (a)).
+%
+%Le théorème de composition des applications différentiables va ainsi se
+%traduire de la manière suivante sur les matrices jacobiennes
+%
+%Définition~15.2.3 Soit U un ouvert de \mathbb{R}~^n, V un ouvert de
+%\mathbb{R}~^p, f : U \rightarrow~ \mathbb{R}~^p telle que f(U) \subset~ V et g : V \rightarrow~
+%\mathbb{R}~^q. Soit a \in U tel que f soit différentiable au point a et g
+%différentiable au point f(a). Alors on a Jg\cdotf(a) =
+%Jg(f(a))Jf(a).
+%
+%Démonstration La matrice de la composée de deux applications linéaires
+%est le produit des matrices de ces applications linéaires dans des bases
+%adéquates (ici les bases canoniques).
+%
+%Remarque~15.2.5 Utilisons alors les formules donnant le produit de deux
+%matrices. On va ainsi obtenir
+%
+% \left ( \partial~g \cdot f \over \partial~xj
+%(a)\right )i = \partial~gi \cdot f
+%\over \partial~xj (a) = \\sum
+%k=1^p \partial~gi \over
+%\partial~yk (f(a)) \partial~fk \over
+%\partial~xj (a)
+%
+%ce qui n'est autre que la formule trouvée dans la première section pour
+%les dérivées partielles d'une fonction composée, mais avec des
+%hypothèses plus faibles (la condition g est \mathcal{C}^1 a été
+%remplacée par g est différentiable au point a).
+%
+%Définition~15.2.4 Soit U un ouvert de \mathbb{R}~^n et f : U \rightarrow~
+%\mathbb{R}~^n. Soit a \in U tel que f soit différentiable au point a. On
+%appelle jacobien de f au point a le nombre réel
+%
+%jf(a) =\
+%\mathrm{det} Jf(a) = \left
+%\textbar{}\matrix\, \partial~f1
+%\over \partial~x1
+%(a)&\ldots~&
+%\partial~f1 \over \partial~xn (a)
+%\cr \⋮~
+%&\ldots&\\⋮~
+%\cr  \partial~fn \over \partial~x1
+%(a)&\ldots~&
+%\partial~fn \over \partial~xn
+%(a)\right \textbar{}
+%
+%Remarque~15.2.6 Soit U un ouvert de \mathbb{R}~^n, V un ouvert de
+%\mathbb{R}~^n, f : U \rightarrow~ \mathbb{R}~^n telle que f(U) \subset~ V et g : V \rightarrow~
+%\mathbb{R}~^n. Soit a \in U tel que f soit différentiable au point a et g
+%différentiable au point f(a). Alors on a jg\cdotf(a) =
+%jg(f(a))jf(a).
+%
+%\paragraph{15.2.6 Inégalité des accroissements finis}
+%
+%Théorème~15.2.8 Soit E et F deux espaces vectoriels normés, U un ouvert
+%de E et f : U \rightarrow~ F. Soit a,b \in U tels que {[}a,b{]} \subset~ U. On suppose que f
+%est différentiable en tout point x de {[}a,b{]} et que, pour tout x \in
+%{[}a,b{]}, la norme de l'application linéaire df(x) est majorée par M ≥
+%0. Alors
+%
+%|f(b) - f(a)| \leq
+%M|b - a|
+%
+%Démonstration Considérons \phi : {[}0,1{]} \rightarrow~ F définie par \phi(t) = f((1 -
+%t)a + tb). On a \phi'(t) = df((1 - t)a + tb). d \over dt
+%((1 - t)a + tb) = df((1 - t)a + tb).(b - a). On en déduit que
+%\forall~~t \in {[}a,b{]},
+%|\phi'(t)|
+%\leq| df((1 - t)a +
+%tb)|.|b -
+%a| \leq M|b -
+%a|. L'inégalité des accroissements finis pour
+%les fonctions d'une variable donne alors |\phi(1)
+%- \phi(0)| \leq M|b -
+%a|(1 - 0) = M|b -
+%a|, ce qu'il fallait démontrer.
+%
+%Remarque~15.2.7 Cette inégalité des accroissements finis a des
+%conséquences similaires à celles de l'inégalité des accroissements finis
+%pour les fonctions d'une variable (en prenant soin de respecter la
+%condition restrictive~: {[}a,b{]} \subset~ U)~; parmi les plus importantes
+%citons celle là
+%
+%Corollaire~15.2.9 Soit E et F deux espaces vectoriels normés, U un
+%ouvert convexe de E et f : U \rightarrow~ F une application différentiable telle
+%que \forall~~x \in U,
+%|df(x)| \leq M. Alors f
+%est M-lipschitzienne.
+%
+%{[}
+%{[}
+%{[}
+%{[}

@@ -1,6 +1,9 @@
 \documentclass{MathBook}
-\begin{document}
+\usepackage[final]{pdfpages} 
+\newcommand*{\norme}[1]{\left\lVert {#1} 
+  \right\rVert}
 
+\begin{document}
 \title{Cours Mathematiques}
 \author{Ettabib Mohammed}
 \date{}
@@ -8,16 +11,11 @@
 
 \tableofcontents
 \chapter{Ensembles et structures }
-\chapter{ Algèbre linéaire élémentaire}
-\chapter{ Réduction des endomorphismes }
-\chapter{ Topologie des espaces métriques }
-\chapter{Espaces vectoriels normés }
-\chapter{Topologie des espaces métriques}
-% \chapter{Comparaison des fonctions }
-\input{coursse32}
-% \input{coursse33}
-% \input{coursse34}
-\chapter{ Suites et séries }
+\chapter{Algèbre linéaire élémentaire}
+\chapter{Réduction des endomorphismes }
+\chapter{Topologie des espaces métriques }
+ \chapter{ Suites et séries }
+\includepdf[pages=15-45]{Series.pdf}
 \chapter{Fonctions d’une variable réelle }
 \chapter{Intégration }
 \chapter{Suites et séries de fonctions }
@@ -25,8 +23,7 @@
 \input{coursse25}
 \input{coursse33}
 \input{coursse46}
-
-
+\includepdf[pages=-]{SuitesFonctions.pdf}
 \chapter{Séries entières }
 \input{coursse63}
 \input{coursse64}
@@ -45,6 +42,8 @@
 \input{Cours84}
 \input{coursse84}
 \chapter{Équations différentielles }
+\chapter{Fonctions holomorphes}
+\includepdf[pages=1-32]{holomorphes.pdf}
 \chapter{Espaces affines }
 \chapter{ Courbes }
 \chapter{Surfaces }
